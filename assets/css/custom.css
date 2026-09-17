@@ -46,7 +46,7 @@ img.emoji {
 }
 
 .tparrows:before {
-  color: #6a80a9;
+  color: #0B4EA2;
   text-shadow: 0 0 3px #fff;
 }
 
@@ -66,7 +66,7 @@ img.emoji {
   position: absolute;
   width: 100%;
   left: 0;
-  border-bottom: 5px solid #6a80a9;
+  border-bottom: 5px solid #0B4EA2;
   bottom: -17px;
 }
 
@@ -98,7 +98,7 @@ img.emoji {
 }
 
 .breadcrumb-container li a {
-  color: #804a9a !important;
+  color: #0B4EA2 !important;
   font-size: 18px !important;
   line-height: 18px !important;
 }
@@ -186,7 +186,7 @@ img.emoji {
 
 #nav-panel .accordion-menu li.menu-item.active > a {
   background: none;
-  color: #6a80a9;
+  color: #0B4EA2;
 }
 
 #header .header-main .header-left {
@@ -242,7 +242,7 @@ body.woocommerce .main-content {
 }
 
 #footer .footer-bottom .container {
-  border-top: 1px solid #e4e4e4;
+  border-top: 1px solid #DCE3EC;
 }
 
 .home-intro p span:last-child {
@@ -339,7 +339,7 @@ div.stats-desc > div.counter_suffix {
   font-style: normal;
   line-height: 1;
   font-size: 50px;
-  color: #2e353e;
+  color: #1E2430;
 }
 
 .testimonial.testimonial-style-5 blockquote:after {
@@ -350,7 +350,7 @@ div.stats-desc > div.counter_suffix {
   content: "\201D";
   font-style: normal;
   font-size: 50px;
-  color: #2e353e;
+  color: #1E2430;
   line-height: 1;
 }
 
@@ -389,8 +389,8 @@ div.stats-desc > div.counter_suffix {
   top: 6px;
   width: 20px;
   height: 20px;
-  border-top: 1px solid #2e353e;
-  border-left: 1px solid #2e353e;
+  border-top: 1px solid #1E2430;
+  border-left: 1px solid #1E2430;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
@@ -488,15 +488,15 @@ div.stats-desc > div.counter_suffix {
 }
 
 .member-item.member-item-3 .thumb-info:hover .thumb-info-caption a h4:hover {
-  color: #2e353e !important;
+  color: #1E2430 !important;
 }
 
 .member-item.member-item-3 .thumb-info:hover a.member-info-container h4 {
-  color: #2e353e !important;
+  color: #1E2430 !important;
 }
 
 .member-item.member-item-3 .thumb-info:hover a.member-info-container h4:hover {
-  color: #2e353e !important;
+  color: #1E2430 !important;
 }
 
 .member-item.member-item-3 .thumb-info:hover .thumb-info-caption p {
@@ -505,7 +505,7 @@ div.stats-desc > div.counter_suffix {
 
 .thumb-info-caption-title h4 {
   font-size: 0.9em !important;
-  color: #2e353e !important;
+  color: #1E2430 !important;
   text-transform: uppercase !important;
   font-weight: 700 !important;
   font-family: "Poppins", sans-serif;
@@ -517,7 +517,7 @@ div.stats-desc > div.counter_suffix {
 
 .member-item.member-item-3 .view-more {
   color: #fff;
-  background-color: #6a80a9 !important;
+  background-color: #0B4EA2 !important;
   border-radius: 100%;
   width: 30px;
   height: 30px;
@@ -551,7 +551,7 @@ div.stats-desc > div.counter_suffix {
 }
 
 .member-ajax-modal h2.shorter {
-  color: #2e353e !important;
+  color: #1E2430 !important;
   font-weight: 600;
   font-size: 1.8em;
 }
@@ -575,7 +575,7 @@ div.stats-desc > div.counter_suffix {
 }
 
 .member-ajax-modal .member-share-links a.share-facebook:hover {
-  background: #3b5a9a !important;
+  background: #0B4EA2 !important;
   color: #fff !important;
 }
 
@@ -644,7 +644,7 @@ article.post .meta-comments {
 
 article.post-large-alt .post-date > span {
   background: transparent !important;
-  color: #2e353e !important;
+  color: #1E2430 !important;
   padding: 0 !important;
   line-height: 16px;
   font-weight: 600 !important;
@@ -657,7 +657,7 @@ article.post-large-alt .post-date::before {
   -webkit-font-smoothing: antialiased;
   line-height: 1;
   text-align: left;
-  color: #6a80a9;
+  color: #0B4EA2;
   background-image: url(//sw-themes.com/porto_dummy/wp-content/uploads/2017/03/custom-icon-3.jpg);
   width: 100%;
   height: 31px;
@@ -673,7 +673,7 @@ article.post .entry-title {
 
 article.post .entry-title a {
   text-decoration: none;
-  color: #2e353e !important;
+  color: #1E2430 !important;
   font-weight: 700 !important;
   font-size: 25px;
   text-transform: uppercase;
@@ -685,14 +685,14 @@ article.post a.btn {
   display: inline-block;
   border: none;
   background: none !important;
-  color: #2e353e;
+  color: #1E2430;
   font-weight: 600 !important;
   font-size: 14px !important;
   text-shadow: none;
 }
 
 article.post a.btn:hover {
-  color: #6a80a9;
+  color: #0B4EA2;
 }
 
 .single-post .img-thumbnail {
@@ -712,7 +712,7 @@ article.post .post-meta .meta-date:before {
   line-height: 1;
   width: 1em;
   text-align: left;
-  color: #6a80a9;
+  color: #0B4EA2;
   background-image: url(//sw-themes.com/porto_dummy/wp-content/uploads/2017/03/custom-icon-3.jpg);
   width: 100%;
   background-repeat: no-repeat;
@@ -736,7 +736,7 @@ article.post .post-meta .meta-comments:before {
   line-height: 1;
   width: 1em;
   text-align: left;
-  color: #6a80a9;
+  color: #0B4EA2;
   background-image: url(//sw-themes.com/porto_dummy/wp-content/uploads/2017/03/custom-icon-4.png);
   width: 100%;
   background-repeat: no-repeat;
@@ -782,13 +782,13 @@ article.post .post-meta i {
   line-height: 1;
   width: 1em;
   text-align: left;
-  color: #6a80a9;
+  color: #0B4EA2;
   width: 100%;
 }
 
 article.post .post-meta .meta-date {
   width: 75px;
-  color: #2e353e !important;
+  color: #1E2430 !important;
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
@@ -796,21 +796,21 @@ article.post .post-meta .meta-date {
 article.post .post-meta .meta-comments {
   width: 65px;
   text-align: left;
-  color: #2e353e !important;
+  color: #1E2430 !important;
   font-weight: 600 !important;
-  border-bottom: 1px solid #e4e7eb;
+  border-bottom: 1px solid #DCE3EC;
   line-height: 14px;
 }
 
 article.post .post-meta .meta-comments a {
-  color: #2e353e !important;
+  color: #1E2430 !important;
 }
 
 article.post .post-meta .meta-like {
   position: relative;
   width: 65px;
   text-align: left;
-  color: #2e353e !important;
+  color: #1E2430 !important;
   font-weight: 600 !important;
   font-size: 14px;
 }
@@ -824,7 +824,7 @@ article.post .post-meta .meta-like:before {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 2em !important;
-  color: #6a80a9;
+  color: #0B4EA2;
   width: 100%;
   background-image: url(//sw-themes.com/porto_dummy/wp-content/uploads/2017/03/custom-icon-5.png);
   background-repeat: no-repeat;
@@ -832,7 +832,7 @@ article.post .post-meta .meta-like:before {
 }
 
 article .post-content a p.post-excerpt {
-  color: #818898 !important;
+  color: #5A6472 !important;
   font-size: 14px;
 }
 
@@ -842,7 +842,7 @@ article .post-content a p.post-excerpt {
 
 article .post-content a:hover p.post-excerpt {
   text-decoration: none;
-  color: #818898;
+  color: #5A6472;
 }
 
 .post-block.post-share {
@@ -857,13 +857,13 @@ article .post-content a:hover p.post-excerpt {
 
 .post-block.post-share .share-links a {
   background: none !important;
-  color: #6a80a9 !important;
+  color: #0B4EA2 !important;
   width: 2em;
   margin: 0;
 }
 
 .post-share h3 {
-  color: #2e353e !important;
+  color: #1E2430 !important;
   font-size: 14px;
   font-weight: 600;
   margin: 0;
@@ -871,7 +871,7 @@ article .post-content a:hover p.post-excerpt {
 
 .single-post .testimonial.testimonial-with-quotes blockquote:after,
 .single-post .testimonial.testimonial-with-quotes blockquote:before {
-  color: #2e353e;
+  color: #1E2430;
   font-size: 80px !important;
 }
 
@@ -906,7 +906,7 @@ article .post-content a:hover p.post-excerpt {
   margin: 0 !important;
   font-weight: 600;
   font-size: 12px;
-  color: #2e353e;
+  color: #1E2430;
   padding: 6px 12px;
   line-height: 1.42857143;
   height: auto;
@@ -935,7 +935,7 @@ article .post-content a:hover p.post-excerpt {
 
 .post-block.post-comments > h3 {
   font-size: 19px;
-  color: #2e353e;
+  color: #1E2430;
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -955,7 +955,7 @@ ul.comments .comment-arrow {
 
 ul.comments ul.children > li,
 ul.comments > li {
-  border-top: 1px solid #e4e7eb;
+  border-top: 1px solid #DCE3EC;
 }
 
 ul.comments > li:first-child {
@@ -974,7 +974,7 @@ ul.comments > li img.avatar {
 
 ul.comments .comment-block .comment-by strong {
   font-weight: 600 !important;
-  color: #2e353e;
+  color: #1E2430;
 }
 
 .comment-reply-link {
@@ -995,7 +995,7 @@ article.post .comment-respond {
 }
 
 #respond h3.comment-reply-title {
-  color: #2e353e !important;
+  color: #1E2430 !important;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 20px;
@@ -1007,8 +1007,8 @@ article.post .comment-respond {
 
 .comment-form .form-submit input[type="submit"].submit {
   background: transparent;
-  border-color: #6a80a9;
-  color: #2e353e !important;
+  border-color: #0B4EA2;
+  color: #1E2430 !important;
   border-width: 1px;
   padding: 14px 20px;
   font-size: 14px !important;
@@ -1016,12 +1016,12 @@ article.post .comment-respond {
 }
 
 .comment-form .form-submit input[type="submit"].submit:hover {
-  border-color: #7a8eb2 #7a8eb2 #5b739e;
-  background-color: #7a8eb2;
+  border-color: #1E427B #1E427B #083B7A;
+  background-color: #1E427B;
 }
 
 .sidebar-content .widget .widget-title {
-  color: #2e353e !important;
+  color: #1E2430 !important;
   font-size: 18px;
   font-weight: 600 !important;
   margin-bottom: 30px;
@@ -1042,7 +1042,7 @@ article.post .comment-respond {
 }
 
 .widget_categories > ul li a {
-  color: #818898 !important;
+  color: #5A6472 !important;
   font-size: 14px;
 }
 
@@ -1054,7 +1054,7 @@ article.post .comment-respond {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2e353e !important;
+  color: #1E2430 !important;
   margin-left: 0.3em;
   float: right;
 }
@@ -1065,7 +1065,7 @@ article.post .comment-respond {
 }
 
 .widget-recent-posts .post-item-small a {
-  color: #2e353e !important;
+  color: #1E2430 !important;
   font-weight: 600 !important;
 }
 
@@ -1074,14 +1074,14 @@ article.post .comment-respond {
 }
 
 .widget-recent-posts .post-item-small a:hover {
-  color: #6a80a9 !important;
+  color: #0B4EA2 !important;
   text-decoration: none;
 }
 
 .widget_tag_cloud .tagcloud a {
   background: transparent;
-  border-color: #6a80a9;
-  color: #2e353e !important;
+  border-color: #0B4EA2;
+  color: #1E2430 !important;
   border-width: 1px;
   padding: 10px 20px;
   font-size: 14px !important;
@@ -1089,8 +1089,8 @@ article.post .comment-respond {
 }
 
 .widget_tag_cloud .tagcloud a:hover {
-  border-color: #7a8eb2 #7a8eb2 #5b739e;
-  background-color: #7a8eb2;
+  border-color: #1E427B #1E427B #083B7A;
+  background-color: #1E427B;
 }
 
 .rtl .custom-toll-free {
@@ -1266,7 +1266,7 @@ article.post .comment-respond {
   font-weight: 400;
   color: white !important;
   margin-bottom: 1.0714em;
-  background: #804b9a !important;
+  background: #0B4EA2 !important;
 }
 
 .gall_slide .wpb_flexslider .flex-control-nav {
@@ -1287,7 +1287,7 @@ article.post .comment-respond {
   font-weight: 400;
   color: white !important;
   margin-bottom: 1.0714em;
-  background: #804b9a !important;
+  background: #0B4EA2 !important;
   /*margin-top: -61px;
     */
 }
@@ -1316,7 +1316,7 @@ article.post .comment-respond {
   font-weight: 400;
   color: white !important;
   margin-bottom: 1.0714em;
-  background: #804b9a !important;
+  background: #0B4EA2 !important;
   margin-top: 0px;
 }
 
@@ -1370,15 +1370,15 @@ article.post .comment-respond {
 
 .top_headng {
   font-size: 51px;
-  color: #804b9a;
+  color: #0B4EA2;
   line-height: 50px;
 }
 
 .top_headng_pop {
-  background: #804b9a;
+  background: #0B4EA2;
   color: white;
   padding: 20px;
-  box-shadow: -10px 10px #ffc927;
+  box-shadow: -10px 10px #F47B20;
 }
 
 .tobutton .toggle {
@@ -1392,7 +1392,7 @@ article.post .comment-respond {
   font-size: 25px;
   color: #ffffff !important;
   text-transform: uppercase;
-  background: #804b9a;
+  background: #0B4EA2;
   border-radius: 50px;
 }
 
@@ -1405,17 +1405,17 @@ article.post .comment-respond {
   font-size: 25px;
   color: #ffffff !important;
   text-transform: uppercase;
-  background: #804b9a;
+  background: #0B4EA2;
   border-radius: 50px;
 }
 
 .tobutton .toggle > label:hover {
-  background: #804b9a;
+  background: #0B4EA2;
   border-radius: 50px;
 }
 
 .tobutton .toggle > label:after {
-  background-color: #804b9a;
+  background-color: #0B4EA2;
   display: none;
 }
 
@@ -1442,7 +1442,7 @@ textarea,
 .form-control,
 select {
   width: 100%;
-  background-color: #804b9a !important;
+  background-color: #0B4EA2 !important;
   color: #f8f6f9 !important;
   padding: 15px !important;
   font-size: 17px !important;
@@ -1451,7 +1451,7 @@ select {
 }
 
 .fom_addmisin {
-  background: #804b9a;
+  background: #0B4EA2;
   padding: 70px;
 }
 
@@ -1493,7 +1493,7 @@ label {
   font-weight: 400;
   color: white !important;
   margin-bottom: 1.0714em;
-  background: #804b9a !important;
+  background: #0B4EA2 !important;
 }
 
 #customers td,
@@ -1508,7 +1508,7 @@ label {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #804b9a;
+  background-color: #0B4EA2;
   color: white;
 }
 
@@ -1541,13 +1541,13 @@ label {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #804b9a;
+  background-color: #0B4EA2;
   color: white;
 }
 
 .top_heading_sub-1 {
   font-size: 20px;
-  color: #804b9a;
+  color: #0B4EA2;
   position: absolute;
   left: -88px;
   line-height: 64px;
@@ -1560,7 +1560,7 @@ label {
 
 .porto-icon i {
   line-height: inherit;
-  color: #804a9a;
+  color: #0B4EA2;
 }
 
 .porto-sicon-box {
@@ -1576,13 +1576,13 @@ label {
 
 .Secound_heading {
   font-size: 18px;
-  color: #804b9a;
+  color: #0B4EA2;
   line-height: 20px;
 }
 
 .top_headng {
   font-size: 51px;
-  color: #804b9a;
+  color: #0B4EA2;
 }
 
 .page_para {
@@ -1609,7 +1609,7 @@ label {
   font-weight: 400;
   color: white !important;
   margin-bottom: 1.0714em;
-  background: #804b9a !important;
+  background: #0B4EA2 !important;
 }
 
 .gall_slide .wpb_gallery_heading {
@@ -1619,13 +1619,13 @@ label {
   font-weight: 400;
   color: white !important;
   margin-bottom: 1.0714em;
-  background: #804b9a !important;
+  background: #0B4EA2 !important;
   margin-top: -61px;
 }
 
 .top_heading_sub-1 {
   font-size: 20px;
-  color: #804b9a;
+  color: #0B4EA2;
   position: absolute;
   left: -77px;
   line-height: 64px;
@@ -1639,7 +1639,7 @@ label {
 }
 
 .top_headng_colr {
-  background: #804b9a !important;
+  background: #0B4EA2 !important;
 }
 
 .main-content {
@@ -1708,8 +1708,8 @@ select {
 .btn-primary {
   padding: 8px 47px !important;
   color: #ffffff;
-  background-color: #804b9a;
-  border-color: #804b9a #6a80a9 #52678f;
+  background-color: #0B4EA2;
+  border-color: #0B4EA2 #0B4EA2 #083B7A;
   border-radius: 50px;
 }
 
@@ -1727,7 +1727,7 @@ select {
   border-bottom-width: 0px !important;
   padding-top: 0px !important;
   padding-bottom: 0px !important;
-  background-color: #483248 !important;
+  background-color: #083B7A !important;
 }
 
 .mega-info-title {
@@ -1753,7 +1753,7 @@ select {
 }
 
 .top_count {
-  color: #804b9a;
+  color: #0B4EA2;
   font-size: 102px;
   font-weight: bold;
   line-height: 80px;
@@ -1787,7 +1787,7 @@ select {
   border-radius: 50% !important;
   width: 180px;
   height: 180px;
-  border: 5px solid #804b9a;
+  border: 5px solid #0B4EA2;
 }
 
 .tm-slider .carousel-caption {
@@ -1849,7 +1849,7 @@ select {
   font-weight: 400;
   color: white !important;
   margin-bottom: 1.0714em;
-  background: #804b9a !important;
+  background: #0B4EA2 !important;
 }
 
 h2.wpb_heading.wpb_singleimage_heading {
@@ -1857,7 +1857,7 @@ h2.wpb_heading.wpb_singleimage_heading {
 }
 
 .wpb_single_image img {
-  border: 5px solid #804b9a !important;
+  border: 5px solid #0B4EA2 !important;
 }
 
 #mega-social-btn a {
@@ -1905,7 +1905,7 @@ h2.wpb_heading.wpb_singleimage_heading {
    5. Dynamic Info Boxes & Component Items
    ========================================================================== */
 #porto-info-list8373995416aab8f1d55c4b i {
-  color: #804a9a;
+  color: #0B4EA2;
 }
 
 #porto-info-list10707793206aab8f1d6bc5f i {
@@ -1917,7 +1917,7 @@ h2.wpb_heading.wpb_singleimage_heading {
 }
 
 #porto-info-list16113593696aab8f59ab893 i {
-  color: #804a9a;
+  color: #0B4EA2;
 }
 
 #porto-info-list10727957496aab8f59bbc13 i {
@@ -1937,11 +1937,11 @@ h2.wpb_heading.wpb_singleimage_heading {
 }
 
 #porto-info-list18138976086aab8f396423c i {
-  color: #804a9a;
+  color: #0B4EA2;
 }
 
 #porto-info-list10893541366aab8f39671e7 i {
-  color: #804b9a;
+  color: #0B4EA2;
 }
 
 #porto-info-list11699066646aab8f3976f0a i {
@@ -1985,11 +1985,11 @@ h2.wpb_heading.wpb_singleimage_heading {
 }
 
 #porto-info-list20005353786aab8f36019eb i {
-  color: #804a9a;
+  color: #0B4EA2;
 }
 
 #porto-info-list9057888316aab8f3601fda i {
-  color: #804a9a;
+  color: #0B4EA2;
 }
 
 #porto-info-list6490802156aab8f360f9ec i {
@@ -2001,7 +2001,7 @@ h2.wpb_heading.wpb_singleimage_heading {
 }
 
 #porto-info-list4432815786aab8f2cdc114 i {
-  color: #804a9a;
+  color: #0B4EA2;
 }
 
 #porto-info-list19367752476aab8f2cec990 i {
@@ -2049,7 +2049,7 @@ h2.wpb_heading.wpb_singleimage_heading {
 }
 
 #porto-info-list9081298456aab8f2a12468 i {
-  color: #804b9a;
+  color: #0B4EA2;
 }
 
 #porto-info-list15861420746aab8f2a22ab2 i {
@@ -2089,7 +2089,7 @@ h2.wpb_heading.wpb_singleimage_heading {
 }
 
 #porto-info-list14812673246aab8f1ad6f0b i {
-  color: #804a9a;
+  color: #0B4EA2;
 }
 
 #porto-info-list7472063056aab8f1ae781d i {
@@ -2132,7 +2132,7 @@ h2.wpb_heading.wpb_singleimage_heading {
 }
 
 #porto-info-list4734474766aab8f349a537 i {
-  color: #804a9a;
+  color: #0B4EA2;
 }
 
 #porto-info-list13134775356aab8f34ac3eb i {
@@ -2169,7 +2169,7 @@ h2.wpb_heading.wpb_singleimage_heading {
 .vc_custom_1606718284600 {
   padding-top: 0px !important;
   padding-bottom: 0px !important;
-  background-color: #804a9a !important;
+  background-color: #0B4EA2 !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
@@ -2178,7 +2178,7 @@ h2.wpb_heading.wpb_singleimage_heading {
 .vc_custom_1607178521666 {
   padding-top: 60px !important;
   padding-bottom: 60px !important;
-  background-color: #804a9a !important;
+  background-color: #0B4EA2 !important;
 }
 
 .vc_custom_1608130065113 {
@@ -2218,7 +2218,7 @@ h2.wpb_heading.wpb_singleimage_heading {
 .vc_custom_1606720662381 {
   padding-top: 0px !important;
   padding-bottom: 0px !important;
-  background-color: #804a9a !important;
+  background-color: #0B4EA2 !important;
 }
 
 .vc_custom_1606720648926 {
@@ -2249,13 +2249,13 @@ h2.wpb_heading.wpb_singleimage_heading {
 
 .vc_custom_1606979748515 {
   padding-bottom: 20px !important;
-  background-color: #804a9a !important;
+  background-color: #0B4EA2 !important;
 }
 
 .vc_custom_1606496674302 {
   border-top-width: 2px !important;
   padding-top: 20px !important;
-  background-color: #804a9a !important;
+  background-color: #0B4EA2 !important;
   border-top-color: #543c72 !important;
   border-top-style: solid !important;
 }
@@ -2365,7 +2365,7 @@ h2.wpb_heading.wpb_singleimage_heading {
 .vc_custom_1606988093335 {
   padding-top: 0px !important;
   padding-bottom: 0px !important;
-  background-color: #804a9a !important;
+  background-color: #0B4EA2 !important;
 }
 
 .vc_custom_1607347480758 {
@@ -2630,7 +2630,7 @@ h2.wpb_heading.wpb_singleimage_heading {
 .vc_custom_1607513621526 {
   padding-top: 0px !important;
   padding-bottom: 0px !important;
-  background-color: #804a9a !important;
+  background-color: #0B4EA2 !important;
 }
 
 .vc_custom_1607512623017 {
@@ -2831,15 +2831,15 @@ h2.wpb_heading.wpb_singleimage_heading {
 .vc_custom_1610366505074 {
   padding-top: 20px !important;
   padding-bottom: 20px !important;
-  background-color: #804a9a !important;
+  background-color: #0B4EA2 !important;
 }
 
 .vc_custom_1610366323275 {
-  background-color: #804a9a !important;
+  background-color: #0B4EA2 !important;
 }
 
 .vc_custom_1610366422437 {
-  background-color: #804a9a !important;
+  background-color: #0B4EA2 !important;
 }
 
 .vc_custom_1606928261954 {
@@ -3103,7 +3103,7 @@ h2.wpb_heading.wpb_singleimage_heading {
 .vc_custom_1606927393306 {
   padding-top: 70px !important;
   padding-bottom: 70px !important;
-  background-color: #804a9a !important;
+  background-color: #0B4EA2 !important;
 }
 
 .vc_custom_1606927382492 {
@@ -3145,13 +3145,13 @@ h2.wpb_heading.wpb_singleimage_heading {
   border-right-width: 1px !important;
   border-bottom-width: 1px !important;
   border-left-width: 1px !important;
-  border-left-color: #804a9a !important;
+  border-left-color: #0B4EA2 !important;
   border-left-style: solid !important;
-  border-right-color: #804a9a !important;
+  border-right-color: #0B4EA2 !important;
   border-right-style: solid !important;
-  border-top-color: #804a9a !important;
+  border-top-color: #0B4EA2 !important;
   border-top-style: solid !important;
-  border-bottom-color: #804a9a !important;
+  border-bottom-color: #0B4EA2 !important;
   border-bottom-style: solid !important;
 }
 
@@ -3223,13 +3223,13 @@ h2.wpb_heading.wpb_singleimage_heading {
   border-right-width: 1px !important;
   border-bottom-width: 1px !important;
   border-left-width: 1px !important;
-  border-left-color: #804a9a !important;
+  border-left-color: #0B4EA2 !important;
   border-left-style: solid !important;
-  border-right-color: #804a9a !important;
+  border-right-color: #0B4EA2 !important;
   border-right-style: solid !important;
-  border-top-color: #804a9a !important;
+  border-top-color: #0B4EA2 !important;
   border-top-style: solid !important;
-  border-bottom-color: #804a9a !important;
+  border-bottom-color: #0B4EA2 !important;
   border-bottom-style: solid !important;
 }
 
@@ -3259,18 +3259,18 @@ h2.wpb_heading.wpb_singleimage_heading {
   border-right-width: 1px !important;
   border-bottom-width: 1px !important;
   border-left-width: 1px !important;
-  border-left-color: #804a9a !important;
+  border-left-color: #0B4EA2 !important;
   border-left-style: solid !important;
-  border-right-color: #804a9a !important;
+  border-right-color: #0B4EA2 !important;
   border-right-style: solid !important;
-  border-top-color: #804a9a !important;
+  border-top-color: #0B4EA2 !important;
   border-top-style: solid !important;
-  border-bottom-color: #804a9a !important;
+  border-bottom-color: #0B4EA2 !important;
   border-bottom-style: solid !important;
 }
 
 .vc_custom_1607602517839 {
-  background-color: #804a9a !important;
+  background-color: #0B4EA2 !important;
 }
 
 .vc_custom_1610372574774 {
@@ -3278,7 +3278,7 @@ h2.wpb_heading.wpb_singleimage_heading {
   padding-right: 0px !important;
   padding-bottom: 0px !important;
   padding-left: 0px !important;
-  background-color: #804a9a !important;
+  background-color: #0B4EA2 !important;
 }
 
 .vc_custom_1774345968820 {
@@ -3333,13 +3333,13 @@ h2.wpb_heading.wpb_singleimage_heading {
   border-right-width: 1px !important;
   border-bottom-width: 1px !important;
   border-left-width: 1px !important;
-  border-left-color: #804a9a !important;
+  border-left-color: #0B4EA2 !important;
   border-left-style: solid !important;
-  border-right-color: #804a9a !important;
+  border-right-color: #0B4EA2 !important;
   border-right-style: solid !important;
-  border-top-color: #804a9a !important;
+  border-top-color: #0B4EA2 !important;
   border-top-style: solid !important;
-  border-bottom-color: #804a9a !important;
+  border-bottom-color: #0B4EA2 !important;
   border-bottom-style: solid !important;
 }
 
@@ -3348,13 +3348,13 @@ h2.wpb_heading.wpb_singleimage_heading {
   border-right-width: 1px !important;
   border-bottom-width: 1px !important;
   border-left-width: 1px !important;
-  border-left-color: #804a9a !important;
+  border-left-color: #0B4EA2 !important;
   border-left-style: solid !important;
-  border-right-color: #804a9a !important;
+  border-right-color: #0B4EA2 !important;
   border-right-style: solid !important;
-  border-top-color: #804a9a !important;
+  border-top-color: #0B4EA2 !important;
   border-top-style: solid !important;
-  border-bottom-color: #804a9a !important;
+  border-bottom-color: #0B4EA2 !important;
   border-bottom-style: solid !important;
 }
 
@@ -3368,13 +3368,13 @@ h2.wpb_heading.wpb_singleimage_heading {
   border-right-width: 1px !important;
   border-bottom-width: 1px !important;
   border-left-width: 1px !important;
-  border-left-color: #804a9a !important;
+  border-left-color: #0B4EA2 !important;
   border-left-style: solid !important;
-  border-right-color: #804a9a !important;
+  border-right-color: #0B4EA2 !important;
   border-right-style: solid !important;
-  border-top-color: #804a9a !important;
+  border-top-color: #0B4EA2 !important;
   border-top-style: solid !important;
-  border-bottom-color: #804a9a !important;
+  border-bottom-color: #0B4EA2 !important;
   border-bottom-style: solid !important;
 }
 
@@ -3383,13 +3383,13 @@ h2.wpb_heading.wpb_singleimage_heading {
   border-right-width: 1px !important;
   border-bottom-width: 1px !important;
   border-left-width: 1px !important;
-  border-left-color: #804a9a !important;
+  border-left-color: #0B4EA2 !important;
   border-left-style: solid !important;
-  border-right-color: #804a9a !important;
+  border-right-color: #0B4EA2 !important;
   border-right-style: solid !important;
-  border-top-color: #804a9a !important;
+  border-top-color: #0B4EA2 !important;
   border-top-style: solid !important;
-  border-bottom-color: #804a9a !important;
+  border-bottom-color: #0B4EA2 !important;
   border-bottom-style: solid !important;
 }
 
@@ -3471,7 +3471,7 @@ h2.wpb_heading.wpb_singleimage_heading {
 }
 
 .vc_custom_1606734930156 {
-  background-color: #804b9a !important;
+  background-color: #0B4EA2 !important;
 }
 
 .vc_custom_1710851817705 {
@@ -3863,7 +3863,7 @@ h2.wpb_heading.wpb_singleimage_heading {
 .vc_custom_1607509132955 {
   padding-top: 0px !important;
   padding-bottom: 0px !important;
-  background-color: #804a9a !important;
+  background-color: #0B4EA2 !important;
 }
 
 .vc_custom_1607077776359 {
@@ -3914,7 +3914,7 @@ h2.wpb_heading.wpb_singleimage_heading {
   }
   .Secound_heading {
     font-size: 30px !important;
-    color: #804b9a;
+    color: #0B4EA2;
     line-height: 40px !important;
     padding-right: 0px !important;
   }
@@ -3924,7 +3924,7 @@ h2.wpb_heading.wpb_singleimage_heading {
   }
   .top_headng {
     font-size: 40px !important;
-    color: #804b9a;
+    color: #0B4EA2;
     line-height: 50px;
   }
   .vc_images_carousel {
@@ -4179,7 +4179,7 @@ h2.wpb_heading.wpb_singleimage_heading {
   .single-post article.post .post-meta .meta-like {
     text-align: left;
     border: none;
-    border-bottom: 1px solid #e4e7eb;
+    border-bottom: 1px solid #DCE3EC;
   }
   .article.post .post-meta {
     left: auto;
@@ -4220,7 +4220,7 @@ h2.wpb_heading.wpb_singleimage_heading {
     font-size: 14px;
     color: #ffffff !important;
     text-transform: uppercase;
-    background: #804b9a;
+    background: #0B4EA2;
     border-radius: 50px;
   }
   .tobutton .toggle.active > label {
