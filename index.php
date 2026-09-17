@@ -9,11 +9,9 @@ $activePage = "index";
 require_once __DIR__ . '/includes/header.php';
 ?>
 
-<div id="main" class="main-content-wrapper">
-    <div class="container py-5">
-        <!-- Home page content goes here -->
-    </div>
-</div>
+<main id="main" class="main-content-wrapper">
+    <!-- Home page sections will be added here based on your design image -->
+</main>
 
 <?php
 require_once __DIR__ . '/includes/footer.php';
