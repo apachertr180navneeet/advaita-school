@@ -1483,7 +1483,7 @@ label {
 }
 
 .btn-primary {
-  background-color: #543c72 !important;
+  background-color: #083b7a !important;
 }
 
 .gall_slide .wpb_gallery_heading {
@@ -1634,7 +1634,7 @@ label {
 
 .mega-info-img {
   border-radius: 50% !important;
-  background-color: #543c72;
+  background-color: #083b7a;
   padding: 10px;
 }
 
@@ -2256,7 +2256,7 @@ h2.wpb_heading.wpb_singleimage_heading {
   border-top-width: 2px !important;
   padding-top: 20px !important;
   background-color: #083b7a !important;
-  border-top-color: #543c72 !important;
+  border-top-color: #083b7a !important;
   border-top-style: solid !important;
 }
 
@@ -4266,37 +4266,211 @@ h2.wpb_heading.wpb_singleimage_heading {
 }
 
 /* ==========================================================================
-   8. Context-Aware Typography & Color-Background Contrast System
+   8. Polished Header, Clean White Nav, Brand Logo & Complete Theme System
    ========================================================================== */
 
-/* Root Brand Color Variables */
-:root {
-  --advaita-primary: #083b7a;
-  --advaita-primary-dark: #052957;
-  --advaita-primary-light: #0b4ea2;
-  --advaita-accent: #f47b20;
-  --advaita-accent-dark: #d2620e;
-  --advaita-ink: #1e2430;
-  --advaita-muted: #5a6472;
-  --advaita-bg-light: #f4f7fb;
-  --advaita-border: #dce3ec;
+/* --- 8.1 Header Topbar --- */
+#header .header-top {
+  background-color: #083b7a !important;
+  color: #ffffff !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 6px 0 !important;
+  font-size: 13px !important;
 }
 
-/* --------------------------------------------------------------------------
-   8.1 Default / Light Background Typography
-   -------------------------------------------------------------------------- */
+#header .header-top .container {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#header .header-top .custom-html,
+#header .header-top .custom-html a,
+#header .header-top .share-links a,
+#header .header-top span,
+#header .header-top div {
+  color: #ffffff !important;
+  font-size: 13px !important;
+}
+
+#header .header-top a:hover {
+  color: #f47b20 !important;
+  text-decoration: none;
+}
+
+#header .header-top .share-links a {
+  background: rgba(255, 255, 255, 0.15) !important;
+  color: #ffffff !important;
+  border-radius: 50%;
+  margin-left: 5px;
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+#header .header-top .share-links a:hover {
+  background: #f47b20 !important;
+  color: #ffffff !important;
+}
+
+/* --- 8.2 Header Main & Navigation (Clean Pure White Background) --- */
+#header .header-main,
+.header-wrapper #header .header-main,
+#header.sticky-header .header-main,
+.fixed-header #header .header-main {
+  background-color: #ffffff !important;
+  box-shadow: 0 4px 15px rgba(8, 59, 122, 0.08) !important;
+  border-bottom: 1px solid #dce3ec !important;
+  padding: 10px 0 !important;
+  min-height: 80px !important;
+}
+
+#header .header-main .container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+/* Center Logo on White Header */
+#header .logo,
+#header .header-center .logo,
+#header .header-left .logo {
+  background: transparent !important;
+  border-radius: 0 !important;
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+#header .logo img,
+#header .logo a img,
+.header-main .logo img {
+  max-height: 72px !important;
+  max-width: 190px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain !important;
+  background: transparent !important;
+  display: block !important;
+  margin: 0 auto !important;
+}
+
+@media (max-width: 991px) {
+  #header .logo img,
+  .header-main .logo img {
+    max-height: 52px !important;
+    max-width: 140px !important;
+  }
+}
+
+/* Navigation Links - Crisp Deep Navy on White */
+#header .main-menu,
+#header .secondary-menu {
+  background: transparent !important;
+}
+
+#header .main-menu > li.menu-item > a,
+#header .secondary-menu > li.menu-item > a,
+#nav-panel .accordion-menu li.menu-item > a {
+  color: #083b7a !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.3px !important;
+  padding: 12px 14px !important;
+  transition: color 0.2s ease !important;
+}
+
+#header .main-menu > li.menu-item:hover > a,
+#header .main-menu > li.menu-item.active > a,
+#header .secondary-menu > li.menu-item:hover > a,
+#header .secondary-menu > li.menu-item.active > a,
+#nav-panel .accordion-menu li.menu-item.active > a {
+  color: #f47b20 !important;
+  background: transparent !important;
+}
+
+/* Dropdown Sub-menus */
+#header .main-menu .popup,
+#header .secondary-menu .popup {
+  border-top: 3px solid #083b7a !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 10px 25px rgba(8, 59, 122, 0.15) !important;
+  border-radius: 0 0 6px 6px !important;
+}
+
+#header .main-menu .sub-menu,
+#header .secondary-menu .sub-menu {
+  background-color: #ffffff !important;
+  padding: 8px 0 !important;
+}
+
+#header .main-menu .sub-menu li a,
+#header .secondary-menu .sub-menu li a {
+  color: #1e2430 !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+  padding: 8px 18px !important;
+  display: block !important;
+  transition: all 0.2s ease !important;
+}
+
+#header .main-menu .sub-menu li a:hover,
+#header .secondary-menu .sub-menu li a:hover {
+  color: #083b7a !important;
+  background-color: #f4f7fb !important;
+  padding-left: 22px !important;
+}
+
+/* Mobile Drawer */
+#nav-panel {
+  background-color: #ffffff !important;
+  border-top: 3px solid #083b7a !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+#nav-panel .accordion-menu li.menu-item a {
+  color: #083b7a !important;
+  border-bottom: 1px solid #dce3ec !important;
+}
+
+#header .mobile-toggle {
+  background-color: #083b7a !important;
+  color: #ffffff !important;
+  border-radius: 4px !important;
+  padding: 8px 12px !important;
+}
+
+/* --- 8.3 Contextual Typography System --- */
 body {
   color: #1e2430;
   background-color: #ffffff;
+  font-family:
+    "Poppins",
+    "Open Sans",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
 }
 
 p,
 li,
 .post-excerpt {
   color: #5a6472;
+  line-height: 1.65;
 }
 
-/* Headings on light background */
 h1,
 h2,
 h3,
@@ -4313,13 +4487,13 @@ h6,
 #respond h3.comment-reply-title,
 .post-block.post-comments > h3 {
   color: #083b7a;
+  font-weight: 700;
 }
 
 .entry-title a:hover {
   color: #f47b20 !important;
 }
 
-/* Links */
 a {
   color: #083b7a;
   transition: color 0.2s ease;
@@ -4330,175 +4504,53 @@ a:focus {
   color: #f47b20;
 }
 
-/* --------------------------------------------------------------------------
-   8.2 Header & Navigation Context
-   -------------------------------------------------------------------------- */
-#header .header-top {
-  background-color: #083b7a !important;
-  color: #ffffff !important;
-}
-
-#header .header-top a,
-#header .header-top .custom-html,
-#header .header-top .share-links a,
-#header .header-top span,
-#header .header-top div {
-  color: #ffffff !important;
-}
-
-#header .header-top a:hover {
-  color: #f47b20 !important;
-}
-
-#header .header-main {
-  background-color: #ffffff;
-}
-
-#header .main-menu > li.menu-item > a,
-#nav-panel .accordion-menu li.menu-item > a {
-  color: #083b7a !important;
-  font-weight: 600;
-}
-
-#header .main-menu > li.menu-item:hover > a,
-#header .main-menu > li.menu-item.active > a,
-#nav-panel .accordion-menu li.menu-item.active > a {
-  color: #f47b20 !important;
-}
-
-#header .main-menu .popup {
-  border-top: 3px solid #083b7a !important;
-  background-color: #ffffff !important;
-}
-
-#header .main-menu .sub-menu li a {
-  color: #1e2430 !important;
-}
-
-#header .main-menu .sub-menu li a:hover {
-  color: #083b7a !important;
-  background-color: #f4f7fb !important;
-}
-
-/* Mobile Nav Drawer */
-#nav-panel {
-  background-color: #ffffff;
-  border-top: 3px solid #083b7a;
-}
-
-#nav-panel .accordion-menu li.menu-item a {
-  color: #083b7a !important;
-}
-
-/* --------------------------------------------------------------------------
-   8.3 Dark Background Containers & Sections (Contrast Safe)
-   -------------------------------------------------------------------------- */
-/* Any section or row with dark navy or dark background */
-#footer,
-.footer-main,
-.footer-bottom,
-.bg-dark,
-.dark-bg,
-.vc_row[style*="background-color: #083B7A"],
-.vc_row[style*="background-color: #083b7a"],
-.vc_row[style*="background-color: #052957"],
-.vc_column-inner[style*="background-color: #083B7A"],
-.vc_column-inner[style*="background-color: #083b7a"],
-.top_headng_banner,
-.porto-block-dark {
-  color: #ffffff !important;
-}
-
-/* Headings on dark backgrounds must be pure white */
-#footer h1,
-#footer h2,
-#footer h3,
-#footer h4,
-#footer h5,
-#footer h6,
-#footer .widget-title,
-.footer-main h1,
-.footer-main h2,
-.footer-main h3,
-.footer-main h4,
-.footer-main h5,
-.footer-main h6,
-.footer-main .widget-title,
-.top_headng_banner,
-.vc_row[style*="background-color: #083B7A"] h1,
-.vc_row[style*="background-color: #083B7A"] h2,
-.vc_row[style*="background-color: #083B7A"] h3,
-.vc_row[style*="background-color: #083B7A"] h4,
-.vc_row[style*="background-color: #083b7a"] h1,
-.vc_row[style*="background-color: #083b7a"] h2,
-.vc_row[style*="background-color: #083b7a"] h3,
-.vc_row[style*="background-color: #083b7a"] h4,
-.vc_row[style*="background-color: #083B7A"] .porto-sicon-title,
-.vc_row[style*="background-color: #083b7a"] .porto-sicon-title,
-.vc_row[style*="background-color: #083B7A"] .stats-number,
-.vc_row[style*="background-color: #083b7a"] .stats-number,
-.vc_row[style*="background-color: #083B7A"] .stats-text,
-.vc_row[style*="background-color: #083b7a"] .stats-text {
-  color: #ffffff !important;
-}
-
-/* Body text, lists, paragraphs on dark backgrounds */
-#footer p,
-#footer li,
-#footer span,
-#footer .contact-info li,
-.footer-main p,
-.footer-main li,
-.footer-main span,
-.vc_row[style*="background-color: #083B7A"] p,
-.vc_row[style*="background-color: #083b7a"] p,
-.vc_row[style*="background-color: #083B7A"] span,
-.vc_row[style*="background-color: #083b7a"] span,
-.vc_row[style*="background-color: #083B7A"] li,
-.vc_row[style*="background-color: #083b7a"] li {
-  color: #eaf1fa !important;
-}
-
-/* Links on dark backgrounds */
-#footer a,
-.footer-main a,
-.vc_row[style*="background-color: #083B7A"] a,
-.vc_row[style*="background-color: #083b7a"] a {
-  color: #eaf1fa !important;
-}
-
-#footer a:hover,
-.footer-main a:hover,
-.vc_row[style*="background-color: #083B7A"] a:hover,
-.vc_row[style*="background-color: #083b7a"] a:hover {
-  color: #f47b20 !important;
-}
-
-/* --------------------------------------------------------------------------
-   8.4 Footer Specific Styling
-   -------------------------------------------------------------------------- */
+/* --- 8.4 Dark Background Sections (Footer, Banners & Dark Rows) --- */
 #footer {
   background-color: #083b7a !important;
   border-top: 4px solid #f47b20 !important;
+  color: #ffffff !important;
 }
 
 #footer .footer-main {
   background-color: #083b7a !important;
+  padding: 45px 0 25px !important;
 }
 
 #footer .widget-title {
   color: #ffffff !important;
-  border-bottom: 2px solid #f47b20;
-  padding-bottom: 8px;
-  margin-bottom: 20px;
-  display: inline-block;
-  font-weight: 700;
+  border-bottom: 2px solid #f47b20 !important;
+  padding-bottom: 8px !important;
+  margin-bottom: 18px !important;
+  display: inline-block !important;
+  font-weight: 700 !important;
+  font-size: 16px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+}
+
+#footer p,
+#footer li,
+#footer span,
+#footer div,
+#footer .contact-info li,
+#footer .contact-info a,
+#footer a {
+  color: #eaf1fa !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+}
+
+#footer a:hover {
+  color: #f47b20 !important;
+  text-decoration: underline !important;
 }
 
 #footer .footer-bottom {
   background-color: #052957 !important;
   color: #cfddf2 !important;
   border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  padding: 15px 0 !important;
+  font-size: 13px !important;
 }
 
 #footer .footer-bottom a {
@@ -4509,18 +4561,43 @@ a:focus {
   color: #f47b20 !important;
 }
 
-/* --------------------------------------------------------------------------
-   8.5 Buttons & Interactive Elements Contrast
-   -------------------------------------------------------------------------- */
-/* Primary Dark Button -> White Text */
+/* Dark Banners & Overlays */
+.top_headng_banner,
+.vc_row[style*="background-color: #083B7A"],
+.vc_row[style*="background-color: #083b7a"] {
+  background-color: #083b7a !important;
+  color: #ffffff !important;
+}
+
+.top_headng_banner h1,
+.top_headng_banner h2,
+.top_headng_banner h3,
+.vc_row[style*="background-color: #083B7A"] h1,
+.vc_row[style*="background-color: #083B7A"] h2,
+.vc_row[style*="background-color: #083B7A"] h3,
+.vc_row[style*="background-color: #083B7A"] h4,
+.vc_row[style*="background-color: #083B7A"] p,
+.vc_row[style*="background-color: #083B7A"] span,
+.vc_row[style*="background-color: #083B7A"] .stats-number,
+.vc_row[style*="background-color: #083B7A"] .stats-text {
+  color: #ffffff !important;
+}
+
+/* --- 8.5 Buttons & Accents --- */
 .btn-primary,
 .btn-special,
 .custom-btn-style-1 > a,
 .comment-form .form-submit input[type="submit"].submit {
   background-color: #083b7a !important;
-  border-color: #083b7a !important;
+  border: 2px solid #083b7a !important;
   color: #ffffff !important;
-  font-weight: 600;
+  font-weight: 700 !important;
+  border-radius: 50px !important;
+  padding: 10px 28px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+  transition: all 0.3s ease !important;
+  display: inline-block !important;
 }
 
 .btn-primary:hover,
@@ -4530,46 +4607,38 @@ a:focus {
   background-color: #f47b20 !important;
   border-color: #f47b20 !important;
   color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(244, 123, 32, 0.35) !important;
 }
 
-/* Outline Button on Light Background */
 .custom-btn-style-2 > a,
 a.custom-btn-style-2 {
   border: 2px solid #083b7a !important;
   color: #083b7a !important;
   background: transparent !important;
-  font-weight: 600;
+  font-weight: 700 !important;
+  border-radius: 50px !important;
+  padding: 10px 28px !important;
+  transition: all 0.3s ease !important;
+  display: inline-block !important;
 }
 
 .custom-btn-style-2 > a:hover,
 a.custom-btn-style-2:hover {
   background-color: #083b7a !important;
   color: #ffffff !important;
+  transform: translateY(-2px);
 }
 
-/* White Button on Dark Background */
-.vc_row[style*="background-color: #083B7A"] .porto-btn,
-.vc_row[style*="background-color: #083b7a"] .porto-btn {
-  background-color: #ffffff !important;
-  color: #083b7a !important;
-  border: none !important;
-}
-
-.vc_row[style*="background-color: #083B7A"] .porto-btn:hover,
-.vc_row[style*="background-color: #083b7a"] .porto-btn:hover {
-  background-color: #f47b20 !important;
-  color: #ffffff !important;
-}
-
-/* --------------------------------------------------------------------------
-   8.6 Badges, Accents, Carousels & Modals
-   -------------------------------------------------------------------------- */
 .porto-separator hr.separator-line {
   background-color: #f47b20 !important;
+  height: 4px !important;
+  border: none !important;
+  border-radius: 2px !important;
 }
 
 .page-top .page-title:not(.b-none):after {
-  border-bottom: 5px solid #083b7a !important;
+  border-bottom: 4px solid #083b7a !important;
 }
 
 .member-item.member-item-3 .view-more {
@@ -4590,7 +4659,6 @@ a.custom-btn-style-2:hover {
   color: #ffffff !important;
 }
 
-/* Modal Popup Contrast */
 #wow-modal-overlay-1 .modal-window-content,
 #wow-modal-overlay-1 .modal-window-content a,
 #wow-modal-overlay-1 .modal-window-content span,
@@ -4600,29 +4668,4 @@ a.custom-btn-style-2:hover {
 
 #wow-modal-overlay-1 .modal-window-content a:hover {
   color: #f47b20 !important;
-}
-
-/* Logo display */
-#header .logo img,
-.header-main .logo img,
-.header-left .logo img,
-.header-center .logo img {
-  max-height: 70px !important;
-  max-width: 170px !important;
-  width: auto !important;
-  height: auto !important;
-  object-fit: contain;
-  display: inline-block;
-}
-
-#header .logo {
-  max-width: 180px !important;
-}
-
-@media (max-width: 991px) {
-  #header .logo img,
-  .header-main .logo img {
-    max-height: 55px !important;
-    max-width: 130px !important;
-  }
 }
