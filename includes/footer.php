@@ -25,7 +25,7 @@
                     <div class="adv-footer-brand">
                         <a href="index.php" class="adv-footer-logo-link" title="Advaita School of Excellence">
                             <div class="adv-footer-logo-badge">
-                                <img src="assets/images/logo.png" alt="Advaita School Logo" class="adv-footer-logo-img">
+                                <img src="assets/images/logo-seal.png" alt="Advaita School Logo" class="adv-footer-logo-img">
                             </div>
                             <div class="adv-footer-brand-text">
                                 <span class="adv-footer-brand-name">Advaita</span>
