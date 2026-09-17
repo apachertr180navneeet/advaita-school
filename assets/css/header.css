@@ -300,16 +300,16 @@ body.adv-drawer-open {
 }
 
 /* --------------------------------------------------------------------------
-   Center Logo / Crest Branding
+   Center Logo / Overlapping Circular Crest Branding
    -------------------------------------------------------------------------- */
 .adv-nav-brand-center {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    z-index: 1010;
+    z-index: 1015;
     position: relative;
-    padding: 0 8px;
+    padding: 0 14px;
 }
 
 .adv-brand-badge {
@@ -317,24 +317,29 @@ body.adv-drawer-open {
     align-items: center;
     justify-content: center;
     background: #ffffff;
-    padding: 7px 16px;
-    border-radius: 50px;
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.22), 0 0 0 4px rgba(255, 255, 255, 0.22);
+    width: 108px;
+    height: 108px;
+    border-radius: 50%;
+    border: 3.5px solid #ffffff;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.35), 0 8px 24px rgba(0, 0, 0, 0.32);
     text-decoration: none;
     transition: var(--header-transition);
-    min-height: 62px;
+    overflow: hidden;
+    margin-top: -16px;
+    margin-bottom: -24px;
+    padding: 6px;
 }
 
 .adv-brand-badge:hover {
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3), 0 0 0 5px rgba(243, 112, 33, 0.4);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 0 0 3px var(--adv-accent-orange), 0 12px 30px rgba(0, 0, 0, 0.38);
 }
 
 .adv-brand-logo-img {
-    height: 50px;
-    width: auto;
-    max-width: 205px;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
+    border-radius: 50%;
     display: block;
 }
 
@@ -527,15 +532,23 @@ body.adv-drawer-open {
 
 .adv-mobile-brand-box {
     background: #ffffff;
-    padding: 5px 12px;
-    border-radius: 30px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 3px;
 }
 
 .adv-mobile-header .adv-brand-logo-img {
-    height: 36px;
-    max-width: 170px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
 }
 
 .adv-mobile-close {
@@ -791,14 +804,12 @@ body.adv-drawer-open {
     }
     
     .adv-brand-badge {
-        padding: 5px 12px;
-        min-height: 50px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.18), 0 0 0 3px rgba(255, 255, 255, 0.2);
-    }
-    
-    .adv-brand-logo-img {
-        height: 40px;
-        max-width: 175px;
+        width: 68px;
+        height: 68px;
+        margin: -6px 0 -12px;
+        padding: 4px;
+        border-width: 2.5px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 0 0 2px rgba(255, 255, 255, 0.3);
     }
     
     .adv-mobile-actions,
@@ -837,13 +848,11 @@ body.adv-drawer-open {
     }
     
     .adv-brand-badge {
-        padding: 4px 10px;
-        min-height: 46px;
-    }
-    
-    .adv-brand-logo-img {
-        height: 38px;
-        max-width: 160px;
+        width: 60px;
+        height: 60px;
+        margin: -4px 0 -8px;
+        padding: 3px;
+        border-width: 2px;
     }
 }
 
@@ -858,23 +867,19 @@ body.adv-drawer-open {
     }
     
     .adv-topbar-contact-items a span {
-        display: none; /* Show icon only if space is tight */
+        display: none;
     }
     
     .adv-nav-container {
         padding: 0 12px;
-        min-height: 58px;
+        min-height: 56px;
     }
     
     .adv-brand-badge {
-        padding: 4px 8px;
-        min-height: 42px;
-        border-radius: 25px;
-    }
-    
-    .adv-brand-logo-img {
-        height: 34px;
-        max-width: 145px;
+        width: 54px;
+        height: 54px;
+        margin: -3px 0 -6px;
+        padding: 3px;
     }
     
     .adv-mobile-nav-toggle {
@@ -890,9 +895,9 @@ body.adv-drawer-open {
 
 /* 6. Extra Small Screens (< 360px) */
 @media (max-width: 360px) {
-    .adv-brand-logo-img {
-        height: 30px;
-        max-width: 125px;
+    .adv-brand-badge {
+        width: 48px;
+        height: 48px;
     }
     
     .adv-topbar-socials a {
