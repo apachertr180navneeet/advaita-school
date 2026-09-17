@@ -158,9 +158,6 @@
                     <span class="adv-footer-copy-dot"></span>
                     <span>&copy; <?php echo date('Y'); ?> Advaita School of Excellence · All rights reserved</span>
                 </div>
-                <div class="adv-footer-credits-text">
-                    Website &amp; School ERP designed and developed with <span class="adv-footer-heart">❤</span> by <span class="adv-footer-credits-bold">E-Cybertech Solution</span>
-                </div>
             </div>
         </div>
     </footer>

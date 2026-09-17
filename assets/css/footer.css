@@ -328,7 +328,8 @@ a.adv-footer-contact-value:hover {
 .adv-footer-bottom-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    text-align: center;
     flex-wrap: wrap;
     gap: 14px;
 }
@@ -336,6 +337,7 @@ a.adv-footer-contact-value:hover {
 .adv-footer-copy-text {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     color: #94a3b8;
 }
@@ -346,19 +348,6 @@ a.adv-footer-contact-value:hover {
     background: var(--adv-accent-orange);
     border-radius: 50%;
     display: inline-block;
-}
-
-.adv-footer-credits-text {
-    color: #94a3b8;
-}
-
-.adv-footer-heart {
-    color: #ef4444;
-}
-
-.adv-footer-credits-bold {
-    color: #ffffff;
-    font-weight: 600;
 }
 
 /* --------------------------------------------------------------------------
