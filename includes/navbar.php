@@ -97,7 +97,7 @@ $currentPage = $activePage ?? '';
         <!-- Center Brand Crest -->
         <div class="adv-nav-brand-center">
             <a href="index.php" class="adv-brand-badge" title="Advaita School of Excellence">
-                <img src="assets/images/logo.png" alt="Advaita School of Excellence Logo" class="adv-brand-logo-img">
+                <img src="assets/images/logo-seal.png" alt="Advaita School of Excellence Seal" class="adv-brand-logo-img">
             </a>
         </div>
 
