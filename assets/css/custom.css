@@ -4729,11 +4729,29 @@ a.custom-btn-style-2:hover {
   color: #f47b20 !important;
 }
 
+#header .header-top .separator {
+  margin: 0 10px !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.25) !important;
+  height: 14px !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+#header .header-top .custom-html i,
+#header .header-top .custom-html .fa-phone,
+#header .header-top .custom-html .fas,
+#header .header-top .custom-html .fa-solid {
+  color: #f47b20 !important;
+  margin-right: 5px !important;
+  font-size: 13px !important;
+}
+
 #header .header-top .share-links {
-  margin-left: 12px !important;
+  margin-left: 8px !important;
   display: inline-flex !important;
   align-items: center !important;
   gap: 6px !important;
+  vertical-align: middle !important;
 }
 
 #header .header-top .share-links a {
@@ -4747,17 +4765,32 @@ a.custom-btn-style-2:hover {
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  font-size: 12px !important;
+  font-size: 13px !important;
   margin: 0 !important;
   transition: all 0.25s ease !important;
   border: none !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25) !important;
+  text-decoration: none !important;
+}
+
+#header .header-top .share-links a i,
+#header .header-top .share-links a .fab,
+#header .header-top .share-links a .fa-brands {
+  color: #083b7a !important;
+  font-size: 13px !important;
+  line-height: 1 !important;
+  transition: color 0.2s ease !important;
 }
 
 #header .header-top .share-links a:hover {
   background: #f47b20 !important;
-  color: #ffffff !important;
   transform: translateY(-2px);
+}
+
+#header .header-top .share-links a:hover i,
+#header .header-top .share-links a:hover .fab,
+#header .header-top .share-links a:hover .fa-brands {
+  color: #ffffff !important;
 }
 
 /* Main Header Navigation Bar (Solid Royal Navy #083B7A) */
@@ -4879,7 +4912,7 @@ a.custom-btn-style-2:hover {
   padding: 22px 0 !important;
   display: inline-flex !important;
   align-items: center !important;
-  gap: 4px !important;
+  gap: 5px !important;
   text-decoration: none !important;
   transition: color 0.2s ease !important;
   line-height: 1 !important;
@@ -4887,12 +4920,15 @@ a.custom-btn-style-2:hover {
 }
 
 #header .main-menu > li > a i,
-#header .secondary-menu > li > a i {
-  font-size: 10px !important;
+#header .main-menu > li > a .fa-chevron-down,
+#header .secondary-menu > li > a i,
+#header .secondary-menu > li > a .fa-chevron-down {
+  font-size: 11px !important;
   opacity: 0.85 !important;
   color: #ffffff !important;
   margin-left: 2px !important;
-  transition: transform 0.2s ease !important;
+  transition: transform 0.2s ease, color 0.2s ease !important;
+  display: inline-block !important;
 }
 
 #header .main-menu > li:hover > a,
@@ -4904,23 +4940,40 @@ a.custom-btn-style-2:hover {
 }
 
 #header .main-menu > li:hover > a i,
-#header .secondary-menu > li:hover > a i {
+#header .main-menu > li:hover > a .fa-chevron-down,
+#header .secondary-menu > li:hover > a i,
+#header .secondary-menu > li:hover > a .fa-chevron-down {
   color: #f47b20 !important;
   transform: rotate(180deg) !important;
 }
 
 /* Dropdown Sub-menus in Solid Royal Navy */
-#header .popup {
+#header .mega-menu .popup,
+#header .main-menu .popup,
+#header .secondary-menu .popup {
+  display: none !important;
   position: absolute !important;
   top: 100% !important;
   left: 0 !important;
   background-color: #083b7a !important;
   border-top: 3px solid #f47b20 !important;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4) !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45) !important;
   border-radius: 0 0 6px 6px !important;
-  min-width: 230px !important;
+  min-width: 240px !important;
   padding: 8px 0 !important;
   z-index: 1005 !important;
+}
+
+#header .secondary-menu .popup {
+  left: auto !important;
+  right: 0 !important;
+}
+
+#header .main-menu > li:hover > .popup,
+#header .main-menu > li.open > .popup,
+#header .secondary-menu > li:hover > .popup,
+#header .secondary-menu > li.open > .popup {
+  display: block !important;
 }
 
 #header .sub-menu {
@@ -4933,6 +4986,7 @@ a.custom-btn-style-2:hover {
 #header .sub-menu li {
   margin: 0 !important;
   padding: 0 !important;
+  display: block !important;
 }
 
 #header .sub-menu li a {
@@ -4943,6 +4997,7 @@ a.custom-btn-style-2:hover {
   display: block !important;
   text-decoration: none !important;
   transition: all 0.2s ease !important;
+  white-space: nowrap !important;
 }
 
 #header .sub-menu li a:hover {
@@ -4964,6 +5019,10 @@ a.custom-btn-style-2:hover {
   padding: 6px 12px !important;
   font-size: 16px !important;
   cursor: pointer !important;
+}
+
+#header .mobile-toggle i {
+  color: #ffffff !important;
 }
 
 /* Responsive Scaling */
