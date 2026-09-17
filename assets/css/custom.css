@@ -4271,32 +4271,40 @@ h2.wpb_heading.wpb_singleimage_heading {
 
 /* Root Brand Color Variables */
 :root {
-    --advaita-primary: #083B7A;
-    --advaita-primary-dark: #052957;
-    --advaita-primary-light: #0B4EA2;
-    --advaita-accent: #F47B20;
-    --advaita-accent-dark: #D2620E;
-    --advaita-ink: #1E2430;
-    --advaita-muted: #5A6472;
-    --advaita-bg-light: #F4F7FB;
-    --advaita-border: #DCE3EC;
+  --advaita-primary: #083b7a;
+  --advaita-primary-dark: #052957;
+  --advaita-primary-light: #0b4ea2;
+  --advaita-accent: #f47b20;
+  --advaita-accent-dark: #d2620e;
+  --advaita-ink: #1e2430;
+  --advaita-muted: #5a6472;
+  --advaita-bg-light: #f4f7fb;
+  --advaita-border: #dce3ec;
 }
 
 /* --------------------------------------------------------------------------
    8.1 Default / Light Background Typography
    -------------------------------------------------------------------------- */
 body {
-    color: #1E2430;
-    background-color: #ffffff;
+  color: #1e2430;
+  background-color: #ffffff;
 }
 
-p, li, .post-excerpt {
-    color: #5A6472;
+p,
+li,
+.post-excerpt {
+  color: #5a6472;
 }
 
 /* Headings on light background */
-h1, h2, h3, h4, h5, h6,
-.entry-title, .entry-title a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.entry-title,
+.entry-title a,
 .page-title,
 .top_headng,
 .porto-sicon-title,
@@ -4304,29 +4312,30 @@ h1, h2, h3, h4, h5, h6,
 .shorter,
 #respond h3.comment-reply-title,
 .post-block.post-comments > h3 {
-    color: #083B7A;
+  color: #083b7a;
 }
 
 .entry-title a:hover {
-    color: #F47B20 !important;
+  color: #f47b20 !important;
 }
 
 /* Links */
 a {
-    color: #083B7A;
-    transition: color 0.2s ease;
+  color: #083b7a;
+  transition: color 0.2s ease;
 }
 
-a:hover, a:focus {
-    color: #F47B20;
+a:hover,
+a:focus {
+  color: #f47b20;
 }
 
 /* --------------------------------------------------------------------------
    8.2 Header & Navigation Context
    -------------------------------------------------------------------------- */
 #header .header-top {
-    background-color: #083B7A !important;
-    color: #ffffff !important;
+  background-color: #083b7a !important;
+  color: #ffffff !important;
 }
 
 #header .header-top a,
@@ -4334,51 +4343,51 @@ a:hover, a:focus {
 #header .header-top .share-links a,
 #header .header-top span,
 #header .header-top div {
-    color: #ffffff !important;
+  color: #ffffff !important;
 }
 
 #header .header-top a:hover {
-    color: #F47B20 !important;
+  color: #f47b20 !important;
 }
 
 #header .header-main {
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 #header .main-menu > li.menu-item > a,
 #nav-panel .accordion-menu li.menu-item > a {
-    color: #083B7A !important;
-    font-weight: 600;
+  color: #083b7a !important;
+  font-weight: 600;
 }
 
 #header .main-menu > li.menu-item:hover > a,
 #header .main-menu > li.menu-item.active > a,
 #nav-panel .accordion-menu li.menu-item.active > a {
-    color: #F47B20 !important;
+  color: #f47b20 !important;
 }
 
 #header .main-menu .popup {
-    border-top: 3px solid #083B7A !important;
-    background-color: #ffffff !important;
+  border-top: 3px solid #083b7a !important;
+  background-color: #ffffff !important;
 }
 
 #header .main-menu .sub-menu li a {
-    color: #1E2430 !important;
+  color: #1e2430 !important;
 }
 
 #header .main-menu .sub-menu li a:hover {
-    color: #083B7A !important;
-    background-color: #F4F7FB !important;
+  color: #083b7a !important;
+  background-color: #f4f7fb !important;
 }
 
 /* Mobile Nav Drawer */
 #nav-panel {
-    background-color: #ffffff;
-    border-top: 3px solid #083B7A;
+  background-color: #ffffff;
+  border-top: 3px solid #083b7a;
 }
 
 #nav-panel .accordion-menu li.menu-item a {
-    color: #083B7A !important;
+  color: #083b7a !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -4397,13 +4406,23 @@ a:hover, a:focus {
 .vc_column-inner[style*="background-color: #083b7a"],
 .top_headng_banner,
 .porto-block-dark {
-    color: #ffffff !important;
+  color: #ffffff !important;
 }
 
 /* Headings on dark backgrounds must be pure white */
-#footer h1, #footer h2, #footer h3, #footer h4, #footer h5, #footer h6,
+#footer h1,
+#footer h2,
+#footer h3,
+#footer h4,
+#footer h5,
+#footer h6,
 #footer .widget-title,
-.footer-main h1, .footer-main h2, .footer-main h3, .footer-main h4, .footer-main h5, .footer-main h6,
+.footer-main h1,
+.footer-main h2,
+.footer-main h3,
+.footer-main h4,
+.footer-main h5,
+.footer-main h6,
 .footer-main .widget-title,
 .top_headng_banner,
 .vc_row[style*="background-color: #083B7A"] h1,
@@ -4420,19 +4439,24 @@ a:hover, a:focus {
 .vc_row[style*="background-color: #083b7a"] .stats-number,
 .vc_row[style*="background-color: #083B7A"] .stats-text,
 .vc_row[style*="background-color: #083b7a"] .stats-text {
-    color: #ffffff !important;
+  color: #ffffff !important;
 }
 
 /* Body text, lists, paragraphs on dark backgrounds */
-#footer p, #footer li, #footer span, #footer .contact-info li,
-.footer-main p, .footer-main li, .footer-main span,
+#footer p,
+#footer li,
+#footer span,
+#footer .contact-info li,
+.footer-main p,
+.footer-main li,
+.footer-main span,
 .vc_row[style*="background-color: #083B7A"] p,
 .vc_row[style*="background-color: #083b7a"] p,
 .vc_row[style*="background-color: #083B7A"] span,
 .vc_row[style*="background-color: #083b7a"] span,
 .vc_row[style*="background-color: #083B7A"] li,
 .vc_row[style*="background-color: #083b7a"] li {
-    color: #EAF1FA !important;
+  color: #eaf1fa !important;
 }
 
 /* Links on dark backgrounds */
@@ -4440,49 +4464,49 @@ a:hover, a:focus {
 .footer-main a,
 .vc_row[style*="background-color: #083B7A"] a,
 .vc_row[style*="background-color: #083b7a"] a {
-    color: #EAF1FA !important;
+  color: #eaf1fa !important;
 }
 
 #footer a:hover,
 .footer-main a:hover,
 .vc_row[style*="background-color: #083B7A"] a:hover,
 .vc_row[style*="background-color: #083b7a"] a:hover {
-    color: #F47B20 !important;
+  color: #f47b20 !important;
 }
 
 /* --------------------------------------------------------------------------
    8.4 Footer Specific Styling
    -------------------------------------------------------------------------- */
 #footer {
-    background-color: #083B7A !important;
-    border-top: 4px solid #F47B20 !important;
+  background-color: #083b7a !important;
+  border-top: 4px solid #f47b20 !important;
 }
 
 #footer .footer-main {
-    background-color: #083B7A !important;
+  background-color: #083b7a !important;
 }
 
 #footer .widget-title {
-    color: #ffffff !important;
-    border-bottom: 2px solid #F47B20;
-    padding-bottom: 8px;
-    margin-bottom: 20px;
-    display: inline-block;
-    font-weight: 700;
+  color: #ffffff !important;
+  border-bottom: 2px solid #f47b20;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+  display: inline-block;
+  font-weight: 700;
 }
 
 #footer .footer-bottom {
-    background-color: #052957 !important;
-    color: #CFDDF2 !important;
-    border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background-color: #052957 !important;
+  color: #cfddf2 !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
 }
 
 #footer .footer-bottom a {
-    color: #CFDDF2 !important;
+  color: #cfddf2 !important;
 }
 
 #footer .footer-bottom a:hover {
-    color: #F47B20 !important;
+  color: #f47b20 !important;
 }
 
 /* --------------------------------------------------------------------------
@@ -4493,77 +4517,77 @@ a:hover, a:focus {
 .btn-special,
 .custom-btn-style-1 > a,
 .comment-form .form-submit input[type="submit"].submit {
-    background-color: #083B7A !important;
-    border-color: #083B7A !important;
-    color: #ffffff !important;
-    font-weight: 600;
+  background-color: #083b7a !important;
+  border-color: #083b7a !important;
+  color: #ffffff !important;
+  font-weight: 600;
 }
 
 .btn-primary:hover,
 .btn-special:hover,
 .custom-btn-style-1 > a:hover,
 .comment-form .form-submit input[type="submit"].submit:hover {
-    background-color: #F47B20 !important;
-    border-color: #F47B20 !important;
-    color: #ffffff !important;
+  background-color: #f47b20 !important;
+  border-color: #f47b20 !important;
+  color: #ffffff !important;
 }
 
 /* Outline Button on Light Background */
 .custom-btn-style-2 > a,
 a.custom-btn-style-2 {
-    border: 2px solid #083B7A !important;
-    color: #083B7A !important;
-    background: transparent !important;
-    font-weight: 600;
+  border: 2px solid #083b7a !important;
+  color: #083b7a !important;
+  background: transparent !important;
+  font-weight: 600;
 }
 
 .custom-btn-style-2 > a:hover,
 a.custom-btn-style-2:hover {
-    background-color: #083B7A !important;
-    color: #ffffff !important;
+  background-color: #083b7a !important;
+  color: #ffffff !important;
 }
 
 /* White Button on Dark Background */
 .vc_row[style*="background-color: #083B7A"] .porto-btn,
 .vc_row[style*="background-color: #083b7a"] .porto-btn {
-    background-color: #ffffff !important;
-    color: #083B7A !important;
-    border: none !important;
+  background-color: #ffffff !important;
+  color: #083b7a !important;
+  border: none !important;
 }
 
 .vc_row[style*="background-color: #083B7A"] .porto-btn:hover,
 .vc_row[style*="background-color: #083b7a"] .porto-btn:hover {
-    background-color: #F47B20 !important;
-    color: #ffffff !important;
+  background-color: #f47b20 !important;
+  color: #ffffff !important;
 }
 
 /* --------------------------------------------------------------------------
    8.6 Badges, Accents, Carousels & Modals
    -------------------------------------------------------------------------- */
 .porto-separator hr.separator-line {
-    background-color: #F47B20 !important;
+  background-color: #f47b20 !important;
 }
 
 .page-top .page-title:not(.b-none):after {
-    border-bottom: 5px solid #083B7A !important;
+  border-bottom: 5px solid #083b7a !important;
 }
 
 .member-item.member-item-3 .view-more {
-    background-color: #083B7A !important;
-    color: #ffffff !important;
+  background-color: #083b7a !important;
+  color: #ffffff !important;
 }
 
 .member-item.member-item-3 .view-more:hover {
-    background-color: #F47B20 !important;
+  background-color: #f47b20 !important;
 }
 
 .pagination > .active > a,
 .pagination > .active > span,
 .pagination > a:hover,
 .pagination > span:hover {
-    background-color: #083B7A !important;
-    border-color: #083B7A !important;
-    color: #ffffff !important;
+  background-color: #083b7a !important;
+  border-color: #083b7a !important;
+  color: #ffffff !important;
 }
 
 /* Modal Popup Contrast */
@@ -4571,11 +4595,11 @@ a.custom-btn-style-2:hover {
 #wow-modal-overlay-1 .modal-window-content a,
 #wow-modal-overlay-1 .modal-window-content span,
 #wow-modal-overlay-1 .modal-window-content i {
-    color: #ffffff !important;
+  color: #ffffff !important;
 }
 
 #wow-modal-overlay-1 .modal-window-content a:hover {
-    color: #F47B20 !important;
+  color: #f47b20 !important;
 }
 
 /* Logo display */
@@ -4583,22 +4607,22 @@ a.custom-btn-style-2:hover {
 .header-main .logo img,
 .header-left .logo img,
 .header-center .logo img {
-    max-height: 70px !important;
-    max-width: 170px !important;
-    width: auto !important;
-    height: auto !important;
-    object-fit: contain;
-    display: inline-block;
+  max-height: 70px !important;
+  max-width: 170px !important;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain;
+  display: inline-block;
 }
 
 #header .logo {
-    max-width: 180px !important;
+  max-width: 180px !important;
 }
 
 @media (max-width: 991px) {
-    #header .logo img,
-    .header-main .logo img {
-        max-height: 55px !important;
-        max-width: 130px !important;
-    }
+  #header .logo img,
+  .header-main .logo img {
+    max-height: 55px !important;
+    max-width: 130px !important;
+  }
 }
