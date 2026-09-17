@@ -4669,3 +4669,309 @@ a.custom-btn-style-2:hover {
 #wow-modal-overlay-1 .modal-window-content a:hover {
   color: #f47b20 !important;
 }
+
+/* ==========================================================================
+   9. Modern Advaita Header (Single Row Navigation, Clean Logo & Action CTAs)
+   ========================================================================== */
+
+.modern-advaita-header {
+  width: 100%;
+  background: #ffffff;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Topbar */
+.modern-advaita-header .header-top {
+  background-color: #083b7a !important;
+  color: #ffffff !important;
+  padding: 7px 0 !important;
+  font-size: 12.5px !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.modern-advaita-header .header-top .container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.modern-advaita-header .header-top-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #eaf1fa;
+  font-weight: 500;
+}
+
+.modern-advaita-header .motto-tag {
+  color: #f47b20;
+  font-weight: 700;
+}
+
+.modern-advaita-header .sep-dot,
+.modern-advaita-header .sep-pipe {
+  color: rgba(255, 255, 255, 0.35);
+  margin: 0 4px;
+}
+
+.modern-advaita-header .header-top-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.modern-advaita-header .header-top-right a {
+  color: #ffffff !important;
+  text-decoration: none;
+  font-size: 12.5px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.modern-advaita-header .header-top-right a:hover {
+  color: #f47b20 !important;
+}
+
+.modern-advaita-header .top-social {
+  background: rgba(255, 255, 255, 0.15);
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 50%;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px !important;
+  margin-left: 3px;
+  transition: all 0.2s ease !important;
+}
+
+.modern-advaita-header .top-social:hover {
+  background: #f47b20 !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+
+/* Main Navigation Row */
+.modern-advaita-header .header-main {
+  background-color: #ffffff !important;
+  box-shadow: 0 4px 20px rgba(8, 59, 122, 0.08) !important;
+  border-bottom: 1px solid #dce3ec !important;
+  padding: 10px 0 !important;
+}
+
+.modern-advaita-header .header-container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+/* Logo */
+.modern-advaita-header .header-logo-wrap {
+  flex-shrink: 0;
+}
+
+.modern-advaita-header .brand-logo-link {
+  display: block;
+  line-height: 0;
+}
+
+.modern-advaita-header .advaita-header-logo {
+  max-height: 64px !important;
+  width: auto !important;
+  max-width: 190px !important;
+  object-fit: contain;
+  display: block;
+}
+
+/* Navigation Menu */
+.modern-advaita-header .header-nav-wrap {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin: 0 20px;
+}
+
+.modern-advaita-header .advaita-menu {
+  display: flex !important;
+  align-items: center !important;
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: 8px;
+}
+
+.modern-advaita-header .advaita-menu > li {
+  position: relative;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.modern-advaita-header .advaita-menu > li > a {
+  color: #083b7a !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.3px !important;
+  padding: 10px 12px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px;
+  text-decoration: none !important;
+  border-radius: 4px;
+  transition: all 0.2s ease !important;
+}
+
+.modern-advaita-header .advaita-menu > li > a i {
+  font-size: 10px;
+  opacity: 0.7;
+  transition: transform 0.2s ease;
+}
+
+.modern-advaita-header .advaita-menu > li:hover > a {
+  color: #f47b20 !important;
+}
+
+.modern-advaita-header .advaita-menu > li:hover > a i {
+  transform: rotate(180deg);
+}
+
+/* Dropdowns */
+.modern-advaita-header .advaita-menu .sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  min-width: 230px;
+  box-shadow: 0 10px 30px rgba(8, 59, 122, 0.15);
+  border-top: 3px solid #083b7a;
+  border-radius: 0 0 8px 8px;
+  padding: 8px 0;
+  margin: 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1000;
+}
+
+.modern-advaita-header .advaita-menu > li:hover .sub-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.modern-advaita-header .advaita-menu .sub-menu li {
+  margin: 0;
+  padding: 0;
+}
+
+.modern-advaita-header .advaita-menu .sub-menu li a {
+  color: #1e2430 !important;
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+  padding: 9px 20px !important;
+  display: block !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease !important;
+}
+
+.modern-advaita-header .advaita-menu .sub-menu li a:hover {
+  color: #083b7a !important;
+  background-color: #f4f7fb !important;
+  padding-left: 24px !important;
+}
+
+/* Action CTAs */
+.modern-advaita-header .header-action-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.modern-advaita-header .btn-hdr-call {
+  color: #083b7a !important;
+  border: 2px solid #083b7a !important;
+  padding: 8px 18px !important;
+  border-radius: 50px !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px;
+  transition: all 0.25s ease !important;
+}
+
+.modern-advaita-header .btn-hdr-call:hover {
+  background: #083b7a !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+}
+
+.modern-advaita-header .btn-hdr-admission {
+  background-color: #f47b20 !important;
+  color: #ffffff !important;
+  border: 2px solid #f47b20 !important;
+  padding: 8px 20px !important;
+  border-radius: 50px !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  box-shadow: 0 4px 14px rgba(244, 123, 32, 0.35) !important;
+  transition: all 0.25s ease !important;
+}
+
+.modern-advaita-header .btn-hdr-admission:hover {
+  background-color: #d2620e !important;
+  border-color: #d2620e !important;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(244, 123, 32, 0.45) !important;
+}
+
+.modern-advaita-header .advaita-mobile-toggle {
+  display: none;
+  background: #083b7a;
+  color: #ffffff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 1199px) {
+  .modern-advaita-header .advaita-menu {
+    gap: 2px;
+  }
+  .modern-advaita-header .advaita-menu > li > a {
+    padding: 8px 8px !important;
+    font-size: 13px !important;
+  }
+  .modern-advaita-header .btn-hdr-call {
+    display: none !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .modern-advaita-header .header-top {
+    display: none !important;
+  }
+  .modern-advaita-header .header-nav-wrap {
+    display: none !important;
+  }
+  .modern-advaita-header .advaita-mobile-toggle {
+    display: block !important;
+  }
+  .modern-advaita-header .advaita-header-logo {
+    max-height: 50px !important;
+  }
+}
