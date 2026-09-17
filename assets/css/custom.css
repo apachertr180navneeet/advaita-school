@@ -93,8 +93,6 @@ img.emoji {
 
 .breadcrumb-container {
   font-size: 18px !important;
-  padding:;
-  margin:;
 }
 
 .breadcrumb-container li a {
@@ -118,7 +116,6 @@ img.emoji {
 }
 
 .breadcrumb-container.theme1 a {
-  background:;
   display: inline-block;
   margin: 0 5px;
   padding: 5px 10px;
@@ -2008,46 +2005,6 @@ h2.wpb_heading.wpb_singleimage_heading {
   color: #ffffff;
 }
 
-.mega-info-box-282:hover .mega-info-header i {
-  color: !important;
-  background: !important;
-}
-
-.mega-info-box-357:hover .mega-info-header i {
-  color: !important;
-  background: !important;
-}
-
-.mega-info-box-167:hover .mega-info-header i {
-  color: !important;
-  background: !important;
-}
-
-.mega-info-box-393:hover .mega-info-header i {
-  color: !important;
-  background: !important;
-}
-
-.mega-info-box-128:hover .mega-info-header i {
-  color: !important;
-  background: !important;
-}
-
-.mega-info-box-294:hover .mega-info-header i {
-  color: !important;
-  background: !important;
-}
-
-.mega-info-box-130:hover .mega-info-header i {
-  color: !important;
-  background: !important;
-}
-
-.mega-info-box-289:hover .mega-info-header i {
-  color: !important;
-  background: !important;
-}
-
 #porto-info-list9081298456aab8f2a12468 i {
   color: #083b7a;
 }
@@ -2111,7 +2068,6 @@ h2.wpb_heading.wpb_singleimage_heading {
 #tdt-slider-382 .slick-next:before,
 #tdt-slider-382 .slick-prev:before {
   color: #000000 !important;
-  background: !important;
   font-size: 30px !important;
 }
 
@@ -4681,47 +4637,64 @@ a.custom-btn-style-2:hover {
   background-color: #083b7a !important;
   position: relative !important;
   z-index: 1000 !important;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
 }
 
-/* Topbar */
+/* Header Topbar */
 #header .header-top,
 .advaita-navy-badge-header .header-top {
   background-color: #083b7a !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
-  padding: 7px 0 !important;
+  padding: 6px 0 !important;
   font-size: 13px !important;
   color: #ffffff !important;
+  min-height: 38px !important;
 }
 
 #header .header-top .header-row {
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
+  flex-wrap: nowrap !important;
+}
+
+#header .header-top .header-left {
+  flex: 0 1 auto !important;
 }
 
 #header .header-top .header-left .custom-html {
   color: #ffffff !important;
-  font-size: 13px !important;
+  font-size: 12.5px !important;
   font-weight: 500 !important;
   opacity: 0.95 !important;
+  white-space: nowrap !important;
 }
 
 #header .header-top .header-right {
   display: flex !important;
   align-items: center !important;
   justify-content: flex-end !important;
+  flex-wrap: nowrap !important;
+  white-space: nowrap !important;
+  gap: 0 !important;
 }
 
 #header .header-top .header-right .custom-html {
   color: #ffffff !important;
-  font-size: 13px !important;
+  font-size: 12.5px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  white-space: nowrap !important;
 }
 
 #header .header-top .header-right .custom-html a {
   color: #ffffff !important;
   text-decoration: none !important;
-  margin: 0 4px !important;
+  margin: 0 5px !important;
   font-weight: 500 !important;
+  font-size: 12.5px !important;
+  display: inline-flex !important;
+  align-items: center !important;
   transition: color 0.2s ease !important;
 }
 
@@ -4729,55 +4702,54 @@ a.custom-btn-style-2:hover {
   color: #f47b20 !important;
 }
 
+#header .header-top .header-right .custom-html i,
+#header .header-top .header-right .custom-html .fa-phone {
+  color: #f47b20 !important;
+  margin-right: 4px !important;
+  font-size: 12px !important;
+}
+
 #header .header-top .separator {
   margin: 0 10px !important;
-  border-left: 1px solid rgba(255, 255, 255, 0.25) !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.3) !important;
   height: 14px !important;
   display: inline-block !important;
   vertical-align: middle !important;
-}
-
-#header .header-top .custom-html i,
-#header .header-top .custom-html .fa-phone,
-#header .header-top .custom-html .fas,
-#header .header-top .custom-html .fa-solid {
-  color: #f47b20 !important;
-  margin-right: 5px !important;
-  font-size: 13px !important;
+  width: 0 !important;
 }
 
 #header .header-top .share-links {
-  margin-left: 8px !important;
+  margin-left: 4px !important;
   display: inline-flex !important;
   align-items: center !important;
   gap: 6px !important;
   vertical-align: middle !important;
+  flex-wrap: nowrap !important;
 }
 
 #header .header-top .share-links a {
   background: #ffffff !important;
   color: #083b7a !important;
-  width: 26px !important;
-  height: 26px !important;
-  line-height: 26px !important;
+  width: 24px !important;
+  height: 24px !important;
+  line-height: 24px !important;
   text-align: center !important;
   border-radius: 50% !important;
   display: inline-flex !important;
   align-items: center !important;
   justify-content: center !important;
-  font-size: 13px !important;
+  font-size: 11.5px !important;
   margin: 0 !important;
   transition: all 0.25s ease !important;
   border: none !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25) !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !important;
   text-decoration: none !important;
+  padding: 0 !important;
 }
 
-#header .header-top .share-links a i,
-#header .header-top .share-links a .fab,
-#header .header-top .share-links a .fa-brands {
+#header .header-top .share-links a i {
   color: #083b7a !important;
-  font-size: 13px !important;
+  font-size: 11.5px !important;
   line-height: 1 !important;
   transition: color 0.2s ease !important;
 }
@@ -4787,20 +4759,18 @@ a.custom-btn-style-2:hover {
   transform: translateY(-2px);
 }
 
-#header .header-top .share-links a:hover i,
-#header .header-top .share-links a:hover .fab,
-#header .header-top .share-links a:hover .fa-brands {
+#header .header-top .share-links a:hover i {
   color: #ffffff !important;
 }
 
-/* Main Header Navigation Bar (Solid Royal Navy #083B7A) */
+/* Main Header Navigation Bar */
 #header .header-main,
 .header-wrapper #header .header-main,
 #header.sticky-header .header-main,
 .fixed-header #header .header-main,
 .advaita-navy-badge-header .header-main {
   background-color: #083b7a !important;
-  min-height: 68px !important;
+  min-height: 64px !important;
   padding: 0 !important;
   position: relative !important;
   border-top: none !important;
@@ -4815,7 +4785,6 @@ a.custom-btn-style-2:hover {
   position: relative !important;
 }
 
-/* Columns */
 #header .header-main .header-col.header-left,
 #header .header-main .header-col.header-right {
   flex: 1 1 0% !important;
@@ -4825,12 +4794,12 @@ a.custom-btn-style-2:hover {
 
 #header .header-main .header-col.header-left {
   justify-content: flex-end !important;
-  padding-right: 48px !important;
+  padding-right: 45px !important;
 }
 
 #header .header-main .header-col.header-right {
   justify-content: flex-start !important;
-  padding-left: 48px !important;
+  padding-left: 45px !important;
 }
 
 #header .header-main .header-col.header-center {
@@ -4843,22 +4812,22 @@ a.custom-btn-style-2:hover {
   z-index: 1001 !important;
 }
 
-/* Center Crest Badge with White Background & Navy Border */
+/* Center Crest Badge */
 #header .header-center .logo {
-  width: 112px !important;
-  height: 112px !important;
+  width: 108px !important;
+  height: 108px !important;
   border-radius: 50% !important;
   background: #ffffff !important;
   border: 4px solid #083b7a !important;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4) !important;
   position: absolute !important;
-  top: -42px !important;
+  top: -40px !important;
   left: 50% !important;
   transform: translateX(-50%) !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  padding: 8px !important;
+  padding: 6px !important;
   margin: 0 !important;
   z-index: 1002 !important;
 }
@@ -4872,23 +4841,25 @@ a.custom-btn-style-2:hover {
 }
 
 #header .header-center .logo img {
-  max-height: 84px !important;
-  max-width: 92px !important;
+  max-height: 80px !important;
+  max-width: 90px !important;
   width: auto !important;
   height: auto !important;
   object-fit: contain !important;
   display: block !important;
 }
 
-/* Left & Right Menu Navigation (Single Line, Crisp Pure White Text) */
+/* Navigation Menu - Clean Pure White Text */
 #header .main-menu,
-#header .secondary-menu {
+#header .secondary-menu,
+#header #menu-left-menu,
+#header #menu-right-menu {
   display: flex !important;
   align-items: center !important;
   list-style: none !important;
   margin: 0 !important;
   padding: 0 !important;
-  gap: 20px !important;
+  gap: 18px !important;
   flex-wrap: nowrap !important;
   white-space: nowrap !important;
   background: transparent !important;
@@ -4900,30 +4871,45 @@ a.custom-btn-style-2:hover {
   margin: 0 !important;
   padding: 0 !important;
   display: inline-block !important;
+  float: none !important;
 }
 
 #header .main-menu > li > a,
-#header .secondary-menu > li > a {
+#header .secondary-menu > li > a,
+#header #menu-left-menu > li > a,
+#header #menu-right-menu > li > a {
   color: #ffffff !important;
-  font-size: 14.5px !important;
-  font-weight: 500 !important;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
   text-transform: none !important;
-  letter-spacing: 0.2px !important;
-  padding: 22px 0 !important;
+  letter-spacing: 0.3px !important;
+  padding: 20px 0 !important;
   display: inline-flex !important;
   align-items: center !important;
-  gap: 5px !important;
+  gap: 4px !important;
   text-decoration: none !important;
   transition: color 0.2s ease !important;
   line-height: 1 !important;
   background: transparent !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
-#header .main-menu > li > a i,
-#header .main-menu > li > a .fa-chevron-down,
-#header .secondary-menu > li > a i,
-#header .secondary-menu > li > a .fa-chevron-down {
-  font-size: 11px !important;
+/* Disable broken theme arrow pseudo-elements */
+.mega-menu.show-arrow > li.has-sub > a:after,
+.main-menu.show-arrow > li.has-sub > a:after,
+#header .main-menu > li > a:after,
+#header .secondary-menu > li > a:after,
+#header .mega-menu > li > a:after,
+#header .mega-menu > li.has-sub > a:after {
+  display: none !important;
+  content: none !important;
+}
+
+#header .main-menu > li > a i.fa-chevron-down,
+#header .secondary-menu > li > a i.fa-chevron-down {
+  font-size: 10px !important;
   opacity: 0.85 !important;
   color: #ffffff !important;
   margin-left: 2px !important;
@@ -4939,10 +4925,8 @@ a.custom-btn-style-2:hover {
   background: transparent !important;
 }
 
-#header .main-menu > li:hover > a i,
-#header .main-menu > li:hover > a .fa-chevron-down,
-#header .secondary-menu > li:hover > a i,
-#header .secondary-menu > li:hover > a .fa-chevron-down {
+#header .main-menu > li:hover > a i.fa-chevron-down,
+#header .secondary-menu > li:hover > a i.fa-chevron-down {
   color: #f47b20 !important;
   transform: rotate(180deg) !important;
 }
@@ -4987,10 +4971,12 @@ a.custom-btn-style-2:hover {
   margin: 0 !important;
   padding: 0 !important;
   display: block !important;
+  float: none !important;
 }
 
 #header .sub-menu li a {
   color: #ffffff !important;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
   font-size: 13.5px !important;
   font-weight: 500 !important;
   padding: 9px 20px !important;
@@ -4998,6 +4984,8 @@ a.custom-btn-style-2:hover {
   text-decoration: none !important;
   transition: all 0.2s ease !important;
   white-space: nowrap !important;
+  background: transparent !important;
+  border: none !important;
 }
 
 #header .sub-menu li a:hover {
@@ -5029,17 +5017,17 @@ a.custom-btn-style-2:hover {
 @media (max-width: 1280px) {
   #header .main-menu,
   #header .secondary-menu {
-    gap: 14px !important;
+    gap: 12px !important;
   }
   #header .main-menu > li > a,
   #header .secondary-menu > li > a {
-    font-size: 13.5px !important;
+    font-size: 13px !important;
   }
   #header .header-main .header-col.header-left {
-    padding-right: 32px !important;
+    padding-right: 30px !important;
   }
   #header .header-main .header-col.header-right {
-    padding-left: 32px !important;
+    padding-left: 30px !important;
   }
 }
 
