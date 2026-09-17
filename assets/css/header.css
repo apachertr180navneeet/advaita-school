@@ -47,11 +47,14 @@ body.adv-drawer-open {
 /* --------------------------------------------------------------------------
    Top Utility Bar
    -------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------
+   Top Utility Bar (Clean Single Line Layout matching Reference)
+   -------------------------------------------------------------------------- */
 .adv-topbar {
     background: linear-gradient(90deg, #031c3d 0%, var(--adv-primary-dark) 50%, #031c3d 100%);
     color: var(--adv-text-white);
-    font-size: 0.8125rem;
-    padding: 6px 0;
+    font-size: 0.84375rem;
+    padding: 8px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     position: relative;
     z-index: 20;
@@ -64,34 +67,16 @@ body.adv-drawer-open {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 16px;
+    gap: 20px;
 }
 
 .adv-topbar-left {
     display: flex;
     align-items: center;
-    gap: 10px;
-    flex: 1;
-    min-width: 0;
-}
-
-.adv-topbar-badge {
-    background: linear-gradient(135deg, var(--adv-accent-orange), #ff8838);
-    color: #fff;
-    font-size: 0.6875rem;
-    padding: 2px 9px;
-    border-radius: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    white-space: nowrap;
-    box-shadow: 0 2px 6px rgba(243, 112, 33, 0.3);
-}
-
-.adv-topbar-tagline {
+    color: rgba(255, 255, 255, 0.9);
     font-weight: 500;
+    font-size: 0.84375rem;
     letter-spacing: 0.2px;
-    color: var(--adv-text-muted);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -100,43 +85,14 @@ body.adv-drawer-open {
 .adv-topbar-right {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 20px;
     flex-shrink: 0;
-}
-
-.adv-topbar-contact-items {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.adv-topbar-contact-items a {
-    color: var(--adv-text-muted);
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 5px;
-    font-size: 0.78125rem;
-    font-weight: 500;
-    transition: var(--header-transition);
-}
-
-.adv-topbar-contact-items a i {
-    color: var(--adv-accent-gold);
-    font-size: 0.75rem;
-}
-
-.adv-topbar-contact-items a:hover {
-    color: #ffffff;
 }
 
 .adv-topbar-links {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -145,21 +101,21 @@ body.adv-drawer-open {
 .adv-topbar-links li {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 16px;
 }
 
 .adv-topbar-links li:not(:last-child)::after {
     content: "|";
-    color: rgba(255, 255, 255, 0.25);
-    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 0.8rem;
 }
 
 .adv-topbar-links a {
-    color: var(--adv-text-muted);
+    color: rgba(255, 255, 255, 0.88);
     text-decoration: none;
     transition: var(--header-transition);
     font-weight: 500;
-    font-size: 0.8125rem;
+    font-size: 0.84375rem;
 }
 
 .adv-topbar-links a:hover {
@@ -169,7 +125,7 @@ body.adv-drawer-open {
 .adv-topbar-socials {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -179,12 +135,12 @@ body.adv-drawer-open {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 25px;
-    height: 25px;
+    width: 26px;
+    height: 26px;
     background-color: #ffffff;
     color: var(--adv-primary);
     border-radius: 50%;
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     transition: var(--header-transition);
     text-decoration: none;
 }

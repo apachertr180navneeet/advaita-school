@@ -11,29 +11,19 @@ $currentPage = $activePage ?? '';
 <!-- Top Utility & Information Bar -->
 <div class="adv-topbar">
     <div class="container">
-        <!-- Left Tagline & Affiliation -->
+        <!-- Left Side Tagline / Affiliation -->
         <div class="adv-topbar-left">
-            <span class="adv-topbar-badge">CBSE Affiliated</span>
-            <span class="adv-topbar-tagline">Sanmati Sevabhavi Sanstha's Advaita School of Excellence — 10 Years of Excellence</span>
+            <span>An English Medium Co-Educational CBSE Senior Secondary School.</span>
         </div>
 
-        <!-- Right Quick Info & Socials -->
+        <!-- Right Side Links & Socials -->
         <div class="adv-topbar-right">
-            <!-- Mobile/Tablet Quick Direct Contact -->
-            <ul class="adv-topbar-contact-items">
-                <li><a href="tel:+919876543210" title="Call Us"><i class="fa-solid fa-phone"></i> <span>+91 98765 43210</span></a></li>
-                <li><a href="mailto:info@advaitaschool.edu.in" title="Email Us"><i class="fa-solid fa-envelope"></i> <span>info@advaitaschool.edu.in</span></a></li>
-            </ul>
-
-            <!-- Desktop Quick Links -->
             <ul class="adv-topbar-links">
-                <li><a href="#sanstha">Sanmati Sanstha</a></li>
-                <li><a href="#careers">Careers</a></li>
-                <li><a href="#disclosure">Mandatory Disclosure</a></li>
+                <li><a href="#sanstha">Sanmati Education Network</a></li>
+                <li><a href="#careers">Work at Advaita</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
-            <!-- Social Links -->
             <div class="adv-topbar-socials">
                 <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                 <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter / X" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
