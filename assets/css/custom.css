@@ -4671,307 +4671,339 @@ a.custom-btn-style-2:hover {
 }
 
 /* ==========================================================================
-   9. Modern Advaita Header (Single Row Navigation, Clean Logo & Action CTAs)
+   10. Exact Advaita Navy Header & Center Crest Badge (Matching Reference UI)
    ========================================================================== */
 
-.modern-advaita-header {
-  width: 100%;
-  background: #ffffff;
-  position: relative;
-  z-index: 1000;
+#header,
+.header-wrapper #header,
+#header.header-builder,
+#header.advaita-navy-badge-header {
+  background-color: #083b7a !important;
+  position: relative !important;
+  z-index: 1000 !important;
 }
 
 /* Topbar */
-.modern-advaita-header .header-top {
+#header .header-top,
+.advaita-navy-badge-header .header-top {
   background-color: #083b7a !important;
-  color: #ffffff !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
   padding: 7px 0 !important;
-  font-size: 12.5px !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 13px !important;
+  color: #ffffff !important;
 }
 
-.modern-advaita-header .header-top .container {
+#header .header-top .header-row {
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
 }
 
-.modern-advaita-header .header-top-left {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #eaf1fa;
-  font-weight: 500;
-}
-
-.modern-advaita-header .motto-tag {
-  color: #f47b20;
-  font-weight: 700;
-}
-
-.modern-advaita-header .sep-dot,
-.modern-advaita-header .sep-pipe {
-  color: rgba(255, 255, 255, 0.35);
-  margin: 0 4px;
-}
-
-.modern-advaita-header .header-top-right {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.modern-advaita-header .header-top-right a {
+#header .header-top .header-left .custom-html {
   color: #ffffff !important;
-  text-decoration: none;
-  font-size: 12.5px;
-  font-weight: 500;
-  transition: color 0.2s ease;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  opacity: 0.95 !important;
 }
 
-.modern-advaita-header .header-top-right a:hover {
+#header .header-top .header-right {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+}
+
+#header .header-top .header-right .custom-html {
+  color: #ffffff !important;
+  font-size: 13px !important;
+}
+
+#header .header-top .header-right .custom-html a {
+  color: #ffffff !important;
+  text-decoration: none !important;
+  margin: 0 4px !important;
+  font-weight: 500 !important;
+  transition: color 0.2s ease !important;
+}
+
+#header .header-top .header-right .custom-html a:hover {
   color: #f47b20 !important;
 }
 
-.modern-advaita-header .top-social {
-  background: rgba(255, 255, 255, 0.15);
-  width: 24px;
-  height: 24px;
-  line-height: 24px;
-  text-align: center;
-  border-radius: 50%;
+#header .header-top .share-links {
+  margin-left: 12px !important;
   display: inline-flex !important;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px !important;
-  margin-left: 3px;
-  transition: all 0.2s ease !important;
+  align-items: center !important;
+  gap: 6px !important;
 }
 
-.modern-advaita-header .top-social:hover {
+#header .header-top .share-links a {
+  background: #ffffff !important;
+  color: #083b7a !important;
+  width: 26px !important;
+  height: 26px !important;
+  line-height: 26px !important;
+  text-align: center !important;
+  border-radius: 50% !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 12px !important;
+  margin: 0 !important;
+  transition: all 0.25s ease !important;
+  border: none !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2) !important;
+}
+
+#header .header-top .share-links a:hover {
   background: #f47b20 !important;
   color: #ffffff !important;
-  transform: translateY(-1px);
+  transform: translateY(-2px);
 }
 
-/* Main Navigation Row */
-.modern-advaita-header .header-main {
-  background-color: #ffffff !important;
-  box-shadow: 0 4px 20px rgba(8, 59, 122, 0.08) !important;
-  border-bottom: 1px solid #dce3ec !important;
-  padding: 10px 0 !important;
+/* Main Header Navigation Bar (Solid Royal Navy #083B7A) */
+#header .header-main,
+.header-wrapper #header .header-main,
+#header.sticky-header .header-main,
+.fixed-header #header .header-main,
+.advaita-navy-badge-header .header-main {
+  background-color: #083b7a !important;
+  min-height: 68px !important;
+  padding: 0 !important;
+  position: relative !important;
+  border-top: none !important;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25) !important;
 }
 
-.modern-advaita-header .header-container {
+#header .header-main .header-row {
   display: flex !important;
   align-items: center !important;
   justify-content: space-between !important;
+  position: relative !important;
 }
 
-/* Logo */
-.modern-advaita-header .header-logo-wrap {
-  flex-shrink: 0;
+/* Columns */
+#header .header-main .header-col.header-left,
+#header .header-main .header-col.header-right {
+  flex: 1 1 0% !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
-.modern-advaita-header .brand-logo-link {
-  display: block;
-  line-height: 0;
+#header .header-main .header-col.header-left {
+  justify-content: flex-end !important;
+  padding-right: 48px !important;
 }
 
-.modern-advaita-header .advaita-header-logo {
-  max-height: 64px !important;
+#header .header-main .header-col.header-right {
+  justify-content: flex-start !important;
+  padding-left: 48px !important;
+}
+
+#header .header-main .header-col.header-center {
+  flex: 0 0 120px !important;
+  width: 120px !important;
+  position: relative !important;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  z-index: 1001 !important;
+}
+
+/* Center Crest Badge with White Background & Navy Border */
+#header .header-center .logo {
+  width: 112px !important;
+  height: 112px !important;
+  border-radius: 50% !important;
+  background: #ffffff !important;
+  border: 4px solid #083b7a !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4) !important;
+  position: absolute !important;
+  top: -42px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 8px !important;
+  margin: 0 !important;
+  z-index: 1002 !important;
+}
+
+#header .header-center .logo a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+#header .header-center .logo img {
+  max-height: 84px !important;
+  max-width: 92px !important;
   width: auto !important;
-  max-width: 190px !important;
-  object-fit: contain;
-  display: block;
+  height: auto !important;
+  object-fit: contain !important;
+  display: block !important;
 }
 
-/* Navigation Menu */
-.modern-advaita-header .header-nav-wrap {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  margin: 0 20px;
-}
-
-.modern-advaita-header .advaita-menu {
+/* Left & Right Menu Navigation (Single Line, Crisp Pure White Text) */
+#header .main-menu,
+#header .secondary-menu {
   display: flex !important;
   align-items: center !important;
   list-style: none !important;
   margin: 0 !important;
   padding: 0 !important;
-  gap: 8px;
+  gap: 20px !important;
+  flex-wrap: nowrap !important;
+  white-space: nowrap !important;
+  background: transparent !important;
 }
 
-.modern-advaita-header .advaita-menu > li {
-  position: relative;
+#header .main-menu > li,
+#header .secondary-menu > li {
+  position: relative !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: inline-block !important;
+}
+
+#header .main-menu > li > a,
+#header .secondary-menu > li > a {
+  color: #ffffff !important;
+  font-size: 14.5px !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+  letter-spacing: 0.2px !important;
+  padding: 22px 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  text-decoration: none !important;
+  transition: color 0.2s ease !important;
+  line-height: 1 !important;
+  background: transparent !important;
+}
+
+#header .main-menu > li > a i,
+#header .secondary-menu > li > a i {
+  font-size: 10px !important;
+  opacity: 0.85 !important;
+  color: #ffffff !important;
+  margin-left: 2px !important;
+  transition: transform 0.2s ease !important;
+}
+
+#header .main-menu > li:hover > a,
+#header .main-menu > li.active > a,
+#header .secondary-menu > li:hover > a,
+#header .secondary-menu > li.active > a {
+  color: #f47b20 !important;
+  background: transparent !important;
+}
+
+#header .main-menu > li:hover > a i,
+#header .secondary-menu > li:hover > a i {
+  color: #f47b20 !important;
+  transform: rotate(180deg) !important;
+}
+
+/* Dropdown Sub-menus in Solid Royal Navy */
+#header .popup {
+  position: absolute !important;
+  top: 100% !important;
+  left: 0 !important;
+  background-color: #083b7a !important;
+  border-top: 3px solid #f47b20 !important;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4) !important;
+  border-radius: 0 0 6px 6px !important;
+  min-width: 230px !important;
+  padding: 8px 0 !important;
+  z-index: 1005 !important;
+}
+
+#header .sub-menu {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: #083b7a !important;
+}
+
+#header .sub-menu li {
   margin: 0 !important;
   padding: 0 !important;
 }
 
-.modern-advaita-header .advaita-menu > li > a {
-  color: #083b7a !important;
-  font-size: 14px !important;
-  font-weight: 700 !important;
-  text-transform: uppercase !important;
-  letter-spacing: 0.3px !important;
-  padding: 10px 12px !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 4px;
-  text-decoration: none !important;
-  border-radius: 4px;
-  transition: all 0.2s ease !important;
-}
-
-.modern-advaita-header .advaita-menu > li > a i {
-  font-size: 10px;
-  opacity: 0.7;
-  transition: transform 0.2s ease;
-}
-
-.modern-advaita-header .advaita-menu > li:hover > a {
-  color: #f47b20 !important;
-}
-
-.modern-advaita-header .advaita-menu > li:hover > a i {
-  transform: rotate(180deg);
-}
-
-/* Dropdowns */
-.modern-advaita-header .advaita-menu .sub-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #ffffff;
-  min-width: 230px;
-  box-shadow: 0 10px 30px rgba(8, 59, 122, 0.15);
-  border-top: 3px solid #083b7a;
-  border-radius: 0 0 8px 8px;
-  padding: 8px 0;
-  margin: 0;
-  list-style: none;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-  z-index: 1000;
-}
-
-.modern-advaita-header .advaita-menu > li:hover .sub-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.modern-advaita-header .advaita-menu .sub-menu li {
-  margin: 0;
-  padding: 0;
-}
-
-.modern-advaita-header .advaita-menu .sub-menu li a {
-  color: #1e2430 !important;
+#header .sub-menu li a {
+  color: #ffffff !important;
   font-size: 13.5px !important;
   font-weight: 500 !important;
-  text-transform: none !important;
   padding: 9px 20px !important;
   display: block !important;
   text-decoration: none !important;
   transition: all 0.2s ease !important;
 }
 
-.modern-advaita-header .advaita-menu .sub-menu li a:hover {
-  color: #083b7a !important;
-  background-color: #f4f7fb !important;
+#header .sub-menu li a:hover {
+  color: #f47b20 !important;
+  background-color: rgba(255, 255, 255, 0.08) !important;
   padding-left: 24px !important;
 }
 
-/* Action CTAs */
-.modern-advaita-header .header-action-wrap {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-shrink: 0;
-}
-
-.modern-advaita-header .btn-hdr-call {
-  color: #083b7a !important;
-  border: 2px solid #083b7a !important;
-  padding: 8px 18px !important;
-  border-radius: 50px !important;
-  font-size: 13px !important;
-  font-weight: 700 !important;
-  text-decoration: none !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 6px;
-  transition: all 0.25s ease !important;
-}
-
-.modern-advaita-header .btn-hdr-call:hover {
-  background: #083b7a !important;
-  color: #ffffff !important;
-  transform: translateY(-1px);
-}
-
-.modern-advaita-header .btn-hdr-admission {
-  background-color: #f47b20 !important;
-  color: #ffffff !important;
-  border: 2px solid #f47b20 !important;
-  padding: 8px 20px !important;
-  border-radius: 50px !important;
-  font-size: 13px !important;
-  font-weight: 700 !important;
-  text-decoration: none !important;
-  display: inline-block !important;
-  box-shadow: 0 4px 14px rgba(244, 123, 32, 0.35) !important;
-  transition: all 0.25s ease !important;
-}
-
-.modern-advaita-header .btn-hdr-admission:hover {
-  background-color: #d2620e !important;
-  border-color: #d2620e !important;
-  color: #ffffff !important;
-  transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(244, 123, 32, 0.45) !important;
-}
-
-.modern-advaita-header .advaita-mobile-toggle {
+/* Mobile Toggle */
+#header .mobile-toggle-wrap {
   display: none;
-  background: #083b7a;
-  color: #ffffff;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 4px;
-  font-size: 18px;
-  cursor: pointer;
+  margin-left: 15px;
 }
 
-/* Responsive */
-@media (max-width: 1199px) {
-  .modern-advaita-header .advaita-menu {
-    gap: 2px;
+#header .mobile-toggle {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-radius: 4px !important;
+  padding: 6px 12px !important;
+  font-size: 16px !important;
+  cursor: pointer !important;
+}
+
+/* Responsive Scaling */
+@media (max-width: 1280px) {
+  #header .main-menu,
+  #header .secondary-menu {
+    gap: 14px !important;
   }
-  .modern-advaita-header .advaita-menu > li > a {
-    padding: 8px 8px !important;
-    font-size: 13px !important;
+  #header .main-menu > li > a,
+  #header .secondary-menu > li > a {
+    font-size: 13.5px !important;
   }
-  .modern-advaita-header .btn-hdr-call {
-    display: none !important;
+  #header .header-main .header-col.header-left {
+    padding-right: 32px !important;
+  }
+  #header .header-main .header-col.header-right {
+    padding-left: 32px !important;
   }
 }
 
 @media (max-width: 991px) {
-  .modern-advaita-header .header-top {
+  #header .header-top {
     display: none !important;
   }
-  .modern-advaita-header .header-nav-wrap {
+  #header .header-main .header-col.header-left,
+  #header .header-main .header-col.header-right ul {
     display: none !important;
   }
-  .modern-advaita-header .advaita-mobile-toggle {
+  #header .mobile-toggle-wrap {
     display: block !important;
   }
-  .modern-advaita-header .advaita-header-logo {
-    max-height: 50px !important;
+  #header .header-main .header-col.header-right {
+    justify-content: flex-end !important;
+    padding-left: 0 !important;
+  }
+  #header .header-center .logo {
+    position: relative !important;
+    top: 0 !important;
+    transform: none !important;
+    width: 80px !important;
+    height: 80px !important;
   }
 }
