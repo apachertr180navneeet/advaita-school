@@ -1,8 +1,8 @@
 <?php
 /**
- * Contact Us Page - Parshv International School
+ * Contact Us Page - Advaita School of Excellence
  */
-$pageTitle = "Contact Us - Parshv International School, Jodhpur";
+$pageTitle = "Contact Us - Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)";
 $activePage = "contact";
 
 $formSuccess = false;
@@ -58,7 +58,7 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
                     <h3 style="color: #083B7A; font-size: 1.15rem; margin: 0 0 8px;">Campus Address</h3>
                     <p style="font-size: 0.9rem; color: #64748b; line-height: 1.6; margin: 0;">
-                        Sanmati Education Campus, Near Highway Ring Road, Jodhpur, Rajasthan – 342001, India
+                        Sanmati Campus, Near Highway Ring Road, Parbhani, Maharashtra – 431401, India
                     </p>
                 </div>
 
@@ -69,7 +69,7 @@ require_once __DIR__ . '/includes/header.php';
                     <h3 style="color: #083B7A; font-size: 1.15rem; margin: 0 0 8px;">Phone Helpline</h3>
                     <p style="font-size: 0.9rem; color: #64748b; line-height: 1.6; margin: 0;">
                         Admissions: <a href="tel:+919876543210" style="color: #083B7A; font-weight: 700;">+91 98765 43210</a><br>
-                        Reception: <a href="tel:02912748000" style="color: #083B7A; font-weight: 700;">0291-2748000</a>
+                        Reception: <a href="tel:02452234567" style="color: #083B7A; font-weight: 700;">02452-234567</a>
                     </p>
                 </div>
 
@@ -79,8 +79,8 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
                     <h3 style="color: #083B7A; font-size: 1.15rem; margin: 0 0 8px;">Email Inquiries</h3>
                     <p style="font-size: 0.9rem; color: #64748b; line-height: 1.6; margin: 0;">
-                        General: <a href="mailto:info@parshvinternationalschool.com" style="color: #083B7A; font-weight: 600;">info@parshvinternationalschool.com</a><br>
-                        Admissions: <a href="mailto:admissions@parshvinternationalschool.com" style="color: #083B7A; font-weight: 600;">admissions@parshvinternationalschool.com</a>
+                        General: <a href="mailto:info@advaitaschool.edu.in" style="color: #083B7A; font-weight: 600;">info@advaitaschool.edu.in</a><br>
+                        Admissions: <a href="mailto:admissions@advaitaschool.edu.in" style="color: #083B7A; font-weight: 600;">admissions@advaitaschool.edu.in</a>
                     </p>
                 </div>
 
@@ -123,7 +123,7 @@ require_once __DIR__ . '/includes/header.php';
                             <select name="subject" style="width: 100%; padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.9rem; font-family: inherit; background: #fff;">
                                 <option value="Admission Inquiry">Admission Inquiry</option>
                                 <option value="Campus Tour Booking">Campus Tour Booking</option>
-                                <option value="Job / Careers">Work at Parshv (Careers)</option>
+                                <option value="Job / Careers">Work at Advaita (Careers)</option>
                                 <option value="Transfer Certificate (TC)">Transfer Certificate (TC)</option>
                                 <option value="General Query">General Query</option>
                             </select>
@@ -142,7 +142,7 @@ require_once __DIR__ . '/includes/header.php';
                 <div>
                     <div style="background: #ffffff; border: 1px solid #cbd5e1; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(8,59,122,0.05); margin-bottom: 24px;">
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114488.42398555026!2d72.93635794939023!3d26.270498877565985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39418c4eaa06ccb9%3A0x8114ea5b0ae1abb8!2sJodhpur%2C%20Rajasthan!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120538.74955728514!2d76.71183369408665!3d19.261299947936125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd0075d506d8a39%3A0xeec82f9d50a2e7c4!2sParbhani%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
                             width="100%" 
                             height="360" 
                             style="border:0; display: block;" 
@@ -156,7 +156,7 @@ require_once __DIR__ . '/includes/header.php';
                         <div style="font-size: 2.2rem; color: #F37021; flex-shrink: 0;"><i class="fa-solid fa-bus"></i></div>
                         <div>
                             <h4 style="color: #fff; margin: 0 0 6px; font-size: 1.1rem;">Safe School Transport Available</h4>
-                            <p style="color: rgba(255,255,255,0.85); font-size: 0.85rem; margin: 0;">Our buses ply across all major residential sectors in Jodhpur with GPS tracking and trained conductors.</p>
+                            <p style="color: rgba(255,255,255,0.85); font-size: 0.85rem; margin: 0;">Our buses ply across all major residential sectors in Parbhani with GPS tracking and trained conductors.</p>
                         </div>
                     </div>
                 </div>

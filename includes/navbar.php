@@ -13,15 +13,15 @@ $currentPage = $activePage ?? '';
     <div class="container">
         <!-- Left Side Tagline / Affiliation -->
         <div class="adv-topbar-left">
-            <span>An English Medium Co-Educational CBSE Senior Secondary School.</span>
+            <span>Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)</span>
         </div>
 
         <!-- Right Side Links & Socials -->
         <div class="adv-topbar-right">
             <ul class="adv-topbar-links">
-                <li><a href="#sanstha">Sanmati Education Network</a></li>
-                <li><a href="#careers">Work at Advaita</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="about-us.php">Sanmati Sevabhavi Sanstha</a></li>
+                <li><a href="contact.php">Work at Advaita</a></li>
+                <li><a href="contact.php">Contact</a></li>
             </ul>
 
             <div class="adv-topbar-socials">
@@ -46,7 +46,7 @@ $currentPage = $activePage ?? '';
                     <i class="fa-solid fa-chevron-down chevron-icon"></i>
                 </a>
                 <ul class="adv-dropdown">
-                    <li class="adv-dropdown-item"><a href="about-us.php" class="adv-dropdown-link"><i class="fa-solid fa-school"></i> About Parshv</a></li>
+                    <li class="adv-dropdown-item"><a href="about-us.php" class="adv-dropdown-link"><i class="fa-solid fa-school"></i> About Advaita</a></li>
                     <li class="adv-dropdown-item"><a href="vision-mission.php" class="adv-dropdown-link"><i class="fa-solid fa-bullseye"></i> Vision & Mission</a></li>
                     <li class="adv-dropdown-item"><a href="leadership.php" class="adv-dropdown-link"><i class="fa-solid fa-user-tie"></i> Director & Leadership</a></li>
                     <li class="adv-dropdown-item"><a href="facilities.php" class="adv-dropdown-link"><i class="fa-solid fa-building"></i> Infrastructure & Campus</a></li>
@@ -94,8 +94,8 @@ $currentPage = $activePage ?? '';
 
         <!-- Center Brand Crest -->
         <div class="adv-nav-brand-center">
-            <a href="index.php" class="adv-brand-badge" title="Parshv International School">
-                <img src="assets/images/logo-seal.png" alt="Parshv International School Seal" class="adv-brand-logo-img">
+            <a href="index.php" class="adv-brand-badge" title="Advaita School of Excellence">
+                <img src="assets/images/logo-seal.png" alt="Advaita School of Excellence Seal" class="adv-brand-logo-img">
             </a>
         </div>
 
@@ -145,7 +145,7 @@ $currentPage = $activePage ?? '';
     <!-- Drawer Header -->
     <div class="adv-mobile-header">
         <div class="adv-mobile-brand-box">
-            <img src="assets/images/logo.png" alt="Parshv International School Logo" class="adv-brand-logo-img">
+            <img src="assets/images/logo.png" alt="Advaita School Logo" class="adv-brand-logo-img">
         </div>
         <button type="button" class="adv-mobile-close" id="advDrawerCloseBtn" aria-label="Close Navigation Menu">
             <i class="fa-solid fa-xmark"></i>
@@ -175,7 +175,7 @@ $currentPage = $activePage ?? '';
                 <i class="fa-solid fa-chevron-down adv-mobile-chevron"></i>
             </a>
             <ul class="adv-mobile-submenu">
-                <li><a href="about-us.php" class="adv-mobile-submenu-link"><i class="fa-solid fa-circle-info"></i> About Parshv</a></li>
+                <li><a href="about-us.php" class="adv-mobile-submenu-link"><i class="fa-solid fa-circle-info"></i> About Advaita</a></li>
                 <li><a href="vision-mission.php" class="adv-mobile-submenu-link"><i class="fa-solid fa-bullseye"></i> Vision & Mission</a></li>
                 <li><a href="leadership.php" class="adv-mobile-submenu-link"><i class="fa-solid fa-user-tie"></i> Leadership</a></li>
                 <li><a href="facilities.php" class="adv-mobile-submenu-link"><i class="fa-solid fa-building"></i> Infrastructure</a></li>

@@ -14,7 +14,7 @@
     <footer class="adv-footer-wrapper">
         <!-- Giant Watermark in Background -->
         <div class="adv-footer-watermark" aria-hidden="true">
-            PARSHV
+            ADVAITA
         </div>
 
         <!-- 4-Column Main Section -->
@@ -23,17 +23,17 @@
                 <div class="adv-footer-grid">
                     <!-- Column 1: School Identity & Socials -->
                     <div class="adv-footer-brand">
-                        <a href="index.php" class="adv-footer-logo-link" title="Parshv International School">
+                        <a href="index.php" class="adv-footer-logo-link" title="Advaita School of Excellence">
                             <div class="adv-footer-logo-badge">
-                                <img src="assets/images/logo-seal.png" alt="Parshv International School Logo" class="adv-footer-logo-img">
+                                <img src="assets/images/logo-seal.png" alt="Advaita School Logo" class="adv-footer-logo-img">
                             </div>
                             <div class="adv-footer-brand-text">
-                                <span class="adv-footer-brand-name">Parshv</span>
-                                <span class="adv-footer-brand-sub">International School</span>
+                                <span class="adv-footer-brand-name">Advaita</span>
+                                <span class="adv-footer-brand-sub">School of Excellence</span>
                             </div>
                         </a>
                         <p class="adv-footer-bio">
-                            A modern, values-led learning community shaping curious thinkers, principled leaders, and lifelong learners — guided by Sanmati Education Network.
+                            A modern, values-led learning community shaping curious thinkers, principled leaders, and lifelong learners — guided by Sanmati Sevabhavi Sanstha.
                         </p>
                         <div class="adv-footer-socials">
                             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="adv-footer-social-btn facebook" title="Facebook" aria-label="Facebook">
@@ -94,7 +94,7 @@
                                 <div class="adv-footer-contact-content">
                                     <span class="adv-footer-contact-label">Campus</span>
                                     <span class="adv-footer-contact-value">
-                                        Sanmati Education Campus, Near Highway Ring Road, Jodhpur, Rajasthan 342001
+                                        Sanmati Campus, Near Highway Ring Road, Parbhani, Maharashtra – 431401
                                     </span>
                                 </div>
                             </div>
@@ -106,7 +106,7 @@
                                 </div>
                                 <div class="adv-footer-contact-content">
                                     <span class="adv-footer-contact-label">Phone</span>
-                                    <a href="tel:+919876543210" class="adv-footer-contact-value">+91 98765 43210 / 0291-2748000</a>
+                                    <a href="tel:+919876543210" class="adv-footer-contact-value">+91 98765 43210 / 02452-234567</a>
                                 </div>
                             </div>
 
@@ -117,7 +117,7 @@
                                 </div>
                                 <div class="adv-footer-contact-content">
                                     <span class="adv-footer-contact-label">Email</span>
-                                    <a href="mailto:info@parshvinternationalschool.com" class="adv-footer-contact-value">info@parshvinternationalschool.com</a>
+                                    <a href="mailto:info@advaitaschool.edu.in" class="adv-footer-contact-value">info@advaitaschool.edu.in</a>
                                 </div>
                             </div>
                         </div>
@@ -131,12 +131,12 @@
             <div class="adv-container adv-footer-stats-container">
                 <span class="adv-footer-stat-item">
                     <i class="fa-solid fa-award"></i>
-                    <span>CBSE AFFILIATED (1730892)</span>
+                    <span>CBSE AFFILIATED (NO. 1130920)</span>
                 </span>
                 <span class="adv-footer-stat-dot">•</span>
                 <span class="adv-footer-stat-item">
                     <i class="fa-solid fa-graduation-cap"></i>
-                    <span>25+ YEARS OF EXCELLENCE</span>
+                    <span>EXCELLENCE IN EDUCATION</span>
                 </span>
                 <span class="adv-footer-stat-dot">•</span>
                 <span class="adv-footer-stat-item">
@@ -156,7 +156,7 @@
             <div class="adv-container adv-footer-bottom-container">
                 <div class="adv-footer-copy-text">
                     <span class="adv-footer-copy-dot"></span>
-                    <span>&copy; <?php echo date('Y'); ?> Parshv International School, Jodhpur · All rights reserved</span>
+                    <span>&copy; <?php echo date('Y'); ?> Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920) · All rights reserved</span>
                 </div>
             </div>
         </div>

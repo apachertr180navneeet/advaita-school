@@ -1,8 +1,8 @@
 <?php
 /**
- * Achievements & Accolades Page - Parshv International School
+ * Achievements & Accolades Page - Advaita School of Excellence
  */
-$pageTitle = "Achievements & Accolades - Parshv International School, Jodhpur";
+$pageTitle = "Achievements & Accolades - Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)";
 $activePage = "achievements";
 
 require_once __DIR__ . '/includes/header.php';
@@ -19,7 +19,7 @@ require_once __DIR__ . '/includes/header.php';
                 </span>
                 <h1 class="adv-banner-title">Awards, Board Results & Laurels</h1>
                 <p class="adv-banner-desc">
-                    Celebrating the remarkable achievements of Parshv students in CBSE board examinations, Olympiads, state athletics, and competitive arenas.
+                    Celebrating the remarkable achievements of Advaita students in CBSE board examinations, Olympiads, state athletics, and competitive arenas.
                 </p>
                 <ul class="adv-breadcrumb">
                     <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
@@ -40,12 +40,12 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Main Content -->
                 <div class="adv-content-block">
                     <div class="adv-feature-img-card">
-                        <img src="assets/images/card-student-4.jpg" alt="Parshv Achievements and Accolades">
+                        <img src="assets/images/card-student-4.jpg" alt="Advaita Achievements and Accolades">
                     </div>
 
                     <h2>Outstanding CBSE Board Examination Track Record</h2>
                     <p>
-                        Year after year, students of <strong>Parshv International School</strong> achieve benchmark scores in CBSE Class X (AISSE) and Class XII (AISSCE) board examinations, with multiple city toppers and centum scores across Mathematics, Sciences, and Commerce.
+                        Year after year, students of <strong>Advaita School of Excellence</strong> achieve benchmark scores in CBSE Class X and Class XII board examinations, with multiple district toppers and centum scores across Mathematics, Sciences, and Commerce.
                     </p>
 
                     <!-- Stats Counter Grid -->
@@ -105,7 +105,7 @@ require_once __DIR__ . '/includes/header.php';
                                     <td>SOF International Science Olympiad (NSO)</td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Rohan Jain</strong></td>
+                                    <td><strong>Rohan Deshmukh</strong></td>
                                     <td>Class XI (Science)</td>
                                     <td><strong>State Rank 3</strong></td>
                                     <td>National Cyber Olympiad (NCO)</td>
@@ -119,17 +119,17 @@ require_once __DIR__ . '/includes/header.php';
                         <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
                             <div style="color: #F37021; font-size: 1.5rem; margin-bottom: 8px;"><i class="fa-solid fa-trophy"></i></div>
                             <h4 style="color: #083B7A; margin: 0 0 6px; font-size: 1.05rem;">State Football Championship</h4>
-                            <p style="font-size: 0.85rem; color: #64748b; margin: 0;">Under-17 boys team bagged the Silver trophy at Rajasthan State CBSE Cluster Games.</p>
+                            <p style="font-size: 0.85rem; color: #64748b; margin: 0;">Under-17 boys team bagged the Silver trophy at State CBSE Cluster Games.</p>
                         </div>
                         <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
                             <div style="color: #F37021; font-size: 1.5rem; margin-bottom: 8px;"><i class="fa-solid fa-medal"></i></div>
                             <h4 style="color: #083B7A; margin: 0 0 6px; font-size: 1.05rem;">National Karate Gold Medal</h4>
-                            <p style="font-size: 0.85rem; color: #64748b; margin: 0;">Master Raghav Rathore clinched Gold in National School Games Martial Arts event.</p>
+                            <p style="font-size: 0.85rem; color: #64748b; margin: 0;">Master Raghav clinched Gold in National School Games Martial Arts event.</p>
                         </div>
                         <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
                             <div style="color: #F37021; font-size: 1.5rem; margin-bottom: 8px;"><i class="fa-solid fa-award"></i></div>
                             <h4 style="color: #083B7A; margin: 0 0 6px; font-size: 1.05rem;">Inter-School Robotic Challenge</h4>
-                            <p style="font-size: 0.85rem; color: #64748b; margin: 0;">Parshv STEM Team was crowned 1st Prize Winners at Western India Robotics Expo.</p>
+                            <p style="font-size: 0.85rem; color: #64748b; margin: 0;">Advaita STEAM Team was crowned 1st Prize Winners at Regional Robotics Expo.</p>
                         </div>
                     </div>
 

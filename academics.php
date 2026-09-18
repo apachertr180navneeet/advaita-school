@@ -1,8 +1,8 @@
 <?php
 /**
- * Academics & Curriculum Page - Parshv International School
+ * Academics & Curriculum Page - Advaita School of Excellence
  */
-$pageTitle = "Academics & CBSE Curriculum - Parshv International School, Jodhpur";
+$pageTitle = "Academics & CBSE Curriculum - Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)";
 $activePage = "learning";
 
 require_once __DIR__ . '/includes/header.php';
@@ -19,7 +19,7 @@ require_once __DIR__ . '/includes/header.php';
                 </span>
                 <h1 class="adv-banner-title">Curriculum & Learning Pathways</h1>
                 <p class="adv-banner-desc">
-                    Affiliated with CBSE, New Delhi. Delivering an inspiring, experiential, and future-focused education from Play Group to Class XII.
+                    Affiliated with CBSE, New Delhi (No. 1130920). Delivering an inspiring, experiential, and future-focused education from Play Group to Class XII.
                 </p>
                 <ul class="adv-breadcrumb">
                     <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
@@ -40,12 +40,12 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Main Content -->
                 <div class="adv-content-block">
                     <div class="adv-feature-img-card">
-                        <img src="assets/images/card-student-2.jpg" alt="Parshv Academic Classrooms">
+                        <img src="assets/images/card-student-2.jpg" alt="Advaita Academic Classrooms">
                     </div>
 
                     <h2>Comprehensive CBSE Curriculum (Play Group to Class XII)</h2>
                     <p>
-                        At <strong>Parshv International School</strong>, our curriculum is aligned with the National Curriculum Framework (NCF) and CBSE guidelines, integrated with National Education Policy (NEP 2020) principles. We emphasize conceptual clarity, critical thinking, experiential inquiry, and values-based growth.
+                        At <strong>Advaita School of Excellence</strong>, our curriculum is aligned with the National Curriculum Framework (NCF) and CBSE guidelines, integrated with National Education Policy (NEP 2020) principles. We emphasize conceptual clarity, critical thinking, experiential inquiry, and values-based growth.
                     </p>
 
                     <!-- Academic Stages Cards -->
@@ -72,7 +72,7 @@ require_once __DIR__ . '/includes/header.php';
                                 <span style="background: #eff6ff; color: #1d4ed8; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">Classes 1 to 5</span>
                             </div>
                             <p style="color: #475569; font-size: 0.95rem; margin-bottom: 12px;">
-                                Building foundational literacy, computational thinking, language fluency (English, Hindi), Environmental Studies (EVS), coding basics, and general knowledge.
+                                Building foundational literacy, computational thinking, language fluency (English, Hindi, Marathi), Environmental Studies (EVS), coding basics, and general knowledge.
                             </p>
                             <div style="font-size: 0.85rem; color: #083B7A; font-weight: 600;">
                                 <i class="fa-solid fa-check-circle" style="color: #083B7A;"></i> Key Highlights: Smart interactive boards, hands-on science experiments, reading library hours, and sports fitness.
@@ -86,7 +86,7 @@ require_once __DIR__ . '/includes/header.php';
                                 <span style="background: #ecfdf5; color: #047857; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">Classes 6 to 10</span>
                             </div>
                             <p style="color: #475569; font-size: 0.95rem; margin-bottom: 12px;">
-                                Transitioning to specialized subject studies: Mathematics, Science (Physics, Chemistry, Biology), Social Sciences (History, Civics, Geography), English, Third Language (Sanskrit), and Information Technology. Rigorous preparation for CBSE Class X All-India Secondary School Examination (AISSE).
+                                Transitioning to specialized subject studies: Mathematics, Science (Physics, Chemistry, Biology), Social Sciences (History, Civics, Geography), English, Third Language (Sanskrit/Marathi), and Information Technology. Rigorous preparation for CBSE Class X Board Examination.
                             </p>
                             <div style="font-size: 0.85rem; color: #083B7A; font-weight: 600;">
                                 <i class="fa-solid fa-check-circle" style="color: #059669;"></i> Key Highlights: Lab practicals, Olympiad training, inter-school debates, and robotics innovation.
@@ -127,7 +127,7 @@ require_once __DIR__ . '/includes/header.php';
                     </p>
 
                     <div class="adv-highlight-box" style="margin-top: 30px;">
-                        "Education at Parshv is about igniting intellect, cultivating curiosity, and preparing minds capable of transforming tomorrow."
+                        "Education at Advaita is about igniting intellect, cultivating curiosity, and preparing minds capable of transforming tomorrow."
                     </div>
 
                 </div>

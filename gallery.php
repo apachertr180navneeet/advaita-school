@@ -1,8 +1,8 @@
 <?php
 /**
- * Photo Gallery Page - Parshv International School
+ * Photo Gallery Page - Advaita School of Excellence
  */
-$pageTitle = "Campus Photo Gallery - Parshv International School, Jodhpur";
+$pageTitle = "Campus Photo Gallery - Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)";
 $activePage = "gallery";
 
 require_once __DIR__ . '/includes/header.php';
@@ -15,11 +15,11 @@ require_once __DIR__ . '/includes/header.php';
         <div class="adv-container">
             <div class="adv-banner-content">
                 <span class="adv-banner-eyebrow">
-                    <i class="fa-solid fa-images"></i> LIFE AT PARSHV
+                    <i class="fa-solid fa-images"></i> LIFE AT ADVAITA
                 </span>
                 <h1 class="adv-banner-title">Campus & Life Photo Gallery</h1>
                 <p class="adv-banner-desc">
-                    A visual journey capturing the spirit, achievements, celebrations, and daily moments at Parshv International School.
+                    A visual journey capturing the spirit, achievements, celebrations, and daily moments at Advaita School of Excellence, Parbhani.
                 </p>
                 <ul class="adv-breadcrumb">
                     <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
@@ -46,8 +46,8 @@ require_once __DIR__ . '/includes/header.php';
             <!-- Gallery Grid with Lightbox Data -->
             <div class="parshv-gallery-grid" id="parshvGalleryContainer" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px;">
                 
-                <div class="parshv-gallery-item" data-category="campus" data-lightbox="assets/images/hero-campus-1.jpg" data-title="Parshv Main Academic Building">
-                    <img src="assets/images/hero-campus-1.jpg" alt="Parshv Academic Wing">
+                <div class="parshv-gallery-item" data-category="campus" data-lightbox="assets/images/hero-campus-1.jpg" data-title="Advaita Main Academic Building">
+                    <img src="assets/images/hero-campus-1.jpg" alt="Advaita Academic Wing">
                     <div class="parshv-gallery-overlay">
                         <span class="parshv-gallery-cat">Campus</span>
                         <h4 class="parshv-gallery-caption">Main Academic Block</h4>

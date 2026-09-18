@@ -1,8 +1,8 @@
 <?php
 /**
- * Facilities & Campus Infrastructure Page - Parshv International School
+ * Facilities & Campus Infrastructure Page - Advaita School of Excellence
  */
-$pageTitle = "Campus Infrastructure & Facilities - Parshv International School, Jodhpur";
+$pageTitle = "Campus Infrastructure & Facilities - Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)";
 $activePage = "school";
 
 require_once __DIR__ . '/includes/header.php';
@@ -19,7 +19,7 @@ require_once __DIR__ . '/includes/header.php';
                 </span>
                 <h1 class="adv-banner-title">Campus Facilities & Infrastructure</h1>
                 <p class="adv-banner-desc">
-                    State-of-the-art smart classrooms, cutting-edge STEM labs, expansive sports arenas, and safe learning environments.
+                    State-of-the-art smart classrooms, cutting-edge STEM labs, expansive sports arenas, and safe learning environments in Parbhani.
                 </p>
                 <ul class="adv-breadcrumb">
                     <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
@@ -40,12 +40,12 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Main Content -->
                 <div class="adv-content-block">
                     <div class="adv-feature-img-card">
-                        <img src="assets/images/about-campus.jpg" alt="Parshv International School Infrastructure">
+                        <img src="assets/images/about-campus.jpg" alt="Advaita School of Excellence Infrastructure">
                     </div>
 
                     <h2>Modern Campus Designed for Discovery and Growth</h2>
                     <p>
-                        Spread across a sprawling, eco-friendly green campus in Jodhpur, <strong>Parshv International School</strong> offers an environment engineered for physical safety, mental well-being, and academic exploration. Every space—from spacious smart classrooms to Olympic-grade sports tracks—is crafted to nurture potential.
+                        Spread across a sprawling, eco-friendly green campus in Parbhani, <strong>Advaita School of Excellence</strong> offers an environment engineered for physical safety, mental well-being, and academic exploration. Every space—from spacious smart classrooms to sports grounds—is crafted to nurture potential.
                     </p>
 
                     <!-- Facility Cards Grid -->
@@ -121,7 +121,7 @@ require_once __DIR__ . '/includes/header.php';
 
                     <h2>Safety, Security & Campus Transport</h2>
                     <p>
-                        Student safety is our utmost priority. The entire campus is under <strong>24/7 CCTV surveillance</strong> with security personnel stationed at all access gates. Our fleet of GPS-tracked school buses covers major routes across Jodhpur, operated by verified drivers and trained bus attendants.
+                        Student safety is our utmost priority. The entire campus is under <strong>24/7 CCTV surveillance</strong> with security personnel stationed at all access gates. Our fleet of GPS-tracked school buses covers major routes across Parbhani, operated by verified drivers and trained bus attendants.
                     </p>
 
                     <div class="adv-highlight-box" style="margin-top: 30px;">

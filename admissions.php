@@ -1,8 +1,8 @@
 <?php
 /**
- * Admissions & Procedure Page - Parshv International School
+ * Admissions & Procedure Page - Advaita School of Excellence
  */
-$pageTitle = "Admissions 2026-27 - Parshv International School, Jodhpur";
+$pageTitle = "Admissions 2026-27 - Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)";
 $activePage = "admissions";
 
 require_once __DIR__ . '/includes/header.php';
@@ -40,12 +40,12 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Main Content -->
                 <div class="adv-content-block">
                     <div class="adv-feature-img-card">
-                        <img src="assets/images/card-student-1.jpg" alt="Parshv Admissions">
+                        <img src="assets/images/card-student-1.jpg" alt="Advaita Admissions">
                     </div>
 
                     <h2>Step-by-Step Admission Procedure</h2>
                     <p>
-                        Admissions at <strong>Parshv International School</strong> are transparent, inclusive, and based on merit and interaction. We welcome applications for <strong>Play Group, Nursery, KG, and Classes I to XII</strong> (Science, Commerce, and Humanities).
+                        Admissions at <strong>Advaita School of Excellence</strong> are transparent, inclusive, and based on merit and interaction. We welcome applications for <strong>Play Group, Nursery, KG, and Classes I to XII</strong> (Science, Commerce, and Humanities).
                     </p>
 
                     <!-- Admission Steps -->
@@ -170,7 +170,7 @@ require_once __DIR__ . '/includes/header.php';
                             </div>
                             <div>
                                 <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #1e293b; margin-bottom: 6px;">City / Residential Area</label>
-                                <input type="text" name="city" placeholder="e.g. Jodhpur" style="width: 100%; padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.9rem; font-family: inherit;">
+                                <input type="text" name="city" placeholder="e.g. Parbhani" style="width: 100%; padding: 10px 14px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 0.9rem; font-family: inherit;">
                             </div>
                             <div style="grid-column: 1 / -1;">
                                 <label style="display: block; font-size: 0.85rem; font-weight: 700; color: #1e293b; margin-bottom: 6px;">Any Specific Query or Message</label>

@@ -1,8 +1,8 @@
 <?php
 /**
- * Vision & Mission Page - Parshv International School
+ * Vision & Mission Page - Advaita School of Excellence
  */
-$pageTitle = "Vision & Mission - Parshv International School, Jodhpur";
+$pageTitle = "Vision & Mission - Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)";
 $activePage = "school";
 
 require_once __DIR__ . '/includes/header.php';
@@ -51,7 +51,7 @@ require_once __DIR__ . '/includes/header.php';
                     <!-- Mission Pillars -->
                     <h2>Our Mission Statement</h2>
                     <p>
-                        Parshv International School is committed to providing an inspiring learning environment where every child discovers their inner potential. We realize our vision through four fundamental pillars:
+                        <strong>Advaita School of Excellence</strong> is committed to providing an inspiring learning environment where every child discovers their inner potential. We realize our vision through four fundamental pillars:
                     </p>
 
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 28px 0;">
@@ -81,14 +81,15 @@ require_once __DIR__ . '/includes/header.php';
                         </div>
                     </div>
 
-                    <h2>Core Institutional Ethos: P-A-R-S-H-V</h2>
+                    <h2>Core Institutional Ethos: A-D-V-A-I-T-A</h2>
                     <ul>
-                        <li><strong>P - Perseverance:</strong> Fostering resilience and an undying spirit to overcome challenges.</li>
                         <li><strong>A - Authenticity:</strong> Encouraging honesty, moral courage, and genuine self-expression.</li>
-                        <li><strong>R - Respect:</strong> Valuing diversity, community elders, cultural traditions, and nature.</li>
-                        <li><strong>S - Scholarship:</strong> Cultivating an enduring passion for deep inquiry and lifelong learning.</li>
-                        <li><strong>H - Harmony:</strong> Balancing emotional well-being, intellectual growth, and physical health.</li>
+                        <li><strong>D - Discipline:</strong> Nurturing self-control, commitment, and principled leadership.</li>
                         <li><strong>V - Vision:</strong> Inspiring learners to dream boldly and impact the world positively.</li>
+                        <li><strong>A - Adaptability:</strong> Cultivating agile minds ready for continuous learning in an evolving world.</li>
+                        <li><strong>I - Integrity:</strong> Upholding truthfulness, fairness, and ethical responsibility in every action.</li>
+                        <li><strong>T - Tenacity:</strong> Fostering resilience and an undying spirit to overcome challenges.</li>
+                        <li><strong>A - Altruism:</strong> Instilling empathy, compassion, and a spirit of community service.</li>
                     </ul>
                 </div>
 
@@ -97,7 +98,7 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="adv-widget">
                         <h4 class="adv-widget-title">Our School</h4>
                         <ul class="adv-widget-links">
-                            <li><a href="about-us.php"><span>About Parshv</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+                            <li><a href="about-us.php"><span>About Advaita</span> <i class="fa-solid fa-chevron-right"></i></a></li>
                             <li class="active"><a href="vision-mission.php"><span>Vision & Mission</span> <i class="fa-solid fa-chevron-right"></i></a></li>
                             <li><a href="leadership.php"><span>Director's Desk & Leadership</span> <i class="fa-solid fa-chevron-right"></i></a></li>
                             <li><a href="facilities.php"><span>Infrastructure & Facilities</span> <i class="fa-solid fa-chevron-right"></i></a></li>

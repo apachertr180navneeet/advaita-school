@@ -1,8 +1,8 @@
 <?php
 /**
- * Mandatory Public Disclosure Page - Parshv International School
+ * Mandatory Public Disclosure Page - Advaita School of Excellence
  */
-$pageTitle = "Mandatory Public Disclosure (CBSE Corner) - Parshv International School, Jodhpur";
+$pageTitle = "Mandatory Public Disclosure (CBSE Corner) - Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)";
 $activePage = "school";
 
 require_once __DIR__ . '/includes/header.php';
@@ -46,19 +46,19 @@ require_once __DIR__ . '/includes/header.php';
                             <tbody>
                                 <tr>
                                     <td style="width: 40%;"><strong>NAME OF THE SCHOOL</strong></td>
-                                    <td>PARSHV INTERNATIONAL SCHOOL</td>
+                                    <td>ADVAITA SCHOOL OF EXCELLENCE</td>
                                 </tr>
                                 <tr>
                                     <td><strong>AFFILIATION NO.</strong></td>
-                                    <td>1730892 (CBSE New Delhi)</td>
+                                    <td>1130920 (CBSE New Delhi)</td>
                                 </tr>
                                 <tr>
                                     <td><strong>SCHOOL CODE</strong></td>
-                                    <td>11280</td>
+                                    <td>30870</td>
                                 </tr>
                                 <tr>
                                     <td><strong>COMPLETE ADDRESS</strong></td>
-                                    <td>Main Sanmati Campus, Near Highway Ring Road, Jodhpur, Rajasthan – 342001</td>
+                                    <td>Sanmati Campus, Near Highway Ring Road, Parbhani, Maharashtra – 431401</td>
                                 </tr>
                                 <tr>
                                     <td><strong>PRINCIPAL NAME & QUALIFICATION</strong></td>
@@ -66,11 +66,11 @@ require_once __DIR__ . '/includes/header.php';
                                 </tr>
                                 <tr>
                                     <td><strong>SCHOOL EMAIL ID</strong></td>
-                                    <td>info@parshvinternationalschool.com</td>
+                                    <td>info@advaitaschool.edu.in</td>
                                 </tr>
                                 <tr>
                                     <td><strong>CONTACT DETAILS (LANDLINE/MOBILE)</strong></td>
-                                    <td>+91 98765 43210 / 0291-2748000</td>
+                                    <td>+91 98765 43210 / 02452-234567</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -89,17 +89,17 @@ require_once __DIR__ . '/includes/header.php';
                             <tbody>
                                 <tr>
                                     <td>1</td>
-                                    <td>Copies of Affiliation / Upgradation Letter and Recent Extension of Affiliation</td>
+                                    <td>Copies of Affiliation / Upgradation Letter and Recent Extension of Affiliation (No. 1130920)</td>
                                     <td><a href="assets/images/hero-campus-1.jpg" target="_blank" style="color: #F37021; font-weight: 700;"><i class="fa-solid fa-file-pdf"></i> View Document</a></td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
-                                    <td>Copies of Societies / Trust / Company Registration / Renewal Certificate</td>
+                                    <td>Copies of Societies / Trust (Sanmati Sevabhavi Sanstha) Registration Certificate</td>
                                     <td><a href="assets/images/hero-campus-1.jpg" target="_blank" style="color: #F37021; font-weight: 700;"><i class="fa-solid fa-file-pdf"></i> View Document</a></td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
-                                    <td>Copy of No Objection Certificate (NOC) Issued by State Govt.</td>
+                                    <td>Copy of No Objection Certificate (NOC) Issued by Government of Maharashtra</td>
                                     <td><a href="assets/images/hero-campus-1.jpg" target="_blank" style="color: #F37021; font-weight: 700;"><i class="fa-solid fa-file-pdf"></i> View Document</a></td>
                                 </tr>
                                 <tr>
@@ -220,7 +220,7 @@ require_once __DIR__ . '/includes/header.php';
                             <i class="fa-solid fa-certificate"></i>
                         </div>
                         <h4>CBSE Affiliated</h4>
-                        <p>Affiliated to CBSE, New Delhi for Senior Secondary (Science, Commerce, Humanities).</p>
+                        <p>Affiliated to CBSE, New Delhi (Affiliation No. 1130920) for Senior Secondary (Science, Commerce, Humanities).</p>
                         <a href="admissions.php" class="btn-cta">Apply for Admission</a>
                     </div>
                 </aside>

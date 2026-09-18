@@ -1,8 +1,8 @@
 <?php
 /**
- * Activities & Holistic Development Page - Parshv International School
+ * Activities & Holistic Development Page - Advaita School of Excellence
  */
-$pageTitle = "Activities & Holistic Development - Parshv International School, Jodhpur";
+$pageTitle = "Activities & Holistic Development - Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)";
 $activePage = "holistic";
 
 require_once __DIR__ . '/includes/header.php';
@@ -40,12 +40,12 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Main Content -->
                 <div class="adv-content-block">
                     <div class="adv-feature-img-card">
-                        <img src="assets/images/gallery-cultural.jpg" alt="Parshv Cultural & Sports Activities">
+                        <img src="assets/images/gallery-cultural.jpg" alt="Advaita Cultural & Sports Activities">
                     </div>
 
                     <h2>Nurturing the 360-Degree Potential of Every Student</h2>
                     <p>
-                        At <strong>Parshv International School</strong>, co-curricular engagement is an indispensable dimension of education. We provide structured platforms in athletic sports, visual and performing arts, public speaking, coding hackathons, and community outreach.
+                        At <strong>Advaita School of Excellence</strong>, co-curricular engagement is an indispensable dimension of education. We provide structured platforms in athletic sports, visual and performing arts, public speaking, coding hackathons, and community outreach.
                     </p>
 
                     <!-- Activities Pillars -->
@@ -68,7 +68,7 @@ require_once __DIR__ . '/includes/header.php';
                             <div style="padding: 20px;">
                                 <h3 style="color: #083B7A; font-size: 1.15rem; margin: 0 0 8px;"><i class="fa-solid fa-music" style="color: #F37021; margin-right: 6px;"></i> Music, Dance & Theatre</h3>
                                 <p style="font-size: 0.88rem; color: #64748b; line-height: 1.6; margin-bottom: 0;">
-                                    Vocal music (classical & contemporary), instrumental training (keyboard, guitar, tabla, drums), classical and folk dance forms, drama and theatrical stage plays.
+                                    Vocal music (classical & contemporary), instrumental training (keyboard, guitar, tabla, harmonium), classical and folk dance forms, drama and theatrical stage plays.
                                 </p>
                             </div>
                         </div>
@@ -101,12 +101,12 @@ require_once __DIR__ . '/includes/header.php';
                     <ul style="margin-bottom: 30px;">
                         <li><strong>Literary & Model UN (MUN) Society:</strong> Debates, elocution, creative writing, and mock UN assemblies.</li>
                         <li><strong>Eco & Green Club:</strong> Tree plantations, organic gardening, energy conservation, and recycling initiatives.</li>
-                        <li><strong>Heritage & Culture Club:</strong> Celebrating Rajasthani art, Indian festivals, historical site explorations, and cultural appreciation.</li>
+                        <li><strong>Heritage & Culture Club:</strong> Celebrating Indian culture, historical site explorations, and community celebrations.</li>
                         <li><strong>Health & Wellness Club:</strong> Morning meditation, yoga workshops, nutritional awareness, and mental resilience seminars.</li>
                     </ul>
 
                     <div class="adv-highlight-box">
-                        "Every child possesses a spark of genius. Through varied holistic avenues, Parshv ignites that spark into an enduring flame of self-confidence."
+                        "Every child possesses a spark of genius. Through varied holistic avenues, Advaita ignites that spark into an enduring flame of self-confidence."
                     </div>
 
                 </div>

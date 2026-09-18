@@ -346,16 +346,16 @@ require_once __DIR__ . '/includes/header.php';
                             <i class="fa-solid fa-landmark"></i> ABOUT OUR SCHOOL
                         </span>
                         <h2 class="parshv-section-title">
-                            Welcome to <span class="highlight">Parshv International School</span>
+                            Welcome to <span class="highlight">Advaita School of Excellence</span>
                         </h2>
                     </div>
 
                     <p class="parshv-lead-text">
-                        "At Parshv International School, we believe education is more than academic achievement. It is about developing confident, responsible and compassionate individuals who are prepared for the future."
+                        "At Advaita School of Excellence, we believe education is more than academic achievement. It is about developing confident, responsible and compassionate individuals who are prepared for the future."
                     </p>
 
                     <p>
-                        Established with a deep commitment to educational excellence, Parshv International School provides a seamless educational journey from Play Group through Class XII. We harmonize rigorous CBSE academic standards with experiential learning, cultural values, and modern 21st-century competencies.
+                        Established with a deep commitment to educational excellence, Advaita School of Excellence provides a seamless educational journey from Play Group through Class XII. We harmonize rigorous CBSE academic standards with experiential learning, cultural values, and modern 21st-century competencies.
                     </p>
 
                     <!-- Feature Points -->
@@ -1044,7 +1044,7 @@ require_once __DIR__ . '/includes/header.php';
                         <i class="fa-solid fa-star"></i>
                     </div>
                     <blockquote class="parshv-testi-quote">
-                        "Enrolling our son at Parshv International School was one of our best decisions. The teachers are exceptionally devoted, not just to textbook learning, but to developing his confidence and communication skills."
+                        "Enrolling our son at Advaita School of Excellence was one of our best decisions. The teachers are exceptionally devoted, not just to textbook learning, but to developing his confidence and communication skills."
                     </blockquote>
                     <div class="parshv-testi-author">
                         <img src="assets/images/parent-1.jpg" alt="Sunita Sharma" class="parshv-testi-avatar">
@@ -1055,7 +1055,7 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
                 </div>
 
-                <!-- Review 2 -->
+                <!-- Testimonial 2 -->
                 <div class="parshv-testi-card">
                     <div class="parshv-testi-rating">
                         <i class="fa-solid fa-star"></i>
@@ -1065,7 +1065,7 @@ require_once __DIR__ . '/includes/header.php';
                         <i class="fa-solid fa-star"></i>
                     </div>
                     <blockquote class="parshv-testi-quote">
-                        "The science laboratory and robotics training have ignited a true passion for innovation in my daughter. The balance between CBSE board preparation and sporting activities is truly world-class."
+                        "The robotics and science lab infrastructure is outstanding. Our daughter has developed a profound interest in mathematics and computer coding. The environment is both competitive and supportive."
                     </blockquote>
                     <div class="parshv-testi-author">
                         <img src="assets/images/parent-2.jpg" alt="Rajesh Mehta" class="parshv-testi-avatar">
@@ -1076,7 +1076,7 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
                 </div>
 
-                <!-- Review 3 -->
+                <!-- Testimonial 3 -->
                 <div class="parshv-testi-card">
                     <div class="parshv-testi-rating">
                         <i class="fa-solid fa-star"></i>
@@ -1086,7 +1086,7 @@ require_once __DIR__ . '/includes/header.php';
                         <i class="fa-solid fa-star"></i>
                     </div>
                     <blockquote class="parshv-testi-quote">
-                        "The warm, caring environment in the primary wing made the transition so easy for our child. He looks forward to school every morning with a big smile and enthusiasm to learn!"
+                        "The balanced approach to academics, sports, and cultural activities makes this school truly stand out. Safety, transport, and communication with parents are seamlessly managed."
                     </blockquote>
                     <div class="parshv-testi-author">
                         <img src="assets/images/parent-3.jpg" alt="Pooja Verma" class="parshv-testi-avatar">
@@ -1108,21 +1108,22 @@ require_once __DIR__ . '/includes/header.php';
         <div class="parshv-container">
             <div class="parshv-section-header text-center">
                 <span class="parshv-eyebrow-badge">
-                    <i class="fa-solid fa-bullhorn"></i> HAPPENINGS ON CAMPUS
+                    <i class="fa-solid fa-bullhorn"></i> HAPPENINGS
                 </span>
                 <h2 class="parshv-section-title">
-                    What's Happening at <span class="highlight">Parshv?</span>
+                    What's Happening at <span class="highlight">Advaita?</span>
                 </h2>
                 <p class="parshv-section-subtitle">
-                    Stay connected with recent celebrations, academic circulars, competition victories, and upcoming events.
+                    Stay updated with the latest campus activities, celebrations, academic achievements and announcements.
                 </p>
             </div>
 
+            <!-- News Grid (3 Items) -->
             <div class="parshv-news-grid">
-                <!-- Post 1 -->
+                <!-- News 1 -->
                 <div class="parshv-news-card">
                     <div class="parshv-news-image-wrap">
-                        <img src="assets/images/event-1.jpg" alt="Annual Science & AI Exhibition 2026" loading="lazy">
+                        <img src="assets/images/event-1.jpg" alt="Science and AI Exhibition" loading="lazy">
                         <div class="parshv-news-date-badge">
                             <span class="day">15</span>
                             <span class="month">OCT</span>
@@ -1132,19 +1133,19 @@ require_once __DIR__ . '/includes/header.php';
                         <span class="parshv-news-category">EVENTS & STEM</span>
                         <h3 class="parshv-news-title">Annual Inter-School Science & AI Exhibition 2026</h3>
                         <p class="parshv-news-desc">
-                            Over 30 schools participated with cutting-edge working robotics prototypes, green energy models, and AI demonstrations.
+                            Students presented over 40 working robotic models, automated IoT solutions, and green energy innovations.
                         </p>
-                        <a href="#admission-cta" class="parshv-news-link">
-                            <span>Read Full Story</span>
+                        <a href="activities.php" class="parshv-news-link">
+                            <span>Read More</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
 
-                <!-- Post 2 -->
+                <!-- News 2 -->
                 <div class="parshv-news-card">
                     <div class="parshv-news-image-wrap">
-                        <img src="assets/images/event-2.jpg" alt="CBSE National Olympiad Rankers" loading="lazy">
+                        <img src="assets/images/event-2.jpg" alt="Olympiad Toppers" loading="lazy">
                         <div class="parshv-news-date-badge">
                             <span class="day">28</span>
                             <span class="month">SEP</span>
@@ -1154,10 +1155,10 @@ require_once __DIR__ . '/includes/header.php';
                         <span class="parshv-news-category">ACHIEVEMENTS</span>
                         <h3 class="parshv-news-title">CBSE National Olympiad Winners Felicitated</h3>
                         <p class="parshv-news-desc">
-                            Parshv students bagged top state ranks in National Cyber and Mathematics Olympiad examinations with distinction.
+                            Advaita students bagged top state ranks in National Cyber and Mathematics Olympiad examinations with distinction.
                         </p>
-                        <a href="#admission-cta" class="parshv-news-link">
-                            <span>Read Full Story</span>
+                        <a href="achievements.php" class="parshv-news-link">
+                            <span>Read More</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
