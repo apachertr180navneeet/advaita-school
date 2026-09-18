@@ -1,0 +1,1408 @@
+/* ==========================================================================
+   Parshv International School - Homepage Master Stylesheet
+   Modern, Clean, Premium, and Responsive School UI
+   Theme: #083B7A (Navy Blue), #F37021 (Parshv Orange), #fdbb2d (Gold Accent)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Global Layout & Section System
+   -------------------------------------------------------------------------- */
+.parshv-section {
+    position: relative;
+    padding: 96px 0;
+    overflow: hidden;
+}
+
+.parshv-section-light {
+    background-color: #ffffff;
+}
+
+.parshv-section-alt {
+    background-color: #f8fafc;
+}
+
+.parshv-section-dark {
+    background: linear-gradient(135deg, #031c3d 0%, #083B7A 100%);
+    color: #ffffff;
+}
+
+.parshv-section-cream {
+    background-color: #fffbf5;
+}
+
+.parshv-container {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.parshv-container-narrow {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Section Header Typography */
+.parshv-section-header {
+    margin-bottom: 56px;
+}
+
+.parshv-section-header.text-center {
+    text-align: center;
+}
+
+.parshv-eyebrow-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(243, 112, 33, 0.1);
+    color: var(--adv-accent-orange);
+    border: 1px solid rgba(243, 112, 33, 0.25);
+    padding: 6px 18px;
+    border-radius: 50px;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    margin-bottom: 14px;
+}
+
+.parshv-section-dark .parshv-eyebrow-badge {
+    background: rgba(255, 255, 255, 0.12);
+    color: var(--adv-accent-gold);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.parshv-section-title {
+    font-size: clamp(2rem, 3.2vw, 2.75rem);
+    font-weight: 800;
+    color: var(--adv-primary-dark);
+    line-height: 1.22;
+    letter-spacing: -0.5px;
+    margin-bottom: 14px;
+}
+
+.parshv-section-dark .parshv-section-title {
+    color: #ffffff;
+}
+
+.parshv-section-title .highlight {
+    color: var(--adv-accent-orange);
+    position: relative;
+    display: inline-block;
+}
+
+.parshv-section-dark .parshv-section-title .highlight {
+    color: var(--adv-accent-gold);
+}
+
+.parshv-section-subtitle {
+    font-size: clamp(1rem, 1.3vw, 1.125rem);
+    color: #64748b;
+    max-width: 720px;
+    line-height: 1.65;
+    margin: 0 auto;
+}
+
+.parshv-section-dark .parshv-section-subtitle {
+    color: #cbd5e1;
+}
+
+/* Button Utilities */
+.parshv-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #f37021 0%, #df5d10 100%);
+    color: #ffffff;
+    padding: 13px 28px;
+    border-radius: 50px;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 4px 16px rgba(243, 112, 33, 0.35);
+    transition: var(--header-transition);
+    border: none;
+    cursor: pointer;
+}
+
+.parshv-btn-primary:hover {
+    background: linear-gradient(135deg, #ff7e33 0%, #f37021 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(243, 112, 33, 0.5);
+    color: #ffffff;
+}
+
+.parshv-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff;
+    color: var(--adv-primary);
+    padding: 13px 28px;
+    border-radius: 50px;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid var(--adv-primary);
+    box-shadow: 0 2px 8px rgba(8, 59, 122, 0.08);
+    transition: var(--header-transition);
+    cursor: pointer;
+}
+
+.parshv-btn-secondary:hover {
+    background: var(--adv-primary);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(8, 59, 122, 0.25);
+}
+
+.parshv-btn-outline-white {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+    padding: 13px 28px;
+    border-radius: 50px;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: var(--header-transition);
+}
+
+.parshv-btn-outline-white:hover {
+    background: #ffffff;
+    color: var(--adv-primary);
+    border-color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* --------------------------------------------------------------------------
+   Section 2: Quick Information / Highlights Stats Strip
+   -------------------------------------------------------------------------- */
+.parshv-stats-section {
+    position: relative;
+    z-index: 10;
+    margin-top: -48px;
+    padding: 0 24px;
+}
+
+.parshv-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 16px 40px rgba(8, 59, 122, 0.12);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    overflow: hidden;
+}
+
+.parshv-stat-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 28px 24px;
+    border-right: 1px solid #f1f5f9;
+    transition: var(--header-transition);
+}
+
+.parshv-stat-card:last-child {
+    border-right: none;
+}
+
+.parshv-stat-card:hover {
+    background-color: #f8fafc;
+    transform: translateY(-2px);
+}
+
+.parshv-stat-icon-wrap {
+    width: 54px;
+    height: 54px;
+    border-radius: 14px;
+    background: rgba(243, 112, 33, 0.1);
+    color: var(--adv-accent-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    transition: var(--header-transition);
+}
+
+.parshv-stat-card:hover .parshv-stat-icon-wrap {
+    background: var(--adv-accent-orange);
+    color: #ffffff;
+    transform: scale(1.08);
+}
+
+.parshv-stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.parshv-stat-num {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: var(--adv-primary-dark);
+    line-height: 1.1;
+    font-family: var(--adv-font-main);
+}
+
+.parshv-stat-label {
+    font-size: 0.8125rem;
+    color: #64748b;
+    font-weight: 600;
+    margin-top: 4px;
+    line-height: 1.3;
+}
+
+/* --------------------------------------------------------------------------
+   Section 3: Welcome / About School Section (2-Column Layout)
+   -------------------------------------------------------------------------- */
+.parshv-about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.15fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.parshv-about-visual {
+    position: relative;
+}
+
+.parshv-about-image-card {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 48px rgba(8, 59, 122, 0.18);
+    border: 6px solid #ffffff;
+}
+
+.parshv-about-image-card img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.parshv-about-image-card:hover img {
+    transform: scale(1.04);
+}
+
+.parshv-about-badge-floating {
+    position: absolute;
+    bottom: -24px;
+    right: -20px;
+    background: linear-gradient(135deg, var(--adv-primary-dark) 0%, var(--adv-primary) 100%);
+    color: #ffffff;
+    padding: 20px 24px;
+    border-radius: 18px;
+    box-shadow: 0 12px 32px rgba(8, 59, 122, 0.35);
+    border: 3px solid #ffffff;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.parshv-about-badge-floating i {
+    font-size: 2.2rem;
+    color: var(--adv-accent-gold);
+}
+
+.parshv-about-badge-text .badge-num {
+    font-size: 1.6rem;
+    font-weight: 800;
+    line-height: 1.1;
+    display: block;
+}
+
+.parshv-about-badge-text .badge-lbl {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.88);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.parshv-about-content .parshv-lead-text {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--adv-primary);
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.parshv-about-content p {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 24px;
+}
+
+.parshv-about-features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.parshv-about-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: #f8fafc;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+}
+
+.parshv-about-feature-item i {
+    color: var(--adv-accent-orange);
+    font-size: 1.15rem;
+    margin-top: 2px;
+}
+
+.parshv-about-feature-item span {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #1e293b;
+    line-height: 1.35;
+}
+
+.parshv-about-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   Section 4: Why Choose Parshv? (6 Dynamic Feature Cards)
+   -------------------------------------------------------------------------- */
+.parshv-why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.parshv-why-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 34px 28px;
+    box-shadow: 0 10px 30px rgba(8, 59, 122, 0.06);
+    border: 1px solid #e2e8f0;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.parshv-why-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--adv-primary), var(--adv-accent-orange));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.parshv-why-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 42px rgba(8, 59, 122, 0.14);
+    border-color: rgba(243, 112, 33, 0.3);
+}
+
+.parshv-why-card:hover::before {
+    opacity: 1;
+}
+
+.parshv-why-icon-bubble {
+    width: 62px;
+    height: 62px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(8, 59, 122, 0.08) 0%, rgba(243, 112, 33, 0.12) 100%);
+    color: var(--adv-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.65rem;
+    margin-bottom: 22px;
+    transition: all 0.35s ease;
+}
+
+.parshv-why-card:hover .parshv-why-icon-bubble {
+    background: linear-gradient(135deg, var(--adv-primary) 0%, var(--adv-accent-orange) 100%);
+    color: #ffffff;
+    transform: rotate(6deg) scale(1.06);
+}
+
+.parshv-why-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--adv-primary-dark);
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.parshv-why-desc {
+    font-size: 0.90625rem;
+    color: #64748b;
+    line-height: 1.65;
+}
+
+/* --------------------------------------------------------------------------
+   Section 5: Academic Programmes (Education for Every Stage)
+   -------------------------------------------------------------------------- */
+.parshv-prog-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.parshv-prog-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 32px rgba(8, 59, 122, 0.08);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.parshv-prog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 24px 48px rgba(8, 59, 122, 0.16);
+    border-color: rgba(243, 112, 33, 0.4);
+}
+
+.parshv-prog-image-wrap {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.parshv-prog-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.parshv-prog-card:hover .parshv-prog-image-wrap img {
+    transform: scale(1.08);
+}
+
+.parshv-prog-tag {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: rgba(3, 28, 61, 0.85);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    color: #ffffff;
+    padding: 4px 12px;
+    border-radius: 30px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.parshv-prog-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.parshv-prog-grades {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--adv-accent-orange);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.parshv-prog-title {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--adv-primary-dark);
+    margin-bottom: 12px;
+    line-height: 1.25;
+}
+
+.parshv-prog-desc {
+    font-size: 0.875rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    flex-grow: 1;
+}
+
+.parshv-prog-streams {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+.parshv-stream-pill {
+    background: #f1f5f9;
+    color: var(--adv-primary);
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.parshv-prog-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--adv-primary);
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: var(--header-transition);
+}
+
+.parshv-prog-btn i {
+    font-size: 0.8125rem;
+    transition: transform 0.25s ease;
+}
+
+.parshv-prog-card:hover .parshv-prog-btn {
+    color: var(--adv-accent-orange);
+}
+
+.parshv-prog-card:hover .parshv-prog-btn i {
+    transform: translateX(4px);
+}
+
+/* --------------------------------------------------------------------------
+   Section 6: Campus & Infrastructure
+   -------------------------------------------------------------------------- */
+.parshv-fac-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.parshv-fac-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    height: 250px;
+    box-shadow: 0 10px 24px rgba(8, 59, 122, 0.1);
+    cursor: pointer;
+}
+
+.parshv-fac-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.parshv-fac-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(3, 28, 61, 0.92) 0%, rgba(3, 28, 61, 0.3) 50%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    transition: background 0.35s ease;
+}
+
+.parshv-fac-card:hover img {
+    transform: scale(1.1);
+}
+
+.parshv-fac-card:hover .parshv-fac-overlay {
+    background: linear-gradient(0deg, rgba(3, 28, 61, 0.96) 0%, rgba(8, 59, 122, 0.6) 100%);
+}
+
+.parshv-fac-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(243, 112, 33, 0.9);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.parshv-fac-card:hover .parshv-fac-icon {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.parshv-fac-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 4px;
+    line-height: 1.25;
+}
+
+.parshv-fac-desc {
+    font-size: 0.78125rem;
+    color: #cbd5e1;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+/* --------------------------------------------------------------------------
+   Section 7: Learning Beyond the Classroom
+   -------------------------------------------------------------------------- */
+.parshv-activities-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.parshv-activity-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 24px 20px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 24px rgba(8, 59, 122, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.parshv-activity-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(8, 59, 122, 0.12);
+    border-color: var(--adv-accent-orange);
+}
+
+.parshv-activity-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: rgba(8, 59, 122, 0.08);
+    color: var(--adv-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.parshv-activity-card:hover .parshv-activity-icon {
+    background: var(--adv-accent-orange);
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.parshv-activity-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--adv-primary-dark);
+    margin-bottom: 2px;
+}
+
+.parshv-activity-sub {
+    font-size: 0.75rem;
+    color: #64748b;
+    line-height: 1.3;
+}
+
+/* --------------------------------------------------------------------------
+   Section 8: Director's Message
+   -------------------------------------------------------------------------- */
+.parshv-director-card {
+    background: linear-gradient(135deg, #031c3d 0%, #083B7A 100%);
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 24px 60px rgba(3, 28, 61, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    position: relative;
+}
+
+.parshv-director-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: stretch;
+}
+
+.parshv-director-photo-wrap {
+    position: relative;
+    min-height: 420px;
+    background-color: #041f42;
+}
+
+.parshv-director-photo-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+.parshv-director-quote-badge {
+    position: absolute;
+    bottom: 24px;
+    left: 24px;
+    background: rgba(243, 112, 33, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 0.78125rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.parshv-director-content {
+    padding: 56px 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #ffffff;
+    position: relative;
+}
+
+.parshv-director-quote-icon {
+    font-size: 3rem;
+    color: rgba(253, 187, 45, 0.3);
+    line-height: 1;
+    margin-bottom: 16px;
+}
+
+.parshv-director-quote-text {
+    font-size: clamp(1.15rem, 1.8vw, 1.35rem);
+    font-weight: 600;
+    line-height: 1.55;
+    color: #f8fafc;
+    margin-bottom: 28px;
+    font-style: italic;
+}
+
+.parshv-director-author {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    padding-top: 20px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.parshv-director-name {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--adv-accent-gold);
+    line-height: 1.2;
+}
+
+.parshv-director-role {
+    font-size: 0.84375rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   Section 9: Achievements & Results
+   -------------------------------------------------------------------------- */
+.parshv-achieve-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.parshv-achieve-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 32px 26px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(8, 59, 122, 0.06);
+    text-align: center;
+    transition: all 0.35s ease;
+    position: relative;
+}
+
+.parshv-achieve-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 44px rgba(8, 59, 122, 0.12);
+    border-color: var(--adv-accent-orange);
+}
+
+.parshv-achieve-icon-box {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(243, 112, 33, 0.12) 0%, rgba(253, 187, 45, 0.2) 100%);
+    color: var(--adv-accent-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin: 0 auto 20px;
+    transition: transform 0.35s ease;
+}
+
+.parshv-achieve-card:hover .parshv-achieve-icon-box {
+    transform: scale(1.1) rotate(6deg);
+    background: var(--adv-accent-orange);
+    color: #ffffff;
+}
+
+.parshv-achieve-stat {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: var(--adv-primary-dark);
+    line-height: 1.1;
+    margin-bottom: 6px;
+}
+
+.parshv-achieve-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+.parshv-achieve-desc {
+    font-size: 0.875rem;
+    color: #64748b;
+    line-height: 1.55;
+}
+
+/* --------------------------------------------------------------------------
+   Section 10: Student Life / Gallery
+   -------------------------------------------------------------------------- */
+.parshv-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 240px;
+    gap: 18px;
+}
+
+.parshv-gallery-item {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.parshv-gallery-item.span-2 {
+    grid-column: span 2;
+}
+
+.parshv-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.parshv-gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(3, 28, 61, 0.88) 0%, rgba(3, 28, 61, 0.2) 60%, transparent 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.parshv-gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.parshv-gallery-item:hover .parshv-gallery-overlay {
+    opacity: 1;
+}
+
+.parshv-gallery-caption-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 2px;
+}
+
+.parshv-gallery-caption-sub {
+    font-size: 0.75rem;
+    color: var(--adv-accent-gold);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* --------------------------------------------------------------------------
+   Section 11: Testimonials (What Parents Say)
+   -------------------------------------------------------------------------- */
+.parshv-testi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.parshv-testi-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 34px 28px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 32px rgba(8, 59, 122, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.35s ease;
+}
+
+.parshv-testi-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 44px rgba(8, 59, 122, 0.12);
+    border-color: rgba(243, 112, 33, 0.4);
+}
+
+.parshv-testi-rating {
+    color: #f59e0b;
+    font-size: 0.9375rem;
+    margin-bottom: 16px;
+    display: flex;
+    gap: 4px;
+}
+
+.parshv-testi-quote {
+    font-size: 0.95rem;
+    color: #334155;
+    line-height: 1.65;
+    margin-bottom: 24px;
+    font-style: italic;
+}
+
+.parshv-testi-author {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 18px;
+}
+
+.parshv-testi-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--adv-accent-orange);
+}
+
+.parshv-testi-name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--adv-primary-dark);
+    line-height: 1.2;
+}
+
+.parshv-testi-grade {
+    font-size: 0.78125rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   Section 12: Latest News & Events
+   -------------------------------------------------------------------------- */
+.parshv-news-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.parshv-news-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(8, 59, 122, 0.06);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.35s ease;
+}
+
+.parshv-news-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 42px rgba(8, 59, 122, 0.14);
+}
+
+.parshv-news-image-wrap {
+    position: relative;
+    height: 210px;
+    overflow: hidden;
+}
+
+.parshv-news-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.parshv-news-card:hover .parshv-news-image-wrap img {
+    transform: scale(1.08);
+}
+
+.parshv-news-date-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    background: var(--adv-primary-dark);
+    color: #ffffff;
+    padding: 6px 12px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 800;
+    line-height: 1.1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.parshv-news-date-badge .day {
+    font-size: 1.15rem;
+    display: block;
+}
+
+.parshv-news-date-badge .month {
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    color: var(--adv-accent-gold);
+    display: block;
+}
+
+.parshv-news-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.parshv-news-category {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--adv-accent-orange);
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    margin-bottom: 8px;
+}
+
+.parshv-news-title {
+    font-size: 1.1875rem;
+    font-weight: 700;
+    color: var(--adv-primary-dark);
+    line-height: 1.35;
+    margin-bottom: 12px;
+}
+
+.parshv-news-desc {
+    font-size: 0.875rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.parshv-news-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--adv-primary);
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+.parshv-news-link:hover {
+    color: var(--adv-accent-orange);
+}
+
+/* --------------------------------------------------------------------------
+   Section 13: Admission CTA Banner
+   -------------------------------------------------------------------------- */
+.parshv-cta-card {
+    background: linear-gradient(135deg, #031c3d 0%, #083B7A 60%, #df5d10 160%);
+    border-radius: 28px;
+    padding: 64px 48px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0 24px 60px rgba(8, 59, 122, 0.28);
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.parshv-cta-glow-1 {
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: rgba(243, 112, 33, 0.25);
+    filter: blur(80px);
+    pointer-events: none;
+}
+
+.parshv-cta-glow-2 {
+    position: absolute;
+    bottom: -60px;
+    left: -60px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: rgba(253, 187, 45, 0.18);
+    filter: blur(80px);
+    pointer-events: none;
+}
+
+.parshv-cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 820px;
+    margin: 0 auto;
+}
+
+.parshv-cta-title {
+    font-size: clamp(2rem, 3.5vw, 2.9rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.parshv-cta-desc {
+    font-size: clamp(1rem, 1.4vw, 1.15rem);
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    margin-bottom: 36px;
+}
+
+.parshv-cta-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+    .parshv-stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .parshv-stat-card:nth-child(3) {
+        border-right: none;
+    }
+
+    .parshv-prog-grid,
+    .parshv-fac-grid,
+    .parshv-activities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .parshv-gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 991px) {
+    .parshv-section {
+        padding: 72px 0;
+    }
+
+    .parshv-about-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .parshv-about-image-card img {
+        height: 380px;
+    }
+
+    .parshv-why-grid,
+    .parshv-achieve-grid,
+    .parshv-testi-grid,
+    .parshv-news-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .parshv-director-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .parshv-director-photo-wrap {
+        min-height: 340px;
+    }
+
+    .parshv-director-content {
+        padding: 40px 32px;
+    }
+}
+
+@media (max-width: 768px) {
+    .parshv-section {
+        padding: 56px 0;
+    }
+
+    .parshv-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .parshv-stat-card {
+        border-right: none;
+        border-bottom: 1px solid #f1f5f9;
+        padding: 20px 18px;
+    }
+
+    .parshv-why-grid,
+    .parshv-prog-grid,
+    .parshv-fac-grid,
+    .parshv-activities-grid,
+    .parshv-achieve-grid,
+    .parshv-testi-grid,
+    .parshv-news-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .parshv-about-features {
+        grid-template-columns: 1fr;
+    }
+
+    .parshv-gallery-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 220px;
+    }
+
+    .parshv-gallery-item.span-2 {
+        grid-column: span 1;
+    }
+
+    .parshv-cta-card {
+        padding: 40px 24px;
+    }
+
+    .parshv-cta-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .parshv-cta-actions .parshv-btn-primary,
+    .parshv-cta-actions .parshv-btn-outline-white,
+    .parshv-cta-actions .parshv-btn-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Lightbox Modal
+   -------------------------------------------------------------------------- */
+.parshv-lightbox-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.parshv-lightbox-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.parshv-lightbox-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(3, 28, 61, 0.92);
+    backdrop-filter: blur(8px);
+}
+
+.parshv-lightbox-content {
+    position: relative;
+    z-index: 2;
+    max-width: 90vw;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.parshv-lightbox-img {
+    max-width: 100%;
+    max-height: 75vh;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    object-fit: contain;
+}
+
+.parshv-lightbox-caption {
+    color: #ffffff;
+    margin-top: 14px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.parshv-lightbox-close {
+    position: absolute;
+    top: -44px;
+    right: 0;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 2.2rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.parshv-lightbox-close:hover {
+    color: var(--adv-accent-orange);
+    transform: scale(1.15);
+}
+
