@@ -22,6 +22,7 @@ $pageTitle = $pageTitle ?? 'Advaita School of Excellence - Sanmati Sevabhavi San
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/slider.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/footer.css">
 </head>
