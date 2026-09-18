@@ -1,0 +1,175 @@
+<?php
+/**
+ * Achievements & Accolades Page - Parshv International School
+ */
+$pageTitle = "Achievements & Accolades - Parshv International School, Jodhpur";
+$activePage = "achievements";
+
+require_once __DIR__ . '/includes/header.php';
+?>
+
+<main id="main" class="main-content-wrapper">
+
+    <!-- Page Banner -->
+    <section class="adv-page-banner" aria-label="Page Header">
+        <div class="adv-container">
+            <div class="adv-banner-content">
+                <span class="adv-banner-eyebrow">
+                    <i class="fa-solid fa-trophy"></i> HALL OF EXCELLENCE
+                </span>
+                <h1 class="adv-banner-title">Awards, Board Results & Laurels</h1>
+                <p class="adv-banner-desc">
+                    Celebrating the remarkable achievements of Parshv students in CBSE board examinations, Olympiads, state athletics, and competitive arenas.
+                </p>
+                <ul class="adv-breadcrumb">
+                    <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li class="adv-breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></li>
+                    <li><a href="about-us.php">Our School</a></li>
+                    <li class="adv-breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></li>
+                    <li class="adv-breadcrumb-active">Achievements</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Layout -->
+    <section class="adv-inner-layout">
+        <div class="adv-container">
+            <div class="adv-inner-grid">
+                
+                <!-- Main Content -->
+                <div class="adv-content-block">
+                    <div class="adv-feature-img-card">
+                        <img src="assets/images/card-student-4.jpg" alt="Parshv Achievements and Accolades">
+                    </div>
+
+                    <h2>Outstanding CBSE Board Examination Track Record</h2>
+                    <p>
+                        Year after year, students of <strong>Parshv International School</strong> achieve benchmark scores in CBSE Class X (AISSE) and Class XII (AISSCE) board examinations, with multiple city toppers and centum scores across Mathematics, Sciences, and Commerce.
+                    </p>
+
+                    <!-- Stats Counter Grid -->
+                    <div class="parshv-stats-grid" style="margin: 28px 0;">
+                        <div class="parshv-stat-card">
+                            <span class="parshv-stat-num" data-target="100">100%</span>
+                            <span class="parshv-stat-label">CBSE Board Pass Rate</span>
+                        </div>
+                        <div class="parshv-stat-card">
+                            <span class="parshv-stat-num" data-target="98">98.4%</span>
+                            <span class="parshv-stat-label">Highest Board Score</span>
+                        </div>
+                        <div class="parshv-stat-card">
+                            <span class="parshv-stat-num" data-target="120">120+</span>
+                            <span class="parshv-stat-label">Distinctions in 2025</span>
+                        </div>
+                        <div class="parshv-stat-card">
+                            <span class="parshv-stat-num" data-target="45">45+</span>
+                            <span class="parshv-stat-label">Olympiad Gold Medals</span>
+                        </div>
+                    </div>
+
+                    <h2>Recent Academic & Olympiad Distinctions</h2>
+                    <div style="overflow-x: auto; margin: 20px 0 32px;">
+                        <table class="adv-table">
+                            <thead>
+                                <tr>
+                                    <th>Student Name</th>
+                                    <th>Grade / Stream</th>
+                                    <th>Score / Recognition</th>
+                                    <th>Exam / Competition</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Aayush Sharma</strong></td>
+                                    <td>Class XII (Science)</td>
+                                    <td><strong>98.4% (District Topper)</strong></td>
+                                    <td>CBSE Board Examination</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Priya Choudhary</strong></td>
+                                    <td>Class XII (Commerce)</td>
+                                    <td><strong>97.8% (100/100 Accountancy)</strong></td>
+                                    <td>CBSE Board Examination</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Devansh Mehta</strong></td>
+                                    <td>Class X</td>
+                                    <td><strong>98.2% (100/100 Maths & Science)</strong></td>
+                                    <td>CBSE Class X AISSE</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Ananya Singh</strong></td>
+                                    <td>Class IX</td>
+                                    <td><strong>International Rank 14 (Gold)</strong></td>
+                                    <td>SOF International Science Olympiad (NSO)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Rohan Jain</strong></td>
+                                    <td>Class XI (Science)</td>
+                                    <td><strong>State Rank 3</strong></td>
+                                    <td>National Cyber Olympiad (NCO)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2>Sports & Co-Curricular Laurels</h2>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin: 24px 0;">
+                        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
+                            <div style="color: #F37021; font-size: 1.5rem; margin-bottom: 8px;"><i class="fa-solid fa-trophy"></i></div>
+                            <h4 style="color: #083B7A; margin: 0 0 6px; font-size: 1.05rem;">State Football Championship</h4>
+                            <p style="font-size: 0.85rem; color: #64748b; margin: 0;">Under-17 boys team bagged the Silver trophy at Rajasthan State CBSE Cluster Games.</p>
+                        </div>
+                        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
+                            <div style="color: #F37021; font-size: 1.5rem; margin-bottom: 8px;"><i class="fa-solid fa-medal"></i></div>
+                            <h4 style="color: #083B7A; margin: 0 0 6px; font-size: 1.05rem;">National Karate Gold Medal</h4>
+                            <p style="font-size: 0.85rem; color: #64748b; margin: 0;">Master Raghav Rathore clinched Gold in National School Games Martial Arts event.</p>
+                        </div>
+                        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
+                            <div style="color: #F37021; font-size: 1.5rem; margin-bottom: 8px;"><i class="fa-solid fa-award"></i></div>
+                            <h4 style="color: #083B7A; margin: 0 0 6px; font-size: 1.05rem;">Inter-School Robotic Challenge</h4>
+                            <p style="font-size: 0.85rem; color: #64748b; margin: 0;">Parshv STEM Team was crowned 1st Prize Winners at Western India Robotics Expo.</p>
+                        </div>
+                    </div>
+
+                    <div class="adv-highlight-box" style="margin-top: 30px;">
+                        "Success is not a destination, but an ongoing journey of dedication, discipline, and the pursuit of mastery."
+                    </div>
+
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="adv-sidebar">
+                    <!-- Quick Navigation -->
+                    <div class="adv-widget">
+                        <h4 class="adv-widget-title">Excellence & Results</h4>
+                        <ul class="adv-widget-links">
+                            <li class="active"><a href="achievements.php"><span>Awards & Laurels</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+                            <li><a href="academics.php"><span>Academic Streams</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+                            <li><a href="activities.php"><span>Sports & Clubs</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+                            <li><a href="gallery.php"><span>Celebration Gallery</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+                            <li><a href="admissions.php"><span>Apply for Admission</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Admission CTA Widget -->
+                    <div class="adv-widget-cta">
+                        <div class="cta-icon">
+                            <i class="fa-solid fa-trophy"></i>
+                        </div>
+                        <h4>Be a Part of the Legacy</h4>
+                        <p>Empower your child with an education that paves the way for top universities and global leadership.</p>
+                        <a href="admissions.php" class="btn-cta">Register for 2026-27</a>
+                    </div>
+                </aside>
+
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<?php
+require_once __DIR__ . '/includes/footer.php';
+?>

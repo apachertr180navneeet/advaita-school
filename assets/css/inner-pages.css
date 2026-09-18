@@ -1,0 +1,393 @@
+/* ==========================================================================
+   Parshv International School - Inner Pages Stylesheet
+   Theme: #083B7A (Navy Blue), #F37021 (Orange Accent), #fdbb2d (Gold)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Page Hero Banner
+   -------------------------------------------------------------------------- */
+.adv-page-banner {
+    position: relative;
+    background: linear-gradient(135deg, #031c3d 0%, #083B7A 70%, #0c4ea0 100%);
+    color: #ffffff;
+    padding: 70px 0 60px;
+    overflow: hidden;
+}
+
+.adv-page-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(rgba(243, 112, 33, 0.12) 1px, transparent 1px);
+    background-size: 24px 24px;
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.adv-banner-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.adv-banner-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    color: var(--adv-accent-gold);
+    padding: 5px 16px;
+    border-radius: 30px;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+    margin-bottom: 14px;
+}
+
+.adv-banner-title {
+    font-size: clamp(2.2rem, 3.8vw, 3.2rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.adv-banner-desc {
+    font-size: 1.0625rem;
+    color: rgba(255, 255, 255, 0.88);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.adv-breadcrumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    padding: 6px 18px;
+    background: rgba(3, 28, 61, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 30px;
+    font-size: 0.8125rem;
+    color: #cbd5e1;
+}
+
+.adv-breadcrumb a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+.adv-breadcrumb a:hover {
+    color: var(--adv-accent-gold);
+}
+
+.adv-breadcrumb-sep {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.75rem;
+}
+
+.adv-breadcrumb-active {
+    color: var(--adv-accent-gold);
+    font-weight: 700;
+}
+
+/* --------------------------------------------------------------------------
+   2. Inner Page Layout (2-Column with Sidebar)
+   -------------------------------------------------------------------------- */
+.adv-inner-layout {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.adv-inner-grid {
+    display: grid;
+    grid-template-columns: 2.3fr 1fr;
+    gap: 48px;
+    align-items: start;
+}
+
+.adv-inner-grid.full-width {
+    grid-template-columns: 1fr;
+}
+
+/* Main Content Area */
+.adv-content-block {
+    color: #334155;
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.adv-content-block h2 {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: var(--adv-primary-dark);
+    margin: 32px 0 16px;
+    line-height: 1.3;
+}
+
+.adv-content-block h2:first-child {
+    margin-top: 0;
+}
+
+.adv-content-block h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: var(--adv-primary);
+    margin: 24px 0 12px;
+}
+
+.adv-content-block p {
+    margin-bottom: 20px;
+}
+
+.adv-content-block ul {
+    margin-bottom: 24px;
+    padding-left: 20px;
+}
+
+.adv-content-block li {
+    margin-bottom: 8px;
+}
+
+/* Feature Image inside Article */
+.adv-feature-img-card {
+    border-radius: 18px;
+    overflow: hidden;
+    margin-bottom: 32px;
+    box-shadow: 0 12px 32px rgba(8, 59, 122, 0.1);
+}
+
+.adv-feature-img-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Highlight Quote Box */
+.adv-highlight-box {
+    background: #f8fafc;
+    border-left: 4px solid var(--adv-accent-orange);
+    padding: 24px 28px;
+    border-radius: 0 14px 14px 0;
+    margin: 28px 0;
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: var(--adv-primary-dark);
+    line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   3. Sidebar Navigation & Widgets
+   -------------------------------------------------------------------------- */
+.adv-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    position: sticky;
+    top: 100px;
+}
+
+.adv-widget {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 28px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 24px rgba(8, 59, 122, 0.05);
+}
+
+.adv-widget-title {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--adv-primary-dark);
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f1f5f9;
+    position: relative;
+}
+
+.adv-widget-title::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--adv-accent-orange);
+}
+
+.adv-widget-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.adv-widget-links li {
+    margin-bottom: 8px;
+}
+
+.adv-widget-links li a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 14px;
+    border-radius: 8px;
+    color: #475569;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: var(--header-transition);
+    background: #f8fafc;
+}
+
+.adv-widget-links li a:hover,
+.adv-widget-links li.active a {
+    background: var(--adv-primary);
+    color: #ffffff;
+    padding-left: 18px;
+}
+
+.adv-widget-links li a i {
+    font-size: 0.75rem;
+    opacity: 0.7;
+}
+
+/* Sidebar CTA / Contact Box */
+.adv-widget-cta {
+    background: linear-gradient(135deg, #031c3d 0%, #083B7A 100%);
+    color: #ffffff;
+    border-radius: 18px;
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: 0 12px 32px rgba(8, 59, 122, 0.2);
+}
+
+.adv-widget-cta .cta-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: rgba(243, 112, 33, 0.2);
+    color: var(--adv-accent-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto 16px;
+}
+
+.adv-widget-cta h4 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.adv-widget-cta p {
+    font-size: 0.875rem;
+    color: #cbd5e1;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.adv-widget-cta .btn-cta {
+    display: block;
+    width: 100%;
+    background: var(--adv-accent-orange);
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(243, 112, 33, 0.4);
+    transition: var(--header-transition);
+}
+
+.adv-widget-cta .btn-cta:hover {
+    background: var(--adv-accent-orange-hover);
+    transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   4. Structured Cards & Tables for Academics & Disclosure
+   -------------------------------------------------------------------------- */
+.adv-table-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+    margin: 28px 0;
+}
+
+.adv-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.90625rem;
+}
+
+.adv-table th {
+    background: #083B7A;
+    color: #ffffff;
+    padding: 14px 18px;
+    text-align: left;
+    font-weight: 700;
+}
+
+.adv-table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+}
+
+.adv-table tr:last-child td {
+    border-bottom: none;
+}
+
+.adv-table tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.adv-doc-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--adv-primary);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.adv-doc-link:hover {
+    color: var(--adv-accent-orange);
+}
+
+/* --------------------------------------------------------------------------
+   5. Responsive Rules
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+    .adv-inner-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .adv-sidebar {
+        position: static;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .adv-page-banner {
+        padding: 50px 0 40px;
+    }
+    
+    .adv-inner-layout {
+        padding: 50px 0;
+    }
+}

@@ -41,108 +41,94 @@ $currentPage = $activePage ?? '';
         <!-- Left Desktop Menu -->
         <ul class="adv-nav-menu adv-nav-left">
             <li class="adv-nav-item <?php echo ($currentPage === 'school') ? 'active' : ''; ?>">
-                <a href="#school" class="adv-nav-link">
+                <a href="about-us.php" class="adv-nav-link">
                     <span>Our School</span>
                     <i class="fa-solid fa-chevron-down chevron-icon"></i>
                 </a>
                 <ul class="adv-dropdown">
-                    <li class="adv-dropdown-item"><a href="#about-us" class="adv-dropdown-link"><i class="fa-solid fa-school"></i> About Advaita</a></li>
-                    <li class="adv-dropdown-item"><a href="#vision-mission" class="adv-dropdown-link"><i class="fa-solid fa-bullseye"></i> Vision & Mission</a></li>
-                    <li class="adv-dropdown-item"><a href="#leadership" class="adv-dropdown-link"><i class="fa-solid fa-user-tie"></i> Leadership & Management</a></li>
-                    <li class="adv-dropdown-item"><a href="#infrastructure" class="adv-dropdown-link"><i class="fa-solid fa-building"></i> Infrastructure & Campus</a></li>
-                    <li class="adv-dropdown-item"><a href="legacy.php" class="adv-dropdown-link"><i class="fa-solid fa-award"></i> 10-Year Legacy</a></li>
+                    <li class="adv-dropdown-item"><a href="about-us.php" class="adv-dropdown-link"><i class="fa-solid fa-school"></i> About Parshv</a></li>
+                    <li class="adv-dropdown-item"><a href="vision-mission.php" class="adv-dropdown-link"><i class="fa-solid fa-bullseye"></i> Vision & Mission</a></li>
+                    <li class="adv-dropdown-item"><a href="leadership.php" class="adv-dropdown-link"><i class="fa-solid fa-user-tie"></i> Director & Leadership</a></li>
+                    <li class="adv-dropdown-item"><a href="facilities.php" class="adv-dropdown-link"><i class="fa-solid fa-building"></i> Infrastructure & Campus</a></li>
+                    <li class="adv-dropdown-item"><a href="mandatory-disclosure.php" class="adv-dropdown-link"><i class="fa-solid fa-file-shield"></i> Mandatory Disclosure</a></li>
                 </ul>
             </li>
 
             <li class="adv-nav-item <?php echo ($currentPage === 'learning') ? 'active' : ''; ?>">
-                <a href="#learning" class="adv-nav-link">
+                <a href="academics.php" class="adv-nav-link">
                     <span>Learning</span>
                     <i class="fa-solid fa-chevron-down chevron-icon"></i>
                 </a>
                 <ul class="adv-dropdown">
-                    <li class="adv-dropdown-item"><a href="#curriculum" class="adv-dropdown-link"><i class="fa-solid fa-book-open"></i> CBSE Curriculum</a></li>
-                    <li class="adv-dropdown-item"><a href="#primary-wing" class="adv-dropdown-link"><i class="fa-solid fa-shapes"></i> Primary Wing</a></li>
-                    <li class="adv-dropdown-item"><a href="#middle-school" class="adv-dropdown-link"><i class="fa-solid fa-chalkboard-user"></i> Middle & High School</a></li>
-                    <li class="adv-dropdown-item"><a href="#senior-secondary" class="adv-dropdown-link"><i class="fa-solid fa-graduation-cap"></i> Senior Secondary (11th & 12th)</a></li>
-                    <li class="adv-dropdown-item"><a href="#pedagogy" class="adv-dropdown-link"><i class="fa-solid fa-lightbulb"></i> Innovative Pedagogy</a></li>
+                    <li class="adv-dropdown-item"><a href="academics.php" class="adv-dropdown-link"><i class="fa-solid fa-book-open"></i> CBSE Curriculum</a></li>
+                    <li class="adv-dropdown-item"><a href="academics.php" class="adv-dropdown-link"><i class="fa-solid fa-shapes"></i> Primary Wing</a></li>
+                    <li class="adv-dropdown-item"><a href="academics.php" class="adv-dropdown-link"><i class="fa-solid fa-chalkboard-user"></i> Middle & Secondary</a></li>
+                    <li class="adv-dropdown-item"><a href="academics.php" class="adv-dropdown-link"><i class="fa-solid fa-graduation-cap"></i> Senior Secondary (XI-XII)</a></li>
                 </ul>
             </li>
 
             <li class="adv-nav-item <?php echo ($currentPage === 'holistic') ? 'active' : ''; ?>">
-                <a href="#holistic" class="adv-nav-link">
+                <a href="activities.php" class="adv-nav-link">
                     <span>Holistic Experience</span>
                     <i class="fa-solid fa-chevron-down chevron-icon"></i>
                 </a>
                 <ul class="adv-dropdown">
-                    <li class="adv-dropdown-item"><a href="#sports" class="adv-dropdown-link"><i class="fa-solid fa-futbol"></i> Sports & Fitness</a></li>
-                    <li class="adv-dropdown-item"><a href="#arts" class="adv-dropdown-link"><i class="fa-solid fa-palette"></i> Arts, Music & Dance</a></li>
-                    <li class="adv-dropdown-item"><a href="#clubs" class="adv-dropdown-link"><i class="fa-solid fa-puzzle-piece"></i> Clubs & House System</a></li>
-                    <li class="adv-dropdown-item"><a href="#steam" class="adv-dropdown-link"><i class="fa-solid fa-robot"></i> STEAM & Innovation Lab</a></li>
+                    <li class="adv-dropdown-item"><a href="activities.php" class="adv-dropdown-link"><i class="fa-solid fa-futbol"></i> Sports & Fitness</a></li>
+                    <li class="adv-dropdown-item"><a href="activities.php" class="adv-dropdown-link"><i class="fa-solid fa-palette"></i> Arts, Music & Dance</a></li>
+                    <li class="adv-dropdown-item"><a href="activities.php" class="adv-dropdown-link"><i class="fa-solid fa-puzzle-piece"></i> Clubs & House System</a></li>
+                    <li class="adv-dropdown-item"><a href="facilities.php" class="adv-dropdown-link"><i class="fa-solid fa-robot"></i> STEAM & Innovation Lab</a></li>
                 </ul>
             </li>
 
             <li class="adv-nav-item <?php echo ($currentPage === 'admissions') ? 'active' : ''; ?>">
-                <a href="#admissions" class="adv-nav-link">
+                <a href="admissions.php" class="adv-nav-link">
                     <span>Admissions</span>
                     <i class="fa-solid fa-chevron-down chevron-icon"></i>
                 </a>
                 <ul class="adv-dropdown">
-                    <li class="adv-dropdown-item"><a href="#admission-process" class="adv-dropdown-link"><i class="fa-solid fa-clipboard-list"></i> Admission Process</a></li>
-                    <li class="adv-dropdown-item"><a href="#fee-structure" class="adv-dropdown-link"><i class="fa-solid fa-indian-rupee-sign"></i> Fee Structure</a></li>
-                    <li class="adv-dropdown-item"><a href="#enquiry-form" class="adv-dropdown-link"><i class="fa-solid fa-paper-plane"></i> Online Admission Enquiry</a></li>
+                    <li class="adv-dropdown-item"><a href="admissions.php" class="adv-dropdown-link"><i class="fa-solid fa-clipboard-list"></i> Admission Process</a></li>
+                    <li class="adv-dropdown-item"><a href="admissions.php#enquiry-form" class="adv-dropdown-link"><i class="fa-solid fa-paper-plane"></i> Online Admission Enquiry</a></li>
                 </ul>
             </li>
         </ul>
 
         <!-- Center Brand Crest -->
         <div class="adv-nav-brand-center">
-            <a href="index.php" class="adv-brand-badge" title="Advaita School of Excellence">
-                <img src="assets/images/logo-seal.png" alt="Advaita School of Excellence Seal" class="adv-brand-logo-img">
+            <a href="index.php" class="adv-brand-badge" title="Parshv International School">
+                <img src="assets/images/logo-seal.png" alt="Parshv International School Seal" class="adv-brand-logo-img">
             </a>
         </div>
 
         <!-- Right Desktop Menu -->
         <ul class="adv-nav-menu adv-nav-right">
             <li class="adv-nav-item <?php echo ($currentPage === 'gallery') ? 'active' : ''; ?>">
-                <a href="#gallery" class="adv-nav-link">
+                <a href="gallery.php" class="adv-nav-link">
                     <span>Gallery</span>
                 </a>
             </li>
 
             <li class="adv-nav-item <?php echo ($currentPage === 'achievements') ? 'active' : ''; ?>">
-                <a href="#achievements" class="adv-nav-link">
+                <a href="achievements.php" class="adv-nav-link">
                     <span>Achievements</span>
                 </a>
             </li>
 
-            <li class="adv-nav-item <?php echo ($currentPage === 'community') ? 'active' : ''; ?>">
-                <a href="#community" class="adv-nav-link">
-                    <span>Community Connect</span>
-                    <i class="fa-solid fa-chevron-down chevron-icon"></i>
-                </a>
-                <ul class="adv-dropdown">
-                    <li class="adv-dropdown-item"><a href="#parents-forum" class="adv-dropdown-link"><i class="fa-solid fa-users"></i> Parents Forum (PTA)</a></li>
-                    <li class="adv-dropdown-item"><a href="#alumni" class="adv-dropdown-link"><i class="fa-solid fa-user-graduate"></i> Alumni Network</a></li>
-                    <li class="adv-dropdown-item"><a href="#events" class="adv-dropdown-link"><i class="fa-solid fa-calendar-days"></i> Annual Events & Celebrations</a></li>
-                </ul>
-            </li>
-
-            <li class="adv-nav-item <?php echo ($currentPage === 'policies') ? 'active' : ''; ?>">
-                <a href="#policies" class="adv-nav-link">
-                    <span>Policies</span>
+            <li class="adv-nav-item <?php echo ($currentPage === 'mandatory') ? 'active' : ''; ?>">
+                <a href="mandatory-disclosure.php" class="adv-nav-link">
+                    <span>CBSE Corner</span>
                 </a>
             </li>
 
-            <li class="adv-nav-item <?php echo ($currentPage === 'blog') ? 'active' : ''; ?>">
-                <a href="#blog" class="adv-nav-link">
-                    <span>Blog</span>
+            <li class="adv-nav-item <?php echo ($currentPage === 'contact') ? 'active' : ''; ?>">
+                <a href="contact.php" class="adv-nav-link">
+                    <span>Contact Us</span>
                 </a>
             </li>
         </ul>
 
         <!-- Tablet / Mobile Actions -->
         <div class="adv-mobile-actions">
-            <a href="#admissions" class="adv-tablet-cta">
+            <a href="admissions.php" class="adv-tablet-cta">
                 <i class="fa-solid fa-paper-plane"></i>
                 <span>Admissions</span>
             </a>
@@ -159,7 +145,7 @@ $currentPage = $activePage ?? '';
     <!-- Drawer Header -->
     <div class="adv-mobile-header">
         <div class="adv-mobile-brand-box">
-            <img src="assets/images/logo.png" alt="Advaita School Logo" class="adv-brand-logo-img">
+            <img src="assets/images/logo.png" alt="Parshv International School Logo" class="adv-brand-logo-img">
         </div>
         <button type="button" class="adv-mobile-close" id="advDrawerCloseBtn" aria-label="Close Navigation Menu">
             <i class="fa-solid fa-xmark"></i>
@@ -189,11 +175,11 @@ $currentPage = $activePage ?? '';
                 <i class="fa-solid fa-chevron-down adv-mobile-chevron"></i>
             </a>
             <ul class="adv-mobile-submenu">
-                <li><a href="#about-us" class="adv-mobile-submenu-link"><i class="fa-solid fa-circle-info"></i> About Advaita</a></li>
-                <li><a href="#vision-mission" class="adv-mobile-submenu-link"><i class="fa-solid fa-bullseye"></i> Vision & Mission</a></li>
-                <li><a href="#leadership" class="adv-mobile-submenu-link"><i class="fa-solid fa-user-tie"></i> Leadership</a></li>
-                <li><a href="#infrastructure" class="adv-mobile-submenu-link"><i class="fa-solid fa-building"></i> Infrastructure</a></li>
-                <li><a href="legacy.php" class="adv-mobile-submenu-link"><i class="fa-solid fa-award"></i> 10-Year Legacy</a></li>
+                <li><a href="about-us.php" class="adv-mobile-submenu-link"><i class="fa-solid fa-circle-info"></i> About Parshv</a></li>
+                <li><a href="vision-mission.php" class="adv-mobile-submenu-link"><i class="fa-solid fa-bullseye"></i> Vision & Mission</a></li>
+                <li><a href="leadership.php" class="adv-mobile-submenu-link"><i class="fa-solid fa-user-tie"></i> Leadership</a></li>
+                <li><a href="facilities.php" class="adv-mobile-submenu-link"><i class="fa-solid fa-building"></i> Infrastructure</a></li>
+                <li><a href="mandatory-disclosure.php" class="adv-mobile-submenu-link"><i class="fa-solid fa-file-shield"></i> Mandatory Disclosure</a></li>
             </ul>
         </li>
 
@@ -206,11 +192,10 @@ $currentPage = $activePage ?? '';
                 <i class="fa-solid fa-chevron-down adv-mobile-chevron"></i>
             </a>
             <ul class="adv-mobile-submenu">
-                <li><a href="#curriculum" class="adv-mobile-submenu-link"><i class="fa-solid fa-book-bookmark"></i> CBSE Curriculum</a></li>
-                <li><a href="#primary-wing" class="adv-mobile-submenu-link"><i class="fa-solid fa-shapes"></i> Primary Wing</a></li>
-                <li><a href="#middle-school" class="adv-mobile-submenu-link"><i class="fa-solid fa-chalkboard-user"></i> Middle & High School</a></li>
-                <li><a href="#senior-secondary" class="adv-mobile-submenu-link"><i class="fa-solid fa-graduation-cap"></i> Senior Secondary</a></li>
-                <li><a href="#pedagogy" class="adv-mobile-submenu-link"><i class="fa-solid fa-lightbulb"></i> Innovative Pedagogy</a></li>
+                <li><a href="academics.php" class="adv-mobile-submenu-link"><i class="fa-solid fa-book-bookmark"></i> CBSE Curriculum</a></li>
+                <li><a href="academics.php" class="adv-mobile-submenu-link"><i class="fa-solid fa-shapes"></i> Primary Wing</a></li>
+                <li><a href="academics.php" class="adv-mobile-submenu-link"><i class="fa-solid fa-chalkboard-user"></i> Middle & High School</a></li>
+                <li><a href="academics.php" class="adv-mobile-submenu-link"><i class="fa-solid fa-graduation-cap"></i> Senior Secondary</a></li>
             </ul>
         </li>
 
@@ -223,10 +208,10 @@ $currentPage = $activePage ?? '';
                 <i class="fa-solid fa-chevron-down adv-mobile-chevron"></i>
             </a>
             <ul class="adv-mobile-submenu">
-                <li><a href="#sports" class="adv-mobile-submenu-link"><i class="fa-solid fa-futbol"></i> Sports & Fitness</a></li>
-                <li><a href="#arts" class="adv-mobile-submenu-link"><i class="fa-solid fa-paintbrush"></i> Arts, Music & Dance</a></li>
-                <li><a href="#clubs" class="adv-mobile-submenu-link"><i class="fa-solid fa-puzzle-piece"></i> Clubs & Houses</a></li>
-                <li><a href="#steam" class="adv-mobile-submenu-link"><i class="fa-solid fa-robot"></i> STEAM Lab</a></li>
+                <li><a href="activities.php" class="adv-mobile-submenu-link"><i class="fa-solid fa-futbol"></i> Sports & Fitness</a></li>
+                <li><a href="activities.php" class="adv-mobile-submenu-link"><i class="fa-solid fa-paintbrush"></i> Arts, Music & Dance</a></li>
+                <li><a href="activities.php" class="adv-mobile-submenu-link"><i class="fa-solid fa-puzzle-piece"></i> Clubs & Houses</a></li>
+                <li><a href="facilities.php" class="adv-mobile-submenu-link"><i class="fa-solid fa-robot"></i> STEAM Lab</a></li>
             </ul>
         </li>
 
@@ -239,14 +224,13 @@ $currentPage = $activePage ?? '';
                 <i class="fa-solid fa-chevron-down adv-mobile-chevron"></i>
             </a>
             <ul class="adv-mobile-submenu">
-                <li><a href="#admission-process" class="adv-mobile-submenu-link"><i class="fa-solid fa-clipboard-check"></i> Admission Process</a></li>
-                <li><a href="#fee-structure" class="adv-mobile-submenu-link"><i class="fa-solid fa-indian-rupee-sign"></i> Fee Structure</a></li>
-                <li><a href="#enquiry-form" class="adv-mobile-submenu-link"><i class="fa-solid fa-paper-plane"></i> Online Admission Enquiry</a></li>
+                <li><a href="admissions.php" class="adv-mobile-submenu-link"><i class="fa-solid fa-clipboard-check"></i> Admission Process</a></li>
+                <li><a href="admissions.php#enquiry-form" class="adv-mobile-submenu-link"><i class="fa-solid fa-paper-plane"></i> Online Admission Enquiry</a></li>
             </ul>
         </li>
 
         <li class="adv-mobile-item">
-            <a href="#gallery" class="adv-mobile-link">
+            <a href="gallery.php" class="adv-mobile-link">
                 <span class="adv-mobile-link-text">
                     <i class="fa-solid fa-images"></i>
                     <span>Gallery</span>
@@ -255,7 +239,7 @@ $currentPage = $activePage ?? '';
         </li>
 
         <li class="adv-mobile-item">
-            <a href="#achievements" class="adv-mobile-link">
+            <a href="achievements.php" class="adv-mobile-link">
                 <span class="adv-mobile-link-text">
                     <i class="fa-solid fa-trophy"></i>
                     <span>Achievements</span>
@@ -263,41 +247,17 @@ $currentPage = $activePage ?? '';
             </a>
         </li>
 
-        <li class="adv-mobile-item has-children">
-            <a href="#" class="adv-mobile-link" role="button" aria-expanded="false">
-                <span class="adv-mobile-link-text">
-                    <i class="fa-solid fa-users"></i>
-                    <span>Community Connect</span>
-                </span>
-                <i class="fa-solid fa-chevron-down adv-mobile-chevron"></i>
-            </a>
-            <ul class="adv-mobile-submenu">
-                <li><a href="#parents-forum" class="adv-mobile-submenu-link"><i class="fa-solid fa-comments"></i> Parents Forum (PTA)</a></li>
-                <li><a href="#alumni" class="adv-mobile-submenu-link"><i class="fa-solid fa-user-graduate"></i> Alumni Network</a></li>
-                <li><a href="#events" class="adv-mobile-submenu-link"><i class="fa-solid fa-calendar-days"></i> Annual Events</a></li>
-            </ul>
-        </li>
-
         <li class="adv-mobile-item">
-            <a href="#policies" class="adv-mobile-link">
+            <a href="mandatory-disclosure.php" class="adv-mobile-link">
                 <span class="adv-mobile-link-text">
                     <i class="fa-solid fa-file-shield"></i>
-                    <span>Policies</span>
+                    <span>Mandatory Disclosure</span>
                 </span>
             </a>
         </li>
 
         <li class="adv-mobile-item">
-            <a href="#blog" class="adv-mobile-link">
-                <span class="adv-mobile-link-text">
-                    <i class="fa-solid fa-newspaper"></i>
-                    <span>Blog</span>
-                </span>
-            </a>
-        </li>
-
-        <li class="adv-mobile-item">
-            <a href="#contact" class="adv-mobile-link">
+            <a href="contact.php" class="adv-mobile-link">
                 <span class="adv-mobile-link-text">
                     <i class="fa-solid fa-address-book"></i>
                     <span>Contact Us</span>
@@ -308,7 +268,7 @@ $currentPage = $activePage ?? '';
 
     <!-- Drawer Footer -->
     <div class="adv-mobile-footer">
-        <a href="#enquiry-form" class="adv-mobile-cta">
+        <a href="admissions.php" class="adv-mobile-cta">
             <i class="fa-solid fa-paper-plane"></i>
             <span>Apply for Admission</span>
         </a>
@@ -320,7 +280,7 @@ $currentPage = $activePage ?? '';
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
         <div class="adv-mobile-footer-meta">
-            Sanmati Sevabhavi Sanstha &copy; <?php echo date('Y'); ?>
+            Sanmati Education Network &copy; <?php echo date('Y'); ?>
         </div>
     </div>
 </aside>

@@ -1,9 +1,9 @@
 <?php
 /**
- * Home Page - Parshv International School
+ * Home Page - Advaita School of Excellence
  * Modern, Premium, Clean and Responsive School Website UI
  */
-$pageTitle = "Parshv International School, Jodhpur - Building Curious Minds, Shaping Confident Futures";
+$pageTitle = "Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)";
 $activePage = "index";
 
 require_once __DIR__ . '/includes/header.php';
@@ -14,7 +14,7 @@ require_once __DIR__ . '/includes/header.php';
     <!-- ====================================================================
          SECTION 1: HERO SECTION & SLIDER
          ==================================================================== -->
-    <section class="adv-hero-slider-section" aria-label="Parshv International School Hero Banner">
+    <section class="adv-hero-slider-section" aria-label="Advaita School of Excellence Hero Banner">
         <div class="adv-slider-container">
             <div class="adv-slider-wrapper">
 
@@ -30,13 +30,13 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="adv-slider-polaroid left-card" title="Student Achievements">
                         <div class="adv-polaroid-tape" aria-hidden="true"></div>
                         <div class="adv-polaroid-image-wrap">
-                            <img src="assets/images/card-student-1.jpg" alt="Proud Parshvians - Student Achievements" loading="eager">
+                            <img src="assets/images/card-student-1.jpg" alt="Proud Advaitans - Student Achievements" loading="eager">
                         </div>
                         <div class="adv-polaroid-caption">
                             <span class="adv-polaroid-tag">
                                 <span class="badge-dot"></span> LIVE ON CAMPUS
                             </span>
-                            <h4 class="adv-polaroid-title">Proud Parshvians</h4>
+                            <h4 class="adv-polaroid-title">Proud Advaitans</h4>
                             <p class="adv-polaroid-sub">Where every win is celebrated</p>
                         </div>
                     </div>
@@ -819,15 +819,15 @@ require_once __DIR__ . '/includes/header.php';
                             "Every child is unique. Our responsibility is to provide the environment, opportunities and guidance that help every student discover their strengths and build their future with confidence."
                         </blockquote>
                         <p style="font-size: 0.9375rem; color: #cbd5e1; line-height: 1.65; margin-bottom: 24px;">
-                            At Parshv International School, our vision transcends traditional textbooks. We nurture principled character, emotional resilience, and visionary leadership to prepare students not just for examinations, but for life.
+                            At Advaita School of Excellence, our vision transcends traditional textbooks. We nurture principled character, emotional resilience, and visionary leadership to prepare students not just for examinations, but for life.
                         </p>
 
                         <div class="parshv-director-author">
                             <div>
                                 <h4 class="parshv-director-name">Narendra Jain</h4>
-                                <span class="parshv-director-role">Director, Parshv International School, Jodhpur</span>
+                                <span class="parshv-director-role">Director, Advaita School of Excellence, Parbhani</span>
                             </div>
-                            <a href="#admission-cta" class="parshv-btn-primary" style="padding: 10px 22px; font-size: 0.875rem;">
+                            <a href="leadership.php" class="parshv-btn-primary" style="padding: 10px 22px; font-size: 0.875rem;">
                                 <span>Read Full Message</span>
                                 <i class="fa-solid fa-arrow-right"></i>
                             </a>
