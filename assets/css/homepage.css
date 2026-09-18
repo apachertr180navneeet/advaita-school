@@ -1217,6 +1217,84 @@
 }
 
 /* --------------------------------------------------------------------------
+   Lightbox Modal
+   -------------------------------------------------------------------------- */
+.parshv-lightbox-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.parshv-lightbox-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.parshv-lightbox-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(3, 28, 61, 0.92);
+    backdrop-filter: blur(8px);
+}
+
+.parshv-lightbox-content {
+    position: relative;
+    z-index: 2;
+    max-width: 90vw;
+    max-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.parshv-lightbox-img {
+    max-width: 100%;
+    max-height: 75vh;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    object-fit: contain;
+}
+
+.parshv-lightbox-caption {
+    color: #ffffff;
+    margin-top: 14px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.parshv-lightbox-close {
+    position: absolute;
+    top: -44px;
+    right: 0;
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 2.2rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.parshv-lightbox-close:hover {
+    color: var(--adv-accent-orange);
+    transform: scale(1.15);
+}
+
+/* --------------------------------------------------------------------------
    Responsive Breakpoints
    -------------------------------------------------------------------------- */
 @media (max-width: 1200px) {
@@ -1327,82 +1405,3 @@
         justify-content: center;
     }
 }
-
-/* --------------------------------------------------------------------------
-   Lightbox Modal
-   -------------------------------------------------------------------------- */
-.parshv-lightbox-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 99999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-.parshv-lightbox-modal.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-.parshv-lightbox-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(3, 28, 61, 0.92);
-    backdrop-filter: blur(8px);
-}
-
-.parshv-lightbox-content {
-    position: relative;
-    z-index: 2;
-    max-width: 90vw;
-    max-height: 85vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.parshv-lightbox-img {
-    max-width: 100%;
-    max-height: 75vh;
-    border-radius: 12px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
-    border: 4px solid rgba(255, 255, 255, 0.2);
-    object-fit: contain;
-}
-
-.parshv-lightbox-caption {
-    color: #ffffff;
-    margin-top: 14px;
-    font-size: 1.1rem;
-    font-weight: 700;
-    text-align: center;
-}
-
-.parshv-lightbox-close {
-    position: absolute;
-    top: -44px;
-    right: 0;
-    background: none;
-    border: none;
-    color: #ffffff;
-    font-size: 2.2rem;
-    cursor: pointer;
-    line-height: 1;
-    transition: transform 0.2s ease, color 0.2s ease;
-}
-
-.parshv-lightbox-close:hover {
-    color: var(--adv-accent-orange);
-    transform: scale(1.15);
-}
-
