@@ -106,4 +106,80 @@ document.addEventListener('DOMContentLoaded', () => {
             closeLightbox();
         }
     });
+
+    // --------------------------------------------------------------------------
+    // 3. Advaita FAQ Accordion Interactive Toggle
+    // --------------------------------------------------------------------------
+    const faqItems = document.querySelectorAll('.adv-faq-item');
+    if (faqItems.length > 0) {
+        faqItems.forEach(item => {
+            const btn = item.querySelector('.adv-faq-btn');
+            const answer = item.querySelector('.adv-faq-answer');
+            const icon = item.querySelector('.adv-faq-icon i');
+
+            if (btn && answer) {
+                btn.addEventListener('click', () => {
+                    const isOpen = item.classList.contains('active');
+
+                    // Close all accordion items
+                    faqItems.forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                        const otherBtn = otherItem.querySelector('.adv-faq-btn');
+                        const otherAns = otherItem.querySelector('.adv-faq-answer');
+                        const otherIcon = otherItem.querySelector('.adv-faq-icon i');
+
+                        if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+                        if (otherAns) otherAns.style.display = 'none';
+                        if (otherIcon) {
+                            otherIcon.className = 'fa-solid fa-plus';
+                        }
+                    });
+
+                    // If current item was not open, open it
+                    if (!isOpen) {
+                        item.classList.add('active');
+                        btn.setAttribute('aria-expanded', 'true');
+                        answer.style.display = 'block';
+                        if (icon) {
+                            icon.className = 'fa-solid fa-minus';
+                        }
+                    }
+                });
+            }
+        });
+    }
+
+    // --------------------------------------------------------------------------
+    // 4. Advaita On-Load Admission Popup Modal
+    // --------------------------------------------------------------------------
+    const onloadModal = document.getElementById('advOnloadModal');
+    const onloadClose = document.getElementById('advOnloadClose');
+    const onloadBackdrop = document.getElementById('advOnloadBackdrop');
+
+    if (onloadModal) {
+        // Automatically display popup on page load after a smooth 900ms delay
+        setTimeout(() => {
+            onloadModal.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }, 900);
+
+        function closeOnloadModal() {
+            onloadModal.classList.remove('show');
+            document.body.style.overflow = '';
+        }
+
+        if (onloadClose) {
+            onloadClose.addEventListener('click', closeOnloadModal);
+        }
+
+        if (onloadBackdrop) {
+            onloadBackdrop.addEventListener('click', closeOnloadModal);
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && onloadModal.classList.contains('show')) {
+                closeOnloadModal();
+            }
+        });
+    }
 });
