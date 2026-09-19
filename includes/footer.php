@@ -150,10 +150,19 @@
                 <!-- Column 5: Google Map Card -->
                 <div class="adv-footer-map-col">
                     <div class="adv-footer-map-card">
-                        <div class="adv-footer-map-img-wrap">
-                            <img src="assets/images/footer-map-preview.jpg" alt="Advaita School of Excellence Parbhani Campus on Google Maps" class="adv-footer-map-img">
+                        <div class="adv-footer-map-iframe-wrap">
+                            <iframe 
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.123!2d76.7749!3d19.2634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd0187b8a0e71b7%3A0x9c3e2bb2c2bb7e0b!2sAdvaita%20School%20of%20Excellence!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Advaita School of Excellence Parbhani on Google Maps">
+                            </iframe>
                         </div>
-                        <a href="https://maps.google.com/?q=Advaita+School+of+Excellence+Parbhani" target="_blank" rel="noopener noreferrer" class="adv-footer-map-btn">
+                        <a href="https://www.google.com/maps/place/Advaita+School+of+Excellence/@19.2634,76.7749,17z/" target="_blank" rel="noopener noreferrer" class="adv-footer-map-btn">
                             <span>VIEW ON GOOGLE MAPS</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
