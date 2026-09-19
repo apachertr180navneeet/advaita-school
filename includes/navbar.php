@@ -10,18 +10,23 @@ $currentPage = $activePage ?? '';
 
 <!-- Top Utility & Information Bar -->
 <div class="adv-topbar">
-    <div class="container">
+    <div class="adv-topbar-container">
         <!-- Left Side Tagline / Affiliation -->
         <div class="adv-topbar-left">
+            <i class="fa-solid fa-location-dot adv-topbar-pin"></i>
             <span>Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)</span>
+            <span class="adv-topbar-sep">|</span>
         </div>
 
         <!-- Right Side Links & Socials -->
         <div class="adv-topbar-right">
             <ul class="adv-topbar-links">
                 <li><a href="about-us.php">Sanmati Sevabhavi Sanstha</a></li>
+                <li class="pipe">|</li>
                 <li><a href="contact.php">Work at Advaita</a></li>
+                <li class="pipe">|</li>
                 <li><a href="contact.php">Contact</a></li>
+                <li class="pipe">|</li>
             </ul>
 
             <div class="adv-topbar-socials">
@@ -37,104 +42,147 @@ $currentPage = $activePage ?? '';
 
 <!-- Main Navigation Header -->
 <header class="adv-main-header">
-    <div class="adv-nav-container">
-        <!-- Left Desktop Menu -->
-        <ul class="adv-nav-menu adv-nav-left">
-            <li class="adv-nav-item <?php echo ($currentPage === 'school') ? 'active' : ''; ?>">
-                <a href="about-us.php" class="adv-nav-link">
-                    <span>Our School</span>
-                    <i class="fa-solid fa-chevron-down chevron-icon"></i>
-                </a>
-                <ul class="adv-dropdown">
-                    <li class="adv-dropdown-item"><a href="about-us.php" class="adv-dropdown-link"><i class="fa-solid fa-school"></i> About Advaita</a></li>
-                    <li class="adv-dropdown-item"><a href="vision-mission.php" class="adv-dropdown-link"><i class="fa-solid fa-bullseye"></i> Vision & Mission</a></li>
-                    <li class="adv-dropdown-item"><a href="leadership.php" class="adv-dropdown-link"><i class="fa-solid fa-user-tie"></i> Director & Leadership</a></li>
-                    <li class="adv-dropdown-item"><a href="facilities.php" class="adv-dropdown-link"><i class="fa-solid fa-building"></i> Infrastructure & Campus</a></li>
-                    <li class="adv-dropdown-item"><a href="mandatory-disclosure.php" class="adv-dropdown-link"><i class="fa-solid fa-file-shield"></i> Mandatory Disclosure</a></li>
-                </ul>
-            </li>
+    <div class="adv-header-fullwidth">
+        <!-- Decorative Orange Swooshes (Left Corner, Center Shoulders, Right Corner) -->
+        <div class="adv-header-curve-decor" aria-hidden="true">
+            <!-- Far Left Orange Swoosh / Wing -->
+            <svg class="adv-svg-corner adv-svg-corner-left" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M0 0C0 0 25 10 45 35C60 53 70 70 70 70H0V0Z" fill="#F37021"/>
+            </svg>
 
-            <li class="adv-nav-item <?php echo ($currentPage === 'learning') ? 'active' : ''; ?>">
-                <a href="academics.php" class="adv-nav-link">
-                    <span>Learning</span>
-                    <i class="fa-solid fa-chevron-down chevron-icon"></i>
-                </a>
-                <ul class="adv-dropdown">
-                    <li class="adv-dropdown-item"><a href="academics.php" class="adv-dropdown-link"><i class="fa-solid fa-book-open"></i> CBSE Curriculum</a></li>
-                    <li class="adv-dropdown-item"><a href="academics.php" class="adv-dropdown-link"><i class="fa-solid fa-shapes"></i> Primary Wing</a></li>
-                    <li class="adv-dropdown-item"><a href="academics.php" class="adv-dropdown-link"><i class="fa-solid fa-chalkboard-user"></i> Middle & Secondary</a></li>
-                    <li class="adv-dropdown-item"><a href="academics.php" class="adv-dropdown-link"><i class="fa-solid fa-graduation-cap"></i> Senior Secondary (XI-XII)</a></li>
-                </ul>
-            </li>
+            <!-- Center Left Shoulder Arc -->
+            <svg class="adv-svg-shoulder adv-svg-shoulder-left" viewBox="0 0 90 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M90 0C65 0 40 10 15 28L0 40H90V0Z" fill="#F37021"/>
+                <path d="M90 6C68 6 46 16 23 32L12 40H90V6Z" fill="#FFFFFF"/>
+            </svg>
 
-            <li class="adv-nav-item <?php echo ($currentPage === 'holistic') ? 'active' : ''; ?>">
-                <a href="activities.php" class="adv-nav-link">
-                    <span>Holistic Experience</span>
-                    <i class="fa-solid fa-chevron-down chevron-icon"></i>
-                </a>
-                <ul class="adv-dropdown">
-                    <li class="adv-dropdown-item"><a href="activities.php" class="adv-dropdown-link"><i class="fa-solid fa-futbol"></i> Sports & Fitness</a></li>
-                    <li class="adv-dropdown-item"><a href="activities.php" class="adv-dropdown-link"><i class="fa-solid fa-palette"></i> Arts, Music & Dance</a></li>
-                    <li class="adv-dropdown-item"><a href="activities.php" class="adv-dropdown-link"><i class="fa-solid fa-puzzle-piece"></i> Clubs & House System</a></li>
-                    <li class="adv-dropdown-item"><a href="facilities.php" class="adv-dropdown-link"><i class="fa-solid fa-robot"></i> STEAM & Innovation Lab</a></li>
-                </ul>
-            </li>
+            <!-- Center Right Shoulder Arc -->
+            <svg class="adv-svg-shoulder adv-svg-shoulder-right" viewBox="0 0 90 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 0C25 0 50 10 75 28L90 40H0V0Z" fill="#F37021"/>
+                <path d="M0 6C22 6 44 16 67 32L78 40H0V6Z" fill="#FFFFFF"/>
+            </svg>
 
-            <li class="adv-nav-item <?php echo ($currentPage === 'admissions') ? 'active' : ''; ?>">
-                <a href="admissions.php" class="adv-nav-link">
-                    <span>Admissions</span>
-                    <i class="fa-solid fa-chevron-down chevron-icon"></i>
-                </a>
-                <ul class="adv-dropdown">
-                    <li class="adv-dropdown-item"><a href="admissions.php" class="adv-dropdown-link"><i class="fa-solid fa-clipboard-list"></i> Admission Process</a></li>
-                    <li class="adv-dropdown-item"><a href="admissions.php#enquiry-form" class="adv-dropdown-link"><i class="fa-solid fa-paper-plane"></i> Online Admission Enquiry</a></li>
-                </ul>
-            </li>
-        </ul>
-
-        <!-- Center Brand Crest -->
-        <div class="adv-nav-brand-center">
-            <a href="index.php" class="adv-brand-badge" title="Advaita School of Excellence">
-                <img src="assets/images/logo-seal.png" alt="Advaita School of Excellence Seal" class="adv-brand-logo-img">
-            </a>
+            <!-- Far Right Orange Swoosh / Wing -->
+            <svg class="adv-svg-corner adv-svg-corner-right" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M70 0C70 0 45 10 25 35C10 53 0 70 0 70H70V0Z" fill="#F37021"/>
+            </svg>
         </div>
 
-        <!-- Right Desktop Menu -->
-        <ul class="adv-nav-menu adv-nav-right">
-            <li class="adv-nav-item <?php echo ($currentPage === 'gallery') ? 'active' : ''; ?>">
-                <a href="gallery.php" class="adv-nav-link">
-                    <span>Gallery</span>
+        <div class="adv-nav-ribbon">
+            <!-- Left Desktop Menu -->
+            <div class="adv-nav-section adv-nav-section-left">
+                <!-- Home Pill Button -->
+                <a href="index.php" class="adv-nav-home-btn <?php echo ($currentPage === '' || $currentPage === 'home') ? 'active' : ''; ?>" title="Home">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
                 </a>
-            </li>
 
-            <li class="adv-nav-item <?php echo ($currentPage === 'achievements') ? 'active' : ''; ?>">
-                <a href="achievements.php" class="adv-nav-link">
-                    <span>Achievements</span>
+                <ul class="adv-nav-menu adv-nav-menu-left">
+                    <li class="adv-nav-item <?php echo ($currentPage === 'school') ? 'active' : ''; ?>">
+                        <a href="about-us.php" class="adv-nav-link">
+                            <span>Our School</span>
+                            <i class="fa-solid fa-chevron-down chevron-icon"></i>
+                        </a>
+                        <ul class="adv-dropdown">
+                            <li class="adv-dropdown-item"><a href="about-us.php" class="adv-dropdown-link"><i class="fa-solid fa-school"></i> About Advaita</a></li>
+                            <li class="adv-dropdown-item"><a href="vision-mission.php" class="adv-dropdown-link"><i class="fa-solid fa-bullseye"></i> Vision & Mission</a></li>
+                            <li class="adv-dropdown-item"><a href="leadership.php" class="adv-dropdown-link"><i class="fa-solid fa-user-tie"></i> Director & Leadership</a></li>
+                            <li class="adv-dropdown-item"><a href="facilities.php" class="adv-dropdown-link"><i class="fa-solid fa-building"></i> Infrastructure & Campus</a></li>
+                            <li class="adv-dropdown-item"><a href="mandatory-disclosure.php" class="adv-dropdown-link"><i class="fa-solid fa-file-shield"></i> Mandatory Disclosure</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="adv-nav-item <?php echo ($currentPage === 'learning') ? 'active' : ''; ?>">
+                        <a href="academics.php" class="adv-nav-link">
+                            <span>Learning</span>
+                            <i class="fa-solid fa-chevron-down chevron-icon"></i>
+                        </a>
+                        <ul class="adv-dropdown">
+                            <li class="adv-dropdown-item"><a href="academics.php" class="adv-dropdown-link"><i class="fa-solid fa-book-open"></i> CBSE Curriculum</a></li>
+                            <li class="adv-dropdown-item"><a href="academics.php" class="adv-dropdown-link"><i class="fa-solid fa-shapes"></i> Primary Wing</a></li>
+                            <li class="adv-dropdown-item"><a href="academics.php" class="adv-dropdown-link"><i class="fa-solid fa-chalkboard-user"></i> Middle & Secondary</a></li>
+                            <li class="adv-dropdown-item"><a href="academics.php" class="adv-dropdown-link"><i class="fa-solid fa-graduation-cap"></i> Senior Secondary (XI-XII)</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="adv-nav-item <?php echo ($currentPage === 'holistic') ? 'active' : ''; ?>">
+                        <a href="activities.php" class="adv-nav-link">
+                            <span>Holistic Experience</span>
+                            <i class="fa-solid fa-chevron-down chevron-icon"></i>
+                        </a>
+                        <ul class="adv-dropdown">
+                            <li class="adv-dropdown-item"><a href="activities.php" class="adv-dropdown-link"><i class="fa-solid fa-futbol"></i> Sports & Fitness</a></li>
+                            <li class="adv-dropdown-item"><a href="activities.php" class="adv-dropdown-link"><i class="fa-solid fa-palette"></i> Arts, Music & Dance</a></li>
+                            <li class="adv-dropdown-item"><a href="activities.php" class="adv-dropdown-link"><i class="fa-solid fa-puzzle-piece"></i> Clubs & House System</a></li>
+                            <li class="adv-dropdown-item"><a href="facilities.php" class="adv-dropdown-link"><i class="fa-solid fa-robot"></i> STEAM & Innovation Lab</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="adv-nav-item <?php echo ($currentPage === 'admissions') ? 'active' : ''; ?>">
+                        <a href="admissions.php" class="adv-nav-link">
+                            <span>Admissions</span>
+                            <i class="fa-solid fa-chevron-down chevron-icon"></i>
+                        </a>
+                        <ul class="adv-dropdown">
+                            <li class="adv-dropdown-item"><a href="admissions.php" class="adv-dropdown-link"><i class="fa-solid fa-clipboard-list"></i> Admission Process</a></li>
+                            <li class="adv-dropdown-item"><a href="admissions.php#enquiry-form" class="adv-dropdown-link"><i class="fa-solid fa-paper-plane"></i> Online Admission Enquiry</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Center Brand Crest Pod -->
+            <div class="adv-nav-brand-pod">
+                <a href="index.php" class="adv-brand-badge-pod" title="Advaita School of Excellence">
+                    <img src="assets/images/logo-cropped.png" alt="Advaita School of Excellence" class="adv-brand-logo-pod-img">
                 </a>
-            </li>
+            </div>
 
-            <li class="adv-nav-item <?php echo ($currentPage === 'mandatory') ? 'active' : ''; ?>">
-                <a href="mandatory-disclosure.php" class="adv-nav-link">
-                    <span>CBSE Corner</span>
+            <!-- Right Desktop Menu -->
+            <div class="adv-nav-section adv-nav-section-right">
+                <ul class="adv-nav-menu adv-nav-menu-right">
+                    <li class="adv-nav-item <?php echo ($currentPage === 'gallery') ? 'active' : ''; ?>">
+                        <a href="gallery.php" class="adv-nav-link">
+                            <span>Gallery</span>
+                        </a>
+                    </li>
+
+                    <li class="adv-nav-item <?php echo ($currentPage === 'achievements') ? 'active' : ''; ?>">
+                        <a href="achievements.php" class="adv-nav-link">
+                            <span>Achievements</span>
+                        </a>
+                    </li>
+
+                    <li class="adv-nav-item <?php echo ($currentPage === 'mandatory') ? 'active' : ''; ?>">
+                        <a href="mandatory-disclosure.php" class="adv-nav-link">
+                            <span>CBSE Corner</span>
+                        </a>
+                    </li>
+
+                    <li class="adv-nav-item <?php echo ($currentPage === 'contact') ? 'active' : ''; ?>">
+                        <a href="contact.php" class="adv-nav-link">
+                            <span>Contact Us</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Apply for Admission Pill CTA Button -->
+                <a href="admissions.php" class="adv-nav-apply-btn">
+                    <span>Apply for Admission</span>
+                    <i class="fa-solid fa-arrow-right"></i>
                 </a>
-            </li>
+            </div>
 
-            <li class="adv-nav-item <?php echo ($currentPage === 'contact') ? 'active' : ''; ?>">
-                <a href="contact.php" class="adv-nav-link">
-                    <span>Contact Us</span>
+            <!-- Tablet / Mobile Actions -->
+            <div class="adv-mobile-actions">
+                <a href="admissions.php" class="adv-tablet-cta">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>Apply</span>
                 </a>
-            </li>
-        </ul>
-
-        <!-- Tablet / Mobile Actions -->
-        <div class="adv-mobile-actions">
-            <a href="admissions.php" class="adv-tablet-cta">
-                <i class="fa-solid fa-paper-plane"></i>
-                <span>Admissions</span>
-            </a>
-            <button type="button" class="adv-mobile-nav-toggle" aria-label="Open Navigation Menu" id="advMenuToggleBtn">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+                <button type="button" class="adv-mobile-nav-toggle" aria-label="Open Navigation Menu" id="advMenuToggleBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
         </div>
     </div>
 </header>

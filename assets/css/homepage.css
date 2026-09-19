@@ -188,7 +188,7 @@
 .parshv-stats-section {
     position: relative;
     z-index: 10;
-    margin-top: -48px;
+    margin-top: 32px;
     padding: 0 24px;
 }
 
@@ -197,7 +197,7 @@
     grid-template-columns: repeat(5, 1fr);
     background: #ffffff;
     border-radius: 20px;
-    box-shadow: 0 16px 40px rgba(8, 59, 122, 0.12);
+    box-shadow: 0 16px 40px rgba(8, 59, 122, 0.1);
     border: 1px solid rgba(226, 232, 240, 0.8);
     overflow: hidden;
 }
@@ -205,8 +205,8 @@
 .parshv-stat-card {
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding: 28px 24px;
+    gap: 14px;
+    padding: 24px 20px;
     border-right: 1px solid #f1f5f9;
     transition: var(--header-transition);
 }
@@ -221,15 +221,15 @@
 }
 
 .parshv-stat-icon-wrap {
-    width: 54px;
-    height: 54px;
-    border-radius: 14px;
-    background: rgba(243, 112, 33, 0.1);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(243, 112, 33, 0.12);
     color: var(--adv-accent-orange);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1.35rem;
     flex-shrink: 0;
     transition: var(--header-transition);
 }
@@ -245,10 +245,19 @@
     flex-direction: column;
 }
 
+.parshv-stat-sub-badge {
+    font-size: 0.6875rem;
+    font-weight: 700;
+    color: var(--adv-accent-orange);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
 .parshv-stat-num {
-    font-size: 1.85rem;
+    font-size: 1.75rem;
     font-weight: 800;
-    color: var(--adv-primary-dark);
+    color: var(--adv-primary);
     line-height: 1.1;
     font-family: var(--adv-font-main);
 }

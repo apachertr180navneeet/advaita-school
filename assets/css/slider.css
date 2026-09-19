@@ -7,13 +7,16 @@
 /* --------------------------------------------------------------------------
    Slider Main Container
    -------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------
+   Slider Main Container
+   -------------------------------------------------------------------------- */
 .adv-hero-slider-section {
     position: relative;
     width: 100%;
-    min-height: 560px;
-    height: 78vh;
-    max-height: 820px;
-    background-color: #031c3d;
+    aspect-ratio: 1024 / 586;
+    height: auto;
+    max-height: 860px;
+    background-color: #f8fafc;
     overflow: hidden;
     user-select: none;
 }
@@ -31,7 +34,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   Slide Item & Background
+   Slide Item & Banner Wrapper
    -------------------------------------------------------------------------- */
 .adv-slide {
     position: absolute;
@@ -51,108 +54,136 @@
     z-index: 2;
 }
 
-.adv-slide-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    transform: scale(1.04);
-    transition: transform 7s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.adv-slide.active .adv-slide-bg {
-    transform: scale(1);
-}
-
-/* Overlays: Top and Bottom Vignette Gradients */
-.adv-slide-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-        180deg,
-        rgba(3, 28, 61, 0.45) 0%,
-        rgba(3, 28, 61, 0.15) 30%,
-        rgba(3, 28, 61, 0.35) 60%,
-        rgba(3, 28, 61, 0.92) 100%
-    );
-    pointer-events: none;
-    z-index: 2;
-}
-
-.adv-slide-vignette {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle at center, transparent 40%, rgba(3, 28, 61, 0.4) 100%);
-    pointer-events: none;
-    z-index: 2;
-}
-
-/* --------------------------------------------------------------------------
-   Slide Content Container
-   -------------------------------------------------------------------------- */
-.adv-slide-content {
+.adv-slide-banner-wrap {
     position: relative;
-    z-index: 5;
+    width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 30px 24px 20px;
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
-/* Top Space */
-.adv-slide-top-spacer {
-    height: 10px;
-}
-
-/* --------------------------------------------------------------------------
-   Center Hero Main Area
-   -------------------------------------------------------------------------- */
-.adv-slide-center-block {
-    text-align: center;
-    max-width: 860px;
-    margin: 0 auto;
-    padding: 0 20px;
-    transform: translateY(20px);
-    opacity: 0;
-    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
-}
-
-.adv-slide.active .adv-slide-center-block {
-    transform: translateY(0);
-    opacity: 1;
-}
-
-/* Badge at top of Center area */
-.adv-hero-pill-tag {
-    display: inline-flex;
     align-items: center;
-    gap: 8px;
-    background: rgba(8, 59, 122, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    padding: 6px 18px;
-    border-radius: 50px;
-    font-size: 0.8125rem;
-    font-weight: 700;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.adv-slide-banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+/* Transparent Clickable Overlay on Slide 1 */
+.adv-banner-clickable-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+.adv-transparent-hotspot {
+    pointer-events: auto;
+    position: absolute;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.adv-transparent-hotspot:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+.adv-hotspot-apply-link {
+    bottom: 22%;
+    left: 3.8%;
+    width: 17%;
+    height: 8%;
+}
+
+.adv-hotspot-explore-link {
+    bottom: 22%;
+    left: 21.5%;
+    width: 16%;
+    height: 8%;
+}
+
+/* Slide 2 Rich Content Overlays */
+.adv-slide-overlay-rich {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(3, 28, 61, 0.88) 0%, rgba(3, 28, 61, 0.65) 50%, rgba(3, 28, 61, 0.2) 100%);
+    display: flex;
+    align-items: center;
+    padding: 0 clamp(20px, 6vw, 80px);
+    z-index: 5;
+}
+
+.adv-slide-content-rich {
+    max-width: 650px;
+    color: #ffffff;
+}
+
+.adv-slide-title-rich {
+    font-size: clamp(1.8rem, 3.5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.adv-slide-title-rich .highlight {
     color: var(--adv-accent-gold);
-    letter-spacing: 0.75px;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+}
+
+.adv-slide-lead-rich {
+    font-size: clamp(0.95rem, 1.3vw, 1.15rem);
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+    margin-bottom: 22px;
+}
+
+.adv-slider-actions-rich {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Mobile Quick CTA Bar */
+.adv-mobile-hero-cta-bar {
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 12px 16px;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.adv-mobile-hero-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 0.84375rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    transition: var(--header-transition);
+}
+
+.adv-mobile-hero-btn.primary {
+    background: linear-gradient(135deg, #f58220 0%, var(--adv-accent-orange) 100%);
+    color: #ffffff;
+    box-shadow: 0 3px 10px rgba(243, 112, 33, 0.3);
+}
+
+.adv-mobile-hero-btn.secondary {
+    background: #f1f5f9;
+    color: var(--adv-primary);
+    border: 1px solid #cbd5e1;
 }
 
 .adv-hero-pill-tag .tag-dot {
@@ -617,134 +648,112 @@
 /* --------------------------------------------------------------------------
    Responsive Rules
    -------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------
+   Responsive Rules
+   -------------------------------------------------------------------------- */
 @media (max-width: 1200px) {
-    .adv-slider-polaroid {
-        width: 190px;
-        padding: 8px 8px 12px;
+    .adv-banner-overlay-actions {
+        bottom: 16%;
+        left: 4%;
     }
     
-    .adv-polaroid-image-wrap {
-        height: 130px;
-    }
-    
-    .adv-slider-polaroid.left-card {
-        left: 2%;
-        top: 10%;
-    }
-    
-    .adv-slider-polaroid.right-card {
-        right: 2%;
-        top: 10%;
+    .adv-hotspot-btn {
+        padding: 9px 18px;
+        font-size: 0.84375rem;
     }
 }
 
 @media (max-width: 991px) {
     .adv-hero-slider-section {
         height: auto;
-        min-height: 520px;
+        aspect-ratio: 1024 / 586;
+        min-height: unset;
+        max-height: unset;
     }
     
-    .adv-slide-content {
-        padding: 40px 16px 20px;
+    .adv-banner-overlay-actions {
+        display: none; /* Let mobile CTA bar provide clear tap targets */
     }
-
-    /* On tablet, reduce polaroid card size or float them gently without overlapping center */
-    .adv-slider-polaroid {
-        width: 160px;
-        opacity: 0.95;
+    
+    .adv-mobile-hero-cta-bar {
+        display: grid;
     }
-
-    .adv-polaroid-image-wrap {
-        height: 110px;
+    
+    .adv-slider-arrow {
+        width: 38px;
+        height: 38px;
+        font-size: 0.9rem;
     }
-
-    .adv-polaroid-title {
-        font-size: 0.85rem;
+    
+    .adv-slider-arrow.prev-arrow {
+        left: 10px;
     }
-
-    .adv-polaroid-sub {
-        font-size: 0.7rem;
+    
+    .adv-slider-arrow.next-arrow {
+        right: 10px;
     }
-
-    .adv-slider-polaroid.left-card {
-        left: 1%;
-        top: 8%;
-    }
-
-    .adv-slider-polaroid.right-card {
-        right: 1%;
-        top: 8%;
+    
+    .adv-slider-dots {
+        bottom: 12px;
     }
 }
 
 @media (max-width: 768px) {
     .adv-hero-slider-section {
-        min-height: 580px;
         height: auto;
+        aspect-ratio: 1024 / 586;
+        min-height: unset;
     }
-
-    .adv-slide-center-block {
-        padding: 20px 10px 10px;
-    }
-
-    /* On mobile, place polaroid cards in a neat responsive layout or subtler position */
-    .adv-slider-polaroid {
-        display: none; /* Hide floating side cards on small mobile screens to keep center UI focused and clean */
-    }
-
-    .adv-slider-arrow {
-        width: 36px;
-        height: 36px;
-        font-size: 0.85rem;
-    }
-
-    .adv-slider-arrow.prev-arrow {
-        left: 10px;
-    }
-
-    .adv-slider-arrow.next-arrow {
-        right: 10px;
-    }
-
-    .adv-slider-stats-list {
-        gap: 12px 18px;
-    }
-
-    .adv-slider-stat-sep {
+    
+    .adv-banner-overlay-actions {
         display: none;
     }
-
-    .adv-slider-stat-node {
+    
+    .adv-mobile-hero-cta-bar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+        padding: 10px 12px;
+    }
+    
+    .adv-mobile-hero-btn {
+        padding: 9px 8px;
+        font-size: 0.78125rem;
+    }
+    
+    .adv-slider-arrow {
+        width: 30px;
+        height: 30px;
         font-size: 0.75rem;
+        background: rgba(3, 28, 61, 0.45);
     }
-
-    .adv-slider-actions {
-        flex-direction: column;
-        width: 100%;
-        max-width: 320px;
-        margin-left: auto;
-        margin-right: auto;
-        gap: 10px;
+    
+    .adv-slider-arrow.prev-arrow {
+        left: 6px;
     }
-
-    .adv-btn-admission-pill,
-    .adv-btn-hero-primary,
-    .adv-btn-hero-secondary {
-        width: 100%;
-        justify-content: center;
-        padding: 10px 16px;
+    
+    .adv-slider-arrow.next-arrow {
+        right: 6px;
     }
-
+    
     .adv-slider-dots {
-        bottom: 70px;
+        bottom: 8px;
+        gap: 6px;
+    }
+    
+    .adv-slider-dot {
+        width: 7px;
+        height: 7px;
+    }
+    
+    .adv-slider-dot.active {
+        width: 20px;
     }
 }
 
-@media (min-width: 769px) and (max-width: 900px) {
-    .adv-slider-polaroid {
-        width: 140px;
-    }
-    .adv-polaroid-image-wrap {
-        height: 95px;
+@media (max-width: 480px) {
+    .adv-mobile-hero-cta-bar {
+        grid-template-columns: 1fr;
+        gap: 6px;
     }
 }

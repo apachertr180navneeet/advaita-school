@@ -1,7 +1,7 @@
 /* ==========================================================================
    Advaita School of Excellence - Master Responsive Header Styles
    Theme Color: #083B7A (Navy Blue) & #F37021 (Advaita Orange)
-   Optimized for: Desktops, Laptops, Tablets (Landscape/Portrait), and Mobile
+   Optimized for: Desktops, Laptops, Tablets, and Mobile
    ========================================================================== */
 
 :root {
@@ -14,14 +14,12 @@
     --adv-accent-orange-hover: #df5d10;
     --adv-accent-gold: #fdbb2d;
     --adv-text-white: #ffffff;
-    --adv-text-muted: rgba(255, 255, 255, 0.88);
+    --adv-text-dark: #1a2d42;
     --adv-border-color: rgba(255, 255, 255, 0.15);
     --adv-dropdown-bg: #ffffff;
     --adv-dropdown-text: #1e293b;
     --adv-font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --header-transition: all 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-    --header-height-desktop: 80px;
-    --header-height-mobile: 64px;
+    --header-transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 *, *::before, *::after {
@@ -33,7 +31,7 @@
 body {
     font-family: var(--adv-font-main);
     color: #333333;
-    background-color: #f8fafc;
+    background-color: #ffffff;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
@@ -45,54 +43,61 @@ body.adv-drawer-open {
 }
 
 /* --------------------------------------------------------------------------
-   Top Utility Bar
-   -------------------------------------------------------------------------- */
-/* --------------------------------------------------------------------------
-   Top Utility Bar (Clean Single Line Layout matching Reference)
+   1. Top Utility Bar (Full Width)
    -------------------------------------------------------------------------- */
 .adv-topbar {
-    background: linear-gradient(90deg, #031c3d 0%, var(--adv-primary-dark) 50%, #031c3d 100%);
+    background-color: var(--adv-primary);
     color: var(--adv-text-white);
-    font-size: 0.84375rem;
-    padding: 8px 0;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    font-size: 0.8125rem;
+    padding: 7px 0;
     position: relative;
-    z-index: 20;
+    z-index: 1020;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.adv-topbar .container {
-    max-width: 1440px;
+.adv-topbar-container {
+    width: 100%;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 clamp(16px, 3.5vw, 48px);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 16px;
 }
 
 .adv-topbar-left {
     display: flex;
     align-items: center;
-    color: rgba(255, 255, 255, 0.9);
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.95);
     font-weight: 500;
-    font-size: 0.84375rem;
-    letter-spacing: 0.2px;
+    font-size: 0.8125rem;
+    letter-spacing: 0.15px;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+}
+
+.adv-topbar-pin {
+    color: var(--adv-accent-orange);
+    font-size: 0.9rem;
+}
+
+.adv-topbar-sep {
+    color: rgba(255, 255, 255, 0.35);
+    margin-left: 4px;
 }
 
 .adv-topbar-right {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 14px;
     flex-shrink: 0;
 }
 
 .adv-topbar-links {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 10px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -101,21 +106,21 @@ body.adv-drawer-open {
 .adv-topbar-links li {
     display: flex;
     align-items: center;
-    gap: 16px;
 }
 
-.adv-topbar-links li:not(:last-child)::after {
-    content: "|";
+.adv-topbar-links li.pipe {
     color: rgba(255, 255, 255, 0.35);
-    font-size: 0.8rem;
+    font-size: 0.75rem;
+    user-select: none;
 }
 
 .adv-topbar-links a {
-    color: rgba(255, 255, 255, 0.88);
+    color: rgba(255, 255, 255, 0.92);
     text-decoration: none;
     transition: var(--header-transition);
     font-weight: 500;
-    font-size: 0.84375rem;
+    font-size: 0.8125rem;
+    padding: 2px 4px;
 }
 
 .adv-topbar-links a:hover {
@@ -125,7 +130,7 @@ body.adv-drawer-open {
 .adv-topbar-socials {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 6px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -135,12 +140,12 @@ body.adv-drawer-open {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 26px;
-    height: 26px;
+    width: 24px;
+    height: 24px;
     background-color: #ffffff;
     color: var(--adv-primary);
     border-radius: 50%;
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     transition: var(--header-transition);
     text-decoration: none;
 }
@@ -149,62 +154,154 @@ body.adv-drawer-open {
     background-color: var(--adv-accent-orange);
     color: #ffffff;
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(243, 112, 33, 0.4);
+    box-shadow: 0 3px 8px rgba(243, 112, 33, 0.4);
 }
 
 /* --------------------------------------------------------------------------
-   Main Navigation Header
+   2. Main Navigation Header (Full Width Ribbon on Navy Background)
    -------------------------------------------------------------------------- */
 .adv-main-header {
-    background: linear-gradient(180deg, #0a448a 0%, var(--adv-primary) 100%);
-    box-shadow: 0 4px 20px rgba(8, 59, 122, 0.22);
+    background-color: var(--adv-primary);
     position: sticky;
     top: 0;
     z-index: 1000;
-    transition: var(--header-transition);
     width: 100%;
+    padding: 6px 0 0 0;
+    transition: var(--header-transition);
 }
 
 .adv-main-header.is-scrolled {
-    background: rgba(8, 59, 122, 0.98);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 8px 30px rgba(3, 28, 61, 0.4);
+    padding: 4px 0 0 0;
+    box-shadow: 0 8px 24px rgba(3, 28, 61, 0.3);
 }
 
-.adv-nav-container {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    min-height: var(--header-height-desktop);
+.adv-header-fullwidth {
+    width: 100%;
+    margin: 0;
+    padding: 0;
     position: relative;
 }
 
-/* Left & Right Nav Menus */
+/* Decorative curved swooshes (Corners & Center Shoulders) */
+.adv-header-curve-decor {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Far Left Orange Corner Swoosh */
+.adv-svg-corner-left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 68px;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Far Right Orange Corner Swoosh */
+.adv-svg-corner-right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 68px;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Center Left Shoulder Swoop Arc */
+.adv-svg-shoulder-left {
+    position: absolute;
+    top: -12px;
+    left: calc(50% - 180px);
+    width: 85px;
+    height: 38px;
+    z-index: 4;
+}
+
+/* Center Right Shoulder Swoop Arc */
+.adv-svg-shoulder-right {
+    position: absolute;
+    top: -12px;
+    right: calc(50% - 180px);
+    width: 85px;
+    height: 38px;
+    z-index: 4;
+}
+
+/* White Full-Width Ribbon */
+.adv-nav-ribbon {
+    position: relative;
+    z-index: 5;
+    background: #ffffff;
+    padding: 6px clamp(16px, 3.5vw, 48px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.04);
+    min-height: 64px;
+    width: 100%;
+}
+
+/* Left & Right Nav Sections */
+.adv-nav-section {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.adv-nav-section-left {
+    justify-content: flex-start;
+    gap: 8px;
+}
+
+.adv-nav-section-right {
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+/* Home Button Pill */
+.adv-nav-home-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(135deg, #f58220 0%, var(--adv-accent-orange) 100%);
+    color: #ffffff;
+    padding: 8px 18px;
+    border-radius: 12px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 3px 10px rgba(243, 112, 33, 0.35);
+    transition: var(--header-transition);
+    white-space: nowrap;
+}
+
+.adv-nav-home-btn i {
+    font-size: 0.85rem;
+}
+
+.adv-nav-home-btn:hover {
+    background: var(--adv-accent-orange-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 5px 14px rgba(243, 112, 33, 0.45);
+    color: #ffffff;
+}
+
+/* Desktop Nav Menus */
 .adv-nav-menu {
     display: flex;
     align-items: center;
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 3px;
-    flex: 1;
+    gap: 2px;
 }
 
-.adv-nav-left {
-    justify-content: flex-end;
-    padding-right: 20px;
-}
-
-.adv-nav-right {
-    justify-content: flex-start;
-    padding-left: 20px;
-}
-
-/* Nav Items & Links */
 .adv-nav-item {
     position: relative;
 }
@@ -213,107 +310,121 @@ body.adv-drawer-open {
     display: inline-flex;
     align-items: center;
     gap: 5px;
-    padding: 10px 12px;
-    color: var(--adv-text-white);
-    font-size: 0.90625rem;
-    font-weight: 500;
+    padding: 9px 11px;
+    color: #083B7A;
+    font-size: 0.875rem;
+    font-weight: 700;
     text-decoration: none;
     border-radius: 6px;
     transition: var(--header-transition);
     white-space: nowrap;
-    position: relative;
 }
 
 .adv-nav-link i.chevron-icon {
-    font-size: 0.68rem;
+    font-size: 0.65rem;
+    color: #083B7A;
     transition: transform 0.25s ease;
-    opacity: 0.8;
+    opacity: 0.85;
 }
 
 .adv-nav-link:hover,
 .adv-nav-item:hover > .adv-nav-link,
 .adv-nav-item.active > .adv-nav-link {
-    color: #ffffff;
-    background-color: rgba(255, 255, 255, 0.14);
+    color: var(--adv-accent-orange);
+    background-color: rgba(243, 112, 33, 0.07);
 }
 
 .adv-nav-link:hover i.chevron-icon,
 .adv-nav-item:hover > .adv-nav-link i.chevron-icon {
     transform: rotate(180deg);
-    color: var(--adv-accent-gold);
+    color: var(--adv-accent-orange);
 }
 
-/* Active Indicator */
-.adv-nav-item.active > .adv-nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 2px;
-    left: 12px;
-    right: 12px;
-    height: 3px;
-    background: var(--adv-accent-orange);
-    border-radius: 2px;
-}
-
-/* --------------------------------------------------------------------------
-   Center Logo / Overlapping Circular Crest Branding
-   -------------------------------------------------------------------------- */
-.adv-nav-brand-center {
+/* Center Brand Pod */
+.adv-nav-brand-pod {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    z-index: 1050;
     position: relative;
-    padding: 0 14px;
+    z-index: 10;
+    margin: -14px 10px -12px 10px;
 }
 
-.adv-brand-badge {
+.adv-brand-badge-pod {
     display: flex;
     align-items: center;
     justify-content: center;
     background: #ffffff;
-    width: 106px;
-    height: 106px;
-    border-radius: 50%;
-    border: 3.5px solid #ffffff;
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.45), 0 8px 24px rgba(0, 0, 0, 0.32);
+    padding: 8px 18px;
+    border-radius: 18px;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.16), 0 1px 4px rgba(0, 0, 0, 0.06);
     text-decoration: none;
     transition: var(--header-transition);
-    overflow: hidden;
-    margin-top: -10px;
-    margin-bottom: -20px;
-    position: relative;
-    z-index: 1050;
-    padding: 0;
+    min-width: 215px;
+    min-height: 76px;
+    border: 1px solid rgba(8, 59, 122, 0.06);
 }
 
-.adv-brand-badge:hover {
-    transform: translateY(-2px) scale(1.05);
-    box-shadow: 0 0 0 3px var(--adv-accent-orange), 0 12px 30px rgba(0, 0, 0, 0.38);
+.adv-brand-badge-pod:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
-.adv-brand-logo-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
+.adv-brand-logo-pod-img {
+    max-height: 56px;
+    max-width: 195px;
+    width: auto;
+    object-fit: contain;
     display: block;
 }
 
+/* Apply for Admission CTA Button */
+.adv-nav-apply-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #f58220 0%, var(--adv-accent-orange) 100%);
+    color: #ffffff;
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(243, 112, 33, 0.38);
+    transition: var(--header-transition);
+    white-space: nowrap;
+}
+
+.adv-nav-apply-btn i {
+    font-size: 0.8rem;
+    transition: transform 0.25s ease;
+}
+
+.adv-nav-apply-btn:hover {
+    background: var(--adv-accent-orange-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(243, 112, 33, 0.48);
+    color: #ffffff;
+}
+
+.adv-nav-apply-btn:hover i {
+    transform: translateX(3px);
+}
+
 /* --------------------------------------------------------------------------
-   Desktop Dropdown Menus
+   3. Desktop Dropdown Menus
    -------------------------------------------------------------------------- */
 .adv-dropdown {
     position: absolute;
-    top: calc(100% + 4px);
+    top: calc(100% + 8px);
     left: 50%;
     transform: translateX(-50%) translateY(10px);
     background: var(--adv-dropdown-bg);
-    min-width: 235px;
+    min-width: 240px;
     border-radius: 12px;
     padding: 8px;
-    box-shadow: 0 16px 36px rgba(8, 59, 122, 0.22), 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 16px 36px rgba(8, 59, 122, 0.2), 0 4px 12px rgba(0, 0, 0, 0.08);
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -351,10 +462,10 @@ body.adv-drawer-open {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 9px 12px;
+    padding: 10px 14px;
     color: var(--adv-dropdown-text);
     font-size: 0.875rem;
-    font-weight: 500;
+    font-weight: 600;
     text-decoration: none;
     border-radius: 8px;
     transition: var(--header-transition);
@@ -363,7 +474,7 @@ body.adv-drawer-open {
 .adv-dropdown-link i {
     font-size: 0.85rem;
     color: var(--adv-primary);
-    opacity: 0.75;
+    opacity: 0.8;
     width: 16px;
     text-align: center;
     transition: var(--header-transition);
@@ -372,7 +483,7 @@ body.adv-drawer-open {
 .adv-dropdown-link:hover {
     background-color: #f0f6ff;
     color: var(--adv-primary);
-    padding-left: 16px;
+    padding-left: 18px;
 }
 
 .adv-dropdown-link:hover i {
@@ -387,14 +498,15 @@ body.adv-drawer-open {
 .adv-mobile-actions {
     display: none;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
+    margin-left: auto;
 }
 
 .adv-tablet-cta {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    background: var(--adv-accent-orange);
+    background: linear-gradient(135deg, #f58220 0%, var(--adv-accent-orange) 100%);
     color: #ffffff;
     font-size: 0.8125rem;
     font-weight: 700;
@@ -403,6 +515,7 @@ body.adv-drawer-open {
     text-decoration: none;
     box-shadow: 0 3px 10px rgba(243, 112, 33, 0.35);
     transition: var(--header-transition);
+    white-space: nowrap;
 }
 
 .adv-tablet-cta:hover {
@@ -413,11 +526,11 @@ body.adv-drawer-open {
 
 .adv-mobile-nav-toggle {
     display: none;
-    background: rgba(255, 255, 255, 0.12);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #ffffff;
-    width: 42px;
-    height: 42px;
+    background: #f0f6ff;
+    border: 1px solid #c8ddfa;
+    color: var(--adv-primary);
+    width: 40px;
+    height: 40px;
     border-radius: 8px;
     cursor: pointer;
     font-size: 1.25rem;
@@ -429,7 +542,7 @@ body.adv-drawer-open {
 
 .adv-mobile-nav-toggle:hover,
 .adv-mobile-nav-toggle:active {
-    background: rgba(255, 255, 255, 0.22);
+    background: var(--adv-primary);
     color: #ffffff;
 }
 
@@ -715,30 +828,39 @@ body.adv-drawer-open {
    Responsive Breakpoints: Laptops, Tablets & Mobiles
    -------------------------------------------------------------------------- */
 
-/* 1. Large Laptops / Screens (1200px - 1360px) */
-@media (max-width: 1360px) {
+/* 1. Large Laptops / Screens (1200px - 1400px) */
+@media (max-width: 1400px) {
     .adv-nav-link {
-        padding: 9px 9px;
-        font-size: 0.84375rem;
+        padding: 8px 7px;
+        font-size: 0.8125rem;
     }
-    .adv-nav-left {
-        padding-right: 12px;
+    .adv-nav-home-btn {
+        padding: 7px 14px;
+        font-size: 0.8125rem;
     }
-    .adv-nav-right {
-        padding-left: 12px;
+    .adv-nav-apply-btn {
+        padding: 8px 16px;
+        font-size: 0.8125rem;
     }
-    .adv-brand-badge {
-        padding: 6px 12px;
-        min-height: 56px;
+    .adv-brand-badge-pod {
+        min-width: 190px;
+        min-height: 68px;
+        padding: 6px 14px;
     }
-    .adv-brand-logo-img {
-        height: 44px;
-        max-width: 180px;
+    .adv-brand-logo-pod-img {
+        max-height: 48px;
+        max-width: 170px;
+    }
+    .adv-svg-shoulder-left {
+        left: calc(50% - 150px);
+    }
+    .adv-svg-shoulder-right {
+        right: calc(50% - 150px);
     }
 }
 
-/* 2. Medium Tablets & Small Laptops (Switch breakpoint: 1140px) */
-@media (max-width: 1140px) {
+/* 2. Medium Tablets & Small Laptops (Switch breakpoint: 1180px) */
+@media (max-width: 1180px) {
     .adv-topbar-left {
         flex: 1;
     }
@@ -746,42 +868,62 @@ body.adv-drawer-open {
         display: none;
     }
     
-    /* Hide desktop nav menu */
-    .adv-nav-menu {
+    /* Hide desktop nav elements and center decor */
+    .adv-nav-section-left,
+    .adv-nav-section-right,
+    .adv-header-curve-decor {
         display: none !important;
     }
     
-    /* Center logo on tablet/mobile */
-    .adv-nav-container {
-        min-height: var(--header-height-mobile);
-        justify-content: space-between;
+    .adv-nav-ribbon {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        border-radius: 0;
+        padding: 6px 16px !important;
+        min-height: 56px !important;
+        width: 100% !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     }
     
-    .adv-nav-brand-center {
-        padding: 0;
+    .adv-nav-brand-pod {
+        margin: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        flex-shrink: 0 !important;
     }
     
-    .adv-brand-badge {
-        width: 68px;
-        height: 68px;
-        margin: -6px 0 -12px;
-        padding: 4px;
-        border-width: 2.5px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 0 0 2px rgba(255, 255, 255, 0.3);
+    .adv-brand-badge-pod {
+        min-width: unset !important;
+        min-height: unset !important;
+        padding: 4px 6px !important;
+        border-radius: 8px;
+        box-shadow: none !important;
+        border: none !important;
     }
     
-    .adv-mobile-actions,
+    .adv-brand-logo-pod-img {
+        max-height: 42px !important;
+        max-width: 165px !important;
+    }
+    
+    .adv-mobile-actions {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        margin-left: auto !important;
+    }
+    
     .adv-mobile-nav-toggle {
-        display: flex;
+        display: flex !important;
     }
 }
 
 /* 3. Tablets Portrait (768px - 991px) */
 @media (max-width: 991.98px) {
-    .adv-topbar-tagline {
-        font-size: 0.78rem;
+    .adv-topbar-left {
+        font-size: 0.75rem;
     }
-    
     .adv-tablet-cta {
         display: inline-flex;
     }
@@ -792,60 +934,61 @@ body.adv-drawer-open {
     .adv-topbar-left {
         display: none;
     }
-    
-    .adv-topbar .container {
-        justify-content: space-between;
+    .adv-topbar-container {
+        justify-content: center;
     }
-    
-    .adv-topbar-contact-items {
-        display: flex;
-    }
-    
     .adv-tablet-cta {
-        display: none; /* Keep mobile clean */
-    }
-    
-    .adv-brand-badge {
-        width: 60px;
-        height: 60px;
-        margin: -4px 0 -8px;
-        padding: 3px;
-        border-width: 2px;
+        display: none;
     }
 }
 
 /* 5. Small Mobile Phones (< 576px down to 320px) */
 @media (max-width: 575.98px) {
     .adv-topbar {
-        padding: 5px 0;
+        padding: 4px 0;
+        width: 100%;
+        overflow: hidden;
     }
-    
-    .adv-topbar .container {
-        padding: 0 12px;
+    .adv-topbar-container {
+        padding: 0 10px;
+        justify-content: center;
     }
-    
-    .adv-topbar-contact-items a span {
-        display: none;
+    .adv-topbar-socials {
+        gap: 5px;
     }
-    
-    .adv-nav-container {
-        padding: 0 12px;
-        min-height: 56px;
+    .adv-topbar-socials a {
+        width: 22px;
+        height: 22px;
+        font-size: 0.68rem;
     }
-    
-    .adv-brand-badge {
-        width: 54px;
-        height: 54px;
-        margin: -3px 0 -6px;
-        padding: 3px;
+    .adv-header-fullwidth {
+        width: 100%;
+        padding: 0;
     }
-    
+    .adv-nav-ribbon {
+        padding: 6px 12px !important;
+        min-height: 52px !important;
+        width: 100% !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+    .adv-brand-logo-pod-img {
+        max-height: 36px !important;
+        max-width: 135px !important;
+    }
+    .adv-mobile-actions {
+        display: flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+        margin-left: auto !important;
+    }
     .adv-mobile-nav-toggle {
-        width: 38px;
-        height: 38px;
-        font-size: 1.1rem;
+        display: flex !important;
+        width: 38px !important;
+        height: 38px !important;
+        font-size: 1.15rem !important;
     }
-    
     .adv-mobile-drawer {
         width: 88vw;
     }
@@ -853,14 +996,13 @@ body.adv-drawer-open {
 
 /* 6. Extra Small Screens (< 360px) */
 @media (max-width: 360px) {
-    .adv-brand-badge {
-        width: 48px;
-        height: 48px;
+    .adv-brand-logo-pod-img {
+        max-height: 32px !important;
+        max-width: 115px !important;
     }
-    
     .adv-topbar-socials a {
-        width: 22px;
-        height: 22px;
-        font-size: 0.65rem;
+        width: 20px;
+        height: 20px;
+        font-size: 0.62rem;
     }
 }

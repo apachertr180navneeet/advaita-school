@@ -19,225 +19,56 @@ require_once __DIR__ . '/includes/header.php';
             <div class="adv-slider-wrapper">
 
                 <!-- ----------------------------------------------------
-                     SLIDE 1: Building Curious Minds
+                     SLIDE 1: Main Banner (Building Curious Minds)
                      ---------------------------------------------------- -->
                 <div class="adv-slide active" data-slide-index="0">
-                    <div class="adv-slide-bg" style="background-image: url('assets/images/hero-campus-1.jpg');"></div>
-                    <div class="adv-slide-overlay"></div>
-                    <div class="adv-slide-vignette"></div>
-
-                    <!-- Floating Polaroid 1 (Left Side - Taped) -->
-                    <div class="adv-slider-polaroid left-card" title="Student Achievements">
-                        <div class="adv-polaroid-tape" aria-hidden="true"></div>
-                        <div class="adv-polaroid-image-wrap">
-                            <img src="assets/images/card-student-1.jpg" alt="Proud Advaitans - Student Achievements" loading="eager">
-                        </div>
-                        <div class="adv-polaroid-caption">
-                            <span class="adv-polaroid-tag">
-                                <span class="badge-dot"></span> LIVE ON CAMPUS
-                            </span>
-                            <h4 class="adv-polaroid-title">Proud Advaitans</h4>
-                            <p class="adv-polaroid-sub">Where every win is celebrated</p>
-                        </div>
-                    </div>
-
-                    <!-- Floating Polaroid 2 (Right Side - Taped) -->
-                    <div class="adv-slider-polaroid right-card" title="Peer Mentorship">
-                        <div class="adv-polaroid-tape" aria-hidden="true"></div>
-                        <div class="adv-polaroid-image-wrap">
-                            <img src="assets/images/card-student-2.jpg" alt="Peer Group Support - Classroom Mentoring" loading="eager">
-                        </div>
-                        <div class="adv-polaroid-caption">
-                            <span class="adv-polaroid-tag">
-                                <span class="badge-dot"></span> LIVE ON CAMPUS
-                            </span>
-                            <h4 class="adv-polaroid-title">Peer Group Support</h4>
-                            <p class="adv-polaroid-sub">Older students mentoring younger ones</p>
-                        </div>
-                    </div>
-
-                    <!-- Slide Content -->
-                    <div class="adv-slide-content">
-                        <div class="adv-slide-top-spacer"></div>
-
-                        <div class="adv-slide-center-block">
-                            <div class="adv-hero-pill-tag">
-                                <span class="tag-dot"></span> ADMISSIONS 2026–27 OPEN
-                            </div>
-                            <h1 class="adv-slide-title">
-                                Building Curious Minds. <br>
-                                <span class="highlight">Shaping Confident Futures.</span>
-                            </h1>
-                            <p class="adv-slide-lead">
-                                Where knowledge meets values, creativity meets opportunity, and every child is encouraged to discover their potential.
-                            </p>
-
-                            <!-- Feature Tags -->
-                            <div class="adv-slider-features">
-                                <span class="adv-slider-feature-item">
-                                    <i class="fa-solid fa-graduation-cap"></i> CBSE Curriculum (PG – XII)
-                                </span>
-                                <span class="adv-slider-feature-item">
-                                    <i class="fa-solid fa-microchip"></i> Smart STEM Labs
-                                </span>
-                                <span class="adv-slider-feature-item">
-                                    <i class="fa-solid fa-medal"></i> Sports & Arts Academy
-                                </span>
-                            </div>
-
-                            <!-- Action CTA Buttons -->
-                            <div class="adv-slider-actions">
-                                <a href="#admissions" class="adv-btn-admission-pill">
-                                    <span class="pulsing-dot"></span> ADMISSIONS 2026–27 OPEN
-                                </a>
-                                <a href="#admission-cta" class="adv-btn-hero-primary">
-                                    <span>Apply for Admission</span>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                                <a href="#about-school" class="adv-btn-hero-secondary">
-                                    <i class="fa-solid fa-compass"></i>
-                                    <span>Explore Our School</span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- Integrated Stats Strip -->
-                        <div class="adv-slider-stats-strip">
-                            <ul class="adv-slider-stats-list">
-                                <li class="adv-slider-stat-node">
-                                    <i class="fa-solid fa-award"></i>
-                                    <span>CBSE AFFILIATED</span>
-                                </li>
-                                <li class="adv-slider-stat-sep">•</li>
-                                <li class="adv-slider-stat-node">
-                                    <i class="fa-solid fa-trophy"></i>
-                                    <span>100% BOARD PASS RESULT</span>
-                                </li>
-                                <li class="adv-slider-stat-sep">•</li>
-                                <li class="adv-slider-stat-node">
-                                    <i class="fa-solid fa-users"></i>
-                                    <span>1500+ STUDENTS</span>
-                                </li>
-                                <li class="adv-slider-stat-sep">•</li>
-                                <li class="adv-slider-stat-node">
-                                    <i class="fa-solid fa-star"></i>
-                                    <span>80+ EXPERIENCED FACULTY</span>
-                                </li>
-                            </ul>
+                    <div class="adv-slide-banner-wrap">
+                        <img src="assets/images/hero-slider-main.jpg" alt="Advaita School of Excellence - Building Curious Minds. Shaping Confident Futures." class="adv-slide-banner-img" loading="eager">
+                        
+                        <!-- Interactive Clickable Hotspots overlaying the banner buttons -->
+                        <div class="adv-banner-clickable-overlay">
+                            <a href="admissions.php" class="adv-transparent-hotspot adv-hotspot-apply-link" title="Apply for Admission" aria-label="Apply for Admission"></a>
+                            <a href="about-us.php" class="adv-transparent-hotspot adv-hotspot-explore-link" title="Explore Our School" aria-label="Explore Our School"></a>
                         </div>
                     </div>
                 </div>
 
                 <!-- ----------------------------------------------------
-                     SLIDE 2: Modern Campus & Innovation
+                     SLIDE 2: Campus Infrastructure & Learning
                      ---------------------------------------------------- -->
                 <div class="adv-slide" data-slide-index="1">
-                    <div class="adv-slide-bg" style="background-image: url('assets/images/hero-campus-2.jpg');"></div>
-                    <div class="adv-slide-overlay"></div>
-                    <div class="adv-slide-vignette"></div>
-
-                    <!-- Floating Polaroid 1 -->
-                    <div class="adv-slider-polaroid left-card" title="Robotics & Innovation">
-                        <div class="adv-polaroid-tape" aria-hidden="true"></div>
-                        <div class="adv-polaroid-image-wrap">
-                            <img src="assets/images/card-student-3.jpg" alt="STEM & Robotics Innovation" loading="lazy">
-                        </div>
-                        <div class="adv-polaroid-caption">
-                            <span class="adv-polaroid-tag">
-                                <span class="badge-dot"></span> INNOVATION HUB
-                            </span>
-                            <h4 class="adv-polaroid-title">Future-Ready Skills</h4>
-                            <p class="adv-polaroid-sub">AI, Coding & Robotics Studio</p>
-                        </div>
-                    </div>
-
-                    <!-- Floating Polaroid 2 -->
-                    <div class="adv-slider-polaroid right-card" title="Sports & Athletics">
-                        <div class="adv-polaroid-tape" aria-hidden="true"></div>
-                        <div class="adv-polaroid-image-wrap">
-                            <img src="assets/images/card-student-4.jpg" alt="Sports & Physical Education" loading="lazy">
-                        </div>
-                        <div class="adv-polaroid-caption">
-                            <span class="adv-polaroid-tag">
-                                <span class="badge-dot"></span> CHAMPIONS HUB
-                            </span>
-                            <h4 class="adv-polaroid-title">Sports Excellence</h4>
-                            <p class="adv-polaroid-sub">Olympic standard facilities & coaching</p>
-                        </div>
-                    </div>
-
-                    <!-- Slide Content -->
-                    <div class="adv-slide-content">
-                        <div class="adv-slide-top-spacer"></div>
-
-                        <div class="adv-slide-center-block">
-                            <div class="adv-hero-pill-tag">
-                                <span class="tag-dot"></span> WORLD-CLASS INFRASTRUCTURE
+                    <div class="adv-slide-banner-wrap">
+                        <div class="adv-slide-bg" style="background-image: url('assets/images/hero-campus-1.jpg');"></div>
+                        <div class="adv-slide-overlay-rich">
+                            <div class="adv-slide-content-rich">
+                                <div class="adv-hero-pill-tag">
+                                    <span class="tag-dot"></span> WORLD-CLASS INFRASTRUCTURE
+                                </div>
+                                <h2 class="adv-slide-title-rich">
+                                    Empowering Young Minds <br>
+                                    <span class="highlight">Beyond the Classroom</span>
+                                </h2>
+                                <p class="adv-slide-lead-rich">
+                                    Expansive green sports grounds, cutting-edge science labs, performing arts auditorium, and modern digital classrooms.
+                                </p>
+                                <div class="adv-slider-actions-rich">
+                                    <a href="admissions.php" class="adv-btn-hero-primary">
+                                        <span>Apply for Admission</span>
+                                        <i class="fa-solid fa-arrow-right"></i>
+                                    </a>
+                                    <a href="facilities.php" class="adv-btn-hero-secondary">
+                                        <i class="fa-solid fa-building-columns"></i>
+                                        <span>Explore Campus</span>
+                                    </a>
+                                </div>
                             </div>
-                            <h2 class="adv-slide-title">
-                                Empowering Young Minds <br>
-                                <span class="highlight">Beyond the Classroom</span>
-                            </h2>
-                            <p class="adv-slide-lead">
-                                Expansive green sports grounds, cutting-edge science labs, performing arts auditorium, and modern digital classrooms.
-                            </p>
-
-                            <div class="adv-slider-features">
-                                <span class="adv-slider-feature-item">
-                                    <i class="fa-solid fa-tree"></i> Sprawling Eco-Friendly Campus
-                                </span>
-                                <span class="adv-slider-feature-item">
-                                    <i class="fa-solid fa-futbol"></i> 12+ Sports Disciplines
-                                </span>
-                                <span class="adv-slider-feature-item">
-                                    <i class="fa-solid fa-shield-halved"></i> 24/7 Secure & Safe Campus
-                                </span>
-                            </div>
-
-                            <div class="adv-slider-actions">
-                                <a href="#admissions" class="adv-btn-admission-pill">
-                                    <span class="pulsing-dot"></span> ADMISSIONS 2026–27 OPEN
-                                </a>
-                                <a href="#admission-cta" class="adv-btn-hero-primary">
-                                    <span>Apply for Admission</span>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                                <a href="#campus-infrastructure" class="adv-btn-hero-secondary">
-                                    <i class="fa-solid fa-play"></i>
-                                    <span>Take a Campus Tour</span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="adv-slider-stats-strip">
-                            <ul class="adv-slider-stats-list">
-                                <li class="adv-slider-stat-node">
-                                    <i class="fa-solid fa-award"></i>
-                                    <span>CBSE AFFILIATED</span>
-                                </li>
-                                <li class="adv-slider-stat-sep">•</li>
-                                <li class="adv-slider-stat-node">
-                                    <i class="fa-solid fa-trophy"></i>
-                                    <span>100% BOARD RESULTS</span>
-                                </li>
-                                <li class="adv-slider-stat-sep">•</li>
-                                <li class="adv-slider-stat-node">
-                                    <i class="fa-solid fa-users"></i>
-                                    <span>1500+ STUDENTS</span>
-                                </li>
-                                <li class="adv-slider-stat-sep">•</li>
-                                <li class="adv-slider-stat-node">
-                                    <i class="fa-solid fa-user-tie"></i>
-                                    <span>80+ DEDICATED TEACHERS</span>
-                                </li>
-                            </ul>
                         </div>
                     </div>
                 </div>
 
             </div>
 
-            <!-- Arrows -->
+            <!-- Slider Arrows -->
             <button type="button" class="adv-slider-arrow prev-arrow" aria-label="Previous Slide">
                 <i class="fa-solid fa-chevron-left"></i>
             </button>
@@ -245,7 +76,7 @@ require_once __DIR__ . '/includes/header.php';
                 <i class="fa-solid fa-chevron-right"></i>
             </button>
 
-            <!-- Dots -->
+            <!-- Slider Dots -->
             <div class="adv-slider-dots" role="tablist" aria-label="Slide Selection">
                 <button type="button" class="adv-slider-dot active" role="tab" aria-selected="true" aria-label="Slide 1"></button>
                 <button type="button" class="adv-slider-dot" role="tab" aria-selected="false" aria-label="Slide 2"></button>
@@ -253,65 +84,78 @@ require_once __DIR__ . '/includes/header.php';
         </div>
     </section>
 
+    <!-- Mobile Quick Action CTA Bar (Visible on Mobile & Tablet) -->
+    <div class="adv-mobile-hero-cta-bar">
+        <a href="admissions.php" class="adv-mobile-hero-btn primary">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Apply for Admission</span>
+        </a>
+        <a href="about-us.php" class="adv-mobile-hero-btn secondary">
+            <i class="fa-solid fa-compass"></i>
+            <span>Explore Our School</span>
+        </a>
+    </div>
+
 
     <!-- ====================================================================
-         SECTION 2: QUICK INFORMATION / HIGHLIGHTS STATS STRIP
+         SECTION 2: QUICK INFORMATION / HIGHLIGHTS STATS STRIP (5 STATS)
          ==================================================================== -->
     <section class="parshv-stats-section" aria-label="School Key Highlights">
         <div class="parshv-container">
-            <div class="parshv-stats-grid">
-                <!-- Stat 1 -->
+            <div class="parshv-stats-grid five-cols">
+                <!-- Stat 1: 100% Class 10th Result -->
                 <div class="parshv-stat-card">
-                    <div class="parshv-stat-icon-wrap">
-                        <i class="fa-solid fa-medal"></i>
-                    </div>
-                    <div class="parshv-stat-info">
-                        <span class="parshv-stat-num">25+</span>
-                        <span class="parshv-stat-label">Years of Educational Excellence</span>
-                    </div>
-                </div>
-
-                <!-- Stat 2 -->
-                <div class="parshv-stat-card">
-                    <div class="parshv-stat-icon-wrap">
-                        <i class="fa-solid fa-user-graduate"></i>
-                    </div>
-                    <div class="parshv-stat-info">
-                        <span class="parshv-stat-num">1500+</span>
-                        <span class="parshv-stat-label">Enrolled Students</span>
-                    </div>
-                </div>
-
-                <!-- Stat 3 -->
-                <div class="parshv-stat-card">
-                    <div class="parshv-stat-icon-wrap">
-                        <i class="fa-solid fa-chalkboard-user"></i>
-                    </div>
-                    <div class="parshv-stat-info">
-                        <span class="parshv-stat-num">80+</span>
-                        <span class="parshv-stat-label">Experienced & Caring Faculty</span>
-                    </div>
-                </div>
-
-                <!-- Stat 4 -->
-                <div class="parshv-stat-card">
-                    <div class="parshv-stat-icon-wrap">
+                    <div class="parshv-stat-icon-wrap trophy-icon">
                         <i class="fa-solid fa-trophy"></i>
                     </div>
                     <div class="parshv-stat-info">
                         <span class="parshv-stat-num">100%</span>
-                        <span class="parshv-stat-label">Board Exam Results</span>
+                        <span class="parshv-stat-label">Class 10th Result (2025–26)</span>
                     </div>
                 </div>
 
-                <!-- Stat 5 -->
+                <!-- Stat 2: 15+ Students Scored 90%+ -->
                 <div class="parshv-stat-card">
-                    <div class="parshv-stat-icon-wrap">
-                        <i class="fa-solid fa-book-open-reader"></i>
+                    <div class="parshv-stat-icon-wrap team-icon">
+                        <i class="fa-solid fa-users"></i>
                     </div>
                     <div class="parshv-stat-info">
-                        <span class="parshv-stat-num">PG–XII</span>
-                        <span class="parshv-stat-label">Comprehensive Education</span>
+                        <span class="parshv-stat-num">15+</span>
+                        <span class="parshv-stat-label">Students Scored 90% and Above</span>
+                    </div>
+                </div>
+
+                <!-- Stat 3: 8+ Students Scored 80%+ -->
+                <div class="parshv-stat-card">
+                    <div class="parshv-stat-icon-wrap chart-icon">
+                        <i class="fa-solid fa-chart-column"></i>
+                    </div>
+                    <div class="parshv-stat-info">
+                        <span class="parshv-stat-num">8+</span>
+                        <span class="parshv-stat-label">Students Scored 80% and Above</span>
+                    </div>
+                </div>
+
+                <!-- Stat 4: 35% in 90%+ Bracket -->
+                <div class="parshv-stat-card">
+                    <div class="parshv-stat-icon-wrap group-icon">
+                        <i class="fa-solid fa-user-group"></i>
+                    </div>
+                    <div class="parshv-stat-info">
+                        <span class="parshv-stat-num">35%</span>
+                        <span class="parshv-stat-label">Students in 90%+ Bracket</span>
+                    </div>
+                </div>
+
+                <!-- Stat 5: Back-to-Back 100% Results -->
+                <div class="parshv-stat-card">
+                    <div class="parshv-stat-icon-wrap badge-icon">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <div class="parshv-stat-info">
+                        <span class="parshv-stat-sub-badge">Back-to-Back</span>
+                        <span class="parshv-stat-num">100%</span>
+                        <span class="parshv-stat-label">Results</span>
                     </div>
                 </div>
             </div>
