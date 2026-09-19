@@ -1,6 +1,7 @@
 <?php
 /**
  * Activities & Holistic Development Page - Advaita School of Excellence
+ * Clean Semantic HTML - Strictly No Inline CSS
  */
 $pageTitle = "Activities & Holistic Development - Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)";
 $activePage = "holistic";
@@ -49,56 +50,44 @@ require_once __DIR__ . '/includes/header.php';
                     </p>
 
                     <!-- Activities Pillars -->
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin: 32px 0;">
+                    <div class="adv-facility-grid">
                         
-                        <!-- Pillar 1: Sports & Physical Education -->
-                        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
-                            <img src="assets/images/fac-sports.jpg" alt="Sports & Athletics" style="width: 100%; height: 180px; object-fit: cover;">
-                            <div style="padding: 20px;">
-                                <h3 style="color: #083B7A; font-size: 1.15rem; margin: 0 0 8px;"><i class="fa-solid fa-trophy" style="color: #F37021; margin-right: 6px;"></i> Sports & Athletics</h3>
-                                <p style="font-size: 0.88rem; color: #64748b; line-height: 1.6; margin-bottom: 0;">
-                                    Professional coaching in Football, Cricket, Basketball, Badminton, Table Tennis, Skating, Karate, Athletics, and Yoga.
-                                </p>
+                        <div class="adv-facility-card">
+                            <img src="assets/images/fac-sports.jpg" alt="Sports & Athletics">
+                            <div class="adv-facility-body">
+                                <h3><i class="fa-solid fa-trophy"></i> Sports & Athletics</h3>
+                                <p>Professional coaching in Football, Cricket, Basketball, Badminton, Table Tennis, Skating, Karate, Athletics, and Yoga.</p>
                             </div>
                         </div>
 
-                        <!-- Pillar 2: Performing & Visual Arts -->
-                        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
-                            <img src="assets/images/fac-arts.jpg" alt="Arts & Music" style="width: 100%; height: 180px; object-fit: cover;">
-                            <div style="padding: 20px;">
-                                <h3 style="color: #083B7A; font-size: 1.15rem; margin: 0 0 8px;"><i class="fa-solid fa-music" style="color: #F37021; margin-right: 6px;"></i> Music, Dance & Theatre</h3>
-                                <p style="font-size: 0.88rem; color: #64748b; line-height: 1.6; margin-bottom: 0;">
-                                    Vocal music (classical & contemporary), instrumental training (keyboard, guitar, tabla, harmonium), classical and folk dance forms, drama and theatrical stage plays.
-                                </p>
+                        <div class="adv-facility-card">
+                            <img src="assets/images/fac-arts.jpg" alt="Arts & Music">
+                            <div class="adv-facility-body">
+                                <h3><i class="fa-solid fa-music"></i> Music, Dance & Theatre</h3>
+                                <p>Vocal music (classical & contemporary), instrumental training (keyboard, guitar, tabla, harmonium), classical and folk dance forms, drama and theatrical stage plays.</p>
                             </div>
                         </div>
 
-                        <!-- Pillar 3: STEAM, Robotics & Innovation -->
-                        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
-                            <img src="assets/images/gallery-stem.jpg" alt="STEAM & Robotics" style="width: 100%; height: 180px; object-fit: cover;">
-                            <div style="padding: 20px;">
-                                <h3 style="color: #083B7A; font-size: 1.15rem; margin: 0 0 8px;"><i class="fa-solid fa-microchip" style="color: #F37021; margin-right: 6px;"></i> STEAM & Coding Club</h3>
-                                <p style="font-size: 0.88rem; color: #64748b; line-height: 1.6; margin-bottom: 0;">
-                                    Hands-on coding bootcamps, AI hackathons, robotics tournaments, 3D prototyping, science exhibitions, and mathematics Olympiads.
-                                </p>
+                        <div class="adv-facility-card">
+                            <img src="assets/images/gallery-stem.jpg" alt="STEAM & Robotics">
+                            <div class="adv-facility-body">
+                                <h3><i class="fa-solid fa-microchip"></i> STEAM & Coding Club</h3>
+                                <p>Hands-on coding bootcamps, AI hackathons, robotics tournaments, 3D prototyping, science exhibitions, and mathematics Olympiads.</p>
                             </div>
                         </div>
 
-                        <!-- Pillar 4: House System & Leadership -->
-                        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
-                            <img src="assets/images/gallery-assembly.jpg" alt="House System & Leadership" style="width: 100%; height: 180px; object-fit: cover;">
-                            <div style="padding: 20px;">
-                                <h3 style="color: #083B7A; font-size: 1.15rem; margin: 0 0 8px;"><i class="fa-solid fa-flag" style="color: #F37021; margin-right: 6px;"></i> 4-House System & Council</h3>
-                                <p style="font-size: 0.88rem; color: #64748b; line-height: 1.6; margin-bottom: 0;">
-                                    Students are grouped into four dynamic houses (Ruby, Sapphire, Emerald, Topaz) fostering healthy competition, camaraderie, and democratic student governance.
-                                </p>
+                        <div class="adv-facility-card">
+                            <img src="assets/images/gallery-assembly.jpg" alt="House System & Leadership">
+                            <div class="adv-facility-body">
+                                <h3><i class="fa-solid fa-flag"></i> 4-House System & Council</h3>
+                                <p>Students are grouped into four dynamic houses (Ruby, Sapphire, Emerald, Topaz) fostering healthy competition, camaraderie, and democratic student governance.</p>
                             </div>
                         </div>
 
                     </div>
 
                     <h2>Clubs & Student Societies</h2>
-                    <ul style="margin-bottom: 30px;">
+                    <ul>
                         <li><strong>Literary & Model UN (MUN) Society:</strong> Debates, elocution, creative writing, and mock UN assemblies.</li>
                         <li><strong>Eco & Green Club:</strong> Tree plantations, organic gardening, energy conservation, and recycling initiatives.</li>
                         <li><strong>Heritage & Culture Club:</strong> Celebrating Indian culture, historical site explorations, and community celebrations.</li>
@@ -113,7 +102,6 @@ require_once __DIR__ . '/includes/header.php';
 
                 <!-- Sidebar -->
                 <aside class="adv-sidebar">
-                    <!-- Quick Navigation -->
                     <div class="adv-widget">
                         <h4 class="adv-widget-title">Holistic Life</h4>
                         <ul class="adv-widget-links">
@@ -125,7 +113,6 @@ require_once __DIR__ . '/includes/header.php';
                         </ul>
                     </div>
 
-                    <!-- Admission CTA Widget -->
                     <div class="adv-widget-cta">
                         <div class="cta-icon">
                             <i class="fa-solid fa-medal"></i>

@@ -1,6 +1,7 @@
 <?php
 /**
  * Mandatory Public Disclosure Page - Advaita School of Excellence
+ * Clean Semantic HTML - Strictly No Inline CSS
  */
 $pageTitle = "Mandatory Public Disclosure (CBSE Corner) - Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)";
 $activePage = "school";
@@ -41,11 +42,11 @@ require_once __DIR__ . '/includes/header.php';
                 <div class="adv-content-block">
                     
                     <h2>A. General Information</h2>
-                    <div style="overflow-x: auto; margin-bottom: 30px;">
+                    <div class="adv-table-wrap">
                         <table class="adv-table">
                             <tbody>
                                 <tr>
-                                    <td style="width: 40%;"><strong>NAME OF THE SCHOOL</strong></td>
+                                    <td><strong>NAME OF THE SCHOOL</strong></td>
                                     <td>ADVAITA SCHOOL OF EXCELLENCE</td>
                                 </tr>
                                 <tr>
@@ -77,7 +78,7 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
 
                     <h2>B. Documents and Information</h2>
-                    <div style="overflow-x: auto; margin-bottom: 30px;">
+                    <div class="adv-table-wrap">
                         <table class="adv-table">
                             <thead>
                                 <tr>
@@ -90,48 +91,48 @@ require_once __DIR__ . '/includes/header.php';
                                 <tr>
                                     <td>1</td>
                                     <td>Copies of Affiliation / Upgradation Letter and Recent Extension of Affiliation (No. 1130920)</td>
-                                    <td><a href="assets/images/hero-campus-1.jpg" target="_blank" style="color: #F37021; font-weight: 700;"><i class="fa-solid fa-file-pdf"></i> View Document</a></td>
+                                    <td><a href="assets/images/hero-campus-1.jpg" target="_blank" class="adv-doc-link"><i class="fa-solid fa-file-pdf"></i> View Document</a></td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
                                     <td>Copies of Societies / Trust (Sanmati Sevabhavi Sanstha) Registration Certificate</td>
-                                    <td><a href="assets/images/hero-campus-1.jpg" target="_blank" style="color: #F37021; font-weight: 700;"><i class="fa-solid fa-file-pdf"></i> View Document</a></td>
+                                    <td><a href="assets/images/hero-campus-1.jpg" target="_blank" class="adv-doc-link"><i class="fa-solid fa-file-pdf"></i> View Document</a></td>
                                 </tr>
                                 <tr>
                                     <td>3</td>
                                     <td>Copy of No Objection Certificate (NOC) Issued by Government of Maharashtra</td>
-                                    <td><a href="assets/images/hero-campus-1.jpg" target="_blank" style="color: #F37021; font-weight: 700;"><i class="fa-solid fa-file-pdf"></i> View Document</a></td>
+                                    <td><a href="assets/images/hero-campus-1.jpg" target="_blank" class="adv-doc-link"><i class="fa-solid fa-file-pdf"></i> View Document</a></td>
                                 </tr>
                                 <tr>
                                     <td>4</td>
                                     <td>Copies of Recognition Certificate under RTE Act, 2009</td>
-                                    <td><a href="assets/images/hero-campus-1.jpg" target="_blank" style="color: #F37021; font-weight: 700;"><i class="fa-solid fa-file-pdf"></i> View Document</a></td>
+                                    <td><a href="assets/images/hero-campus-1.jpg" target="_blank" class="adv-doc-link"><i class="fa-solid fa-file-pdf"></i> View Document</a></td>
                                 </tr>
                                 <tr>
                                     <td>5</td>
                                     <td>Copy of Valid Building Safety Certificate as per National Building Code</td>
-                                    <td><a href="assets/images/hero-campus-1.jpg" target="_blank" style="color: #F37021; font-weight: 700;"><i class="fa-solid fa-file-pdf"></i> View Document</a></td>
+                                    <td><a href="assets/images/hero-campus-1.jpg" target="_blank" class="adv-doc-link"><i class="fa-solid fa-file-pdf"></i> View Document</a></td>
                                 </tr>
                                 <tr>
                                     <td>6</td>
                                     <td>Copy of Valid Fire Safety Certificate Issued by Competent Authority</td>
-                                    <td><a href="assets/images/hero-campus-1.jpg" target="_blank" style="color: #F37021; font-weight: 700;"><i class="fa-solid fa-file-pdf"></i> View Document</a></td>
+                                    <td><a href="assets/images/hero-campus-1.jpg" target="_blank" class="adv-doc-link"><i class="fa-solid fa-file-pdf"></i> View Document</a></td>
                                 </tr>
                                 <tr>
                                     <td>7</td>
                                     <td>Copy of Safe Drinking Water and Sanitary Condition Certificate</td>
-                                    <td><a href="assets/images/hero-campus-1.jpg" target="_blank" style="color: #F37021; font-weight: 700;"><i class="fa-solid fa-file-pdf"></i> View Document</a></td>
+                                    <td><a href="assets/images/hero-campus-1.jpg" target="_blank" class="adv-doc-link"><i class="fa-solid fa-file-pdf"></i> View Document</a></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
 
                     <h2>C. Staff (Teaching) & Student Details</h2>
-                    <div style="overflow-x: auto; margin-bottom: 30px;">
+                    <div class="adv-table-wrap">
                         <table class="adv-table">
                             <tbody>
                                 <tr>
-                                    <td style="width: 40%;"><strong>PRINCIPAL</strong></td>
+                                    <td><strong>PRINCIPAL</strong></td>
                                     <td>1</td>
                                 </tr>
                                 <tr>
@@ -167,11 +168,11 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
 
                     <h2>D. School Infrastructure Details</h2>
-                    <div style="overflow-x: auto; margin-bottom: 30px;">
+                    <div class="adv-table-wrap">
                         <table class="adv-table">
                             <tbody>
                                 <tr>
-                                    <td style="width: 40%;"><strong>TOTAL CAMPUS AREA (IN SQ. METRES)</strong></td>
+                                    <td><strong>TOTAL CAMPUS AREA (IN SQ. METRES)</strong></td>
                                     <td>18,200 Sq. Mtrs.</td>
                                 </tr>
                                 <tr>
@@ -202,7 +203,6 @@ require_once __DIR__ . '/includes/header.php';
 
                 <!-- Sidebar -->
                 <aside class="adv-sidebar">
-                    <!-- Quick Navigation -->
                     <div class="adv-widget">
                         <h4 class="adv-widget-title">CBSE Information</h4>
                         <ul class="adv-widget-links">
@@ -214,7 +214,6 @@ require_once __DIR__ . '/includes/header.php';
                         </ul>
                     </div>
 
-                    <!-- Admission CTA Widget -->
                     <div class="adv-widget-cta">
                         <div class="cta-icon">
                             <i class="fa-solid fa-certificate"></i>

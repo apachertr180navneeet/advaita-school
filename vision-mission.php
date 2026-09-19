@@ -1,6 +1,7 @@
 <?php
 /**
  * Vision & Mission Page - Advaita School of Excellence
+ * Clean Semantic HTML - Strictly No Inline CSS
  */
 $pageTitle = "Vision & Mission - Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)";
 $activePage = "school";
@@ -40,10 +41,10 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Main Content -->
                 <div class="adv-content-block">
                     <!-- Vision Card -->
-                    <div style="background: linear-gradient(135deg, #031c3d 0%, #083B7A 100%); color: #ffffff; border-radius: 20px; padding: 40px; margin-bottom: 36px; box-shadow: 0 16px 40px rgba(8, 59, 122, 0.2);">
-                        <span style="color: var(--adv-accent-gold); font-size: 0.8125rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; display: inline-block; margin-bottom: 8px;">OUR VISION</span>
-                        <h2 style="color: #ffffff; font-size: 1.85rem; margin-bottom: 16px;">Building Curious Minds, Shaping Confident Futures</h2>
-                        <p style="color: #f1f5f9; font-size: 1.0625rem; line-height: 1.7; margin-bottom: 0;">
+                    <div class="adv-vision-card">
+                        <span class="adv-vision-eyebrow">OUR VISION</span>
+                        <h2>Building Curious Minds, Shaping Confident Futures</h2>
+                        <p>
                             To be a center of educational distinction that empowers every learner with critical thinking, ethical integrity, scientific curiosity, and the resilience to thrive and lead in a rapidly changing global society.
                         </p>
                     </div>
@@ -54,28 +55,28 @@ require_once __DIR__ . '/includes/header.php';
                         <strong>Advaita School of Excellence</strong> is committed to providing an inspiring learning environment where every child discovers their inner potential. We realize our vision through four fundamental pillars:
                     </p>
 
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 28px 0;">
-                        <div style="background: #f8fafc; border-radius: 14px; padding: 24px; border: 1px solid #e2e8f0; border-top: 4px solid var(--adv-primary);">
-                            <h3 style="font-size: 1.15rem; margin-top: 0; color: var(--adv-primary);">1. Academic Rigour</h3>
-                            <p style="font-size: 0.875rem; color: #64748b; margin-bottom: 0;">
+                    <div class="adv-mission-grid">
+                        <div class="adv-mission-pillar">
+                            <h3>1. Academic Rigour</h3>
+                            <p>
                                 Delivering experiential CBSE curriculum enhanced with modern digital tools, scientific enquiry, and analytical problem-solving skills.
                             </p>
                         </div>
-                        <div style="background: #f8fafc; border-radius: 14px; padding: 24px; border: 1px solid #e2e8f0; border-top: 4px solid var(--adv-accent-orange);">
-                            <h3 style="font-size: 1.15rem; margin-top: 0; color: var(--adv-accent-orange);">2. Values & Character</h3>
-                            <p style="font-size: 0.875rem; color: #64748b; margin-bottom: 0;">
+                        <div class="adv-mission-pillar accent-orange">
+                            <h3>2. Values & Character</h3>
+                            <p>
                                 Instilling timeless Indian moral values, universal empathy, discipline, and active social responsibility.
                             </p>
                         </div>
-                        <div style="background: #f8fafc; border-radius: 14px; padding: 24px; border: 1px solid #e2e8f0; border-top: 4px solid var(--adv-accent-gold);">
-                            <h3 style="font-size: 1.15rem; margin-top: 0; color: #b45309;">3. Holistic Enrichment</h3>
-                            <p style="font-size: 0.875rem; color: #64748b; margin-bottom: 0;">
+                        <div class="adv-mission-pillar accent-gold">
+                            <h3>3. Holistic Enrichment</h3>
+                            <p>
                                 Fostering artistic expression, sportsmanship, physical wellness, and leadership through co-curricular initiatives.
                             </p>
                         </div>
-                        <div style="background: #f8fafc; border-radius: 14px; padding: 24px; border: 1px solid #e2e8f0; border-top: 4px solid #059669;">
-                            <h3 style="font-size: 1.15rem; margin-top: 0; color: #059669;">4. Global Competencies</h3>
-                            <p style="font-size: 0.875rem; color: #64748b; margin-bottom: 0;">
+                        <div class="adv-mission-pillar accent-green">
+                            <h3>4. Global Competencies</h3>
+                            <p>
                                 Equipping students with AI, coding, effective communication, and collaborative skills required for top global universities.
                             </p>
                         </div>

@@ -1,6 +1,7 @@
 /* ==========================================================================
-   Parshv International School - Inner Pages Stylesheet
+   Advaita School of Excellence - Inner Pages Stylesheet
    Theme: #083B7A (Navy Blue), #F37021 (Orange Accent), #fdbb2d (Gold)
+   Clean Semantic CSS - Strictly No Inline Styles
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -158,7 +159,6 @@
     margin-bottom: 8px;
 }
 
-/* Feature Image inside Article */
 .adv-feature-img-card {
     border-radius: 18px;
     overflow: hidden;
@@ -172,7 +172,6 @@
     display: block;
 }
 
-/* Highlight Quote Box */
 .adv-highlight-box {
     background: #f8fafc;
     border-left: 4px solid var(--adv-accent-orange);
@@ -183,6 +182,7 @@
     font-weight: 600;
     color: var(--adv-primary-dark);
     line-height: 1.6;
+    font-style: italic;
 }
 
 /* --------------------------------------------------------------------------
@@ -244,7 +244,7 @@
     font-weight: 600;
     font-size: 0.875rem;
     text-decoration: none;
-    transition: var(--header-transition);
+    transition: all 0.25s ease;
     background: #f8fafc;
 }
 
@@ -260,7 +260,6 @@
     opacity: 0.7;
 }
 
-/* Sidebar CTA / Contact Box */
 .adv-widget-cta {
     background: linear-gradient(135deg, #031c3d 0%, #083B7A 100%);
     color: #ffffff;
@@ -307,24 +306,20 @@
     font-size: 0.875rem;
     text-decoration: none;
     box-shadow: 0 4px 14px rgba(243, 112, 33, 0.4);
-    transition: var(--header-transition);
+    transition: all 0.25s ease;
 }
 
 .adv-widget-cta .btn-cta:hover {
-    background: var(--adv-accent-orange-hover);
+    background: #E05D0E;
     transform: translateY(-2px);
 }
 
 /* --------------------------------------------------------------------------
-   4. Structured Cards & Tables for Academics & Disclosure
+   4. Tables & Data Cards
    -------------------------------------------------------------------------- */
-.adv-table-card {
-    background: #ffffff;
-    border-radius: 16px;
-    overflow: hidden;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
-    margin: 28px 0;
+.adv-table-wrap {
+    overflow-x: auto;
+    margin: 20px 0 32px;
 }
 
 .adv-table {
@@ -355,30 +350,939 @@
     background: #f8fafc;
 }
 
+.adv-table td:first-child {
+    width: 40%;
+}
+
 .adv-doc-link {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    color: var(--adv-primary);
+    color: #F37021;
     font-weight: 700;
     text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 .adv-doc-link:hover {
-    color: var(--adv-accent-orange);
+    color: #E05D0E;
 }
 
 /* --------------------------------------------------------------------------
-   5. Responsive Rules
+   5. Why Trust / Feature Cards (About Page)
    -------------------------------------------------------------------------- */
+.adv-why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin: 28px 0;
+}
+
+.adv-why-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.adv-why-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(8, 59, 122, 0.1);
+}
+
+.adv-why-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #eff6ff;
+    color: #083B7A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-bottom: 14px;
+}
+
+.adv-why-card h3 {
+    font-size: 1.1rem;
+    color: #083B7A;
+    margin: 0 0 8px;
+    font-weight: 700;
+}
+
+.adv-why-card p {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   6. Vision & Mission Cards
+   -------------------------------------------------------------------------- */
+.adv-vision-card {
+    background: linear-gradient(135deg, #031c3d 0%, #083B7A 100%);
+    color: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    margin-bottom: 36px;
+    box-shadow: 0 16px 40px rgba(8, 59, 122, 0.2);
+}
+
+.adv-vision-card .adv-vision-eyebrow {
+    color: var(--adv-accent-gold);
+    font-size: 0.8125rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.adv-vision-card h2 {
+    color: #ffffff;
+    font-size: 1.85rem;
+    margin: 0 0 16px;
+}
+
+.adv-vision-card p {
+    color: #f1f5f9;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+.adv-mission-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 28px 0;
+}
+
+.adv-mission-pillar {
+    background: #f8fafc;
+    border-radius: 14px;
+    padding: 24px;
+    border: 1px solid #e2e8f0;
+    border-top: 4px solid #083B7A;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.adv-mission-pillar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.adv-mission-pillar.accent-orange { border-top-color: #F37021; }
+.adv-mission-pillar.accent-gold   { border-top-color: #b45309; }
+.adv-mission-pillar.accent-green  { border-top-color: #059669; }
+
+.adv-mission-pillar h3 {
+    font-size: 1.15rem;
+    margin: 0 0 10px;
+    color: #083B7A;
+}
+
+.adv-mission-pillar.accent-orange h3 { color: #F37021; }
+.adv-mission-pillar.accent-gold h3   { color: #b45309; }
+.adv-mission-pillar.accent-green h3  { color: #059669; }
+
+.adv-mission-pillar p {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   7. Leader Profile Cards
+   -------------------------------------------------------------------------- */
+.adv-leader-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 40px;
+}
+
+.adv-leader-card.alt-bg {
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.adv-leader-inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    align-items: flex-start;
+}
+
+.adv-leader-photo {
+    flex: 0 0 220px;
+    max-width: 220px;
+    text-align: center;
+}
+
+.adv-leader-photo img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(8, 59, 122, 0.12);
+    object-fit: cover;
+    aspect-ratio: 1 / 1.15;
+}
+
+.adv-leader-photo h3 {
+    font-size: 1.15rem;
+    color: #083B7A;
+    margin: 14px 0 4px;
+    font-weight: 700;
+}
+
+.adv-leader-photo .adv-leader-role {
+    font-size: 0.85rem;
+    color: #F37021;
+    font-weight: 600;
+    margin-bottom: 0;
+    display: block;
+}
+
+.adv-leader-photo .adv-leader-org {
+    font-size: 0.75rem;
+    color: #64748b;
+    display: block;
+}
+
+.adv-leader-bio {
+    flex: 1;
+    min-width: 280px;
+}
+
+.adv-leader-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.adv-leader-badge.blue  { background: #e0f2fe; color: #0369a1; }
+.adv-leader-badge.amber { background: #fef3c7; color: #b45309; }
+
+.adv-leader-bio h2 {
+    font-size: 1.5rem;
+    color: #083B7A;
+    margin: 0 0 14px;
+}
+
+.adv-leader-bio p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #334155;
+}
+
+.adv-advisory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.adv-advisory-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.adv-advisory-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.adv-advisory-card h4 {
+    color: #083B7A;
+    margin: 0 0 6px;
+    font-size: 1.05rem;
+}
+
+.adv-advisory-card .adv-advisory-role {
+    color: #F37021;
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.adv-advisory-card p {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   8. Academic Stage Cards
+   -------------------------------------------------------------------------- */
+.adv-stages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 32px 0;
+}
+
+.adv-stage-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-left: 5px solid #F37021;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.adv-stage-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.adv-stage-card.border-navy   { border-left-color: #083B7A; }
+.adv-stage-card.border-green  { border-left-color: #059669; }
+.adv-stage-card.border-purple { border-left-color: #7c3aed; }
+
+.adv-stage-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.adv-stage-header h3 {
+    color: #083B7A;
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.adv-stage-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.adv-stage-badge.orange { background: #fff7ed; color: #c2410c; }
+.adv-stage-badge.blue   { background: #eff6ff; color: #1d4ed8; }
+.adv-stage-badge.green  { background: #ecfdf5; color: #047857; }
+.adv-stage-badge.purple { background: #f5f3ff; color: #6d28d9; }
+
+.adv-stage-card > p {
+    color: #475569;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+
+.adv-stage-highlight {
+    font-size: 0.85rem;
+    color: #083B7A;
+    font-weight: 600;
+}
+
+.adv-stage-highlight i {
+    margin-right: 6px;
+}
+
+.adv-stream-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px;
+    margin-top: 14px;
+}
+
+.adv-stream-card {
+    background: #faf5ff;
+    border: 1px solid #e9d5ff;
+    padding: 12px 16px;
+    border-radius: 8px;
+}
+
+.adv-stream-card strong {
+    color: #6b21a8;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.adv-stream-card p {
+    font-size: 0.8rem;
+    color: #4b5563;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   9. Facility Cards Grid
+   -------------------------------------------------------------------------- */
+.adv-facility-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin: 32px 0;
+}
+
+.adv-facility-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.adv-facility-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(8, 59, 122, 0.1);
+}
+
+.adv-facility-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+}
+
+.adv-facility-body {
+    padding: 20px;
+}
+
+.adv-facility-body h3 {
+    color: #083B7A;
+    font-size: 1.15rem;
+    margin: 0 0 8px;
+}
+
+.adv-facility-body h3 i {
+    color: #F37021;
+    margin-right: 6px;
+}
+
+.adv-facility-body p {
+    font-size: 0.88rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   10. Admission Steps Timeline
+   -------------------------------------------------------------------------- */
+.adv-steps-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin: 28px 0;
+}
+
+.adv-step-card {
+    display: flex;
+    gap: 18px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    align-items: flex-start;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.adv-step-card:hover {
+    transform: translateX(4px);
+    box-shadow: 0 6px 20px rgba(8, 59, 122, 0.06);
+}
+
+.adv-step-num {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #083B7A;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.adv-step-num.orange { background: #F37021; }
+.adv-step-num.green  { background: #059669; }
+
+.adv-step-content h3 {
+    color: #083B7A;
+    font-size: 1.1rem;
+    margin: 0 0 6px;
+}
+
+.adv-step-content p {
+    font-size: 0.9rem;
+    color: #475569;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   11. Form Styles
+   -------------------------------------------------------------------------- */
+.adv-form-card {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 10px 30px rgba(8, 59, 122, 0.06);
+}
+
+.adv-form-card h3 {
+    color: #083B7A;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.adv-form-card h3 i {
+    color: #F37021;
+    margin-right: 8px;
+}
+
+.adv-form-card .adv-form-desc {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 24px;
+}
+
+.adv-form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 18px;
+}
+
+.adv-form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.adv-form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.adv-form-label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 6px;
+}
+
+.adv-form-input,
+.adv-form-select,
+.adv-form-textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    background: #fff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    box-sizing: border-box;
+}
+
+.adv-form-input:focus,
+.adv-form-select:focus,
+.adv-form-textarea:focus {
+    outline: none;
+    border-color: #083B7A;
+    box-shadow: 0 0 0 3px rgba(8, 59, 122, 0.1);
+}
+
+.adv-form-submit {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--adv-accent-orange);
+    color: #ffffff;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(243, 112, 33, 0.4);
+    transition: all 0.25s ease;
+    font-family: inherit;
+}
+
+.adv-form-submit:hover {
+    background: #E05D0E;
+    transform: translateY(-2px);
+}
+
+.adv-form-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* --------------------------------------------------------------------------
+   12. Contact Info Cards
+   -------------------------------------------------------------------------- */
+.adv-contact-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.adv-contact-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 28px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.adv-contact-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(8, 59, 122, 0.1);
+}
+
+.adv-contact-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
+
+.adv-contact-icon.blue   { background: #eff6ff; color: #083B7A; }
+.adv-contact-icon.orange { background: #fff7ed; color: #F37021; }
+.adv-contact-icon.green  { background: #ecfdf5; color: #059669; }
+.adv-contact-icon.purple { background: #faf5ff; color: #7c3aed; }
+
+.adv-contact-card h3 {
+    color: #083B7A;
+    font-size: 1.15rem;
+    margin: 0 0 8px;
+}
+
+.adv-contact-card p {
+    font-size: 0.9rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.adv-contact-card a {
+    color: #083B7A;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.adv-contact-card a:hover {
+    color: #F37021;
+}
+
+.adv-contact-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+    align-items: start;
+}
+
+.adv-map-card {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(8, 59, 122, 0.05);
+    margin-bottom: 24px;
+}
+
+.adv-map-card iframe {
+    width: 100%;
+    height: 360px;
+    display: block;
+    border: 0;
+}
+
+.adv-transport-banner {
+    background: linear-gradient(135deg, #083B7A, #031c3d);
+    color: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.adv-transport-banner .adv-transport-icon {
+    font-size: 2.2rem;
+    color: #F37021;
+    flex-shrink: 0;
+}
+
+.adv-transport-banner h4 {
+    color: #fff;
+    margin: 0 0 6px;
+    font-size: 1.1rem;
+}
+
+.adv-transport-banner p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.85rem;
+    margin: 0;
+}
+
+.adv-alert-success {
+    background: #ecfdf5;
+    border: 1px solid #a7f3d0;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.adv-alert-success i {
+    color: #059669;
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.adv-alert-success h4 {
+    color: #065f46;
+    margin: 0 0 4px;
+    font-size: 1.1rem;
+}
+
+.adv-alert-success p {
+    color: #047857;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* --------------------------------------------------------------------------
+   13. Gallery Grid & Filter
+   -------------------------------------------------------------------------- */
+.adv-gallery-filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 36px;
+    flex-wrap: wrap;
+}
+
+.adv-gallery-filter-btn {
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    border: 1px solid #cbd5e1;
+    background: #fff;
+    color: #334155;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-family: inherit;
+    transition: all 0.25s ease;
+}
+
+.adv-gallery-filter-btn:hover {
+    border-color: #083B7A;
+    color: #083B7A;
+}
+
+.adv-gallery-filter-btn.active {
+    background: #083B7A;
+    color: #fff;
+    border-color: #083B7A;
+}
+
+.adv-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.adv-gallery-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.adv-gallery-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(8, 59, 122, 0.15);
+}
+
+.adv-gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.adv-gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.adv-gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(3, 28, 61, 0.85), transparent);
+    padding: 20px 16px 14px;
+    pointer-events: none;
+}
+
+.adv-gallery-cat {
+    display: inline-block;
+    background: rgba(243, 112, 33, 0.9);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 6px;
+}
+
+.adv-gallery-caption {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   14. Achievement Stats & Laurel Cards
+   -------------------------------------------------------------------------- */
+.adv-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 28px 0;
+}
+
+.adv-stat-card {
+    background: linear-gradient(135deg, #083B7A 0%, #0c4ea0 100%);
+    border-radius: 14px;
+    padding: 24px 20px;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(8, 59, 122, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.adv-stat-card:hover {
+    transform: translateY(-4px);
+}
+
+.adv-stat-num {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #F37021;
+    line-height: 1.1;
+    margin-bottom: 6px;
+}
+
+.adv-stat-label {
+    display: block;
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    font-weight: 600;
+}
+
+.adv-laurel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    margin: 24px 0;
+}
+
+.adv-laurel-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.adv-laurel-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.adv-laurel-card .adv-laurel-icon {
+    color: #F37021;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.adv-laurel-card h4 {
+    color: #083B7A;
+    margin: 0 0 6px;
+    font-size: 1.05rem;
+}
+
+.adv-laurel-card p {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* --------------------------------------------------------------------------
+   15. Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+@media (max-width: 1200px) {
+    .adv-inner-grid {
+        gap: 36px;
+    }
+}
+
 @media (max-width: 991px) {
     .adv-inner-grid {
         grid-template-columns: 1fr;
     }
-    
     .adv-sidebar {
         position: static;
         margin-top: 20px;
+    }
+    .adv-mission-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .adv-leader-photo {
+        flex: 0 0 180px;
+        max-width: 180px;
+    }
+    .adv-contact-layout {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -386,8 +1290,92 @@
     .adv-page-banner {
         padding: 50px 0 40px;
     }
-    
     .adv-inner-layout {
         padding: 50px 0;
+    }
+    .adv-mission-grid {
+        grid-template-columns: 1fr;
+    }
+    .adv-leader-photo {
+        flex: 0 0 160px;
+        max-width: 160px;
+    }
+    .adv-leader-bio h2 {
+        font-size: 1.3rem;
+    }
+    .adv-facility-grid {
+        grid-template-columns: 1fr;
+    }
+    .adv-gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+    .adv-stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .adv-contact-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+    .adv-form-grid {
+        grid-template-columns: 1fr;
+    }
+    .adv-vision-card {
+        padding: 28px;
+    }
+    .adv-vision-card h2 {
+        font-size: 1.5rem;
+    }
+    .adv-content-block h2 {
+        font-size: 1.5rem;
+    }
+    .adv-breadcrumb {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .adv-leader-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .adv-leader-photo {
+        flex: none;
+        max-width: 200px;
+    }
+    .adv-leader-bio {
+        min-width: unset;
+        text-align: left;
+    }
+    .adv-step-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .adv-stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .adv-contact-cards {
+        grid-template-columns: 1fr;
+    }
+    .adv-gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    .adv-gallery-filters {
+        gap: 6px;
+    }
+    .adv-gallery-filter-btn {
+        padding: 8px 14px;
+        font-size: 0.8rem;
+    }
+    .adv-transport-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+    .adv-form-card {
+        padding: 20px;
+    }
+    .adv-stream-grid {
+        grid-template-columns: 1fr;
     }
 }

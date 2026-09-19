@@ -1,6 +1,7 @@
 <?php
 /**
  * Facilities & Campus Infrastructure Page - Advaita School of Excellence
+ * Clean Semantic HTML - Strictly No Inline CSS
  */
 $pageTitle = "Campus Infrastructure & Facilities - Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)";
 $activePage = "school";
@@ -49,71 +50,53 @@ require_once __DIR__ . '/includes/header.php';
                     </p>
 
                     <!-- Facility Cards Grid -->
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin: 32px 0;">
+                    <div class="adv-facility-grid">
                         
-                        <!-- Facility 1: Smart Classrooms -->
-                        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04);">
-                            <img src="assets/images/fac-smart-class.jpg" alt="Smart Classrooms" style="width: 100%; height: 180px; object-fit: cover;">
-                            <div style="padding: 20px;">
-                                <h3 style="color: #083B7A; font-size: 1.15rem; margin: 0 0 8px;"><i class="fa-solid fa-chalkboard-user" style="color: #F37021; margin-right: 6px;"></i> Interactive Smart Classrooms</h3>
-                                <p style="font-size: 0.88rem; color: #64748b; line-height: 1.6; margin-bottom: 0;">
-                                    Equipped with interactive touchscreen smart boards, high-speed Wi-Fi, ergonomic furniture, and audio-visual multimedia learning modules.
-                                </p>
+                        <div class="adv-facility-card">
+                            <img src="assets/images/fac-smart-class.jpg" alt="Smart Classrooms">
+                            <div class="adv-facility-body">
+                                <h3><i class="fa-solid fa-chalkboard-user"></i> Interactive Smart Classrooms</h3>
+                                <p>Equipped with interactive touchscreen smart boards, high-speed Wi-Fi, ergonomic furniture, and audio-visual multimedia learning modules.</p>
                             </div>
                         </div>
 
-                        <!-- Facility 2: Science Laboratories -->
-                        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04);">
-                            <img src="assets/images/fac-science-lab.jpg" alt="Composite Science Labs" style="width: 100%; height: 180px; object-fit: cover;">
-                            <div style="padding: 20px;">
-                                <h3 style="color: #083B7A; font-size: 1.15rem; margin: 0 0 8px;"><i class="fa-solid fa-flask-vial" style="color: #F37021; margin-right: 6px;"></i> Advanced Science Labs</h3>
-                                <p style="font-size: 0.88rem; color: #64748b; line-height: 1.6; margin-bottom: 0;">
-                                    Dedicated, fully furnished Physics, Chemistry, and Biology laboratories compliant with CBSE senior secondary practical examination standards.
-                                </p>
+                        <div class="adv-facility-card">
+                            <img src="assets/images/fac-science-lab.jpg" alt="Composite Science Labs">
+                            <div class="adv-facility-body">
+                                <h3><i class="fa-solid fa-flask-vial"></i> Advanced Science Labs</h3>
+                                <p>Dedicated, fully furnished Physics, Chemistry, and Biology laboratories compliant with CBSE senior secondary practical examination standards.</p>
                             </div>
                         </div>
 
-                        <!-- Facility 3: Robotics & AI Lab -->
-                        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04);">
-                            <img src="assets/images/fac-robotics.jpg" alt="Robotics and AI Lab" style="width: 100%; height: 180px; object-fit: cover;">
-                            <div style="padding: 20px;">
-                                <h3 style="color: #083B7A; font-size: 1.15rem; margin: 0 0 8px;"><i class="fa-solid fa-robot" style="color: #F37021; margin-right: 6px;"></i> STEAM & Robotics Hub</h3>
-                                <p style="font-size: 0.88rem; color: #64748b; line-height: 1.6; margin-bottom: 0;">
-                                    Specialized innovation lab with Arduino, LEGO Mindstorms, 3D printing, AI simulation tools, and IoT coding kits for hands-on engineering.
-                                </p>
+                        <div class="adv-facility-card">
+                            <img src="assets/images/fac-robotics.jpg" alt="Robotics and AI Lab">
+                            <div class="adv-facility-body">
+                                <h3><i class="fa-solid fa-robot"></i> STEAM & Robotics Hub</h3>
+                                <p>Specialized innovation lab with Arduino, LEGO Mindstorms, 3D printing, AI simulation tools, and IoT coding kits for hands-on engineering.</p>
                             </div>
                         </div>
 
-                        <!-- Facility 4: Computer Center -->
-                        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04);">
-                            <img src="assets/images/fac-computer.jpg" alt="Computer Lab" style="width: 100%; height: 180px; object-fit: cover;">
-                            <div style="padding: 20px;">
-                                <h3 style="color: #083B7A; font-size: 1.15rem; margin: 0 0 8px;"><i class="fa-solid fa-desktop" style="color: #F37021; margin-right: 6px;"></i> High-Tech IT Lab</h3>
-                                <p style="font-size: 0.88rem; color: #64748b; line-height: 1.6; margin-bottom: 0;">
-                                    Modern computer stations equipped with the latest software, Python/Java coding platforms, cyber-safety filters, and digital literacy tools.
-                                </p>
+                        <div class="adv-facility-card">
+                            <img src="assets/images/fac-computer.jpg" alt="Computer Lab">
+                            <div class="adv-facility-body">
+                                <h3><i class="fa-solid fa-desktop"></i> High-Tech IT Lab</h3>
+                                <p>Modern computer stations equipped with the latest software, Python/Java coding platforms, cyber-safety filters, and digital literacy tools.</p>
                             </div>
                         </div>
 
-                        <!-- Facility 5: Knowledge Resource Library -->
-                        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04);">
-                            <img src="assets/images/fac-library.jpg" alt="School Library" style="width: 100%; height: 180px; object-fit: cover;">
-                            <div style="padding: 20px;">
-                                <h3 style="color: #083B7A; font-size: 1.15rem; margin: 0 0 8px;"><i class="fa-solid fa-book-bookmark" style="color: #F37021; margin-right: 6px;"></i> Digital & Print Library</h3>
-                                <p style="font-size: 0.88rem; color: #64748b; line-height: 1.6; margin-bottom: 0;">
-                                    Over 10,000+ volumes of academic texts, encyclopedias, international fiction, research journals, e-books, and quiet reading areas.
-                                </p>
+                        <div class="adv-facility-card">
+                            <img src="assets/images/fac-library.jpg" alt="School Library">
+                            <div class="adv-facility-body">
+                                <h3><i class="fa-solid fa-book-bookmark"></i> Digital & Print Library</h3>
+                                <p>Over 10,000+ volumes of academic texts, encyclopedias, international fiction, research journals, e-books, and quiet reading areas.</p>
                             </div>
                         </div>
 
-                        <!-- Facility 6: Sports & Athletics Arena -->
-                        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.04);">
-                            <img src="assets/images/fac-sports.jpg" alt="Sports Complex" style="width: 100%; height: 180px; object-fit: cover;">
-                            <div style="padding: 20px;">
-                                <h3 style="color: #083B7A; font-size: 1.15rem; margin: 0 0 8px;"><i class="fa-solid fa-volleyball" style="color: #F37021; margin-right: 6px;"></i> Sports Arena & Grounds</h3>
-                                <p style="font-size: 0.88rem; color: #64748b; line-height: 1.6; margin-bottom: 0;">
-                                    Cricket pitch, football ground, basketball court, badminton, table tennis, yoga pavilion, and dedicated physical fitness trainers.
-                                </p>
+                        <div class="adv-facility-card">
+                            <img src="assets/images/fac-sports.jpg" alt="Sports Complex">
+                            <div class="adv-facility-body">
+                                <h3><i class="fa-solid fa-volleyball"></i> Sports Arena & Grounds</h3>
+                                <p>Cricket pitch, football ground, basketball court, badminton, table tennis, yoga pavilion, and dedicated physical fitness trainers.</p>
                             </div>
                         </div>
 
@@ -124,7 +107,7 @@ require_once __DIR__ . '/includes/header.php';
                         Student safety is our utmost priority. The entire campus is under <strong>24/7 CCTV surveillance</strong> with security personnel stationed at all access gates. Our fleet of GPS-tracked school buses covers major routes across Parbhani, operated by verified drivers and trained bus attendants.
                     </p>
 
-                    <div class="adv-highlight-box" style="margin-top: 30px;">
+                    <div class="adv-highlight-box">
                         "State-of-the-art facilities empower students to explore their boundless curiosity with safety, comfort, and technological excellence."
                     </div>
 
@@ -132,7 +115,6 @@ require_once __DIR__ . '/includes/header.php';
 
                 <!-- Sidebar -->
                 <aside class="adv-sidebar">
-                    <!-- Quick Navigation -->
                     <div class="adv-widget">
                         <h4 class="adv-widget-title">Campus & Facilities</h4>
                         <ul class="adv-widget-links">
@@ -144,7 +126,6 @@ require_once __DIR__ . '/includes/header.php';
                         </ul>
                     </div>
 
-                    <!-- Admission CTA Widget -->
                     <div class="adv-widget-cta">
                         <div class="cta-icon">
                             <i class="fa-solid fa-bus"></i>

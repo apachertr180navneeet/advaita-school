@@ -1,6 +1,7 @@
 <?php
 /**
  * About Us Page - Advaita School of Excellence
+ * Clean Semantic HTML - Strictly No Inline CSS
  */
 $pageTitle = "About Us - Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)";
 $activePage = "school";
@@ -60,31 +61,31 @@ require_once __DIR__ . '/includes/header.php';
                         Advaita has built an enviable track record of academic excellence, sporting triumphs, and cultural laurels. Here are the core pillars that define our institution:
                     </p>
 
-                    <div class="parshv-why-grid" style="margin: 28px 0;">
-                        <div class="parshv-why-card" style="padding: 24px;">
-                            <div class="parshv-why-icon-bubble" style="width: 50px; height: 50px; font-size: 1.3rem;">
+                    <div class="adv-why-grid">
+                        <div class="adv-why-card">
+                            <div class="adv-why-icon">
                                 <i class="fa-solid fa-award"></i>
                             </div>
-                            <h3 class="parshv-why-title" style="font-size: 1.1rem;">100% Board Results</h3>
-                            <p class="parshv-why-desc" style="font-size: 0.85rem;">
+                            <h3>100% Board Results</h3>
+                            <p>
                                 Consistently high pass percentages and district toppers in CBSE Class X & XII board examinations.
                             </p>
                         </div>
-                        <div class="parshv-why-card" style="padding: 24px;">
-                            <div class="parshv-why-icon-bubble" style="width: 50px; height: 50px; font-size: 1.3rem;">
+                        <div class="adv-why-card">
+                            <div class="adv-why-icon">
                                 <i class="fa-solid fa-chalkboard-user"></i>
                             </div>
-                            <h3 class="parshv-why-title" style="font-size: 1.1rem;">Experienced Faculty</h3>
-                            <p class="parshv-why-desc" style="font-size: 0.85rem;">
+                            <h3>Experienced Faculty</h3>
+                            <p>
                                 Over 80+ dedicated, certified teachers providing individual mentorship and continuous support.
                             </p>
                         </div>
-                        <div class="parshv-why-card" style="padding: 24px;">
-                            <div class="parshv-why-icon-bubble" style="width: 50px; height: 50px; font-size: 1.3rem;">
+                        <div class="adv-why-card">
+                            <div class="adv-why-icon">
                                 <i class="fa-solid fa-tree"></i>
                             </div>
-                            <h3 class="parshv-why-title" style="font-size: 1.1rem;">Spacious Green Campus</h3>
-                            <p class="parshv-why-desc" style="font-size: 0.85rem;">
+                            <h3>Spacious Green Campus</h3>
+                            <p>
                                 Expansive sports grounds, clean air, modern architecture, and safe 24/7 CCTV surveillance.
                             </p>
                         </div>

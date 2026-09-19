@@ -1,6 +1,7 @@
 <?php
 /**
  * Academics & Curriculum Page - Advaita School of Excellence
+ * Clean Semantic HTML - Strictly No Inline CSS
  */
 $pageTitle = "Academics & CBSE Curriculum - Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)";
 $activePage = "learning";
@@ -49,72 +50,72 @@ require_once __DIR__ . '/includes/header.php';
                     </p>
 
                     <!-- Academic Stages Cards -->
-                    <div style="display: flex; flex-direction: column; gap: 24px; margin: 32px 0;">
+                    <div class="adv-stages-list">
                         
                         <!-- Stage 1: Foundational Stage -->
-                        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-left: 5px solid #F37021; border-radius: 12px; padding: 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
-                                <h3 style="color: #083B7A; margin: 0; font-size: 1.25rem;">1. Foundational Stage (Play Group, Nursery, LKG, UKG)</h3>
-                                <span style="background: #fff7ed; color: #c2410c; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">Ages 3 – 6 Years</span>
+                        <div class="adv-stage-card">
+                            <div class="adv-stage-header">
+                                <h3>1. Foundational Stage (Play Group, Nursery, LKG, UKG)</h3>
+                                <span class="adv-stage-badge orange">Ages 3 – 6 Years</span>
                             </div>
-                            <p style="color: #475569; font-size: 0.95rem; margin-bottom: 12px;">
+                            <p>
                                 Focuses on joyful play-based learning, phonics, sensorial discovery, fine motor skills, emotional bonding, and numeracy basics through Montessori and thematic activities.
                             </p>
-                            <div style="font-size: 0.85rem; color: #083B7A; font-weight: 600;">
+                            <div class="adv-stage-highlight">
                                 <i class="fa-solid fa-check-circle" style="color: #F37021;"></i> Key Highlights: Activity corners, storytelling, rhythm & movement, alphabet phonetics, and safe play arenas.
                             </div>
                         </div>
 
                         <!-- Stage 2: Preparatory & Primary Stage -->
-                        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-left: 5px solid #083B7A; border-radius: 12px; padding: 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
-                                <h3 style="color: #083B7A; margin: 0; font-size: 1.25rem;">2. Preparatory & Primary Stage (Classes I to V)</h3>
-                                <span style="background: #eff6ff; color: #1d4ed8; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">Classes 1 to 5</span>
+                        <div class="adv-stage-card border-navy">
+                            <div class="adv-stage-header">
+                                <h3>2. Preparatory & Primary Stage (Classes I to V)</h3>
+                                <span class="adv-stage-badge blue">Classes 1 to 5</span>
                             </div>
-                            <p style="color: #475569; font-size: 0.95rem; margin-bottom: 12px;">
+                            <p>
                                 Building foundational literacy, computational thinking, language fluency (English, Hindi, Marathi), Environmental Studies (EVS), coding basics, and general knowledge.
                             </p>
-                            <div style="font-size: 0.85rem; color: #083B7A; font-weight: 600;">
+                            <div class="adv-stage-highlight">
                                 <i class="fa-solid fa-check-circle" style="color: #083B7A;"></i> Key Highlights: Smart interactive boards, hands-on science experiments, reading library hours, and sports fitness.
                             </div>
                         </div>
 
                         <!-- Stage 3: Middle & Secondary Stage -->
-                        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-left: 5px solid #059669; border-radius: 12px; padding: 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
-                                <h3 style="color: #083B7A; margin: 0; font-size: 1.25rem;">3. Middle & Secondary Stage (Classes VI to X)</h3>
-                                <span style="background: #ecfdf5; color: #047857; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">Classes 6 to 10</span>
+                        <div class="adv-stage-card border-green">
+                            <div class="adv-stage-header">
+                                <h3>3. Middle & Secondary Stage (Classes VI to X)</h3>
+                                <span class="adv-stage-badge green">Classes 6 to 10</span>
                             </div>
-                            <p style="color: #475569; font-size: 0.95rem; margin-bottom: 12px;">
+                            <p>
                                 Transitioning to specialized subject studies: Mathematics, Science (Physics, Chemistry, Biology), Social Sciences (History, Civics, Geography), English, Third Language (Sanskrit/Marathi), and Information Technology. Rigorous preparation for CBSE Class X Board Examination.
                             </p>
-                            <div style="font-size: 0.85rem; color: #083B7A; font-weight: 600;">
+                            <div class="adv-stage-highlight">
                                 <i class="fa-solid fa-check-circle" style="color: #059669;"></i> Key Highlights: Lab practicals, Olympiad training, inter-school debates, and robotics innovation.
                             </div>
                         </div>
 
                         <!-- Stage 4: Senior Secondary Stage -->
-                        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-left: 5px solid #7c3aed; border-radius: 12px; padding: 24px; box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; flex-wrap: wrap; gap: 10px;">
-                                <h3 style="color: #083B7A; margin: 0; font-size: 1.25rem;">4. Senior Secondary Wing (Classes XI & XII)</h3>
-                                <span style="background: #f5f3ff; color: #6d28d9; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">Science • Commerce • Humanities</span>
+                        <div class="adv-stage-card border-purple">
+                            <div class="adv-stage-header">
+                                <h3>4. Senior Secondary Wing (Classes XI & XII)</h3>
+                                <span class="adv-stage-badge purple">Science • Commerce • Humanities</span>
                             </div>
-                            <p style="color: #475569; font-size: 0.95rem; margin-bottom: 12px;">
+                            <p>
                                 Targeted specialization preparing students for CBSE Board examinations and national competitive entrances (JEE, NEET, CUET, CA Foundation, CLAT).
                             </p>
                             
-                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-top: 14px;">
-                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 12px 16px; border-radius: 8px;">
-                                    <strong style="color: #6b21a8; font-size: 0.9rem;">Science Stream:</strong>
-                                    <p style="font-size: 0.8rem; color: #4b5563; margin: 4px 0 0;">Physics, Chemistry, Mathematics, Biology, Computer Science, Physical Ed.</p>
+                            <div class="adv-stream-grid">
+                                <div class="adv-stream-card">
+                                    <strong>Science Stream:</strong>
+                                    <p>Physics, Chemistry, Mathematics, Biology, Computer Science, Physical Ed.</p>
                                 </div>
-                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 12px 16px; border-radius: 8px;">
-                                    <strong style="color: #6b21a8; font-size: 0.9rem;">Commerce Stream:</strong>
-                                    <p style="font-size: 0.8rem; color: #4b5563; margin: 4px 0 0;">Accountancy, Business Studies, Economics, Applied Maths, Informatics Practices.</p>
+                                <div class="adv-stream-card">
+                                    <strong>Commerce Stream:</strong>
+                                    <p>Accountancy, Business Studies, Economics, Applied Maths, Informatics Practices.</p>
                                 </div>
-                                <div style="background: #faf5ff; border: 1px solid #e9d5ff; padding: 12px 16px; border-radius: 8px;">
-                                    <strong style="color: #6b21a8; font-size: 0.9rem;">Humanities Stream:</strong>
-                                    <p style="font-size: 0.8rem; color: #4b5563; margin: 4px 0 0;">History, Political Science, Geography, Psychology, Sociology, English Core.</p>
+                                <div class="adv-stream-card">
+                                    <strong>Humanities Stream:</strong>
+                                    <p>History, Political Science, Geography, Psychology, Sociology, English Core.</p>
                                 </div>
                             </div>
                         </div>
@@ -126,7 +127,7 @@ require_once __DIR__ . '/includes/header.php';
                         In adherence to CBSE continuous assessment norms, student progress is assessed through Periodic Assessments (PA-1 & PA-2), Term-End Examinations, Subject Enrichment Activities, and Project Portfolios. We provide detailed analytical reports during Parent-Teacher Meets to foster continuous academic growth.
                     </p>
 
-                    <div class="adv-highlight-box" style="margin-top: 30px;">
+                    <div class="adv-highlight-box">
                         "Education at Advaita is about igniting intellect, cultivating curiosity, and preparing minds capable of transforming tomorrow."
                     </div>
 
@@ -134,7 +135,6 @@ require_once __DIR__ . '/includes/header.php';
 
                 <!-- Sidebar -->
                 <aside class="adv-sidebar">
-                    <!-- Quick Navigation -->
                     <div class="adv-widget">
                         <h4 class="adv-widget-title">Academic Wings</h4>
                         <ul class="adv-widget-links">
@@ -146,7 +146,6 @@ require_once __DIR__ . '/includes/header.php';
                         </ul>
                     </div>
 
-                    <!-- Admission CTA Widget -->
                     <div class="adv-widget-cta">
                         <div class="cta-icon">
                             <i class="fa-solid fa-graduation-cap"></i>

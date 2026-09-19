@@ -1,6 +1,7 @@
 <?php
 /**
  * Achievements & Accolades Page - Advaita School of Excellence
+ * Clean Semantic HTML - Strictly No Inline CSS
  */
 $pageTitle = "Achievements & Accolades - Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)";
 $activePage = "achievements";
@@ -49,27 +50,27 @@ require_once __DIR__ . '/includes/header.php';
                     </p>
 
                     <!-- Stats Counter Grid -->
-                    <div class="parshv-stats-grid" style="margin: 28px 0;">
-                        <div class="parshv-stat-card">
-                            <span class="parshv-stat-num" data-target="100">100%</span>
-                            <span class="parshv-stat-label">CBSE Board Pass Rate</span>
+                    <div class="adv-stats-grid">
+                        <div class="adv-stat-card">
+                            <span class="adv-stat-num">100%</span>
+                            <span class="adv-stat-label">CBSE Board Pass Rate</span>
                         </div>
-                        <div class="parshv-stat-card">
-                            <span class="parshv-stat-num" data-target="98">98.4%</span>
-                            <span class="parshv-stat-label">Highest Board Score</span>
+                        <div class="adv-stat-card">
+                            <span class="adv-stat-num">98.4%</span>
+                            <span class="adv-stat-label">Highest Board Score</span>
                         </div>
-                        <div class="parshv-stat-card">
-                            <span class="parshv-stat-num" data-target="120">120+</span>
-                            <span class="parshv-stat-label">Distinctions in 2025</span>
+                        <div class="adv-stat-card">
+                            <span class="adv-stat-num">120+</span>
+                            <span class="adv-stat-label">Distinctions in 2025</span>
                         </div>
-                        <div class="parshv-stat-card">
-                            <span class="parshv-stat-num" data-target="45">45+</span>
-                            <span class="parshv-stat-label">Olympiad Gold Medals</span>
+                        <div class="adv-stat-card">
+                            <span class="adv-stat-num">45+</span>
+                            <span class="adv-stat-label">Olympiad Gold Medals</span>
                         </div>
                     </div>
 
                     <h2>Recent Academic & Olympiad Distinctions</h2>
-                    <div style="overflow-x: auto; margin: 20px 0 32px;">
+                    <div class="adv-table-wrap">
                         <table class="adv-table">
                             <thead>
                                 <tr>
@@ -115,25 +116,25 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
 
                     <h2>Sports & Co-Curricular Laurels</h2>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; margin: 24px 0;">
-                        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
-                            <div style="color: #F37021; font-size: 1.5rem; margin-bottom: 8px;"><i class="fa-solid fa-trophy"></i></div>
-                            <h4 style="color: #083B7A; margin: 0 0 6px; font-size: 1.05rem;">State Football Championship</h4>
-                            <p style="font-size: 0.85rem; color: #64748b; margin: 0;">Under-17 boys team bagged the Silver trophy at State CBSE Cluster Games.</p>
+                    <div class="adv-laurel-grid">
+                        <div class="adv-laurel-card">
+                            <span class="adv-laurel-icon"><i class="fa-solid fa-trophy"></i></span>
+                            <h4>State Football Championship</h4>
+                            <p>Under-17 boys team bagged the Silver trophy at State CBSE Cluster Games.</p>
                         </div>
-                        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
-                            <div style="color: #F37021; font-size: 1.5rem; margin-bottom: 8px;"><i class="fa-solid fa-medal"></i></div>
-                            <h4 style="color: #083B7A; margin: 0 0 6px; font-size: 1.05rem;">National Karate Gold Medal</h4>
-                            <p style="font-size: 0.85rem; color: #64748b; margin: 0;">Master Raghav clinched Gold in National School Games Martial Arts event.</p>
+                        <div class="adv-laurel-card">
+                            <span class="adv-laurel-icon"><i class="fa-solid fa-medal"></i></span>
+                            <h4>National Karate Gold Medal</h4>
+                            <p>Master Raghav clinched Gold in National School Games Martial Arts event.</p>
                         </div>
-                        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px;">
-                            <div style="color: #F37021; font-size: 1.5rem; margin-bottom: 8px;"><i class="fa-solid fa-award"></i></div>
-                            <h4 style="color: #083B7A; margin: 0 0 6px; font-size: 1.05rem;">Inter-School Robotic Challenge</h4>
-                            <p style="font-size: 0.85rem; color: #64748b; margin: 0;">Advaita STEAM Team was crowned 1st Prize Winners at Regional Robotics Expo.</p>
+                        <div class="adv-laurel-card">
+                            <span class="adv-laurel-icon"><i class="fa-solid fa-award"></i></span>
+                            <h4>Inter-School Robotic Challenge</h4>
+                            <p>Advaita STEAM Team was crowned 1st Prize Winners at Regional Robotics Expo.</p>
                         </div>
                     </div>
 
-                    <div class="adv-highlight-box" style="margin-top: 30px;">
+                    <div class="adv-highlight-box">
                         "Success is not a destination, but an ongoing journey of dedication, discipline, and the pursuit of mastery."
                     </div>
 
@@ -141,7 +142,6 @@ require_once __DIR__ . '/includes/header.php';
 
                 <!-- Sidebar -->
                 <aside class="adv-sidebar">
-                    <!-- Quick Navigation -->
                     <div class="adv-widget">
                         <h4 class="adv-widget-title">Excellence & Results</h4>
                         <ul class="adv-widget-links">
@@ -153,7 +153,6 @@ require_once __DIR__ . '/includes/header.php';
                         </ul>
                     </div>
 
-                    <!-- Admission CTA Widget -->
                     <div class="adv-widget-cta">
                         <div class="cta-icon">
                             <i class="fa-solid fa-trophy"></i>
