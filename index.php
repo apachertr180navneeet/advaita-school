@@ -44,6 +44,16 @@ require_once __DIR__ . '/includes/header.php';
                 <div class="adv-slide" data-slide-index="1">
                     <div class="adv-slide-banner-wrap">
                         <img src="assets/images/hero-slider-results.jpg" alt="Advaita School of Excellence - CBSE Results 2025-26 Proud Achievers" class="adv-slide-banner-img" loading="lazy">
+                        <!-- Real Interactive Hero Action Buttons -->
+                        <div class="adv-banner-hero-actions">
+                            <a href="admissions.php" class="adv-hero-real-btn adv-hero-btn-apply" title="Apply for Admission">
+                                <span>Apply for Admission</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <a href="about-us.php" class="adv-hero-real-btn adv-hero-btn-explore" title="Explore Our School">
+                                <span>Explore Our School</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -776,30 +786,61 @@ require_once __DIR__ . '/includes/header.php';
                     <i class="fa-solid fa-chevron-left"></i>
                 </button>
 
-                <!-- Cards Grid -->
-                <div class="adv-gallery-grid">
-                    
-                    <!-- Card 1: School Building Exterior -->
-                    <div class="adv-gallery-card">
-                        <div class="adv-gallery-img-box">
-                            <img src="assets/images/gallery-day-1.jpg" alt="Advaita School Building and Green Campus" class="adv-gallery-img" loading="lazy">
+                <!-- Slider Viewport -->
+                <div class="adv-gallery-viewport">
+                    <!-- Cards Track -->
+                    <div class="adv-gallery-grid">
+                        
+                        <!-- Card 1: School Building Exterior -->
+                        <div class="adv-gallery-card">
+                            <div class="adv-gallery-img-box">
+                                <img src="assets/images/gallery-day-1.jpg" alt="Advaita School Building and Green Campus" class="adv-gallery-img" loading="lazy">
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Card 2: Smart Classroom Learning -->
-                    <div class="adv-gallery-card">
-                        <div class="adv-gallery-img-box">
-                            <img src="assets/images/gallery-day-2.jpg" alt="Interactive Digital Smart Classroom Session" class="adv-gallery-img" loading="lazy">
+                        <!-- Card 2: Smart Classroom Learning -->
+                        <div class="adv-gallery-card">
+                            <div class="adv-gallery-img-box">
+                                <img src="assets/images/gallery-day-2.jpg" alt="Interactive Digital Smart Classroom Session" class="adv-gallery-img" loading="lazy">
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- Card 3: Sports and Basketball Court -->
-                    <div class="adv-gallery-card">
-                        <div class="adv-gallery-img-box">
-                            <img src="assets/images/gallery-day-3.jpg" alt="Students Playing Basketball on Campus Court" class="adv-gallery-img" loading="lazy">
+                        <!-- Card 3: Sports and Basketball Court -->
+                        <div class="adv-gallery-card">
+                            <div class="adv-gallery-img-box">
+                                <img src="assets/images/gallery-day-3.jpg" alt="Students Playing Basketball on Campus Court" class="adv-gallery-img" loading="lazy">
+                            </div>
                         </div>
-                    </div>
 
+                        <!-- Card 4: STEM & Robotics Laboratory -->
+                        <div class="adv-gallery-card">
+                            <div class="adv-gallery-img-box">
+                                <img src="assets/images/gallery-stem.jpg" alt="Students in STEM and Robotics Laboratory" class="adv-gallery-img" loading="lazy">
+                            </div>
+                        </div>
+
+                        <!-- Card 5: Cultural Arts and Stage Events -->
+                        <div class="adv-gallery-card">
+                            <div class="adv-gallery-img-box">
+                                <img src="assets/images/gallery-cultural.jpg" alt="Cultural Arts Celebration and Stage Performance" class="adv-gallery-img" loading="lazy">
+                            </div>
+                        </div>
+
+                        <!-- Card 6: Morning Assembly & Campus Life -->
+                        <div class="adv-gallery-card">
+                            <div class="adv-gallery-img-box">
+                                <img src="assets/images/gallery-assembly.jpg" alt="Morning Assembly and Student Gathering" class="adv-gallery-img" loading="lazy">
+                            </div>
+                        </div>
+
+                        <!-- Card 7: Athletic Fitness & Track Arena -->
+                        <div class="adv-gallery-card">
+                            <div class="adv-gallery-img-box">
+                                <img src="assets/images/gallery-sports.jpg" alt="Sports and Athletic Track Field" class="adv-gallery-img" loading="lazy">
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
                 <!-- Right Nav Arrow -->

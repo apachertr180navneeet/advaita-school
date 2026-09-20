@@ -299,4 +299,119 @@ document.addEventListener('DOMContentLoaded', () => {
         // Initial state
         updateWhySlider();
     }
+
+    // --------------------------------------------------------------------------
+    // 7. Campus Gallery - Card Slider
+    // --------------------------------------------------------------------------
+    const gallerySliderWrap = document.querySelector('.adv-gallery-slider-wrap');
+    const galleryGrid = document.querySelector('.adv-gallery-grid');
+    const galleryCards = document.querySelectorAll('.adv-gallery-card');
+    const galleryPrevBtn = document.querySelector('.adv-gallery-arrow.prev');
+    const galleryNextBtn = document.querySelector('.adv-gallery-arrow.next');
+    const galleryDots = document.querySelectorAll('.adv-gallery-dot');
+
+    if (galleryGrid && galleryCards.length > 0) {
+        let galleryCurrentIndex = 0;
+        const galleryTotalCards = galleryCards.length;
+
+        function getGalleryVisibleCards() {
+            if (window.innerWidth <= 576) return 1;
+            if (window.innerWidth <= 991) return 2;
+            return 3;
+        }
+
+        function getGalleryMaxIndex() {
+            const visible = getGalleryVisibleCards();
+            return Math.max(0, galleryTotalCards - visible);
+        }
+
+        function updateGallerySlider() {
+            const maxIndex = getGalleryMaxIndex();
+            if (galleryCurrentIndex > maxIndex) {
+                galleryCurrentIndex = 0;
+            }
+
+            // Calculate card step distance accurately
+            let cardStep = 0;
+            if (galleryCards.length > 1) {
+                cardStep = galleryCards[1].offsetLeft - galleryCards[0].offsetLeft;
+            }
+            if (cardStep <= 0) {
+                const gap = window.innerWidth <= 768 ? 16 : (window.innerWidth <= 991 ? 20 : 24);
+                cardStep = galleryCards[0].offsetWidth + gap;
+            }
+
+            const offset = galleryCurrentIndex * cardStep;
+            galleryGrid.style.transform = `translateX(-${offset}px)`;
+
+            // Update dots
+            galleryDots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === galleryCurrentIndex);
+                dot.setAttribute('aria-selected', i === galleryCurrentIndex ? 'true' : 'false');
+            });
+        }
+
+        function gallerySlideNext() {
+            const maxIndex = getGalleryMaxIndex();
+            galleryCurrentIndex = galleryCurrentIndex >= maxIndex ? 0 : galleryCurrentIndex + 1;
+            updateGallerySlider();
+        }
+
+        function gallerySlidePrev() {
+            const maxIndex = getGalleryMaxIndex();
+            galleryCurrentIndex = galleryCurrentIndex <= 0 ? maxIndex : galleryCurrentIndex - 1;
+            updateGallerySlider();
+        }
+
+        if (galleryNextBtn) galleryNextBtn.addEventListener('click', () => { gallerySlideNext(); resetGalleryAutoplay(); });
+        if (galleryPrevBtn) galleryPrevBtn.addEventListener('click', () => { gallerySlidePrev(); resetGalleryAutoplay(); });
+
+        galleryDots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                const maxIndex = getGalleryMaxIndex();
+                galleryCurrentIndex = Math.min(i, maxIndex);
+                updateGallerySlider();
+                resetGalleryAutoplay();
+            });
+        });
+
+        // Pause autoplay on mouse hover
+        if (gallerySliderWrap) {
+            gallerySliderWrap.addEventListener('mouseenter', () => clearInterval(galleryAutoplayTimer));
+            gallerySliderWrap.addEventListener('mouseleave', () => resetGalleryAutoplay());
+        }
+
+        // Mobile touch swipe support
+        let gTouchStartX = 0;
+        let gTouchEndX = 0;
+        galleryGrid.addEventListener('touchstart', (e) => {
+            gTouchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        galleryGrid.addEventListener('touchend', (e) => {
+            gTouchEndX = e.changedTouches[0].screenX;
+            if (gTouchStartX - gTouchEndX > 45) {
+                gallerySlideNext();
+                resetGalleryAutoplay();
+            } else if (gTouchEndX - gTouchStartX > 45) {
+                gallerySlidePrev();
+                resetGalleryAutoplay();
+            }
+        }, { passive: true });
+
+        // Update on window resize
+        window.addEventListener('resize', () => {
+            updateGallerySlider();
+        });
+
+        // Auto-play every 5 seconds
+        let galleryAutoplayTimer = setInterval(gallerySlideNext, 5000);
+
+        function resetGalleryAutoplay() {
+            clearInterval(galleryAutoplayTimer);
+            galleryAutoplayTimer = setInterval(gallerySlideNext, 5000);
+        }
+
+        // Initial state
+        updateGallerySlider();
+    }
 });
