@@ -201,7 +201,7 @@
     <!-- Scripts -->
     <script src="assets/js/header.js"></script>
     <script src="assets/js/slider.js"></script>
-    <script src="assets/js/homepage.js"></script>
+    <script src="assets/js/homepage.js?v=<?php echo filemtime(__DIR__ . '/../assets/js/homepage.js'); ?>"></script>
     <script src="assets/js/footer.js"></script>
 </body>
 </html>

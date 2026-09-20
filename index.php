@@ -625,28 +625,36 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="adv-visit-heading-wrap">
                         <h2 class="adv-visit-heading">
                             Come see the school <br>
-                            for <span class="highlight-orange">yourself.</span>
+                            for <span class="highlight-orange">yourself.
+                                <svg class="heading-swoosh" width="140" height="12" viewBox="0 0 140 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 5C45 11 95 12 137 5" stroke="#F37021" stroke-width="3" stroke-linecap="round"/>
+                                </svg>
+                            </span>
                         </h2>
-                        <!-- Paper plane vector icon -->
+                        <!-- Paper plane vector icon with dotted loop trail -->
                         <div class="adv-visit-plane-icon" aria-hidden="true">
-                            <svg width="42" height="38" viewBox="0 0 42 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2 18L39 3L24 35L17 23L2 18Z" stroke="#93C5FD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M39 3L17 23" stroke="#93C5FD" stroke-width="2" stroke-linecap="round"/>
+                            <svg width="92" height="54" viewBox="0 0 92 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 46 C 20 50, 36 38, 28 24 C 20 10, 42 8, 52 18 C 58 24, 66 18, 72 14" stroke="#93C5FD" stroke-width="1.75" stroke-dasharray="3.5 3.5" stroke-linecap="round"/>
+                                <g transform="translate(60, 2) rotate(6)">
+                                    <path d="M2 13L28 2L18 26L12 16L2 13Z" stroke="#93C5FD" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" fill="rgba(239, 246, 255, 0.5)"/>
+                                    <path d="M28 2L12 16" stroke="#93C5FD" stroke-width="1.75" stroke-linecap="round"/>
+                                </g>
                             </svg>
                         </div>
                     </div>
 
-                    <!-- Description -->
-                    <p class="adv-visit-desc">
-                        Walk our campus, meet our faculty, experience our learning environment, and get all your questions answered &mdash; the best way to know if Advaita is the right home for your child.
-                    </p>
-
-                    <!-- Experience it Yourself Cursive Tag -->
-                    <div class="adv-visit-cursive-tag" aria-hidden="true">
-                        <span>Experience <br><em>it Yourself</em></span>
-                        <svg width="80" height="10" viewBox="0 0 80 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2 3C25 8 55 9 78 4" stroke="#F37021" stroke-width="2.5" stroke-linecap="round"/>
-                        </svg>
+                    <!-- Description & Cursive Tag Row -->
+                    <div class="adv-visit-desc-row">
+                        <p class="adv-visit-desc">
+                            Walk our campus, meet our faculty, experience our learning environment, and get all your questions answered &mdash; the best way to know if Advaita is the right home for your child.
+                        </p>
+                        <!-- Experience it Yourself Cursive Tag -->
+                        <div class="adv-visit-cursive-tag" aria-hidden="true">
+                            <span>Experience <br><em>it Yourself</em></span>
+                            <svg width="86" height="12" viewBox="0 0 86 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3 4C28 10 58 11 83 4" stroke="#F37021" stroke-width="2.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
                     </div>
 
                     <div class="adv-visit-separator"></div>
@@ -691,11 +699,16 @@ require_once __DIR__ . '/includes/header.php';
 
                 <!-- Right Visual Area with Floating Pods -->
                 <div class="adv-visit-visual-side">
-                    <img src="assets/images/campus-visit-visual.jpg" alt="Advaita School of Excellence Campus Visit" class="adv-visit-campus-img" loading="lazy">
-                    <div class="adv-visit-tagline-top" aria-hidden="true">
-                        <span>NURTURING</span>
-                        <span>BRIGHTER</span>
-                        <span>TOMORROWS</span>
+                    <img src="assets/images/campus-visit-visual.jpg?v=<?php echo filemtime(__DIR__ . '/assets/images/campus-visit-visual.jpg'); ?>" alt="Advaita School of Excellence Campus Visit" class="adv-visit-campus-img" loading="lazy">
+                    
+                    <!-- Curved Arch Divider -->
+                    <div class="adv-visit-curve-mask" aria-hidden="true">
+                        <svg viewBox="0 0 100 500" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Warm apricot accent curve -->
+                            <path d="M0 0 L18 0 C46 125 78 230 50 370 C38 430 22 480 8 500 L0 500 Z" fill="#FDF3E8"/>
+                            <!-- Crisp white card curve -->
+                            <path d="M0 0 L9 0 C37 125 69 230 41 370 C29 430 13 480 4 500 L0 500 Z" fill="#FFFFFF"/>
+                        </svg>
                     </div>
 
                     <!-- Floating Action Pods -->

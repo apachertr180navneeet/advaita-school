@@ -186,6 +186,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // --------------------------------------------------------------------------
     // 5. Why Choose Advaita - Card Slider
     // --------------------------------------------------------------------------
+    const whySliderWrap = document.querySelector('.adv-why-slider-wrap');
     const whySliderGrid = document.querySelector('.adv-why-slider-wrap .adv-why-grid');
     const whyCards = document.querySelectorAll('.adv-why-slider-wrap .adv-why-card');
     const whyPrevBtn = document.querySelector('.adv-why-arrow.prev');
@@ -194,15 +195,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (whySliderGrid && whyCards.length > 0) {
         let whyCurrentPage = 0;
-        const whyVisibleCards = 3;
         const whyTotalCards = whyCards.length;
-        const whyTotalPages = Math.ceil(whyTotalCards / whyVisibleCards);
+
+        function getVisibleCards() {
+            if (window.innerWidth <= 576) return 1;
+            if (window.innerWidth <= 768) return 2;
+            return 3;
+        }
+
+        function getTotalPages() {
+            return Math.ceil(whyTotalCards / getVisibleCards());
+        }
 
         function updateWhySlider() {
-            const gap = 24;
-            const card = whyCards[0];
-            const cardWidth = card.offsetWidth + gap;
-            const offset = whyCurrentPage * whyVisibleCards * cardWidth;
+            const visible = getVisibleCards();
+            const totalPages = getTotalPages();
+            if (whyCurrentPage >= totalPages) {
+                whyCurrentPage = 0;
+            }
+
+            // Calculate card step distance accurately
+            let cardStep = 0;
+            if (whyCards.length > 1) {
+                cardStep = whyCards[1].offsetLeft - whyCards[0].offsetLeft;
+            }
+            if (cardStep <= 0) {
+                const gap = window.innerWidth <= 768 ? 16 : (window.innerWidth <= 991 ? 20 : 24);
+                cardStep = whyCards[0].offsetWidth + gap;
+            }
+
+            const maxOffset = Math.max(0, (whyTotalCards - visible) * cardStep);
+            const targetOffset = whyCurrentPage * visible * cardStep;
+            const offset = Math.min(targetOffset, maxOffset);
+
             whySliderGrid.style.transform = `translateX(-${offset}px)`;
 
             // Update dots
@@ -213,12 +238,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         function whySlideNext() {
-            whyCurrentPage = (whyCurrentPage + 1) % whyTotalPages;
+            const totalPages = getTotalPages();
+            whyCurrentPage = (whyCurrentPage + 1) % totalPages;
             updateWhySlider();
         }
 
         function whySlidePrev() {
-            whyCurrentPage = (whyCurrentPage - 1 + whyTotalPages) % whyTotalPages;
+            const totalPages = getTotalPages();
+            whyCurrentPage = (whyCurrentPage - 1 + totalPages) % totalPages;
             updateWhySlider();
         }
 
@@ -231,6 +258,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 updateWhySlider();
                 resetWhyAutoplay();
             });
+        });
+
+        // Pause autoplay on mouse hover
+        if (whySliderWrap) {
+            whySliderWrap.addEventListener('mouseenter', () => clearInterval(whyAutoplayTimer));
+            whySliderWrap.addEventListener('mouseleave', () => resetWhyAutoplay());
+        }
+
+        // Mobile touch swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+        whySliderGrid.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        whySliderGrid.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            if (touchStartX - touchEndX > 45) {
+                whySlideNext();
+                resetWhyAutoplay();
+            } else if (touchEndX - touchStartX > 45) {
+                whySlidePrev();
+                resetWhyAutoplay();
+            }
+        }, { passive: true });
+
+        // Update on window resize
+        window.addEventListener('resize', () => {
+            updateWhySlider();
         });
 
         // Auto-play every 5 seconds

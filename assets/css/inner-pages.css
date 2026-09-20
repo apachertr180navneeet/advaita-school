@@ -371,14 +371,14 @@
 /* --------------------------------------------------------------------------
    5. Why Trust / Feature Cards (About Page)
    -------------------------------------------------------------------------- */
-.adv-why-grid {
+.adv-content-block .adv-why-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
     margin: 28px 0;
 }
 
-.adv-why-card {
+.adv-content-block .adv-why-card {
     background: #ffffff;
     border: 1px solid #e2e8f0;
     border-radius: 14px;
@@ -387,12 +387,12 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.adv-why-card:hover {
+.adv-content-block .adv-why-card:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 28px rgba(8, 59, 122, 0.1);
 }
 
-.adv-why-icon {
+.adv-content-block .adv-why-icon {
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -405,14 +405,14 @@
     margin-bottom: 14px;
 }
 
-.adv-why-card h3 {
+.adv-content-block .adv-why-card h3 {
     font-size: 1.1rem;
     color: #083B7A;
     margin: 0 0 8px;
     font-weight: 700;
 }
 
-.adv-why-card p {
+.adv-content-block .adv-why-card p {
     font-size: 0.85rem;
     color: #64748b;
     line-height: 1.6;
