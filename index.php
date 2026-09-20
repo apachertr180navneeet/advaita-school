@@ -25,44 +25,25 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="adv-slide-banner-wrap">
                         <img src="assets/images/hero-slider-main.jpg" alt="Advaita School of Excellence - Building Curious Minds. Shaping Confident Futures." class="adv-slide-banner-img" loading="eager">
                         
-                        <!-- Interactive Clickable Hotspots overlaying the banner buttons -->
-                        <div class="adv-banner-clickable-overlay">
-                            <a href="admissions.php" class="adv-transparent-hotspot adv-hotspot-apply-link" title="Apply for Admission" aria-label="Apply for Admission"></a>
-                            <a href="about-us.php" class="adv-transparent-hotspot adv-hotspot-explore-link" title="Explore Our School" aria-label="Explore Our School"></a>
+                        <!-- Real Interactive Hero Action Buttons -->
+                        <div class="adv-banner-hero-actions">
+                            <a href="admissions.php" class="adv-hero-real-btn adv-hero-btn-apply" title="Apply for Admission">
+                                <span>Apply for Admission</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <a href="about-us.php" class="adv-hero-real-btn adv-hero-btn-explore" title="Explore Our School">
+                                <span>Explore Our School</span>
+                            </a>
                         </div>
                     </div>
                 </div>
 
                 <!-- ----------------------------------------------------
-                     SLIDE 2: Campus Infrastructure & Learning
+                     SLIDE 2: CBSE Results 2025-26 (Proud Achievers)
                      ---------------------------------------------------- -->
                 <div class="adv-slide" data-slide-index="1">
                     <div class="adv-slide-banner-wrap">
-                        <div class="adv-slide-bg" style="background-image: url('assets/images/hero-campus-1.jpg');"></div>
-                        <div class="adv-slide-overlay-rich">
-                            <div class="adv-slide-content-rich">
-                                <div class="adv-hero-pill-tag">
-                                    <span class="tag-dot"></span> WORLD-CLASS INFRASTRUCTURE
-                                </div>
-                                <h2 class="adv-slide-title-rich">
-                                    Empowering Young Minds <br>
-                                    <span class="highlight">Beyond the Classroom</span>
-                                </h2>
-                                <p class="adv-slide-lead-rich">
-                                    Expansive green sports grounds, cutting-edge science labs, performing arts auditorium, and modern digital classrooms.
-                                </p>
-                                <div class="adv-slider-actions-rich">
-                                    <a href="admissions.php" class="adv-btn-hero-primary">
-                                        <span>Apply for Admission</span>
-                                        <i class="fa-solid fa-arrow-right"></i>
-                                    </a>
-                                    <a href="facilities.php" class="adv-btn-hero-secondary">
-                                        <i class="fa-solid fa-building-columns"></i>
-                                        <span>Explore Campus</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        <img src="assets/images/hero-slider-results.jpg" alt="Advaita School of Excellence - CBSE Results 2025-26 Proud Achievers" class="adv-slide-banner-img" loading="lazy">
                     </div>
                 </div>
 
