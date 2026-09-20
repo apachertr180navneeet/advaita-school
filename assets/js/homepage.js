@@ -182,4 +182,66 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // --------------------------------------------------------------------------
+    // 5. Why Choose Advaita - Card Slider
+    // --------------------------------------------------------------------------
+    const whySliderGrid = document.querySelector('.adv-why-slider-wrap .adv-why-grid');
+    const whyCards = document.querySelectorAll('.adv-why-slider-wrap .adv-why-card');
+    const whyPrevBtn = document.querySelector('.adv-why-arrow.prev');
+    const whyNextBtn = document.querySelector('.adv-why-arrow.next');
+    const whyDots = document.querySelectorAll('.adv-why-dot');
+
+    if (whySliderGrid && whyCards.length > 0) {
+        let whyCurrentPage = 0;
+        const whyVisibleCards = 3;
+        const whyTotalCards = whyCards.length;
+        const whyTotalPages = Math.ceil(whyTotalCards / whyVisibleCards);
+
+        function updateWhySlider() {
+            const gap = 24;
+            const card = whyCards[0];
+            const cardWidth = card.offsetWidth + gap;
+            const offset = whyCurrentPage * whyVisibleCards * cardWidth;
+            whySliderGrid.style.transform = `translateX(-${offset}px)`;
+
+            // Update dots
+            whyDots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === whyCurrentPage);
+                dot.setAttribute('aria-selected', i === whyCurrentPage ? 'true' : 'false');
+            });
+        }
+
+        function whySlideNext() {
+            whyCurrentPage = (whyCurrentPage + 1) % whyTotalPages;
+            updateWhySlider();
+        }
+
+        function whySlidePrev() {
+            whyCurrentPage = (whyCurrentPage - 1 + whyTotalPages) % whyTotalPages;
+            updateWhySlider();
+        }
+
+        if (whyNextBtn) whyNextBtn.addEventListener('click', () => { whySlideNext(); resetWhyAutoplay(); });
+        if (whyPrevBtn) whyPrevBtn.addEventListener('click', () => { whySlidePrev(); resetWhyAutoplay(); });
+
+        whyDots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                whyCurrentPage = i;
+                updateWhySlider();
+                resetWhyAutoplay();
+            });
+        });
+
+        // Auto-play every 5 seconds
+        let whyAutoplayTimer = setInterval(whySlideNext, 5000);
+
+        function resetWhyAutoplay() {
+            clearInterval(whyAutoplayTimer);
+            whyAutoplayTimer = setInterval(whySlideNext, 5000);
+        }
+
+        // Initial state
+        updateWhySlider();
+    }
 });
