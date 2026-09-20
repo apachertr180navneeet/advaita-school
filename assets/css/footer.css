@@ -40,26 +40,6 @@
     display: block;
 }
 
-/* Right Campus Building Graphic Background */
-.adv-footer-building-bg {
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 250px;
-    width: 340px;
-    pointer-events: none;
-    z-index: 1;
-    overflow: hidden;
-}
-
-.adv-footer-building-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: right top;
-    display: block;
-}
-
 /* --------------------------------------------------------------------------
    Main Content Area & 5-Column Grid
    -------------------------------------------------------------------------- */
@@ -470,10 +450,6 @@ a.touch-link:hover {
     .adv-footer-map-card {
         max-width: 320px;
     }
-
-    .adv-footer-building-bg {
-        opacity: 0.4;
-    }
 }
 
 @media (max-width: 991px) {
@@ -484,10 +460,6 @@ a.touch-link:hover {
 
     .adv-footer-map-col {
         grid-column: span 2;
-    }
-
-    .adv-footer-building-bg {
-        display: none;
     }
 }
 

@@ -26,7 +26,7 @@ $pageTitle = $pageTitle ?? 'Advaita School of Excellence - Sanmati Sevabhavi San
     <link rel="stylesheet" href="assets/css/homepage.css?v=<?php echo filemtime(__DIR__ . '/../assets/css/homepage.css'); ?>">
     <link rel="stylesheet" href="assets/css/inner-pages.css?v=<?php echo filemtime(__DIR__ . '/../assets/css/inner-pages.css'); ?>">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/footer.css?v=<?php echo filemtime(__DIR__ . '/../assets/css/footer.css'); ?>">
 </head>
 <body>
     <?php require_once __DIR__ . '/navbar.php'; ?>

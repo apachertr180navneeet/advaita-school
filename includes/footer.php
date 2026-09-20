@@ -18,11 +18,6 @@
             <img src="assets/images/footer-foliage-top.png" alt="" class="adv-footer-foliage-img">
         </div>
 
-        <!-- Right Campus Building Graphic Background -->
-        <div class="adv-footer-building-bg" aria-hidden="true">
-            <img src="assets/images/footer-building-clean.jpg" alt="" class="adv-footer-building-img">
-        </div>
-
         <!-- Main 5-Column Content Area -->
         <div class="adv-footer-main">
             <div class="adv-container adv-footer-container">
