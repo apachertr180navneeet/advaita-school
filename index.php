@@ -277,7 +277,7 @@ require_once __DIR__ . '/includes/header.php';
     <!-- ====================================================================
          SECTION 4: WHAT MAKES ADVAITA SPECIAL (THREE PILLARS)
          ==================================================================== -->
-    <section class="adv-pillars-section" id="why-parshv" aria-label="What Makes Advaita Special - Three Pillars">
+    <section class="adv-pillars-section" id="why-advaita" aria-label="What Makes Advaita Special - Three Pillars">
         <div class="adv-pillars-container">
             
             <!-- Section Header -->
@@ -1439,7 +1439,7 @@ require_once __DIR__ . '/includes/header.php';
                 <div class="parshv-director-grid">
                     <!-- Director Photo -->
                     <div class="parshv-director-photo-wrap">
-                        <img src="assets/images/director.jpg" alt="Narendra Jain - Director, Parshv International School" loading="lazy">
+                        <img src="assets/images/director.jpg" alt="Narendra Jain - Director, Advaita School of Excellence" loading="lazy">
                         <div class="parshv-director-quote-badge">
                             <i class="fa-solid fa-quote-left"></i> LEADERSHIP DESK
                         </div>
@@ -1575,7 +1575,7 @@ require_once __DIR__ . '/includes/header.php';
 
 
     <!-- ====================================================================
-         SECTION 10: STUDENT LIFE / GALLERY (LIFE AT PARSHV)
+         SECTION 10: STUDENT LIFE / GALLERY (LIFE AT ADVAITA)
          ==================================================================== -->
     <section class="parshv-section parshv-section-alt" id="gallery" aria-label="Student Life Gallery">
         <div class="parshv-container">
@@ -1584,7 +1584,7 @@ require_once __DIR__ . '/includes/header.php';
                     <i class="fa-solid fa-camera"></i> CAMPUS MOMENTS
                 </span>
                 <h2 class="parshv-section-title">
-                    Life at <span class="highlight">Parshv</span>
+                    Life at <span class="highlight">Advaita</span>
                 </h2>
                 <p class="parshv-section-subtitle">
                     A vibrant tapestry of morning assemblies, hands-on scientific discoveries, sporting achievements, and joyous cultural celebrations.

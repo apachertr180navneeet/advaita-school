@@ -1,5 +1,5 @@
 /**
- * Parshv International School - Homepage Interactivity Script
+ * Advaita School of Excellence - Homepage Interactivity Script
  * Handles animated counters, gallery lightbox, smooth scroll & interactive cards.
  */
 
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function openLightbox(src, title) {
         lightboxImg.src = src;
-        lightboxCaption.innerText = title || 'Parshv International School';
+        lightboxCaption.innerText = title || 'Advaita School of Excellence';
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
     }
