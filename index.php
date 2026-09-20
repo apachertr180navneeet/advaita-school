@@ -23,7 +23,7 @@ require_once __DIR__ . '/includes/header.php';
                      ---------------------------------------------------- -->
                 <div class="adv-slide active" data-slide-index="0">
                     <div class="adv-slide-banner-wrap">
-                        <img src="assets/images/hero-slider-main.jpg" alt="Advaita School of Excellence - Building Curious Minds. Shaping Confident Futures." class="adv-slide-banner-img" loading="eager">
+                        <img src="assets/images/advaita_cbse_results_slider_1024x586.png" alt="Advaita School of Excellence - Building Curious Minds. Shaping Confident Futures." class="adv-slide-banner-img" loading="eager">
                         
                         <!-- Real Interactive Hero Action Buttons -->
                         <div class="adv-banner-hero-actions">
@@ -43,7 +43,7 @@ require_once __DIR__ . '/includes/header.php';
                      ---------------------------------------------------- -->
                 <div class="adv-slide" data-slide-index="1">
                     <div class="adv-slide-banner-wrap">
-                        <img src="assets/images/hero-slider-results.jpg" alt="Advaita School of Excellence - CBSE Results 2025-26 Proud Achievers" class="adv-slide-banner-img" loading="lazy">
+                        <img src="assets/images/advaita_cbse_results_slider_1024x586.png" alt="Advaita School of Excellence - CBSE Results 2025-26 Proud Achievers" class="adv-slide-banner-img" loading="lazy">
                         <!-- Real Interactive Hero Action Buttons -->
                         <div class="adv-banner-hero-actions">
                             <a href="admissions.php" class="adv-hero-real-btn adv-hero-btn-apply" title="Apply for Admission">
