@@ -166,13 +166,12 @@ body.adv-drawer-open {
     top: 0;
     z-index: 1000;
     width: 100%;
-    padding: 6px 0 0 0;
+    padding: 0;
     transition: var(--header-transition);
 }
 
 .adv-main-header.is-scrolled {
-    padding: 4px 0 0 0;
-    box-shadow: 0 8px 24px rgba(3, 28, 61, 0.3);
+    box-shadow: 0 8px 24px rgba(3, 28, 61, 0.25);
 }
 
 .adv-header-fullwidth {
@@ -182,55 +181,23 @@ body.adv-drawer-open {
     position: relative;
 }
 
-/* Decorative curved swooshes (Corners & Center Shoulders) */
-.adv-header-curve-decor {
+/* Far Left & Far Right Orange Corner Wings */
+.adv-svg-corner {
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    height: 64px;
+    width: 45px;
+    z-index: 1;
     pointer-events: none;
-    z-index: 2;
+    overflow: hidden;
 }
 
-/* Far Left Orange Corner Swoosh */
 .adv-svg-corner-left {
-    position: absolute;
     left: 0;
-    top: 0;
-    width: 68px;
-    height: 100%;
-    z-index: 1;
 }
 
-/* Far Right Orange Corner Swoosh */
 .adv-svg-corner-right {
-    position: absolute;
     right: 0;
-    top: 0;
-    width: 68px;
-    height: 100%;
-    z-index: 1;
-}
-
-/* Center Left Shoulder Swoop Arc */
-.adv-svg-shoulder-left {
-    position: absolute;
-    top: -12px;
-    left: calc(50% - 180px);
-    width: 85px;
-    height: 38px;
-    z-index: 4;
-}
-
-/* Center Right Shoulder Swoop Arc */
-.adv-svg-shoulder-right {
-    position: absolute;
-    top: -12px;
-    right: calc(50% - 180px);
-    width: 85px;
-    height: 38px;
-    z-index: 4;
 }
 
 /* White Full-Width Ribbon */
@@ -238,11 +205,12 @@ body.adv-drawer-open {
     position: relative;
     z-index: 5;
     background: #ffffff;
-    padding: 6px clamp(16px, 3.5vw, 48px);
+    padding: 0 clamp(20px, 2.5vw, 44px);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    height: 64px;
     min-height: 64px;
     width: 100%;
 }
@@ -252,6 +220,8 @@ body.adv-drawer-open {
     display: flex;
     align-items: center;
     flex: 1;
+    position: relative;
+    z-index: 2;
 }
 
 .adv-nav-section-left {
@@ -264,19 +234,19 @@ body.adv-drawer-open {
     gap: 12px;
 }
 
-/* Home Button Pill */
+/* Home Button */
 .adv-nav-home-btn {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    background: linear-gradient(135deg, #f58220 0%, var(--adv-accent-orange) 100%);
+    background: #F37021;
     color: #ffffff;
-    padding: 8px 18px;
-    border-radius: 12px;
+    padding: 8px 16px;
+    border-radius: 8px;
     font-size: 0.875rem;
     font-weight: 700;
     text-decoration: none;
-    box-shadow: 0 3px 10px rgba(243, 112, 33, 0.35);
+    box-shadow: 0 3px 10px rgba(243, 112, 33, 0.3);
     transition: var(--header-transition);
     white-space: nowrap;
 }
@@ -310,7 +280,7 @@ body.adv-drawer-open {
     display: inline-flex;
     align-items: center;
     gap: 5px;
-    padding: 9px 11px;
+    padding: 8px 11px;
     color: #083B7A;
     font-size: 0.875rem;
     font-weight: 700;
@@ -340,43 +310,69 @@ body.adv-drawer-open {
     color: var(--adv-accent-orange);
 }
 
-/* Center Brand Pod */
+/* Center Brand Pod Anchor in Ribbon Flow */
 .adv-nav-brand-pod {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 64px;
+    width: 230px;
     flex-shrink: 0;
-    position: relative;
-    z-index: 10;
-    margin: -14px 10px -12px 10px;
+    margin: 0 82px;
+    z-index: 25;
 }
 
+/* Sculpted Floating Brand Badge */
 .adv-brand-badge-pod {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 230px;
+    height: 96px;
+    background: #ffffff;
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 10px 28px rgba(3, 28, 61, 0.14), 0 2px 6px rgba(0, 0, 0, 0.04);
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #ffffff;
-    padding: 8px 18px;
-    border-radius: 18px;
-    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.16), 0 1px 4px rgba(0, 0, 0, 0.06);
+    padding: 8px 16px 12px 16px;
     text-decoration: none;
-    transition: var(--header-transition);
-    min-width: 215px;
-    min-height: 76px;
-    border: 1px solid rgba(8, 59, 122, 0.06);
+    z-index: 25;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .adv-brand-badge-pod:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transform: translateX(-50%) translateY(-2px);
+    box-shadow: 0 14px 34px rgba(3, 28, 61, 0.18), 0 4px 10px rgba(0, 0, 0, 0.06);
 }
 
 .adv-brand-logo-pod-img {
-    max-height: 56px;
+    max-height: 54px;
     max-width: 195px;
     width: auto;
     object-fit: contain;
     display: block;
+}
+
+/* Shoulder Swoop Wings (Anchored directly to the Badge top corners) */
+.adv-shoulder-wing {
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: 22px;
+    pointer-events: none;
+    z-index: 24;
+    display: block;
+}
+
+.adv-shoulder-left {
+    right: calc(100% - 1px);
+}
+
+.adv-shoulder-right {
+    left: calc(100% - 1px);
 }
 
 /* Apply for Admission CTA Button */
@@ -384,14 +380,14 @@ body.adv-drawer-open {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: linear-gradient(135deg, #f58220 0%, var(--adv-accent-orange) 100%);
+    background: #F37021;
     color: #ffffff;
     padding: 10px 22px;
     border-radius: 30px;
     font-size: 0.875rem;
     font-weight: 700;
     text-decoration: none;
-    box-shadow: 0 4px 14px rgba(243, 112, 33, 0.38);
+    box-shadow: 0 4px 14px rgba(243, 112, 33, 0.35);
     transition: var(--header-transition);
     white-space: nowrap;
 }
@@ -404,7 +400,7 @@ body.adv-drawer-open {
 .adv-nav-apply-btn:hover {
     background: var(--adv-accent-orange-hover);
     transform: translateY(-1px);
-    box-shadow: 0 6px 18px rgba(243, 112, 33, 0.48);
+    box-shadow: 0 6px 18px rgba(243, 112, 33, 0.45);
     color: #ffffff;
 }
 
@@ -831,31 +827,34 @@ body.adv-drawer-open {
 /* 1. Large Laptops / Screens (1200px - 1400px) */
 @media (max-width: 1400px) {
     .adv-nav-link {
-        padding: 8px 7px;
+        padding: 8px 6px;
         font-size: 0.8125rem;
     }
     .adv-nav-home-btn {
-        padding: 7px 14px;
+        padding: 7px 12px;
         font-size: 0.8125rem;
     }
     .adv-nav-apply-btn {
         padding: 8px 16px;
         font-size: 0.8125rem;
     }
+    .adv-nav-brand-pod {
+        width: 205px;
+        margin: 0 68px;
+    }
     .adv-brand-badge-pod {
-        min-width: 190px;
-        min-height: 68px;
-        padding: 6px 14px;
+        width: 205px;
+        height: 90px;
+        top: -18px;
+        padding: 6px 12px 10px 12px;
     }
     .adv-brand-logo-pod-img {
         max-height: 48px;
-        max-width: 170px;
+        max-width: 175px;
     }
-    .adv-svg-shoulder-left {
-        left: calc(50% - 150px);
-    }
-    .adv-svg-shoulder-right {
-        right: calc(50% - 150px);
+    .adv-shoulder-wing {
+        width: 66px;
+        height: 20px;
     }
 }
 
@@ -871,7 +870,8 @@ body.adv-drawer-open {
     /* Hide desktop nav elements and center decor */
     .adv-nav-section-left,
     .adv-nav-section-right,
-    .adv-header-curve-decor {
+    .adv-shoulder-wing,
+    .adv-svg-corner {
         display: none !important;
     }
     
@@ -882,24 +882,38 @@ body.adv-drawer-open {
         border-radius: 0;
         padding: 6px 16px !important;
         min-height: 56px !important;
+        height: auto !important;
         width: 100% !important;
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     }
     
     .adv-nav-brand-pod {
+        position: static !important;
         margin: 0 !important;
+        width: auto !important;
+        height: auto !important;
         display: flex !important;
         align-items: center !important;
         flex-shrink: 0 !important;
     }
     
     .adv-brand-badge-pod {
+        position: static !important;
+        transform: none !important;
+        width: auto !important;
         min-width: unset !important;
+        height: auto !important;
         min-height: unset !important;
+        margin: 0 !important;
         padding: 4px 6px !important;
-        border-radius: 8px;
+        border-radius: 8px !important;
         box-shadow: none !important;
         border: none !important;
+    }
+
+    .adv-brand-badge-pod:hover {
+        transform: none !important;
+        box-shadow: none !important;
     }
     
     .adv-brand-logo-pod-img {

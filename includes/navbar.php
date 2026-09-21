@@ -8,71 +8,56 @@
 $currentPage = $activePage ?? '';
 ?>
 
-<!-- Top Utility & Information Bar -->
-<div class="adv-topbar">
-    <div class="adv-topbar-container">
-        <!-- Left Side Tagline / Affiliation -->
-        <div class="adv-topbar-left">
-            <i class="fa-solid fa-location-dot adv-topbar-pin"></i>
-            <span>Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)</span>
-            <span class="adv-topbar-sep">|</span>
-        </div>
+<!-- Main Navigation Header -->
+<header class="adv-main-header">
+    <!-- Top Utility & Information Bar -->
+    <div class="adv-topbar">
+        <div class="adv-topbar-container">
+            <!-- Left Side Tagline / Affiliation -->
+            <div class="adv-topbar-left">
+                <i class="fa-solid fa-location-dot adv-topbar-pin"></i>
+                <span>Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)</span>
+                <span class="adv-topbar-sep">|</span>
+            </div>
 
-        <!-- Right Side Links & Socials -->
-        <div class="adv-topbar-right">
-            <ul class="adv-topbar-links">
-                <li><a href="about-us.php">Sanmati Sevabhavi Sanstha</a></li>
-                <li class="pipe">|</li>
-                <li><a href="contact.php">Work at Advaita</a></li>
-                <li class="pipe">|</li>
-                <li><a href="contact.php">Contact</a></li>
-                <li class="pipe">|</li>
-            </ul>
+            <!-- Right Side Links & Socials -->
+            <div class="adv-topbar-right">
+                <ul class="adv-topbar-links">
+                    <li><a href="about-us.php">Sanmati Sevabhavi Sanstha</a></li>
+                    <li class="pipe">|</li>
+                    <li><a href="contact.php">Work at Advaita</a></li>
+                    <li class="pipe">|</li>
+                    <li><a href="contact.php">Contact</a></li>
+                    <li class="pipe">|</li>
+                </ul>
 
-            <div class="adv-topbar-socials">
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter / X" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                <div class="adv-topbar-socials">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter / X" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- Main Navigation Header -->
-<header class="adv-main-header">
     <div class="adv-header-fullwidth">
-        <!-- Decorative Orange Swooshes (Left Corner, Center Shoulders, Right Corner) -->
-        <div class="adv-header-curve-decor" aria-hidden="true">
-            <!-- Far Left Orange Swoosh / Wing -->
-            <svg class="adv-svg-corner adv-svg-corner-left" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                <path d="M0 0C0 0 25 10 45 35C60 53 70 70 70 70H0V0Z" fill="#F37021"/>
-            </svg>
-
-            <!-- Center Left Shoulder Arc -->
-            <svg class="adv-svg-shoulder adv-svg-shoulder-left" viewBox="0 0 90 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M90 0C65 0 40 10 15 28L0 40H90V0Z" fill="#F37021"/>
-                <path d="M90 6C68 6 46 16 23 32L12 40H90V6Z" fill="#FFFFFF"/>
-            </svg>
-
-            <!-- Center Right Shoulder Arc -->
-            <svg class="adv-svg-shoulder adv-svg-shoulder-right" viewBox="0 0 90 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M0 0C25 0 50 10 75 28L90 40H0V0Z" fill="#F37021"/>
-                <path d="M0 6C22 6 44 16 67 32L78 40H0V6Z" fill="#FFFFFF"/>
-            </svg>
-
-            <!-- Far Right Orange Swoosh / Wing -->
-            <svg class="adv-svg-corner adv-svg-corner-right" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                <path d="M70 0C70 0 45 10 25 35C10 53 0 70 0 70H70V0Z" fill="#F37021"/>
-            </svg>
-        </div>
-
         <div class="adv-nav-ribbon">
+            <!-- Far Left Corner Orange Wing -->
+            <svg class="adv-svg-corner adv-svg-corner-left" viewBox="0 0 45 64" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0 0C32 12 32 52 0 64V0Z" fill="#F37021"/>
+            </svg>
+
+            <!-- Far Right Corner Orange Wing -->
+            <svg class="adv-svg-corner adv-svg-corner-right" viewBox="0 0 45 64" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M45 0C13 12 13 52 45 64V0Z" fill="#F37021"/>
+            </svg>
+
             <!-- Left Desktop Menu -->
             <div class="adv-nav-section adv-nav-section-left">
                 <!-- Home Pill Button -->
-                <a href="index.php" class="adv-nav-home-btn <?php echo ($currentPage === '' || $currentPage === 'home') ? 'active' : ''; ?>" title="Home">
+                <a href="index.php" class="adv-nav-home-btn <?php echo ($currentPage === '' || $currentPage === 'home' || $currentPage === 'index') ? 'active' : ''; ?>" title="Home">
                     <i class="fa-solid fa-house"></i>
                     <span>Home</span>
                 </a>
@@ -131,10 +116,22 @@ $currentPage = $activePage ?? '';
                 </ul>
             </div>
 
-            <!-- Center Brand Crest Pod -->
+            <!-- Center Brand Crest Pod with Seamless Sculpted Shoulder Wings -->
             <div class="adv-nav-brand-pod">
                 <a href="index.php" class="adv-brand-badge-pod" title="Advaita School of Excellence">
+                    <!-- Left Shoulder Swoop Arc (Anchored to Badge Top-Left) -->
+                    <svg class="adv-shoulder-wing adv-shoulder-left" viewBox="0 0 80 22" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+                        <path d="M80 0C45 0 40 20 0 20V22H80V0Z" fill="#FFFFFF"/>
+                        <path d="M0 20C40 20 45 0 80 0" stroke="#F37021" stroke-width="4.5" stroke-linecap="round"/>
+                    </svg>
+
                     <img src="assets/images/logo-cropped.png" alt="Advaita School of Excellence" class="adv-brand-logo-pod-img">
+
+                    <!-- Right Shoulder Swoop Arc (Anchored to Badge Top-Right) -->
+                    <svg class="adv-shoulder-wing adv-shoulder-right" viewBox="0 0 80 22" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+                        <path d="M0 0C35 0 40 20 80 20V22H0V0Z" fill="#FFFFFF"/>
+                        <path d="M0 0C35 0 40 20 80 20" stroke="#F37021" stroke-width="4.5" stroke-linecap="round"/>
+                    </svg>
                 </a>
             </div>
 

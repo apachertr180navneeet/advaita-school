@@ -2621,101 +2621,6 @@
     line-height: 1.3;
 }
 
-/* --------------------------------------------------------------------------
-   Section 8: Director's Message
-   -------------------------------------------------------------------------- */
-.parshv-director-card {
-    background: linear-gradient(135deg, #031c3d 0%, #083B7A 100%);
-    border-radius: 28px;
-    overflow: hidden;
-    box-shadow: 0 24px 60px rgba(3, 28, 61, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    position: relative;
-}
-
-.parshv-director-grid {
-    display: grid;
-    grid-template-columns: 0.85fr 1.15fr;
-    align-items: stretch;
-}
-
-.parshv-director-photo-wrap {
-    position: relative;
-    min-height: 420px;
-    background-color: #041f42;
-}
-
-.parshv-director-photo-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    display: block;
-}
-
-.parshv-director-quote-badge {
-    position: absolute;
-    bottom: 24px;
-    left: 24px;
-    background: rgba(243, 112, 33, 0.92);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    color: #ffffff;
-    padding: 8px 16px;
-    border-radius: 30px;
-    font-size: 0.78125rem;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-}
-
-.parshv-director-content {
-    padding: 56px 48px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: #ffffff;
-    position: relative;
-}
-
-.parshv-director-quote-icon {
-    font-size: 3rem;
-    color: rgba(253, 187, 45, 0.3);
-    line-height: 1;
-    margin-bottom: 16px;
-}
-
-.parshv-director-quote-text {
-    font-size: clamp(1.15rem, 1.8vw, 1.35rem);
-    font-weight: 600;
-    line-height: 1.55;
-    color: #f8fafc;
-    margin-bottom: 28px;
-    font-style: italic;
-}
-
-.parshv-director-author {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-    padding-top: 20px;
-    flex-wrap: wrap;
-    gap: 16px;
-}
-
-.parshv-director-name {
-    font-size: 1.35rem;
-    font-weight: 800;
-    color: var(--adv-accent-gold);
-    line-height: 1.2;
-}
-
-.parshv-director-role {
-    font-size: 0.84375rem;
-    color: rgba(255, 255, 255, 0.8);
-    font-weight: 500;
-}
 
 /* --------------------------------------------------------------------------
    Section 9: Achievements & Results
@@ -3226,18 +3131,6 @@
     .parshv-testi-grid,
     .parshv-news-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .parshv-director-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .parshv-director-photo-wrap {
-        min-height: 340px;
-    }
-
-    .parshv-director-content {
-        padding: 40px 32px;
     }
 
     .adv-welcome-section {
