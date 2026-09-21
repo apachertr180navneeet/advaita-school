@@ -246,9 +246,9 @@ body.adv-drawer-open {
     gap: 6px;
     background: linear-gradient(180deg, #f7941d 0%, #ea6100 100%);
     color: #ffffff;
-    padding: 6px 14px;
+    padding: 7px 15px;
     border-radius: 8px;
-    font-size: 0.8125rem;
+    font-size: 0.9375rem;
     font-weight: 700;
     text-decoration: none;
     box-shadow: 0 3px 8px rgba(234, 97, 0, 0.3);
@@ -257,7 +257,7 @@ body.adv-drawer-open {
 }
 
 .adv-nav-home-btn i {
-    font-size: 0.78rem;
+    font-size: 0.85rem;
 }
 
 .adv-nav-home-btn:hover {
@@ -284,10 +284,10 @@ body.adv-drawer-open {
 .adv-nav-link {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
-    padding: 6px 8px;
+    gap: 5px;
+    padding: 6px 9px;
     color: #083B7A;
-    font-size: 0.8125rem;
+    font-size: 0.9375rem;
     font-weight: 700;
     text-decoration: none;
     border-radius: 4px;
@@ -297,7 +297,7 @@ body.adv-drawer-open {
 }
 
 .adv-nav-link i.chevron-icon {
-    font-size: 0.6rem;
+    font-size: 0.65rem;
     color: #083B7A;
     transition: transform 0.25s ease;
     opacity: 0.9;
@@ -390,9 +390,9 @@ body.adv-drawer-open {
     gap: 7px;
     background: linear-gradient(180deg, #f7941d 0%, #ea6100 100%);
     color: #ffffff;
-    padding: 7px 18px;
+    padding: 8px 18px;
     border-radius: 25px;
-    font-size: 0.8125rem;
+    font-size: 0.9375rem;
     font-weight: 700;
     text-decoration: none;
     box-shadow: 0 4px 12px rgba(234, 97, 0, 0.35);
@@ -401,7 +401,7 @@ body.adv-drawer-open {
 }
 
 .adv-nav-apply-btn i {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     transition: transform 0.25s ease;
 }
 
@@ -835,16 +835,16 @@ body.adv-drawer-open {
 /* 1. Large Laptops / Screens (1200px - 1400px) */
 @media (max-width: 1400px) {
     .adv-nav-link {
-        padding: 6px 4px;
-        font-size: 0.8125rem;
+        padding: 6px 5px;
+        font-size: 0.875rem;
     }
     .adv-nav-home-btn {
         padding: 6px 12px;
-        font-size: 0.8125rem;
+        font-size: 0.875rem;
     }
     .adv-nav-apply-btn {
-        padding: 6px 14px;
-        font-size: 0.8125rem;
+        padding: 7px 16px;
+        font-size: 0.875rem;
     }
     .adv-nav-brand-pod {
         width: 228px;
