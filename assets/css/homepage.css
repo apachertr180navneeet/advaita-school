@@ -47,8 +47,9 @@
     margin-bottom: 56px;
 }
 
-.parshv-section-header.text-center {
-    text-align: center;
+.parshv-section-header.text-center,
+.text-center {
+    text-align: center !important;
 }
 
 .parshv-eyebrow-badge {
@@ -797,13 +798,20 @@
 
 /* CTA Wrap */
 .adv-pillars-cta-wrap {
-    margin-top: 10px;
+    margin-top: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
 }
 
 .adv-btn-pillars-primary {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
+    margin: 0 auto;
     background: linear-gradient(135deg, #F37021 0%, #E05D0E 100%);
     color: #ffffff !important;
     font-size: 0.95rem;
@@ -1179,12 +1187,19 @@
 
 .adv-why-cta-wrap {
     margin-top: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
 }
 
 .adv-btn-why-primary {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
+    margin: 0 auto;
     background: linear-gradient(135deg, #F37021 0%, #E05D0E 100%);
     color: #ffffff !important;
     font-size: 1rem;
