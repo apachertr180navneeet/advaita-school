@@ -503,4 +503,8 @@ a.touch-link:hover {
         height: 44px;
         font-size: 1.4rem;
     }
+
+    .adv-sticky-enquiry-pill {
+        display: none !important;
+    }
 }
