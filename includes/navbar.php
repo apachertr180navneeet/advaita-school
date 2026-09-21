@@ -45,13 +45,13 @@ $currentPage = $activePage ?? '';
     <div class="adv-header-fullwidth">
         <div class="adv-nav-ribbon">
             <!-- Far Left Corner Orange Wing -->
-            <svg class="adv-svg-corner adv-svg-corner-left" viewBox="0 0 45 64" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
-                <path d="M0 0C32 12 32 52 0 64V0Z" fill="#F37021"/>
+            <svg class="adv-svg-corner adv-svg-corner-left" viewBox="0 0 28 64" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M0 0C18 8 22 45 0 64V0Z" fill="#F37021"/>
             </svg>
 
             <!-- Far Right Corner Orange Wing -->
-            <svg class="adv-svg-corner adv-svg-corner-right" viewBox="0 0 45 64" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
-                <path d="M45 0C13 12 13 52 45 64V0Z" fill="#F37021"/>
+            <svg class="adv-svg-corner adv-svg-corner-right" viewBox="0 0 28 64" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M28 0C10 8 6 45 28 64V0Z" fill="#F37021"/>
             </svg>
 
             <!-- Left Desktop Menu -->
@@ -120,17 +120,17 @@ $currentPage = $activePage ?? '';
             <div class="adv-nav-brand-pod">
                 <a href="index.php" class="adv-brand-badge-pod" title="Advaita School of Excellence">
                     <!-- Left Shoulder Swoop Arc (Anchored to Badge Top-Left) -->
-                    <svg class="adv-shoulder-wing adv-shoulder-left" viewBox="0 0 80 22" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
-                        <path d="M80 0C45 0 40 20 0 20V22H80V0Z" fill="#FFFFFF"/>
-                        <path d="M0 20C40 20 45 0 80 0" stroke="#F37021" stroke-width="4.5" stroke-linecap="round"/>
+                    <svg class="adv-shoulder-wing adv-shoulder-left" viewBox="0 0 32 14" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+                        <path d="M32 0C18 0 12 12 0 12V14H32V0Z" fill="#FFFFFF"/>
+                        <path d="M0 12C12 12 18 0 32 0" stroke="#F37021" stroke-width="3.5" stroke-linecap="round"/>
                     </svg>
 
                     <img src="assets/images/logo-cropped.png" alt="Advaita School of Excellence" class="adv-brand-logo-pod-img">
 
                     <!-- Right Shoulder Swoop Arc (Anchored to Badge Top-Right) -->
-                    <svg class="adv-shoulder-wing adv-shoulder-right" viewBox="0 0 80 22" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
-                        <path d="M0 0C35 0 40 20 80 20V22H0V0Z" fill="#FFFFFF"/>
-                        <path d="M0 0C35 0 40 20 80 20" stroke="#F37021" stroke-width="4.5" stroke-linecap="round"/>
+                    <svg class="adv-shoulder-wing adv-shoulder-right" viewBox="0 0 32 14" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+                        <path d="M0 0C14 0 20 12 32 12V14H0V0Z" fill="#FFFFFF"/>
+                        <path d="M0 0C14 0 20 12 32 12" stroke="#F37021" stroke-width="3.5" stroke-linecap="round"/>
                     </svg>
                 </a>
             </div>
