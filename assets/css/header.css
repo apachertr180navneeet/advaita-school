@@ -51,7 +51,7 @@ body.adv-drawer-open {
     font-size: 0.8125rem;
     padding: 7px 0;
     position: relative;
-    z-index: 1020;
+    z-index: 2;
     width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -179,6 +179,7 @@ body.adv-drawer-open {
     margin: 0;
     padding: 0;
     position: relative;
+    z-index: 10;
 }
 
 /* Far Left & Far Right Orange Corner Wings */
@@ -203,9 +204,9 @@ body.adv-drawer-open {
 /* White Full-Width Ribbon */
 .adv-nav-ribbon {
     position: relative;
-    z-index: 5;
+    z-index: 10;
     background: #ffffff;
-    padding: 0 clamp(16px, 2vw, 36px);
+    padding: 0 clamp(16px, 2vw, 44px);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -225,13 +226,13 @@ body.adv-drawer-open {
 }
 
 .adv-nav-section-left {
-    justify-content: flex-start;
+    justify-content: space-between;
     gap: 8px;
 }
 
 .adv-nav-section-right {
-    justify-content: flex-end;
-    gap: 12px;
+    justify-content: space-between;
+    gap: 8px;
 }
 
 /* Home Button */
@@ -262,13 +263,15 @@ body.adv-drawer-open {
     color: #ffffff;
 }
 
-/* Desktop Nav Menus */
+/* Desktop Nav Menus - Evenly distributed to eliminate whitespace next to logo */
 .adv-nav-menu {
     display: flex;
     align-items: center;
     list-style: none;
     margin: 0;
     padding: 0;
+    flex: 1;
+    justify-content: space-around;
     gap: 2px;
 }
 
@@ -319,21 +322,21 @@ body.adv-drawer-open {
     height: 64px;
     width: 210px;
     flex-shrink: 0;
-    margin: 0 34px;
+    margin: 0 16px;
     z-index: 25;
 }
 
 /* Sculpted Floating Brand Badge */
 .adv-brand-badge-pod {
     position: absolute;
-    top: -12px;
+    top: -14px;
     left: 50%;
     transform: translateX(-50%);
     width: 210px;
-    height: 84px;
+    height: 86px;
     background: #ffffff;
-    border-radius: 10px 10px 16px 16px;
-    box-shadow: 0 6px 20px rgba(3, 28, 61, 0.12), 0 2px 6px rgba(0, 0, 0, 0.04);
+    border-radius: 12px 12px 16px 16px;
+    box-shadow: 0 8px 22px rgba(3, 28, 61, 0.14), 0 2px 6px rgba(0, 0, 0, 0.04);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -345,7 +348,7 @@ body.adv-drawer-open {
 
 .adv-brand-badge-pod:hover {
     transform: translateX(-50%) translateY(-2px);
-    box-shadow: 0 10px 26px rgba(3, 28, 61, 0.16);
+    box-shadow: 0 12px 28px rgba(3, 28, 61, 0.18);
 }
 
 .adv-brand-logo-pod-img {
@@ -361,9 +364,9 @@ body.adv-drawer-open {
     position: absolute;
     top: 0;
     width: 32px;
-    height: 14px;
+    height: 16px;
     pointer-events: none;
-    z-index: 24;
+    z-index: 26;
     display: block;
 }
 

@@ -120,17 +120,17 @@ $currentPage = $activePage ?? '';
             <div class="adv-nav-brand-pod">
                 <a href="index.php" class="adv-brand-badge-pod" title="Advaita School of Excellence">
                     <!-- Left Shoulder Swoop Arc (Anchored to Badge Top-Left) -->
-                    <svg class="adv-shoulder-wing adv-shoulder-left" viewBox="0 0 32 14" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
-                        <path d="M32 0C18 0 12 12 0 12V14H32V0Z" fill="#FFFFFF"/>
-                        <path d="M0 12C12 12 18 0 32 0" stroke="#F37021" stroke-width="3.5" stroke-linecap="round"/>
+                    <svg class="adv-shoulder-wing adv-shoulder-left" viewBox="0 0 32 16" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+                        <path d="M32 0C18 0 12 14 0 14V16H32V0Z" fill="#FFFFFF"/>
+                        <path d="M0 14C12 14 18 0 32 0" stroke="#F37021" stroke-width="3.5" stroke-linecap="round"/>
                     </svg>
 
                     <img src="assets/images/logo-cropped.png" alt="Advaita School of Excellence" class="adv-brand-logo-pod-img">
 
                     <!-- Right Shoulder Swoop Arc (Anchored to Badge Top-Right) -->
-                    <svg class="adv-shoulder-wing adv-shoulder-right" viewBox="0 0 32 14" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
-                        <path d="M0 0C14 0 20 12 32 12V14H0V0Z" fill="#FFFFFF"/>
-                        <path d="M0 0C14 0 20 12 32 12" stroke="#F37021" stroke-width="3.5" stroke-linecap="round"/>
+                    <svg class="adv-shoulder-wing adv-shoulder-right" viewBox="0 0 32 16" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+                        <path d="M0 0C14 0 20 14 32 14V16H0V0Z" fill="#FFFFFF"/>
+                        <path d="M0 0C14 0 20 14 32 14" stroke="#F37021" stroke-width="3.5" stroke-linecap="round"/>
                     </svg>
                 </a>
             </div>
