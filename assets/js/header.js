@@ -111,4 +111,72 @@ document.addEventListener('DOMContentLoaded', () => {
             closeMobileDrawer();
         });
     });
+
+    // 4. Desktop Dropdown Interactions (Click, Touch & Keyboard Support)
+    const desktopDropdownItems = document.querySelectorAll('.adv-nav-item.has-dropdown');
+
+    desktopDropdownItems.forEach(item => {
+        const trigger = item.querySelector('.adv-nav-link');
+        const dropdown = item.querySelector('.adv-dropdown');
+
+        if (!trigger || !dropdown) return;
+
+        // Toggle on click/tap (supports touch laptops, tablets, and click interactions)
+        trigger.addEventListener('click', (e) => {
+            if (window.innerWidth > 1180) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                const isCurrentlyOpen = item.classList.contains('is-open');
+
+                // Close any other open dropdowns
+                desktopDropdownItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('is-open');
+                        const otherTrigger = otherItem.querySelector('.adv-nav-link');
+                        if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+                    }
+                });
+
+                // Toggle current
+                if (isCurrentlyOpen) {
+                    item.classList.remove('is-open');
+                    trigger.setAttribute('aria-expanded', 'false');
+                } else {
+                    item.classList.add('is-open');
+                    trigger.setAttribute('aria-expanded', 'true');
+                }
+            }
+        });
+
+        // Close on mouse leave when cursor leaves the item
+        item.addEventListener('mouseleave', () => {
+            if (window.innerWidth > 1180 && item.classList.contains('is-open')) {
+                item.classList.remove('is-open');
+                trigger.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
+
+    // Close desktop dropdowns when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.adv-nav-item.has-dropdown')) {
+            desktopDropdownItems.forEach(item => {
+                item.classList.remove('is-open');
+                const trigger = item.querySelector('.adv-nav-link');
+                if (trigger) trigger.setAttribute('aria-expanded', 'false');
+            });
+        }
+    });
+
+    // Close desktop dropdowns on ESC key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            desktopDropdownItems.forEach(item => {
+                item.classList.remove('is-open');
+                const trigger = item.querySelector('.adv-nav-link');
+                if (trigger) trigger.setAttribute('aria-expanded', 'false');
+            });
+        }
+    });
 });

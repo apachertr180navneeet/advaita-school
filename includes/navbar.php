@@ -63,8 +63,8 @@ $currentPage = $activePage ?? '';
                 </a>
 
                 <ul class="adv-nav-menu adv-nav-menu-left">
-                    <li class="adv-nav-item <?php echo ($currentPage === 'school') ? 'active' : ''; ?>">
-                        <a href="about-us.php" class="adv-nav-link">
+                    <li class="adv-nav-item has-dropdown <?php echo ($currentPage === 'school') ? 'active' : ''; ?>">
+                        <a href="about-us.php" class="adv-nav-link" aria-haspopup="true" aria-expanded="false">
                             <span>Our School</span>
                             <i class="fa-solid fa-chevron-down chevron-icon"></i>
                         </a>
@@ -77,8 +77,8 @@ $currentPage = $activePage ?? '';
                         </ul>
                     </li>
 
-                    <li class="adv-nav-item <?php echo ($currentPage === 'learning') ? 'active' : ''; ?>">
-                        <a href="academics.php" class="adv-nav-link">
+                    <li class="adv-nav-item has-dropdown <?php echo ($currentPage === 'learning') ? 'active' : ''; ?>">
+                        <a href="academics.php" class="adv-nav-link" aria-haspopup="true" aria-expanded="false">
                             <span>Learning</span>
                             <i class="fa-solid fa-chevron-down chevron-icon"></i>
                         </a>
@@ -90,8 +90,8 @@ $currentPage = $activePage ?? '';
                         </ul>
                     </li>
 
-                    <li class="adv-nav-item <?php echo ($currentPage === 'holistic') ? 'active' : ''; ?>">
-                        <a href="activities.php" class="adv-nav-link">
+                    <li class="adv-nav-item has-dropdown <?php echo ($currentPage === 'holistic') ? 'active' : ''; ?>">
+                        <a href="activities.php" class="adv-nav-link" aria-haspopup="true" aria-expanded="false">
                             <span>Holistic Experience</span>
                             <i class="fa-solid fa-chevron-down chevron-icon"></i>
                         </a>
@@ -103,8 +103,8 @@ $currentPage = $activePage ?? '';
                         </ul>
                     </li>
 
-                    <li class="adv-nav-item <?php echo ($currentPage === 'admissions') ? 'active' : ''; ?>">
-                        <a href="admissions.php" class="adv-nav-link">
+                    <li class="adv-nav-item has-dropdown <?php echo ($currentPage === 'admissions') ? 'active' : ''; ?>">
+                        <a href="admissions.php" class="adv-nav-link" aria-haspopup="true" aria-expanded="false">
                             <span>Admissions</span>
                             <i class="fa-solid fa-chevron-down chevron-icon"></i>
                         </a>
