@@ -21,7 +21,8 @@ require_once __DIR__ . '/includes/header.php';
                     <span class="about-eyebrow">— ABOUT US —</span>
                     <h1 class="about-hero-title">
                         A Strong Foundation<br>
-                        for a Brighter <span class="about-title-highlight">Tomorrow</span>
+                        for a Brighter<br>
+                        Tomorrow
                     </h1>
                     <p class="about-hero-desc">
                         At Advaita School of Excellence, we believe education is not just about academic achievement, but about shaping curious thinkers, compassionate human beings, and confident leaders for a rapidly changing world.

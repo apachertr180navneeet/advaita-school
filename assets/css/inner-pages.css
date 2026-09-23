@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&display=swap');
+
 /* ==========================================================================
    Advaita School of Excellence - Inner Pages Stylesheet
    Theme: #083B7A (Navy Blue), #F37021 (Orange Accent), #fdbb2d (Gold)
@@ -1457,7 +1459,7 @@
    Section 1: Hero Section
    -------------------------------------------------------------------------- */
 .about-hero {
-    padding: 60px 0 70px;
+    padding: 50px 0 65px;
     background: #ffffff;
 }
 
@@ -1469,7 +1471,7 @@
 }
 
 .about-hero-title {
-    font-size: clamp(2.3rem, 3.8vw, 3.4rem);
+    font-size: clamp(2.4rem, 4vw, 3.5rem);
     font-weight: 800;
     line-height: 1.15;
     color: #083B7A;
@@ -1552,15 +1554,16 @@
 
 .about-hero-visual {
     position: relative;
-    border-radius: 36px 36px 36px 0;
+    border-radius: 60px 0 0 60px;
     overflow: hidden;
     box-shadow: 0 20px 45px rgba(8, 59, 122, 0.12);
 }
 
 .about-hero-img {
     width: 100%;
-    height: 440px;
+    height: 480px;
     object-fit: cover;
+    object-position: center top;
     display: block;
     transition: transform 0.5s ease;
 }
@@ -1607,9 +1610,9 @@
 
 .about-story-arch-frame {
     width: 100%;
-    max-width: 400px;
+    max-width: 380px;
     height: 480px;
-    border-radius: 200px 200px 36px 36px;
+    border-radius: 190px 190px 30px 30px;
     overflow: hidden;
     box-shadow: 0 20px 45px rgba(8, 59, 122, 0.1);
     background: #fdf8f4;
@@ -1629,45 +1632,37 @@
 
 .about-floating-script-badge {
     position: absolute;
-    top: 30px;
-    right: 10px;
-    background: #ffffff;
-    padding: 12px 20px;
-    border-radius: 16px;
-    box-shadow: 0 12px 30px rgba(8, 59, 122, 0.12);
-    border: 1px solid #ffeedf;
-    text-align: center;
-    transform: rotate(4deg);
-    animation: floatSlow 4s ease-in-out infinite alternate;
-}
-
-@keyframes floatSlow {
-    0% { transform: translateY(0px) rotate(4deg); }
-    100% { transform: translateY(-8px) rotate(2deg); }
+    top: 35px;
+    right: -20px;
+    background: transparent;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    text-align: left;
+    transform: rotate(-3deg);
 }
 
 .about-floating-script-badge .script-text {
-    font-family: 'Caveat', 'Playfair Display', Georgia, cursive, serif;
-    font-size: 1.35rem;
+    font-family: 'Caveat', cursive, serif;
+    font-size: 2.3rem;
     font-weight: 700;
-    font-style: italic;
     color: #083B7A;
-    line-height: 1.15;
+    line-height: 1.1;
     display: block;
 }
 
 .about-floating-script-badge .script-swoosh {
-    width: 70px;
-    height: 12px;
+    width: 110px;
+    height: 16px;
     display: block;
-    margin: 4px auto 0;
+    margin-top: 4px;
 }
 
 /* --------------------------------------------------------------------------
    Section 3: Vision, Mission & Values
    -------------------------------------------------------------------------- */
 .about-vmv {
-    padding: 40px 0 80px;
+    padding: 30px 0 75px;
     background: #ffffff;
 }
 
@@ -1675,22 +1670,33 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
-    background: #fffcf8;
-    border: 1px solid #f8e8d8;
-    border-radius: 24px;
-    padding: 32px 30px;
-    box-shadow: 0 10px 30px rgba(243, 112, 33, 0.04);
+    background: transparent;
+    border: none;
+    padding: 0;
+    box-shadow: none;
 }
 
 .about-vmv-card {
     display: flex;
     gap: 16px;
     align-items: flex-start;
+    background: #fffcf8;
+    border: 1px solid #fae8d8;
+    border-radius: 20px;
+    padding: 26px 22px;
+    box-shadow: 0 4px 16px rgba(243, 112, 33, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about-vmv-card:hover {
+    transform: translateY(-4px);
+    border-color: #ffd8bf;
+    box-shadow: 0 10px 24px rgba(243, 112, 33, 0.1);
 }
 
 .about-vmv-icon-ring {
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     background: #fff5ee;
     border: 1.5px solid #F37021;
@@ -1698,7 +1704,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     flex-shrink: 0;
     transition: all 0.3s ease;
 }
@@ -2023,11 +2029,11 @@
 .about-cta-box {
     background: linear-gradient(135deg, #031c3d 0%, #083B7A 70%, #0a4691 100%);
     border-radius: 28px;
-    padding: 44px 50px 44px 60px;
+    padding: 48px 50px 0 60px;
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    gap: 30px;
-    align-items: center;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 20px;
+    align-items: flex-end;
     position: relative;
     overflow: hidden;
     box-shadow: 0 24px 50px rgba(3, 28, 61, 0.2);
@@ -2036,13 +2042,23 @@
 .about-cta-box::before {
     content: '';
     position: absolute;
-    top: -50px;
-    left: -50px;
-    width: 260px;
-    height: 260px;
-    border: 35px solid rgba(243, 112, 33, 0.08);
-    border-radius: 50%;
+    top: 50%;
+    left: -30px;
+    transform: translateY(-50%);
+    width: 250px;
+    height: 250px;
+    background-image: url('../images/logo-seal.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.08;
     pointer-events: none;
+}
+
+.about-cta-content {
+    position: relative;
+    z-index: 2;
+    padding-bottom: 48px;
 }
 
 .about-cta-title {
@@ -2111,17 +2127,22 @@
 }
 
 .about-cta-students-wrap {
+    position: relative;
+    z-index: 2;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
     height: 100%;
+    margin-right: -10px;
+    line-height: 0;
 }
 
 .about-cta-students-img {
-    max-height: 220px;
+    max-height: 250px;
     width: auto;
     object-fit: contain;
-    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.3));
+    display: block;
+    filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.25));
 }
 
 /* --------------------------------------------------------------------------
