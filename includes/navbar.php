@@ -127,7 +127,7 @@ $currentPage = $activePage ?? '';
                             </filter>
                         </defs>
                         <!-- White Sculpted Floating Badge -->
-                        <path d="M 24 12 C 24 5 30 2 38 2 H 206 C 214 2 220 5 220 12 L 208 76 C 206 84 198 88 188 88 H 56 C 46 88 38 84 36 76 Z" fill="#FFFFFF" filter="url(#advCrestShadow)"/>
+                        <path d="M 24 12 C 24 5 30 2 38 2 H 206 C 214 2 220 5 220 12 L 210 74 C 208 82 202 88 192 88 H 52 C 42 88 36 82 34 74 Z" fill="#FFFFFF" filter="url(#advCrestShadow)"/>
                         <!-- Left Orange Shoulder Swoop & Flank -->
                         <path d="M 4 16 C 9 16 14 10 17 6 C 20 3 23 5 24 9 C 25 18 28 48 34 72" stroke="#F37021" stroke-width="3.5" stroke-linecap="round"/>
                         <!-- Right Orange Shoulder Swoop & Flank -->
