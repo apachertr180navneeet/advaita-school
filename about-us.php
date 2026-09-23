@@ -248,47 +248,47 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="apart-icon-box apart-navy">
                         <i class="fa-solid fa-graduation-cap"></i>
                     </div>
-                    <h3 class="apart-title">Experienced Faculty</h3>
+                    <h3 class="apart-title">Experienced<br>Faculty</h3>
                     <p class="apart-desc">A dedicated team committed to every child's success.</p>
                 </div>
 
                 <div class="about-apart-card">
                     <div class="apart-icon-box apart-orange">
-                        <i class="fa-solid fa-school"></i>
+                        <i class="fa-solid fa-building-columns"></i>
                     </div>
-                    <h3 class="apart-title">Modern Infrastructure</h3>
+                    <h3 class="apart-title">Modern<br>Infrastructure</h3>
                     <p class="apart-desc">Spacious classrooms, advanced labs and safe campus.</p>
                 </div>
 
                 <div class="about-apart-card">
-                    <div class="apart-icon-box apart-peach">
+                    <div class="apart-icon-box apart-orange">
                         <i class="fa-solid fa-users"></i>
                     </div>
-                    <h3 class="apart-title">Focus on Individual Growth</h3>
+                    <h3 class="apart-title">Focus on<br>Individual Growth</h3>
                     <p class="apart-desc">Personal attention and mentoring.</p>
                 </div>
 
                 <div class="about-apart-card">
-                    <div class="apart-icon-box apart-deepblue">
+                    <div class="apart-icon-box apart-navy">
                         <i class="fa-solid fa-lightbulb"></i>
                     </div>
-                    <h3 class="apart-title">Academic Excellence</h3>
+                    <h3 class="apart-title">Academic<br>Excellence</h3>
                     <p class="apart-desc">Strong foundation with CBSE curriculum.</p>
                 </div>
 
                 <div class="about-apart-card">
-                    <div class="apart-icon-box apart-amber">
+                    <div class="apart-icon-box apart-orange">
                         <i class="fa-solid fa-star"></i>
                     </div>
-                    <h3 class="apart-title">Vibrant Campus Life</h3>
+                    <h3 class="apart-title">Vibrant<br>Campus Life</h3>
                     <p class="apart-desc">Sports, arts, cultural and leadership opportunities.</p>
                 </div>
 
                 <div class="about-apart-card">
-                    <div class="apart-icon-box apart-teal">
-                        <i class="fa-solid fa-shield-halved"></i>
+                    <div class="apart-icon-box apart-green">
+                        <i class="fa-solid fa-leaf"></i>
                     </div>
-                    <h3 class="apart-title">Safe & Supportive Environment</h3>
+                    <h3 class="apart-title">Safe & Supportive<br>Environment</h3>
                     <p class="apart-desc">Where children feel secure, valued and inspired.</p>
                 </div>
 
@@ -317,8 +317,9 @@ require_once __DIR__ . '/includes/header.php';
                     </a>
                 </div>
 
-                <!-- Right Visual with Arched Frame and Floating Inset Badge -->
+                <!-- Right Visual with Orange Outline Frame and Floating Inset Badge -->
                 <div class="about-campus-visual-wrap">
+                    <div class="about-campus-outline-frame" aria-hidden="true"></div>
                     <div class="about-campus-frame">
                         <img src="assets/images/about-campus-courtyard.jpg" alt="Advaita School Campus Inner Courtyard" class="about-campus-img" loading="lazy">
                     </div>
@@ -340,11 +341,14 @@ require_once __DIR__ . '/includes/header.php';
 
     <!-- 7. CTA Banner: Be a Part of Advaita -->
     <section class="about-cta-banner" aria-label="Join Advaita School of Excellence">
-        <div class="about-container">
-            <div class="about-cta-box">
+        <div class="about-cta-box">
 
-                <!-- Left CTA Content -->
-                <div class="about-cta-content">
+            <!-- Left CTA Content -->
+            <div class="about-cta-content">
+                <div class="about-cta-watermark" aria-hidden="true">
+                    <img src="assets/images/logo-seal.png" alt="" class="about-cta-watermark-img">
+                </div>
+                <div class="about-cta-text-wrap">
                     <h2 class="about-cta-title">Be a Part of Advaita</h2>
                     <p class="about-cta-desc">Give your child the right start for a brighter tomorrow.</p>
                     <div class="about-cta-actions">
@@ -358,13 +362,13 @@ require_once __DIR__ . '/includes/header.php';
                         </a>
                     </div>
                 </div>
-
-                <!-- Right CTA Students Visual -->
-                <div class="about-cta-students-wrap">
-                    <img src="assets/images/about-cta-students-clean.png" alt="Happy Advaita Students" class="about-cta-students-img" loading="lazy">
-                </div>
-
             </div>
+
+            <!-- Right CTA Students Visual -->
+            <div class="about-cta-students-wrap">
+                <img src="assets/images/about-cta-students-clean.jpg" alt="Happy Advaita Students" class="about-cta-students-img" loading="lazy">
+            </div>
+
         </div>
     </section>
 
