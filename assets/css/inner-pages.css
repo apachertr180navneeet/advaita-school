@@ -1395,9 +1395,10 @@
 }
 
 .about-container {
-    max-width: 1240px;
+    max-width: 1560px;
+    width: 100%;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 clamp(20px, 3.5vw, 60px);
 }
 
 /* Eyebrows & Headings */
@@ -1459,37 +1460,68 @@
    Section 1: Hero Section
    -------------------------------------------------------------------------- */
 .about-hero {
-    padding: 50px 0 65px;
+    padding: 0;
     background: #ffffff;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hero-container {
+    max-width: 100% !important;
+    padding-left: clamp(24px, 5.5vw, 96px) !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
 }
 
 .about-hero-grid {
     display: grid;
-    grid-template-columns: 1.05fr 0.95fr;
-    gap: 48px;
+    grid-template-columns: 1fr 1.18fr;
+    gap: clamp(20px, 3.5vw, 60px);
     align-items: center;
+    min-height: 560px;
+}
+
+.about-hero-content {
+    padding: clamp(35px, 5vw, 70px) 0 clamp(35px, 5vw, 65px);
+    max-width: 600px;
+}
+
+.about-hero .about-eyebrow {
+    color: #F37021;
+    font-size: 0.8125rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    display: inline-block;
 }
 
 .about-hero-title {
-    font-size: clamp(2.4rem, 4vw, 3.5rem);
+    font-size: clamp(2.4rem, 4vw, 3.6rem);
     font-weight: 800;
     line-height: 1.15;
     color: #083B7A;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
     letter-spacing: -0.5px;
 }
 
+.about-hero-title .about-text-orange {
+    color: #F37021;
+}
+
 .about-hero-desc {
-    font-size: 1.0625rem;
-    color: #556987;
-    line-height: 1.68;
-    margin-bottom: 34px;
-    max-width: 580px;
+    font-size: clamp(0.95rem, 1.15vw, 1.0625rem);
+    color: #4b5563;
+    line-height: 1.7;
+    margin-bottom: 38px;
+    max-width: 540px;
 }
 
 .about-hero-badges {
     display: flex;
-    gap: 14px;
+    align-items: center;
+    gap: clamp(14px, 2vw, 24px);
     flex-wrap: wrap;
 }
 
@@ -1497,28 +1529,28 @@
     display: flex;
     align-items: center;
     gap: 12px;
-    background: #ffffff;
-    border: 1px solid #eef2f6;
-    padding: 10px 16px;
-    border-radius: 12px;
-    box-shadow: 0 4px 14px rgba(8, 59, 122, 0.05);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    background: transparent;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
+    transition: transform 0.25s ease;
 }
 
 .about-badge-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(8, 59, 122, 0.1);
+    transform: translateY(-2px);
+    box-shadow: none;
 }
 
 .about-badge-icon {
-    width: 38px;
-    height: 38px;
-    border-radius: 10px;
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #ffffff;
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     flex-shrink: 0;
 }
 
@@ -1531,7 +1563,7 @@
 }
 
 .about-badge-icon.badge-tan {
-    background: #c59b6c;
+    background: #bfa478;
 }
 
 .about-badge-info {
@@ -1547,44 +1579,67 @@
 }
 
 .about-badge-lbl {
-    font-size: 0.71875rem;
+    font-size: 0.725rem;
     color: #64748b;
     font-weight: 500;
+    line-height: 1.25;
+    margin-top: 2px;
+}
+
+.about-badge-dot {
+    font-size: 1.35rem;
+    color: #cbd5e1;
+    font-weight: 800;
+    line-height: 1;
+    margin: 0 2px;
+    user-select: none;
 }
 
 .about-hero-visual {
     position: relative;
-    border-radius: 60px 0 0 60px;
     overflow: hidden;
-    box-shadow: 0 20px 45px rgba(8, 59, 122, 0.12);
+    height: 100%;
+    min-height: 560px;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+    background: #ffffff;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .about-hero-img {
     width: 100%;
-    height: 480px;
+    height: 100%;
+    min-height: 560px;
     object-fit: cover;
-    object-position: center top;
+    object-position: left center;
     display: block;
     transition: transform 0.5s ease;
 }
 
 .about-hero-visual:hover .about-hero-img {
-    transform: scale(1.03);
+    transform: scale(1.02);
 }
 
 /* --------------------------------------------------------------------------
-   Section 2: Our Story
+   Section 2: Our Story & VMV
    -------------------------------------------------------------------------- */
 .about-story {
-    padding: 80px 0;
+    padding: clamp(50px, 6vw, 85px) 0;
     background: #ffffff;
 }
 
 .about-story-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    grid-template-columns: 1fr 1.05fr;
+    gap: clamp(30px, 4vw, 70px);
     align-items: center;
+    margin-bottom: clamp(45px, 5.5vw, 75px);
+}
+
+.about-story-content {
+    max-width: 540px;
 }
 
 .about-story-title {
@@ -1593,47 +1648,70 @@
     color: #083B7A;
     line-height: 1.2;
     margin-bottom: 22px;
+    letter-spacing: -0.5px;
+}
+
+.about-story-title .about-text-orange {
+    color: #F37021;
 }
 
 .about-story-p {
-    font-size: 1rem;
-    color: #556987;
-    line-height: 1.7;
+    font-size: clamp(0.9375rem, 1.05vw, 1.03125rem);
+    color: #4b5563;
+    line-height: 1.72;
     margin-bottom: 18px;
 }
 
 .about-story-visual-wrap {
     position: relative;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 380px;
+    padding-right: 20px;
 }
 
-.about-story-arch-frame {
-    width: 100%;
-    max-width: 380px;
-    height: 480px;
-    border-radius: 190px 190px 30px 30px;
+.about-story-backdrop {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 76%;
+    height: 88%;
+    background: #faefe1;
+    border-radius: 40px 90px 40px 40px;
+    z-index: 1;
+}
+
+.about-story-frame {
+    position: relative;
+    z-index: 2;
+    width: clamp(250px, 26vw, 320px);
+    height: clamp(330px, 34vw, 410px);
+    border-radius: 26px;
     overflow: hidden;
-    box-shadow: 0 20px 45px rgba(8, 59, 122, 0.1);
-    background: #fdf8f4;
+    box-shadow: 0 16px 36px rgba(8, 59, 122, 0.1);
+    background: #ffffff;
 }
 
 .about-story-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 20%;
     display: block;
     transition: transform 0.5s ease;
 }
 
-.about-story-arch-frame:hover .about-story-img {
-    transform: scale(1.04);
+.about-story-frame:hover .about-story-img {
+    transform: scale(1.03);
 }
 
 .about-floating-script-badge {
     position: absolute;
-    top: 35px;
-    right: -20px;
+    z-index: 3;
+    right: clamp(10px, 2vw, 35px);
+    top: 36%;
     background: transparent;
     padding: 0;
     border: none;
@@ -1644,183 +1722,215 @@
 
 .about-floating-script-badge .script-text {
     font-family: 'Caveat', cursive, serif;
-    font-size: 2.3rem;
+    font-size: clamp(2.2rem, 2.7vw, 2.9rem);
     font-weight: 700;
     color: #083B7A;
-    line-height: 1.1;
+    line-height: 1.05;
     display: block;
 }
 
 .about-floating-script-badge .script-swoosh {
-    width: 110px;
-    height: 16px;
+    width: clamp(100px, 9vw, 130px);
+    height: 18px;
     display: block;
     margin-top: 4px;
 }
 
 /* --------------------------------------------------------------------------
-   Section 3: Vision, Mission & Values
+   Vision, Mission & Values (Unified Card)
    -------------------------------------------------------------------------- */
-.about-vmv {
-    padding: 30px 0 75px;
-    background: #ffffff;
-}
-
-.about-vmv-grid {
+.about-vmv-box {
+    background: #faf6f0;
+    border: 1px solid rgba(243, 112, 33, 0.08);
+    border-radius: 24px;
+    padding: clamp(26px, 3.2vw, 36px) clamp(24px, 4vw, 48px);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    background: transparent;
-    border: none;
-    padding: 0;
-    box-shadow: none;
+    gap: clamp(24px, 3.5vw, 50px);
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(8, 59, 122, 0.02);
 }
 
-.about-vmv-card {
+.about-vmv-col {
     display: flex;
-    gap: 16px;
     align-items: flex-start;
-    background: #fffcf8;
-    border: 1px solid #fae8d8;
-    border-radius: 20px;
-    padding: 26px 22px;
-    box-shadow: 0 4px 16px rgba(243, 112, 33, 0.04);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.about-vmv-card:hover {
-    transform: translateY(-4px);
-    border-color: #ffd8bf;
-    box-shadow: 0 10px 24px rgba(243, 112, 33, 0.1);
+    gap: 16px;
 }
 
 .about-vmv-icon-ring {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: #fff5ee;
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: #ffffff;
     border: 1.5px solid #F37021;
     color: #F37021;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     flex-shrink: 0;
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(243, 112, 33, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.about-vmv-card:hover .about-vmv-icon-ring {
-    background: #F37021;
-    color: #ffffff;
-    transform: rotate(10deg) scale(1.05);
+.about-vmv-col:hover .about-vmv-icon-ring {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(243, 112, 33, 0.15);
+}
+
+.about-vmv-body {
+    flex: 1;
 }
 
 .about-vmv-title {
-    font-size: 1.15rem;
+    font-size: 1.125rem;
     font-weight: 800;
     color: #083B7A;
     margin-bottom: 6px;
+    line-height: 1.25;
 }
 
 .about-vmv-desc {
     font-size: 0.875rem;
     color: #556987;
-    line-height: 1.55;
+    line-height: 1.58;
     margin: 0;
 }
 
 /* --------------------------------------------------------------------------
-   Section 4: Our Philosophy
+   Section 3: Our Philosophy
    -------------------------------------------------------------------------- */
 .about-philosophy {
-    padding: 80px 0;
+    padding: clamp(50px, 6vw, 85px) 0;
     background: #ffffff;
 }
 
 .about-philosophy-grid {
     display: grid;
-    grid-template-columns: 0.85fr 1.15fr 0.85fr;
-    gap: 36px;
+    grid-template-columns: 1fr 1.22fr 1fr;
+    gap: clamp(24px, 3.5vw, 48px);
     align-items: center;
 }
 
 .about-philosophy-visual {
-    border-radius: 28px;
+    border-radius: 26px;
     overflow: hidden;
-    box-shadow: 0 18px 40px rgba(8, 59, 122, 0.1);
-    height: 380px;
+    box-shadow: 0 16px 36px rgba(8, 59, 122, 0.08);
+    height: clamp(340px, 34vw, 420px);
+    background: #ffffff;
 }
 
 .about-philosophy-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 25%;
     display: block;
     transition: transform 0.5s ease;
 }
 
 .about-philosophy-visual:hover .about-philosophy-img {
-    transform: scale(1.04);
+    transform: scale(1.03);
+}
+
+.about-philosophy-content {
+    max-width: 520px;
 }
 
 .about-philosophy-title {
-    font-size: clamp(1.85rem, 2.8vw, 2.5rem);
+    font-size: clamp(1.85rem, 2.7vw, 2.5rem);
     font-weight: 800;
     color: #083B7A;
-    line-height: 1.22;
-    margin-bottom: 18px;
+    line-height: 1.18;
+    margin-bottom: 20px;
+    letter-spacing: -0.5px;
+}
+
+.about-philosophy-title .about-text-orange {
+    color: #F37021;
 }
 
 .about-philosophy-desc {
-    font-size: 0.96875rem;
-    color: #556987;
-    line-height: 1.7;
-    margin-bottom: 26px;
+    font-size: clamp(0.9rem, 1vw, 0.96875rem);
+    color: #4b5563;
+    line-height: 1.72;
+    margin-bottom: 28px;
 }
 
+/* Feature Stack: Single white card containing 5 items */
 .about-philosophy-pills {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 16px;
+    background: #ffffff;
+    border: 1px solid #edf2f7;
+    border-radius: 24px;
+    padding: clamp(24px, 2.8vw, 32px) clamp(20px, 2.4vw, 28px);
+    box-shadow: 0 10px 30px rgba(8, 59, 122, 0.04);
 }
 
 .about-feature-pill {
     display: flex;
     align-items: center;
     gap: 14px;
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    padding: 12px 18px;
-    border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(8, 59, 122, 0.04);
+    background: transparent;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    box-shadow: none;
     font-weight: 700;
-    font-size: 0.90625rem;
+    font-size: 0.9375rem;
     color: #083B7A;
-    transition: all 0.25s ease;
+    transition: transform 0.2s ease;
 }
 
 .about-feature-pill:hover {
-    border-color: #F37021;
     transform: translateX(4px);
-    box-shadow: 0 6px 18px rgba(243, 112, 33, 0.12);
+    box-shadow: none;
+    border-color: transparent;
 }
 
 .about-feature-pill .pill-icon {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.9375rem;
+    font-size: 1rem;
     flex-shrink: 0;
+    background: #ffffff;
+    border: 1.5px solid #fed7aa;
+    transition: all 0.25s ease;
 }
 
-.pill-icon.pill-blue { background: #e0f2fe; color: #0284c7; }
-.pill-icon.pill-cyan { background: #e0f7fa; color: #00838f; }
-.pill-icon.pill-orange { background: #ffedd5; color: #ea580c; }
-.pill-icon.pill-amber { background: #fef3c7; color: #d97706; }
-.pill-icon.pill-rose { background: #ffe4e6; color: #e11d48; }
+.about-feature-pill:hover .pill-icon {
+    border-color: #F37021;
+    transform: scale(1.06);
+}
+
+.pill-icon.pill-navy {
+    color: #083B7A;
+    border-color: #fed7aa;
+}
+
+.pill-icon.pill-orange {
+    color: #F37021;
+    border-color: #fed7aa;
+}
+
+/* Backwards-compatible aliases */
+.pill-icon.pill-blue,
+.pill-icon.pill-cyan {
+    color: #083B7A;
+    border-color: #fed7aa;
+}
+
+.pill-icon.pill-amber,
+.pill-icon.pill-rose {
+    color: #F37021;
+    border-color: #fed7aa;
+}
 
 /* --------------------------------------------------------------------------
    Section 5: What Sets Us Apart
@@ -2164,6 +2274,13 @@
 }
 
 @media (max-width: 900px) {
+    .about-hero-container {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    .about-hero-content {
+        padding: 30px 0 0;
+    }
     .about-hero-grid,
     .about-story-grid,
     .about-campus-grid,
@@ -2177,17 +2294,33 @@
     }
     .about-hero-visual {
         max-width: 520px;
+        min-height: unset;
+        border-radius: 36px;
         margin: 0 auto;
     }
     .about-hero-img {
         height: 340px;
+        min-height: unset;
     }
     .about-story-visual-wrap {
         order: -1;
+        justify-content: center;
+        min-height: unset;
+        padding-right: 0;
     }
-    .about-story-arch-frame {
+    .about-story-backdrop {
+        width: 88%;
+        height: 90%;
+    }
+    .about-story-frame {
         max-width: 320px;
-        height: 400px;
+        height: 380px;
+        margin: 0 auto;
+    }
+    .about-vmv-box {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 28px 24px;
     }
     .about-philosophy-grid {
         grid-template-columns: 1fr;
@@ -2215,9 +2348,29 @@
     }
     .about-hero-badges {
         flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .about-badge-dot {
+        display: none;
     }
     .about-badge-card {
         width: 100%;
+    }
+    .about-story-frame {
+        width: 100%;
+        max-width: 290px;
+        height: 340px;
+    }
+    .about-floating-script-badge {
+        right: 0;
+        top: 20px;
+    }
+    .about-floating-script-badge .script-text {
+        font-size: 2rem;
+    }
+    .about-vmv-col {
+        gap: 14px;
     }
     .about-cta-box {
         padding: 30px 20px;

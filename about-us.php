@@ -13,7 +13,7 @@ require_once __DIR__ . '/includes/header.php';
 
     <!-- 1. Hero Section -->
     <section class="about-hero" aria-label="About Advaita School of Excellence">
-        <div class="about-container">
+        <div class="about-container about-hero-container">
             <div class="about-hero-grid">
                 
                 <!-- Hero Content Left -->
@@ -22,7 +22,7 @@ require_once __DIR__ . '/includes/header.php';
                     <h1 class="about-hero-title">
                         A Strong Foundation<br>
                         for a Brighter<br>
-                        Tomorrow
+                        <span class="about-text-orange">Tomorrow</span>
                     </h1>
                     <p class="about-hero-desc">
                         At Advaita School of Excellence, we believe education is not just about academic achievement, but about shaping curious thinkers, compassionate human beings, and confident leaders for a rapidly changing world.
@@ -50,6 +50,8 @@ require_once __DIR__ . '/includes/header.php';
                             </div>
                         </div>
 
+                        <span class="about-badge-dot" aria-hidden="true">·</span>
+
                         <div class="about-badge-card">
                             <div class="about-badge-icon badge-tan">
                                 <i class="fa-solid fa-award"></i>
@@ -64,7 +66,7 @@ require_once __DIR__ . '/includes/header.php';
 
                 <!-- Hero Visual Right -->
                 <div class="about-hero-visual">
-                    <img src="assets/images/about-advaita-visual.jpg" alt="Advaita School of Excellence Campus Building" class="about-hero-img" loading="eager">
+                    <img src="assets/images/about-hero-building.jpg" alt="Advaita School of Excellence Campus Building" class="about-hero-img" loading="eager">
                 </div>
 
             </div>
@@ -95,9 +97,10 @@ require_once __DIR__ . '/includes/header.php';
                     </a>
                 </div>
 
-                <!-- Right Visual with Arch & Badge -->
+                <!-- Right Visual with Backdrop & Script -->
                 <div class="about-story-visual-wrap">
-                    <div class="about-story-arch-frame">
+                    <div class="about-story-backdrop" aria-hidden="true"></div>
+                    <div class="about-story-frame">
                         <img src="assets/images/about-story-student.jpg" alt="Advaita Student Participating in Classroom" class="about-story-img" loading="lazy">
                     </div>
                     <div class="about-floating-script-badge" aria-hidden="true">
@@ -109,16 +112,11 @@ require_once __DIR__ . '/includes/header.php';
                 </div>
 
             </div>
-        </div>
-    </section>
 
-    <!-- 3. Vision, Mission & Values -->
-    <section class="about-vmv" aria-label="Our Vision, Mission, and Values">
-        <div class="about-container">
-            <div class="about-vmv-grid">
-
-                <!-- Vision Card -->
-                <div class="about-vmv-card">
+            <!-- Vision, Mission & Values Unified Card -->
+            <div id="vmv" class="about-vmv-box" aria-label="Our Vision, Mission, and Values">
+                <!-- Vision Column -->
+                <div class="about-vmv-col">
                     <div class="about-vmv-icon-ring">
                         <i class="fa-solid fa-bullseye"></i>
                     </div>
@@ -130,8 +128,8 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
                 </div>
 
-                <!-- Mission Card -->
-                <div class="about-vmv-card">
+                <!-- Mission Column -->
+                <div class="about-vmv-col">
                     <div class="about-vmv-icon-ring">
                         <i class="fa-solid fa-rocket"></i>
                     </div>
@@ -143,20 +141,22 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
                 </div>
 
-                <!-- Values Card -->
-                <div class="about-vmv-card">
+                <!-- Values Column -->
+                <div class="about-vmv-col">
                     <div class="about-vmv-icon-ring">
                         <i class="fa-solid fa-gem"></i>
                     </div>
                     <div class="about-vmv-body">
                         <h3 class="about-vmv-title">Our Values</h3>
                         <p class="about-vmv-desc">
-                            Excellence &nbsp;|&nbsp; Integrity &nbsp;|&nbsp; Respect &nbsp;|&nbsp; Empathy &nbsp;|&nbsp; Lifelong Learning
+                            Excellence &nbsp;|&nbsp; Integrity &nbsp;|&nbsp;<br>
+                            Respect &nbsp;|&nbsp; Empathy &nbsp;|&nbsp;<br>
+                            Lifelong Learning
                         </p>
                     </div>
                 </div>
-
             </div>
+
         </div>
     </section>
 
@@ -189,35 +189,35 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Right Feature Pills Stack -->
                 <div class="about-philosophy-pills">
                     <div class="about-feature-pill">
-                        <div class="pill-icon pill-blue">
-                            <i class="fa-solid fa-shield-heart"></i>
+                        <div class="pill-icon pill-navy">
+                            <i class="fa-solid fa-shield-halved"></i>
                         </div>
                         <span>Holistic Development</span>
                     </div>
 
                     <div class="about-feature-pill">
-                        <div class="pill-icon pill-cyan">
-                            <i class="fa-solid fa-flask"></i>
+                        <div class="pill-icon pill-navy">
+                            <i class="fa-solid fa-book-open"></i>
                         </div>
                         <span>Experiential Learning</span>
                     </div>
 
                     <div class="about-feature-pill">
                         <div class="pill-icon pill-orange">
-                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-gem"></i>
                         </div>
                         <span>Value-Based Education</span>
                     </div>
 
                     <div class="about-feature-pill">
-                        <div class="pill-icon pill-amber">
+                        <div class="pill-icon pill-orange">
                             <i class="fa-solid fa-user-graduate"></i>
                         </div>
                         <span>Student-Centric Approach</span>
                     </div>
 
                     <div class="about-feature-pill">
-                        <div class="pill-icon pill-rose">
+                        <div class="pill-icon pill-orange">
                             <i class="fa-solid fa-gears"></i>
                         </div>
                         <span>Future-Ready Skills</span>
