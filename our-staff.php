@@ -17,9 +17,41 @@ require_once __DIR__ . '/includes/header.php';
          ========================================================================= -->
     <section class="staff-hero-section">
         <div class="staff-hero-canvas">
-            <!-- Direct Composite Banner Image -->
+            <!-- Background Image & Sky on the Right -->
             <div class="staff-hero-bg-visual" aria-hidden="true">
-                <img src="assets/images/inner-hero-banner.jpg" alt="Advaita School of Excellence Campus" class="staff-hero-bg-img" loading="eager">
+                <img src="assets/images/about-hero-building.jpg" alt="Advaita School of Excellence Campus" class="staff-hero-bg-img" loading="eager">
+                <!-- Floating Script Badge in Sky -->
+                <div class="staff-hero-script-tag">
+                    <span class="script-title">More<br>Than A School</span>
+                    <svg class="script-underline" viewBox="0 0 140 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M4 10C36 4 98 4 136 12" stroke="#F37021" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M18 14C48 9 92 8 126 15" stroke="#F37021" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Full Width Wave Mask Overlay with ambient blue contour -->
+            <div class="staff-hero-wave-overlay" aria-hidden="true">
+                <svg viewBox="0 0 1440 480" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="staffWaveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#0284C7"/>
+                            <stop offset="50%" stop-color="#38BDF8"/>
+                            <stop offset="100%" stop-color="#60A5FA"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Ambient soft blue aura at far left -->
+                    <path d="M0,60 C90,60 140,160 140,260 C140,360 85,430 0,450 Z" fill="#E8F4FE" opacity="0.85"/>
+                    <!-- Outer vibrant sky-blue contour wave -->
+                    <path d="M0,0 L615,0 C665,80 725,190 805,280 C895,375 1045,435 1440,458 L1440,480 L0,480 Z" fill="url(#staffWaveGrad)" opacity="0.95"/>
+                    <!-- Mid soft blue contour wave -->
+                    <path d="M0,0 L600,0 C650,80 710,190 790,280 C880,375 1030,435 1440,452 L1440,480 L0,480 Z" fill="#BAE6FD"/>
+                    <!-- Main solid white wave panel covering left side completely -->
+                    <path d="M0,0 L585,0 C635,80 695,190 775,280 C865,375 1015,435 1440,445 L1440,480 L0,480 Z" fill="#FFFFFF"/>
+                    <!-- Bottom right gentle wave contours -->
+                    <path d="M850,480 C1020,420 1220,430 1440,455 L1440,480 Z" fill="#DCEEFF" opacity="0.8"/>
+                    <path d="M1060,480 C1200,445 1320,450 1440,468 L1440,480 Z" fill="#BAE6FD" opacity="0.65"/>
+                </svg>
             </div>
 
             <!-- Left Dot Matrix Decor -->
