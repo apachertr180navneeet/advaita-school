@@ -53,16 +53,22 @@ $currentPage = $activePage ?? '';
                 </a>
 
                 <ul class="adv-nav-menu adv-nav-menu-left">
-                    <li class="adv-nav-item has-dropdown <?php echo ($currentPage === 'about' || $currentPage === 'about-us') ? 'active' : ''; ?>">
+                    <li class="adv-nav-item has-dropdown <?php echo ($currentPage === 'about' || $currentPage === 'about-us' || $currentPage === 'staff' || $currentPage === 'our-staff') ? 'active' : ''; ?>">
                         <a href="about-us.php" class="adv-nav-link" aria-haspopup="true" aria-expanded="false">
                             <span>About Us</span>
                             <i class="fa-solid fa-chevron-down chevron-icon"></i>
                         </a>
                         <ul class="adv-dropdown">
                             <li class="adv-dropdown-item">
-                                <a href="about-us.php" class="adv-dropdown-link">
+                                <a href="about-us.php" class="adv-dropdown-link <?php echo ($currentPage === 'about' || $currentPage === 'about-us') ? 'active' : ''; ?>">
                                     <i class="fa-solid fa-circle-info"></i>
                                     <span>About Us</span>
+                                </a>
+                            </li>
+                            <li class="adv-dropdown-item">
+                                <a href="our-staff.php" class="adv-dropdown-link <?php echo ($currentPage === 'staff' || $currentPage === 'our-staff') ? 'active' : ''; ?>">
+                                    <i class="fa-solid fa-chalkboard-user"></i>
+                                    <span>Our Staff</span>
                                 </a>
                             </li>
                         </ul>
@@ -185,7 +191,7 @@ $currentPage = $activePage ?? '';
             </a>
         </li>
 
-        <li class="adv-mobile-item has-children <?php echo ($currentPage === 'about' || $currentPage === 'about-us') ? 'is-active' : ''; ?>">
+        <li class="adv-mobile-item has-children <?php echo ($currentPage === 'about' || $currentPage === 'about-us' || $currentPage === 'staff' || $currentPage === 'our-staff') ? 'is-active' : ''; ?>">
             <a href="#" class="adv-mobile-link" role="button" aria-expanded="false">
                 <span class="adv-mobile-link-text">
                     <i class="fa-solid fa-circle-info"></i>
@@ -195,9 +201,15 @@ $currentPage = $activePage ?? '';
             </a>
             <ul class="adv-mobile-submenu">
                 <li>
-                    <a href="about-us.php" class="adv-mobile-submenu-link">
+                    <a href="about-us.php" class="adv-mobile-submenu-link <?php echo ($currentPage === 'about' || $currentPage === 'about-us') ? 'active' : ''; ?>">
                         <i class="fa-solid fa-circle-info"></i>
                         <span>About Us</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="our-staff.php" class="adv-mobile-submenu-link <?php echo ($currentPage === 'staff' || $currentPage === 'our-staff') ? 'active' : ''; ?>">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <span>Our Staff</span>
                     </a>
                 </li>
             </ul>
