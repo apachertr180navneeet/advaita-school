@@ -244,12 +244,12 @@ body.adv-drawer-open {
 
 .adv-nav-section-left {
     justify-content: flex-end;
-    gap: clamp(10px, 1.2vw, 20px);
+    gap: clamp(6px, 0.9vw, 14px);
 }
 
 .adv-nav-section-right {
     justify-content: flex-start;
-    gap: clamp(10px, 1.2vw, 20px);
+    gap: clamp(6px, 0.9vw, 14px);
 }
 
 /* Home Button */
@@ -259,9 +259,9 @@ body.adv-drawer-open {
     gap: 6px;
     background: linear-gradient(180deg, #f7941d 0%, #ea6100 100%);
     color: #ffffff;
-    padding: 7px 15px;
+    padding: 6px 12px;
     border-radius: 8px;
-    font-size: 0.9375rem;
+    font-size: 0.875rem;
     font-weight: 700;
     text-decoration: none;
     box-shadow: 0 3px 8px rgba(234, 97, 0, 0.3);
@@ -270,7 +270,7 @@ body.adv-drawer-open {
 }
 
 .adv-nav-home-btn i {
-    font-size: 0.85rem;
+    font-size: 0.82rem;
 }
 
 .adv-nav-home-btn:hover {
@@ -288,7 +288,7 @@ body.adv-drawer-open {
     margin: 0;
     padding: 0;
     height: 100%;
-    gap: clamp(6px, 1vw, 14px);
+    gap: clamp(4px, 0.6vw, 10px);
 }
 
 .adv-nav-item {
@@ -310,10 +310,10 @@ body.adv-drawer-open {
 .adv-nav-link {
     display: inline-flex;
     align-items: center;
-    gap: 5px;
-    padding: 6px 9px;
+    gap: 4px;
+    padding: 6px 7px;
     color: #083B7A;
-    font-size: 0.9375rem;
+    font-size: 0.84375rem;
     font-weight: 700;
     text-decoration: none;
     border-radius: 4px;
@@ -323,7 +323,7 @@ body.adv-drawer-open {
 }
 
 .adv-nav-link i.chevron-icon {
-    font-size: 0.65rem;
+    font-size: 0.62rem;
     color: #083B7A;
     transition: transform 0.25s ease;
     opacity: 0.9;

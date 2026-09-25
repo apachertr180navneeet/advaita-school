@@ -67,6 +67,18 @@ $currentPage = $activePage ?? '';
                             </li>
                         </ul>
                     </li>
+
+                    <li class="adv-nav-item <?php echo ($currentPage === 'academics') ? 'active' : ''; ?>">
+                        <a href="index.php#academics" class="adv-nav-link">
+                            <span>Academics</span>
+                        </a>
+                    </li>
+
+                    <li class="adv-nav-item <?php echo ($currentPage === 'neet-iit') ? 'active' : ''; ?>">
+                        <a href="index.php#neet-iit" class="adv-nav-link">
+                            <span>NEET / IIT Foundation</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
 
@@ -93,6 +105,29 @@ $currentPage = $activePage ?? '';
 
             <!-- Right Desktop Menu -->
             <div class="adv-nav-section adv-nav-section-right">
+                <ul class="adv-nav-menu adv-nav-menu-right">
+                    <li class="adv-nav-item <?php echo ($currentPage === 'admissions') ? 'active' : ''; ?>">
+                        <a href="index.php#admissions" class="adv-nav-link">
+                            <span>Admissions</span>
+                        </a>
+                    </li>
+                    <li class="adv-nav-item <?php echo ($currentPage === 'campus-life') ? 'active' : ''; ?>">
+                        <a href="index.php#campus-life" class="adv-nav-link">
+                            <span>Campus Life</span>
+                        </a>
+                    </li>
+                    <li class="adv-nav-item <?php echo ($currentPage === 'facilities') ? 'active' : ''; ?>">
+                        <a href="index.php#facilities" class="adv-nav-link">
+                            <span>Facilities</span>
+                        </a>
+                    </li>
+                    <li class="adv-nav-item <?php echo ($currentPage === 'contact') ? 'active' : ''; ?>">
+                        <a href="index.php#contact" class="adv-nav-link">
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+
                 <!-- Apply for Admission Pill CTA Button -->
                 <a href="index.php#admissions" class="adv-nav-apply-btn">
                     <span>Apply for Admission</span>
@@ -166,6 +201,60 @@ $currentPage = $activePage ?? '';
                     </a>
                 </li>
             </ul>
+        </li>
+
+        <li class="adv-mobile-item">
+            <a href="index.php#academics" class="adv-mobile-link">
+                <span class="adv-mobile-link-text">
+                    <i class="fa-solid fa-book-open-reader"></i>
+                    <span>Academics</span>
+                </span>
+            </a>
+        </li>
+
+        <li class="adv-mobile-item">
+            <a href="index.php#neet-iit" class="adv-mobile-link">
+                <span class="adv-mobile-link-text">
+                    <i class="fa-solid fa-atom"></i>
+                    <span>NEET / IIT Foundation</span>
+                </span>
+            </a>
+        </li>
+
+        <li class="adv-mobile-item">
+            <a href="index.php#admissions" class="adv-mobile-link">
+                <span class="adv-mobile-link-text">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Admissions</span>
+                </span>
+            </a>
+        </li>
+
+        <li class="adv-mobile-item">
+            <a href="index.php#campus-life" class="adv-mobile-link">
+                <span class="adv-mobile-link-text">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Campus Life</span>
+                </span>
+            </a>
+        </li>
+
+        <li class="adv-mobile-item">
+            <a href="index.php#facilities" class="adv-mobile-link">
+                <span class="adv-mobile-link-text">
+                    <i class="fa-solid fa-school"></i>
+                    <span>Facilities</span>
+                </span>
+            </a>
+        </li>
+
+        <li class="adv-mobile-item">
+            <a href="index.php#contact" class="adv-mobile-link">
+                <span class="adv-mobile-link-text">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Contact</span>
+                </span>
+            </a>
         </li>
     </ul>
 
