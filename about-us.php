@@ -434,11 +434,15 @@ require_once __DIR__ . '/includes/header.php';
          7. CTA BANNER: Together, let's build brighter tomorrows
          ========================================================================= -->
     <section class="about-cta-banner">
+        <!-- Organic Sky-Blue Wave Top -->
+        <div class="about-cta-wave-top" aria-hidden="true">
+            <svg viewBox="0 0 1440 50" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 20C320 50 680 0 1080 25C1240 35 1360 15 1440 20V50H0V20Z" fill="#e1f0fe"/>
+            </svg>
+        </div>
+
         <div class="about-cta-box">
             <div class="about-cta-content">
-                <div class="about-cta-watermark">
-                    <img src="assets/images/logo-seal.png" alt="" class="about-cta-watermark-img" loading="lazy">
-                </div>
                 <div class="about-cta-text-wrap">
                     <span class="about-cta-eyebrow">BE A PART OF ADVAITA —</span>
                     <h2 class="about-cta-title">Together, let's build brighter tomorrows.</h2>
@@ -455,6 +459,7 @@ require_once __DIR__ . '/includes/header.php';
                 </div>
             </div>
             <div class="about-cta-students-wrap">
+                <div class="about-cta-blob-backdrop" aria-hidden="true"></div>
                 <img src="assets/images/about-cta-students-final.jpg" alt="Advaita School Students" class="about-cta-students-img" loading="lazy">
             </div>
         </div>

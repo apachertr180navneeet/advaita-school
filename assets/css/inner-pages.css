@@ -2419,67 +2419,63 @@
    Section 7: CTA Banner ("Be a Part of Advaita") - Light Sky-Blue Aesthetic
    -------------------------------------------------------------------------- */
 .about-cta-banner {
-    padding: clamp(25px, 3.5vw, 50px) 0 0;
+    padding: 0;
     width: 100%;
     background: #ffffff;
     overflow: hidden;
     position: relative;
 }
 
-.about-cta-box {
+.about-cta-wave-top {
     width: 100%;
-    background: linear-gradient(135deg, #e1f0fe 0%, #ecf6fd 50%, #f4faff 100%);
-    border-radius: 36px 36px 0 0;
-    display: grid;
-    grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.95fr);
-    align-items: stretch;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 -8px 30px rgba(8, 59, 122, 0.03);
+    height: 48px;
+    line-height: 0;
+    margin-bottom: -2px;
 }
 
+.about-cta-wave-top svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.about-cta-box {
+    width: 100%;
+    background: linear-gradient(135deg, #e1f0fe 0%, #ecf6fd 45%, #f4faff 100%);
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.95fr);
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 380px;
+}
+
+/* Subtle dot matrix pattern in the center */
 .about-cta-box::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 55%;
-    background-image: radial-gradient(rgba(14, 165, 233, 0.18) 1.5px, transparent 1.5px);
+    top: 20%;
+    left: 42%;
+    width: 160px;
+    height: 140px;
+    background-image: radial-gradient(#93c5fd 2px, transparent 2px);
     background-size: 20px 20px;
+    opacity: 0.8;
     pointer-events: none;
     z-index: 1;
 }
 
 .about-cta-content {
     position: relative;
-    z-index: 2;
-    padding: clamp(45px, 5.5vw, 75px) clamp(24px, 3.5vw, 45px) clamp(45px, 5.5vw, 75px) clamp(30px, 5vw, 80px);
+    z-index: 3;
+    padding: clamp(35px, 4.5vw, 60px) clamp(24px, 3.5vw, 45px) clamp(35px, 4.5vw, 60px) clamp(30px, 6vw, 100px);
     display: flex;
     align-items: center;
 }
 
-.about-cta-watermark {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 190px;
-    width: 190px;
-    opacity: 0.05;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.about-cta-watermark-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
 .about-cta-text-wrap {
     position: relative;
-    z-index: 2;
+    z-index: 3;
     max-width: 560px;
 }
 
@@ -2496,7 +2492,7 @@
 }
 
 .about-cta-title {
-    font-size: clamp(1.85rem, 2.7vw, 2.45rem);
+    font-size: clamp(1.95rem, 2.8vw, 2.6rem);
     font-weight: 800;
     color: #083B7A;
     line-height: 1.2;
@@ -2552,18 +2548,33 @@
     z-index: 2;
     display: flex;
     justify-content: flex-end;
-    align-items: stretch;
+    align-items: flex-end;
     height: 100%;
     line-height: 0;
     overflow: hidden;
 }
 
+.about-cta-blob-backdrop {
+    position: absolute;
+    right: 5%;
+    bottom: -10%;
+    width: 440px;
+    height: 440px;
+    background: radial-gradient(circle, rgba(186, 230, 253, 0.65) 0%, rgba(186, 230, 253, 0) 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+}
+
 .about-cta-students-img {
     width: 100%;
     height: 100%;
+    max-height: 380px;
     object-fit: cover;
-    object-position: left center;
+    object-position: left bottom;
     display: block;
+    position: relative;
+    z-index: 2;
 }
 
 /* --------------------------------------------------------------------------
