@@ -17,40 +17,27 @@ require_once __DIR__ . '/includes/header.php';
          ========================================================================= -->
     <section class="principal-hero-section">
         <div class="principal-hero-canvas">
-            <!-- Background Visual: Campus on the Right -->
-            <div class="principal-hero-bg-visual">
-                <img src="assets/images/about-hero-building.jpg" alt="Advaita School of Excellence Campus" class="principal-hero-bg-img" loading="eager">
-                <!-- Floating Script Badge in Sky -->
-                <div class="principal-hero-script-tag">
-                    <span class="script-title">More<br>Than A School</span>
-                    <svg class="script-underline" viewBox="0 0 140 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path d="M4 10C36 4 98 4 136 12" stroke="#F37021" stroke-width="3.5" stroke-linecap="round"/>
-                        <path d="M18 14C48 9 92 8 126 15" stroke="#F37021" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
-                    </svg>
-                </div>
+            <!-- Direct Composite Banner Image -->
+            <div class="principal-hero-bg-visual" aria-hidden="true">
+                <img src="assets/images/inner-hero-banner.jpg" alt="Advaita School of Excellence Campus" class="principal-hero-bg-img" loading="eager">
             </div>
 
-            <!-- Left Organic White Panel with Curved Boundary -->
+            <!-- Left Content Panel -->
             <div class="principal-hero-left-panel">
-                <!-- Ambient decorative dots -->
-                <div class="principal-hero-dots-decor" aria-hidden="true"></div>
-
                 <div class="principal-hero-content-inner">
                     <!-- Breadcrumbs -->
-                    <nav class="principal-hero-breadcrumb" aria-label="Breadcrumb">
-                        <ol class="principal-breadcrumb-list">
-                            <li><a href="index.php">Home</a></li>
-                            <li class="principal-breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></li>
-                            <li><a href="about-us.php">About Us</a></li>
-                            <li class="principal-breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></li>
-                            <li class="principal-breadcrumb-current" aria-current="page">Principal's Message</li>
-                        </ol>
-                    </nav>
+                    <div class="principal-breadcrumb">
+                        <span>Home</span>
+                        <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
+                        <span>About Us</span>
+                        <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
+                        <span class="active">Principal's Desk</span>
+                    </div>
 
-                    <span class="principal-hero-eyebrow">— FROM THE PRINCIPAL —</span>
+                    <span class="principal-eyebrow">— FROM THE PRINCIPAL —</span>
                     <h1 class="principal-hero-title">
                         Nurturing Potential<br>
-                        for a <span>Brighter Tomorrow</span>
+                        for a <span class="text-orange">Brighter Tomorrow.</span>
                     </h1>
                     
                     <div class="principal-hero-pillars">
@@ -62,14 +49,21 @@ require_once __DIR__ . '/includes/header.php';
                         <span class="pillar-pipe">|</span>
                         <span>Lifelong Learning</span>
                     </div>
-                </div>
 
-                <!-- Organic Wave Edge SVG -->
-                <div class="principal-hero-wave-edge" aria-hidden="true">
-                    <svg viewBox="0 0 100 600" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0 C35 80 85 160 85 270 C85 390 30 480 75 600 L0 600 Z" fill="#d8ecff" opacity="0.6"/>
-                        <path d="M0 0 C25 80 65 160 65 270 C65 390 15 480 55 600 L0 600 Z" fill="#ffffff"/>
-                    </svg>
+                    <p class="principal-hero-desc">
+                        At Advaita School of Excellence, we are committed to providing a nurturing and inspiring environment where every child is encouraged to learn, grow, and succeed.
+                    </p>
+
+                    <div class="principal-hero-actions">
+                        <a href="index.php#admissions" class="principal-btn-orange">
+                            <span>Book a Campus Visit</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="about-us.php" class="principal-btn-video">
+                            <i class="fa-solid fa-circle-play"></i>
+                            <span>Explore Advaita</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -247,59 +241,57 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
     <!-- =========================================================================
-         4. CAMPUS VISIT CTA BANNER: Come see the school for yourself
+         4. CTA BANNER SECTION: Come see the school for yourself
          ========================================================================= -->
-    <section class="principal-cta-banner-section">
-        <div class="principal-cta-banner-full">
-            <!-- Left Content Area -->
-            <div class="principal-cta-left-content">
-                <div class="principal-cta-text-wrapper">
-                    <span class="principal-cta-eyebrow">— BEGIN YOUR CHILD'S JOURNEY —</span>
-                    <h2 class="principal-cta-title">
-                        Come see the school<br>
-                        for <span>yourself.</span>
-                    </h2>
-                    <p class="principal-cta-desc">
-                        We welcome you to visit the campus, meet our teachers, and see for yourself the environment in which your child will grow.
-                    </p>
+    <section class="admission-banner">
+        <!-- Background Shapes -->
+        <div class="shape-one"></div>
+        <div class="shape-two"></div>
+        <div class="shape-three"></div>
 
-                    <!-- 3 Feature Badges -->
-                    <div class="principal-cta-features">
-                        <div class="principal-feature-badge">
-                            <i class="fa-solid fa-compass"></i>
-                            <span>Interactive Campus Tour</span>
-                        </div>
-                        <div class="principal-feature-badge">
-                            <i class="fa-solid fa-chalkboard-user"></i>
-                            <span>Meet Our Faculty</span>
-                        </div>
-                        <div class="principal-feature-badge">
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            <span>Experience Our Programs</span>
-                        </div>
-                    </div>
+        <!-- Dots -->
+        <div class="dot-pattern"></div>
+
+        <!-- Content -->
+        <div class="banner-content">
+            <div class="copy">
+                <!-- Eyebrow -->
+                <div class="eyebrow">
+                    BEGIN YOUR CHILD'S JOURNEY
+                    <span class="eyebrow-line"></span>
+                </div>
+
+                <!-- Heading -->
+                <h2 class="headline">
+                    Come see the school<br>
+                    <span class="text-orange">for yourself.</span>
+                </h2>
+
+                <!-- Description -->
+                <p class="subtext">
+                    We welcome you to visit our campus, meet our dedicated teachers, and experience the environment where your child will thrive.
+                </p>
+
+                <!-- Buttons -->
+                <div class="buttons">
+                    <!-- Enrol Button -->
+                    <a href="index.php#admissions" class="btn-enrol">
+                        <span>Book a Campus Visit</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <!-- Contact -->
+                    <a href="index.php#contact" class="btn-visit">
+                        <i class="fa-regular fa-envelope"></i>
+                        <span>Contact Us</span>
+                    </a>
                 </div>
             </div>
+        </div>
 
-            <!-- Right Visual Area with Campus Image & Floating Action Buttons -->
-            <div class="principal-cta-right-visual">
-                <div class="principal-cta-arch-wrapper">
-                    <img src="assets/images/campus-visit-building.jpg" alt="Advaita School Campus" class="principal-cta-arch-img" loading="lazy">
-                    
-                    <!-- Floating CTA Actions Card -->
-                    <div class="principal-cta-actions-card">
-                        <a href="index.php#admissions" class="principal-btn-orange">
-                            <i class="fa-regular fa-calendar-check"></i>
-                            <span>Book A Campus Visit</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                        <a href="index.php#contact" class="principal-btn-contact">
-                            <i class="fa-regular fa-envelope"></i>
-                            <span>Contact Us</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <!-- Students Image -->
+        <div class="students">
+            <img src="assets/images/about-cta-students-trio.png" alt="Advaita Students" loading="lazy">
         </div>
     </section>
 

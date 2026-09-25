@@ -17,53 +17,43 @@ require_once __DIR__ . '/includes/header.php';
          ========================================================================= -->
     <section class="vision-hero-section">
         <div class="vision-hero-canvas">
-            <!-- Background Image & Sky on the Right -->
-            <div class="vision-hero-bg-visual">
-                <img src="assets/images/about-hero-building.jpg" alt="Advaita School of Excellence Campus" class="vision-hero-bg-img" loading="eager">
-                <!-- Floating Script Badge in Sky -->
-                <div class="vision-hero-script-tag">
-                    <span class="script-title">More<br>Than A School</span>
-                    <svg class="script-underline" viewBox="0 0 140 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path d="M4 10C36 4 98 4 136 12" stroke="#F37021" stroke-width="3.5" stroke-linecap="round"/>
-                        <path d="M18 14C48 9 92 8 126 15" stroke="#F37021" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
-                    </svg>
-                </div>
+            <!-- Direct Composite Banner Image -->
+            <div class="vision-hero-bg-visual" aria-hidden="true">
+                <img src="assets/images/inner-hero-banner.jpg" alt="Advaita School of Excellence Campus" class="vision-hero-bg-img" loading="eager">
             </div>
 
-            <!-- Left Organic White Panel with Curved Boundary -->
+            <!-- Left Content Panel -->
             <div class="vision-hero-left-panel">
-                <!-- Ambient decorative dots -->
-                <div class="vision-hero-dots-decor" aria-hidden="true"></div>
-
                 <div class="vision-hero-content-inner">
                     <!-- Breadcrumbs -->
-                    <nav class="vision-hero-breadcrumb" aria-label="Breadcrumb">
-                        <ol class="vision-breadcrumb-list">
-                            <li><a href="index.php">Home</a></li>
-                            <li class="vision-breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></li>
-                            <li><a href="about-us.php">About Us</a></li>
-                            <li class="vision-breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></li>
-                            <li class="vision-breadcrumb-current" aria-current="page">Vision &amp; Mission</li>
-                        </ol>
-                    </nav>
+                    <div class="vision-breadcrumb">
+                        <span>Home</span>
+                        <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
+                        <span>About Us</span>
+                        <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
+                        <span class="active">Vision &amp; Mission</span>
+                    </div>
 
-                    <span class="vision-hero-eyebrow">— OUR VISION &amp; MISSION —</span>
+                    <span class="vision-eyebrow">— OUR VISION &amp; MISSION —</span>
                     <h1 class="vision-hero-title">
                         Guiding Young Minds<br>
-                        Towards a <span>Brighter Tomorrow.</span>
+                        Towards a <span class="text-orange">Brighter Tomorrow.</span>
                     </h1>
 
                     <p class="vision-hero-desc">
                         At Advaita School of Excellence, our vision and mission reflect our unwavering commitment to academic excellence, strong values and the all-round development of every child.
                     </p>
-                </div>
 
-                <!-- Organic Wave Edge SVG -->
-                <div class="vision-hero-wave-edge" aria-hidden="true">
-                    <svg viewBox="0 0 100 600" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0 C35 80 85 160 85 270 C85 390 30 480 75 600 L0 600 Z" fill="#d8ecff" opacity="0.6"/>
-                        <path d="M0 0 C25 80 65 160 65 270 C65 390 15 480 55 600 L0 600 Z" fill="#ffffff"/>
-                    </svg>
+                    <div class="vision-hero-actions">
+                        <a href="index.php#admissions" class="vision-btn-orange">
+                            <span>Book a Campus Visit</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#core-beliefs" class="vision-btn-video">
+                            <i class="fa-solid fa-compass"></i>
+                            <span>Our Beliefs</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -306,83 +296,55 @@ require_once __DIR__ . '/includes/header.php';
     <!-- =========================================================================
          5. CTA BANNER SECTION: Be a Part of the Advaita Journey
          ========================================================================= -->
-    <section class="vision-cta-banner-section">
-        <div class="vision-cta-banner-full">
-            <!-- Left Content Area -->
-            <div class="vision-cta-left-content">
-                <!-- Origami Paper Airplane & Flight Loop Vector -->
-                <svg class="vision-cta-flight-svg" viewBox="0 0 250 190" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <!-- Dot Grid 6x4 -->
-                    <g fill="#93c5fd" opacity="0.85">
-                        <circle cx="16" cy="35" r="2.2"/>
-                        <circle cx="32" cy="35" r="2.2"/>
-                        <circle cx="48" cy="35" r="2.2"/>
-                        <circle cx="64" cy="35" r="2.2"/>
-                        <circle cx="80" cy="35" r="2.2"/>
-                        <circle cx="96" cy="35" r="2.2"/>
+    <section class="admission-banner">
+        <!-- Background Shapes -->
+        <div class="shape-one"></div>
+        <div class="shape-two"></div>
+        <div class="shape-three"></div>
 
-                        <circle cx="16" cy="50" r="2.2"/>
-                        <circle cx="32" cy="50" r="2.2"/>
-                        <circle cx="48" cy="50" r="2.2"/>
-                        <circle cx="64" cy="50" r="2.2"/>
-                        <circle cx="80" cy="50" r="2.2"/>
-                        <circle cx="96" cy="50" r="2.2"/>
+        <!-- Dots -->
+        <div class="dot-pattern"></div>
 
-                        <circle cx="16" cy="65" r="2.2"/>
-                        <circle cx="32" cy="65" r="2.2"/>
-                        <circle cx="48" cy="65" r="2.2"/>
-                        <circle cx="64" cy="65" r="2.2"/>
-                        <circle cx="80" cy="65" r="2.2"/>
-                        <circle cx="96" cy="65" r="2.2"/>
+        <!-- Content -->
+        <div class="banner-content">
+            <div class="copy">
+                <!-- Eyebrow -->
+                <div class="eyebrow">
+                    TOGETHER TOWARDS A BRIGHTER TOMORROW
+                    <span class="eyebrow-line"></span>
+                </div>
 
-                        <circle cx="16" cy="80" r="2.2"/>
-                        <circle cx="32" cy="80" r="2.2"/>
-                        <circle cx="48" cy="80" r="2.2"/>
-                        <circle cx="64" cy="80" r="2.2"/>
-                        <circle cx="80" cy="80" r="2.2"/>
-                        <circle cx="96" cy="80" r="2.2"/>
-                    </g>
-                    <!-- Flight Loop Trail -->
-                    <path d="M 2 175 C 38 125 78 85 108 108 C 132 126 114 168 86 162 C 58 156 64 100 102 72 C 132 52 162 34 192 20" stroke="#38bdf8" stroke-width="2.2" stroke-dasharray="5 5" stroke-linecap="round"/>
-                    <!-- 3D Origami Paper Airplane -->
-                    <g transform="translate(188, 8) rotate(22)">
-                        <polygon points="0,24 44,0 34,30" fill="#38bdf8"/>
-                        <polygon points="0,24 44,0 18,22" fill="#7dd3fc"/>
-                        <polygon points="18,22 44,0 26,32" fill="#0284c7"/>
-                        <polygon points="26,32 34,30 44,0" fill="#0369a1"/>
-                    </g>
-                </svg>
+                <!-- Heading -->
+                <h2 class="headline">
+                    Be a Part of the<br>
+                    <span class="text-orange">Advaita Journey.</span>
+                </h2>
 
-                <div class="vision-cta-text-wrapper">
-                    <span class="vision-cta-eyebrow">— TOGETHER TOWARDS A BRIGHTER TOMORROW —</span>
-                    <h2 class="vision-cta-title">
-                        Be a Part of the<br>
-                        <span>Advaita Journey</span>
-                    </h2>
-                    <p class="vision-cta-desc">
-                        Give your child the right start with strong academics, values and endless opportunities.
-                    </p>
+                <!-- Description -->
+                <p class="subtext">
+                    Give your child the right start with strong academics, values and endless opportunities.
+                </p>
 
-                    <!-- Dual Action Buttons -->
-                    <div class="vision-cta-actions">
-                        <a href="index.php#admissions" class="vision-btn-orange">
-                            <span>Book a Campus Visit</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                        <a href="index.php#contact" class="vision-btn-enquire">
-                            <span>Enquire Now</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
+                <!-- Buttons -->
+                <div class="buttons">
+                    <!-- Enrol Button -->
+                    <a href="index.php#admissions" class="btn-enrol">
+                        <span>Book a Campus Visit</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <!-- School Visit -->
+                    <a href="index.php#contact" class="btn-visit">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Enquire Now</span>
+                    </a>
                 </div>
             </div>
+        </div>
 
-            <!-- Right Visual Area with Curved Cutout Student Image -->
-            <div class="vision-cta-right-visual">
-                <div class="vision-cta-arch-wrapper">
-                    <img src="assets/images/about-cta-students-trio.png" alt="Advaita School Students" class="vision-cta-arch-img" loading="lazy">
-                </div>
-            </div>
+        <!-- Students Image -->
+        <div class="students">
+            <img src="assets/images/about-cta-students-trio.png" alt="Advaita School Students" loading="lazy">
         </div>
     </section>
 
