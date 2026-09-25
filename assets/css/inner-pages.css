@@ -2424,31 +2424,23 @@
     z-index: 4;
     right: 0;
     bottom: 0;
-    width: 45%;
+    width: 48%;
     height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
     overflow: hidden;
     pointer-events: none;
 }
 
 .admission-banner .students img {
-    width: 222%;
     height: 100%;
-    max-width: none;
-    object-fit: cover;
-    object-position: right center;
+    max-height: 290px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: right bottom;
     display: block;
-}
-
-.admission-banner .students::before {
-    content: "";
-    position: absolute;
-    z-index: 2;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    width: 32%;
-    background: linear-gradient(90deg, #dceeff 0%, rgba(220, 238, 255, 0.55) 48%, transparent 100%);
-    pointer-events: none;
 }
 
 /* Tablet */
