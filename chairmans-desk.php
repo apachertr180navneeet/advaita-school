@@ -140,6 +140,7 @@ require_once __DIR__ . '/includes/header.php';
                 <div class="chairman-profile-col">
                     <div class="chairman-profile-card-wrapper">
                         <div class="chairman-profile-blue-tab" aria-hidden="true"></div>
+                        <div class="chairman-profile-dots-bg" aria-hidden="true"></div>
                         <div class="chairman-profile-card">
                             <div class="chairman-profile-photo-wrap">
                                 <img src="assets/images/chairman-real.png" alt="Shri. Vishal Vishal Wattamwar - Chairman" class="chairman-profile-photo" loading="lazy">

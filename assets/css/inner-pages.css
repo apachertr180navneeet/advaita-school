@@ -3898,61 +3898,11 @@
 }
 
 /* ==========================================================================
-   2. CHAIRMAN'S MESSAGE SECTION
+   2. CHAIRMAN'S MESSAGE SECTION (100% FULL-WIDTH CANVASS & EXACT ACCURATE UI)
    ========================================================================== */
 .chairman-message-section {
     position: relative;
-    padding: clamp(50px, 6vw, 80px) 0 clamp(40px, 5vw, 65px);
-    background: #ffffff;
-    width: 100%;
-}
-
-.chairman-message-container {
-    width: 100%;
-    max-width: 1320px;
-    margin: 0 auto;
-    padding: 0 clamp(20px, 3.5vw, 40px);
-}
-
-.chairman-message-card {
-    background: #ffffff;
-    border-radius: 28px;
-    border: 1.5px solid #e2eefb;
-    box-shadow: 0 14px 42px rgba(8, 59, 122, 0.07);
-    padding: clamp(32px, 4vw, 55px);
-    display: grid;
-    grid-template-columns: 1fr 340px;
-    gap: clamp(30px, 4vw, 55px);
-    align-items: start;
-    position: relative;
-}
-
-.chairman-message-content {
-    position: relative;
-    z-index: 2;
-}
-
-.chairman-message-eyebrow {
-    display: inline-block;
-    color: #F37021;
-    font-size: 0.8125rem;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-}
-
-.chairman-message-title {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: clamp(1.85rem, 2.6vw, 2.35rem);
-    font-weight: 800;
-    color: #083B7A;
-/* ==========================================================================
-   2. CHAIRMAN'S MESSAGE SECTION (EXACT ACCURATE UI)
-   ========================================================================== */
-.chairman-message-section {
-    position: relative;
-    padding: clamp(40px, 5vw, 65px) 0 clamp(35px, 4vw, 55px);
+    padding: clamp(45px, 5.5vw, 75px) 0 clamp(40px, 5vw, 65px);
     background: linear-gradient(180deg, #f8fcff 0%, #eef8ff 50%, #f4faff 100%);
     width: 100%;
     overflow: hidden;
@@ -3960,9 +3910,9 @@
 
 .chairman-message-container {
     width: 100%;
-    max-width: 1320px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 clamp(20px, 3.5vw, 40px);
+    padding: 0 clamp(20px, 4vw, 50px);
     position: relative;
     z-index: 2;
 }
@@ -3971,8 +3921,8 @@
 .chairman-message-dots-left,
 .chairman-message-dots-right {
     position: absolute;
-    width: 100px;
-    height: 180px;
+    width: 110px;
+    height: 190px;
     background-image: radial-gradient(#93c5fd 2.2px, transparent 2.2px);
     background-size: 16px 16px;
     opacity: 0.75;
@@ -3982,25 +3932,26 @@
 
 .chairman-message-dots-left {
     top: 60px;
-    left: max(10px, calc((100vw - 1320px) / 2 - 30px));
+    left: max(12px, calc((100vw - 1400px) / 2 - 25px));
 }
 
 .chairman-message-dots-right {
     top: 60px;
-    right: max(10px, calc((100vw - 1320px) / 2 - 30px));
+    right: max(12px, calc((100vw - 1400px) / 2 - 25px));
 }
 
 .chairman-message-card {
     background: #ffffff;
     border-radius: 28px;
     border: 1.5px solid #e2eefb;
-    box-shadow: 0 14px 42px rgba(12, 74, 113, 0.08);
-    padding: clamp(32px, 4vw, 48px);
+    box-shadow: 0 16px 48px rgba(12, 74, 113, 0.08);
+    padding: clamp(32px, 4vw, 54px);
     display: grid;
-    grid-template-columns: 1.35fr 330px;
-    gap: clamp(28px, 3.5vw, 48px);
+    grid-template-columns: minmax(0, 1.35fr) 350px;
+    gap: clamp(32px, 4.5vw, 60px);
     align-items: center;
     position: relative;
+    width: 100%;
 }
 
 .chairman-message-content {
@@ -4029,7 +3980,7 @@
 
 .chairman-message-title {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: clamp(2rem, 2.8vw, 2.55rem);
+    font-size: clamp(2rem, 2.8vw, 2.6rem);
     font-weight: 800;
     color: #06497d;
     line-height: 1.15;
@@ -4087,7 +4038,7 @@
     font-weight: 500;
 }
 
-/* Chairman Profile Column with Blue Accent Tab */
+/* Chairman Profile Column with Blue Accent Tab & Anchored Dot Grid */
 .chairman-profile-col {
     position: relative;
     z-index: 2;
@@ -4098,7 +4049,7 @@
 .chairman-profile-card-wrapper {
     position: relative;
     width: 100%;
-    max-width: 320px;
+    max-width: 340px;
 }
 
 .chairman-profile-blue-tab {
@@ -4106,19 +4057,33 @@
     left: -14px;
     top: 50%;
     transform: translateY(-50%);
-    width: 24px;
-    height: 110px;
+    width: 28px;
+    height: 130px;
     background: #1688e8;
-    border-radius: 12px 0 0 12px;
+    border-radius: 14px 0 0 14px;
+    z-index: 1;
+    box-shadow: 0 4px 14px rgba(22, 136, 232, 0.25);
+}
+
+.chairman-profile-dots-bg {
+    position: absolute;
+    top: -22px;
+    right: -24px;
+    width: 80px;
+    height: 120px;
+    background-image: radial-gradient(#93c5fd 2.2px, transparent 2.2px);
+    background-size: 15px 15px;
+    opacity: 0.85;
+    pointer-events: none;
     z-index: 1;
 }
 
 .chairman-profile-card {
     background: #ffffff;
-    border-radius: 20px;
+    border-radius: 26px;
     overflow: hidden;
-    box-shadow: 0 12px 36px rgba(12, 74, 113, 0.12);
-    border: 1px solid #dcebfa;
+    box-shadow: 0 16px 44px rgba(12, 74, 113, 0.14);
+    border: 1.5px solid #dcebfa;
     text-align: left;
     position: relative;
     z-index: 2;
@@ -4126,7 +4091,7 @@
 
 .chairman-profile-photo-wrap {
     position: relative;
-    height: 290px;
+    height: 320px;
     background: #fdf8f4;
     overflow: hidden;
 }
@@ -4145,14 +4110,15 @@
 }
 
 .chairman-profile-info {
-    background: linear-gradient(180deg, #12578d 0%, #07355e 100%);
+    background: linear-gradient(180deg, #124370 0%, #092e50 100%);
     color: #ffffff;
-    padding: 14px 18px 16px;
+    padding: 16px 22px 18px;
+    border-radius: 0 0 24px 24px;
 }
 
 .chairman-name {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 1.05rem;
+    font-size: 1.08rem;
     font-weight: 800;
     color: #ffffff;
     margin-bottom: 4px;
@@ -4161,9 +4127,9 @@
 
 .chairman-role {
     color: #ff8b36;
-    font-size: 0.8125rem;
+    font-size: 0.84rem;
     font-weight: 800;
-    margin-bottom: 2px;
+    margin-bottom: 3px;
     letter-spacing: 0.3px;
 }
 
@@ -4213,9 +4179,9 @@
 
 .chairman-commitment-container {
     width: 100%;
-    max-width: 1320px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 clamp(20px, 3.5vw, 40px);
+    padding: 0 clamp(20px, 4vw, 50px);
     position: relative;
     z-index: 2;
 }
