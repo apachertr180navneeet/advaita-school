@@ -4652,6 +4652,880 @@
     margin: 0 auto;
 }
 
+/* ==========================================================================
+   7. PRINCIPAL'S DESK PAGE STYLES (100% FULL-WIDTH CANVASS & ACCURATE UI)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   7.1 HERO SECTION
+   -------------------------------------------------------------------------- */
+.principal-hero-section {
+    position: relative;
+    width: 100%;
+    background: #eaf5ff;
+    overflow: hidden;
+}
+
+.principal-hero-canvas {
+    width: 100%;
+    min-height: 480px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.principal-hero-bg-visual {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 55%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.principal-hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
+}
+
+.principal-hero-script-tag {
+    position: absolute;
+    top: 30px;
+    right: clamp(24px, 5vw, 70px);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: rotate(-5deg);
+    pointer-events: none;
+}
+
+.principal-hero-script-tag .script-title {
+    font-family: 'Fraunces', Georgia, cursive, serif;
+    font-size: clamp(1.2rem, 1.8vw, 1.55rem);
+    font-weight: 700;
+    color: #083b7a;
+    line-height: 1.15;
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.9);
+    text-align: center;
+}
+
+.principal-hero-script-tag .script-underline {
+    width: 110px;
+    height: 16px;
+    margin-top: 4px;
+}
+
+.principal-hero-left-panel {
+    position: relative;
+    z-index: 2;
+    width: 54%;
+    background: #ffffff;
+    padding: clamp(40px, 5vw, 65px) clamp(24px, 5vw, 70px) clamp(40px, 5vw, 65px) clamp(20px, 5vw, 80px);
+    display: flex;
+    align-items: center;
+}
+
+.principal-hero-content-inner {
+    max-width: 580px;
+    width: 100%;
+}
+
+.principal-hero-breadcrumb {
+    margin-bottom: 14px;
+}
+
+.principal-breadcrumb-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+}
+
+.principal-breadcrumb-list li a {
+    color: #1688e8;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.principal-breadcrumb-list li a:hover {
+    color: #083b7a;
+}
+
+.principal-breadcrumb-sep {
+    color: #94a3b8;
+    font-size: 0.6875rem;
+}
+
+.principal-breadcrumb-current {
+    color: #475569;
+    font-weight: 700;
+}
+
+.principal-hero-eyebrow {
+    display: inline-block;
+    color: #ff6908;
+    font-size: 0.8125rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.principal-hero-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(2rem, 3.2vw, 3rem);
+    font-weight: 800;
+    color: #06497d;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.principal-hero-title span {
+    color: #ff6908;
+}
+
+.principal-hero-pillars {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 12px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #0284c7;
+}
+
+.principal-hero-pillars .pillar-pipe {
+    color: #cbd5e1;
+    font-weight: 400;
+}
+
+.principal-hero-wave-edge {
+    position: absolute;
+    right: -78px;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.principal-hero-wave-edge svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* --------------------------------------------------------------------------
+   7.2 PRINCIPAL'S MESSAGE SECTION
+   -------------------------------------------------------------------------- */
+.principal-message-section {
+    position: relative;
+    width: 100%;
+    background: #ffffff;
+    padding: clamp(45px, 5.5vw, 75px) 0 clamp(40px, 5vw, 65px);
+    overflow: hidden;
+}
+
+.principal-message-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 clamp(20px, 4.5vw, 80px);
+    position: relative;
+    z-index: 2;
+}
+
+.principal-message-dots-left,
+.principal-message-dots-right {
+    position: absolute;
+    width: 100px;
+    height: 180px;
+    background-image: radial-gradient(#93c5fd 2.2px, transparent 2.2px);
+    background-size: 16px 16px;
+    opacity: 0.75;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.principal-message-dots-left {
+    top: 40px;
+    left: clamp(10px, 2vw, 40px);
+}
+
+.principal-message-dots-right {
+    top: 40px;
+    right: clamp(10px, 2vw, 40px);
+}
+
+.principal-message-grid {
+    display: grid;
+    grid-template-columns: 340px minmax(0, 1.45fr);
+    gap: clamp(32px, 5vw, 75px);
+    align-items: start;
+    width: 100%;
+}
+
+/* Profile Column with Viewfinder Frame */
+.principal-profile-col {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.principal-profile-card-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 340px;
+}
+
+.principal-profile-blue-tab {
+    position: absolute;
+    right: -13px;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 120px;
+    background: #1688e8;
+    border-radius: 0 14px 14px 0;
+    z-index: 1;
+    box-shadow: 0 4px 14px rgba(22, 136, 232, 0.25);
+}
+
+.principal-profile-card {
+    background: #f8fcff;
+    border-radius: 24px;
+    border: 1.5px solid #dcebfa;
+    box-shadow: 0 14px 40px rgba(12, 74, 113, 0.08);
+    padding: 24px 20px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Viewfinder Frame with 4 Corner Brackets */
+.principal-viewfinder-frame {
+    position: relative;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 28px 20px;
+    margin-bottom: 20px;
+    border: 1px solid #e0effa;
+    box-shadow: 0 4px 14px rgba(12, 74, 113, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 190px;
+}
+
+.vf-bracket {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border-color: #1688e8;
+    pointer-events: none;
+}
+
+.vf-bracket-tl {
+    top: 10px;
+    left: 10px;
+    border-top: 2.5px solid #1688e8;
+    border-left: 2.5px solid #1688e8;
+}
+
+.vf-bracket-tr {
+    top: 10px;
+    right: 10px;
+    border-top: 2.5px solid #1688e8;
+    border-right: 2.5px solid #1688e8;
+}
+
+.vf-bracket-bl {
+    bottom: 10px;
+    left: 10px;
+    border-bottom: 2.5px solid #1688e8;
+    border-left: 2.5px solid #1688e8;
+}
+
+.vf-bracket-br {
+    bottom: 10px;
+    right: 10px;
+    border-bottom: 2.5px solid #1688e8;
+    border-right: 2.5px solid #1688e8;
+}
+
+.principal-avatar-wrap {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.principal-avatar-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.principal-name {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #06497d;
+    margin: 0 0 4px;
+}
+
+.principal-role {
+    color: #1688e8;
+    font-size: 0.88rem;
+    font-weight: 800;
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+}
+
+.principal-org {
+    font-size: 0.82rem;
+    color: #475569;
+    line-height: 1.4;
+    margin: 0 0 16px;
+    font-weight: 600;
+}
+
+/* 3-Item Stats Bar */
+.principal-stats-bar {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 12px 10px;
+    border: 1px solid #e0effa;
+}
+
+.principal-stat-item {
+    text-align: center;
+}
+
+.principal-stat-item .stat-top {
+    display: block;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 800;
+    color: #06497d;
+}
+
+.principal-stat-item .stat-bot {
+    display: block;
+    font-size: 0.72rem;
+    color: #64748b;
+    font-weight: 600;
+    margin-top: 1px;
+}
+
+.principal-stat-divider {
+    width: 1px;
+    height: 26px;
+    background: #e2e8f0;
+}
+
+/* Right Column Message Content */
+.principal-message-content {
+    position: relative;
+    z-index: 2;
+}
+
+.principal-message-eyebrow {
+    display: inline-block;
+    color: #1688e8;
+    font-size: 0.8125rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.principal-message-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(2rem, 2.8vw, 2.55rem);
+    font-weight: 800;
+    color: #06497d;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.principal-message-title span {
+    color: #ff6908;
+}
+
+.principal-salutation {
+    font-size: 0.96875rem;
+    font-weight: 700;
+    color: #06497d;
+    margin-bottom: 12px;
+    font-style: italic;
+}
+
+.principal-message-content p {
+    font-size: clamp(0.925rem, 1vw, 0.985rem);
+    line-height: 1.72;
+    color: #475569;
+    margin-bottom: 14px;
+}
+
+.principal-message-content .text-navy {
+    color: #06497d;
+    font-weight: 700;
+}
+
+.principal-quote-box {
+    margin: 18px 0;
+    background: #eaf6ff;
+    border-left: 4.5px solid #1688e8;
+    border-radius: 0 14px 14px 0;
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.principal-quote-icon {
+    color: #1688e8;
+    font-size: 2.4rem;
+    line-height: 1;
+    font-family: Georgia, serif;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.principal-quote-text {
+    color: #1e3a5f;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 0.94rem;
+    line-height: 1.55;
+    margin: 0;
+    font-weight: 500;
+}
+
+.principal-signature-block {
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 1.5px solid #f1f5f9;
+}
+
+.principal-signature-name {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #06497d;
+    margin-bottom: 3px;
+}
+
+.principal-signature-role {
+    font-size: 0.82rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   7.3 OUR COMMITMENT SECTION (4 CARDS)
+   -------------------------------------------------------------------------- */
+.principal-commitment-section {
+    position: relative;
+    width: 100%;
+    background: #ffffff;
+    padding: clamp(35px, 4.5vw, 60px) 0;
+}
+
+.principal-commitment-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: clamp(36px, 4.5vw, 55px) clamp(24px, 4.5vw, 70px);
+    background: linear-gradient(180deg, #f8fcff 0%, #edf8ff 100%);
+    border-radius: 28px;
+    border: 1.5px solid #e0effa;
+    box-shadow: 0 14px 40px rgba(12, 74, 113, 0.05);
+}
+
+.principal-commitment-header {
+    text-align: center;
+    margin-bottom: clamp(28px, 3.8vw, 42px);
+}
+
+.principal-commitment-eyebrow {
+    display: inline-block;
+    color: #1688e8;
+    font-size: 0.8125rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.principal-commitment-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.8rem, 2.6vw, 2.35rem);
+    font-weight: 800;
+    color: #06497d;
+    margin: 0;
+}
+
+.principal-commitment-title em {
+    color: #ff6908;
+    font-style: normal;
+}
+
+.principal-commitment-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(16px, 1.8vw, 24px);
+    width: 100%;
+}
+
+.principal-commitment-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 26px 22px;
+    border: 1px solid #e5f1fb;
+    box-shadow: 0 8px 24px rgba(12, 74, 113, 0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease;
+}
+
+.principal-commitment-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 34px rgba(12, 74, 113, 0.09);
+    border-color: #bae6fd;
+}
+
+.principal-commitment-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    margin-bottom: 16px;
+    flex-shrink: 0;
+    transition: transform 0.25s ease;
+}
+
+.principal-commitment-card:hover .principal-commitment-icon {
+    transform: scale(1.08);
+}
+
+.principal-commitment-icon.icon-blue {
+    background: #e1f0fe;
+    color: #1688e8;
+}
+
+.principal-commitment-icon.icon-orange {
+    background: #fff0e6;
+    color: #ff6908;
+}
+
+.principal-commitment-icon.icon-sky {
+    background: #e0f2fe;
+    color: #0284c7;
+}
+
+.principal-commitment-icon.icon-rose {
+    background: #fce7f3;
+    color: #db2777;
+}
+
+.principal-commitment-card-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #06497d;
+    margin-bottom: 8px;
+    line-height: 1.25;
+}
+
+.principal-commitment-desc {
+    font-size: 0.86rem;
+    line-height: 1.55;
+    color: #4a6b82;
+    margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   7.4 CAMPUS VISIT CTA BANNER
+   -------------------------------------------------------------------------- */
+.principal-cta-banner-section {
+    width: 100%;
+    background: #ffffff;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.principal-cta-banner-full {
+    width: 100%;
+    background: linear-gradient(135deg, #f8fcff 0%, #edf7ff 50%, #f4faff 100%);
+    border-top: 1.5px solid #e0effa;
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    align-items: stretch;
+    position: relative;
+    min-height: 380px;
+}
+
+.principal-cta-left-content {
+    padding: clamp(36px, 4.5vw, 60px) clamp(24px, 4vw, 50px) clamp(36px, 4.5vw, 60px) clamp(24px, 5vw, 90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+
+.principal-cta-eyebrow {
+    display: inline-block;
+    color: #1688e8;
+    font-size: 0.78125rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.principal-cta-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(2rem, 2.9vw, 2.7rem);
+    font-weight: 800;
+    color: #06497d;
+    line-height: 1.14;
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
+}
+
+.principal-cta-title span {
+    color: #ff6908;
+}
+
+.principal-cta-desc {
+    font-size: clamp(0.9375rem, 1.05vw, 1.03125rem);
+    color: #426b86;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    max-width: 520px;
+}
+
+.principal-cta-features {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px 18px;
+}
+
+.principal-feature-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #06497d;
+    background: #ffffff;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #dcebfa;
+    box-shadow: 0 4px 12px rgba(12, 74, 113, 0.04);
+}
+
+.principal-feature-badge i {
+    color: #ff6908;
+    font-size: 0.95rem;
+}
+
+.principal-cta-right-visual {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    min-height: 380px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.principal-cta-arch-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-left: 7px solid #1688e8;
+    border-radius: 60% 0 0 0 / 100% 0 0 0;
+    overflow: hidden;
+    background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+}
+
+.principal-cta-arch-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.principal-cta-banner-full:hover .principal-cta-arch-img {
+    transform: scale(1.02);
+}
+
+.principal-cta-actions-card {
+    position: absolute;
+    bottom: 28px;
+    left: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 3;
+}
+
+.principal-btn-orange {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #ff6908;
+    color: #ffffff;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(255, 105, 8, 0.35);
+    transition: all 0.25s ease;
+    border: none;
+}
+
+.principal-btn-orange:hover {
+    background: #e05800;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(255, 105, 8, 0.45);
+    color: #ffffff;
+}
+
+.principal-btn-contact {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #06497d;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    padding: 11px 24px;
+    border-radius: 30px;
+    text-decoration: none;
+    border: 1.5px solid #06497d;
+    backdrop-filter: blur(8px);
+    transition: all 0.25s ease;
+}
+
+.principal-btn-contact:hover {
+    background: #06497d;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   7.5 RESPONSIVE BREAKPOINTS (PRINCIPAL'S DESK)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1100px) {
+    .principal-commitment-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .principal-message-grid {
+        grid-template-columns: 300px 1fr;
+        gap: 30px;
+    }
+    .principal-cta-banner-full {
+        grid-template-columns: 1.15fr 1fr;
+    }
+}
+
+@media (max-width: 900px) {
+    .principal-hero-canvas {
+        flex-direction: column;
+        min-height: auto;
+    }
+    .principal-hero-left-panel {
+        width: 100%;
+        padding: 40px 24px;
+    }
+    .principal-hero-wave-edge {
+        display: none;
+    }
+    .principal-hero-bg-visual {
+        position: relative;
+        width: 100%;
+        height: 280px;
+    }
+    .principal-message-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    .principal-profile-col {
+        max-width: 340px;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .principal-cta-banner-full {
+        grid-template-columns: 1fr;
+    }
+    .principal-cta-left-content {
+        padding: 40px 24px 30px;
+    }
+    .principal-cta-arch-wrapper {
+        border-left: none;
+        border-top: 6px solid #1688e8;
+        border-radius: 0;
+        height: 300px;
+        min-height: auto;
+    }
+    .principal-cta-actions-card {
+        bottom: 20px;
+        left: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .principal-commitment-grid {
+        grid-template-columns: 1fr;
+    }
+    .principal-quote-box {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .principal-btn-orange,
+    .principal-btn-contact {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
 
 
 
