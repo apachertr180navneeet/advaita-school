@@ -2239,11 +2239,11 @@
 /* Left Paper Airplane Image */
 .staff-join-plane-left {
     position: absolute;
-    left: 0;
+    left: 20px;
     top: 0;
     bottom: 0;
-    width: 38%;
-    max-width: 440px;
+    width: 32%;
+    max-width: 380px;
     z-index: 2;
     pointer-events: none;
     overflow: hidden;
@@ -2253,11 +2253,11 @@
 
 .staff-join-plane-img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: 85%;
+    max-height: 220px;
+    object-fit: contain;
     object-position: left center;
     display: block;
-    mix-blend-mode: multiply;
 }
 
 /* Dots Pattern before Students on right */
