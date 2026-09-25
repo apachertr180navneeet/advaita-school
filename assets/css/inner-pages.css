@@ -2732,4 +2732,819 @@
     }
 }
 
+/* ==========================================================================
+   OUR FACULTY / STAFF PAGE (EXACT USER TEMPLATE STYLES)
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css');
+
+:root {
+    --primary: #064b82;
+    --primary-dark: #063e6d;
+    --blue: #1688e8;
+    --orange: #ff6b0b;
+    --light-blue: #eef8ff;
+    --text: #174b78;
+    --white: #ffffff;
+}
+
+/* =========================================
+   MAIN SECTION
+========================================= */
+
+.faculty-page {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(50, 157, 238, .08), transparent 20%),
+        linear-gradient(180deg, #f8fcff 0%, #edf8ff 100%);
+    font-family: 'Nunito', sans-serif;
+    color: var(--text);
+    width: 100%;
+}
+
+/* Scoped Bootstrap 5 Grid System for .faculty-page */
+.faculty-page .container {
+    width: 100%;
+    max-width: 1320px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.faculty-page .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -12px;
+    margin-left: -12px;
+}
+
+.faculty-page .row > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+.faculty-page .g-0 {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.faculty-page .g-0 > * {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.faculty-page .g-3 {
+    margin-right: -8px;
+    margin-left: -8px;
+    margin-top: -16px;
+}
+
+.faculty-page .g-3 > * {
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-top: 16px;
+}
+
+.faculty-page .d-flex {
+    display: flex !important;
+}
+
+.faculty-page .justify-content-center {
+    justify-content: center !important;
+}
+
+.faculty-page .align-items-center {
+    align-items: center !important;
+}
+
+.faculty-page .flex-wrap {
+    flex-wrap: wrap !important;
+}
+
+.faculty-page .gap-3 {
+    gap: 1rem !important;
+}
+
+.faculty-page .ms-2 {
+    margin-left: 0.5rem !important;
+}
+
+.faculty-page .me-2 {
+    margin-right: 0.5rem !important;
+}
+
+@media (min-width: 768px) {
+    .faculty-page .col-md-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+}
+
+@media (min-width: 992px) {
+    .faculty-page .col-lg-6 {
+        flex: 0 0 auto;
+        width: 50%;
+    }
+    .faculty-page .col-lg-3 {
+        flex: 0 0 auto;
+        width: 25%;
+    }
+}
+
+/* Decorative background */
+
+.bg-circle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.bg-circle.one {
+    width: 330px;
+    height: 330px;
+    left: -220px;
+    top: 150px;
+    background: #e3f3ff;
+}
+
+.bg-circle.two {
+    width: 300px;
+    height: 300px;
+    right: -200px;
+    top: 650px;
+    background: #e2f3ff;
+}
+
+.bg-circle.three {
+    width: 250px;
+    height: 250px;
+    left: -170px;
+    bottom: 150px;
+    background: #e5f5ff;
+}
+
+.section-container {
+    position: relative;
+    z-index: 2;
+}
+
+/* =========================================
+   BREADCRUMB
+========================================= */
+
+.faculty-breadcrumb {
+    padding-top: 36px;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.faculty-breadcrumb a {
+    color: #235c88;
+    text-decoration: none;
+}
+
+.faculty-breadcrumb i {
+    margin: 0 7px;
+    font-size: 10px;
+}
+
+.faculty-breadcrumb strong {
+    color: var(--primary);
+}
+
+/* =========================================
+   HERO
+========================================= */
+
+.faculty-hero {
+    position: relative;
+    min-height: 320px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+    padding-top: 10px;
+}
+
+.section-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.section-label::before,
+.section-label::after {
+    content: "";
+    width: 18px;
+    height: 2px;
+    background: var(--orange);
+}
+
+.hero-title {
+    font-size: clamp(38px, 4vw, 58px);
+    line-height: 1.02;
+    font-weight: 900;
+    color: var(--primary);
+    max-width: 540px;
+    margin-bottom: 18px;
+}
+
+.hero-title span {
+    color: var(--orange);
+}
+
+.hero-description {
+    max-width: 520px;
+    font-size: 16px;
+    line-height: 1.55;
+    color: #3d6585;
+    margin-bottom: 0;
+}
+
+/* =========================================
+   HERO IMAGE
+========================================= */
+
+.hero-image-wrapper {
+    position: absolute;
+    right: -80px;
+    top: -15px;
+    width: 60%;
+    height: 340px;
+    overflow: hidden;
+
+    border-radius: 0 0 0 65%;
+
+    border-left: 7px solid #1688e8;
+    border-bottom: 7px solid #1688e8;
+}
+
+.hero-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.hero-image-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(245, 251, 255, .35),
+        transparent 30%
+    );
+}
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.stats-wrapper {
+    position: relative;
+    z-index: 10;
+    margin-top: 15px;
+}
+
+.stats-box {
+    background: rgba(255, 255, 255, .96);
+    border-radius: 18px;
+    padding: 16px 25px;
+    box-shadow: 0 15px 40px rgba(19, 91, 140, .10);
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    min-height: 55px;
+    padding: 0 25px;
+    border-right: 1px solid #dceaf4;
+}
+
+.stat-item:last-child {
+    border-right: 0;
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue);
+    font-size: 35px;
+    flex-shrink: 0;
+}
+
+.stat-number {
+    color: var(--blue);
+    font-size: 24px;
+    line-height: 1;
+    font-weight: 900;
+    margin-bottom: 4px;
+}
+
+.stat-text {
+    font-size: 12px;
+    color: #416b8c;
+}
+
+/* =========================================
+   EDUCATORS SECTION
+========================================= */
+
+.educators-section {
+    padding: 55px 0 40px;
+    position: relative;
+}
+
+.center-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.center-heading .section-label {
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+.center-heading h2 {
+    color: var(--primary);
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 7px;
+}
+
+.center-heading h2 span {
+    color: var(--orange);
+}
+
+.center-heading p {
+    max-width: 650px;
+    margin: auto;
+    color: #416b8c;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* dotted decoration */
+
+.dots {
+    position: absolute;
+    width: 85px;
+    height: 65px;
+    opacity: .45;
+    background-image: radial-gradient(
+        #6db8ed 2px,
+        transparent 2px
+    );
+    background-size: 16px 16px;
+}
+
+.dots-left {
+    left: 10px;
+    top: 80px;
+}
+
+.dots-right {
+    right: 10px;
+    top: 80px;
+}
+
+/* =========================================
+   FACULTY CARD
+========================================= */
+
+.faculty-card {
+    height: 100%;
+    background: rgba(255, 255, 255, .94);
+    border-radius: 13px;
+    padding: 10px 12px 15px;
+    text-align: center;
+    border: 1px solid rgba(220, 237, 248, .8);
+    box-shadow: 0 8px 25px rgba(18, 92, 139, .07);
+    transition: all .3s ease;
+}
+
+.faculty-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 35px rgba(18, 92, 139, .13);
+}
+
+.faculty-photo {
+    width: 125px;
+    height: 125px;
+    margin: 0 auto 8px;
+    border-radius: 50%;
+    background: #e7f5ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.faculty-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.faculty-placeholder {
+    font-size: 90px;
+    color: #aab2b8;
+    line-height: 1;
+}
+
+.designation {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 30px;
+    background: #fff0e8;
+    color: var(--orange);
+    font-size: 9px;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.designation.blue {
+    color: #087ee0;
+    background: #e4f2ff;
+}
+
+.designation.purple {
+    color: #7339d7;
+    background: #f0e8ff;
+}
+
+.designation.pink {
+    color: #ef247c;
+    background: #ffe8f2;
+}
+
+.designation.green {
+    color: #119b6d;
+    background: #dcf8ec;
+}
+
+.faculty-name {
+    color: var(--primary);
+    font-size: 14px;
+    font-weight: 900;
+    margin-bottom: 5px;
+}
+
+.faculty-degree {
+    color: #47718f;
+    font-size: 10px;
+}
+
+.faculty-degree i {
+    margin-right: 4px;
+    color: var(--orange);
+}
+
+/* =========================================
+   JOIN TEAM
+========================================= */
+
+.join-section {
+    position: relative;
+    padding: 40px 0 35px;
+    overflow: hidden;
+}
+
+.join-content {
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+.join-title {
+    color: var(--primary);
+    font-size: 31px;
+    font-weight: 900;
+    margin-bottom: 8px;
+}
+
+.join-title span {
+    color: var(--orange);
+}
+
+.join-description {
+    max-width: 610px;
+    margin: 0 auto 20px;
+    color: #426b89;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.btn-orange {
+    background: var(--orange);
+    color: #fff;
+    border: none;
+    padding: 11px 25px;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 13px;
+    transition: .3s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-orange:hover {
+    background: #e95600;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.btn-outline-blue {
+    background: white;
+    color: var(--primary);
+    border: 1px solid #1267a2;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 13px;
+    transition: .3s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-outline-blue:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.student-image {
+    position: absolute;
+    right: 30px;
+    bottom: -50px;
+    width: 290px;
+    z-index: 2;
+}
+
+.student-image img {
+    width: 100%;
+    display: block;
+}
+
+/* =========================================
+   CAMPUS PREVIEW
+========================================= */
+
+.campus-section {
+    padding: 25px 0 40px;
+}
+
+.campus-box {
+    background: #fff;
+    border-radius: 15px;
+    padding: 15px 20px;
+    box-shadow: 0 10px 30px rgba(14, 79, 122, .09);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.campus-content {
+    flex: 1;
+    border-left: 4px solid var(--blue);
+    padding-left: 20px;
+}
+
+.campus-content h3 {
+    color: var(--primary);
+    font-size: 27px;
+    line-height: 1.1;
+    font-weight: 900;
+    margin-bottom: 7px;
+}
+
+.campus-content h3 span {
+    color: var(--orange);
+}
+
+.campus-content p {
+    color: #4a718d;
+    font-size: 12px;
+    margin: 0;
+}
+
+.campus-images {
+    display: flex;
+    gap: 10px;
+}
+
+.campus-images img {
+    width: 145px;
+    height: 105px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.campus-buttons {
+    min-width: 170px;
+}
+
+.campus-buttons .btn {
+    width: 100%;
+    margin-bottom: 8px;
+    border-radius: 25px;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-campus {
+    background: var(--orange);
+    color: white;
+    border: none;
+}
+
+.btn-campus:hover {
+    background: #e95600;
+    color: white;
+}
+
+.btn-video {
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    background: white;
+}
+
+.btn-video:hover {
+    background: var(--primary);
+    color: white;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1199px) {
+
+    .hero-image-wrapper {
+        width: 55%;
+        right: -100px;
+    }
+
+    .student-image {
+        right: 0;
+        width: 240px;
+    }
+
+    .campus-images img {
+        width: 110px;
+        height: 90px;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .faculty-hero {
+        min-height: auto;
+    }
+
+    .hero-content {
+        padding-bottom: 20px;
+    }
+
+    .hero-image-wrapper {
+        position: relative;
+        width: 100%;
+        height: 330px;
+        right: auto;
+        top: auto;
+        border-radius: 0 0 0 40%;
+        margin-top: 25px;
+    }
+
+    .stat-item {
+        border-right: none;
+        border-bottom: 1px solid #dceaf4;
+        padding: 12px 20px;
+    }
+
+    .stat-item:last-child {
+        border-bottom: none;
+    }
+
+    .student-image {
+        opacity: .5;
+        right: -20px;
+    }
+
+    .campus-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .campus-images {
+        width: 100%;
+    }
+
+    .campus-images img {
+        flex: 1;
+        width: auto;
+    }
+
+    .campus-buttons {
+        width: 100%;
+        display: flex;
+        gap: 10px;
+    }
+
+    .campus-buttons .btn {
+        margin: 0;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .faculty-breadcrumb {
+        padding-top: 20px;
+    }
+
+    .hero-title {
+        font-size: 38px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-image-wrapper {
+        height: 230px;
+    }
+
+    .stats-box {
+        padding: 10px 15px;
+    }
+
+    .educators-section {
+        padding-top: 40px;
+    }
+
+    .center-heading h2 {
+        font-size: 25px;
+    }
+
+    .dots {
+        display: none;
+    }
+
+    .faculty-photo {
+        width: 105px;
+        height: 105px;
+    }
+
+    .join-title {
+        font-size: 27px;
+    }
+
+    .student-image {
+        position: relative;
+        width: 230px;
+        right: auto;
+        bottom: auto;
+        display: block;
+        margin: 20px auto -35px;
+    }
+
+    .campus-images {
+        overflow-x: auto;
+    }
+
+    .campus-images img {
+        min-width: 140px;
+    }
+
+    .campus-buttons {
+        flex-direction: column;
+    }
+}
+
+
 
