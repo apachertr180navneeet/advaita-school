@@ -2244,9 +2244,319 @@
 }
 
 /* ==========================================================================
-   7. FULL-WIDTH CTA BANNER (SHARED & PAGE SPECIFIC)
+   7. ADMISSION BANNER (EXACT SPECIFICATION)
    ========================================================================== */
-.about-cta-banner-section,
+.admission-banner {
+    position: relative;
+    width: 100%;
+    min-height: 250px;
+    overflow: hidden;
+    background: linear-gradient(110deg, #edf8ff 0%, #dceeff 52%, #c9e3fb 100%);
+    margin-top: 0;
+}
+
+/* Background curved shapes */
+.admission-banner .shape-one {
+    position: absolute;
+    width: 66%;
+    height: 125%;
+    left: -13%;
+    top: -35%;
+    border-radius: 50%;
+    background: rgba(205, 227, 247, 0.62);
+    transform: rotate(-3deg);
+    pointer-events: none;
+}
+
+.admission-banner .shape-two {
+    position: absolute;
+    width: 43%;
+    height: 170%;
+    right: 13%;
+    top: -55%;
+    border-radius: 50%;
+    background: rgba(182, 214, 245, 0.48);
+    pointer-events: none;
+}
+
+.admission-banner .shape-three {
+    position: absolute;
+    width: 31%;
+    height: 145%;
+    right: -5%;
+    top: -42%;
+    border-radius: 50%;
+    background: rgba(238, 248, 255, 0.75);
+    pointer-events: none;
+}
+
+/* Dots Pattern */
+.admission-banner .dot-pattern {
+    position: absolute;
+    left: 54%;
+    bottom: 18px;
+    width: 170px;
+    height: 90px;
+    opacity: 0.8;
+    background-image: radial-gradient(#2380c9 1.6px, transparent 1.7px);
+    background-size: 18px 18px;
+    mask-image: linear-gradient(to right, transparent, #000 35%, #000);
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 35%, #000);
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* Content */
+.admission-banner .banner-content {
+    position: relative;
+    z-index: 5;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+}
+
+.admission-banner .copy {
+    width: 58%;
+    padding: 25px 0 22px 5.5%;
+}
+
+.admission-banner .eyebrow {
+    margin-bottom: 5px;
+    color: #2681c7;
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-family: var(--adv-font-sans);
+}
+
+.admission-banner .eyebrow-line {
+    display: inline-block;
+    width: 42px;
+    height: 2px;
+    margin-left: 8px;
+    vertical-align: middle;
+    background: #b7d7ef;
+}
+
+.admission-banner .headline {
+    margin: 0;
+    color: #102f54;
+    font-size: clamp(22px, 2.25vw, 38px);
+    line-height: 1.12;
+    font-weight: 800;
+    font-family: var(--adv-font-sans);
+}
+
+.admission-banner .subtext {
+    margin: 9px 0 15px;
+    color: #617d99;
+    font-size: clamp(11px, 1vw, 16px);
+    line-height: 1.4;
+    font-family: var(--adv-font-sans);
+}
+
+/* Buttons */
+.admission-banner .buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.admission-banner .btn-enrol {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    min-width: 145px;
+    height: 43px;
+    padding: 0 22px;
+    border: 0;
+    border-radius: 25px;
+    background: #ff751b;
+    color: #fff !important;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 5px 14px rgba(255, 117, 27, 0.18);
+    transition: 0.2s;
+}
+
+.admission-banner .btn-enrol:hover {
+    background: #eb6410;
+    color: #fff !important;
+    transform: translateY(-2px);
+}
+
+.admission-banner .btn-visit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    height: 43px;
+    padding: 0 21px;
+    border: 1.5px solid #357fc0;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.88);
+    color: #183b61;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.admission-banner .btn-visit:hover {
+    background: #fff;
+    color: #123452;
+    transform: translateY(-2px);
+}
+
+.admission-banner .btn-visit i {
+    font-size: 15px;
+    color: #286fae;
+}
+
+/* Student Image */
+.admission-banner .students {
+    position: absolute;
+    z-index: 4;
+    right: 0;
+    bottom: 0;
+    width: 45%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.admission-banner .students img {
+    width: 222%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: right center;
+    display: block;
+}
+
+.admission-banner .students::before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 32%;
+    background: linear-gradient(90deg, #dceeff 0%, rgba(220, 238, 255, 0.55) 48%, transparent 100%);
+    pointer-events: none;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .admission-banner {
+        min-height: 220px;
+    }
+    .admission-banner .banner-content {
+        min-height: 220px;
+    }
+    .admission-banner .copy {
+        width: 64%;
+        padding-left: 4%;
+    }
+    .admission-banner .students {
+        width: 42%;
+    }
+    .admission-banner .eyebrow {
+        font-size: 12px;
+    }
+    .admission-banner .subtext {
+        margin-top: 6px;
+        margin-bottom: 10px;
+    }
+    .admission-banner .btn-enrol,
+    .admission-banner .btn-visit {
+        height: 38px;
+        font-size: 11px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .admission-banner {
+        min-height: 330px;
+    }
+    .admission-banner .banner-content {
+        min-height: 330px;
+        align-items: flex-start;
+    }
+    .admission-banner .copy {
+        width: 100%;
+        padding: 25px 22px 15px;
+    }
+    .admission-banner .headline {
+        max-width: 62%;
+        font-size: 25px;
+    }
+    .admission-banner .subtext {
+        max-width: 58%;
+        font-size: 11px;
+    }
+    .admission-banner .buttons {
+        position: relative;
+        z-index: 10;
+    }
+    .admission-banner .students {
+        width: 58%;
+        height: 48%;
+        bottom: 0;
+    }
+    .admission-banner .students img {
+        width: 190%;
+    }
+    .admission-banner .dot-pattern {
+        left: auto;
+        right: 33%;
+        bottom: 25px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .admission-banner {
+        min-height: 380px;
+    }
+    .admission-banner .banner-content {
+        min-height: 380px;
+    }
+    .admission-banner .copy {
+        padding: 22px 17px;
+    }
+    .admission-banner .eyebrow {
+        font-size: 10px;
+    }
+    .admission-banner .headline {
+        max-width: 70%;
+        font-size: 21px;
+    }
+    .admission-banner .subtext {
+        max-width: 68%;
+        font-size: 10px;
+    }
+    .admission-banner .buttons {
+        gap: 7px;
+    }
+    .admission-banner .btn-enrol,
+    .admission-banner .btn-visit {
+        height: 35px;
+        padding: 0 13px;
+        font-size: 10px;
+    }
+    .admission-banner .btn-visit {
+        max-width: 180px;
+    }
+}
+
+/* Shared Inner Pages CTA Fallbacks */
 .chairman-cta-banner-section,
 .vision-cta-banner-section {
     position: relative;
@@ -2256,7 +2566,6 @@
     overflow: hidden;
 }
 
-.about-cta-banner-full,
 .chairman-cta-banner-full,
 .vision-cta-banner-full {
     position: relative;
@@ -2269,7 +2578,6 @@
     overflow: hidden;
 }
 
-.about-cta-left-content,
 .chairman-cta-left-content,
 .vision-cta-left-content {
     position: relative;
@@ -2280,7 +2588,6 @@
     z-index: 3;
 }
 
-.about-cta-eyebrow,
 .chairman-cta-eyebrow,
 .vision-cta-eyebrow,
 .principal-cta-eyebrow {
@@ -2294,7 +2601,6 @@
     margin-bottom: 10px;
 }
 
-.about-cta-title,
 .chairman-cta-title,
 .vision-cta-title,
 .principal-cta-title {
@@ -2307,14 +2613,6 @@
     letter-spacing: -0.4px;
 }
 
-.about-cta-title span,
-.chairman-cta-title span,
-.vision-cta-title span,
-.principal-cta-title span {
-    color: var(--adv-orange, #F37021);
-}
-
-.about-cta-desc,
 .chairman-cta-desc,
 .vision-cta-desc,
 .principal-cta-desc {
@@ -2325,7 +2623,6 @@
     max-width: 520px;
 }
 
-.about-cta-actions,
 .chairman-cta-actions {
     display: flex;
     align-items: center;
@@ -2333,7 +2630,6 @@
     flex-wrap: wrap;
 }
 
-.about-cta-btn-orange,
 .chairman-btn-orange-solid {
     display: inline-flex;
     align-items: center;
@@ -2349,38 +2645,21 @@
     transition: all 0.25s ease;
 }
 
-.about-cta-btn-orange:hover,
-.chairman-btn-orange-solid:hover {
-    background: #e05d0e;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(243, 112, 33, 0.38);
-    color: #ffffff;
-}
-
-.about-cta-btn-white,
 .chairman-btn-navy-outline {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     background: #ffffff;
     color: var(--adv-navy, #0A2540);
     border: 1.5px solid var(--adv-navy, #0A2540);
     border-radius: 50px;
-    padding: 11px 22px;
+    padding: 11px 24px;
     font-weight: 700;
     font-size: 0.875rem;
     text-decoration: none;
     transition: all 0.25s ease;
 }
 
-.about-cta-btn-white:hover,
-.chairman-btn-navy-outline:hover {
-    background: var(--adv-navy, #0A2540);
-    color: #ffffff;
-    transform: translateY(-2px);
-}
-
-.about-cta-students-wrapper,
 .chairman-cta-arch-wrapper,
 .vision-cta-arch-wrapper {
     position: relative;
@@ -2393,7 +2672,6 @@
     z-index: 2;
 }
 
-.about-cta-students-img,
 .chairman-cta-arch-img,
 .vision-cta-arch-img {
     max-height: 315px;

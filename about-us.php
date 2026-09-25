@@ -435,37 +435,57 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
     <!-- =========================================================================
-         7. CTA BANNER SECTION: Be A Part of Advaita
+         7. ADMISSION BANNER SECTION
          ========================================================================= -->
-    <section class="about-cta-banner-section">
-        <div class="about-cta-banner-full">
-            <!-- Left: Text & Actions -->
-            <div class="about-cta-left-content">
-                <span class="about-cta-eyebrow">
-                    BE A PART OF ADVAITA —
-                </span>
-                <h2 class="about-cta-title">
-                    Together, let’s build brighter tomorrows.
+    <section class="admission-banner">
+        <!-- Background Shapes -->
+        <div class="shape-one"></div>
+        <div class="shape-two"></div>
+        <div class="shape-three"></div>
+
+        <!-- Dots -->
+        <div class="dot-pattern"></div>
+
+        <!-- Content -->
+        <div class="banner-content">
+            <div class="copy">
+                <!-- Eyebrow -->
+                <div class="eyebrow">
+                    BE A PART OF A BRIGHTER
+                    <span class="eyebrow-line"></span>
+                </div>
+
+                <!-- Heading -->
+                <h2 class="headline">
+                    Think Big, Achieve More<br>
+                    for a better you.
                 </h2>
-                <p class="about-cta-desc">
-                    Admissions are open for CBSE, NEET/IIT Foundation &amp; Competitive Exam Programmes.
+
+                <!-- Description -->
+                <p class="subtext">
+                    Join us today and take the next step towards a successful future.
                 </p>
-                <div class="about-cta-actions">
-                    <a href="index.php#admissions" class="about-cta-btn-orange">
-                        <span>Enquire Now</span>
-                        <i class="fa-solid fa-arrow-right"></i>
+
+                <!-- Buttons -->
+                <div class="buttons">
+                    <!-- Enrol Button -->
+                    <a href="index.php#admissions" class="btn-enrol">
+                        <span>Enrol Now</span>
+                        <span>&rarr;</span>
                     </a>
-                    <a href="index.php#contact" class="about-cta-btn-white">
-                        <i class="fa-solid fa-calendar-days"></i>
-                        <span>Schedule a Campus Visit</span>
+
+                    <!-- School Visit -->
+                    <a href="index.php#contact" class="btn-visit">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Schedule a School Visit</span>
                     </a>
                 </div>
             </div>
+        </div>
 
-            <!-- Right: Student Trio with Integrated Organic Background -->
-            <div class="about-cta-students-wrapper">
-                <img src="assets/images/about-cta-students-trio.png" alt="Advaita Students" class="about-cta-students-img" loading="lazy">
-            </div>
+        <!-- Students Image -->
+        <div class="students">
+            <img src="assets/images/about-cta-students-trio.png" alt="Advaita Students" loading="lazy">
         </div>
     </section>
 
