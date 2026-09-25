@@ -5567,6 +5567,28 @@
         border-radius: 0;
         height: 280px;
         min-height: auto;
+    }
+    .principal-cta-actions-card {
+        bottom: 20px;
+        left: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .principal-commitment-grid {
+        grid-template-columns: 1fr;
+    }
+    .principal-quote-box {
+        flex-direction: column;
+        gap: 8px;
+    }
+    .principal-btn-orange,
+    .principal-btn-contact {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
 /* ==========================================================================
    8. VISION & MISSION PAGE STYLES (FULL WIDTH ORGANIC DESIGN)
    ========================================================================== */
