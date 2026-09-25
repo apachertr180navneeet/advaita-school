@@ -13,11 +13,6 @@
     <!-- Main Footer Wrapper -->
     <footer class="adv-footer-wrapper" id="contact" aria-label="Footer Navigation">
         
-        <!-- Top Foliage Accent Overlay -->
-        <div class="adv-footer-foliage-wrap" aria-hidden="true">
-            <img src="assets/images/footer-foliage-top.png" alt="" class="adv-footer-foliage-img">
-        </div>
-
         <!-- Main 5-Column Content Area -->
         <div class="adv-footer-main">
             <div class="adv-container adv-footer-container">
@@ -25,16 +20,11 @@
                 <!-- Column 1: School Brand & Identity -->
                 <div class="adv-footer-brand-col">
                     <a href="index.php" class="adv-footer-logo-link" title="Advaita School of Excellence">
-                        <img src="assets/images/footer-logo.png" alt="Advaita School of Excellence Logo" class="adv-footer-logo-img">
+                        <img src="assets/images/footer-logo-white.png" alt="Advaita School of Excellence Logo" class="adv-footer-logo-img">
                     </a>
                     
-                    <p class="adv-footer-tagline">
-                        A strong foundation<br>
-                        <em>for a brighter tomorrow.</em>
-                    </p>
-                    
                     <p class="adv-footer-bio">
-                        A modern, values-led learning community shaping curious thinkers, principled leaders and lifelong learners.
+                        A modern, values-led learning community shaping curious thinkers, principled leaders, and lifelong learners.
                     </p>
                     
                     <div class="adv-footer-socials" aria-label="Social media channels">
@@ -57,15 +47,19 @@
                 <div class="adv-footer-col">
                     <h3 class="adv-footer-col-title">Explore</h3>
                     <ul class="adv-footer-links-list">
-                        <li><a href="index.php" class="adv-footer-link"><span class="chevron">&gt;</span> Home</a></li>
-                        <li><a href="about-us.php" class="adv-footer-link"><span class="chevron">&gt;</span> About Us</a></li>
-                        <li><a href="#why-advaita" class="adv-footer-link"><span class="chevron">&gt;</span> Why Advaita</a></li>
-                        <li><a href="#why-choose" class="adv-footer-link"><span class="chevron">&gt;</span> Key Features</a></li>
-                        <li><a href="#admissions" class="adv-footer-link"><span class="chevron">&gt;</span> Admissions</a></li>
-                        <li><a href="#gallery" class="adv-footer-link"><span class="chevron">&gt;</span> Campus Gallery</a></li>
-                        <li><a href="#testimonials" class="adv-footer-link"><span class="chevron">&gt;</span> Parent Reviews</a></li>
-                        <li><a href="#faq" class="adv-footer-link"><span class="chevron">&gt;</span> FAQ</a></li>
-                        <li><a href="#contact" class="adv-footer-link"><span class="chevron">&gt;</span> Contact Us</a></li>
+                        <li><a href="index.php" class="adv-footer-link">Home</a></li>
+                        <li><a href="about-us.php" class="adv-footer-link">About Us</a></li>
+                        <li><a href="vision-mission.php" class="adv-footer-link">Vision &amp; Mission</a></li>
+                        <li><a href="chairmans-desk.php" class="adv-footer-link">Chairman's Desk</a></li>
+                        <li><a href="principals-desk.php" class="adv-footer-link">Principal's Message</a></li>
+                        <li><a href="our-staff.php" class="adv-footer-link">Our Faculty</a></li>
+                        <li><a href="index.php#academics" class="adv-footer-link">Academics</a></li>
+                        <li><a href="index.php#neet-iit" class="adv-footer-link">MSIT-710 Foundation</a></li>
+                        <li><a href="index.php#admissions" class="adv-footer-link">Admissions</a></li>
+                        <li><a href="index.php#campus-life" class="adv-footer-link">Campus Life</a></li>
+                        <li><a href="index.php#facilities" class="adv-footer-link">Facilities</a></li>
+                        <li><a href="index.php#gallery" class="adv-footer-link">Gallery</a></li>
+                        <li><a href="index.php#contact" class="adv-footer-link">Contact Us</a></li>
                     </ul>
                 </div>
 
@@ -73,13 +67,16 @@
                 <div class="adv-footer-col">
                     <h3 class="adv-footer-col-title">Quick Links</h3>
                     <ul class="adv-footer-links-list">
-                        <li><a href="#admissions" class="adv-footer-link"><span class="chevron">&gt;</span> Admission Process</a></li>
-                        <li><a href="#admissions" class="adv-footer-link"><span class="chevron">&gt;</span> Book Campus Visit</a></li>
-                        <li><a href="#about" class="adv-footer-link"><span class="chevron">&gt;</span> Vision &amp; Values</a></li>
-                        <li><a href="#gallery" class="adv-footer-link"><span class="chevron">&gt;</span> Photo Gallery</a></li>
-                        <li><a href="#testimonials" class="adv-footer-link"><span class="chevron">&gt;</span> Testimonials</a></li>
-                        <li><a href="#faq" class="adv-footer-link"><span class="chevron">&gt;</span> Frequently Asked Questions</a></li>
-                        <li><a href="#contact" class="adv-footer-link"><span class="chevron">&gt;</span> Campus Map &amp; Visit</a></li>
+                        <li><a href="index.php#admissions" class="adv-footer-link">Admission Process</a></li>
+                        <li><a href="index.php#admissions" class="adv-footer-link">Online Registration</a></li>
+                        <li><a href="index.php#admissions" class="adv-footer-link">Fee Structure</a></li>
+                        <li><a href="about-us.php#disclosure" class="adv-footer-link">Mandatory Disclosure</a></li>
+                        <li><a href="index.php#academics" class="adv-footer-link">Academic Calendar</a></li>
+                        <li><a href="about-us.php" class="adv-footer-link">School Policies</a></li>
+                        <li><a href="index.php" class="adv-footer-link">Downloads</a></li>
+                        <li><a href="index.php#contact" class="adv-footer-link">Campus Map &amp; Visit</a></li>
+                        <li><a href="about-us.php" class="adv-footer-link">Career</a></li>
+                        <li><a href="about-us.php" class="adv-footer-link">Alumni</a></li>
                     </ul>
                 </div>
 
@@ -108,7 +105,7 @@
                             </div>
                             <div class="adv-footer-touch-content">
                                 <span class="touch-label">Phone</span>
-                                <a href="tel:+919413062851" class="touch-link">+91 94130 62851</a>
+                                <a href="tel:+919876543210" class="touch-link">+91 98765 43210 / 02452-224455</a>
                             </div>
                         </div>
 
@@ -130,7 +127,7 @@
                             </div>
                             <div class="adv-footer-touch-content">
                                 <span class="touch-label">School Hours</span>
-                                <span class="touch-text">Mon – Sat &nbsp;|&nbsp; 8:00 AM – 4:00 PM</span>
+                                <span class="touch-text">Mon – Sat &nbsp;|&nbsp; 8:00 AM – 3:00 PM</span>
                             </div>
                         </div>
 
@@ -142,7 +139,7 @@
                     <div class="adv-footer-map-card">
                         <div class="adv-footer-map-iframe-wrap">
                             <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.123!2d76.7749!3d19.2634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd0187b8a0e71b7%3A0x9c3e2bb2c2bb7e0b!2sAdvaita%20School%20of%20Excellence!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
+                                src="https://maps.google.com/maps?q=Advaita+School+of+Excellence,+Parbhani&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                                 width="100%" 
                                 height="100%" 
                                 style="border:0;" 
@@ -153,7 +150,7 @@
                             </iframe>
                         </div>
                         <a href="https://www.google.com/maps/place/Advaita+School+of+Excellence/@19.2634,76.7749,17z/" target="_blank" rel="noopener noreferrer" class="adv-footer-map-btn">
-                            <span>VIEW ON GOOGLE MAPS</span>
+                            <span>View on Google Maps</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
@@ -169,7 +166,11 @@
                     <span>&copy; <?php echo date('Y'); ?> Advaita School of Excellence, Parbhani. All rights reserved.</span>
                 </div>
                 <div class="adv-footer-legal-links">
-                    <a href="#hero" class="adv-legal-link">Advaita School of Excellence</a>
+                    <a href="index.php" class="adv-legal-link">Privacy Policy</a>
+                    <span class="adv-legal-sep">|</span>
+                    <a href="index.php" class="adv-legal-link">Terms &amp; Conditions</a>
+                    <span class="adv-legal-sep">|</span>
+                    <a href="index.php" class="adv-legal-link">Sitemap</a>
                 </div>
             </div>
         </div>

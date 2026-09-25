@@ -1,7 +1,7 @@
 /* ==========================================================================
    Advaita School of Excellence - Footer Component Stylesheet
-   Design: Premium Light Ivory & Navy Theme with Campus Perspective,
-           Google Map Card, Top Foliage Overlay & Legal Strip
+   Design: Modern Dark Navy Theme with 5-Column Grid, Socials, 
+           Accent Badges, Google Map Card & Legal Bar
    Strictly No Inline CSS
    ========================================================================== */
 
@@ -9,35 +9,14 @@
    Footer Main Wrapper & Decorative Backgrounds
    -------------------------------------------------------------------------- */
 .adv-footer-wrapper {
-    background: #FFFFFF;
-    color: #475569;
+    background: #041628;
+    color: #94A3B8;
     position: relative;
     overflow: hidden;
     margin-top: 0;
-    font-size: 0.90625rem;
-    font-family: var(--adv-font-main);
-    border-top: 1px solid #EAEFF5;
-}
-
-/* Top Foliage Branch Overlay */
-.adv-footer-foliage-wrap {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 90px;
-    overflow: hidden;
-    pointer-events: none;
-    z-index: 1;
-    opacity: 0.9;
-}
-
-.adv-footer-foliage-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
-    display: block;
+    font-size: 0.875rem;
+    font-family: var(--adv-font-main, 'Plus Jakarta Sans', sans-serif);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 /* --------------------------------------------------------------------------
@@ -46,7 +25,7 @@
 .adv-footer-main {
     position: relative;
     z-index: 2;
-    padding: 70px 0 48px 0;
+    padding: 56px 0 44px 0;
 }
 
 .adv-footer-container {
@@ -54,7 +33,7 @@
     margin: 0 auto;
     padding: 0 24px;
     display: grid;
-    grid-template-columns: 1.35fr 0.95fr 1fr 1.35fr 1.35fr;
+    grid-template-columns: 1.4fr 0.85fr 0.95fr 1.35fr 1.05fr;
     gap: 32px;
     align-items: start;
 }
@@ -70,37 +49,28 @@
 .adv-footer-logo-link {
     display: inline-block;
     text-decoration: none;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
+    transition: opacity 0.25s ease;
+}
+
+.adv-footer-logo-link:hover {
+    opacity: 0.92;
 }
 
 .adv-footer-logo-img {
-    max-height: 82px;
+    max-height: 52px;
     width: auto;
+    max-width: 100%;
     object-fit: contain;
     display: block;
 }
 
-.adv-footer-tagline {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-style: italic;
-    font-size: 1.15rem;
-    color: #083B7A;
-    line-height: 1.3;
-    margin: 0 0 10px 0;
-}
-
-.adv-footer-tagline em {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-style: italic;
-    color: #083B7A;
-}
-
 .adv-footer-bio {
-    color: #64748B;
+    color: #94A3B8;
     font-size: 0.8125rem;
     line-height: 1.6;
-    margin: 0 0 18px 0;
-    max-width: 270px;
+    margin: 0 0 20px 0;
+    max-width: 280px;
 }
 
 .adv-footer-socials {
@@ -115,33 +85,34 @@
     justify-content: center;
     width: 36px;
     height: 36px;
-    border: 1.5px solid #CBD5E1;
+    border: 1px solid rgba(255, 255, 255, 0.22);
     border-radius: 50%;
-    color: #0A2540;
-    font-size: 0.95rem;
+    color: #CBD5E1;
+    font-size: 0.9rem;
     text-decoration: none;
     transition: all 0.25s ease;
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.04);
 }
 
 .adv-footer-social-btn:hover {
-    background: #083B7A;
-    border-color: #083B7A;
+    background: #F37021;
+    border-color: #F37021;
     color: #ffffff;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(8, 59, 122, 0.25);
+    box-shadow: 0 4px 12px rgba(243, 112, 33, 0.35);
 }
 
 /* --------------------------------------------------------------------------
    Columns 2 & 3: Navigation & Quick Links
    -------------------------------------------------------------------------- */
 .adv-footer-col-title {
-    color: #0A2540;
-    font-size: 1.125rem;
-    font-weight: 800;
-    font-family: var(--adv-font-main);
-    margin: 0 0 18px 0;
+    color: #FFFFFF;
+    font-size: 1.0625rem;
+    font-weight: 700;
+    font-family: var(--adv-font-main, 'Plus Jakarta Sans', sans-serif);
+    margin: 0 0 16px 0;
     line-height: 1.2;
+    letter-spacing: -0.2px;
 }
 
 .adv-footer-links-list {
@@ -150,34 +121,22 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 7px;
 }
 
 .adv-footer-link {
-    color: #475569;
+    color: #94A3B8;
     text-decoration: none;
-    font-size: 0.875rem;
-    font-weight: 500;
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    transition: all 0.2s ease;
-}
-
-.adv-footer-link .chevron {
-    color: #64748B;
     font-size: 0.8125rem;
-    font-weight: 700;
-    transition: color 0.2s ease;
+    font-weight: 400;
+    line-height: 1.35;
+    display: inline-block;
+    transition: all 0.2s ease;
 }
 
 .adv-footer-link:hover {
     color: #F37021;
     transform: translateX(3px);
-}
-
-.adv-footer-link:hover .chevron {
-    color: #F37021;
 }
 
 /* --------------------------------------------------------------------------
@@ -186,7 +145,7 @@
 .adv-footer-touch-col .adv-footer-contact-list {
     display: flex;
     flex-direction: column;
-    gap: 14px;
+    gap: 15px;
 }
 
 .adv-footer-touch-item {
@@ -196,18 +155,26 @@
 }
 
 .adv-footer-touch-icon {
-    width: 36px;
-    height: 36px;
-    background: #F5EFEB;
-    border: 1px solid #EADDD2;
+    width: 34px;
+    height: 34px;
+    background: rgba(243, 112, 33, 0.08);
+    border: 1.5px solid #F37021;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #966A38;
-    font-size: 0.95rem;
+    color: #F37021;
+    font-size: 0.875rem;
     flex-shrink: 0;
-    margin-top: 2px;
+    margin-top: 1px;
+    transition: all 0.25s ease;
+}
+
+.adv-footer-touch-item:hover .adv-footer-touch-icon {
+    background: #F37021;
+    color: #ffffff;
+    transform: scale(1.08);
+    box-shadow: 0 3px 10px rgba(243, 112, 33, 0.35);
 }
 
 .adv-footer-touch-content {
@@ -216,18 +183,18 @@
 }
 
 .touch-label {
-    font-size: 0.90625rem;
-    font-weight: 800;
-    color: #0A2540;
+    font-size: 0.84375rem;
+    font-weight: 700;
+    color: #FFFFFF;
     line-height: 1.2;
     margin-bottom: 2px;
 }
 
 .touch-text,
 .touch-link {
-    font-size: 0.8125rem;
-    color: #475569;
-    line-height: 1.5;
+    font-size: 0.78125rem;
+    color: #94A3B8;
+    line-height: 1.45;
     text-decoration: none;
     transition: color 0.2s ease;
 }
@@ -242,17 +209,17 @@ a.touch-link:hover {
 .adv-footer-map-col {
     display: flex;
     justify-content: flex-end;
-    margin-top: 54px;
+    align-items: flex-start;
 }
 
 .adv-footer-map-card {
     background: #ffffff;
-    border-radius: 18px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
-    border: 1px solid #E2E8F0;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     width: 100%;
-    max-width: 270px;
+    max-width: 220px;
     display: flex;
     flex-direction: column;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -260,14 +227,15 @@ a.touch-link:hover {
 
 .adv-footer-map-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45);
 }
 
 .adv-footer-map-iframe-wrap {
     width: 100%;
-    height: 180px;
+    height: 110px;
     overflow: hidden;
     background: #F8FAFC;
+    position: relative;
 }
 
 .adv-footer-map-iframe-wrap iframe {
@@ -278,35 +246,36 @@ a.touch-link:hover {
 }
 
 .adv-footer-map-btn {
-    background: #966A38;
+    background: #F37021;
     color: #ffffff !important;
-    font-size: 0.78125rem;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    padding: 10px 14px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    padding: 9px 12px;
     text-decoration: none;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 6px;
     transition: background 0.25s ease;
 }
 
 .adv-footer-map-btn:hover {
-    background: #805728;
+    background: #d85c10;
 }
 
 /* --------------------------------------------------------------------------
    Bottom Copyright & Legal Strip
    -------------------------------------------------------------------------- */
 .adv-footer-bottom-strip {
-    background: #06203D;
-    padding: 18px 0;
+    background: #03101d;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    padding: 16px 0;
     position: relative;
     z-index: 2;
-    font-size: 0.84375rem;
-    color: #94A3B8;
+    font-size: 0.8125rem;
+    color: #64748B;
 }
 
 .adv-footer-bottom-container {
@@ -321,18 +290,18 @@ a.touch-link:hover {
 }
 
 .adv-footer-copy-text {
-    color: #CBD5E1;
-    font-size: 0.84375rem;
+    color: #64748B;
+    font-size: 0.8125rem;
 }
 
 .adv-footer-legal-links {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
 }
 
 .adv-legal-link {
-    color: #CBD5E1;
+    color: #64748B;
     text-decoration: none;
     font-size: 0.8125rem;
     transition: color 0.2s ease;
@@ -343,8 +312,9 @@ a.touch-link:hover {
 }
 
 .adv-legal-sep {
-    color: #64748B;
+    color: #334155;
     font-size: 0.75rem;
+    user-select: none;
 }
 
 /* --------------------------------------------------------------------------
@@ -437,7 +407,7 @@ a.touch-link:hover {
    -------------------------------------------------------------------------- */
 @media (max-width: 1200px) {
     .adv-footer-container {
-        grid-template-columns: 1.3fr 1fr 1fr 1.3fr;
+        grid-template-columns: 1.3fr 0.9fr 1fr 1.3fr;
         gap: 28px;
     }
 
@@ -448,7 +418,7 @@ a.touch-link:hover {
     }
 
     .adv-footer-map-card {
-        max-width: 320px;
+        max-width: 260px;
     }
 }
 
@@ -470,12 +440,12 @@ a.touch-link:hover {
     }
     
     .adv-footer-main {
-        padding: 50px 0 35px;
+        padding: 45px 0 32px;
     }
 
     .adv-footer-map-col {
         grid-column: span 1;
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .adv-footer-map-card {
@@ -487,24 +457,5 @@ a.touch-link:hover {
         text-align: center;
         justify-content: center;
         gap: 10px;
-    }
-    
-    .adv-scroll-top-btn {
-        right: 16px;
-        bottom: 74px;
-        width: 38px;
-        height: 38px;
-    }
-    
-    .adv-floating-whatsapp-btn {
-        right: 16px;
-        bottom: 16px;
-        width: 44px;
-        height: 44px;
-        font-size: 1.4rem;
-    }
-
-    .adv-sticky-enquiry-pill {
-        display: none !important;
     }
 }
