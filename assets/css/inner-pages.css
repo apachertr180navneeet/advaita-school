@@ -2186,7 +2186,7 @@
 }
 
 /* =========================================
-   3. JOIN OUR TEAM SECTION (MATCHING ABOUT-PAGE BANNER SPEC)
+   3. JOIN OUR TEAM SECTION (CENTERED TEXT LAYOUT)
 ========================================= */
 
 .staff-join-section {
@@ -2196,6 +2196,9 @@
     overflow: hidden;
     background: linear-gradient(110deg, #edf8ff 0%, #dceeff 52%, #c9e3fb 100%);
     margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Background curved shapes */
@@ -2233,49 +2236,60 @@
     pointer-events: none;
 }
 
-/* Dots Pattern */
+/* Left Origami Airplane */
+.staff-join-plane-left {
+    position: absolute;
+    left: clamp(20px, 4.5vw, 65px);
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 4;
+    pointer-events: none;
+}
+
+.staff-join-flight-svg {
+    width: clamp(160px, 15vw, 220px);
+    height: auto;
+    display: block;
+}
+
+/* Dots Pattern before Students on right */
 .staff-join-section .dot-pattern {
     position: absolute;
-    left: 54%;
-    bottom: 18px;
-    width: 170px;
+    right: 32%;
+    bottom: 25px;
+    width: 160px;
     height: 90px;
-    opacity: 0.8;
+    opacity: 0.75;
     background-image: radial-gradient(#2380c9 1.6px, transparent 1.7px);
     background-size: 18px 18px;
-    mask-image: linear-gradient(to right, transparent, #000 35%, #000);
-    -webkit-mask-image: linear-gradient(to right, transparent, #000 35%, #000);
     pointer-events: none;
     z-index: 3;
 }
 
-/* Content */
-.staff-join-section .banner-content {
+/* Center Content */
+.banner-content-center {
     position: relative;
     z-index: 5;
-    min-height: 250px;
+    width: 100%;
+    max-width: 580px;
+    margin: 0 auto;
+    padding: 30px 20px;
     display: flex;
+    justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
-.staff-join-section .copy {
-    position: relative;
-    width: 58%;
-    padding: 28px 0 24px 5.5%;
-}
-
-.staff-join-flight-svg {
-    position: absolute;
-    left: 5.5%;
-    top: 6px;
-    width: 220px;
-    height: 150px;
-    pointer-events: none;
-    z-index: 1;
+.copy-center {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .staff-join-section .eyebrow {
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     color: #F37021;
     font-size: 0.78rem;
     line-height: 1;
@@ -2283,39 +2297,35 @@
     letter-spacing: 1.5px;
     text-transform: uppercase;
     font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
-    position: relative;
-    z-index: 2;
+    text-align: center;
 }
 
 .staff-join-section .headline {
-    margin: 0;
+    margin: 0 0 6px;
     color: #083B7A;
     font-size: clamp(22px, 2.3vw, 36px);
     line-height: 1.15;
     font-weight: 800;
     font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
-    position: relative;
-    z-index: 2;
+    text-align: center;
 }
 
 .staff-join-section .subtext {
-    margin: 8px 0 16px;
+    margin: 4px auto 18px;
     color: #475569;
     font-size: clamp(12px, 0.95vw, 15px);
-    line-height: 1.5;
-    max-width: 540px;
+    line-height: 1.45;
+    max-width: 490px;
     font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
-    position: relative;
-    z-index: 2;
+    text-align: center;
 }
 
 .staff-join-section .buttons {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 12px;
     flex-wrap: wrap;
-    position: relative;
-    z-index: 2;
 }
 
 .staff-btn-orange {
@@ -2361,13 +2371,14 @@
     transform: translateY(-2px);
 }
 
-/* Students Image */
+/* Students Image on Right */
 .staff-join-section .students {
     position: absolute;
     z-index: 4;
     right: 0;
     bottom: 0;
-    width: 48%;
+    width: 38%;
+    max-width: 380px;
     height: 100%;
     display: flex;
     align-items: flex-end;
@@ -2526,12 +2537,16 @@
 
 /* Tablet Media Query */
 @media (max-width: 991px) {
-    .staff-join-section .copy {
-        width: 64%;
-        padding-left: 4%;
+    .banner-content-center {
+        max-width: 500px;
+        padding-left: 20px;
+    }
+    .staff-join-plane-left {
+        left: 15px;
+        opacity: 0.7;
     }
     .staff-join-section .students {
-        width: 42%;
+        width: 34%;
     }
     .staff-campus-showcase-card {
         grid-template-columns: 1fr;
@@ -2545,35 +2560,27 @@
 /* Mobile Media Query */
 @media (max-width: 767px) {
     .staff-join-section {
-        min-height: 330px;
+        min-height: 340px;
+        flex-direction: column;
+        justify-content: flex-start;
     }
-    .staff-join-section .banner-content {
-        min-height: 330px;
-        align-items: flex-start;
+    .staff-join-plane-left {
+        display: none;
     }
-    .staff-join-section .copy {
-        width: 100%;
-        padding: 25px 22px 15px;
-    }
-    .staff-join-section .headline {
-        max-width: 62%;
-        font-size: 25px;
-    }
-    .staff-join-section .subtext {
-        max-width: 58%;
-        font-size: 11px;
-    }
-    .staff-join-section .buttons {
-        position: relative;
-        z-index: 10;
+    .banner-content-center {
+        padding: 25px 20px 15px;
     }
     .staff-join-section .students {
-        width: 58%;
-        height: 48%;
-        bottom: 0;
+        position: relative;
+        width: 65%;
+        max-width: 260px;
+        height: auto;
+        margin-top: auto;
     }
     .staff-join-section .students img {
-        width: 190%;
+        height: auto;
+        max-height: 180px;
+        width: 100%;
     }
 }
 

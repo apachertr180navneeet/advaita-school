@@ -282,7 +282,7 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
     <!-- =========================================================================
-         3. JOIN OUR TEAM SECTION: Want to Teach with Us? (Full Width About-Banner Style)
+         3. JOIN OUR TEAM SECTION: Want to Teach with Us? (Centered Text Layout)
          ========================================================================= -->
     <section class="staff-join-section">
         <!-- Background Shapes -->
@@ -290,55 +290,44 @@ require_once __DIR__ . '/includes/header.php';
         <div class="shape-two"></div>
         <div class="shape-three"></div>
 
-        <!-- Dots Pattern -->
-        <div class="dot-pattern"></div>
+        <!-- Left Vector Graphics (Paper Airplane & Dot Matrix) -->
+        <div class="staff-join-plane-left" aria-hidden="true">
+            <svg class="staff-join-flight-svg" viewBox="0 0 280 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- 4x3 Dot Grid in upper-left -->
+                <g fill="#99c9f5" opacity="0.85">
+                    <circle cx="55" cy="48" r="2.5"/>
+                    <circle cx="71" cy="48" r="2.5"/>
+                    <circle cx="87" cy="48" r="2.5"/>
+                    <circle cx="103" cy="48" r="2.5"/>
+                    <circle cx="55" cy="62" r="2.5"/>
+                    <circle cx="71" cy="62" r="2.5"/>
+                    <circle cx="87" cy="62" r="2.5"/>
+                    <circle cx="103" cy="62" r="2.5"/>
+                    <circle cx="55" cy="76" r="2.5"/>
+                    <circle cx="71" cy="76" r="2.5"/>
+                    <circle cx="87" cy="76" r="2.5"/>
+                    <circle cx="103" cy="76" r="2.5"/>
+                </g>
+                <!-- Dashed looping flight line trail -->
+                <path d="M 42 155 C 62 132, 82 112, 102 100 C 128 85, 148 108, 138 132 C 129 154, 106 148, 100 125 C 96 102, 122 72, 155 48 C 172 36, 192 30, 208 26" stroke="#38bdf8" stroke-width="2.5" stroke-dasharray="5 5" stroke-linecap="round"/>
+                <!-- Origami 3D Paper Airplane -->
+                <g transform="translate(198, 22) rotate(6)">
+                    <polygon points="35,0 -5,6 12,14" fill="#a5f3fc"/>
+                    <polygon points="35,0 12,14 16,24" fill="#38bdf8"/>
+                    <polygon points="35,0 16,24 26,18" fill="#0284c7"/>
+                    <polygon points="35,0 26,18 20,8" fill="#0369a1"/>
+                </g>
+            </svg>
+        </div>
 
-        <!-- Content -->
-        <div class="banner-content">
-            <div class="copy">
-                <!-- Left Vector Graphics (Paper Airplane & Dot Matrix) -->
-                <svg class="staff-join-flight-svg" viewBox="0 0 240 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <!-- Dot Grid -->
-                    <g fill="#93c5fd" opacity="0.75">
-                        <circle cx="16" cy="35" r="2"/>
-                        <circle cx="32" cy="35" r="2"/>
-                        <circle cx="48" cy="35" r="2"/>
-                        <circle cx="64" cy="35" r="2"/>
-                        <circle cx="80" cy="35" r="2"/>
-                        <circle cx="16" cy="50" r="2"/>
-                        <circle cx="32" cy="50" r="2"/>
-                        <circle cx="48" cy="50" r="2"/>
-                        <circle cx="64" cy="50" r="2"/>
-                        <circle cx="80" cy="50" r="2"/>
-                        <circle cx="16" cy="65" r="2"/>
-                        <circle cx="32" cy="65" r="2"/>
-                        <circle cx="48" cy="65" r="2"/>
-                        <circle cx="64" cy="65" r="2"/>
-                        <circle cx="80" cy="65" r="2"/>
-                    </g>
-                    <!-- Curved flight line trail -->
-                    <path d="M 2 150 C 38 110 72 75 100 95 C 124 112 108 145 82 140 C 56 135 62 85 98 60 C 126 42 155 28 185 16" stroke="#38bdf8" stroke-width="2" stroke-dasharray="4 4" stroke-linecap="round"/>
-                    <!-- Origami Paper Airplane -->
-                    <g transform="translate(182, 2) rotate(22)">
-                        <polygon points="0,22 40,0 30,28" fill="#38bdf8"/>
-                        <polygon points="0,22 40,0 16,20" fill="#7dd3fc"/>
-                        <polygon points="16,20 40,0 24,30" fill="#0284c7"/>
-                        <polygon points="24,30 30,28 40,0" fill="#0369a1"/>
-                    </g>
-                </svg>
-
-                <div class="eyebrow">
-                    — JOIN OUR TEAM —
-                </div>
-
-                <h2 class="headline">
-                    Want to Teach with <span class="text-orange">Us?</span>
-                </h2>
-
+        <!-- Center Content -->
+        <div class="banner-content-center">
+            <div class="copy-center">
+                <div class="eyebrow">— JOIN OUR TEAM —</div>
+                <h2 class="headline">Want to Teach with <span class="text-orange">Us?</span></h2>
                 <p class="subtext">
                     We are always looking for passionate educators who believe in creating brighter futures. Explore open roles or share your CV with us.
                 </p>
-
                 <div class="buttons">
                     <a href="index.php#contact" class="staff-btn-orange">
                         <span>See Open Roles</span>
@@ -351,6 +340,9 @@ require_once __DIR__ . '/includes/header.php';
                 </div>
             </div>
         </div>
+
+        <!-- Dots Pattern on Right before students -->
+        <div class="dot-pattern"></div>
 
         <!-- Students Image on Right -->
         <div class="students">
