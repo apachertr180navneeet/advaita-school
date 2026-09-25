@@ -17,18 +17,10 @@ $currentPage = $activePage ?? '';
             <div class="adv-topbar-left">
                 <i class="fa-solid fa-location-dot adv-topbar-pin"></i>
                 <span>Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)</span>
-                <span class="adv-topbar-sep">|</span>
             </div>
 
             <!-- Right Side Links & Socials -->
             <div class="adv-topbar-right">
-                <ul class="adv-topbar-links">
-                    <li><a href="#about">Sanmati Sevabhavi Sanstha</a></li>
-                    <li class="pipe">|</li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li class="pipe">|</li>
-                </ul>
-
                 <div class="adv-topbar-socials">
                     <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter / X" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
@@ -66,18 +58,6 @@ $currentPage = $activePage ?? '';
                             <span>About Us</span>
                         </a>
                     </li>
-
-                    <li class="adv-nav-item">
-                        <a href="#why-advaita" class="adv-nav-link">
-                            <span>Why Advaita</span>
-                        </a>
-                    </li>
-
-                    <li class="adv-nav-item">
-                        <a href="#admissions" class="adv-nav-link">
-                            <span>Admissions</span>
-                        </a>
-                    </li>
                 </ul>
             </div>
 
@@ -104,32 +84,6 @@ $currentPage = $activePage ?? '';
 
             <!-- Right Desktop Menu -->
             <div class="adv-nav-section adv-nav-section-right">
-                <ul class="adv-nav-menu adv-nav-menu-right">
-                    <li class="adv-nav-item">
-                        <a href="#gallery" class="adv-nav-link">
-                            <span>Gallery</span>
-                        </a>
-                    </li>
-
-                    <li class="adv-nav-item">
-                        <a href="#testimonials" class="adv-nav-link">
-                            <span>Reviews</span>
-                        </a>
-                    </li>
-
-                    <li class="adv-nav-item">
-                        <a href="#faq" class="adv-nav-link">
-                            <span>FAQ</span>
-                        </a>
-                    </li>
-
-                    <li class="adv-nav-item">
-                        <a href="#contact" class="adv-nav-link">
-                            <span>Contact Us</span>
-                        </a>
-                    </li>
-                </ul>
-
                 <!-- Apply for Admission Pill CTA Button -->
                 <a href="#admissions" class="adv-nav-apply-btn">
                     <span>Apply for Admission</span>
@@ -192,69 +146,6 @@ $currentPage = $activePage ?? '';
                 <span class="adv-mobile-link-text">
                     <i class="fa-solid fa-circle-info"></i>
                     <span>About Us</span>
-                </span>
-            </a>
-        </li>
-
-        <li class="adv-mobile-item">
-            <a href="#why-advaita" class="adv-mobile-link">
-                <span class="adv-mobile-link-text">
-                    <i class="fa-solid fa-shapes"></i>
-                    <span>Why Advaita</span>
-                </span>
-            </a>
-        </li>
-
-        <li class="adv-mobile-item">
-            <a href="#why-choose" class="adv-mobile-link">
-                <span class="adv-mobile-link-text">
-                    <i class="fa-solid fa-gem"></i>
-                    <span>Why Choose Us</span>
-                </span>
-            </a>
-        </li>
-
-        <li class="adv-mobile-item">
-            <a href="#admissions" class="adv-mobile-link">
-                <span class="adv-mobile-link-text">
-                    <i class="fa-solid fa-paper-plane"></i>
-                    <span>Admissions 2026–27</span>
-                </span>
-            </a>
-        </li>
-
-        <li class="adv-mobile-item">
-            <a href="#gallery" class="adv-mobile-link">
-                <span class="adv-mobile-link-text">
-                    <i class="fa-solid fa-images"></i>
-                    <span>Campus Gallery</span>
-                </span>
-            </a>
-        </li>
-
-        <li class="adv-mobile-item">
-            <a href="#testimonials" class="adv-mobile-link">
-                <span class="adv-mobile-link-text">
-                    <i class="fa-solid fa-comments"></i>
-                    <span>Parent Reviews</span>
-                </span>
-            </a>
-        </li>
-
-        <li class="adv-mobile-item">
-            <a href="#faq" class="adv-mobile-link">
-                <span class="adv-mobile-link-text">
-                    <i class="fa-solid fa-circle-question"></i>
-                    <span>FAQs</span>
-                </span>
-            </a>
-        </li>
-
-        <li class="adv-mobile-item">
-            <a href="#contact" class="adv-mobile-link">
-                <span class="adv-mobile-link-text">
-                    <i class="fa-solid fa-address-book"></i>
-                    <span>Contact Us</span>
                 </span>
             </a>
         </li>
