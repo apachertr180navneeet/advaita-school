@@ -25,7 +25,7 @@ require_once __DIR__ . '/includes/header.php';
                 <ul class="adv-breadcrumb">
                     <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
                     <li class="adv-breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></li>
-                    <li><a href="about-us.php">Our School</a></li>
+                    <li><a href="about-us.php">About Us</a></li>
                     <li class="adv-breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></li>
                     <li class="adv-breadcrumb-active">Vision & Mission</li>
                 </ul>
@@ -97,7 +97,7 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Sidebar -->
                 <aside class="adv-sidebar">
                     <div class="adv-widget">
-                        <h4 class="adv-widget-title">Our School</h4>
+                        <h4 class="adv-widget-title">About Us</h4>
                         <ul class="adv-widget-links">
                             <li><a href="about-us.php"><span>About Advaita</span> <i class="fa-solid fa-chevron-right"></i></a></li>
                             <li class="active"><a href="vision-mission.php"><span>Vision & Mission</span> <i class="fa-solid fa-chevron-right"></i></a></li>

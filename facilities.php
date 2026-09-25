@@ -25,7 +25,7 @@ require_once __DIR__ . '/includes/header.php';
                 <ul class="adv-breadcrumb">
                     <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
                     <li class="adv-breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></li>
-                    <li><a href="about-us.php">Our School</a></li>
+                    <li><a href="about-us.php">About Us</a></li>
                     <li class="adv-breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></li>
                     <li class="adv-breadcrumb-active">Facilities</li>
                 </ul>

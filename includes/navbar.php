@@ -65,7 +65,7 @@ $currentPage = $activePage ?? '';
                 <ul class="adv-nav-menu adv-nav-menu-left">
                     <li class="adv-nav-item has-dropdown <?php echo ($currentPage === 'school') ? 'active' : ''; ?>">
                         <a href="about-us.php" class="adv-nav-link" aria-haspopup="true" aria-expanded="false">
-                            <span>Our School</span>
+                            <span>About Us</span>
                             <i class="fa-solid fa-chevron-down chevron-icon"></i>
                         </a>
                         <ul class="adv-dropdown">
@@ -217,7 +217,7 @@ $currentPage = $activePage ?? '';
             <a href="#" class="adv-mobile-link" role="button" aria-expanded="false">
                 <span class="adv-mobile-link-text">
                     <i class="fa-solid fa-school"></i>
-                    <span>Our School</span>
+                    <span>About Us</span>
                 </span>
                 <i class="fa-solid fa-chevron-down adv-mobile-chevron"></i>
             </a>
