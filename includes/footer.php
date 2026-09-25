@@ -59,15 +59,14 @@
                     <ul class="adv-footer-links-list">
                         <li><a href="index.php" class="adv-footer-link"><span class="chevron">&gt;</span> Home</a></li>
                         <li><a href="about-us.php" class="adv-footer-link"><span class="chevron">&gt;</span> About Us</a></li>
-                        <li><a href="vision-mission.php" class="adv-footer-link"><span class="chevron">&gt;</span> Vision &amp; Mission</a></li>
-                        <li><a href="leadership.php" class="adv-footer-link"><span class="chevron">&gt;</span> Director's Desk</a></li>
+                        <li><a href="about-us.php#vmv" class="adv-footer-link"><span class="chevron">&gt;</span> Vision &amp; Mission</a></li>
                         <li><a href="academics.php" class="adv-footer-link"><span class="chevron">&gt;</span> Academics</a></li>
                         <li><a href="admissions.php" class="adv-footer-link"><span class="chevron">&gt;</span> Admissions</a></li>
                         <li><a href="activities.php" class="adv-footer-link"><span class="chevron">&gt;</span> Campus Life</a></li>
-                        <li><a href="facilities.php" class="adv-footer-link"><span class="chevron">&gt;</span> Facilities</a></li>
+                        <li><a href="about-us.php#campus" class="adv-footer-link"><span class="chevron">&gt;</span> Facilities</a></li>
                         <li><a href="activities.php#sports" class="adv-footer-link"><span class="chevron">&gt;</span> Sports &amp; Activities</a></li>
                         <li><a href="gallery.php" class="adv-footer-link"><span class="chevron">&gt;</span> Gallery</a></li>
-                        <li><a href="contact-us.php" class="adv-footer-link"><span class="chevron">&gt;</span> Contact Us</a></li>
+                        <li><a href="contact.php" class="adv-footer-link"><span class="chevron">&gt;</span> Contact Us</a></li>
                     </ul>
                 </div>
 
@@ -78,13 +77,11 @@
                         <li><a href="admissions.php#process" class="adv-footer-link"><span class="chevron">&gt;</span> Admission Process</a></li>
                         <li><a href="admissions.php#enquiry" class="adv-footer-link"><span class="chevron">&gt;</span> Online Registration</a></li>
                         <li><a href="admissions.php#fees" class="adv-footer-link"><span class="chevron">&gt;</span> Fee Structure</a></li>
-                        <li><a href="mandatory-disclosure.php" class="adv-footer-link"><span class="chevron">&gt;</span> Mandatory Disclosure</a></li>
-                        <li><a href="academics.php#calendar" class="adv-footer-link"><span class="chevron">&gt;</span> Academic Calendar</a></li>
-                        <li><a href="about-us.php#policies" class="adv-footer-link"><span class="chevron">&gt;</span> School Policies</a></li>
-                        <li><a href="downloads.php" class="adv-footer-link"><span class="chevron">&gt;</span> Downloads</a></li>
-                        <li><a href="contact-us.php#visit" class="adv-footer-link"><span class="chevron">&gt;</span> Campus Map &amp; Visit</a></li>
-                        <li><a href="careers.php" class="adv-footer-link"><span class="chevron">&gt;</span> Career</a></li>
-                        <li><a href="alumni.php" class="adv-footer-link"><span class="chevron">&gt;</span> Alumni</a></li>
+                        <li><a href="academics.php" class="adv-footer-link"><span class="chevron">&gt;</span> CBSE Curriculum</a></li>
+                        <li><a href="about-us.php#vmv" class="adv-footer-link"><span class="chevron">&gt;</span> Core Values</a></li>
+                        <li><a href="gallery.php" class="adv-footer-link"><span class="chevron">&gt;</span> Photo Gallery</a></li>
+                        <li><a href="achievements.php" class="adv-footer-link"><span class="chevron">&gt;</span> Achievements</a></li>
+                        <li><a href="contact.php" class="adv-footer-link"><span class="chevron">&gt;</span> Campus Map &amp; Visit</a></li>
                     </ul>
                 </div>
 

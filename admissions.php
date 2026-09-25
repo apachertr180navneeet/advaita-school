@@ -194,8 +194,8 @@ require_once __DIR__ . '/includes/header.php';
                         <ul class="adv-widget-links">
                             <li class="active"><a href="admissions.php"><span>Admission Procedure</span> <i class="fa-solid fa-chevron-right"></i></a></li>
                             <li><a href="academics.php"><span>Curriculum & Streams</span> <i class="fa-solid fa-chevron-right"></i></a></li>
-                            <li><a href="facilities.php"><span>Campus Infrastructure</span> <i class="fa-solid fa-chevron-right"></i></a></li>
-                            <li><a href="mandatory-disclosure.php"><span>CBSE Affiliation Docs</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+                            <li><a href="about-us.php#campus"><span>Campus Infrastructure</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+                            <li><a href="about-us.php"><span>About Our Institution</span> <i class="fa-solid fa-chevron-right"></i></a></li>
                             <li><a href="contact.php"><span>Contact Admissions Office</span> <i class="fa-solid fa-chevron-right"></i></a></li>
                         </ul>
                     </div>

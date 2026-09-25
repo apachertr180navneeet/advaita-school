@@ -261,7 +261,7 @@ require_once __DIR__ . '/includes/header.php';
                             <span>Know More About Us</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
-                        <a href="facilities.php" class="adv-btn-welcome-outline">
+                        <a href="about-us.php#campus" class="adv-btn-welcome-outline">
                             <i class="fa-solid fa-landmark"></i>
                             <span>Take a Campus Tour</span>
                         </a>
@@ -865,7 +865,7 @@ require_once __DIR__ . '/includes/header.php';
                     <span>Browse Full Gallery</span>
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
-                <a href="facilities.php" class="adv-btn-gallery-video">
+                <a href="about-us.php#campus" class="adv-btn-gallery-video">
                     <div class="video-play-circle">
                         <i class="fa-solid fa-play"></i>
                     </div>

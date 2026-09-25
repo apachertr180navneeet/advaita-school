@@ -106,7 +106,7 @@ require_once __DIR__ . '/includes/header.php';
                         <h4 class="adv-widget-title">Holistic Life</h4>
                         <ul class="adv-widget-links">
                             <li class="active"><a href="activities.php"><span>Co-Curricular & Sports</span> <i class="fa-solid fa-chevron-right"></i></a></li>
-                            <li><a href="facilities.php"><span>Campus Infrastructure</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+                            <li><a href="about-us.php#campus"><span>Campus Infrastructure</span> <i class="fa-solid fa-chevron-right"></i></a></li>
                             <li><a href="achievements.php"><span>Sports Laurels & Trophies</span> <i class="fa-solid fa-chevron-right"></i></a></li>
                             <li><a href="gallery.php"><span>Event Photo Gallery</span> <i class="fa-solid fa-chevron-right"></i></a></li>
                             <li><a href="admissions.php"><span>Apply for Admission</span> <i class="fa-solid fa-chevron-right"></i></a></li>

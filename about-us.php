@@ -297,7 +297,7 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
     <!-- 6. Our Campus -->
-    <section class="about-campus-showcase" aria-label="Our Campus">
+    <section id="campus" class="about-campus-showcase" aria-label="Our Campus">
         <div class="about-container">
             <div class="about-campus-grid">
 
@@ -311,8 +311,8 @@ require_once __DIR__ . '/includes/header.php';
                     <p class="about-campus-desc">
                         Located in the heart of Parbhani, our thoughtfully designed campus provides a safe, inspiring and future-ready environment for students to pursue their dreams.
                     </p>
-                    <a href="facilities.php" class="about-pill-btn">
-                        <span>Explore Our Campus</span>
+                    <a href="gallery.php" class="about-pill-btn">
+                        <span>Explore Campus Gallery</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
@@ -329,7 +329,7 @@ require_once __DIR__ . '/includes/header.php';
                             <strong>Spacious Campus</strong>
                             <span>for Holistic Growth</span>
                         </div>
-                        <a href="facilities.php" class="campus-thumb-arrow" aria-label="Explore Campus Facilities">
+                        <a href="gallery.php" class="campus-thumb-arrow" aria-label="Explore Campus Gallery">
                             <i class="fa-solid fa-chevron-right"></i>
                         </a>
                     </div>

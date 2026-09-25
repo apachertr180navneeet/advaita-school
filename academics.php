@@ -139,7 +139,7 @@ require_once __DIR__ . '/includes/header.php';
                         <h4 class="adv-widget-title">Academic Wings</h4>
                         <ul class="adv-widget-links">
                             <li class="active"><a href="academics.php"><span>CBSE Curriculum Overview</span> <i class="fa-solid fa-chevron-right"></i></a></li>
-                            <li><a href="facilities.php"><span>Laboratories & STEAM</span> <i class="fa-solid fa-chevron-right"></i></a></li>
+                            <li><a href="about-us.php#campus"><span>Laboratories & Campus</span> <i class="fa-solid fa-chevron-right"></i></a></li>
                             <li><a href="activities.php"><span>Co-Curricular & Sports</span> <i class="fa-solid fa-chevron-right"></i></a></li>
                             <li><a href="achievements.php"><span>Board Results & Laurels</span> <i class="fa-solid fa-chevron-right"></i></a></li>
                             <li><a href="admissions.php"><span>Admission Criteria</span> <i class="fa-solid fa-chevron-right"></i></a></li>

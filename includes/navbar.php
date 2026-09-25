@@ -63,18 +63,10 @@ $currentPage = $activePage ?? '';
                 </a>
 
                 <ul class="adv-nav-menu adv-nav-menu-left">
-                    <li class="adv-nav-item has-dropdown <?php echo ($currentPage === 'school') ? 'active' : ''; ?>">
-                        <a href="about-us.php" class="adv-nav-link" aria-haspopup="true" aria-expanded="false">
+                    <li class="adv-nav-item <?php echo ($currentPage === 'school') ? 'active' : ''; ?>">
+                        <a href="about-us.php" class="adv-nav-link">
                             <span>About Us</span>
-                            <i class="fa-solid fa-chevron-down chevron-icon"></i>
                         </a>
-                        <ul class="adv-dropdown">
-                            <li class="adv-dropdown-item"><a href="about-us.php" class="adv-dropdown-link"><i class="fa-solid fa-school"></i> About Advaita</a></li>
-                            <li class="adv-dropdown-item"><a href="vision-mission.php" class="adv-dropdown-link"><i class="fa-solid fa-bullseye"></i> Vision & Mission</a></li>
-                            <li class="adv-dropdown-item"><a href="leadership.php" class="adv-dropdown-link"><i class="fa-solid fa-user-tie"></i> Director & Leadership</a></li>
-                            <li class="adv-dropdown-item"><a href="facilities.php" class="adv-dropdown-link"><i class="fa-solid fa-building"></i> Infrastructure & Campus</a></li>
-                            <li class="adv-dropdown-item"><a href="mandatory-disclosure.php" class="adv-dropdown-link"><i class="fa-solid fa-file-shield"></i> Mandatory Disclosure</a></li>
-                        </ul>
                     </li>
 
                     <li class="adv-nav-item has-dropdown <?php echo ($currentPage === 'learning') ? 'active' : ''; ?>">
@@ -99,7 +91,6 @@ $currentPage = $activePage ?? '';
                             <li class="adv-dropdown-item"><a href="activities.php" class="adv-dropdown-link"><i class="fa-solid fa-futbol"></i> Sports & Fitness</a></li>
                             <li class="adv-dropdown-item"><a href="activities.php" class="adv-dropdown-link"><i class="fa-solid fa-palette"></i> Arts, Music & Dance</a></li>
                             <li class="adv-dropdown-item"><a href="activities.php" class="adv-dropdown-link"><i class="fa-solid fa-puzzle-piece"></i> Clubs & House System</a></li>
-                            <li class="adv-dropdown-item"><a href="facilities.php" class="adv-dropdown-link"><i class="fa-solid fa-robot"></i> STEAM & Innovation Lab</a></li>
                         </ul>
                     </li>
 
@@ -149,12 +140,6 @@ $currentPage = $activePage ?? '';
                     <li class="adv-nav-item <?php echo ($currentPage === 'achievements') ? 'active' : ''; ?>">
                         <a href="achievements.php" class="adv-nav-link">
                             <span>Achievements</span>
-                        </a>
-                    </li>
-
-                    <li class="adv-nav-item <?php echo ($currentPage === 'mandatory') ? 'active' : ''; ?>">
-                        <a href="mandatory-disclosure.php" class="adv-nav-link">
-                            <span>CBSE Corner</span>
                         </a>
                     </li>
 
@@ -213,21 +198,13 @@ $currentPage = $activePage ?? '';
 
     <!-- Navigation Menu Links & Accordions -->
     <ul class="adv-mobile-menu">
-        <li class="adv-mobile-item has-children">
-            <a href="#" class="adv-mobile-link" role="button" aria-expanded="false">
+        <li class="adv-mobile-item">
+            <a href="about-us.php" class="adv-mobile-link">
                 <span class="adv-mobile-link-text">
-                    <i class="fa-solid fa-school"></i>
+                    <i class="fa-solid fa-circle-info"></i>
                     <span>About Us</span>
                 </span>
-                <i class="fa-solid fa-chevron-down adv-mobile-chevron"></i>
             </a>
-            <ul class="adv-mobile-submenu">
-                <li><a href="about-us.php" class="adv-mobile-submenu-link"><i class="fa-solid fa-circle-info"></i> About Advaita</a></li>
-                <li><a href="vision-mission.php" class="adv-mobile-submenu-link"><i class="fa-solid fa-bullseye"></i> Vision & Mission</a></li>
-                <li><a href="leadership.php" class="adv-mobile-submenu-link"><i class="fa-solid fa-user-tie"></i> Leadership</a></li>
-                <li><a href="facilities.php" class="adv-mobile-submenu-link"><i class="fa-solid fa-building"></i> Infrastructure</a></li>
-                <li><a href="mandatory-disclosure.php" class="adv-mobile-submenu-link"><i class="fa-solid fa-file-shield"></i> Mandatory Disclosure</a></li>
-            </ul>
         </li>
 
         <li class="adv-mobile-item has-children">
@@ -258,7 +235,6 @@ $currentPage = $activePage ?? '';
                 <li><a href="activities.php" class="adv-mobile-submenu-link"><i class="fa-solid fa-futbol"></i> Sports & Fitness</a></li>
                 <li><a href="activities.php" class="adv-mobile-submenu-link"><i class="fa-solid fa-paintbrush"></i> Arts, Music & Dance</a></li>
                 <li><a href="activities.php" class="adv-mobile-submenu-link"><i class="fa-solid fa-puzzle-piece"></i> Clubs & Houses</a></li>
-                <li><a href="facilities.php" class="adv-mobile-submenu-link"><i class="fa-solid fa-robot"></i> STEAM Lab</a></li>
             </ul>
         </li>
 
@@ -290,15 +266,6 @@ $currentPage = $activePage ?? '';
                 <span class="adv-mobile-link-text">
                     <i class="fa-solid fa-trophy"></i>
                     <span>Achievements</span>
-                </span>
-            </a>
-        </li>
-
-        <li class="adv-mobile-item">
-            <a href="mandatory-disclosure.php" class="adv-mobile-link">
-                <span class="adv-mobile-link-text">
-                    <i class="fa-solid fa-file-shield"></i>
-                    <span>Mandatory Disclosure</span>
                 </span>
             </a>
         </li>
