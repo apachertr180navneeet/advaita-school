@@ -24,7 +24,7 @@
                 
                 <!-- Column 1: School Brand & Identity -->
                 <div class="adv-footer-brand-col">
-                    <a href="#hero" class="adv-footer-logo-link" title="Advaita School of Excellence">
+                    <a href="index.php" class="adv-footer-logo-link" title="Advaita School of Excellence">
                         <img src="assets/images/footer-logo.png" alt="Advaita School of Excellence Logo" class="adv-footer-logo-img">
                     </a>
                     
@@ -57,8 +57,8 @@
                 <div class="adv-footer-col">
                     <h3 class="adv-footer-col-title">Explore</h3>
                     <ul class="adv-footer-links-list">
-                        <li><a href="#hero" class="adv-footer-link"><span class="chevron">&gt;</span> Home</a></li>
-                        <li><a href="#about" class="adv-footer-link"><span class="chevron">&gt;</span> About Us</a></li>
+                        <li><a href="index.php" class="adv-footer-link"><span class="chevron">&gt;</span> Home</a></li>
+                        <li><a href="about-us.php" class="adv-footer-link"><span class="chevron">&gt;</span> About Us</a></li>
                         <li><a href="#why-advaita" class="adv-footer-link"><span class="chevron">&gt;</span> Why Advaita</a></li>
                         <li><a href="#why-choose" class="adv-footer-link"><span class="chevron">&gt;</span> Key Features</a></li>
                         <li><a href="#admissions" class="adv-footer-link"><span class="chevron">&gt;</span> Admissions</a></li>

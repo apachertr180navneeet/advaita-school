@@ -47,23 +47,32 @@ $currentPage = $activePage ?? '';
             <!-- Left Desktop Menu -->
             <div class="adv-nav-section adv-nav-section-left">
                 <!-- Home Pill Button -->
-                <a href="#hero" class="adv-nav-home-btn active" title="Home">
+                <a href="index.php" class="adv-nav-home-btn <?php echo ($currentPage === 'index' || $currentPage === 'home' || $currentPage === '') ? 'active' : ''; ?>" title="Home">
                     <i class="fa-solid fa-house"></i>
                     <span>Home</span>
                 </a>
 
                 <ul class="adv-nav-menu adv-nav-menu-left">
-                    <li class="adv-nav-item">
-                        <a href="#about" class="adv-nav-link">
+                    <li class="adv-nav-item has-dropdown <?php echo ($currentPage === 'about' || $currentPage === 'about-us') ? 'active' : ''; ?>">
+                        <a href="about-us.php" class="adv-nav-link" aria-haspopup="true" aria-expanded="false">
                             <span>About Us</span>
+                            <i class="fa-solid fa-chevron-down chevron-icon"></i>
                         </a>
+                        <ul class="adv-dropdown">
+                            <li class="adv-dropdown-item">
+                                <a href="about-us.php" class="adv-dropdown-link">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span>About Us</span>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>
 
             <!-- Center Brand Crest Pod with Seamless Sculpted Shoulder Wings -->
             <div class="adv-nav-brand-pod">
-                <a href="#hero" class="adv-brand-badge-pod" title="Advaita School of Excellence">
+                <a href="index.php" class="adv-brand-badge-pod" title="Advaita School of Excellence">
                     <!-- Sculpted Crest & Shoulder Swoop SVG -->
                     <svg class="adv-brand-crest-svg" viewBox="0 0 244 92" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
                         <defs>
@@ -85,7 +94,7 @@ $currentPage = $activePage ?? '';
             <!-- Right Desktop Menu -->
             <div class="adv-nav-section adv-nav-section-right">
                 <!-- Apply for Admission Pill CTA Button -->
-                <a href="#admissions" class="adv-nav-apply-btn">
+                <a href="index.php#admissions" class="adv-nav-apply-btn">
                     <span>Apply for Admission</span>
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
@@ -93,7 +102,7 @@ $currentPage = $activePage ?? '';
 
             <!-- Tablet / Mobile Actions -->
             <div class="adv-mobile-actions">
-                <a href="#admissions" class="adv-tablet-cta">
+                <a href="index.php#admissions" class="adv-tablet-cta">
                     <i class="fa-solid fa-paper-plane"></i>
                     <span>Apply</span>
                 </a>
@@ -133,7 +142,7 @@ $currentPage = $activePage ?? '';
     <!-- Navigation Menu Links & Accordions -->
     <ul class="adv-mobile-menu">
         <li class="adv-mobile-item">
-            <a href="#hero" class="adv-mobile-link">
+            <a href="index.php" class="adv-mobile-link">
                 <span class="adv-mobile-link-text">
                     <i class="fa-solid fa-house"></i>
                     <span>Home</span>
@@ -141,19 +150,28 @@ $currentPage = $activePage ?? '';
             </a>
         </li>
 
-        <li class="adv-mobile-item">
-            <a href="#about" class="adv-mobile-link">
+        <li class="adv-mobile-item has-children <?php echo ($currentPage === 'about' || $currentPage === 'about-us') ? 'is-active' : ''; ?>">
+            <a href="#" class="adv-mobile-link" role="button" aria-expanded="false">
                 <span class="adv-mobile-link-text">
                     <i class="fa-solid fa-circle-info"></i>
                     <span>About Us</span>
                 </span>
+                <i class="fa-solid fa-chevron-down adv-mobile-chevron"></i>
             </a>
+            <ul class="adv-mobile-submenu">
+                <li>
+                    <a href="about-us.php" class="adv-mobile-submenu-link">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <span>About Us</span>
+                    </a>
+                </li>
+            </ul>
         </li>
     </ul>
 
     <!-- Drawer Footer -->
     <div class="adv-mobile-footer">
-        <a href="#admissions" class="adv-mobile-cta">
+        <a href="index.php#admissions" class="adv-mobile-cta">
             <i class="fa-solid fa-paper-plane"></i>
             <span>Apply for Admission</span>
         </a>
