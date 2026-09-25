@@ -2,7 +2,7 @@
 /**
  * Principal's Desk - Advaita School of Excellence, Parbhani
  * CBSE Affiliated (Affiliation No. 1130920)
- * Clean Semantic Layout matching the Project Standards (100% Full-Width Canvas)
+ * Clean Semantic Layout matching the Official Design
  */
 $pageTitle = "Principal's Desk - Advaita School of Excellence, Parbhani";
 $activePage = "principals-desk";
@@ -89,9 +89,6 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Left Column: Principal Profile Card with Viewfinder Frame & Stats -->
                 <div class="principal-profile-col">
                     <div class="principal-profile-card-wrapper">
-                        <!-- Blue Accent Tab on Right/Left -->
-                        <div class="principal-profile-blue-tab" aria-hidden="true"></div>
-                        
                         <div class="principal-profile-card">
                             <!-- Viewfinder Frame with 4 Corner Brackets -->
                             <div class="principal-viewfinder-frame">
@@ -103,7 +100,6 @@ require_once __DIR__ . '/includes/header.php';
                                 <div class="principal-avatar-wrap">
                                     <svg class="principal-avatar-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Divine Mam - Principal">
                                         <circle cx="60" cy="60" r="56" fill="#e8f3fe"/>
-                                        <!-- Soft female educator avatar silhouette -->
                                         <path d="M60 26C51.1634 26 44 33.1634 44 42C44 50.8366 51.1634 58 60 58C68.8366 58 76 50.8366 76 42C76 33.1634 68.8366 26 60 26Z" fill="#78909c"/>
                                         <path d="M60 20C46 20 40 30 40 44C40 47.5 41.5 54 44 57C45.5 51 51 47 60 47C69 47 74.5 51 76 57C78.5 54 80 47.5 80 44C80 30 74 20 60 20Z" fill="#546e7a"/>
                                         <path d="M34 94C34 77.4315 45.6406 64 60 64C74.3594 64 86 77.4315 86 94C86 97.3137 83.3137 100 80 100H40C36.6863 100 34 97.3137 34 94Z" fill="#78909c"/>
@@ -155,7 +151,7 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
 
                     <p>
-                        At <strong class="text-navy">Advaita School of Excellence</strong>, we are committed to providing a nurturing and inspiring environment where every child is encouraged to learn, grow, and succeed. Our aim is to create a strong academic foundation with a focus on overall personality development.
+                        At <strong>Advaita School of Excellence</strong>, we are committed to providing a nurturing and inspiring environment where every child is encouraged to learn, grow, and succeed. Our aim is to create a strong academic foundation with a focus on overall personality development.
                     </p>
 
                     <p>
@@ -194,10 +190,10 @@ require_once __DIR__ . '/includes/header.php';
          ========================================================================= -->
     <section class="principal-commitment-section">
         <div class="principal-commitment-container">
-            <div class="principal-commitment-header">
-                <span class="principal-commitment-eyebrow">— OUR COMMITMENT —</span>
-                <h2 class="principal-commitment-title">
-                    Four Things We <em>Promise</em>
+            <div class="about-section-header text-center">
+                <span class="about-eyebrow">— OUR COMMITMENT —</span>
+                <h2 class="about-section-heading">
+                    Four Things We <span>Promise</span>
                 </h2>
             </div>
 
@@ -232,7 +228,7 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
                     <h3 class="principal-commitment-card-title">Curiosity &amp; Creativity</h3>
                     <p class="principal-commitment-desc">
-                        We encourage questions, exploration and original thinking — not just the right answers.
+                        We encourage questions, exploration and original thinking — not just the right answer.
                     </p>
                 </div>
 
@@ -257,9 +253,6 @@ require_once __DIR__ . '/includes/header.php';
         <div class="principal-cta-banner-full">
             <!-- Left Content Area -->
             <div class="principal-cta-left-content">
-                <!-- Background Dot Matrix Accent -->
-                <div class="principal-cta-dots-bg" aria-hidden="true"></div>
-
                 <div class="principal-cta-text-wrapper">
                     <span class="principal-cta-eyebrow">— BEGIN YOUR CHILD'S JOURNEY —</span>
                     <h2 class="principal-cta-title">
@@ -293,12 +286,6 @@ require_once __DIR__ . '/includes/header.php';
                 <div class="principal-cta-arch-wrapper">
                     <img src="assets/images/campus-visit-building.jpg" alt="Advaita School Campus" class="principal-cta-arch-img" loading="lazy">
                     
-                    <!-- Floating Sky Badge in Top-Right -->
-                    <div class="principal-cta-badge">
-                        <span class="cta-badge-text">NURTURING<br>BRIGHTER<br>TOMORROWS</span>
-                        <div class="cta-badge-line" aria-hidden="true"></div>
-                    </div>
-
                     <!-- Floating CTA Actions Card -->
                     <div class="principal-cta-actions-card">
                         <a href="index.php#admissions" class="principal-btn-orange">

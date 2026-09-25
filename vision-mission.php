@@ -2,7 +2,7 @@
 /**
  * Vision & Mission - Advaita School of Excellence, Parbhani
  * CBSE Affiliated (Affiliation No. 1130920)
- * Clean Semantic Layout matching the Project Standards (Full-Width Canvas)
+ * Clean Semantic Layout matching the Official Design
  */
 $pageTitle = "Vision & Mission - Advaita School of Excellence, Parbhani";
 $activePage = "vision-mission";
@@ -61,9 +61,7 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Organic Wave Edge SVG -->
                 <div class="vision-hero-wave-edge" aria-hidden="true">
                     <svg viewBox="0 0 100 600" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Soft sky-blue glow wave -->
                         <path d="M0 0 C35 80 85 160 85 270 C85 390 30 480 75 600 L0 600 Z" fill="#d8ecff" opacity="0.6"/>
-                        <!-- White solid wave -->
                         <path d="M0 0 C25 80 65 160 65 270 C65 390 15 480 55 600 L0 600 Z" fill="#ffffff"/>
                     </svg>
                 </div>
@@ -151,12 +149,12 @@ require_once __DIR__ . '/includes/header.php';
          ========================================================================= -->
     <section class="vision-beliefs-section">
         <div class="vision-beliefs-container">
-            <div class="vision-section-header text-center">
-                <span class="vision-section-eyebrow">— WHAT WE STAND FOR —</span>
-                <h2 class="vision-section-title">
+            <div class="about-section-header text-center">
+                <span class="about-eyebrow">— WHAT WE STAND FOR —</span>
+                <h2 class="about-section-heading">
                     Our <span>Core Beliefs</span>
                 </h2>
-                <p class="vision-section-subtitle">
+                <p class="about-section-subhead">
                     Our vision and mission are built on strong values that shape every learning experience at Advaita.
                 </p>
             </div>
@@ -203,12 +201,12 @@ require_once __DIR__ . '/includes/header.php';
          ========================================================================= -->
     <section class="vision-focus-section">
         <div class="vision-focus-container">
-            <div class="vision-section-header text-center">
-                <span class="vision-section-eyebrow">— OUR FOCUS AREAS —</span>
-                <h2 class="vision-section-title">
+            <div class="about-section-header text-center">
+                <span class="about-eyebrow">— OUR FOCUS AREAS —</span>
+                <h2 class="about-section-heading">
                     Turning Vision into <span>Meaningful Action.</span>
                 </h2>
-                <p class="vision-section-subtitle">
+                <p class="about-section-subhead">
                     We work towards our mission through focused initiatives that ensure every child receives the right guidance, opportunities and environment to grow.
                 </p>
             </div>
@@ -306,7 +304,7 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
     <!-- =========================================================================
-         5. CTA BANNER SECTION: Be a Part of the Advaita Journey (Edge-to-Edge)
+         5. CTA BANNER SECTION: Be a Part of the Advaita Journey
          ========================================================================= -->
     <section class="vision-cta-banner-section">
         <div class="vision-cta-banner-full">
@@ -344,17 +342,15 @@ require_once __DIR__ . '/includes/header.php';
                         <circle cx="80" cy="80" r="2.2"/>
                         <circle cx="96" cy="80" r="2.2"/>
                     </g>
-
-                    <!-- Origami Paper Airplane -->
-                    <g transform="translate(18, 30) scale(0.95)">
-                        <path d="M5 22L44 4L22 43L19 28L5 22Z" fill="#ffffff" stroke="#1688e8" stroke-width="2" stroke-linejoin="round"/>
-                        <path d="M44 4L19 28L25 29L44 4Z" fill="#e0f2fe" stroke="#1688e8" stroke-width="2" stroke-linejoin="round"/>
-                        <path d="M19 28V36L23 31" fill="#bae6fd" stroke="#1688e8" stroke-width="1.8" stroke-linejoin="round"/>
+                    <!-- Flight Loop Trail -->
+                    <path d="M 2 175 C 38 125 78 85 108 108 C 132 126 114 168 86 162 C 58 156 64 100 102 72 C 132 52 162 34 192 20" stroke="#38bdf8" stroke-width="2.2" stroke-dasharray="5 5" stroke-linecap="round"/>
+                    <!-- 3D Origami Paper Airplane -->
+                    <g transform="translate(188, 8) rotate(22)">
+                        <polygon points="0,24 44,0 34,30" fill="#38bdf8"/>
+                        <polygon points="0,24 44,0 18,22" fill="#7dd3fc"/>
+                        <polygon points="18,22 44,0 26,32" fill="#0284c7"/>
+                        <polygon points="26,32 34,30 44,0" fill="#0369a1"/>
                     </g>
-
-                    <!-- Dashed Loop Trail Line -->
-                    <path d="M22 62 C -10 110, 45 155, 90 120 C 130 90, 80 40, 140 75 C 190 105, 230 110, 248 115" 
-                          stroke="#1688e8" stroke-width="2.2" stroke-dasharray="5 5" stroke-linecap="round" fill="none" opacity="0.6"/>
                 </svg>
 
                 <div class="vision-cta-text-wrapper">

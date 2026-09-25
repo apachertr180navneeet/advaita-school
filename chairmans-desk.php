@@ -2,7 +2,7 @@
 /**
  * Chairman's Desk - Advaita School of Excellence, Parbhani
  * CBSE Affiliated (Affiliation No. 1130920)
- * Clean Semantic Layout matching the Project Standards (Full-Width Canvas)
+ * Clean Semantic Layout matching the Official Design
  */
 $pageTitle = "Chairman's Desk - Advaita School of Excellence, Parbhani";
 $activePage = "chairmans-desk";
@@ -56,13 +56,13 @@ require_once __DIR__ . '/includes/header.php';
                     
                     <div class="chairman-hero-pillars">
                         <span>Education</span>
-                        <span class="pillar-dot">•</span>
+                        <span class="pillar-pipe">|</span>
                         <span>Values</span>
-                        <span class="pillar-dot">•</span>
+                        <span class="pillar-pipe">|</span>
                         <span>Discipline</span>
-                        <span class="pillar-dot">•</span>
+                        <span class="pillar-pipe">|</span>
                         <span>Opportunities</span>
-                        <span class="pillar-dot">•</span>
+                        <span class="pillar-pipe">|</span>
                         <span>A Better Society</span>
                     </div>
 
@@ -85,9 +85,7 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Organic Wave Edge SVG -->
                 <div class="chairman-hero-wave-edge" aria-hidden="true">
                     <svg viewBox="0 0 100 600" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Soft sky-blue glow wave -->
                         <path d="M0 0 C35 80 85 160 85 270 C85 390 30 480 75 600 L0 600 Z" fill="#d8ecff" opacity="0.6"/>
-                        <!-- White solid wave -->
                         <path d="M0 0 C25 80 65 160 65 270 C65 390 15 480 55 600 L0 600 Z" fill="#ffffff"/>
                     </svg>
                 </div>
@@ -108,7 +106,7 @@ require_once __DIR__ . '/includes/header.php';
 
                 <!-- Left: Message Content -->
                 <div class="chairman-message-content">
-                    <span class="chairman-message-eyebrow">CHAIRMAN'S MESSAGE</span>
+                    <span class="chairman-message-eyebrow">— CHAIRMAN'S MESSAGE —</span>
                     <h2 class="chairman-message-title">
                         A Few Words from<br>
                         <span>Our Chairman.</span>
@@ -139,11 +137,9 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
                 </div>
 
-                <!-- Right: Chairman Profile Column with Blue Accent Tab -->
+                <!-- Right: Chairman Profile Column -->
                 <div class="chairman-profile-col">
                     <div class="chairman-profile-card-wrapper">
-                        <div class="chairman-profile-blue-tab" aria-hidden="true"></div>
-                        <div class="chairman-profile-dots-bg" aria-hidden="true"></div>
                         <div class="chairman-profile-card">
                             <div class="chairman-profile-photo-wrap">
                                 <img src="assets/images/chairman-real.png" alt="Shri. Vishal Vishal Wattamwar - Chairman" class="chairman-profile-photo" loading="lazy">
@@ -165,11 +161,14 @@ require_once __DIR__ . '/includes/header.php';
          3. COMMITMENT SECTION: Four Beliefs That Guide Us (4 Cards)
          ========================================================================= -->
     <section class="chairman-commitment-section">
-        <!-- Ambient Decorative Shapes -->
-        <div class="chairman-ambient-shape ambient-shape-1" aria-hidden="true"></div>
-        <div class="chairman-ambient-shape ambient-shape-2" aria-hidden="true"></div>
-
         <div class="chairman-commitment-container">
+            <div class="about-section-header text-center">
+                <span class="about-eyebrow">— OUR COMMITMENT —</span>
+                <h2 class="about-section-heading">
+                    Four Beliefs That <span>Guide Us.</span>
+                </h2>
+            </div>
+
             <!-- 4 Commitment Cards -->
             <div class="chairman-commitment-grid">
                 <!-- Card 1: Excellence -->
@@ -196,7 +195,7 @@ require_once __DIR__ . '/includes/header.php';
 
                 <!-- Card 3: Values -->
                 <div class="chairman-commitment-card">
-                    <div class="chairman-commitment-icon icon-purple">
+                    <div class="chairman-commitment-icon icon-blue">
                         <i class="fa-solid fa-heart"></i>
                     </div>
                     <h3 class="chairman-commitment-card-title">Values</h3>
@@ -220,7 +219,7 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
     <!-- =========================================================================
-         4. CTA BANNER SECTION: 100% Full-Width Edge-to-Edge (0 Gap to Footer)
+         4. CTA BANNER SECTION: Be A Part of Advaita
          ========================================================================= -->
     <section class="chairman-cta-banner-section">
         <div class="chairman-cta-banner-full">
@@ -270,7 +269,7 @@ require_once __DIR__ . '/includes/header.php';
 
                 <div class="chairman-cta-text-content">
                     <span class="chairman-cta-eyebrow">
-                        BE A PART OF ADVAITA <span class="eyebrow-dash">—</span>
+                        BE A PART OF ADVAITA —
                     </span>
                     <h2 class="chairman-cta-title">
                         Together, let’s build<br>

@@ -23,7 +23,7 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Floating Script Badge in Sky -->
                 <div class="about-hero-script-tag">
                     <span class="script-title">More<br>Than A School</span>
-                    <svg class="script-underline" viewBox="0 0 140 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="script-underline" viewBox="0 0 140 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path d="M4 10C36 4 98 4 136 12" stroke="#F37021" stroke-width="3.5" stroke-linecap="round"/>
                         <path d="M18 14C48 9 92 8 126 15" stroke="#F37021" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
                     </svg>
@@ -62,7 +62,8 @@ require_once __DIR__ . '/includes/header.php';
 
                     <div class="about-hero-actions">
                         <a href="index.php#admissions" class="about-btn-orange">
-                            Book a Campus Visit <i class="fa-solid fa-arrow-right"></i>
+                            <span>Book a Campus Visit</span>
+                            <i class="fa-solid fa-arrow-right"></i>
                         </a>
                         <a href="#vision-mission" class="about-btn-vision">
                             <span class="vision-play-circle"><i class="fa-solid fa-play"></i></span>
@@ -74,9 +75,7 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Organic Wave Edge SVG -->
                 <div class="about-hero-wave-edge" aria-hidden="true">
                     <svg viewBox="0 0 100 600" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Soft sky-blue glow wave -->
                         <path d="M0 0 C35 80 85 160 85 270 C85 390 30 480 75 600 L0 600 Z" fill="#d8ecff" opacity="0.6"/>
-                        <!-- White solid wave -->
                         <path d="M0 0 C25 80 65 160 65 270 C65 390 15 480 55 600 L0 600 Z" fill="#ffffff"/>
                     </svg>
                 </div>
@@ -280,7 +279,8 @@ require_once __DIR__ . '/includes/header.php';
                     </p>
                     <div class="about-philosophy-action">
                         <a href="index.php#academics" class="about-btn-orange">
-                            Our Academics <i class="fa-solid fa-arrow-right"></i>
+                            <span>Our Academics</span>
+                            <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
@@ -408,7 +408,8 @@ require_once __DIR__ . '/includes/header.php';
                         Our modern campus is designed to inspire curiosity, encourage collaboration, and provide the best learning experience. From spacious classrooms to advanced labs and vibrant activity spaces, every corner of Advaita nurtures growth and opportunity.
                     </p>
                     <a href="index.php#facilities" class="about-btn-orange">
-                        Explore Our Campus <i class="fa-solid fa-arrow-right"></i>
+                        <span>Explore Our Campus</span>
+                        <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
 
@@ -434,7 +435,7 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
     <!-- =========================================================================
-         7. CTA BANNER SECTION: 100% Full-Width Edge-to-Edge (0 Gap to Footer)
+         7. CTA BANNER SECTION: Be A Part of Advaita
          ========================================================================= -->
     <section class="chairman-cta-banner-section">
         <div class="chairman-cta-banner-full">
@@ -484,23 +485,23 @@ require_once __DIR__ . '/includes/header.php';
 
                 <div class="chairman-cta-text-content">
                     <span class="chairman-cta-eyebrow">
-                        BE A PART OF ADVAITA <span class="eyebrow-dash">—</span>
+                        BE A PART OF ADVAITA —
                     </span>
                     <h2 class="chairman-cta-title">
                         Together, let’s build<br>
                         <span>brighter tomorrows.</span>
                     </h2>
                     <p class="chairman-cta-desc">
-                        Give your child the right start with strong academics, values and endless opportunities.
+                        Admissions are open for CBSE, NEET/IIT Foundation &amp; Competitive Exam Programmes.
                     </p>
                     <div class="chairman-cta-actions">
-                        <a href="index.php#admissions" class="chairman-btn-orange-solid">
-                            <span>Book a Campus Visit</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                        <a href="index.php#contact" class="chairman-btn-navy-outline">
+                        <a href="index.php#contact" class="chairman-btn-orange-solid">
                             <span>Enquire Now</span>
                             <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="index.php#admissions" class="chairman-btn-navy-outline">
+                            <i class="fa-regular fa-calendar-check"></i>
+                            <span>Schedule a Campus Visit</span>
                         </a>
                     </div>
                 </div>

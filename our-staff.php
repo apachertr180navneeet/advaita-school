@@ -2,7 +2,7 @@
 /**
  * Our Faculty - Advaita School of Excellence, Parbhani
  * CBSE Affiliated (Affiliation No. 1130920)
- * Clean Semantic Layout matching the Project Standards (Full-Width Canvas)
+ * Clean Semantic Layout matching the Official Design
  */
 $pageTitle = "Our Faculty - Advaita School of Excellence, Parbhani";
 $activePage = "our-staff";
@@ -62,9 +62,7 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Organic Wave Edge SVG -->
                 <div class="staff-hero-wave-edge" aria-hidden="true">
                     <svg viewBox="0 0 100 600" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <!-- Soft sky-blue glow wave -->
                         <path d="M0 0 C35 80 85 160 85 270 C85 390 30 480 75 600 L0 600 Z" fill="#d8ecff" opacity="0.6"/>
-                        <!-- White solid wave -->
                         <path d="M0 0 C25 80 65 160 65 270 C65 390 15 480 55 600 L0 600 Z" fill="#ffffff"/>
                     </svg>
                 </div>
@@ -118,7 +116,7 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
     <!-- =========================================================================
-         3. EDUCATORS GRID SECTION: 8 Cards
+         2. EDUCATORS GRID SECTION: 8 Cards
          ========================================================================= -->
     <section class="staff-grid-section">
         <div class="staff-decor-dots-left" aria-hidden="true"></div>
@@ -160,6 +158,7 @@ require_once __DIR__ . '/includes/header.php';
                         <div class="staff-card-avatar-circle">
                             <svg class="staff-avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                 <circle cx="50" cy="38" r="22" fill="#8898AA"/>
+                                <path d="M16 92C16 70 32 64 50 64C68 64 84 70 84 92" fill="#8898AA"/>
                             </svg>
                         </div>
                     </div>
@@ -283,50 +282,7 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
     <!-- =========================================================================
-         4. CAMPUS PREVIEW STRIP: Take a closer look at life at Advaita
-         ========================================================================= -->
-    <section class="staff-campus-strip-section">
-        <div class="staff-campus-strip-container">
-            <div class="staff-campus-strip-card">
-                <div class="staff-campus-strip-left">
-                    <div class="staff-campus-strip-bar"></div>
-                    <h3 class="staff-campus-strip-title">
-                        Take a closer look<br>
-                        at life at <span>Advaita.</span>
-                    </h3>
-                    <p class="staff-campus-strip-desc">
-                        Visit our campus to meet our faculty, experience our learning environment and see how we shape brighter futures.
-                    </p>
-                </div>
-
-                <div class="staff-campus-strip-thumbs">
-                    <div class="staff-strip-thumb-item">
-                        <img src="assets/images/about-hero-building.jpg" alt="Advaita Campus" class="staff-strip-thumb-img" loading="lazy">
-                    </div>
-                    <div class="staff-strip-thumb-item">
-                        <img src="assets/images/fac-library.jpg" alt="Advaita Library" class="staff-strip-thumb-img" loading="lazy">
-                    </div>
-                    <div class="staff-strip-thumb-item">
-                        <img src="assets/images/fac-science-lab.jpg" alt="Advaita Science Lab" class="staff-strip-thumb-img" loading="lazy">
-                    </div>
-                </div>
-
-                <div class="staff-campus-strip-right">
-                    <a href="index.php#admissions" class="staff-strip-btn-orange">
-                        <span>Book a Campus Visit</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                    <a href="index.php#campus-life" class="staff-strip-btn-video">
-                        <i class="fa-solid fa-circle-play"></i>
-                        <span>Watch Campus Video</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- =========================================================================
-         5. CTA BANNER SECTION: 100% Full-Width Edge-to-Edge (0 Gap to Footer)
+         3. JOIN OUR TEAM CTA SECTION: Want to Teach with Us?
          ========================================================================= -->
     <section class="chairman-cta-banner-section">
         <div class="chairman-cta-banner-full">
@@ -376,23 +332,22 @@ require_once __DIR__ . '/includes/header.php';
 
                 <div class="chairman-cta-text-content">
                     <span class="chairman-cta-eyebrow">
-                        BE A PART OF ADVAITA <span class="eyebrow-dash">—</span>
+                        — JOIN OUR TEAM —
                     </span>
                     <h2 class="chairman-cta-title">
-                        Together, let’s build<br>
-                        <span>brighter tomorrows.</span>
+                        Want to Teach with <span>Us?</span>
                     </h2>
                     <p class="chairman-cta-desc">
-                        Give your child the right start with strong academics, values and endless opportunities.
+                        We are always looking for passionate educators who believe in creating brighter futures. Explore open roles or share your CV with us.
                     </p>
                     <div class="chairman-cta-actions">
-                        <a href="index.php#admissions" class="chairman-btn-orange-solid">
-                            <span>Book a Campus Visit</span>
+                        <a href="index.php#contact" class="chairman-btn-orange-solid">
+                            <span>See Open Roles</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
-                        <a href="index.php#contact" class="chairman-btn-navy-outline">
-                            <span>Enquire Now</span>
-                            <i class="fa-solid fa-arrow-right"></i>
+                        <a href="mailto:info@advaitaschool.edu.in" class="chairman-btn-navy-outline">
+                            <i class="fa-regular fa-envelope"></i>
+                            <span>Send Your CV</span>
                         </a>
                     </div>
                 </div>
@@ -401,6 +356,49 @@ require_once __DIR__ . '/includes/header.php';
             <!-- Right Curved Arch Frame with Student Trio Image -->
             <div class="chairman-cta-arch-wrapper">
                 <img src="assets/images/about-cta-students-trio.png" alt="Advaita Students" class="chairman-cta-arch-img" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         4. CAMPUS PREVIEW STRIP: Take a closer look at life at Advaita
+         ========================================================================= -->
+    <section class="staff-campus-strip-section">
+        <div class="staff-campus-strip-container">
+            <div class="staff-campus-strip-card">
+                <div class="staff-campus-strip-left">
+                    <div class="staff-campus-strip-bar"></div>
+                    <h3 class="staff-campus-strip-title">
+                        Take a closer look<br>
+                        at life at <span>Advaita.</span>
+                    </h3>
+                    <p class="staff-campus-strip-desc">
+                        Visit our campus to meet our faculty, experience our learning envirnment and see how we shape brighter futures.
+                    </p>
+                </div>
+
+                <div class="staff-campus-strip-thumbs">
+                    <div class="staff-strip-thumb-item">
+                        <img src="assets/images/about-hero-building.jpg" alt="Advaita Campus" class="staff-strip-thumb-img" loading="lazy">
+                    </div>
+                    <div class="staff-strip-thumb-item">
+                        <img src="assets/images/fac-library.jpg" alt="Advaita Library" class="staff-strip-thumb-img" loading="lazy">
+                    </div>
+                    <div class="staff-strip-thumb-item">
+                        <img src="assets/images/fac-science-lab.jpg" alt="Advaita Science Lab" class="staff-strip-thumb-img" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="staff-campus-strip-right">
+                    <a href="index.php#admissions" class="staff-strip-btn-orange">
+                        <span>Book a Campus Visit</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="index.php#campus-life" class="staff-strip-btn-video">
+                        <i class="fa-solid fa-circle-play"></i>
+                        <span>Watch Campus Video</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
