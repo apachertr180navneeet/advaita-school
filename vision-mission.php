@@ -32,6 +32,9 @@ require_once __DIR__ . '/includes/header.php';
 
             <!-- Left Organic White Panel with Curved Boundary -->
             <div class="vision-hero-left-panel">
+                <!-- Ambient decorative dots -->
+                <div class="vision-hero-dots-decor" aria-hidden="true"></div>
+
                 <div class="vision-hero-content-inner">
                     <!-- Breadcrumbs -->
                     <nav class="vision-hero-breadcrumb" aria-label="Breadcrumb">
@@ -47,8 +50,7 @@ require_once __DIR__ . '/includes/header.php';
                     <span class="vision-hero-eyebrow">— OUR VISION &amp; MISSION —</span>
                     <h1 class="vision-hero-title">
                         Guiding Young Minds<br>
-                        Towards a <span>Brighter</span><br>
-                        <span>Tomorrow.</span>
+                        Towards a <span>Brighter Tomorrow.</span>
                     </h1>
 
                     <p class="vision-hero-desc">

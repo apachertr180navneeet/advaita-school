@@ -32,6 +32,9 @@ require_once __DIR__ . '/includes/header.php';
 
             <!-- Left Organic White Panel with Curved Boundary -->
             <div class="about-hero-left-panel">
+                <!-- Ambient decorative dots -->
+                <div class="about-hero-dots-decor" aria-hidden="true"></div>
+
                 <div class="about-hero-content-inner">
                     <span class="about-eyebrow">— WELCOME TO —</span>
                     <h1 class="about-hero-title">

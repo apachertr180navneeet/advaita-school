@@ -32,6 +32,9 @@ require_once __DIR__ . '/includes/header.php';
 
             <!-- Left Organic White Panel with Curved Boundary -->
             <div class="chairman-hero-left-panel">
+                <!-- Ambient decorative dots -->
+                <div class="chairman-hero-dots-decor" aria-hidden="true"></div>
+
                 <div class="chairman-hero-content-inner">
                     <!-- Breadcrumbs -->
                     <nav class="chairman-hero-breadcrumb" aria-label="Breadcrumb">
