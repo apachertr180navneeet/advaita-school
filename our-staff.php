@@ -289,35 +289,9 @@ require_once __DIR__ . '/includes/header.php';
         <div class="shape-one"></div>
         <div class="shape-two"></div>
         <div class="shape-three"></div>
-
-        <!-- Left Vector Graphics (Paper Airplane & Dot Matrix) -->
+        <!-- Left Graphic: Paper Airplane Image -->
         <div class="staff-join-plane-left" aria-hidden="true">
-            <svg class="staff-join-flight-svg" viewBox="0 0 280 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- 4x3 Dot Grid in upper-left -->
-                <g fill="#99c9f5" opacity="0.85">
-                    <circle cx="55" cy="48" r="2.5"/>
-                    <circle cx="71" cy="48" r="2.5"/>
-                    <circle cx="87" cy="48" r="2.5"/>
-                    <circle cx="103" cy="48" r="2.5"/>
-                    <circle cx="55" cy="62" r="2.5"/>
-                    <circle cx="71" cy="62" r="2.5"/>
-                    <circle cx="87" cy="62" r="2.5"/>
-                    <circle cx="103" cy="62" r="2.5"/>
-                    <circle cx="55" cy="76" r="2.5"/>
-                    <circle cx="71" cy="76" r="2.5"/>
-                    <circle cx="87" cy="76" r="2.5"/>
-                    <circle cx="103" cy="76" r="2.5"/>
-                </g>
-                <!-- Dashed looping flight line trail -->
-                <path d="M 42 155 C 62 132, 82 112, 102 100 C 128 85, 148 108, 138 132 C 129 154, 106 148, 100 125 C 96 102, 122 72, 155 48 C 172 36, 192 30, 208 26" stroke="#38bdf8" stroke-width="2.5" stroke-dasharray="5 5" stroke-linecap="round"/>
-                <!-- Origami 3D Paper Airplane -->
-                <g transform="translate(198, 22) rotate(6)">
-                    <polygon points="35,0 -5,6 12,14" fill="#a5f3fc"/>
-                    <polygon points="35,0 12,14 16,24" fill="#38bdf8"/>
-                    <polygon points="35,0 16,24 26,18" fill="#0284c7"/>
-                    <polygon points="35,0 26,18 20,8" fill="#0369a1"/>
-                </g>
-            </svg>
+            <img src="assets/images/staff-join-airplane-bg.png" alt="Paper Airplane Trail" class="staff-join-plane-img" loading="lazy">
         </div>
 
         <!-- Center Content -->
