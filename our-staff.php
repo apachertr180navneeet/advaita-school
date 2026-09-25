@@ -10,400 +10,415 @@ $activePage = "our-staff";
 require_once __DIR__ . '/includes/header.php';
 ?>
 
-<main id="main" class="main-content-wrapper staff-page-wrapper">
+<div class="faculty-page">
 
-    <!-- =========================================================================
-         1. FULL-WIDTH HERO SECTION: Meet the Educators
-         ========================================================================= -->
-    <section class="staff-hero-section">
-        <div class="staff-hero-canvas">
-            <!-- Background Image & Sky on the Right -->
-            <div class="staff-hero-bg-visual">
-                <img src="assets/images/about-hero-building.jpg" alt="Advaita School of Excellence Campus" class="staff-hero-bg-img" loading="eager">
-                <!-- Floating Script Badge in Sky -->
-                <div class="staff-hero-script-tag">
-                    <span class="script-title">More<br>Than A School</span>
-                    <svg class="script-underline" viewBox="0 0 140 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path d="M4 10C36 4 98 4 136 12" stroke="#F37021" stroke-width="3.5" stroke-linecap="round"/>
-                        <path d="M18 14C48 9 92 8 126 15" stroke="#F37021" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
-                    </svg>
-                </div>
-            </div>
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero-section">
 
-            <!-- Left Organic White Panel with Curved Boundary -->
-            <div class="staff-hero-left-panel">
-                <!-- Ambient decorative dots -->
-                <div class="staff-hero-dots-decor" aria-hidden="true"></div>
+        <div class="hero-bg-circle"></div>
 
-                <div class="staff-hero-content-inner">
-                    <!-- Breadcrumbs -->
-                    <nav class="staff-hero-breadcrumb" aria-label="Breadcrumb">
-                        <ol class="staff-breadcrumb-list">
-                            <li><a href="index.php">Home</a></li>
-                            <li class="staff-breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></li>
-                            <li><a href="about-us.php">About Us</a></li>
-                            <li class="staff-breadcrumb-sep"><i class="fa-solid fa-chevron-right"></i></li>
-                            <li class="staff-breadcrumb-current" aria-current="page">Our Faculty</li>
-                        </ol>
-                    </nav>
+        <div class="container-fluid px-lg-5">
 
-                    <span class="staff-hero-eyebrow">— OUR FACULTY —</span>
-                    <h1 class="staff-hero-title">
+            <div class="row align-items-center">
+
+                <!-- LEFT CONTENT -->
+                <div class="col-lg-5 hero-content">
+
+                    <div class="breadcrumb-text">
+                        Home &nbsp;›&nbsp; About Us &nbsp;›&nbsp; Our Faculty
+                    </div>
+
+                    <div class="small-heading">
+                        OUR FACULTY
+                    </div>
+
+                    <h1>
                         Meet the Educators<br>
                         Who Inspire Every<br>
                         <span>Advaita Learner.</span>
                     </h1>
-                    
-                    <p class="staff-hero-desc">
-                        Our teachers are more than subject experts — they are mentors, role models and lifelong guides who nurture curiosity, build confidence and inspire every child to excel in academics and in life.
+
+                    <p>
+                        Our teachers are more than just experts — they are mentors,
+                        role models and lifelong guides who nurture curiosity,
+                        build confidence and inspire every child to excel in
+                        academics and in life.
                     </p>
+
                 </div>
 
-                <!-- Organic Wave Edge SVG -->
-                <div class="staff-hero-wave-edge" aria-hidden="true">
-                    <svg viewBox="0 0 100 600" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 0 C35 80 85 160 85 270 C85 390 30 480 75 600 L0 600 Z" fill="#d8ecff" opacity="0.6"/>
-                        <path d="M0 0 C25 80 65 160 65 270 C65 390 15 480 55 600 L0 600 Z" fill="#ffffff"/>
-                    </svg>
+                <!-- RIGHT IMAGE -->
+                <div class="col-lg-7 hero-image-wrapper">
+
+                    <img
+                        src="assets/images/about-hero-building.jpg"
+                        class="hero-school-image"
+                        alt="Advaita School"
+                    >
+
+                    <div class="hero-note">
+                        <strong>More</strong><br>
+                        Than a School
+                    </div>
+
                 </div>
+
             </div>
+
         </div>
 
-        <!-- 2. Floating Stats Strip -->
-        <div class="staff-stats-strip-wrapper">
-            <div class="staff-stats-strip">
-                <div class="staff-stat-item">
-                    <div class="staff-stat-icon">
-                        <i class="fa-solid fa-users"></i>
-                    </div>
-                    <div class="staff-stat-info">
-                        <span class="staff-stat-num">80+</span>
-                        <span class="staff-stat-label">Total Faculty</span>
+        <!-- ================= STATISTICS ================= -->
+        <div class="container stats-container">
+
+            <div class="stats-box">
+
+                <div class="stat-item">
+                    <div class="stat-icon">👥</div>
+                    <div>
+                        <strong>80+</strong>
+                        <small>Total Faculty</small>
                     </div>
                 </div>
 
-                <div class="staff-stat-item">
-                    <div class="staff-stat-icon">
-                        <i class="fa-solid fa-book-open"></i>
-                    </div>
-                    <div class="staff-stat-info">
-                        <span class="staff-stat-num">12+</span>
-                        <span class="staff-stat-label">Departments</span>
+                <div class="stat-item">
+                    <div class="stat-icon">▣</div>
+                    <div>
+                        <strong>12+</strong>
+                        <small>Departments</small>
                     </div>
                 </div>
 
-                <div class="staff-stat-item">
-                    <div class="staff-stat-icon">
-                        <i class="fa-solid fa-award"></i>
-                    </div>
-                    <div class="staff-stat-info">
-                        <span class="staff-stat-num">10+</span>
-                        <span class="staff-stat-label">Avg. Years Experience</span>
+                <div class="stat-item">
+                    <div class="stat-icon">♙</div>
+                    <div>
+                        <strong>10+</strong>
+                        <small>Avg. Years Experience</small>
                     </div>
                 </div>
 
-                <div class="staff-stat-item">
-                    <div class="staff-stat-icon">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                    </div>
-                    <div class="staff-stat-info">
-                        <span class="staff-stat-num">100%</span>
-                        <span class="staff-stat-label">Postgraduate Trained</span>
+                <div class="stat-item">
+                    <div class="stat-icon">◆</div>
+                    <div>
+                        <strong>100%</strong>
+                        <small>Postgraduate Trained</small>
                     </div>
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- =========================================================================
-         2. EDUCATORS GRID SECTION: 8 Cards
-         ========================================================================= -->
-    <section class="staff-grid-section">
-        <div class="staff-decor-dots-left" aria-hidden="true"></div>
-        <div class="staff-decor-dots-right" aria-hidden="true"></div>
 
-        <div class="staff-grid-container">
-            <div class="staff-section-header">
-                <span class="staff-section-eyebrow">— OUR EDUCATORS —</span>
-                <h2 class="staff-section-title">
-                    The Teachers Behind Every <span>Advaita Learner.</span>
+    <!-- ================= FACULTY SECTION ================= -->
+    <section class="faculty-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <div class="small-heading">
+                    OUR EDUCATORS
+                </div>
+
+                <h2>
+                    The Teachers Behind Every
+                    <span>Advaita Learner.</span>
                 </h2>
-                <p class="staff-section-desc">
-                    Each one is here because they love what they teach — and because they care deeply about how every child grows. Our faculty bring expertise, experience and a genuine passion for guiding students towards academic and personal excellence.
+
+                <p>
+                    Each one is a beacon of knowledge, guiding every child every
+                    step of the way — because they care deeply about how every
+                    child grows. Our faculty bring expertise, experience and a
+                    genuine passion for guiding students towards academic and
+                    personal excellence.
                 </p>
+
             </div>
 
-            <div class="staff-cards-grid">
-                <!-- CARD 1: Principal -->
-                <article class="staff-card">
-                    <div class="staff-card-avatar-wrap">
-                        <div class="staff-card-avatar-circle">
-                            <svg class="staff-avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <circle cx="50" cy="38" r="22" fill="#8898AA"/>
-                                <path d="M16 92C16 70 32 64 50 64C68 64 84 70 84 92" fill="#8898AA"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="staff-role-pill role-orange">Principal</span>
-                    <h3 class="staff-card-name">Divine Mam</h3>
-                    <div class="staff-card-qual qual-orange">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span>M.A., B.Ed.</span>
-                    </div>
-                </article>
 
-                <!-- CARD 2: Vice Principal -->
-                <article class="staff-card">
-                    <div class="staff-card-avatar-wrap">
-                        <div class="staff-card-avatar-circle">
-                            <svg class="staff-avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <circle cx="50" cy="38" r="22" fill="#8898AA"/>
-                                <path d="M16 92C16 70 32 64 50 64C68 64 84 70 84 92" fill="#8898AA"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="staff-role-pill role-sky">Vice Principal</span>
-                    <h3 class="staff-card-name">Faculty Name 02</h3>
-                    <div class="staff-card-qual qual-sky">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span>M.Sc. (Mathematics), B.Ed.</span>
-                    </div>
-                </article>
+            <div class="row g-2">
 
-                <!-- CARD 3: Senior Faculty - Science -->
-                <article class="staff-card">
-                    <div class="staff-card-avatar-wrap">
-                        <div class="staff-card-avatar-circle">
-                            <svg class="staff-avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <circle cx="50" cy="38" r="22" fill="#8898AA"/>
-                                <path d="M16 92C16 70 32 64 50 64C68 64 84 70 84 92" fill="#8898AA"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="staff-role-pill role-purple">Senior Faculty - Science</span>
-                    <h3 class="staff-card-name">Faculty Name 03</h3>
-                    <div class="staff-card-qual qual-purple">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span>M.Sc. (Physics), B.Ed.</span>
-                    </div>
-                </article>
+                <!-- FACULTY 1 -->
+                <div class="col-6 col-lg-3">
+                    <div class="faculty-card">
 
-                <!-- CARD 4: Head - English Department -->
-                <article class="staff-card">
-                    <div class="staff-card-avatar-wrap">
-                        <div class="staff-card-avatar-circle">
-                            <svg class="staff-avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <circle cx="50" cy="38" r="22" fill="#8898AA"/>
-                                <path d="M16 92C16 70 32 64 50 64C68 64 84 70 84 92" fill="#8898AA"/>
-                            </svg>
+                        <div class="faculty-avatar">
+                            <div class="avatar-head"></div>
+                            <div class="avatar-body"></div>
                         </div>
-                    </div>
-                    <span class="staff-role-pill role-rose">Head - English Department</span>
-                    <h3 class="staff-card-name">Faculty Name 04</h3>
-                    <div class="staff-card-qual qual-rose">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span>M.A. (English), M.Ed.</span>
-                    </div>
-                </article>
 
-                <!-- CARD 5: Senior Faculty - Mathematics -->
-                <article class="staff-card">
-                    <div class="staff-card-avatar-wrap">
-                        <div class="staff-card-avatar-circle">
-                            <svg class="staff-avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <circle cx="50" cy="38" r="22" fill="#8898AA"/>
-                                <path d="M16 92C16 70 32 64 50 64C68 64 84 70 84 92" fill="#8898AA"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="staff-role-pill role-green">Senior Faculty - Mathematics</span>
-                    <h3 class="staff-card-name">Faculty Name 05</h3>
-                    <div class="staff-card-qual qual-green">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span>M.Sc. (Maths), B.Ed.</span>
-                    </div>
-                </article>
+                        <span class="faculty-role principal">
+                            PRINCIPAL
+                        </span>
 
-                <!-- CARD 6: Head - Hindi Department -->
-                <article class="staff-card">
-                    <div class="staff-card-avatar-wrap">
-                        <div class="staff-card-avatar-circle">
-                            <svg class="staff-avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <circle cx="50" cy="38" r="22" fill="#8898AA"/>
-                                <path d="M16 92C16 70 32 64 50 64C68 64 84 70 84 92" fill="#8898AA"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="staff-role-pill role-amber">Head - Hindi Department</span>
-                    <h3 class="staff-card-name">Faculty Name 06</h3>
-                    <div class="staff-card-qual qual-amber">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span>M.A. (Hindi), B.Ed.</span>
-                    </div>
-                </article>
+                        <h4>Divya Ma'am</h4>
 
-                <!-- CARD 7: Senior Faculty - Commerce -->
-                <article class="staff-card">
-                    <div class="staff-card-avatar-wrap">
-                        <div class="staff-card-avatar-circle">
-                            <svg class="staff-avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <circle cx="50" cy="38" r="22" fill="#8898AA"/>
-                                <path d="M16 92C16 70 32 64 50 64C68 64 84 70 84 92" fill="#8898AA"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="staff-role-pill role-cyan">Senior Faculty - Commerce</span>
-                    <h3 class="staff-card-name">Faculty Name 07</h3>
-                    <div class="staff-card-qual qual-cyan">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span>M.Com., B.Ed.</span>
-                    </div>
-                </article>
+                        <p>🎓 M.A., B.Ed.</p>
 
-                <!-- CARD 8: Head - Primary Wing -->
-                <article class="staff-card">
-                    <div class="staff-card-avatar-wrap">
-                        <div class="staff-card-avatar-circle">
-                            <svg class="staff-avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <circle cx="50" cy="38" r="22" fill="#8898AA"/>
-                                <path d="M16 92C16 70 32 64 50 64C68 64 84 70 84 92" fill="#8898AA"/>
-                            </svg>
+                    </div>
+                </div>
+
+
+                <!-- FACULTY 2 -->
+                <div class="col-6 col-lg-3">
+                    <div class="faculty-card">
+
+                        <div class="faculty-avatar">
+                            <div class="avatar-head"></div>
+                            <div class="avatar-body"></div>
                         </div>
+
+                        <span class="faculty-role">
+                            VICE PRINCIPAL
+                        </span>
+
+                        <h4>Faculty Name 02</h4>
+
+                        <p>🎓 M.Sc. (Mathematics), B.Ed.</p>
+
                     </div>
-                    <span class="staff-role-pill role-pink">Head - Primary Wing</span>
-                    <h3 class="staff-card-name">Faculty Name 08</h3>
-                    <div class="staff-card-qual qual-pink">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span>M.A., D.Ed., B.Ed.</span>
+                </div>
+
+
+                <!-- FACULTY 3 -->
+                <div class="col-6 col-lg-3">
+                    <div class="faculty-card">
+
+                        <div class="faculty-avatar">
+                            <div class="avatar-head"></div>
+                            <div class="avatar-body"></div>
+                        </div>
+
+                        <span class="faculty-role">
+                            SENIOR FACULTY - SCIENCE
+                        </span>
+
+                        <h4>Faculty Name 03</h4>
+
+                        <p>🎓 M.Sc. (Physics), B.Ed.</p>
+
                     </div>
-                </article>
+                </div>
+
+
+                <!-- FACULTY 4 -->
+                <div class="col-6 col-lg-3">
+                    <div class="faculty-card">
+
+                        <div class="faculty-avatar">
+                            <div class="avatar-head"></div>
+                            <div class="avatar-body"></div>
+                        </div>
+
+                        <span class="faculty-role">
+                            HEAD - ENGLISH DEPARTMENT
+                        </span>
+
+                        <h4>Faculty Name 04</h4>
+
+                        <p>🎓 M.A. (English), B.Ed.</p>
+
+                    </div>
+                </div>
+
+
+                <!-- FACULTY 5 -->
+                <div class="col-6 col-lg-3">
+                    <div class="faculty-card">
+
+                        <div class="faculty-avatar">
+                            <div class="avatar-head"></div>
+                            <div class="avatar-body"></div>
+                        </div>
+
+                        <span class="faculty-role green">
+                            SENIOR FACULTY - MATHEMATICS
+                        </span>
+
+                        <h4>Faculty Name 05</h4>
+
+                        <p>🎓 M.Sc. (Maths), B.Ed.</p>
+
+                    </div>
+                </div>
+
+
+                <!-- FACULTY 6 -->
+                <div class="col-6 col-lg-3">
+                    <div class="faculty-card">
+
+                        <div class="faculty-avatar">
+                            <div class="avatar-head"></div>
+                            <div class="avatar-body"></div>
+                        </div>
+
+                        <span class="faculty-role orange">
+                            HEAD - HINDI DEPARTMENT
+                        </span>
+
+                        <h4>Faculty Name 06</h4>
+
+                        <p>🎓 M.A. (Hindi), B.Ed.</p>
+
+                    </div>
+                </div>
+
+
+                <!-- FACULTY 7 -->
+                <div class="col-6 col-lg-3">
+                    <div class="faculty-card">
+
+                        <div class="faculty-avatar">
+                            <div class="avatar-head"></div>
+                            <div class="avatar-body"></div>
+                        </div>
+
+                        <span class="faculty-role blue">
+                            SENIOR FACULTY - COMMERCE
+                        </span>
+
+                        <h4>Faculty Name 07</h4>
+
+                        <p>🎓 M.Com., B.Ed.</p>
+
+                    </div>
+                </div>
+
+
+                <!-- FACULTY 8 -->
+                <div class="col-6 col-lg-3">
+                    <div class="faculty-card">
+
+                        <div class="faculty-avatar">
+                            <div class="avatar-head"></div>
+                            <div class="avatar-body"></div>
+                        </div>
+
+                        <span class="faculty-role pink">
+                            HEAD - PRE-PRIMARY WING
+                        </span>
+
+                        <h4>Faculty Name 08</h4>
+
+                        <p>🎓 M.Ed., NTT, B.Ed.</p>
+
+                    </div>
+                </div>
+
             </div>
+
         </div>
+
     </section>
 
-    <!-- =========================================================================
-         3. JOIN OUR TEAM CTA SECTION: Want to Teach with Us?
-         ========================================================================= -->
-    <section class="chairman-cta-banner-section">
-        <div class="chairman-cta-banner-full">
-            <div class="chairman-cta-left-content">
-                <!-- Origami Paper Airplane & Flight Loop Vector -->
-                <svg class="chairman-cta-flight-svg" viewBox="0 0 250 190" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <!-- Dot Grid 6x4 -->
-                    <g fill="#93c5fd" opacity="0.85">
-                        <circle cx="16" cy="35" r="2.2"/>
-                        <circle cx="32" cy="35" r="2.2"/>
-                        <circle cx="48" cy="35" r="2.2"/>
-                        <circle cx="64" cy="35" r="2.2"/>
-                        <circle cx="80" cy="35" r="2.2"/>
-                        <circle cx="96" cy="35" r="2.2"/>
 
-                        <circle cx="16" cy="50" r="2.2"/>
-                        <circle cx="32" cy="50" r="2.2"/>
-                        <circle cx="48" cy="50" r="2.2"/>
-                        <circle cx="64" cy="50" r="2.2"/>
-                        <circle cx="80" cy="50" r="2.2"/>
-                        <circle cx="96" cy="50" r="2.2"/>
+    <!-- ================= JOIN TEAM ================= -->
+    <section class="join-section">
 
-                        <circle cx="16" cy="65" r="2.2"/>
-                        <circle cx="32" cy="65" r="2.2"/>
-                        <circle cx="48" cy="65" r="2.2"/>
-                        <circle cx="64" cy="65" r="2.2"/>
-                        <circle cx="80" cy="65" r="2.2"/>
-                        <circle cx="96" cy="65" r="2.2"/>
+        <div class="container">
 
-                        <circle cx="16" cy="80" r="2.2"/>
-                        <circle cx="32" cy="80" r="2.2"/>
-                        <circle cx="48" cy="80" r="2.2"/>
-                        <circle cx="64" cy="80" r="2.2"/>
-                        <circle cx="80" cy="80" r="2.2"/>
-                        <circle cx="96" cy="80" r="2.2"/>
-                    </g>
-                    <!-- Flight Loop Trail -->
-                    <path d="M 2 175 C 38 125 78 85 108 108 C 132 126 114 168 86 162 C 58 156 64 100 102 72 C 132 52 162 34 192 20" stroke="#38bdf8" stroke-width="2.2" stroke-dasharray="5 5" stroke-linecap="round"/>
-                    <!-- 3D Origami Paper Airplane -->
-                    <g transform="translate(188, 8) rotate(22)">
-                        <polygon points="0,24 44,0 34,30" fill="#38bdf8"/>
-                        <polygon points="0,24 44,0 18,22" fill="#7dd3fc"/>
-                        <polygon points="18,22 44,0 26,32" fill="#0284c7"/>
-                        <polygon points="26,32 34,30 44,0" fill="#0369a1"/>
-                    </g>
-                </svg>
+            <div class="row align-items-center">
 
-                <div class="chairman-cta-text-content">
-                    <span class="chairman-cta-eyebrow">
-                        — JOIN OUR TEAM —
-                    </span>
-                    <h2 class="chairman-cta-title">
+                <div class="col-lg-7">
+
+                    <div class="small-heading">
+                        JOIN OUR TEAM
+                    </div>
+
+                    <h2>
                         Want to Teach with <span>Us?</span>
                     </h2>
-                    <p class="chairman-cta-desc">
-                        We are always looking for passionate educators who believe in creating brighter futures. Explore open roles or share your CV with us.
+
+                    <p>
+                        We are always looking for passionate educators who believe
+                        in creating brighter futures. Explore open roles or share
+                        your CV with us.
                     </p>
-                    <div class="chairman-cta-actions">
-                        <a href="index.php#contact" class="chairman-btn-orange-solid">
-                            <span>See Open Roles</span>
-                            <i class="fa-solid fa-arrow-right"></i>
+
+                    <div class="join-buttons">
+
+                        <a href="index.php#contact" class="btn-orange">
+                            See Open Positions →
                         </a>
-                        <a href="mailto:info@advaitaschool.edu.in" class="chairman-btn-navy-outline">
-                            <i class="fa-regular fa-envelope"></i>
-                            <span>Send Your CV</span>
+
+                        <a href="mailto:info@advaitaschool.edu.in" class="btn-outline">
+                            ✉ Send Your CV
                         </a>
+
                     </div>
+
                 </div>
+
+
+                <div class="col-lg-5 text-end">
+
+                    <img
+                        src="assets/images/about-cta-students-trio.png"
+                        class="team-image"
+                        alt="Advaita Team"
+                    >
+
+                </div>
+
             </div>
 
-            <!-- Right Curved Arch Frame with Student Trio Image -->
-            <div class="chairman-cta-arch-wrapper">
-                <img src="assets/images/about-cta-students-trio.png" alt="Advaita Students" class="chairman-cta-arch-img" loading="lazy">
-            </div>
         </div>
+
     </section>
 
-    <!-- =========================================================================
-         4. CAMPUS PREVIEW STRIP: Take a closer look at life at Advaita
-         ========================================================================= -->
-    <section class="staff-campus-strip-section">
-        <div class="staff-campus-strip-container">
-            <div class="staff-campus-strip-card">
-                <div class="staff-campus-strip-left">
-                    <div class="staff-campus-strip-bar"></div>
-                    <h3 class="staff-campus-strip-title">
+
+    <!-- ================= BOTTOM CTA ================= -->
+    <section class="campus-section">
+
+        <div class="container">
+
+            <div class="campus-box">
+
+                <div class="campus-content">
+
+                    <h3>
                         Take a closer look<br>
-                        at life at <span>Advaita.</span>
+                        at life at Advaita.
                     </h3>
-                    <p class="staff-campus-strip-desc">
-                        Visit our campus to meet our faculty, experience our learning envirnment and see how we shape brighter futures.
+
+                    <p>
+                        Visit our campus to meet our faculty, experience our
+                        learning environment and see how we shape brighter futures.
                     </p>
+
                 </div>
 
-                <div class="staff-campus-strip-thumbs">
-                    <div class="staff-strip-thumb-item">
-                        <img src="assets/images/about-hero-building.jpg" alt="Advaita Campus" class="staff-strip-thumb-img" loading="lazy">
-                    </div>
-                    <div class="staff-strip-thumb-item">
-                        <img src="assets/images/fac-library.jpg" alt="Advaita Library" class="staff-strip-thumb-img" loading="lazy">
-                    </div>
-                    <div class="staff-strip-thumb-item">
-                        <img src="assets/images/fac-science-lab.jpg" alt="Advaita Science Lab" class="staff-strip-thumb-img" loading="lazy">
-                    </div>
+
+                <div class="campus-gallery">
+
+                    <img src="assets/images/about-campus-courtyard.jpg" alt="Advaita Campus">
+                    <img src="assets/images/fac-library.jpg" alt="Advaita Library">
+                    <img src="assets/images/fac-science-lab.jpg" alt="Advaita Science Lab">
+
                 </div>
 
-                <div class="staff-campus-strip-right">
-                    <a href="index.php#admissions" class="staff-strip-btn-orange">
-                        <span>Book a Campus Visit</span>
-                        <i class="fa-solid fa-arrow-right"></i>
+
+                <div class="campus-buttons">
+
+                    <a href="index.php#admissions" class="campus-book">
+                        Book a Campus Visit →
                     </a>
-                    <a href="index.php#campus-life" class="staff-strip-btn-video">
-                        <i class="fa-solid fa-circle-play"></i>
-                        <span>Watch Campus Video</span>
+
+                    <a href="index.php#campus-life" class="campus-tour">
+                        ◉ Watch Campus Tour
                     </a>
+
                 </div>
+
             </div>
+
         </div>
+
     </section>
 
-</main>
+</div>
 
 <?php
 require_once __DIR__ . '/includes/footer.php';
