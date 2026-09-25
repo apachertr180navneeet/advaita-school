@@ -1100,7 +1100,7 @@
    ========================================================================== */
 .chairman-message-section {
     position: relative;
-    padding: clamp(35px, 4vw, 50px) 0 clamp(20px, 2.5vw, 30px);
+    padding: clamp(35px, 4vw, 55px) 0;
     background: #ffffff;
 }
 
@@ -1136,13 +1136,13 @@
 .chairman-message-card {
     background: #ffffff;
     border: 1px solid #e0effa;
-    border-radius: 24px;
-    padding: clamp(26px, 3.2vw, 40px);
+    border-radius: 28px;
+    padding: clamp(28px, 3.8vw, 45px);
     display: grid;
-    grid-template-columns: 1.35fr 0.85fr;
-    gap: clamp(24px, 3vw, 42px);
+    grid-template-columns: 1.32fr 0.88fr;
+    gap: clamp(28px, 3.5vw, 48px);
     align-items: center;
-    box-shadow: 0 10px 30px rgba(8, 59, 122, 0.06);
+    box-shadow: 0 12px 36px rgba(8, 59, 122, 0.08);
     position: relative;
 }
 
@@ -1154,16 +1154,16 @@
     font-weight: 800;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 
 .chairman-message-title {
     font-family: var(--adv-font-sans);
-    font-size: clamp(1.75rem, 2.4vw, 2.25rem);
+    font-size: clamp(1.85rem, 2.6vw, 2.35rem);
     font-weight: 800;
     color: var(--adv-navy);
     line-height: 1.18;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
     letter-spacing: -0.4px;
 }
 
@@ -1172,34 +1172,34 @@
 }
 
 .chairman-salutation {
-    font-size: 0.9rem;
+    font-size: 0.92rem;
     font-weight: 700;
-    color: var(--adv-navy);
-    margin-bottom: 10px;
+    color: #1e293b;
+    margin-bottom: 12px;
 }
 
 .chairman-message-content p {
-    font-size: 0.88rem;
-    line-height: 1.6;
+    font-size: 0.9rem;
+    line-height: 1.65;
     color: var(--adv-text-body);
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .chairman-quote-box {
-    margin: 14px 0 4px;
-    background: #eaf6ff;
+    margin: 16px 0 4px;
+    background: #edf7ff;
     border-left: 4.5px solid #0284c7;
     border-radius: 0 12px 12px 0;
-    padding: 12px 18px;
+    padding: 14px 20px;
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 16px;
 }
 
 .chairman-quote-icon {
     color: #0284c7;
-    font-size: 2.2rem;
-    line-height: 1;
+    font-size: 2.6rem;
+    line-height: 0.8;
     font-family: Georgia, serif;
     font-weight: 800;
     flex-shrink: 0;
@@ -1208,8 +1208,8 @@
 .chairman-quote-text {
     color: #1e3a5f;
     font-style: italic;
-    font-size: 0.875rem;
-    line-height: 1.5;
+    font-size: 0.92rem;
+    line-height: 1.55;
     margin: 0;
     font-weight: 500;
 }
@@ -1227,15 +1227,15 @@
     margin: 0 auto;
 }
 
-/* Blue Accent Tab on Right */
+/* Blue Accent Tab on Left edge of the card */
 .chairman-profile-blue-tab {
     position: absolute;
-    top: 50px;
-    right: -24px;
-    width: 45px;
-    height: 90px;
-    background: #0284c7;
-    border-radius: 0 16px 16px 0;
+    top: 38%;
+    left: -12px;
+    width: 22px;
+    height: 75px;
+    background: #38bdf8;
+    border-radius: 12px 0 0 12px;
     z-index: 1;
 }
 
@@ -1243,12 +1243,12 @@
 .chairman-profile-dots-decor {
     position: absolute;
     top: 20px;
-    right: -38px;
-    width: 60px;
+    right: -28px;
+    width: 50px;
     height: 100px;
     background-image: radial-gradient(#93c5fd 1.8px, transparent 1.8px);
     background-size: 14px 14px;
-    opacity: 0.6;
+    opacity: 0.7;
     z-index: 0;
     pointer-events: none;
 }
@@ -1265,9 +1265,9 @@
 
 .chairman-profile-photo-wrap {
     width: 100%;
-    height: 290px;
+    height: 310px;
     overflow: hidden;
-    background: #f8fafc;
+    background: #fcf9f2;
 }
 
 .chairman-profile-photo {
@@ -1281,8 +1281,8 @@
 .chairman-profile-info {
     background: linear-gradient(180deg, #073a76 0%, #032148 100%);
     color: #ffffff;
-    padding: 14px 18px;
-    text-align: center;
+    padding: 16px 20px;
+    text-align: left;
     border-radius: 0 0 20px 20px;
 }
 
@@ -1291,19 +1291,21 @@
     font-size: 1.05rem;
     font-weight: 800;
     color: #ffffff;
-    margin: 0 0 2px;
+    margin: 0 0 3px;
+    letter-spacing: -0.2px;
 }
 
 .chairman-role {
-    font-size: 0.78125rem;
+    font-size: 0.8125rem;
     font-weight: 700;
     color: var(--adv-orange);
     margin-bottom: 2px;
 }
 
 .chairman-org {
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     color: #cbd5e1;
+    font-weight: 500;
     margin: 0;
 }
 
