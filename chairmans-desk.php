@@ -96,12 +96,16 @@ require_once __DIR__ . '/includes/header.php';
          2. CHAIRMAN'S MESSAGE SECTION
          ========================================================================= -->
     <section class="chairman-message-section">
+        <!-- Background Side Dot Matrices -->
+        <div class="chairman-message-dots-left" aria-hidden="true"></div>
+        <div class="chairman-message-dots-right" aria-hidden="true"></div>
+
         <div class="chairman-message-container">
             <div class="chairman-message-card">
 
                 <!-- Left: Message Content -->
                 <div class="chairman-message-content">
-                    <span class="chairman-message-eyebrow">— CHAIRMAN'S MESSAGE —</span>
+                    <span class="chairman-message-eyebrow">CHAIRMAN'S MESSAGE</span>
                     <h2 class="chairman-message-title">
                         A Few Words from<br>
                         <span>Our Chairman.</span>
@@ -132,16 +136,19 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
                 </div>
 
-                <!-- Right: Chairman Profile Column -->
+                <!-- Right: Chairman Profile Column with Blue Accent Tab -->
                 <div class="chairman-profile-col">
-                    <div class="chairman-profile-card">
-                        <div class="chairman-profile-photo-wrap">
-                            <img src="assets/images/chairman.jpg" alt="Shri Vishal Wattamwar - Chairman" class="chairman-profile-photo" loading="lazy">
-                        </div>
-                        <div class="chairman-profile-info">
-                            <h3 class="chairman-name">Shri Vishal Wattamwar</h3>
-                            <div class="chairman-role">Chairman</div>
-                            <p class="chairman-org">Sanmati Sevabhavi Sansthan, Parbhani</p>
+                    <div class="chairman-profile-card-wrapper">
+                        <div class="chairman-profile-blue-tab" aria-hidden="true"></div>
+                        <div class="chairman-profile-card">
+                            <div class="chairman-profile-photo-wrap">
+                                <img src="assets/images/chairman-real.png" alt="Shri. Vishal Vishal Wattamwar - Chairman" class="chairman-profile-photo" loading="lazy">
+                            </div>
+                            <div class="chairman-profile-info">
+                                <h3 class="chairman-name">Shri. Vishal Vishal Wattamwar</h3>
+                                <div class="chairman-role">Chairman,</div>
+                                <p class="chairman-org">Sanmati Sevabhavi Sansthan, Parbhani</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -151,17 +158,15 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
     <!-- =========================================================================
-         3. COMMITMENT SECTION: Four Beliefs That Guide Us
+         3. COMMITMENT SECTION: Four Beliefs That Guide Us (4 Cards)
          ========================================================================= -->
     <section class="chairman-commitment-section">
-        <div class="chairman-commitment-container">
-            <div class="chairman-commitment-header">
-                <span class="chairman-commitment-eyebrow">— OUR COMMITMENT —</span>
-                <h2 class="chairman-commitment-title">
-                    Four Beliefs That <span>Guide Us.</span>
-                </h2>
-            </div>
+        <!-- Ambient Decorative Shapes -->
+        <div class="chairman-ambient-shape ambient-shape-1" aria-hidden="true"></div>
+        <div class="chairman-ambient-shape ambient-shape-2" aria-hidden="true"></div>
 
+        <div class="chairman-commitment-container">
+            <!-- 4 Commitment Cards -->
             <div class="chairman-commitment-grid">
                 <!-- Card 1: Excellence -->
                 <div class="chairman-commitment-card">
@@ -170,7 +175,7 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
                     <h3 class="chairman-commitment-card-title">Excellence</h3>
                     <p class="chairman-commitment-desc">
-                        Consistent pursuit of academic excellence, intellectual curiosity, and personal growth for every learner.
+                        Consistent pursuit of academic and personal growth.
                     </p>
                 </div>
 
@@ -181,7 +186,7 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
                     <h3 class="chairman-commitment-card-title">Opportunity</h3>
                     <p class="chairman-commitment-desc">
-                        Creating open platforms and modern facilities to help every child discover and nurture their true potential.
+                        Creating platforms to help every child discover their potential.
                     </p>
                 </div>
 
@@ -192,7 +197,7 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
                     <h3 class="chairman-commitment-card-title">Values</h3>
                     <p class="chairman-commitment-desc">
-                        Nurturing deep-rooted integrity, mutual respect, empathy, and responsible global citizenship.
+                        Nurturing integrity, empathy and responsible citizenship.
                     </p>
                 </div>
 
@@ -203,7 +208,7 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
                     <h3 class="chairman-commitment-card-title">Future Ready</h3>
                     <p class="chairman-commitment-desc">
-                        Preparing students for NEET, IIT, and competitive exams alongside essential modern life skills.
+                        Preparing students for NEET, IIT and a wide range of competitive exams, along with life skills.
                     </p>
                 </div>
             </div>
@@ -211,35 +216,81 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
     <!-- =========================================================================
-         4. CTA SECTION: Together, let's build brighter tomorrows
+         4. CTA BANNER SECTION: 100% Full-Width Edge-to-Edge (0 Gap to Footer)
          ========================================================================= -->
-    <section class="chairman-cta-section">
-        <div class="chairman-cta-container">
-            <div class="chairman-cta-card">
-                <div class="chairman-cta-content">
-                    <span class="chairman-cta-eyebrow">— BE A PART OF ADVAITA —</span>
+    <section class="chairman-cta-banner-section">
+        <div class="chairman-cta-banner-full">
+            <div class="chairman-cta-left-content">
+                <!-- Origami Paper Airplane & Flight Loop Vector -->
+                <svg class="chairman-cta-flight-svg" viewBox="0 0 250 190" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <!-- Dot Grid 6x4 -->
+                    <g fill="#93c5fd" opacity="0.85">
+                        <circle cx="16" cy="35" r="2.2"/>
+                        <circle cx="32" cy="35" r="2.2"/>
+                        <circle cx="48" cy="35" r="2.2"/>
+                        <circle cx="64" cy="35" r="2.2"/>
+                        <circle cx="80" cy="35" r="2.2"/>
+                        <circle cx="96" cy="35" r="2.2"/>
+
+                        <circle cx="16" cy="50" r="2.2"/>
+                        <circle cx="32" cy="50" r="2.2"/>
+                        <circle cx="48" cy="50" r="2.2"/>
+                        <circle cx="64" cy="50" r="2.2"/>
+                        <circle cx="80" cy="50" r="2.2"/>
+                        <circle cx="96" cy="50" r="2.2"/>
+
+                        <circle cx="16" cy="65" r="2.2"/>
+                        <circle cx="32" cy="65" r="2.2"/>
+                        <circle cx="48" cy="65" r="2.2"/>
+                        <circle cx="64" cy="65" r="2.2"/>
+                        <circle cx="80" cy="65" r="2.2"/>
+                        <circle cx="96" cy="65" r="2.2"/>
+
+                        <circle cx="16" cy="80" r="2.2"/>
+                        <circle cx="32" cy="80" r="2.2"/>
+                        <circle cx="48" cy="80" r="2.2"/>
+                        <circle cx="64" cy="80" r="2.2"/>
+                        <circle cx="80" cy="80" r="2.2"/>
+                        <circle cx="96" cy="80" r="2.2"/>
+                    </g>
+                    <!-- Flight Loop Trail -->
+                    <path d="M 2 175 C 38 125 78 85 108 108 C 132 126 114 168 86 162 C 58 156 64 100 102 72 C 132 52 162 34 192 20" stroke="#38bdf8" stroke-width="2.2" stroke-dasharray="5 5" stroke-linecap="round"/>
+                    <!-- 3D Origami Paper Airplane -->
+                    <g transform="translate(188, 8) rotate(22)">
+                        <polygon points="0,24 44,0 34,30" fill="#38bdf8"/>
+                        <polygon points="0,24 44,0 18,22" fill="#7dd3fc"/>
+                        <polygon points="18,22 44,0 26,32" fill="#0284c7"/>
+                        <polygon points="26,32 34,30 44,0" fill="#0369a1"/>
+                    </g>
+                </svg>
+
+                <div class="chairman-cta-text-content">
+                    <span class="chairman-cta-eyebrow">
+                        BE A PART OF ADVAITA <span class="eyebrow-dash">—</span>
+                    </span>
                     <h2 class="chairman-cta-title">
-                        Together, let's build<br>
+                        Together, let’s build<br>
                         <span>brighter tomorrows.</span>
                     </h2>
                     <p class="chairman-cta-desc">
-                        Give your child the right start with strong academics, enduring values and boundless opportunities.
+                        Give your child the right start with strong academics, values and endless opportunities.
                     </p>
                     <div class="chairman-cta-actions">
-                        <a href="index.php#admissions" class="chairman-btn-orange">
+                        <a href="index.php#admissions" class="chairman-btn-orange-solid">
                             <span>Book a Campus Visit</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
-                        <a href="index.php#contact" class="chairman-btn-video">
+                        <a href="index.php#contact" class="chairman-btn-navy-outline">
                             <span>Enquire Now</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
+            </div>
 
-                <div class="chairman-cta-visual">
-                    <img src="assets/images/about-cta-students-final.png" alt="Advaita Students" class="chairman-cta-students-img" loading="lazy">
-                </div>
+            <!-- Right Curved Arch Frame with Student Trio Image -->
+            <div class="chairman-cta-arch-wrapper">
+                <img src="assets/images/about-cta-students-trio.png" alt="Advaita Students" class="chairman-cta-arch-img" loading="lazy">
             </div>
         </div>
     </section>

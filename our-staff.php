@@ -280,45 +280,7 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
     <!-- =========================================================================
-         4. CAREERS CTA SECTION: Want to Teach with Us?
-         ========================================================================= -->
-    <section class="staff-careers-section">
-        <div class="staff-careers-container">
-            <div class="staff-careers-card">
-                <!-- Airplane Dashed Trail SVG -->
-                <svg class="staff-careers-trail-svg" viewBox="0 0 220 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                    <path d="M10 140 C 40 100, 70 30, 130 50 C 180 65, 170 120, 205 70" stroke="#0284C7" stroke-width="2" stroke-dasharray="6 6" stroke-linecap="round"/>
-                </svg>
-
-                <div class="staff-careers-content">
-                    <span class="staff-careers-eyebrow">— JOIN OUR TEAM —</span>
-                    <h2 class="staff-careers-title">
-                        Want to Teach with <span>Us?</span>
-                    </h2>
-                    <p class="staff-careers-desc">
-                        We are always looking for passionate educators who believe in creating brighter futures. Explore open roles or share your CV with us.
-                    </p>
-                    <div class="staff-careers-actions">
-                        <a href="index.php#contact" class="staff-btn-orange">
-                            <span>See Open Roles</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                        <a href="mailto:info@advaitaschool.edu.in" class="staff-btn-cv">
-                            <i class="fa-regular fa-envelope"></i>
-                            <span>Send Your CV</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="staff-careers-visual">
-                    <img src="assets/images/about-cta-students-final.png" alt="Advaita Students" class="staff-careers-students-img" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- =========================================================================
-         5. CAMPUS PREVIEW STRIP: Take a closer look at life at Advaita
+         4. CAMPUS PREVIEW STRIP: Take a closer look at life at Advaita
          ========================================================================= -->
     <section class="staff-campus-strip-section">
         <div class="staff-campus-strip-container">
@@ -356,6 +318,86 @@ require_once __DIR__ . '/includes/header.php';
                         <span>Watch Campus Video</span>
                     </a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         5. CTA BANNER SECTION: 100% Full-Width Edge-to-Edge (0 Gap to Footer)
+         ========================================================================= -->
+    <section class="chairman-cta-banner-section">
+        <div class="chairman-cta-banner-full">
+            <div class="chairman-cta-left-content">
+                <!-- Origami Paper Airplane & Flight Loop Vector -->
+                <svg class="chairman-cta-flight-svg" viewBox="0 0 250 190" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <!-- Dot Grid 6x4 -->
+                    <g fill="#93c5fd" opacity="0.85">
+                        <circle cx="16" cy="35" r="2.2"/>
+                        <circle cx="32" cy="35" r="2.2"/>
+                        <circle cx="48" cy="35" r="2.2"/>
+                        <circle cx="64" cy="35" r="2.2"/>
+                        <circle cx="80" cy="35" r="2.2"/>
+                        <circle cx="96" cy="35" r="2.2"/>
+
+                        <circle cx="16" cy="50" r="2.2"/>
+                        <circle cx="32" cy="50" r="2.2"/>
+                        <circle cx="48" cy="50" r="2.2"/>
+                        <circle cx="64" cy="50" r="2.2"/>
+                        <circle cx="80" cy="50" r="2.2"/>
+                        <circle cx="96" cy="50" r="2.2"/>
+
+                        <circle cx="16" cy="65" r="2.2"/>
+                        <circle cx="32" cy="65" r="2.2"/>
+                        <circle cx="48" cy="65" r="2.2"/>
+                        <circle cx="64" cy="65" r="2.2"/>
+                        <circle cx="80" cy="65" r="2.2"/>
+                        <circle cx="96" cy="65" r="2.2"/>
+
+                        <circle cx="16" cy="80" r="2.2"/>
+                        <circle cx="32" cy="80" r="2.2"/>
+                        <circle cx="48" cy="80" r="2.2"/>
+                        <circle cx="64" cy="80" r="2.2"/>
+                        <circle cx="80" cy="80" r="2.2"/>
+                        <circle cx="96" cy="80" r="2.2"/>
+                    </g>
+                    <!-- Flight Loop Trail -->
+                    <path d="M 2 175 C 38 125 78 85 108 108 C 132 126 114 168 86 162 C 58 156 64 100 102 72 C 132 52 162 34 192 20" stroke="#38bdf8" stroke-width="2.2" stroke-dasharray="5 5" stroke-linecap="round"/>
+                    <!-- 3D Origami Paper Airplane -->
+                    <g transform="translate(188, 8) rotate(22)">
+                        <polygon points="0,24 44,0 34,30" fill="#38bdf8"/>
+                        <polygon points="0,24 44,0 18,22" fill="#7dd3fc"/>
+                        <polygon points="18,22 44,0 26,32" fill="#0284c7"/>
+                        <polygon points="26,32 34,30 44,0" fill="#0369a1"/>
+                    </g>
+                </svg>
+
+                <div class="chairman-cta-text-content">
+                    <span class="chairman-cta-eyebrow">
+                        BE A PART OF ADVAITA <span class="eyebrow-dash">—</span>
+                    </span>
+                    <h2 class="chairman-cta-title">
+                        Together, let’s build<br>
+                        <span>brighter tomorrows.</span>
+                    </h2>
+                    <p class="chairman-cta-desc">
+                        Give your child the right start with strong academics, values and endless opportunities.
+                    </p>
+                    <div class="chairman-cta-actions">
+                        <a href="index.php#admissions" class="chairman-btn-orange-solid">
+                            <span>Book a Campus Visit</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="index.php#contact" class="chairman-btn-navy-outline">
+                            <span>Enquire Now</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Curved Arch Frame with Student Trio Image -->
+            <div class="chairman-cta-arch-wrapper">
+                <img src="assets/images/about-cta-students-trio.png" alt="Advaita Students" class="chairman-cta-arch-img" loading="lazy">
             </div>
         </div>
     </section>
