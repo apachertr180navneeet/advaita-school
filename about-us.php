@@ -447,7 +447,7 @@ require_once __DIR__ . '/includes/header.php';
                         <a href="index.php#admissions" class="about-btn-orange">
                             Enquire Now <i class="fa-solid fa-arrow-right"></i>
                         </a>
-                        <a href="index.php#contact" class="about-btn-outline">
+                        <a href="index.php#contact" class="about-btn-white-pill">
                             <i class="fa-regular fa-calendar-check"></i>
                             Schedule a Campus Visit
                         </a>

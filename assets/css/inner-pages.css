@@ -2282,15 +2282,17 @@
    Section 6: Campus Showcase (A Space to Learn, Explore and Excel)
    -------------------------------------------------------------------------- */
 .about-campus-showcase {
-    padding: clamp(55px, 6vw, 85px) 0 clamp(65px, 7vw, 100px);
+    padding: clamp(55px, 6.5vw, 90px) 0 clamp(60px, 7vw, 95px);
     background: #ffffff;
+    width: 100%;
 }
 
 .about-campus-grid {
     display: grid;
-    grid-template-columns: 0.95fr 1.05fr;
-    gap: clamp(35px, 5vw, 65px);
+    grid-template-columns: 1fr 1.15fr;
+    gap: clamp(32px, 5vw, 65px);
     align-items: center;
+    width: 100%;
 }
 
 .about-campus-content {
@@ -2303,24 +2305,40 @@
     color: #083B7A;
     line-height: 1.2;
     margin-bottom: 18px;
+    letter-spacing: -0.5px;
 }
 
 .about-campus-desc {
-    font-size: 1rem;
-    color: #556987;
-    line-height: 1.7;
+    font-size: clamp(0.9375rem, 1.05vw, 1rem);
+    color: #4b5563;
+    line-height: 1.72;
     margin-bottom: 28px;
 }
 
 .about-campus-visual-wrap {
     position: relative;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+.about-campus-visual-wrap::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    border: 2.5px solid #60a5fa;
+    border-radius: 28px;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .about-campus-frame {
-    border-radius: 26px;
+    border-radius: 24px;
     overflow: hidden;
-    height: 340px;
-    box-shadow: 0 18px 45px rgba(8, 59, 122, 0.1);
+    height: clamp(320px, 32vw, 390px);
+    box-shadow: 0 16px 40px rgba(8, 59, 122, 0.08);
     position: relative;
     z-index: 2;
 }
@@ -2339,17 +2357,17 @@
 
 .about-floating-campus-card {
     position: absolute;
-    bottom: -18px;
-    right: 16px;
-    z-index: 3;
+    bottom: 18px;
+    right: 18px;
+    z-index: 4;
     background: #ffffff;
-    padding: 10px 16px 10px 12px;
+    padding: 8px 14px 8px 10px;
     border-radius: 18px;
-    box-shadow: 0 12px 32px rgba(8, 59, 122, 0.14);
+    box-shadow: 0 12px 32px rgba(8, 59, 122, 0.16);
     display: flex;
     align-items: center;
-    gap: 14px;
-    border: 1px solid rgba(0, 0, 0, 0.04);
+    gap: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .campus-thumb {
@@ -2361,7 +2379,7 @@
 }
 
 .campus-thumb-text strong {
-    display block;
+    display: block;
     font-size: 0.84375rem;
     color: #083B7A;
     font-weight: 800;
@@ -2384,10 +2402,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.75rem;
+    font-size: 0.78125rem;
     text-decoration: none;
     transition: all 0.25s ease;
     flex-shrink: 0;
+    margin-left: 2px;
 }
 
 .campus-thumb-arrow:hover {
@@ -2397,30 +2416,45 @@
 }
 
 /* --------------------------------------------------------------------------
-   Section 7: CTA Banner ("Be a Part of Advaita")
+   Section 7: CTA Banner ("Be a Part of Advaita") - Light Sky-Blue Aesthetic
    -------------------------------------------------------------------------- */
 .about-cta-banner {
-    padding: 0;
+    padding: clamp(25px, 3.5vw, 50px) 0 0;
     width: 100%;
     background: #ffffff;
     overflow: hidden;
+    position: relative;
 }
 
 .about-cta-box {
     width: 100%;
-    background-color: #002752;
+    background: linear-gradient(135deg, #e1f0fe 0%, #ecf6fd 50%, #f4faff 100%);
+    border-radius: 36px 36px 0 0;
     display: grid;
     grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.95fr);
     align-items: stretch;
     position: relative;
     overflow: hidden;
-    clip-path: ellipse(98% 100% at 50% 100%);
+    box-shadow: 0 -8px 30px rgba(8, 59, 122, 0.03);
+}
+
+.about-cta-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 55%;
+    background-image: radial-gradient(rgba(14, 165, 233, 0.18) 1.5px, transparent 1.5px);
+    background-size: 20px 20px;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .about-cta-content {
     position: relative;
     z-index: 2;
-    padding: clamp(40px, 4.5vw, 65px) clamp(24px, 3.5vw, 55px) clamp(40px, 4.5vw, 65px) clamp(30px, 6vw, 110px);
+    padding: clamp(45px, 5.5vw, 75px) clamp(24px, 3.5vw, 45px) clamp(45px, 5.5vw, 75px) clamp(30px, 5vw, 80px);
     display: flex;
     align-items: center;
 }
@@ -2432,7 +2466,7 @@
     transform: translateY(-50%);
     height: 190px;
     width: 190px;
-    opacity: 0.1;
+    opacity: 0.05;
     pointer-events: none;
     z-index: 1;
 }
@@ -2441,17 +2475,19 @@
     width: 100%;
     height: 100%;
     object-fit: contain;
-    filter: brightness(0) invert(1);
 }
 
 .about-cta-text-wrap {
     position: relative;
     z-index: 2;
+    max-width: 560px;
 }
 
 .about-cta-eyebrow {
-    display: inline-block;
-    color: #7dd3fc;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #0284c7;
     font-size: 0.8125rem;
     font-weight: 800;
     letter-spacing: 2px;
@@ -2460,25 +2496,55 @@
 }
 
 .about-cta-title {
-    font-size: clamp(1.85rem, 2.7vw, 2.35rem);
+    font-size: clamp(1.85rem, 2.7vw, 2.45rem);
     font-weight: 800;
-    color: #ffffff;
+    color: #083B7A;
     line-height: 1.2;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
 }
 
 .about-cta-desc {
-    font-size: clamp(0.9375rem, 1.1vw, 1.0625rem);
-    color: rgba(255, 255, 255, 0.88);
-    margin-bottom: 24px;
-    line-height: 1.5;
+    font-size: clamp(0.9375rem, 1.05vw, 1.03125rem);
+    color: #4b5563;
+    margin-bottom: 26px;
+    line-height: 1.6;
 }
 
 .about-cta-actions {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 16px;
     flex-wrap: wrap;
+}
+
+.about-btn-white-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff;
+    color: #083B7A !important;
+    font-weight: 700;
+    font-size: 0.9375rem;
+    padding: 13px 26px;
+    border-radius: 50px;
+    border: 1.5px solid #cbd5e1;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 12px rgba(8, 59, 122, 0.05);
+}
+
+.about-btn-white-pill:hover {
+    border-color: #083B7A;
+    background: #f8fafc;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(8, 59, 122, 0.1);
+    color: #083B7A !important;
+}
+
+.about-btn-white-pill i {
+    color: #083B7A;
+    font-size: 1rem;
 }
 
 .about-cta-students-wrap {
@@ -2575,8 +2641,7 @@
     }
     .about-cta-box {
         grid-template-columns: 1fr;
-        clip-path: none;
-        border-top: 4px solid #F37021;
+        border-radius: 28px 28px 0 0;
     }
     .about-cta-content {
         padding: 40px 24px 24px;
@@ -2633,7 +2698,8 @@
     }
     .about-btn-orange,
     .about-btn-vision,
-    .about-btn-outline {
+    .about-btn-outline,
+    .about-btn-white-pill {
         width: 100%;
         justify-content: center;
     }
