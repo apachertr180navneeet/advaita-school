@@ -17,29 +17,9 @@ require_once __DIR__ . '/includes/header.php';
          ========================================================================= -->
     <section class="staff-hero-section">
         <div class="staff-hero-canvas">
-            <!-- Background Image & Sky on the Right -->
-            <div class="staff-hero-bg-visual">
-                <img src="assets/images/about-hero-building.jpg" alt="Advaita School Building Campus" class="staff-hero-bg-img" loading="eager">
-                <!-- Floating Script Badge in Sky -->
-                <div class="staff-hero-script-tag">
-                    <span class="script-title">More<br>Than A School</span>
-                    <svg class="script-underline" viewBox="0 0 140 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path d="M4 10C36 4 98 4 136 12" stroke="#F37021" stroke-width="3.5" stroke-linecap="round"/>
-                        <path d="M18 14C48 9 92 8 126 15" stroke="#F37021" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
-                    </svg>
-                </div>
-            </div>
-
-            <!-- Full Width Wave Mask Overlay with ambient blue contour -->
-            <div class="staff-hero-wave-overlay" aria-hidden="true">
-                <svg viewBox="0 0 1440 500" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Soft blue ambient circle at far left -->
-                    <ellipse cx="60" cy="180" rx="140" ry="240" fill="#E8F4FE" opacity="0.8" />
-                    <!-- Outer soft blue contour wave -->
-                    <path d="M0 0 L660 0 C700 80 735 170 805 270 C880 375 1020 440 1440 460 L1440 500 L0 500 Z" fill="#D0E8FD" />
-                    <!-- Main white curved wave -->
-                    <path d="M0 0 L640 0 C680 80 715 170 785 270 C860 375 1000 435 1440 450 L1440 500 L0 500 Z" fill="#FFFFFF" />
-                </svg>
+            <!-- Full Hero Banner Background Image -->
+            <div class="staff-hero-bg-visual" aria-hidden="true">
+                <img src="assets/images/staff-hero-banner.png" alt="Advaita School Building Campus" class="staff-hero-bg-img" loading="eager">
             </div>
 
             <!-- Left Content Panel -->
@@ -54,7 +34,7 @@ require_once __DIR__ . '/includes/header.php';
                         <span class="active">Our Faculty</span>
                     </div>
 
-                    <span class="staff-eyebrow">— OUR FACULTY —</span>
+                    <div class="staff-eyebrow">— OUR FACULTY —</div>
                     <h1 class="staff-hero-title">
                         Meet the Educators<br>
                         Who Inspire Every<br>
