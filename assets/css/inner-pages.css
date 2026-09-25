@@ -994,69 +994,124 @@
 
 /* Campus Showcase Section */
 .about-campus-showcase {
-    padding: clamp(35px, 4vw, 50px) 0 clamp(40px, 4.5vw, 60px);
-    background: #f8fcff;
+    padding: clamp(45px, 5.5vw, 70px) 0 clamp(40px, 5vw, 60px);
+    background: #ffffff;
+    position: relative;
 }
 
 .about-campus-grid {
     display: grid;
-    grid-template-columns: 1fr 1.25fr;
-    gap: clamp(24px, 3.5vw, 48px);
+    grid-template-columns: 1fr 1.15fr;
+    gap: clamp(32px, 4vw, 56px);
     align-items: center;
+}
+
+.about-campus-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.about-campus-eyebrow {
+    display: inline-block;
+    color: var(--adv-orange, #F37021);
+    font-family: var(--adv-font-sans);
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
 }
 
 .about-campus-title {
     font-family: var(--adv-font-sans);
-    font-size: clamp(1.75rem, 2.5vw, 2.35rem);
+    font-size: clamp(2rem, 2.7vw, 2.75rem);
     font-weight: 800;
-    color: var(--adv-navy);
+    color: var(--adv-navy, #0A2540);
     line-height: 1.18;
-    margin-bottom: 14px;
-    letter-spacing: -0.4px;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.about-campus-title .about-text-orange {
+    color: var(--adv-orange, #F37021);
 }
 
 .about-campus-desc {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: var(--adv-text-body);
-    margin-bottom: 18px;
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    color: var(--adv-text-body, #475569);
+    margin-bottom: 24px;
+    max-width: 520px;
+}
+
+.about-btn-orange {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--adv-orange, #F37021);
+    color: #ffffff;
+    border-radius: 50px;
+    padding: 13px 28px;
+    font-weight: 700;
+    font-size: 0.9375rem;
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(243, 112, 33, 0.28);
+    transition: all 0.25s ease;
+}
+
+.about-btn-orange:hover {
+    background: #e05d0e;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(243, 112, 33, 0.38);
+    color: #ffffff;
 }
 
 .about-campus-visual-wrap {
     position: relative;
+    padding-bottom: 18px;
 }
 
 .about-campus-frame {
-    border-radius: var(--adv-radius-xl);
+    border-radius: 22px;
     overflow: hidden;
-    box-shadow: 0 14px 36px rgba(8, 59, 122, 0.12);
+    border: 3.5px solid #38bdf8;
+    box-shadow: 0 16px 40px rgba(8, 59, 122, 0.1);
+    background: #ffffff;
 }
 
 .about-campus-img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 330px;
     object-fit: cover;
+    object-position: center 35%;
+    display: block;
 }
 
 .about-floating-campus-card {
     position: absolute;
-    bottom: 16px;
-    right: 16px;
-    background: rgba(255, 255, 255, 0.96);
-    backdrop-filter: blur(8px);
-    border-radius: var(--adv-radius-md);
-    padding: 8px 14px;
+    bottom: 0;
+    right: 20px;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 8px 14px 8px 8px;
     display: flex;
     align-items: center;
-    gap: 10px;
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.15);
+    gap: 12px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+    border: 1px solid #f1f5f9;
+    z-index: 5;
+    transition: transform 0.25s ease;
+}
+
+.about-floating-campus-card:hover {
+    transform: translateY(-3px);
 }
 
 .campus-thumb {
-    width: 42px;
-    height: 32px;
-    border-radius: 6px;
+    width: 60px;
+    height: 44px;
+    border-radius: 10px;
     object-fit: cover;
 }
 
@@ -1067,32 +1122,38 @@
 
 .campus-thumb-text strong {
     font-family: var(--adv-font-sans);
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     font-weight: 800;
-    color: var(--adv-navy);
+    color: var(--adv-navy, #0A2540);
+    line-height: 1.2;
 }
 
 .campus-thumb-text span {
-    font-size: 0.65rem;
-    color: var(--adv-text-muted);
+    font-size: 0.71875rem;
+    font-weight: 700;
+    color: var(--adv-navy, #0A2540);
+    line-height: 1.2;
 }
 
 .campus-thumb-arrow {
-    width: 24px;
-    height: 24px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
-    background: var(--adv-orange);
+    background: var(--adv-orange, #F37021);
     color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.6875rem;
+    font-size: 0.8125rem;
     text-decoration: none;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, background 0.2s ease;
+    margin-left: 4px;
 }
 
 .campus-thumb-arrow:hover {
     transform: scale(1.1);
+    background: #e05d0e;
+    color: #ffffff;
 }
 
 /* ==========================================================================
@@ -2183,112 +2244,163 @@
 }
 
 /* ==========================================================================
-   7. FULL-WIDTH CTA BANNER (SHARED ACROSS ALL INNER PAGES)
+   7. FULL-WIDTH CTA BANNER (SHARED & PAGE SPECIFIC)
    ========================================================================== */
+.about-cta-banner-section,
 .chairman-cta-banner-section,
 .vision-cta-banner-section {
     position: relative;
     width: 100%;
     background: #ffffff;
-    padding: clamp(25px, 3.5vw, 40px) 0 0;
+    padding: 0;
+    overflow: hidden;
 }
 
+.about-cta-banner-full,
 .chairman-cta-banner-full,
 .vision-cta-banner-full {
     position: relative;
     width: 100%;
-    background: linear-gradient(135deg, #eef7ff 0%, #d8ecff 100%);
+    background: linear-gradient(135deg, #edf6fe 0%, #ddedfd 100%);
     display: grid;
-    grid-template-columns: 1.25fr 0.75fr;
-    align-items: stretch;
-    min-height: 280px;
+    grid-template-columns: 1.25fr 0.85fr;
+    align-items: flex-end;
+    min-height: 290px;
     overflow: hidden;
 }
 
+.about-cta-left-content,
 .chairman-cta-left-content,
 .vision-cta-left-content {
     position: relative;
-    padding: clamp(24px, 3.5vw, 40px) clamp(20px, 3vw, 40px) clamp(24px, 3.5vw, 40px) clamp(20px, 4.5vw, 68px);
+    padding: clamp(36px, 4.5vw, 54px) clamp(20px, 3.5vw, 40px) clamp(36px, 4.5vw, 54px) clamp(24px, 5.5vw, 76px);
     display: flex;
-    align-items: center;
-    z-index: 2;
-}
-
-.chairman-cta-flight-svg,
-.vision-cta-flight-svg {
-    position: absolute;
-    top: 10px;
-    left: clamp(10px, 2.5vw, 30px);
-    width: 160px;
-    height: 120px;
-    pointer-events: none;
-    opacity: 0.7;
-}
-
-.chairman-cta-text-content,
-.vision-cta-text-wrapper {
-    position: relative;
+    flex-direction: column;
+    justify-content: center;
     z-index: 3;
-    max-width: 500px;
 }
 
+.about-cta-eyebrow,
 .chairman-cta-eyebrow,
 .vision-cta-eyebrow,
 .principal-cta-eyebrow {
     display: inline-block;
-    color: var(--adv-orange);
+    color: #0284c7;
     font-family: var(--adv-font-sans);
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     font-weight: 800;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 }
 
+.about-cta-title,
 .chairman-cta-title,
 .vision-cta-title,
 .principal-cta-title {
     font-family: var(--adv-font-sans);
-    font-size: clamp(1.75rem, 2.4vw, 2.25rem);
+    font-size: clamp(1.85rem, 2.5vw, 2.45rem);
     font-weight: 800;
-    color: var(--adv-navy);
-    line-height: 1.16;
-    margin-bottom: 8px;
+    color: var(--adv-navy, #0A2540);
+    line-height: 1.18;
+    margin-bottom: 10px;
     letter-spacing: -0.4px;
 }
 
+.about-cta-title span,
 .chairman-cta-title span,
 .vision-cta-title span,
 .principal-cta-title span {
-    color: var(--adv-orange);
+    color: var(--adv-orange, #F37021);
 }
 
+.about-cta-desc,
 .chairman-cta-desc,
 .vision-cta-desc,
 .principal-cta-desc {
-    font-size: 0.88rem;
-    line-height: 1.5;
-    color: var(--adv-text-body);
-    margin-bottom: 16px;
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    color: var(--adv-text-body, #475569);
+    margin-bottom: 22px;
+    max-width: 520px;
 }
 
+.about-cta-actions,
+.chairman-cta-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.about-cta-btn-orange,
+.chairman-btn-orange-solid {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--adv-orange, #F37021);
+    color: #ffffff;
+    border-radius: 50px;
+    padding: 12px 26px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(243, 112, 33, 0.28);
+    transition: all 0.25s ease;
+}
+
+.about-cta-btn-orange:hover,
+.chairman-btn-orange-solid:hover {
+    background: #e05d0e;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(243, 112, 33, 0.38);
+    color: #ffffff;
+}
+
+.about-cta-btn-white,
+.chairman-btn-navy-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    color: var(--adv-navy, #0A2540);
+    border: 1.5px solid var(--adv-navy, #0A2540);
+    border-radius: 50px;
+    padding: 11px 22px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.about-cta-btn-white:hover,
+.chairman-btn-navy-outline:hover {
+    background: var(--adv-navy, #0A2540);
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.about-cta-students-wrapper,
 .chairman-cta-arch-wrapper,
 .vision-cta-arch-wrapper {
     position: relative;
     height: 100%;
-    min-height: 280px;
+    min-height: 290px;
     overflow: hidden;
     display: flex;
     align-items: flex-end;
-    justify-content: center;
+    justify-content: flex-end;
+    z-index: 2;
 }
 
+.about-cta-students-img,
 .chairman-cta-arch-img,
 .vision-cta-arch-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center bottom;
+    max-height: 315px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: right bottom;
     display: block;
 }
 
@@ -2391,13 +2503,16 @@
     .principal-commitment-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    .about-cta-banner-full,
     .chairman-cta-banner-full,
     .vision-cta-banner-full {
         grid-template-columns: 1fr;
     }
+    .about-cta-students-wrapper,
     .chairman-cta-arch-wrapper,
     .vision-cta-arch-wrapper {
-        min-height: 200px;
+        min-height: 220px;
+        justify-content: center;
     }
     .vision-card-content {
         max-width: 100%;
