@@ -1716,716 +1716,864 @@
 }
 
 /* ==========================================================================
-   5. OUR FACULTY (STAFF) PAGE SPECIFIC STYLES (FULL WIDTH)
+   5. OUR FACULTY (STAFF) PAGE SPECIFIC STYLES (MATCHING SCREENSHOT)
    ========================================================================== */
 
-.faculty-page {
+.faculty-page-wrapper {
     width: 100%;
     max-width: 100%;
     margin: 0;
     padding: 0;
     background: #ffffff;
     overflow-x: hidden;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: var(--adv-font-body, 'Plus Jakarta Sans', sans-serif);
     color: #173d5d;
 }
 
-.faculty-page * {
+.faculty-page-wrapper * {
     box-sizing: border-box;
 }
 
-/* Full Width Section Containers */
-.faculty-page .container {
-    width: 100%;
-    max-width: 1360px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: clamp(15px, 2.5vw, 30px);
-    padding-right: clamp(15px, 2.5vw, 30px);
-}
-
-.faculty-page .container-fluid {
-    width: 100%;
-    max-width: 100%;
-    padding-left: clamp(20px, 4vw, 60px);
-    padding-right: 0;
-}
-
-.faculty-page .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: -10px;
-    margin-right: -10px;
-}
-
-.faculty-page .row.align-items-center {
-    align-items: center;
-}
-
-.faculty-page .row.g-2 {
-    margin-left: -8px;
-    margin-right: -8px;
-}
-
-.faculty-page .row.g-2 > [class*="col"] {
-    padding-left: 8px;
-    padding-right: 8px;
-    margin-bottom: 16px;
-}
-
-.faculty-page .col-6 {
-    flex: 0 0 auto;
-    width: 50%;
-}
-
-.faculty-page .col-lg-3 {
-    flex: 0 0 auto;
-    width: 50%;
-}
-
-.faculty-page .col-lg-5 {
-    flex: 0 0 auto;
-    width: 100%;
-}
-
-.faculty-page .col-lg-7 {
-    flex: 0 0 auto;
-    width: 100%;
-}
-
-.faculty-page .text-end {
-    text-align: right;
-}
-
-@media (min-width: 992px) {
-    .faculty-page .px-lg-5 {
-        padding-left: clamp(2rem, 4vw, 4.5rem);
-        padding-right: 0;
-    }
-    .faculty-page .col-lg-3 {
-        width: 25%;
-    }
-    .faculty-page .col-lg-5 {
-        width: 44%;
-    }
-    .faculty-page .col-lg-7 {
-        width: 56%;
-    }
+.text-orange {
+    color: #F37021 !important;
 }
 
 /* =========================================
-   1. HERO SECTION (FULL WIDTH)
+   1. HERO SECTION (WAVE CANVAS)
 ========================================= */
 
-.faculty-page .hero-section {
+.staff-hero-section {
     position: relative;
     width: 100%;
-    min-height: 480px;
-    overflow: hidden;
-    background:
-        radial-gradient(
-            circle at -5% 50%,
-            #dff3ff 0,
-            #dff3ff 140px,
-            transparent 141px
-        ),
-        linear-gradient(
-            180deg,
-            #ffffff 0%,
-            #effaff 100%
-        );
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    background: #ffffff;
 }
 
-.faculty-page .hero-bg-circle {
-    position: absolute;
-    width: 540px;
-    height: 540px;
-    border: 8px solid rgba(61, 155, 221, 0.45);
-    border-radius: 50%;
-    right: -240px;
-    top: -260px;
-    pointer-events: none;
-    z-index: 2;
-}
-
-.faculty-page .hero-content {
+.staff-hero-canvas {
     position: relative;
-    z-index: 5;
-    padding-top: clamp(40px, 5vw, 60px);
-    padding-bottom: clamp(100px, 9vw, 130px);
-    max-width: 640px;
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    background: #edf6fd;
+    overflow: hidden;
+    width: 100%;
 }
 
-.faculty-page .breadcrumb-text {
-    font-size: 0.82rem;
-    font-weight: 600;
-    color: #738a9b;
-    margin-bottom: 14px;
-    letter-spacing: 0.3px;
-}
-
-.faculty-page .small-heading {
-    font-size: 0.85rem;
-    letter-spacing: 2px;
-    font-weight: 800;
-    color: #f58220;
-    text-transform: uppercase;
-    margin-bottom: 6px;
-    display: block;
-}
-
-.faculty-page .hero-content h1 {
-    margin: 6px 0 14px;
-    color: #104879;
-    font-size: clamp(2.1rem, 3.4vw, 3rem);
-    line-height: 1.12;
-    font-weight: 900;
-    letter-spacing: -0.5px;
-}
-
-.faculty-page .hero-content h1 span {
-    color: #f58220;
-}
-
-.faculty-page .hero-content p {
-    max-width: 520px;
-    color: #60798b;
-    font-size: clamp(0.92rem, 1.15vw, 1.02rem);
-    line-height: 1.6;
-    margin: 0;
-}
-
-.faculty-page .hero-image-wrapper {
+/* Right Background Building / Sky Image */
+.staff-hero-bg-visual {
     position: absolute;
-    right: 0;
     top: 0;
+    right: 0;
     bottom: 0;
-    width: 55%;
-    height: 100%;
+    width: 62%;
     z-index: 1;
+    overflow: hidden;
 }
 
-.faculty-page .hero-school-image {
+.staff-hero-bg-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center top;
-    border-bottom-left-radius: 160px;
+    display: block;
 }
 
-.faculty-page .hero-note {
+/* Floating "More Than A School" Script Badge */
+.staff-hero-script-tag {
     position: absolute;
-    right: clamp(25px, 4vw, 60px);
-    top: clamp(20px, 3.5vw, 45px);
-    color: #17466e;
-    font-family: cursive, 'Brush Script MT', sans-serif;
-    font-size: clamp(1.4rem, 2vw, 1.85rem);
-    line-height: 1;
+    top: clamp(18px, 2.5vw, 32px);
+    right: clamp(24px, 4.5vw, 65px);
+    z-index: 5;
+    text-align: center;
     transform: rotate(-5deg);
-    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.85);
-    z-index: 4;
-}
-
-/* =========================================
-   STATISTICS (FLOATING STRIP)
-========================================= */
-
-.faculty-page .stats-container {
-    position: relative;
-    z-index: 10;
-    width: 100%;
-    max-width: 1140px;
-    margin: -35px auto 0;
-    padding: 0 20px;
-}
-
-.faculty-page .stats-box {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    background: #ffffff;
-    border-radius: 18px;
-    box-shadow: 0 10px 30px rgba(16, 72, 121, 0.12);
-    border: 1px solid #e0effa;
-    padding: 14px 10px;
-}
-
-.faculty-page .stat-item {
-    min-height: 54px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    border-right: 1px solid #e1edf3;
-    padding: 4px 12px;
-}
-
-.faculty-page .stat-item:last-child {
-    border-right: 0;
-}
-
-.faculty-page .stat-icon {
-    font-size: 1.65rem;
-    color: #278bd0;
-    line-height: 1;
-}
-
-.faculty-page .stat-item strong {
-    display: block;
-    color: #124d80;
-    font-size: 1.3rem;
-    font-weight: 800;
-    line-height: 1.1;
-}
-
-.faculty-page .stat-item small {
-    display: block;
-    color: #748b9b;
-    font-size: 0.78rem;
-    font-weight: 600;
-    margin-top: 2px;
-}
-
-/* =========================================
-   2. FACULTY GRID SECTION (FULL WIDTH)
-========================================= */
-
-.faculty-page .faculty-section {
-    position: relative;
-    width: 100%;
-    padding: clamp(55px, 6vw, 85px) 0 clamp(40px, 4.5vw, 65px);
-    background: #ffffff;
-}
-
-.faculty-page .faculty-section::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    opacity: .35;
-    background-image:
-        radial-gradient(
-            #76b8db 1.2px,
-            transparent 1.2px
-        );
-    background-size: 18px 18px;
-    mask-image: linear-gradient(
-        to bottom,
-        black,
-        transparent 75%
-    );
     pointer-events: none;
-}
-
-.faculty-page .section-heading {
-    position: relative;
-    text-align: center;
-    max-width: 780px;
-    margin: 0 auto clamp(28px, 3.5vw, 44px);
-    padding: 0 15px;
-}
-
-.faculty-page .section-heading h2 {
-    margin: 6px 0 12px;
-    color: #124a79;
-    font-size: clamp(1.9rem, 2.7vw, 2.5rem);
-    font-weight: 900;
-    letter-spacing: -0.4px;
-}
-
-.faculty-page .section-heading h2 span {
-    color: #f58220;
-}
-
-.faculty-page .section-heading p {
-    max-width: 700px;
-    margin: auto;
-    color: #718695;
-    font-size: clamp(0.9rem, 1.1vw, 1rem);
-    line-height: 1.6;
-}
-
-/* =========================================
-   FACULTY CARDS (8 CARDS)
-========================================= */
-
-.faculty-page .faculty-card {
-    position: relative;
-    min-height: 200px;
-    padding: 24px 16px 20px;
-    text-align: center;
-    border: 1px solid #dfebf2;
-    border-radius: 16px;
-    background: linear-gradient(
-        180deg,
-        #ffffff 0%,
-        #f5fbfe 100%
-    );
-    box-shadow: 0 4px 14px rgba(30, 90, 130, 0.05);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 
-.faculty-page .faculty-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 26px rgba(30, 90, 130, 0.12);
-    border-color: #b9dcf2;
+.staff-hero-script-tag .script-title {
+    font-family: var(--adv-font-script, 'Caveat', cursive);
+    font-size: clamp(2.1rem, 3vw, 3.2rem);
+    font-weight: 700;
+    color: #0A2540;
+    line-height: 0.95;
+    display: block;
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.95);
 }
 
-.faculty-page .faculty-avatar {
-    width: 72px;
-    height: 72px;
-    margin: 0 auto 12px;
-    border-radius: 50%;
-    background: #e7f2f9;
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
+.staff-hero-script-tag .script-underline {
+    width: clamp(105px, 8.5vw, 135px);
+    height: 16px;
+    display: block;
+    margin: 4px auto 0;
 }
 
-.faculty-page .avatar-head {
+/* Wave Overlay spanning entire canvas */
+.staff-hero-wave-overlay {
     position: absolute;
-    width: 28px;
-    height: 30px;
-    left: 22px;
-    top: 12px;
-    border-radius: 50%;
-    background: #9ba3a7;
-}
-
-.faculty-page .avatar-body {
-    position: absolute;
-    width: 50px;
-    height: 34px;
-    left: 11px;
-    bottom: 0;
-    border-radius: 50% 50% 8px 8px;
-    background: #9ba3a7;
-}
-
-.faculty-page .faculty-role {
-    display: inline-block;
-    padding: 4px 10px;
-    border-radius: 14px;
-    background: #fff0e8;
-    color: #ed7131;
-    font-size: 0.68rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.4px;
-    margin-bottom: 6px;
-}
-
-.faculty-page .faculty-role.principal {
-    background: #fff0e8;
-    color: #ed7131;
-}
-
-.faculty-page .faculty-role.green {
-    color: #20a66c;
-    background: #e9faf2;
-}
-
-.faculty-page .faculty-role.orange {
-    color: #f07d20;
-    background: #fff0df;
-}
-
-.faculty-page .faculty-role.blue {
-    color: #1685bd;
-    background: #e9f7ff;
-}
-
-.faculty-page .faculty-role.pink {
-    color: #d85185;
-    background: #fff0f5;
-}
-
-.faculty-page .faculty-card h4 {
-    margin: 6px 0 4px;
-    color: #164e7d;
-    font-size: 1.05rem;
-    font-weight: 800;
-}
-
-.faculty-page .faculty-card p {
-    margin: 0;
-    color: #758996;
-    font-size: 0.8rem;
-    font-weight: 600;
-}
-
-/* =========================================
-   3. JOIN OUR TEAM SECTION (FULL WIDTH)
-========================================= */
-
-.faculty-page .join-section {
-    position: relative;
+    top: 0;
+    left: 0;
     width: 100%;
-    min-height: 260px;
-    padding: clamp(45px, 5vw, 65px) 0 0;
-    background:
-        linear-gradient(
-            110deg,
-            #ffffff 0%,
-            #eefaff 100%
-        );
-    overflow: hidden;
-    border-top: 1px solid #e1edf3;
-}
-
-.faculty-page .join-section::before {
-    content: "";
-    position: absolute;
-    width: 440px;
-    height: 220px;
-    left: -120px;
-    bottom: -130px;
-    border: 1.5px dashed #6eb3dc;
-    border-radius: 50%;
+    height: 100%;
+    z-index: 2;
     pointer-events: none;
 }
 
-.faculty-page .join-section h2 {
-    color: #124b79;
-    font-size: clamp(1.9rem, 2.7vw, 2.5rem);
-    font-weight: 900;
-    margin: 6px 0 10px;
+.staff-hero-wave-overlay svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Left Content Panel */
+.staff-hero-left-panel {
+    position: relative;
+    z-index: 3;
+    width: 48%;
+    display: flex;
+    align-items: center;
+    padding: clamp(40px, 4.8vw, 65px) clamp(20px, 3.5vw, 40px) clamp(65px, 6.8vw, 95px) clamp(25px, 5.5vw, 85px);
+}
+
+.staff-hero-content-inner {
+    position: relative;
+    z-index: 4;
+    max-width: 530px;
+    width: 100%;
+}
+
+.staff-breadcrumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 14px;
+}
+
+.staff-breadcrumb .sep {
+    font-size: 0.65rem;
+    color: #94a3b8;
+}
+
+.staff-breadcrumb .active {
+    color: #0A2540;
+    font-weight: 700;
+}
+
+.staff-eyebrow {
+    display: inline-block;
+    color: #F37021;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.staff-hero-title {
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: clamp(1.95rem, 2.9vw, 2.75rem);
+    font-weight: 800;
+    color: #0A2540;
+    line-height: 1.15;
+    margin-bottom: 16px;
     letter-spacing: -0.4px;
 }
 
-.faculty-page .join-section h2 span {
-    color: #f58220;
+.staff-hero-desc {
+    font-size: clamp(0.88rem, 1.05vw, 0.96rem);
+    line-height: 1.62;
+    color: #556987;
+    margin: 0;
 }
 
-.faculty-page .join-section p {
-    max-width: 540px;
-    color: #728694;
-    font-size: clamp(0.92rem, 1.15vw, 1.02rem);
-    line-height: 1.6;
-    margin-bottom: 20px;
+/* =========================================
+   FLOATING STATS STRIP
+========================================= */
+
+.staff-stats-strip-wrapper {
+    position: relative;
+    z-index: 10;
+    margin-top: -38px;
+    padding: 0 clamp(16px, 3vw, 24px);
+    width: 100%;
 }
 
-.faculty-page .join-buttons {
+.staff-stats-strip {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #e1effa;
+    border-radius: 20px;
+    padding: 16px 28px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    box-shadow: 0 10px 32px rgba(8, 59, 122, 0.08);
+}
+
+.staff-stat-item {
     display: flex;
-    gap: 14px;
     align-items: center;
-    margin-bottom: clamp(30px, 4vw, 50px);
+    gap: 14px;
+    justify-content: center;
+    border-right: 1px solid #e1edf8;
+    padding: 4px 14px;
 }
 
-.faculty-page .btn-orange,
-.faculty-page .btn-outline {
+.staff-stat-item:last-child {
+    border-right: 0;
+}
+
+.staff-stat-icon {
+    font-size: 1.85rem;
+    color: #0284C7;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.staff-stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.staff-stat-num {
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: #083B7A;
+    line-height: 1.1;
+}
+
+.staff-stat-label {
+    font-size: 0.76rem;
+    font-weight: 600;
+    color: #64748b;
+    margin-top: 2px;
+    white-space: nowrap;
+}
+
+/* =========================================
+   2. EDUCATORS GRID SECTION (8 Cards)
+========================================= */
+
+.staff-grid-section {
+    position: relative;
+    padding: clamp(35px, 4vw, 50px) 0 clamp(12px, 1.8vw, 20px);
+    background: #ffffff;
+}
+
+/* Dot grid decorations */
+.staff-decor-dots-left,
+.staff-decor-dots-right {
+    position: absolute;
+    width: 80px;
+    height: 100px;
+    background-image: radial-gradient(#93c5fd 1.8px, transparent 1.8px);
+    background-size: 16px 16px;
+    opacity: 0.55;
+    pointer-events: none;
+}
+
+.staff-decor-dots-left {
+    top: 40px;
+    left: clamp(15px, 3.5vw, 48px);
+}
+
+.staff-decor-dots-right {
+    top: 40px;
+    right: clamp(15px, 3.5vw, 48px);
+}
+
+.staff-grid-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 clamp(16px, 2.5vw, 24px);
+    position: relative;
+    z-index: 2;
+}
+
+.staff-section-header {
+    text-align: center;
+    max-width: 740px;
+    margin: 0 auto clamp(22px, 2.8vw, 32px);
+}
+
+.staff-educators-eyebrow {
+    display: inline-block;
+    color: #0284c7;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.staff-section-title {
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: clamp(1.85rem, 2.6vw, 2.45rem);
+    font-weight: 800;
+    color: #083B7A;
+    line-height: 1.18;
+    margin-bottom: 12px;
+    letter-spacing: -0.4px;
+}
+
+.staff-section-desc {
+    font-size: clamp(0.88rem, 1.05vw, 0.96rem);
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* 8 Faculty Cards Grid */
+.staff-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(14px, 2vw, 22px);
+}
+
+.staff-card {
+    background: #ffffff;
+    border: 1px solid #e0effa;
+    border-radius: 18px;
+    padding: 24px 14px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 16px rgba(8, 59, 122, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.staff-card:hover {
+    transform: translateY(-4px);
+    border-color: #b9dcf2;
+    box-shadow: 0 10px 28px rgba(8, 59, 122, 0.1);
+}
+
+.staff-card-avatar-wrap {
+    margin-bottom: 12px;
+}
+
+.staff-card-avatar-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #e0f2fe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.staff-avatar-svg {
+    width: 85%;
+    height: 85%;
+    display: block;
+}
+
+/* Role Pills */
+.staff-role-pill {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin-bottom: 8px;
+}
+
+.role-orange {
+    background: #fff0e6;
+    color: #e65100;
+}
+
+.role-blue {
+    background: #e0f2fe;
+    color: #0284c7;
+}
+
+.role-purple {
+    background: #f3e8ff;
+    color: #7c3aed;
+}
+
+.role-rose {
+    background: #ffe4e6;
+    color: #e11d48;
+}
+
+.role-green {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.role-amber {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.role-cyan {
+    background: #e0f2fe;
+    color: #0284c7;
+}
+
+.role-pink {
+    background: #fce7f3;
+    color: #db2777;
+}
+
+.staff-card-name {
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #083B7A;
+    margin: 0 0 6px;
+    letter-spacing: -0.2px;
+}
+
+/* Qualification */
+.staff-card-qual {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.76rem;
+    font-weight: 600;
+}
+
+.qual-orange {
+    color: #e65100;
+}
+
+.qual-blue {
+    color: #0284c7;
+}
+
+.qual-purple {
+    color: #7c3aed;
+}
+
+.qual-rose {
+    color: #e11d48;
+}
+
+.qual-green {
+    color: #16a34a;
+}
+
+.qual-amber {
+    color: #d97706;
+}
+
+.qual-cyan {
+    color: #0284c7;
+}
+
+.qual-pink {
+    color: #db2777;
+}
+
+/* =========================================
+   3. JOIN OUR TEAM SECTION (MATCHING ABOUT-PAGE BANNER SPEC)
+========================================= */
+
+.staff-join-section {
+    position: relative;
+    width: 100%;
+    min-height: 250px;
+    overflow: hidden;
+    background: linear-gradient(110deg, #edf8ff 0%, #dceeff 52%, #c9e3fb 100%);
+    margin: 0;
+}
+
+/* Background curved shapes */
+.staff-join-section .shape-one {
+    position: absolute;
+    width: 66%;
+    height: 125%;
+    left: -13%;
+    top: -35%;
+    border-radius: 50%;
+    background: rgba(205, 227, 247, 0.62);
+    transform: rotate(-3deg);
+    pointer-events: none;
+}
+
+.staff-join-section .shape-two {
+    position: absolute;
+    width: 43%;
+    height: 170%;
+    right: 13%;
+    top: -55%;
+    border-radius: 50%;
+    background: rgba(182, 214, 245, 0.48);
+    pointer-events: none;
+}
+
+.staff-join-section .shape-three {
+    position: absolute;
+    width: 31%;
+    height: 145%;
+    right: -5%;
+    top: -42%;
+    border-radius: 50%;
+    background: rgba(238, 248, 255, 0.75);
+    pointer-events: none;
+}
+
+/* Dots Pattern */
+.staff-join-section .dot-pattern {
+    position: absolute;
+    left: 54%;
+    bottom: 18px;
+    width: 170px;
+    height: 90px;
+    opacity: 0.8;
+    background-image: radial-gradient(#2380c9 1.6px, transparent 1.7px);
+    background-size: 18px 18px;
+    mask-image: linear-gradient(to right, transparent, #000 35%, #000);
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 35%, #000);
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* Content */
+.staff-join-section .banner-content {
+    position: relative;
+    z-index: 5;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+}
+
+.staff-join-section .copy {
+    position: relative;
+    width: 58%;
+    padding: 28px 0 24px 5.5%;
+}
+
+.staff-join-flight-svg {
+    position: absolute;
+    left: 5.5%;
+    top: 6px;
+    width: 220px;
+    height: 150px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.staff-join-section .eyebrow {
+    margin-bottom: 5px;
+    color: #F37021;
+    font-size: 0.78rem;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    position: relative;
+    z-index: 2;
+}
+
+.staff-join-section .headline {
+    margin: 0;
+    color: #083B7A;
+    font-size: clamp(22px, 2.3vw, 36px);
+    line-height: 1.15;
+    font-weight: 800;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    position: relative;
+    z-index: 2;
+}
+
+.staff-join-section .subtext {
+    margin: 8px 0 16px;
+    color: #475569;
+    font-size: clamp(12px, 0.95vw, 15px);
+    line-height: 1.5;
+    max-width: 540px;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    position: relative;
+    z-index: 2;
+}
+
+.staff-join-section .buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+.staff-btn-orange {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #F37021;
+    color: #ffffff !important;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 10px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(243, 112, 33, 0.25);
+    transition: all 0.2s ease;
+}
+
+.staff-btn-orange:hover {
+    background: #e05d0e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(243, 112, 33, 0.35);
+}
+
+.staff-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #083B7A !important;
+    border: 1.5px solid #083B7A;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 9px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.staff-btn-outline:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Students Image */
+.staff-join-section .students {
+    position: absolute;
+    z-index: 4;
+    right: 0;
+    bottom: 0;
+    width: 48%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.staff-join-section .students img {
+    height: 100%;
+    max-height: 290px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: right bottom;
+    display: block;
+}
+
+/* =========================================
+   4. CAMPUS SHOWCASE STRIP (MATCHING ABOUT-PAGE SIDE GAP 5.5%)
+========================================= */
+
+.staff-campus-showcase-section {
+    padding: 24px 5.5% 40px 5.5%;
+    background: #ffffff;
+    width: 100%;
+}
+
+.staff-campus-showcase-card {
+    background: #ffffff;
+    border: 1.5px solid #d8ecff;
+    border-radius: 20px;
+    padding: 18px clamp(18px, 2.5vw, 28px);
+    display: grid;
+    grid-template-columns: 1.15fr 1.35fr auto;
+    gap: clamp(16px, 2vw, 26px);
+    align-items: center;
+    box-shadow: 0 8px 24px rgba(8, 59, 122, 0.05);
+    width: 100%;
+}
+
+.staff-showcase-left {
+    position: relative;
+    padding-left: 16px;
+}
+
+.staff-showcase-bar {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    bottom: 2px;
+    width: 4px;
+    background: #0284C7;
+    border-radius: 4px;
+}
+
+.staff-showcase-title {
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: clamp(1.15rem, 1.5vw, 1.45rem);
+    font-weight: 800;
+    color: #083B7A;
+    line-height: 1.2;
+    margin: 0 0 5px;
+    letter-spacing: -0.3px;
+}
+
+.staff-showcase-desc {
+    font-size: 0.78rem;
+    color: #64748b;
+    line-height: 1.42;
+    margin: 0;
+}
+
+.staff-showcase-gallery {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.staff-showcase-thumb {
+    flex: 1;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 68px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.staff-thumb-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+
+.staff-showcase-thumb:hover .staff-thumb-img {
+    transform: scale(1.06);
+}
+
+.staff-showcase-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 185px;
+}
+
+.staff-showcase-btn-orange {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 11px 24px;
-    border-radius: 28px;
-    font-size: 0.88rem;
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.2s ease;
-}
-
-.faculty-page .btn-orange {
+    background: #F37021;
     color: #ffffff;
-    background: #f58220;
-    box-shadow: 0 4px 14px rgba(245, 130, 32, 0.25);
-}
-
-.faculty-page .btn-orange:hover {
-    background: #e07212;
-    color: #ffffff;
-    transform: translateY(-2px);
-}
-
-.faculty-page .btn-outline {
-    color: #245d81;
-    background: #ffffff;
-    border: 1.5px solid #5d91af;
-}
-
-.faculty-page .btn-outline:hover {
-    background: #f0f8fc;
-    color: #104879;
-    transform: translateY(-2px);
-}
-
-.faculty-page .team-image {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 38%;
-    max-width: 360px;
-    height: auto;
-    max-height: 255px;
-    object-fit: contain;
-    object-position: right bottom;
-}
-
-/* =========================================
-   4. CAMPUS PREVIEW CTA (FULL WIDTH)
-========================================= */
-
-.faculty-page .campus-section {
-    width: 100%;
-    padding: clamp(24px, 3.5vw, 44px) 0 clamp(30px, 4vw, 50px);
-    background: #ffffff;
-}
-
-.faculty-page .campus-box {
-    min-height: 100px;
-    display: flex;
-    align-items: center;
-    gap: clamp(16px, 2.5vw, 32px);
-    border-top: 1px solid #e1edf3;
-    padding-top: clamp(20px, 2.8vw, 35px);
-}
-
-.faculty-page .campus-content {
-    flex: 0 0 38%;
-    padding-left: 16px;
-    border-left: 4px solid #2696dc;
-}
-
-.faculty-page .campus-content h3 {
-    margin: 0 0 6px;
-    color: #124b79;
-    font-size: clamp(1.2rem, 1.7vw, 1.6rem);
-    font-weight: 900;
-    line-height: 1.2;
-}
-
-.faculty-page .campus-content p {
-    margin: 0;
-    color: #7b8e9b;
-    font-size: clamp(0.8rem, 1vw, 0.88rem);
-    line-height: 1.5;
-}
-
-.faculty-page .campus-gallery {
-    flex: 1;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.faculty-page .campus-gallery img {
-    width: 32%;
-    height: 78px;
-    object-fit: cover;
-    border-radius: 8px;
-    transition: transform 0.2s ease;
-}
-
-.faculty-page .campus-gallery img:hover {
-    transform: scale(1.03);
-}
-
-.faculty-page .campus-buttons {
-    flex: 0 0 22%;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.faculty-page .campus-buttons a {
-    display: block;
-    text-align: center;
-    padding: 8px 14px;
-    border-radius: 20px;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
     font-size: 0.8rem;
     font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    box-shadow: 0 3px 10px rgba(243, 112, 33, 0.2);
+    transition: all 0.2s ease;
+}
+
+.staff-showcase-btn-orange:hover {
+    background: #e05d0e;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.staff-showcase-btn-video {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #ffffff;
+    color: #083B7A;
+    border: 1px solid #083B7A;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 20px;
     text-decoration: none;
     transition: all 0.2s ease;
 }
 
-.faculty-page .campus-book {
-    color: #ffffff;
-    background: #f58220;
-    box-shadow: 0 4px 12px rgba(245, 130, 32, 0.2);
+.staff-showcase-btn-video i {
+    color: #0284C7;
 }
 
-.faculty-page .campus-book:hover {
-    background: #e07212;
-    color: #ffffff;
+.staff-showcase-btn-video:hover {
+    background: #f0f7ff;
+    color: #083B7A;
     transform: translateY(-2px);
 }
 
-.faculty-page .campus-tour {
-    color: #245d81;
-    background: #ffffff;
-    border: 1px solid #548aa8;
-}
-
-.faculty-page .campus-tour:hover {
-    background: #f0f8fc;
-    color: #104879;
-    transform: translateY(-2px);
-}
-
-/* =========================================
-   TABLET RESPONSIVENESS (<= 991px)
-========================================= */
-
+/* Tablet Media Query */
 @media (max-width: 991px) {
-    .faculty-page .hero-section {
-        min-height: auto;
+    .staff-join-section .copy {
+        width: 64%;
+        padding-left: 4%;
     }
+    .staff-join-section .students {
+        width: 42%;
+    }
+    .staff-campus-showcase-card {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+    .staff-campus-showcase-section {
+        padding: 20px 4% 30px 4%;
+    }
+}
 
-    .faculty-page .hero-image-wrapper {
-        position: relative;
+/* Mobile Media Query */
+@media (max-width: 767px) {
+    .staff-join-section {
+        min-height: 330px;
+    }
+    .staff-join-section .banner-content {
+        min-height: 330px;
+        align-items: flex-start;
+    }
+    .staff-join-section .copy {
         width: 100%;
-        height: 260px;
-        right: auto;
-        top: auto;
-        order: -1;
+        padding: 25px 22px 15px;
     }
-
-    .faculty-page .hero-school-image {
-        height: 260px;
-        border-bottom-left-radius: 80px;
+    .staff-join-section .headline {
+        max-width: 62%;
+        font-size: 25px;
     }
-
-    .faculty-page .hero-content {
-        padding-top: 30px;
-        padding-bottom: 70px;
-        max-width: 100%;
+    .staff-join-section .subtext {
+        max-width: 58%;
+        font-size: 11px;
     }
-
-    .faculty-page .stats-container {
-        margin-top: -30px;
-        padding: 0 15px;
-    }
-
-    .faculty-page .team-image {
+    .staff-join-section .buttons {
         position: relative;
-        width: 60%;
-        max-width: 300px;
-        height: auto;
-        margin-top: 20px;
-        display: inline-block;
+        z-index: 10;
     }
-
-    .faculty-page .campus-box {
-        flex-wrap: wrap;
+    .staff-join-section .students {
+        width: 58%;
+        height: 48%;
+        bottom: 0;
     }
-
-    .faculty-page .campus-content {
-        flex: 0 0 100%;
-        margin-bottom: 12px;
-    }
-
-    .faculty-page .campus-gallery {
-        flex: 0 0 65%;
-    }
-
-    .faculty-page .campus-buttons {
-        flex: 0 0 30%;
+    .staff-join-section .students img {
+        width: 190%;
     }
 }
 
@@ -2434,133 +2582,70 @@
 ========================================= */
 
 @media (max-width: 576px) {
-    .faculty-page .hero-section {
-        min-height: auto;
+    .staff-hero-left-panel {
+        padding: 24px 16px 40px;
     }
 
-    .faculty-page .hero-image-wrapper {
-        height: 200px;
-    }
-
-    .faculty-page .hero-school-image {
-        height: 200px;
-        border-bottom-left-radius: 50px;
-    }
-
-    .faculty-page .hero-content {
-        padding: 20px 15px 50px;
-    }
-
-    .faculty-page .hero-content h1 {
+    .staff-hero-title {
         font-size: 1.85rem;
     }
 
-    .faculty-page .stats-container {
+    .staff-stats-strip-wrapper {
         margin-top: -20px;
         padding: 0 10px;
     }
 
-    .faculty-page .stats-box {
+    .staff-stats-strip {
+        padding: 12px 10px;
+    }
+
+    .staff-stat-num {
+        font-size: 1.15rem;
+    }
+
+    .staff-stat-label {
+        font-size: 0.7rem;
+    }
+
+    .staff-cards-grid {
         grid-template-columns: repeat(2, 1fr);
-        padding: 10px 6px;
-    }
-
-    .faculty-page .stat-item {
-        padding: 8px 6px;
-        border-bottom: 1px solid #e1edf3;
-    }
-
-    .faculty-page .stat-item:nth-child(2) {
-        border-right: 0;
-    }
-
-    .faculty-page .stat-item:nth-child(3),
-    .faculty-page .stat-item:nth-child(4) {
-        border-bottom: 0;
-    }
-
-    .faculty-page .stat-item:nth-child(4) {
-        border-right: 0;
-    }
-
-    .faculty-page .faculty-section {
-        padding: 40px 0 30px;
-    }
-
-    .faculty-page .section-heading h2 {
-        font-size: 1.65rem;
-    }
-
-    .faculty-page .faculty-card {
-        min-height: 170px;
-        padding: 16px 8px 14px;
-    }
-
-    .faculty-page .faculty-avatar {
-        width: 60px;
-        height: 60px;
-    }
-
-    .faculty-page .avatar-head {
-        width: 24px;
-        height: 26px;
-        left: 18px;
-        top: 9px;
-    }
-
-    .faculty-page .avatar-body {
-        width: 42px;
-        height: 28px;
-        left: 9px;
-    }
-
-    .faculty-page .faculty-card h4 {
-        font-size: 0.92rem;
-    }
-
-    .faculty-page .faculty-card p {
-        font-size: 0.72rem;
-    }
-
-    .faculty-page .join-section {
-        min-height: auto;
-        padding: 35px 0 0;
-    }
-
-    .faculty-page .team-image {
-        width: 80%;
-        max-width: 260px;
-        margin-top: 15px;
-    }
-
-    .faculty-page .join-buttons {
-        flex-direction: column;
-        align-items: stretch;
         gap: 10px;
     }
 
-    .faculty-page .btn-orange,
-    .faculty-page .btn-outline {
-        width: 100%;
-        text-align: center;
+    .staff-card {
+        padding: 16px 8px 14px;
     }
 
-    .faculty-page .campus-box {
+    .staff-card-avatar-circle {
+        width: 65px;
+        height: 65px;
+    }
+
+    .staff-card-name {
+        font-size: 0.95rem;
+    }
+
+    .staff-card-qual {
+        font-size: 0.7rem;
+    }
+
+    .staff-join-actions {
         flex-direction: column;
-        align-items: stretch;
-        gap: 16px;
-    }
-
-    .faculty-page .campus-gallery {
         width: 100%;
     }
 
-    .faculty-page .campus-buttons {
+    .staff-btn-orange,
+    .staff-btn-outline {
         width: 100%;
+        justify-content: center;
     }
 
-    .faculty-page .campus-gallery img {
-        height: 60px;
+    .staff-showcase-gallery {
+        gap: 6px;
+    }
+
+    .staff-showcase-thumb {
+        height: 56px;
     }
 }
 
