@@ -459,8 +459,6 @@ require_once __DIR__ . '/includes/header.php';
                 </div>
             </div>
             <div class="about-cta-students-wrap">
-                <div class="about-cta-dots-pattern" aria-hidden="true"></div>
-                <div class="about-cta-blob-backdrop" aria-hidden="true"></div>
                 <img src="assets/images/about-cta-students-final.jpg" alt="Advaita School Students" class="about-cta-students-img" loading="lazy">
             </div>
         </div>

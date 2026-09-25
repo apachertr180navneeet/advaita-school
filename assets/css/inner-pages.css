@@ -2539,36 +2539,9 @@
     justify-content: flex-end;
     align-items: flex-end;
     height: 100%;
-    min-height: 380px;
+    min-height: 360px;
     line-height: 0;
     overflow: hidden;
-}
-
-/* Dots pattern */
-.about-cta-dots-pattern {
-    position: absolute;
-    left: -30px;
-    top: 25%;
-    width: 140px;
-    height: 120px;
-    background-image: radial-gradient(#60a5fa 2.5px, transparent 2.5px);
-    background-size: 22px 22px;
-    opacity: 0.85;
-    pointer-events: none;
-    z-index: 1;
-}
-
-/* Soft sky-blue blob backdrop behind students */
-.about-cta-blob-backdrop {
-    position: absolute;
-    right: 0;
-    bottom: -10%;
-    width: 480px;
-    height: 480px;
-    background: radial-gradient(circle at 60% 40%, rgba(186, 230, 253, 0.75) 0%, rgba(186, 230, 253, 0.3) 50%, transparent 75%);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 1;
 }
 
 .about-cta-students-img {
@@ -2576,10 +2549,8 @@
     height: 100%;
     max-height: 380px;
     object-fit: cover;
-    object-position: left bottom;
+    object-position: right bottom;
     display: block;
-    position: relative;
-    z-index: 2;
 }
 
 /* --------------------------------------------------------------------------
