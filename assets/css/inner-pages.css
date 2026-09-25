@@ -4653,7 +4653,7 @@
 }
 
 /* ==========================================================================
-   7. PRINCIPAL'S DESK PAGE STYLES (100% FULL-WIDTH CANVASS & ACCURATE UI)
+   7. PRINCIPAL'S DESK PAGE STYLES (100% FULL-WIDTH CANVASS & COMPACT SPACING)
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -4668,7 +4668,7 @@
 
 .principal-hero-canvas {
     width: 100%;
-    min-height: 480px;
+    min-height: 380px;
     display: flex;
     position: relative;
     overflow: hidden;
@@ -4695,8 +4695,8 @@
 
 .principal-hero-script-tag {
     position: absolute;
-    top: 30px;
-    right: clamp(24px, 5vw, 70px);
+    top: 24px;
+    right: clamp(20px, 4vw, 60px);
     z-index: 3;
     display: flex;
     flex-direction: column;
@@ -4707,7 +4707,7 @@
 
 .principal-hero-script-tag .script-title {
     font-family: 'Fraunces', Georgia, cursive, serif;
-    font-size: clamp(1.2rem, 1.8vw, 1.55rem);
+    font-size: clamp(1.15rem, 1.6vw, 1.45rem);
     font-weight: 700;
     color: #083b7a;
     line-height: 1.15;
@@ -4716,9 +4716,9 @@
 }
 
 .principal-hero-script-tag .script-underline {
-    width: 110px;
-    height: 16px;
-    margin-top: 4px;
+    width: 100px;
+    height: 14px;
+    margin-top: 3px;
 }
 
 .principal-hero-left-panel {
@@ -4726,7 +4726,7 @@
     z-index: 2;
     width: 54%;
     background: #ffffff;
-    padding: clamp(40px, 5vw, 65px) clamp(24px, 5vw, 70px) clamp(40px, 5vw, 65px) clamp(20px, 5vw, 80px);
+    padding: clamp(26px, 3.2vw, 42px) clamp(20px, 4vw, 55px) clamp(26px, 3.2vw, 42px) clamp(20px, 4.5vw, 75px);
     display: flex;
     align-items: center;
 }
@@ -4737,7 +4737,7 @@
 }
 
 .principal-hero-breadcrumb {
-    margin-bottom: 14px;
+    margin-bottom: 10px;
 }
 
 .principal-breadcrumb-list {
@@ -4775,20 +4775,20 @@
 .principal-hero-eyebrow {
     display: inline-block;
     color: #ff6908;
-    font-size: 0.8125rem;
+    font-size: 0.78125rem;
     font-weight: 800;
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
 .principal-hero-title {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: clamp(2rem, 3.2vw, 3rem);
+    font-size: clamp(1.85rem, 2.8vw, 2.65rem);
     font-weight: 800;
     color: #06497d;
     line-height: 1.15;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
     letter-spacing: -0.5px;
 }
 
@@ -4801,7 +4801,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 8px 12px;
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     font-weight: 700;
     color: #0284c7;
 }
@@ -4835,7 +4835,7 @@
     position: relative;
     width: 100%;
     background: #ffffff;
-    padding: clamp(45px, 5.5vw, 75px) 0 clamp(40px, 5vw, 65px);
+    padding: clamp(24px, 3vw, 40px) 0 clamp(20px, 2.5vw, 32px);
     overflow: hidden;
 }
 
@@ -4851,8 +4851,8 @@
 .principal-message-dots-left,
 .principal-message-dots-right {
     position: absolute;
-    width: 100px;
-    height: 180px;
+    width: 90px;
+    height: 160px;
     background-image: radial-gradient(#93c5fd 2.2px, transparent 2.2px);
     background-size: 16px 16px;
     opacity: 0.75;
@@ -4861,19 +4861,19 @@
 }
 
 .principal-message-dots-left {
-    top: 40px;
+    top: 30px;
     left: clamp(10px, 2vw, 40px);
 }
 
 .principal-message-dots-right {
-    top: 40px;
+    top: 30px;
     right: clamp(10px, 2vw, 40px);
 }
 
 .principal-message-grid {
     display: grid;
-    grid-template-columns: 340px minmax(0, 1.45fr);
-    gap: clamp(32px, 5vw, 75px);
+    grid-template-columns: 330px minmax(0, 1.45fr);
+    gap: clamp(24px, 4vw, 55px);
     align-items: start;
     width: 100%;
 }
@@ -4889,7 +4889,7 @@
 .principal-profile-card-wrapper {
     position: relative;
     width: 100%;
-    max-width: 340px;
+    max-width: 330px;
 }
 
 .principal-profile-blue-tab {
@@ -4898,7 +4898,7 @@
     top: 40%;
     transform: translateY(-50%);
     width: 26px;
-    height: 120px;
+    height: 110px;
     background: #1688e8;
     border-radius: 0 14px 14px 0;
     z-index: 1;
@@ -4909,8 +4909,8 @@
     background: #f8fcff;
     border-radius: 24px;
     border: 1.5px solid #dcebfa;
-    box-shadow: 0 14px 40px rgba(12, 74, 113, 0.08);
-    padding: 24px 20px 20px;
+    box-shadow: 0 12px 36px rgba(12, 74, 113, 0.07);
+    padding: 22px 18px 18px;
     text-align: center;
     position: relative;
     z-index: 2;
@@ -4921,20 +4921,20 @@
     position: relative;
     background: #ffffff;
     border-radius: 18px;
-    padding: 28px 20px;
-    margin-bottom: 20px;
+    padding: 24px 18px;
+    margin-bottom: 16px;
     border: 1px solid #e0effa;
     box-shadow: 0 4px 14px rgba(12, 74, 113, 0.04);
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 190px;
+    min-height: 175px;
 }
 
 .vf-bracket {
     position: absolute;
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     border-color: #1688e8;
     pointer-events: none;
 }
@@ -4968,8 +4968,8 @@
 }
 
 .principal-avatar-wrap {
-    width: 100px;
-    height: 100px;
+    width: 95px;
+    height: 95px;
     border-radius: 50%;
     overflow: hidden;
     display: flex;
@@ -4985,25 +4985,25 @@
 
 .principal-name {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 800;
     color: #06497d;
-    margin: 0 0 4px;
+    margin: 0 0 3px;
 }
 
 .principal-role {
     color: #1688e8;
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     font-weight: 800;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     letter-spacing: 0.3px;
 }
 
 .principal-org {
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     color: #475569;
-    line-height: 1.4;
-    margin: 0 0 16px;
+    line-height: 1.35;
+    margin: 0 0 14px;
     font-weight: 600;
 }
 
@@ -5013,8 +5013,8 @@
     grid-template-columns: 1fr auto 1fr auto 1fr;
     align-items: center;
     background: #ffffff;
-    border-radius: 14px;
-    padding: 12px 10px;
+    border-radius: 12px;
+    padding: 10px 8px;
     border: 1px solid #e0effa;
 }
 
@@ -5025,14 +5025,14 @@
 .principal-stat-item .stat-top {
     display: block;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     font-weight: 800;
     color: #06497d;
 }
 
 .principal-stat-item .stat-bot {
     display: block;
-    font-size: 0.72rem;
+    font-size: 0.7rem;
     color: #64748b;
     font-weight: 600;
     margin-top: 1px;
@@ -5040,7 +5040,7 @@
 
 .principal-stat-divider {
     width: 1px;
-    height: 26px;
+    height: 24px;
     background: #e2e8f0;
 }
 
@@ -5053,20 +5053,20 @@
 .principal-message-eyebrow {
     display: inline-block;
     color: #1688e8;
-    font-size: 0.8125rem;
+    font-size: 0.78125rem;
     font-weight: 800;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
 .principal-message-title {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: clamp(2rem, 2.8vw, 2.55rem);
+    font-size: clamp(1.85rem, 2.6vw, 2.4rem);
     font-weight: 800;
     color: #06497d;
     line-height: 1.15;
-    margin-bottom: 16px;
+    margin-bottom: 14px;
     letter-spacing: -0.5px;
 }
 
@@ -5075,18 +5075,18 @@
 }
 
 .principal-salutation {
-    font-size: 0.96875rem;
+    font-size: 0.95rem;
     font-weight: 700;
     color: #06497d;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
     font-style: italic;
 }
 
 .principal-message-content p {
-    font-size: clamp(0.925rem, 1vw, 0.985rem);
-    line-height: 1.72;
+    font-size: clamp(0.9rem, 0.98vw, 0.965rem);
+    line-height: 1.68;
     color: #475569;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
 }
 
 .principal-message-content .text-navy {
@@ -5095,19 +5095,19 @@
 }
 
 .principal-quote-box {
-    margin: 18px 0;
+    margin: 14px 0;
     background: #eaf6ff;
     border-left: 4.5px solid #1688e8;
     border-radius: 0 14px 14px 0;
-    padding: 14px 20px;
+    padding: 12px 18px;
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 14px;
 }
 
 .principal-quote-icon {
     color: #1688e8;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     line-height: 1;
     font-family: Georgia, serif;
     font-weight: 800;
@@ -5118,28 +5118,28 @@
     color: #1e3a5f;
     font-family: Georgia, serif;
     font-style: italic;
-    font-size: 0.94rem;
-    line-height: 1.55;
+    font-size: 0.92rem;
+    line-height: 1.5;
     margin: 0;
     font-weight: 500;
 }
 
 .principal-signature-block {
-    margin-top: 20px;
-    padding-top: 14px;
+    margin-top: 14px;
+    padding-top: 10px;
     border-top: 1.5px solid #f1f5f9;
 }
 
 .principal-signature-name {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 1.05rem;
+    font-size: 1.02rem;
     font-weight: 800;
     color: #06497d;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
 }
 
 .principal-signature-role {
-    font-size: 0.82rem;
+    font-size: 0.8rem;
     color: #64748b;
     font-weight: 500;
 }
@@ -5151,38 +5151,38 @@
     position: relative;
     width: 100%;
     background: #ffffff;
-    padding: clamp(35px, 4.5vw, 60px) 0;
+    padding: clamp(16px, 2vw, 28px) 0;
 }
 
 .principal-commitment-container {
     width: 100%;
     max-width: 100%;
     margin: 0;
-    padding: clamp(36px, 4.5vw, 55px) clamp(24px, 4.5vw, 70px);
+    padding: clamp(24px, 3vw, 38px) clamp(20px, 3.5vw, 50px);
     background: linear-gradient(180deg, #f8fcff 0%, #edf8ff 100%);
-    border-radius: 28px;
+    border-radius: 24px;
     border: 1.5px solid #e0effa;
-    box-shadow: 0 14px 40px rgba(12, 74, 113, 0.05);
+    box-shadow: 0 10px 30px rgba(12, 74, 113, 0.04);
 }
 
 .principal-commitment-header {
     text-align: center;
-    margin-bottom: clamp(28px, 3.8vw, 42px);
+    margin-bottom: clamp(18px, 2.2vw, 28px);
 }
 
 .principal-commitment-eyebrow {
     display: inline-block;
     color: #1688e8;
-    font-size: 0.8125rem;
+    font-size: 0.78125rem;
     font-weight: 800;
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
 .principal-commitment-title {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: clamp(1.8rem, 2.6vw, 2.35rem);
+    font-size: clamp(1.7rem, 2.4vw, 2.15rem);
     font-weight: 800;
     color: #06497d;
     margin: 0;
@@ -5196,16 +5196,16 @@
 .principal-commitment-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: clamp(16px, 1.8vw, 24px);
+    gap: clamp(14px, 1.6vw, 22px);
     width: 100%;
 }
 
 .principal-commitment-card {
     background: #ffffff;
-    border-radius: 20px;
-    padding: 26px 22px;
+    border-radius: 18px;
+    padding: 22px 18px;
     border: 1px solid #e5f1fb;
-    box-shadow: 0 8px 24px rgba(12, 74, 113, 0.04);
+    box-shadow: 0 6px 20px rgba(12, 74, 113, 0.04);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -5213,20 +5213,20 @@
 }
 
 .principal-commitment-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 14px 34px rgba(12, 74, 113, 0.09);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(12, 74, 113, 0.08);
     border-color: #bae6fd;
 }
 
 .principal-commitment-icon {
-    width: 50px;
-    height: 50px;
+    width: 46px;
+    height: 46px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.35rem;
-    margin-bottom: 16px;
+    font-size: 1.25rem;
+    margin-bottom: 14px;
     flex-shrink: 0;
     transition: transform 0.25s ease;
 }
@@ -5257,22 +5257,22 @@
 
 .principal-commitment-card-title {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 1.1rem;
+    font-size: 1.05rem;
     font-weight: 800;
     color: #06497d;
-    margin-bottom: 8px;
+    margin-bottom: 6px;
     line-height: 1.25;
 }
 
 .principal-commitment-desc {
-    font-size: 0.86rem;
-    line-height: 1.55;
+    font-size: 0.84rem;
+    line-height: 1.5;
     color: #4a6b82;
     margin: 0;
 }
 
 /* --------------------------------------------------------------------------
-   7.4 CAMPUS VISIT CTA BANNER
+   7.4 CAMPUS VISIT CTA BANNER (PREMIUM BALANCED AESTHETICS)
    -------------------------------------------------------------------------- */
 .principal-cta-banner-section {
     width: 100%;
@@ -5284,17 +5284,18 @@
 
 .principal-cta-banner-full {
     width: 100%;
-    background: linear-gradient(135deg, #f8fcff 0%, #edf7ff 50%, #f4faff 100%);
+    background: linear-gradient(135deg, #f7fbff 0%, #edf7ff 50%, #f4faff 100%);
     border-top: 1.5px solid #e0effa;
     display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
     align-items: stretch;
     position: relative;
     min-height: 380px;
+    overflow: hidden;
 }
 
 .principal-cta-left-content {
-    padding: clamp(36px, 4.5vw, 60px) clamp(24px, 4vw, 50px) clamp(36px, 4.5vw, 60px) clamp(24px, 5vw, 90px);
+    padding: clamp(36px, 4.5vw, 60px) clamp(24px, 4vw, 55px) clamp(36px, 4.5vw, 60px) clamp(24px, 5.5vw, 95px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -5302,22 +5303,42 @@
     z-index: 2;
 }
 
+/* Background Dot Matrix Accent */
+.principal-cta-dots-bg {
+    position: absolute;
+    top: 25px;
+    left: 35px;
+    width: 120px;
+    height: 160px;
+    background-image: radial-gradient(#93c5fd 2.2px, transparent 2.2px);
+    background-size: 16px 16px;
+    opacity: 0.65;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.principal-cta-text-wrapper {
+    position: relative;
+    z-index: 2;
+    max-width: 580px;
+}
+
 .principal-cta-eyebrow {
     display: inline-block;
     color: #1688e8;
-    font-size: 0.78125rem;
+    font-size: 0.8125rem;
     font-weight: 800;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 12px;
 }
 
 .principal-cta-title {
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: clamp(2rem, 2.9vw, 2.7rem);
+    font-size: clamp(2.1rem, 3.1vw, 2.85rem);
     font-weight: 800;
     color: #06497d;
-    line-height: 1.14;
+    line-height: 1.15;
     margin-bottom: 14px;
     letter-spacing: -0.5px;
 }
@@ -5327,32 +5348,39 @@
 }
 
 .principal-cta-desc {
-    font-size: clamp(0.9375rem, 1.05vw, 1.03125rem);
+    font-size: clamp(0.9375rem, 1.05vw, 1.05rem);
     color: #426b86;
-    line-height: 1.6;
+    line-height: 1.65;
     margin-bottom: 24px;
-    max-width: 520px;
+    max-width: 540px;
 }
 
 .principal-cta-features {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 10px 18px;
+    gap: 10px 14px;
 }
 
 .principal-feature-badge {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    font-size: 0.85rem;
+    gap: 9px;
+    font-size: 0.875rem;
     font-weight: 700;
     color: #06497d;
     background: #ffffff;
-    padding: 8px 16px;
-    border-radius: 20px;
-    border: 1px solid #dcebfa;
-    box-shadow: 0 4px 12px rgba(12, 74, 113, 0.04);
+    padding: 9px 18px;
+    border-radius: 25px;
+    border: 1.5px solid #dcebfa;
+    box-shadow: 0 4px 16px rgba(12, 74, 113, 0.05);
+    transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+}
+
+.principal-feature-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(12, 74, 113, 0.1);
+    border-color: #93c5fd;
 }
 
 .principal-feature-badge i {
@@ -5384,13 +5412,43 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: center 25%;
     display: block;
     transition: transform 0.4s ease;
 }
 
 .principal-cta-banner-full:hover .principal-cta-arch-img {
-    transform: scale(1.02);
+    transform: scale(1.03);
+}
+
+/* Floating Sky Badge in Top Right of Campus Visual */
+.principal-cta-badge {
+    position: absolute;
+    top: 24px;
+    right: clamp(20px, 3.5vw, 45px);
+    z-index: 3;
+    text-align: right;
+    pointer-events: none;
+}
+
+.principal-cta-badge .cta-badge-text {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.78125rem;
+    font-weight: 800;
+    color: #06497d;
+    letter-spacing: 1px;
+    line-height: 1.25;
+    display: block;
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.9);
+}
+
+.principal-cta-badge .cta-badge-line {
+    width: 65px;
+    height: 3.5px;
+    background: #ff6908;
+    border-radius: 3px;
+    margin-top: 4px;
+    margin-left: auto;
 }
 
 .principal-cta-actions-card {
@@ -5399,7 +5457,7 @@
     left: 32px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 11px;
     z-index: 3;
 }
 
@@ -5407,22 +5465,22 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: #ff6908;
+    background: linear-gradient(135deg, #ff6908 0%, #e05800 100%);
     color: #ffffff;
     font-size: 0.9375rem;
     font-weight: 700;
-    padding: 12px 24px;
+    padding: 13px 26px;
     border-radius: 30px;
     text-decoration: none;
-    box-shadow: 0 6px 20px rgba(255, 105, 8, 0.35);
+    box-shadow: 0 6px 22px rgba(255, 105, 8, 0.38);
     transition: all 0.25s ease;
     border: none;
 }
 
 .principal-btn-orange:hover {
-    background: #e05800;
+    background: linear-gradient(135deg, #e05800 0%, #c44c00 100%);
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(255, 105, 8, 0.45);
+    box-shadow: 0 10px 28px rgba(255, 105, 8, 0.48);
     color: #ffffff;
 }
 
@@ -5430,15 +5488,16 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.96);
     color: #06497d;
     font-size: 0.9375rem;
     font-weight: 700;
-    padding: 11px 24px;
+    padding: 11.5px 26px;
     border-radius: 30px;
     text-decoration: none;
     border: 1.5px solid #06497d;
     backdrop-filter: blur(8px);
+    box-shadow: 0 4px 16px rgba(6, 73, 125, 0.12);
     transition: all 0.25s ease;
 }
 
@@ -5446,6 +5505,7 @@
     background: #06497d;
     color: #ffffff;
     transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(6, 73, 125, 0.22);
 }
 
 /* --------------------------------------------------------------------------
@@ -5454,11 +5514,11 @@
 @media (max-width: 1100px) {
     .principal-commitment-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        gap: 16px;
     }
     .principal-message-grid {
         grid-template-columns: 300px 1fr;
-        gap: 30px;
+        gap: 28px;
     }
     .principal-cta-banner-full {
         grid-template-columns: 1.15fr 1fr;
@@ -5472,7 +5532,7 @@
     }
     .principal-hero-left-panel {
         width: 100%;
-        padding: 40px 24px;
+        padding: 32px 20px;
     }
     .principal-hero-wave-edge {
         display: none;
@@ -5480,14 +5540,14 @@
     .principal-hero-bg-visual {
         position: relative;
         width: 100%;
-        height: 280px;
+        height: 240px;
     }
     .principal-message-grid {
         grid-template-columns: 1fr;
-        gap: 32px;
+        gap: 26px;
     }
     .principal-profile-col {
-        max-width: 340px;
+        max-width: 330px;
         margin: 0 auto;
         width: 100%;
     }
@@ -5495,13 +5555,13 @@
         grid-template-columns: 1fr;
     }
     .principal-cta-left-content {
-        padding: 40px 24px 30px;
+        padding: 36px 20px 28px;
     }
     .principal-cta-arch-wrapper {
         border-left: none;
         border-top: 6px solid #1688e8;
         border-radius: 0;
-        height: 300px;
+        height: 280px;
         min-height: auto;
     }
     .principal-cta-actions-card {

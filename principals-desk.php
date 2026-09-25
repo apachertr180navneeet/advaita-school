@@ -254,28 +254,33 @@ require_once __DIR__ . '/includes/header.php';
         <div class="principal-cta-banner-full">
             <!-- Left Content Area -->
             <div class="principal-cta-left-content">
-                <span class="principal-cta-eyebrow">— BEGIN YOUR CHILD'S JOURNEY —</span>
-                <h2 class="principal-cta-title">
-                    Come see the school<br>
-                    for <span>yourself.</span>
-                </h2>
-                <p class="principal-cta-desc">
-                    We welcome you to visit the campus, meet our teachers, and see for yourself the environment in which your child will grow.
-                </p>
+                <!-- Background Dot Matrix Accent -->
+                <div class="principal-cta-dots-bg" aria-hidden="true"></div>
 
-                <!-- 3 Feature Badges -->
-                <div class="principal-cta-features">
-                    <div class="principal-feature-badge">
-                        <i class="fa-solid fa-compass"></i>
-                        <span>Interactive Campus Tour</span>
-                    </div>
-                    <div class="principal-feature-badge">
-                        <i class="fa-solid fa-chalkboard-user"></i>
-                        <span>Meet Our Faculty</span>
-                    </div>
-                    <div class="principal-feature-badge">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span>Experience Our Programs</span>
+                <div class="principal-cta-text-wrapper">
+                    <span class="principal-cta-eyebrow">— BEGIN YOUR CHILD'S JOURNEY —</span>
+                    <h2 class="principal-cta-title">
+                        Come see the school<br>
+                        for <span>yourself.</span>
+                    </h2>
+                    <p class="principal-cta-desc">
+                        We welcome you to visit the campus, meet our teachers, and see for yourself the environment in which your child will grow.
+                    </p>
+
+                    <!-- 3 Feature Badges -->
+                    <div class="principal-cta-features">
+                        <div class="principal-feature-badge">
+                            <i class="fa-solid fa-compass"></i>
+                            <span>Interactive Campus Tour</span>
+                        </div>
+                        <div class="principal-feature-badge">
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                            <span>Meet Our Faculty</span>
+                        </div>
+                        <div class="principal-feature-badge">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <span>Experience Our Programs</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -285,6 +290,12 @@ require_once __DIR__ . '/includes/header.php';
                 <div class="principal-cta-arch-wrapper">
                     <img src="assets/images/campus-visit-building.jpg" alt="Advaita School Campus" class="principal-cta-arch-img" loading="lazy">
                     
+                    <!-- Floating Sky Badge in Top-Right -->
+                    <div class="principal-cta-badge">
+                        <span class="cta-badge-text">NURTURING<br>BRIGHTER<br>TOMORROWS</span>
+                        <div class="cta-badge-line" aria-hidden="true"></div>
+                    </div>
+
                     <!-- Floating CTA Actions Card -->
                     <div class="principal-cta-actions-card">
                         <a href="index.php#admissions" class="principal-btn-orange">
