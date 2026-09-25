@@ -82,7 +82,7 @@ require_once __DIR__ . '/includes/header.php';
 
         <!-- 4 Feature Cards Strip -->
         <div class="about-features-strip">
-            <div class="container-fluid about-section-container">
+            <div class="about-strip-container">
                 <div class="about-strip-grid">
                     <!-- Strip Card 1 -->
                     <div class="about-strip-card">
@@ -137,21 +137,21 @@ require_once __DIR__ . '/includes/header.php';
          2. BUILT ON VALUES: Driven by Academic Excellence
          ========================================================================= -->
     <section class="about-story-section">
-        <div class="container-fluid about-section-container">
+        <div class="about-section-container">
             <div class="about-story-grid">
                 <!-- Left: Student Visual with Floating Badge -->
                 <div class="about-story-visual-wrap">
                     <div class="about-story-frame">
-                        <img src="assets/images/about-story-student.jpg" alt="Student of Advaita School of Excellence" class="about-story-img" loading="lazy">
+                        <img src="assets/images/about-philosophy-student.jpg" alt="Student of Advaita School of Excellence" class="about-story-img" loading="lazy">
                         <!-- Floating Bottom Badge -->
                         <div class="about-story-floating-badge">
                             <div class="story-badge-trophy">
                                 <i class="fa-solid fa-trophy"></i>
                             </div>
                             <div class="story-badge-text">
-                                <span class="story-badge-title">Best CBSE</span>
+                                <span class="story-badge-bold">Best CBSE</span>
                                 <span class="story-badge-bold">Result Producer</span>
-                                <span class="story-badge-sub">Year after Year!</span>
+                                <span class="story-badge-sub">Year after Year</span>
                             </div>
                             <div class="story-badge-arrow">
                                 <i class="fa-solid fa-chevron-right"></i>
@@ -180,7 +180,7 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="about-stats-row">
                         <div class="about-stat-item">
                             <div class="stat-icon-square">
-                                <i class="fa-solid fa-user-graduate"></i>
+                                <i class="fa-solid fa-graduation-cap"></i>
                             </div>
                             <div class="stat-meta">
                                 <span class="stat-num">5000+</span>
@@ -188,7 +188,10 @@ require_once __DIR__ . '/includes/header.php';
                             </div>
                         </div>
 
-                        <div class="about-stat-item stat-item-highlight">
+                        <div class="about-stat-item">
+                            <div class="stat-icon-square stat-icon-badge">
+                                <span class="stat-badge-inner">25+</span>
+                            </div>
                             <div class="stat-meta">
                                 <span class="stat-num">25+</span>
                                 <span class="stat-lbl">Years of Academic Legacy</span>
@@ -197,7 +200,7 @@ require_once __DIR__ . '/includes/header.php';
 
                         <div class="about-stat-item">
                             <div class="stat-icon-square">
-                                <i class="fa-solid fa-heart-pulse"></i>
+                                <i class="fa-regular fa-face-smile"></i>
                             </div>
                             <div class="stat-meta">
                                 <span class="stat-num">95%</span>
@@ -214,8 +217,8 @@ require_once __DIR__ . '/includes/header.php';
          3. VISION, MISSION & VALUES (3 Distinct Cards Container)
          ========================================================================= -->
     <section id="vision-mission" class="about-vmv-section">
-        <div class="container-fluid about-section-container">
-            <div class="about-vmv-box">
+        <div class="about-section-container">
+            <div class="about-vmv-grid">
                 <!-- Card 1: Vision -->
                 <div class="about-vmv-card">
                     <div class="about-vmv-icon-ring">
@@ -245,11 +248,11 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
                     <div class="about-vmv-body">
                         <h3 class="about-vmv-title">Our Values</h3>
-                        <p class="about-vmv-desc">
-                            <span>Excellence &nbsp;|&nbsp; Integrity</span><br>
-                            <span>Empathy &nbsp;|&nbsp; Discipline</span><br>
-                            <span>Curiosity &nbsp;|&nbsp; Lifelong Learning</span>
-                        </p>
+                        <div class="about-vmv-values-list">
+                            <div class="values-pair"><span>Excellence</span> <span class="v-pipe">|</span> <span>Integrity</span></div>
+                            <div class="values-pair"><span>Empathy</span> <span class="v-pipe">|</span> <span>Discipline</span></div>
+                            <div class="values-pair"><span>Curiosity</span> <span class="v-pipe">|</span> <span>Lifelong Learning</span></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -260,7 +263,7 @@ require_once __DIR__ . '/includes/header.php';
          4. EDUCATION FOR LIFE, NOT JUST EXAMS
          ========================================================================= -->
     <section class="about-philosophy-section">
-        <div class="container-fluid about-section-container">
+        <div class="about-section-container">
             <div class="about-philosophy-grid">
                 <!-- Left: Content -->
                 <div class="about-philosophy-content">
@@ -291,19 +294,19 @@ require_once __DIR__ . '/includes/header.php';
                             <span class="pill-item-text">Integrated IIT-JEE Foundation</span>
                         </div>
                         <div class="philosophy-pill-item">
-                            <span class="pill-badge-icon badge-blue"><i class="fa-solid fa-shield-halved"></i></span>
+                            <span class="pill-badge-icon badge-navy"><i class="fa-solid fa-check"></i></span>
                             <span class="pill-item-text">Preparation for Competitive Exams</span>
                         </div>
                         <div class="philosophy-pill-item">
-                            <span class="pill-badge-icon badge-orange"><i class="fa-solid fa-bullseye"></i></span>
+                            <span class="pill-badge-icon badge-orange"><i class="fa-solid fa-circle-dot"></i></span>
                             <span class="pill-item-text">Beyond Text Learning</span>
                         </div>
                         <div class="philosophy-pill-item">
-                            <span class="pill-badge-icon badge-orange"><i class="fa-solid fa-bullseye"></i></span>
+                            <span class="pill-badge-icon badge-orange"><i class="fa-solid fa-circle-dot"></i></span>
                             <span class="pill-item-text">Holistic Student Development</span>
                         </div>
                         <div class="philosophy-pill-item">
-                            <span class="pill-badge-icon badge-orange"><i class="fa-solid fa-bullseye"></i></span>
+                            <span class="pill-badge-icon badge-orange"><i class="fa-solid fa-circle-dot"></i></span>
                             <span class="pill-item-text">Future-Ready Skills</span>
                         </div>
                     </div>
@@ -316,7 +319,7 @@ require_once __DIR__ . '/includes/header.php';
          5. WHAT MAKES ADVAITA UNIQUE (6 Cards)
          ========================================================================= -->
     <section class="about-why-choose">
-        <div class="container-fluid about-section-container">
+        <div class="about-section-container">
             <div class="about-section-header text-center">
                 <span class="about-eyebrow">— WHAT SETS US APART —</span>
                 <h2 class="about-section-heading">
@@ -389,7 +392,7 @@ require_once __DIR__ . '/includes/header.php';
          6. CAMPUS SHOWCASE: A Space to Learn, Explore and Excel
          ========================================================================= -->
     <section class="about-campus-showcase">
-        <div class="container-fluid about-section-container">
+        <div class="about-section-container">
             <div class="about-campus-grid">
                 <!-- Left: Content -->
                 <div class="about-campus-content">

@@ -1406,10 +1406,10 @@
 }
 
 .about-section-container {
-    max-width: 1320px;
     width: 100%;
+    max-width: 100%;
     margin: 0 auto;
-    padding: 0 clamp(20px, 3.5vw, 40px);
+    padding: 0 clamp(20px, 4vw, 70px);
 }
 
 /* Common Typography & Highlights */
@@ -1676,51 +1676,60 @@
 }
 
 /* --------------------------------------------------------------------------
-   Hero Features 4-Cards Strip
+   Hero Features 4-Cards Strip (Full Width Layout)
    -------------------------------------------------------------------------- */
 .about-features-strip {
     margin-top: 0;
-    padding: clamp(24px, 3vw, 36px) 0 clamp(20px, 2.5vw, 32px);
+    padding: clamp(20px, 2.5vw, 32px) 0 clamp(24px, 3vw, 38px);
     background: #ffffff;
     position: relative;
     z-index: 5;
+    width: 100%;
+}
+
+.about-strip-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 clamp(20px, 4vw, 70px);
 }
 
 .about-strip-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: clamp(16px, 2vw, 24px);
+    gap: clamp(16px, 1.8vw, 24px);
+    width: 100%;
 }
 
 .about-strip-card {
     background: #ffffff;
-    border: 1px solid #edf2f7;
-    border-radius: 20px;
-    padding: 22px 18px;
+    border: 1px solid #e2e8f0;
+    border-radius: 22px;
+    padding: clamp(20px, 2vw, 26px) clamp(16px, 1.8vw, 22px);
     display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    box-shadow: 0 4px 18px rgba(8, 59, 122, 0.04);
+    align-items: center;
+    gap: 18px;
+    box-shadow: 0 8px 24px rgba(8, 59, 122, 0.04);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .about-strip-card:hover {
     transform: translateY(-5px);
-    border-color: #e2e8f0;
-    box-shadow: 0 14px 32px rgba(8, 59, 122, 0.09);
+    border-color: #cbd5e1;
+    box-shadow: 0 16px 36px rgba(8, 59, 122, 0.09);
 }
 
 .strip-icon-box {
-    width: 48px;
-    height: 48px;
-    border-radius: 14px;
+    width: 54px;
+    height: 54px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     color: #ffffff;
     flex-shrink: 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease;
 }
 
@@ -1729,11 +1738,11 @@
 }
 
 .strip-icon-box.icon-blue {
-    background: #3b82f6;
+    background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
 }
 
 .strip-icon-box.icon-orange {
-    background: #F37021;
+    background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
 }
 
 .strip-card-body {
@@ -1741,19 +1750,20 @@
 }
 
 .strip-card-title {
-    font-size: 1.0625rem;
+    font-size: 1.125rem;
     font-weight: 800;
     color: #083B7A;
     margin: 0;
-    line-height: 1.2;
+    line-height: 1.15;
 }
 
 .strip-card-subtitle {
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
     font-weight: 700;
     color: #083B7A;
     display: block;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
+    line-height: 1.25;
 }
 
 .strip-card-desc {
@@ -1767,65 +1777,69 @@
    Section 2: Built on Values. Driven by Academic Excellence.
    -------------------------------------------------------------------------- */
 .about-story-section {
-    padding: clamp(55px, 6.5vw, 90px) 0;
+    padding: clamp(50px, 5.5vw, 80px) 0 clamp(20px, 2.5vw, 35px);
     background: #ffffff;
+    width: 100%;
 }
 
 .about-story-grid {
     display: grid;
-    grid-template-columns: 0.95fr 1.05fr;
-    gap: clamp(30px, 4.5vw, 65px);
+    grid-template-columns: minmax(320px, 460px) 1fr;
+    gap: clamp(32px, 5vw, 70px);
     align-items: center;
+    width: 100%;
 }
 
 .about-story-visual-wrap {
     position: relative;
-    display: flex;
-    justify-content: center;
+    width: 100%;
 }
 
 .about-story-frame {
     position: relative;
     width: 100%;
-    max-width: 440px;
     border-radius: 28px;
+    overflow: visible;
 }
 
 .about-story-img {
     width: 100%;
-    height: 420px;
+    height: clamp(380px, 35vw, 450px);
     border-radius: 28px;
     object-fit: cover;
-    object-position: center 20%;
+    object-position: center 15%;
     display: block;
-    box-shadow: 0 18px 45px rgba(8, 59, 122, 0.11);
+    box-shadow: 0 16px 40px rgba(8, 59, 122, 0.10);
     transition: transform 0.5s ease;
 }
 
 .about-story-frame:hover .about-story-img {
-    transform: scale(1.02);
+    transform: scale(1.015);
 }
 
 .about-story-floating-badge {
     position: absolute;
-    bottom: 20px;
-    left: -18px;
-    z-index: 3;
-    background: #002752;
+    bottom: 22px;
+    left: 18px;
+    z-index: 4;
+    background: #083B7A;
     color: #ffffff;
-    padding: 12px 18px;
-    border-radius: 18px;
-    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.28);
+    padding: 14px 18px;
+    border-radius: 20px;
+    box-shadow: 0 14px 32px rgba(8, 59, 122, 0.35);
     display: flex;
     align-items: center;
     gap: 14px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.14);
 }
 
 .story-badge-trophy {
     color: #fdbb2d;
-    font-size: 1.5rem;
+    font-size: 1.85rem;
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .story-badge-text {
@@ -1833,43 +1847,39 @@
     flex-direction: column;
 }
 
-.story-badge-title {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: rgba(255, 255, 255, 0.8);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-}
-
 .story-badge-bold {
-    font-size: 0.9375rem;
+    font-size: 1rem;
     font-weight: 800;
     color: #ffffff;
     line-height: 1.2;
+    letter-spacing: -0.2px;
 }
 
 .story-badge-sub {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: #fdbb2d;
+    font-size: 0.78125rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
     margin-top: 2px;
 }
 
 .story-badge-arrow {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.15);
+    background: #ffffff;
+    color: #083B7A !important;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.75rem;
-    color: #ffffff;
+    font-size: 0.8125rem;
+    font-weight: 700;
     flex-shrink: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin-left: 4px;
 }
 
 .about-story-content {
-    max-width: 580px;
+    max-width: 100%;
 }
 
 .about-story-title {
@@ -1882,7 +1892,7 @@
 }
 
 .about-story-desc {
-    font-size: 1rem;
+    font-size: clamp(0.9375rem, 1.05vw, 1rem);
     color: #4b5563;
     line-height: 1.72;
     margin-bottom: 16px;
@@ -1890,41 +1900,48 @@
 
 .about-stats-row {
     display: flex;
-    align-items: stretch;
-    gap: 14px;
+    align-items: center;
+    justify-content: flex-start;
+    gap: clamp(16px, 3vw, 42px);
     margin-top: 30px;
     flex-wrap: wrap;
 }
 
 .about-stat-item {
-    flex: 1;
-    min-width: 140px;
-    background: #f8fafc;
-    border: 1px solid #edf2f7;
-    border-radius: 16px;
-    padding: 16px 14px;
     display: flex;
     align-items: center;
     gap: 12px;
-    box-shadow: 0 4px 14px rgba(8, 59, 122, 0.02);
     transition: transform 0.25s ease;
 }
 
 .about-stat-item:hover {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
 }
 
 .stat-icon-square {
-    width: 42px;
-    height: 42px;
-    border-radius: 12px;
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
     background: #F37021;
     color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     flex-shrink: 0;
+    box-shadow: 0 6px 16px rgba(243, 112, 33, 0.28);
+    transition: transform 0.25s ease;
+}
+
+.about-stat-item:hover .stat-icon-square {
+    transform: scale(1.06);
+}
+
+.stat-icon-badge .stat-badge-inner {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -0.5px;
 }
 
 .stat-meta {
@@ -1940,74 +1957,67 @@
 }
 
 .stat-lbl {
-    font-size: 0.75rem;
+    font-size: 0.8125rem;
     font-weight: 600;
     color: #64748b;
     line-height: 1.3;
     margin-top: 2px;
 }
 
-.stat-item-highlight {
-    background: #F37021;
-    border-color: #F37021;
-    color: #ffffff;
-    justify-content: center;
-    text-align: center;
-    box-shadow: 0 6px 18px rgba(243, 112, 33, 0.28);
-}
-
-.stat-item-highlight .stat-num {
-    color: #ffffff;
-}
-
-.stat-item-highlight .stat-lbl {
-    color: rgba(255, 255, 255, 0.92);
-}
-
 /* --------------------------------------------------------------------------
-   Section 3: Vision, Mission & Values
+   Section 3: Vision, Mission & Values (3 Full-Width Side-by-Side Cards)
    -------------------------------------------------------------------------- */
 .about-vmv-section {
-    padding: 10px 0 25px;
+    padding: clamp(15px, 2vw, 25px) 0 clamp(45px, 5vw, 75px);
     background: #ffffff;
+    width: 100%;
 }
 
-.about-vmv-box {
-    background: #faf7f2;
-    border: 1px solid rgba(243, 112, 33, 0.12);
-    border-radius: 24px;
-    padding: clamp(28px, 3.5vw, 42px) clamp(24px, 3.5vw, 48px);
+.about-vmv-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: clamp(24px, 3.5vw, 48px);
-    box-shadow: 0 6px 24px rgba(8, 59, 122, 0.03);
+    gap: clamp(16px, 2vw, 26px);
+    width: 100%;
 }
 
 .about-vmv-card {
+    background: #ffffff;
+    border: 1px solid #edf2f7;
+    border-radius: 22px;
+    padding: clamp(22px, 2.2vw, 30px) clamp(18px, 2vw, 24px);
     display: flex;
     align-items: flex-start;
     gap: 18px;
+    box-shadow: 0 8px 24px rgba(8, 59, 122, 0.04);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+}
+
+.about-vmv-card:hover {
+    transform: translateY(-4px);
+    border-color: #cbd5e1;
+    box-shadow: 0 16px 36px rgba(8, 59, 122, 0.08);
 }
 
 .about-vmv-icon-ring {
     width: 52px;
     height: 52px;
     border-radius: 50%;
-    border: 1.5px solid #F37021;
+    background: #fff7ed;
+    border: 1.5px solid #fed7aa;
     color: #F37021;
-    background: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     flex-shrink: 0;
-    box-shadow: 0 4px 12px rgba(243, 112, 33, 0.1);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 4px 12px rgba(243, 112, 33, 0.12);
+    transition: transform 0.25s ease, background 0.25s ease;
 }
 
 .about-vmv-card:hover .about-vmv-icon-ring {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(243, 112, 33, 0.2);
+    transform: scale(1.08);
+    background: #ffedd5;
 }
 
 .about-vmv-body {
@@ -2024,72 +2034,99 @@
 
 .about-vmv-desc {
     font-size: 0.875rem;
-    color: #556987;
-    line-height: 1.6;
+    color: #4b5563;
+    line-height: 1.62;
     margin: 0;
 }
 
-.about-vmv-desc strong {
-    color: #083B7A;
+.about-vmv-values-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.875rem;
+    color: #4b5563;
+    font-weight: 500;
+}
+
+.values-pair {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.v-pipe {
+    color: #cbd5e1;
+    user-select: none;
+    font-size: 0.8rem;
 }
 
 /* --------------------------------------------------------------------------
    Section 4: Education for Life, Not Just Exams
    -------------------------------------------------------------------------- */
 .about-philosophy-section {
-    padding: clamp(55px, 6.5vw, 90px) 0;
-    background: #ffffff;
+    padding: clamp(65px, 7vw, 105px) 0;
+    background: radial-gradient(circle at 10% 45%, rgba(216, 236, 255, 0.45) 0%, transparent 55%), 
+                radial-gradient(circle at 92% 55%, rgba(254, 243, 199, 0.35) 0%, transparent 55%), 
+                #ffffff;
+    width: 100%;
 }
 
 .about-philosophy-grid {
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
-    gap: clamp(35px, 5vw, 70px);
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: clamp(40px, 6vw, 95px);
     align-items: center;
+    width: 100%;
 }
 
 .about-philosophy-content {
-    max-width: 580px;
+    max-width: 600px;
 }
 
 .about-philosophy-title {
-    font-size: clamp(2rem, 3.2vw, 2.75rem);
+    font-size: clamp(2.2rem, 3.4vw, 3rem);
     font-weight: 800;
     color: #083B7A;
-    line-height: 1.2;
-    margin-bottom: 20px;
+    line-height: 1.18;
+    margin-bottom: 22px;
     letter-spacing: -0.5px;
 }
 
 .about-philosophy-desc {
-    font-size: 1rem;
+    font-size: clamp(0.96875rem, 1.05vw, 1.03125rem);
     color: #4b5563;
-    line-height: 1.72;
-    margin-bottom: 28px;
+    line-height: 1.75;
+    margin-bottom: 32px;
+}
+
+.about-philosophy-action {
+    display: flex;
+    align-items: center;
 }
 
 .about-philosophy-pills-col {
     display: flex;
     justify-content: flex-end;
+    width: 100%;
 }
 
 .about-philosophy-pills-stack {
     width: 100%;
-    max-width: 440px;
+    max-width: 480px;
     background: #ffffff;
-    border: 1px solid #edf2f7;
-    border-radius: 24px;
-    padding: clamp(24px, 3vw, 36px) clamp(20px, 2.5vw, 32px);
-    box-shadow: 0 10px 32px rgba(8, 59, 122, 0.05);
+    border: 1px solid #eef2f6;
+    border-radius: 28px;
+    padding: clamp(30px, 3.5vw, 44px) clamp(26px, 3vw, 38px);
+    box-shadow: 0 12px 36px rgba(8, 59, 122, 0.05);
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 22px;
 }
 
 .philosophy-pill-item {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 16px;
     transition: transform 0.25s ease;
 }
 
@@ -2098,37 +2135,41 @@
 }
 
 .pill-badge-icon {
-    width: 38px;
-    height: 38px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.9375rem;
+    font-size: 0.875rem;
     flex-shrink: 0;
     transition: transform 0.25s ease;
 }
 
 .philosophy-pill-item:hover .pill-badge-icon {
-    transform: scale(1.08);
+    transform: scale(1.1);
 }
 
 .pill-badge-icon.badge-blue {
-    background: rgba(13, 110, 253, 0.1);
-    color: #0d6efd;
-    border: 1.5px solid rgba(13, 110, 253, 0.25);
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.pill-badge-icon.badge-navy {
+    background: #e0e7ff;
+    color: #083B7A;
 }
 
 .pill-badge-icon.badge-orange {
-    background: rgba(243, 112, 33, 0.1);
-    color: #F37021;
-    border: 1.5px solid rgba(243, 112, 33, 0.25);
+    background: #ffedd5;
+    color: #ea580c;
 }
 
 .pill-item-text {
-    font-size: 0.9375rem;
+    font-size: 1.03125rem;
     font-weight: 700;
     color: #083B7A;
+    line-height: 1.35;
 }
 
 /* --------------------------------------------------------------------------
@@ -2473,6 +2514,13 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .about-vmv-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+}
+
 @media (max-width: 900px) {
     .about-hero-canvas {
         flex-direction: column-reverse;
@@ -2509,10 +2557,9 @@
     .about-philosophy-pills-stack {
         max-width: 100%;
     }
-    .about-vmv-box {
+    .about-vmv-grid {
         grid-template-columns: 1fr;
-        gap: 24px;
-        padding: 28px 20px;
+        gap: 18px;
     }
     .about-story-floating-badge {
         left: 10px;
@@ -2520,6 +2567,7 @@
         padding: 10px 14px;
     }
     .about-story-frame {
+        max-width: 500px;
         margin: 0 auto;
     }
     .about-campus-frame {
@@ -2576,7 +2624,7 @@
         gap: 12px;
     }
     .about-stats-row {
-        flex-direction: column;
+        gap: 16px;
     }
     .about-hero-actions,
     .about-cta-actions {
@@ -2590,10 +2638,21 @@
         justify-content: center;
     }
     .about-story-frame {
-        height: 340px;
+        height: auto;
     }
     .about-story-img {
-        height: 340px;
+        height: 320px;
+    }
+    .about-story-floating-badge {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        margin-top: 14px;
+        width: 100%;
+    }
+    .about-vmv-card {
+        padding: 18px 16px;
+        border-radius: 18px;
     }
     .about-floating-campus-card {
         right: 10px;
@@ -2615,13 +2674,6 @@
 @media (max-width: 440px) {
     .about-apart-grid {
         grid-template-columns: 1fr;
-    }
-    .about-story-floating-badge {
-        position: relative;
-        left: 0;
-        bottom: 0;
-        margin-top: 12px;
-        width: 100%;
     }
 }
 
