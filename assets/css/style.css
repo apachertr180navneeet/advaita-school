@@ -1,271 +1,207 @@
 /* ==========================================================================
    Advaita School of Excellence - Global & Page Components Stylesheet
-   (Strictly No Inline or In-Page Styles)
+   Fully Responsive for Mobile, Tablet, Laptop, and 4K Displays
    ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Global Reset & Media Responsiveness
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    scroll-padding-top: 115px;
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+body {
+    overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
+    min-height: 100vh;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: #1e293b;
+    background-color: #ffffff;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img,
+picture,
+video,
+canvas,
+svg,
+iframe {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+iframe {
+    border: none;
+}
+
+a,
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+}
 
 /* --------------------------------------------------------------------------
    Layout & Container Utilities
    -------------------------------------------------------------------------- */
 .main-content-wrapper {
-    min-height: calc(100vh - 350px);
+    min-height: 100vh;
     width: 100%;
+    overflow-x: hidden;
 }
 
 .adv-container {
-    max-width: 1400px;
+    width: 100%;
+    max-width: 1360px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: clamp(14px, 3vw, 32px);
+    padding-right: clamp(14px, 3vw, 32px);
 }
 
 .adv-container-narrow {
+    width: 100%;
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: clamp(14px, 3vw, 24px);
+    padding-right: clamp(14px, 3vw, 24px);
 }
 
 .adv-container-medium {
-    max-width: 1200px;
+    width: 100%;
+    max-width: 1180px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: clamp(14px, 3vw, 28px);
+    padding-right: clamp(14px, 3vw, 28px);
 }
 
 /* --------------------------------------------------------------------------
-   Hero Section
+   Universal Responsive Typography & Buttons
    -------------------------------------------------------------------------- */
-.adv-hero-section {
-    background: linear-gradient(135deg, var(--adv-primary) 0%, #041f42 100%);
-    color: var(--adv-text-white);
-    padding: 90px 24px;
+.text-center {
     text-align: center;
-    position: relative;
-    overflow: hidden;
 }
 
-.adv-hero-glow-1 {
-    position: absolute;
-    top: -50px;
-    right: -50px;
-    width: 300px;
-    height: 300px;
-    background: rgba(243, 112, 33, 0.15);
-    border-radius: 50%;
-    filter: blur(60px);
-    pointer-events: none;
+.text-left {
+    text-align: left;
 }
 
-.adv-hero-glow-2 {
-    position: absolute;
-    bottom: -50px;
-    left: -50px;
-    width: 300px;
-    height: 300px;
-    background: rgba(8, 59, 122, 0.4);
-    border-radius: 50%;
-    filter: blur(60px);
-    pointer-events: none;
+.text-right {
+    text-align: right;
 }
 
-.adv-hero-content {
-    position: relative;
-    z-index: 2;
+.hidden {
+    display: none !important;
 }
 
-.adv-hero-badge {
-    display: inline-block;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 6px 18px;
-    border-radius: 30px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    color: var(--adv-accent-gold);
-    margin-bottom: 20px;
-    letter-spacing: 0.5px;
+/* Accessible Touch Targets */
+a, button, [role="button"] {
+    touch-action: manipulation;
 }
 
-.adv-hero-title {
-    font-size: 2.8rem;
+/* Fluid Heading Utilities */
+h1, .h1 {
+    font-size: clamp(1.85rem, 4.5vw, 3.2rem);
     font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    letter-spacing: -0.5px;
+    line-height: 1.18;
 }
 
-.adv-hero-lead {
-    font-size: 1.15rem;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 32px;
-    line-height: 1.6;
-    max-width: 750px;
-    margin-left: auto;
-    margin-right: auto;
+h2, .h2 {
+    font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+    font-weight: 800;
+    line-height: 1.22;
 }
 
-.adv-hero-actions {
-    display: flex;
-    gap: 16px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.adv-btn-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--adv-accent-orange);
-    color: #ffffff;
-    padding: 14px 28px;
-    border-radius: 8px;
-    text-decoration: none;
+h3, .h3 {
+    font-size: clamp(1.2rem, 2.5vw, 1.65rem);
     font-weight: 700;
-    box-shadow: 0 4px 15px rgba(243, 112, 33, 0.4);
-    transition: var(--header-transition);
+    line-height: 1.3;
 }
 
-.adv-btn-primary:hover {
-    background: var(--adv-accent-orange-hover);
-    transform: translateY(-2px);
-    color: #ffffff;
-}
-
-.adv-btn-secondary {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(255, 255, 255, 0.15);
-    color: #ffffff;
-    padding: 14px 28px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 600;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(5px);
-    transition: var(--header-transition);
-}
-
-.adv-btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.25);
-    transform: translateY(-2px);
-    color: #ffffff;
+p {
+    font-size: clamp(0.9rem, 1.2vw, 1.05rem);
+    line-height: 1.65;
 }
 
 /* --------------------------------------------------------------------------
-   Highlights / Feature Cards
+   Responsive Breakpoints & Adjustments
    -------------------------------------------------------------------------- */
-.adv-highlights-section {
-    position: relative;
-    z-index: 3;
-    margin-top: -40px;
-    margin-bottom: 60px;
-    padding: 0 24px;
+@media (max-width: 1200px) {
+    html {
+        scroll-padding-top: 90px;
+    }
 }
 
-.adv-highlights-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+@media (max-width: 991px) {
+    html {
+        scroll-padding-top: 80px;
+    }
 }
 
-.adv-card {
-    background: #ffffff;
-    padding: 26px 22px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(8, 59, 122, 0.08);
-    transition: var(--header-transition);
-}
-
-.adv-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 36px rgba(8, 59, 122, 0.14);
-}
-
-.adv-card-primary {
-    border-top: 4px solid var(--adv-primary);
-}
-
-.adv-card-accent {
-    border-top: 4px solid var(--adv-accent-orange);
-}
-
-.adv-card-gold {
-    border-top: 4px solid var(--adv-accent-gold);
-}
-
-.adv-card-icon {
-    font-size: 1.9rem;
-    margin-bottom: 12px;
-}
-
-.adv-card-icon.primary {
-    color: var(--adv-primary);
-}
-
-.adv-card-icon.accent {
-    color: var(--adv-accent-orange);
-}
-
-.adv-card-icon.gold {
-    color: var(--adv-accent-gold);
-}
-
-.adv-card-title {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: var(--adv-primary);
-    margin-bottom: 8px;
-}
-
-.adv-card-desc {
-    font-size: 0.875rem;
-    color: #64748b;
-    line-height: 1.6;
-}
-
-/* --------------------------------------------------------------------------
-   Footer Styles
-   -------------------------------------------------------------------------- */
-.adv-footer {
-    background-color: #031c3d;
-    color: #cbd5e1;
-    padding: 44px 0 24px;
-    margin-top: 60px;
-    border-top: 3px solid var(--adv-primary-light);
-}
-
-.adv-footer-inner {
-    text-align: center;
-}
-
-.adv-footer-copyright {
-    font-size: 0.875rem;
-    margin-bottom: 8px;
-    color: #e2e8f0;
-}
-
-.adv-footer-tagline {
-    font-size: 0.78125rem;
-    color: #94a3b8;
-}
-
-/* --------------------------------------------------------------------------
-   Responsive Rules
-   -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
-    .adv-hero-section {
-        padding: 60px 16px 70px;
+    html {
+        font-size: 15px;
+        scroll-padding-top: 70px;
     }
-    
-    .adv-hero-title {
-        font-size: 2rem;
+
+    .adv-container,
+    .adv-container-narrow,
+    .adv-container-medium {
+        padding-left: 14px;
+        padding-right: 14px;
     }
-    
-    .adv-hero-lead {
-        font-size: 1rem;
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 14.5px;
+        scroll-padding-top: 65px;
     }
-    
-    .adv-highlights-section {
-        margin-top: -20px;
+
+    .adv-container,
+    .adv-container-narrow,
+    .adv-container-medium {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    html {
+        font-size: 14px;
+        scroll-padding-top: 60px;
+    }
+
+    .adv-container,
+    .adv-container-narrow,
+    .adv-container-medium {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
