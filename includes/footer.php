@@ -6,12 +6,12 @@
  */
 ?>
     <!-- Sticky Side Quick Action Pill -->
-    <a href="admissions.php#enquiry-form" class="adv-sticky-enquiry-pill" title="Admissions Enquiry">
+    <a href="#admissions" class="adv-sticky-enquiry-pill" title="Admissions Enquiry">
         <span>ENQUIRE NOW</span>
     </a>
 
     <!-- Main Footer Wrapper -->
-    <footer class="adv-footer-wrapper" aria-label="Footer Navigation">
+    <footer class="adv-footer-wrapper" id="contact" aria-label="Footer Navigation">
         
         <!-- Top Foliage Accent Overlay -->
         <div class="adv-footer-foliage-wrap" aria-hidden="true">
@@ -24,7 +24,7 @@
                 
                 <!-- Column 1: School Brand & Identity -->
                 <div class="adv-footer-brand-col">
-                    <a href="index.php" class="adv-footer-logo-link" title="Advaita School of Excellence">
+                    <a href="#hero" class="adv-footer-logo-link" title="Advaita School of Excellence">
                         <img src="assets/images/footer-logo.png" alt="Advaita School of Excellence Logo" class="adv-footer-logo-img">
                     </a>
                     
@@ -57,16 +57,15 @@
                 <div class="adv-footer-col">
                     <h3 class="adv-footer-col-title">Explore</h3>
                     <ul class="adv-footer-links-list">
-                        <li><a href="index.php" class="adv-footer-link"><span class="chevron">&gt;</span> Home</a></li>
-                        <li><a href="about-us.php" class="adv-footer-link"><span class="chevron">&gt;</span> About Us</a></li>
-                        <li><a href="about-us.php#vmv" class="adv-footer-link"><span class="chevron">&gt;</span> Vision &amp; Mission</a></li>
-                        <li><a href="academics.php" class="adv-footer-link"><span class="chevron">&gt;</span> Academics</a></li>
-                        <li><a href="admissions.php" class="adv-footer-link"><span class="chevron">&gt;</span> Admissions</a></li>
-                        <li><a href="activities.php" class="adv-footer-link"><span class="chevron">&gt;</span> Campus Life</a></li>
-                        <li><a href="about-us.php#campus" class="adv-footer-link"><span class="chevron">&gt;</span> Facilities</a></li>
-                        <li><a href="activities.php#sports" class="adv-footer-link"><span class="chevron">&gt;</span> Sports &amp; Activities</a></li>
-                        <li><a href="gallery.php" class="adv-footer-link"><span class="chevron">&gt;</span> Gallery</a></li>
-                        <li><a href="contact.php" class="adv-footer-link"><span class="chevron">&gt;</span> Contact Us</a></li>
+                        <li><a href="#hero" class="adv-footer-link"><span class="chevron">&gt;</span> Home</a></li>
+                        <li><a href="#about" class="adv-footer-link"><span class="chevron">&gt;</span> About Us</a></li>
+                        <li><a href="#why-advaita" class="adv-footer-link"><span class="chevron">&gt;</span> Why Advaita</a></li>
+                        <li><a href="#why-choose" class="adv-footer-link"><span class="chevron">&gt;</span> Key Features</a></li>
+                        <li><a href="#admissions" class="adv-footer-link"><span class="chevron">&gt;</span> Admissions</a></li>
+                        <li><a href="#gallery" class="adv-footer-link"><span class="chevron">&gt;</span> Campus Gallery</a></li>
+                        <li><a href="#testimonials" class="adv-footer-link"><span class="chevron">&gt;</span> Parent Reviews</a></li>
+                        <li><a href="#faq" class="adv-footer-link"><span class="chevron">&gt;</span> FAQ</a></li>
+                        <li><a href="#contact" class="adv-footer-link"><span class="chevron">&gt;</span> Contact Us</a></li>
                     </ul>
                 </div>
 
@@ -74,14 +73,13 @@
                 <div class="adv-footer-col">
                     <h3 class="adv-footer-col-title">Quick Links</h3>
                     <ul class="adv-footer-links-list">
-                        <li><a href="admissions.php#process" class="adv-footer-link"><span class="chevron">&gt;</span> Admission Process</a></li>
-                        <li><a href="admissions.php#enquiry" class="adv-footer-link"><span class="chevron">&gt;</span> Online Registration</a></li>
-                        <li><a href="admissions.php#fees" class="adv-footer-link"><span class="chevron">&gt;</span> Fee Structure</a></li>
-                        <li><a href="academics.php" class="adv-footer-link"><span class="chevron">&gt;</span> CBSE Curriculum</a></li>
-                        <li><a href="about-us.php#vmv" class="adv-footer-link"><span class="chevron">&gt;</span> Core Values</a></li>
-                        <li><a href="gallery.php" class="adv-footer-link"><span class="chevron">&gt;</span> Photo Gallery</a></li>
-                        <li><a href="achievements.php" class="adv-footer-link"><span class="chevron">&gt;</span> Achievements</a></li>
-                        <li><a href="contact.php" class="adv-footer-link"><span class="chevron">&gt;</span> Campus Map &amp; Visit</a></li>
+                        <li><a href="#admissions" class="adv-footer-link"><span class="chevron">&gt;</span> Admission Process</a></li>
+                        <li><a href="#admissions" class="adv-footer-link"><span class="chevron">&gt;</span> Book Campus Visit</a></li>
+                        <li><a href="#about" class="adv-footer-link"><span class="chevron">&gt;</span> Vision &amp; Values</a></li>
+                        <li><a href="#gallery" class="adv-footer-link"><span class="chevron">&gt;</span> Photo Gallery</a></li>
+                        <li><a href="#testimonials" class="adv-footer-link"><span class="chevron">&gt;</span> Testimonials</a></li>
+                        <li><a href="#faq" class="adv-footer-link"><span class="chevron">&gt;</span> Frequently Asked Questions</a></li>
+                        <li><a href="#contact" class="adv-footer-link"><span class="chevron">&gt;</span> Campus Map &amp; Visit</a></li>
                     </ul>
                 </div>
 
@@ -110,7 +108,7 @@
                             </div>
                             <div class="adv-footer-touch-content">
                                 <span class="touch-label">Phone</span>
-                                <a href="tel:+919876543210" class="touch-link">+91 98765 43210 / 02452-234567</a>
+                                <a href="tel:+919413062851" class="touch-link">+91 94130 62851</a>
                             </div>
                         </div>
 
@@ -171,11 +169,7 @@
                     <span>&copy; <?php echo date('Y'); ?> Advaita School of Excellence, Parbhani. All rights reserved.</span>
                 </div>
                 <div class="adv-footer-legal-links">
-                    <a href="privacy-policy.php" class="adv-legal-link">Privacy Policy</a>
-                    <span class="adv-legal-sep">|</span>
-                    <a href="terms-conditions.php" class="adv-legal-link">Terms &amp; Conditions</a>
-                    <span class="adv-legal-sep">|</span>
-                    <a href="sitemap.php" class="adv-legal-link">Sitemap</a>
+                    <a href="#hero" class="adv-legal-link">Advaita School of Excellence</a>
                 </div>
             </div>
         </div>
@@ -186,7 +180,7 @@
     <button type="button" class="adv-scroll-top-btn" id="advScrollTopBtn" aria-label="Scroll to top" title="Scroll to Top">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
-    <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" class="adv-floating-whatsapp-btn" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+    <a href="https://wa.me/919413062851" target="_blank" rel="noopener noreferrer" class="adv-floating-whatsapp-btn" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
@@ -197,4 +191,3 @@
     <script src="assets/js/footer.js"></script>
 </body>
 </html>
-

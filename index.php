@@ -14,7 +14,7 @@ require_once __DIR__ . '/includes/header.php';
     <!-- ====================================================================
          SECTION 1: HERO SECTION & SLIDER
          ==================================================================== -->
-    <section class="adv-hero-slider-section" aria-label="Advaita School of Excellence Hero Banner">
+    <section class="adv-hero-slider-section" id="hero" aria-label="Advaita School of Excellence Hero Banner">
         <div class="adv-slider-container">
             <div class="adv-slider-wrapper">
 
@@ -27,11 +27,11 @@ require_once __DIR__ . '/includes/header.php';
                         
                         <!-- Real Interactive Hero Action Buttons -->
                         <div class="adv-banner-hero-actions">
-                            <a href="admissions.php" class="adv-hero-real-btn adv-hero-btn-apply" title="Apply for Admission">
+                            <a href="#admissions" class="adv-hero-real-btn adv-hero-btn-apply" title="Apply for Admission">
                                 <span>Apply for Admission</span>
                                 <i class="fa-solid fa-arrow-right"></i>
                             </a>
-                            <a href="about-us.php" class="adv-hero-real-btn adv-hero-btn-explore" title="Explore Our School">
+                            <a href="#about" class="adv-hero-real-btn adv-hero-btn-explore" title="Explore Our School">
                                 <span>Explore Our School</span>
                             </a>
                         </div>
@@ -46,11 +46,11 @@ require_once __DIR__ . '/includes/header.php';
                         <img src="assets/images/advaita_cbse_results_slider_1024x586.png" alt="Advaita School of Excellence - CBSE Results 2025-26 Proud Achievers" class="adv-slide-banner-img" loading="lazy">
                         <!-- Real Interactive Hero Action Buttons -->
                         <div class="adv-banner-hero-actions">
-                            <a href="admissions.php" class="adv-hero-real-btn adv-hero-btn-apply" title="Apply for Admission">
+                            <a href="#admissions" class="adv-hero-real-btn adv-hero-btn-apply" title="Apply for Admission">
                                 <span>Apply for Admission</span>
                                 <i class="fa-solid fa-arrow-right"></i>
                             </a>
-                            <a href="about-us.php" class="adv-hero-real-btn adv-hero-btn-explore" title="Explore Our School">
+                            <a href="#about" class="adv-hero-real-btn adv-hero-btn-explore" title="Explore Our School">
                                 <span>Explore Our School</span>
                             </a>
                         </div>
@@ -77,11 +77,11 @@ require_once __DIR__ . '/includes/header.php';
 
     <!-- Mobile Quick Action CTA Bar (Visible on Mobile & Tablet) -->
     <div class="adv-mobile-hero-cta-bar">
-        <a href="admissions.php" class="adv-mobile-hero-btn primary">
+        <a href="#admissions" class="adv-mobile-hero-btn primary">
             <i class="fa-solid fa-paper-plane"></i>
             <span>Apply for Admission</span>
         </a>
-        <a href="about-us.php" class="adv-mobile-hero-btn secondary">
+        <a href="#about" class="adv-mobile-hero-btn secondary">
             <i class="fa-solid fa-compass"></i>
             <span>Explore Our School</span>
         </a>
@@ -157,7 +157,7 @@ require_once __DIR__ . '/includes/header.php';
     <!-- ====================================================================
          SECTION 3: WELCOME / ABOUT SCHOOL SECTION (DESIGN SPEC)
          ==================================================================== -->
-    <section class="adv-welcome-section" id="about-school" aria-label="About Advaita School of Excellence">
+    <section class="adv-welcome-section" id="about" aria-label="About Advaita School of Excellence">
         <!-- Subtle decorative leaf watermark in top right -->
         <div class="adv-welcome-watermark-leaves" aria-hidden="true">
             <svg width="220" height="180" viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -257,11 +257,11 @@ require_once __DIR__ . '/includes/header.php';
 
                     <!-- Bottom Action Buttons -->
                     <div class="adv-welcome-actions">
-                        <a href="about-us.php" class="adv-btn-welcome-orange">
+                        <a href="#why-advaita" class="adv-btn-welcome-orange">
                             <span>Know More About Us</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
-                        <a href="about-us.php#campus" class="adv-btn-welcome-outline">
+                        <a href="#gallery" class="adv-btn-welcome-outline">
                             <i class="fa-solid fa-landmark"></i>
                             <span>Take a Campus Tour</span>
                         </a>
@@ -424,7 +424,7 @@ require_once __DIR__ . '/includes/header.php';
 
             <!-- Bottom CTA Button -->
             <div class="adv-pillars-cta-wrap text-center">
-                <a href="about-us.php" class="adv-btn-pillars-primary">
+                <a href="#why-choose" class="adv-btn-pillars-primary">
                     <span>Discover the Advaita Difference</span>
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
@@ -605,7 +605,7 @@ require_once __DIR__ . '/includes/header.php';
 
             <!-- Bottom CTA Button -->
             <div class="adv-why-cta-wrap text-center">
-                <a href="about-us.php" class="adv-btn-why-primary">
+                <a href="#admissions" class="adv-btn-why-primary">
                     <span>Discover the Advaita Difference</span>
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
@@ -618,7 +618,7 @@ require_once __DIR__ . '/includes/header.php';
     <!-- ====================================================================
          SECTION 6: CAMPUS VISIT / ADMISSIONS CTA BANNER (DESIGN SPEC)
          ==================================================================== -->
-    <section class="adv-visit-banner-section" id="visit-school" aria-label="Book A Campus Visit">
+    <section class="adv-visit-banner-section" id="admissions" aria-label="Book A Campus Visit">
         <div class="adv-visit-container">
             <div class="adv-visit-card">
                 
@@ -725,7 +725,7 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="adv-visit-action-pods">
                         
                         <!-- Pod 1: Book A Campus Visit -->
-                        <a href="contact-us.php#visit" class="adv-visit-pod-orange">
+                        <a href="#contact" class="adv-visit-pod-orange">
                             <div class="pod-icon-box">
                                 <i class="fa-solid fa-calendar-days"></i>
                             </div>
@@ -760,7 +760,7 @@ require_once __DIR__ . '/includes/header.php';
     <!-- ====================================================================
          SECTION 7: CAMPUS GALLERY (A DAY AT ADVAITA, IN PICTURES)
          ==================================================================== -->
-    <section class="adv-gallery-section" id="campus-gallery" aria-label="A Day at Advaita Campus Gallery">
+    <section class="adv-gallery-section" id="gallery" aria-label="A Day at Advaita Campus Gallery">
         <div class="adv-gallery-container">
             
             <!-- Section Header -->
@@ -861,15 +861,15 @@ require_once __DIR__ . '/includes/header.php';
 
             <!-- Bottom Action Buttons -->
             <div class="adv-gallery-actions">
-                <a href="gallery.php" class="adv-btn-gallery-primary">
-                    <span>Browse Full Gallery</span>
+                <a href="#gallery" class="adv-btn-gallery-primary">
+                    <span>Explore Photo Gallery</span>
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
-                <a href="about-us.php#campus" class="adv-btn-gallery-video">
+                <a href="#hero" class="adv-btn-gallery-video">
                     <div class="video-play-circle">
                         <i class="fa-solid fa-play"></i>
                     </div>
-                    <span>Watch Campus Video</span>
+                    <span>Watch Campus Highlights</span>
                 </a>
             </div>
 
