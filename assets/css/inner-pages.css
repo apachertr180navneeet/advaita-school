@@ -994,15 +994,15 @@
 
 /* Campus Showcase Section */
 .about-campus-showcase {
-    padding: clamp(45px, 5.5vw, 70px) 0 clamp(40px, 5vw, 60px);
+    padding: clamp(45px, 5.5vw, 65px) 0 clamp(40px, 5vw, 55px);
     background: #ffffff;
     position: relative;
 }
 
 .about-campus-grid {
     display: grid;
-    grid-template-columns: 1fr 1.15fr;
-    gap: clamp(32px, 4vw, 56px);
+    grid-template-columns: 1fr 1.18fr;
+    gap: clamp(32px, 4vw, 52px);
     align-items: center;
 }
 
@@ -1025,12 +1025,12 @@
 
 .about-campus-title {
     font-family: var(--adv-font-sans);
-    font-size: clamp(2rem, 2.7vw, 2.75rem);
+    font-size: clamp(2rem, 2.7vw, 2.65rem);
     font-weight: 800;
     color: var(--adv-navy, #0A2540);
-    line-height: 1.18;
-    margin-bottom: 16px;
-    letter-spacing: -0.5px;
+    line-height: 1.16;
+    margin-bottom: 15px;
+    letter-spacing: -0.4px;
 }
 
 .about-campus-title .about-text-orange {
@@ -1038,11 +1038,11 @@
 }
 
 .about-campus-desc {
-    font-size: 0.9375rem;
+    font-size: 0.90625rem;
     line-height: 1.65;
     color: var(--adv-text-body, #475569);
-    margin-bottom: 24px;
-    max-width: 520px;
+    margin-bottom: 22px;
+    max-width: 500px;
 }
 
 .about-btn-orange {
@@ -1052,9 +1052,9 @@
     background: var(--adv-orange, #F37021);
     color: #ffffff;
     border-radius: 50px;
-    padding: 13px 28px;
+    padding: 12px 26px;
     font-weight: 700;
-    font-size: 0.9375rem;
+    font-size: 0.875rem;
     text-decoration: none;
     box-shadow: 0 6px 18px rgba(243, 112, 33, 0.28);
     transition: all 0.25s ease;
@@ -1069,20 +1069,34 @@
 
 .about-campus-visual-wrap {
     position: relative;
-    padding-bottom: 18px;
+    padding: 10px 0 10px 10px;
+}
+
+/* Decorative Sky-Blue Outer Frame Accent */
+.about-campus-accent-border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 14px;
+    bottom: 14px;
+    border: 2.5px solid #38bdf8;
+    border-radius: 24px;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .about-campus-frame {
-    border-radius: 22px;
+    position: relative;
+    z-index: 2;
+    border-radius: 20px;
     overflow: hidden;
-    border: 3.5px solid #38bdf8;
-    box-shadow: 0 16px 40px rgba(8, 59, 122, 0.1);
+    box-shadow: 0 14px 36px rgba(8, 59, 122, 0.12);
     background: #ffffff;
 }
 
 .about-campus-img {
     width: 100%;
-    height: 330px;
+    height: 320px;
     object-fit: cover;
     object-position: center 35%;
     display: block;
@@ -1091,15 +1105,15 @@
 .about-floating-campus-card {
     position: absolute;
     bottom: 0;
-    right: 20px;
+    right: 10px;
     background: #ffffff;
-    border-radius: 18px;
-    padding: 8px 14px 8px 8px;
+    border-radius: 16px;
+    padding: 7px 13px 7px 7px;
     display: flex;
     align-items: center;
     gap: 12px;
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
-    border: 1px solid #f1f5f9;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     z-index: 5;
     transition: transform 0.25s ease;
 }
@@ -1109,9 +1123,9 @@
 }
 
 .campus-thumb {
-    width: 60px;
-    height: 44px;
-    border-radius: 10px;
+    width: 58px;
+    height: 42px;
+    border-radius: 8px;
     object-fit: cover;
 }
 
@@ -1136,18 +1150,18 @@
 }
 
 .campus-thumb-arrow {
-    width: 32px;
-    height: 32px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     background: var(--adv-orange, #F37021);
     color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.8125rem;
+    font-size: 0.78125rem;
     text-decoration: none;
     transition: transform 0.2s ease, background 0.2s ease;
-    margin-left: 4px;
+    margin-left: 2px;
 }
 
 .campus-thumb-arrow:hover {

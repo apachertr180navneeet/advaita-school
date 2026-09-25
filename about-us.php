@@ -413,8 +413,9 @@ require_once __DIR__ . '/includes/header.php';
                     </a>
                 </div>
 
-                <!-- Right: Visual with Blue Frame & Floating Card -->
+                <!-- Right: Visual with Sky-Blue Offset Accent Frame & Floating Card -->
                 <div class="about-campus-visual-wrap">
+                    <div class="about-campus-accent-border"></div>
                     <div class="about-campus-frame">
                         <img src="assets/images/about-campus-courtyard.jpg" alt="Advaita School Modern Campus Courtyard" class="about-campus-img" loading="lazy">
                     </div>
