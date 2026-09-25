@@ -3902,17 +3902,17 @@
    ========================================================================== */
 .chairman-message-section {
     position: relative;
-    padding: clamp(45px, 5.5vw, 75px) 0 clamp(40px, 5vw, 65px);
-    background: linear-gradient(180deg, #f8fcff 0%, #eef8ff 50%, #f4faff 100%);
+    padding: clamp(40px, 4.5vw, 65px) 0;
+    background: #ffffff;
     width: 100%;
     overflow: hidden;
 }
 
 .chairman-message-container {
     width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 clamp(20px, 4vw, 50px);
+    max-width: 100%;
+    margin: 0;
+    padding: 0 clamp(20px, 4vw, 80px);
     position: relative;
     z-index: 2;
 }
@@ -3921,8 +3921,8 @@
 .chairman-message-dots-left,
 .chairman-message-dots-right {
     position: absolute;
-    width: 110px;
-    height: 190px;
+    width: 100px;
+    height: 180px;
     background-image: radial-gradient(#93c5fd 2.2px, transparent 2.2px);
     background-size: 16px 16px;
     opacity: 0.75;
@@ -3931,13 +3931,13 @@
 }
 
 .chairman-message-dots-left {
-    top: 60px;
-    left: max(12px, calc((100vw - 1400px) / 2 - 25px));
+    top: 40px;
+    left: clamp(10px, 2vw, 40px);
 }
 
 .chairman-message-dots-right {
-    top: 60px;
-    right: max(12px, calc((100vw - 1400px) / 2 - 25px));
+    top: 40px;
+    right: clamp(10px, 2vw, 40px);
 }
 
 .chairman-message-card {
@@ -3945,13 +3945,14 @@
     border-radius: 28px;
     border: 1.5px solid #e2eefb;
     box-shadow: 0 16px 48px rgba(12, 74, 113, 0.08);
-    padding: clamp(32px, 4vw, 54px);
+    padding: clamp(32px, 4vw, 56px) clamp(24px, 4.5vw, 65px);
     display: grid;
-    grid-template-columns: minmax(0, 1.35fr) 350px;
-    gap: clamp(32px, 4.5vw, 60px);
+    grid-template-columns: minmax(0, 1.45fr) minmax(320px, 360px);
+    gap: clamp(32px, 4.5vw, 70px);
     align-items: center;
     position: relative;
     width: 100%;
+    max-width: 100%;
 }
 
 .chairman-message-content {
@@ -4145,7 +4146,7 @@
    ========================================================================== */
 .chairman-commitment-section {
     position: relative;
-    padding: clamp(40px, 5vw, 60px) 0 clamp(35px, 4vw, 50px);
+    padding: clamp(40px, 4.5vw, 60px) 0;
     background: linear-gradient(180deg, #f8fcff 0%, #edf8ff 100%);
     width: 100%;
     overflow: hidden;
@@ -4179,9 +4180,9 @@
 
 .chairman-commitment-container {
     width: 100%;
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 clamp(20px, 4vw, 50px);
+    max-width: 100%;
+    margin: 0;
+    padding: 0 clamp(20px, 4vw, 80px);
     position: relative;
     z-index: 2;
 }
@@ -4509,6 +4510,148 @@
         justify-content: center;
     }
 }
+
+/* ==========================================================================
+   6. INNER PAGE GENERIC BANNER & PLACEHOLDER STYLES
+   ========================================================================== */
+.adv-inner-page-banner {
+    width: 100%;
+    background: linear-gradient(135deg, #063963 0%, #0a4d82 50%, #083b66 100%);
+    position: relative;
+    overflow: hidden;
+    padding: clamp(50px, 6vw, 80px) 0 clamp(45px, 5.5vw, 70px);
+}
+
+.adv-inner-banner-canvas {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 clamp(20px, 4vw, 50px);
+    position: relative;
+    z-index: 2;
+}
+
+.adv-inner-breadcrumb {
+    margin-bottom: 16px;
+}
+
+.adv-inner-breadcrumb-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 0.84rem;
+    font-weight: 600;
+}
+
+.adv-inner-breadcrumb-list li a {
+    color: #93c5fd;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.adv-inner-breadcrumb-list li a:hover {
+    color: #ffffff;
+}
+
+.adv-inner-breadcrumb-list .adv-breadcrumb-sep {
+    color: #60a5fa;
+    font-size: 0.7rem;
+}
+
+.adv-inner-breadcrumb-list .adv-breadcrumb-current {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.adv-inner-banner-eyebrow {
+    display: inline-block;
+    color: #ff8b36;
+    font-size: 0.8125rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.adv-inner-banner-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.15;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.adv-inner-banner-title span {
+    color: #ff6908;
+}
+
+.adv-inner-banner-subtitle {
+    font-size: clamp(0.95rem, 1.1vw, 1.125rem);
+    color: #dbeafe;
+    max-width: 680px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.adv-inner-page-content-section {
+    width: 100%;
+    padding: clamp(60px, 8vw, 100px) 0;
+    background: #f8fcff;
+}
+
+.adv-inner-content-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 clamp(20px, 4vw, 50px);
+}
+
+.adv-blank-page-placeholder {
+    background: #ffffff;
+    border: 2px dashed #bfdbfe;
+    border-radius: 24px;
+    padding: clamp(40px, 6vw, 80px) clamp(20px, 4vw, 40px);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(12, 74, 113, 0.04);
+}
+
+.adv-placeholder-icon {
+    width: 80px;
+    height: 80px;
+    background: #eff6ff;
+    color: #1688e8;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+}
+
+.adv-placeholder-heading {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+    font-weight: 800;
+    color: #06497d;
+    margin-bottom: 12px;
+}
+
+.adv-placeholder-text {
+    font-size: 1rem;
+    color: #64748b;
+    line-height: 1.6;
+    max-width: 580px;
+    margin: 0 auto;
+}
+
 
 
 
