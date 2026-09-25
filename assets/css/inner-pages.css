@@ -4439,28 +4439,28 @@
 /* ==========================================================================
    5. RESPONSIVE BREAKPOINTS (CHAIRMAN'S DESK)
    ========================================================================== */
-@media (max-width: 1100px) {
-    .chairman-commitment-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+@media (max-width: 1200px) {
+    .chairman-hero-left-panel {
+        width: 55%;
+        padding: clamp(30px, 3.5vw, 45px) clamp(20px, 3vw, 40px) clamp(30px, 3.5vw, 45px) clamp(20px, 4vw, 60px);
+    }
+    .chairman-hero-bg-visual {
+        width: 55%;
     }
     .chairman-message-card {
         grid-template-columns: 1fr 300px;
         gap: 30px;
     }
-    .chairman-cta-banner-full {
-        grid-template-columns: 1.15fr 1fr;
-    }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 991px) {
     .chairman-hero-canvas {
         flex-direction: column;
         min-height: auto;
     }
     .chairman-hero-left-panel {
         width: 100%;
-        padding: 40px 24px;
+        padding: clamp(30px, 4vw, 45px) clamp(20px, 3.5vw, 40px);
     }
     .chairman-hero-wave-edge {
         display: none;
@@ -4468,7 +4468,7 @@
     .chairman-hero-bg-visual {
         position: relative;
         width: 100%;
-        height: 280px;
+        height: clamp(220px, 30vw, 300px);
     }
     .chairman-message-card {
         grid-template-columns: 1fr;
@@ -4479,35 +4479,72 @@
         margin: 0 auto;
         width: 100%;
     }
+    .chairman-commitment-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
     .chairman-cta-banner-full {
         grid-template-columns: 1fr;
     }
     .chairman-cta-left-content {
-        padding: 40px 24px 30px;
+        padding: clamp(32px, 4vw, 48px) clamp(20px, 3.5vw, 36px) clamp(24px, 3vw, 32px);
     }
     .chairman-cta-arch-wrapper {
         border-left: none;
         border-top: 6px solid #1688e8;
         border-radius: 0;
-        height: 300px;
+        height: 280px;
         min-height: auto;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
     .chairman-commitment-grid {
         grid-template-columns: 1fr;
+        gap: 14px;
     }
     .chairman-quote-box {
         flex-direction: column;
         gap: 8px;
     }
-    .chairman-btn-orange-solid,
-    .chairman-btn-navy-outline,
+    .chairman-hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
     .chairman-btn-orange,
-    .chairman-btn-video {
+    .chairman-btn-video,
+    .chairman-btn-orange-solid,
+    .chairman-btn-navy-outline {
         width: 100%;
         justify-content: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .chairman-hero-left-panel {
+        padding: 24px 16px;
+    }
+    .chairman-hero-title {
+        font-size: clamp(1.75rem, 6.5vw, 2.2rem);
+    }
+    .chairman-hero-desc {
+        font-size: 0.92rem;
+    }
+    .chairman-hero-bg-visual {
+        height: 200px;
+    }
+    .chairman-hero-script-tag .script-title {
+        font-size: 1.8rem;
+    }
+    .chairman-hero-script-tag .script-underline {
+        width: 90px;
+    }
+    .chairman-message-container,
+    .chairman-commitment-container {
+        padding: 0 16px;
+    }
+    .chairman-commitment-card {
+        padding: 18px 16px;
     }
 }
 
@@ -5515,28 +5552,28 @@
 /* --------------------------------------------------------------------------
    7.5 RESPONSIVE BREAKPOINTS (PRINCIPAL'S DESK)
    -------------------------------------------------------------------------- */
-@media (max-width: 1100px) {
-    .principal-commitment-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
+@media (max-width: 1200px) {
+    .principal-hero-left-panel {
+        width: 55%;
+        padding: clamp(30px, 3.5vw, 45px) clamp(20px, 3vw, 40px) clamp(30px, 3.5vw, 45px) clamp(20px, 4vw, 60px);
+    }
+    .principal-hero-bg-visual {
+        width: 55%;
     }
     .principal-message-grid {
         grid-template-columns: 300px 1fr;
-        gap: 28px;
-    }
-    .principal-cta-banner-full {
-        grid-template-columns: 1.15fr 1fr;
+        gap: 30px;
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 991px) {
     .principal-hero-canvas {
         flex-direction: column;
         min-height: auto;
     }
     .principal-hero-left-panel {
         width: 100%;
-        padding: 32px 20px;
+        padding: clamp(30px, 4vw, 45px) clamp(20px, 3.5vw, 40px);
     }
     .principal-hero-wave-edge {
         display: none;
@@ -5544,22 +5581,26 @@
     .principal-hero-bg-visual {
         position: relative;
         width: 100%;
-        height: 240px;
+        height: clamp(220px, 30vw, 300px);
     }
     .principal-message-grid {
         grid-template-columns: 1fr;
-        gap: 26px;
+        gap: 28px;
     }
     .principal-profile-col {
         max-width: 330px;
         margin: 0 auto;
         width: 100%;
     }
+    .principal-commitment-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
     .principal-cta-banner-full {
         grid-template-columns: 1fr;
     }
     .principal-cta-left-content {
-        padding: 36px 20px 28px;
+        padding: clamp(32px, 4vw, 48px) clamp(20px, 3.5vw, 36px) clamp(24px, 3vw, 32px);
     }
     .principal-cta-arch-wrapper {
         border-left: none;
@@ -5574,18 +5615,53 @@
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
     .principal-commitment-grid {
         grid-template-columns: 1fr;
+        gap: 14px;
     }
     .principal-quote-box {
         flex-direction: column;
         gap: 8px;
     }
+    .principal-cta-actions-card {
+        position: static;
+        margin-top: 16px;
+        padding: 0 20px 20px;
+        width: 100%;
+    }
     .principal-btn-orange,
     .principal-btn-contact {
         width: 100%;
         justify-content: center;
+    }
+}
+
+@media (max-width: 575px) {
+    .principal-hero-left-panel {
+        padding: 24px 16px;
+    }
+    .principal-hero-title {
+        font-size: clamp(1.75rem, 6.5vw, 2.2rem);
+    }
+    .principal-hero-desc {
+        font-size: 0.92rem;
+    }
+    .principal-hero-bg-visual {
+        height: 200px;
+    }
+    .principal-hero-script-tag .script-title {
+        font-size: 1.8rem;
+    }
+    .principal-hero-script-tag .script-underline {
+        width: 90px;
+    }
+    .principal-message-container,
+    .principal-commitment-container {
+        padding: 0 16px;
+    }
+    .principal-commitment-card {
+        padding: 18px 16px;
     }
 }
 
@@ -6384,34 +6460,31 @@
 /* --------------------------------------------------------------------------
    8.6 RESPONSIVE BREAKPOINTS (VISION & MISSION)
    -------------------------------------------------------------------------- */
-@media (max-width: 1100px) {
-    .vision-dual-cards-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
+@media (max-width: 1200px) {
+    .vision-hero-left-panel {
+        width: 55%;
+        padding: clamp(30px, 3.5vw, 45px) clamp(20px, 3vw, 40px) clamp(30px, 3.5vw, 45px) clamp(20px, 4vw, 60px);
     }
-    .vision-featured-card {
-        min-height: auto;
+    .vision-hero-bg-visual {
+        width: 55%;
     }
     .vision-card-content {
-        max-width: 75%;
+        max-width: 72%;
     }
     .vision-focus-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-    }
-    .vision-cta-banner-full {
-        grid-template-columns: 1.15fr 1fr;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 14px;
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 991px) {
     .vision-hero-canvas {
         flex-direction: column;
         min-height: auto;
     }
     .vision-hero-left-panel {
         width: 100%;
-        padding: 32px 20px;
+        padding: clamp(30px, 4vw, 45px) clamp(20px, 3.5vw, 40px);
     }
     .vision-hero-wave-edge {
         display: none;
@@ -6419,45 +6492,132 @@
     .vision-hero-bg-visual {
         position: relative;
         width: 100%;
-        height: 240px;
+        height: clamp(220px, 30vw, 300px);
+    }
+    .vision-dual-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    .vision-featured-card {
+        min-height: auto;
+        padding: clamp(28px, 3.5vw, 40px) clamp(22px, 3vw, 36px);
+    }
+    .vision-card-content {
+        max-width: 75%;
     }
     .vision-beliefs-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .vision-focus-grid {
+        grid-template-columns: repeat(2, 1fr);
         gap: 16px;
     }
     .vision-cta-banner-full {
         grid-template-columns: 1fr;
     }
     .vision-cta-left-content {
-        padding: 36px 20px 28px;
+        padding: clamp(32px, 4vw, 48px) clamp(20px, 3.5vw, 36px) clamp(24px, 3vw, 32px);
+    }
+    .vision-cta-flight-svg {
+        width: 180px;
+        height: 140px;
+        opacity: 0.5;
     }
     .vision-cta-right-visual {
-        padding: 0 20px 30px;
+        padding: 0 clamp(20px, 3.5vw, 36px) clamp(24px, 3vw, 36px);
         justify-content: center;
     }
     .vision-cta-arch-wrapper {
-        min-height: 260px;
+        min-height: auto;
         justify-content: center;
     }
     .vision-cta-arch-img {
         border-radius: 24px;
         border: 4px solid #1688e8;
-        max-height: 260px;
+        max-height: 280px;
         width: 100%;
         object-fit: cover;
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
+    .vision-beliefs-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .vision-dots-left,
+    .vision-dots-right {
+        display: none;
+    }
+    .vision-card-content {
+        max-width: 85%;
+    }
+    .vision-card-bg-visual,
+    .mission-card-bg-visual {
+        opacity: 0.35;
+        width: 60%;
+    }
+    .vision-focus-card {
+        padding: 18px 16px;
+    }
+    .vision-focus-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 1.15rem;
+        margin-bottom: 12px;
+    }
+    .vision-focus-card-title {
+        font-size: 1rem;
+    }
+    .vision-focus-card-desc {
+        font-size: 0.82rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .vision-hero-left-panel {
+        padding: 24px 16px;
+    }
+    .vision-hero-title {
+        font-size: clamp(1.75rem, 6.5vw, 2.2rem);
+    }
+    .vision-hero-desc {
+        font-size: 0.92rem;
+    }
+    .vision-hero-bg-visual {
+        height: 200px;
+    }
+    .vision-hero-script-tag .script-title {
+        font-size: 1.8rem;
+    }
+    .vision-hero-script-tag .script-underline {
+        width: 90px;
+    }
+    .vision-featured-card {
+        padding: 22px 18px;
+    }
     .vision-card-content {
         max-width: 100%;
     }
     .vision-card-bg-visual,
     .mission-card-bg-visual {
-        opacity: 0.25;
+        opacity: 0.2;
+        width: 80%;
+    }
+    .vision-card-heading {
+        font-size: 1.22rem;
+    }
+    .vision-card-text {
+        font-size: 0.86rem;
     }
     .vision-focus-grid {
         grid-template-columns: 1fr;
+        gap: 12px;
+    }
+    .vision-cta-actions {
+        flex-direction: column;
+        width: 100%;
     }
     .vision-btn-orange,
     .vision-btn-enquire {
