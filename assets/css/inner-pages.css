@@ -1757,7 +1757,7 @@
 .principal-hero-canvas,
 .vision-hero-canvas {
     position: relative;
-    min-height: clamp(420px, 32vw, 490px);
+    min-height: clamp(340px, 26vw, 420px);
     display: flex;
     align-items: center;
     background: #ffffff;
@@ -1792,6 +1792,23 @@
     display: block;
 }
 
+/* Left Dot Matrix Decor */
+.staff-hero-dots-decor,
+.chairman-hero-dots-decor,
+.principal-hero-dots-decor,
+.vision-hero-dots-decor {
+    position: absolute;
+    top: 24px;
+    left: clamp(20px, 4vw, 55px);
+    width: 90px;
+    height: 75px;
+    background-image: radial-gradient(#93c5fd 1.8px, transparent 1.8px);
+    background-size: 15px 15px;
+    opacity: 0.7;
+    pointer-events: none;
+    z-index: 1;
+}
+
 /* Left Content Panel */
 .staff-hero-left-panel,
 .chairman-hero-left-panel,
@@ -1799,11 +1816,11 @@
 .vision-hero-left-panel {
     position: relative;
     z-index: 2;
-    width: 44%;
+    width: 46%;
     max-width: 560px;
     display: flex;
     align-items: center;
-    padding: clamp(36px, 4.2vw, 55px) clamp(20px, 3vw, 35px) clamp(55px, 6vw, 85px) clamp(24px, 5vw, 80px);
+    padding: clamp(30px, 3.8vw, 48px) clamp(20px, 3vw, 35px) clamp(32px, 4vw, 50px) clamp(24px, 5vw, 80px);
     background: transparent;
 }
 
@@ -1812,7 +1829,7 @@
 .principal-hero-content-inner,
 .vision-hero-content-inner {
     position: relative;
-    z-index: 5;
+    z-index: 3;
     max-width: 500px;
     width: 100%;
 }
@@ -1826,9 +1843,25 @@
     gap: 8px;
     font-size: 0.82rem;
     font-weight: 600;
-    color: #64748b;
+    color: #475569;
     margin-bottom: 12px;
     width: 100%;
+}
+
+.staff-breadcrumb a,
+.chairman-breadcrumb a,
+.principal-breadcrumb a,
+.vision-breadcrumb a {
+    color: #0284C7;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.staff-breadcrumb a:hover,
+.chairman-breadcrumb a:hover,
+.principal-breadcrumb a:hover,
+.vision-breadcrumb a:hover {
+    color: #F37021;
 }
 
 .staff-breadcrumb .sep,
@@ -1851,14 +1884,31 @@
 .chairman-eyebrow,
 .principal-eyebrow,
 .vision-eyebrow {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     color: #F37021;
     font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
     font-size: 0.78rem;
     font-weight: 800;
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+.staff-eyebrow::before,
+.staff-eyebrow::after,
+.chairman-eyebrow::before,
+.chairman-eyebrow::after,
+.principal-eyebrow::before,
+.principal-eyebrow::after,
+.vision-eyebrow::before,
+.vision-eyebrow::after {
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 2px;
+    background: #F37021;
 }
 
 .staff-hero-title,
@@ -1866,9 +1916,9 @@
 .principal-hero-title,
 .vision-hero-title {
     font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
-    font-size: clamp(1.9rem, 2.6vw, 2.65rem);
+    font-size: clamp(1.95rem, 2.5vw, 2.7rem);
     font-weight: 800;
-    color: #083B7A;
+    color: #0c2b4d;
     line-height: 1.15;
     margin-bottom: 12px;
     letter-spacing: -0.4px;
@@ -1885,11 +1935,11 @@
 .chairman-hero-desc,
 .principal-hero-desc,
 .vision-hero-desc {
-    font-size: clamp(0.85rem, 0.98vw, 0.94rem);
+    font-size: clamp(0.85rem, 0.95vw, 0.94rem);
     line-height: 1.6;
     color: #556987;
-    margin: 0 0 14px;
-    max-width: 500px;
+    margin: 0;
+    max-width: 480px;
 }
 
 .chairman-hero-pillars,
@@ -3447,20 +3497,19 @@
    8. RESPONSIVE BREAKPOINTS
    ========================================================================== */
 @media (max-width: 1200px) {
-    .about-hero-left-panel,
+    .about-hero-left-panel {
+        width: 56%;
+        padding: 26px 20px 26px 32px;
+    }
+    .about-hero-bg-visual {
+        width: 54%;
+    }
     .staff-hero-left-panel,
     .chairman-hero-left-panel,
     .principal-hero-left-panel,
     .vision-hero-left-panel {
-        width: 56%;
+        width: 50%;
         padding: 26px 20px 26px 32px;
-    }
-    .about-hero-bg-visual,
-    .staff-hero-bg-visual,
-    .chairman-hero-bg-visual,
-    .principal-hero-bg-visual,
-    .vision-hero-bg-visual {
-        width: 54%;
     }
     .about-apart-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -3491,6 +3540,7 @@
     .vision-hero-left-panel {
         width: 100%;
         padding: 26px 20px;
+        background: #ffffff;
     }
     .about-hero-wave-edge,
     .staff-hero-wave-edge,
@@ -3506,7 +3556,7 @@
     .vision-hero-bg-visual {
         position: relative;
         width: 100%;
-        height: 220px;
+        height: 240px;
     }
     .about-strip-grid {
         grid-template-columns: repeat(2, 1fr);

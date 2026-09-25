@@ -22,38 +22,30 @@ require_once __DIR__ . '/includes/header.php';
                 <img src="assets/images/inner-hero-banner.jpg" alt="Advaita School of Excellence Campus" class="vision-hero-bg-img" loading="eager">
             </div>
 
+            <!-- Left Dot Matrix Decor -->
+            <div class="vision-hero-dots-decor" aria-hidden="true"></div>
+
             <!-- Left Content Panel -->
             <div class="vision-hero-left-panel">
                 <div class="vision-hero-content-inner">
                     <!-- Breadcrumbs -->
                     <div class="vision-breadcrumb">
-                        <span>Home</span>
+                        <a href="index.php">Home</a>
                         <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
-                        <span>About Us</span>
+                        <a href="about-us.php">About Us</a>
                         <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
                         <span class="active">Vision &amp; Mission</span>
                     </div>
 
-                    <span class="vision-eyebrow">— OUR VISION &amp; MISSION —</span>
+                    <span class="vision-eyebrow">OUR VISION &amp; MISSION</span>
                     <h1 class="vision-hero-title">
                         Guiding Young Minds<br>
-                        Towards a <span class="text-orange">Brighter Tomorrow.</span>
+                        Towards a <span class="text-orange">Brighter<br>Tomorrow.</span>
                     </h1>
 
                     <p class="vision-hero-desc">
                         At Advaita School of Excellence, our vision and mission reflect our unwavering commitment to academic excellence, strong values and the all-round development of every child.
                     </p>
-
-                    <div class="vision-hero-actions">
-                        <a href="index.php#admissions" class="vision-btn-orange">
-                            <span>Book a Campus Visit</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                        <a href="#core-beliefs" class="vision-btn-video">
-                            <i class="fa-solid fa-compass"></i>
-                            <span>Our Beliefs</span>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>

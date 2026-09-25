@@ -22,51 +22,31 @@ require_once __DIR__ . '/includes/header.php';
                 <img src="assets/images/inner-hero-banner.jpg" alt="Advaita School of Excellence Campus" class="chairman-hero-bg-img" loading="eager">
             </div>
 
+            <!-- Left Dot Matrix Decor -->
+            <div class="chairman-hero-dots-decor" aria-hidden="true"></div>
+
             <!-- Left Content Panel -->
             <div class="chairman-hero-left-panel">
                 <div class="chairman-hero-content-inner">
                     <!-- Breadcrumbs -->
                     <div class="chairman-breadcrumb">
-                        <span>Home</span>
+                        <a href="index.php">Home</a>
                         <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
-                        <span>About Us</span>
+                        <a href="about-us.php">About Us</a>
                         <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
                         <span class="active">Chairman's Desk</span>
                     </div>
 
-                    <span class="chairman-eyebrow">— FROM THE CHAIRMAN —</span>
+                    <span class="chairman-eyebrow">FROM THE CHAIRMAN</span>
                     <h1 class="chairman-hero-title">
                         Building Stronger<br>
                         Foundations for<br>
                         <span class="text-orange">Brighter Tomorrows.</span>
                     </h1>
-                    
-                    <div class="chairman-hero-pillars">
-                        <span>Education</span>
-                        <span class="pillar-pipe">|</span>
-                        <span>Values</span>
-                        <span class="pillar-pipe">|</span>
-                        <span>Discipline</span>
-                        <span class="pillar-pipe">|</span>
-                        <span>Opportunities</span>
-                        <span class="pillar-pipe">|</span>
-                        <span>A Better Society</span>
-                    </div>
 
                     <p class="chairman-hero-desc">
                         At Advaita School of Excellence, we go beyond textbooks to create a nurturing environment where every child is encouraged to learn, grow and shape a brighter future.
                     </p>
-
-                    <div class="chairman-hero-actions">
-                        <a href="about-us.php" class="chairman-btn-orange">
-                            <span>Our Journey</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                        <a href="index.php#campus-life" class="chairman-btn-video">
-                            <i class="fa-solid fa-circle-play"></i>
-                            <span>Watch Video</span>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>

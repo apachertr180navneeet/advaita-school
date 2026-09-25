@@ -22,48 +22,30 @@ require_once __DIR__ . '/includes/header.php';
                 <img src="assets/images/inner-hero-banner.jpg" alt="Advaita School of Excellence Campus" class="principal-hero-bg-img" loading="eager">
             </div>
 
+            <!-- Left Dot Matrix Decor -->
+            <div class="principal-hero-dots-decor" aria-hidden="true"></div>
+
             <!-- Left Content Panel -->
             <div class="principal-hero-left-panel">
                 <div class="principal-hero-content-inner">
                     <!-- Breadcrumbs -->
                     <div class="principal-breadcrumb">
-                        <span>Home</span>
+                        <a href="index.php">Home</a>
                         <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
-                        <span>About Us</span>
+                        <a href="about-us.php">About Us</a>
                         <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
                         <span class="active">Principal's Desk</span>
                     </div>
 
-                    <span class="principal-eyebrow">— FROM THE PRINCIPAL —</span>
+                    <span class="principal-eyebrow">FROM THE PRINCIPAL</span>
                     <h1 class="principal-hero-title">
                         Nurturing Potential<br>
-                        for a <span class="text-orange">Brighter Tomorrow.</span>
+                        Towards a <span class="text-orange">Brighter<br>Tomorrow.</span>
                     </h1>
-                    
-                    <div class="principal-hero-pillars">
-                        <span>Academic Excellence</span>
-                        <span class="pillar-pipe">|</span>
-                        <span>Character</span>
-                        <span class="pillar-pipe">|</span>
-                        <span>Opportunities</span>
-                        <span class="pillar-pipe">|</span>
-                        <span>Lifelong Learning</span>
-                    </div>
 
                     <p class="principal-hero-desc">
                         At Advaita School of Excellence, we are committed to providing a nurturing and inspiring environment where every child is encouraged to learn, grow, and succeed.
                     </p>
-
-                    <div class="principal-hero-actions">
-                        <a href="index.php#admissions" class="principal-btn-orange">
-                            <span>Book a Campus Visit</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                        <a href="about-us.php" class="principal-btn-video">
-                            <i class="fa-solid fa-circle-play"></i>
-                            <span>Explore Advaita</span>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>

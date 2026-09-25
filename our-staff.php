@@ -22,23 +22,26 @@ require_once __DIR__ . '/includes/header.php';
                 <img src="assets/images/inner-hero-banner.jpg" alt="Advaita School of Excellence Campus" class="staff-hero-bg-img" loading="eager">
             </div>
 
+            <!-- Left Dot Matrix Decor -->
+            <div class="staff-hero-dots-decor" aria-hidden="true"></div>
+
             <!-- Left Content Panel -->
             <div class="staff-hero-left-panel">
                 <div class="staff-hero-content-inner">
                     <!-- Breadcrumbs -->
                     <div class="staff-breadcrumb">
-                        <span>Home</span>
+                        <a href="index.php">Home</a>
                         <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
-                        <span>About Us</span>
+                        <a href="about-us.php">About Us</a>
                         <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
                         <span class="active">Our Faculty</span>
                     </div>
 
-                    <div class="staff-eyebrow">— OUR FACULTY —</div>
+                    <div class="staff-eyebrow">OUR FACULTY</div>
                     <h1 class="staff-hero-title">
                         Meet the Educators<br>
                         Who Inspire Every<br>
-                        <span class="text-orange">Advaita Learner</span>.
+                        <span class="text-orange">Advaita Learner.</span>
                     </h1>
                     
                     <p class="staff-hero-desc">
