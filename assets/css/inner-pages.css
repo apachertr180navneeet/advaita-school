@@ -2416,7 +2416,7 @@
 }
 
 /* --------------------------------------------------------------------------
-   Section 7: CTA Banner ("Be a Part of Advaita") - Light Sky-Blue Aesthetic
+   Section 7: CTA Banner ("Be a Part of Advaita") - Matching Exact Mockup
    -------------------------------------------------------------------------- */
 .about-cta-banner {
     padding: 0;
@@ -2424,11 +2424,12 @@
     background: #ffffff;
     overflow: hidden;
     position: relative;
+    border-bottom: 4px solid #002752;
 }
 
 .about-cta-wave-top {
     width: 100%;
-    height: 48px;
+    height: 52px;
     line-height: 0;
     margin-bottom: -2px;
 }
@@ -2441,34 +2442,19 @@
 
 .about-cta-box {
     width: 100%;
-    background: linear-gradient(135deg, #e1f0fe 0%, #ecf6fd 45%, #f4faff 100%);
+    background: linear-gradient(135deg, #e6f3fd 0%, #edf7ff 45%, #f4faff 100%);
     display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.95fr);
+    grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
     align-items: center;
     position: relative;
     overflow: hidden;
     min-height: 380px;
 }
 
-/* Subtle dot matrix pattern in the center */
-.about-cta-box::before {
-    content: '';
-    position: absolute;
-    top: 20%;
-    left: 42%;
-    width: 160px;
-    height: 140px;
-    background-image: radial-gradient(#93c5fd 2px, transparent 2px);
-    background-size: 20px 20px;
-    opacity: 0.8;
-    pointer-events: none;
-    z-index: 1;
-}
-
 .about-cta-content {
     position: relative;
     z-index: 3;
-    padding: clamp(35px, 4.5vw, 60px) clamp(24px, 3.5vw, 45px) clamp(35px, 4.5vw, 60px) clamp(30px, 6vw, 100px);
+    padding: clamp(35px, 4.5vw, 60px) clamp(20px, 3vw, 40px) clamp(35px, 4.5vw, 60px) clamp(30px, 6vw, 100px);
     display: flex;
     align-items: center;
 }
@@ -2476,13 +2462,11 @@
 .about-cta-text-wrap {
     position: relative;
     z-index: 3;
-    max-width: 560px;
+    max-width: 580px;
 }
 
 .about-cta-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+    display: inline-block;
     color: #0284c7;
     font-size: 0.8125rem;
     font-weight: 800;
@@ -2492,18 +2476,18 @@
 }
 
 .about-cta-title {
-    font-size: clamp(1.95rem, 2.8vw, 2.6rem);
+    font-size: clamp(2rem, 2.9vw, 2.7rem);
     font-weight: 800;
     color: #083B7A;
-    line-height: 1.2;
-    margin-bottom: 12px;
+    line-height: 1.16;
+    margin-bottom: 14px;
     letter-spacing: -0.5px;
 }
 
 .about-cta-desc {
     font-size: clamp(0.9375rem, 1.05vw, 1.03125rem);
     color: #4b5563;
-    margin-bottom: 26px;
+    margin-bottom: 28px;
     line-height: 1.6;
 }
 
@@ -2524,23 +2508,28 @@
     font-size: 0.9375rem;
     padding: 13px 26px;
     border-radius: 50px;
-    border: 1.5px solid #cbd5e1;
+    border: 1.5px solid #083B7A;
     text-decoration: none;
     transition: all 0.25s ease;
-    box-shadow: 0 4px 12px rgba(8, 59, 122, 0.05);
+    box-shadow: 0 2px 8px rgba(8, 59, 122, 0.04);
 }
 
 .about-btn-white-pill:hover {
-    border-color: #083B7A;
-    background: #f8fafc;
+    border-color: #F37021;
+    background: #ffffff;
+    color: #F37021 !important;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(8, 59, 122, 0.1);
-    color: #083B7A !important;
+    box-shadow: 0 6px 18px rgba(8, 59, 122, 0.1);
 }
 
 .about-btn-white-pill i {
     color: #083B7A;
     font-size: 1rem;
+    transition: color 0.25s ease;
+}
+
+.about-btn-white-pill:hover i {
+    color: #F37021;
 }
 
 .about-cta-students-wrap {
@@ -2550,17 +2539,33 @@
     justify-content: flex-end;
     align-items: flex-end;
     height: 100%;
+    min-height: 380px;
     line-height: 0;
     overflow: hidden;
 }
 
+/* Dots pattern */
+.about-cta-dots-pattern {
+    position: absolute;
+    left: -30px;
+    top: 25%;
+    width: 140px;
+    height: 120px;
+    background-image: radial-gradient(#60a5fa 2.5px, transparent 2.5px);
+    background-size: 22px 22px;
+    opacity: 0.85;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Soft sky-blue blob backdrop behind students */
 .about-cta-blob-backdrop {
     position: absolute;
-    right: 5%;
+    right: 0;
     bottom: -10%;
-    width: 440px;
-    height: 440px;
-    background: radial-gradient(circle, rgba(186, 230, 253, 0.65) 0%, rgba(186, 230, 253, 0) 70%);
+    width: 480px;
+    height: 480px;
+    background: radial-gradient(circle at 60% 40%, rgba(186, 230, 253, 0.75) 0%, rgba(186, 230, 253, 0.3) 50%, transparent 75%);
     border-radius: 50%;
     pointer-events: none;
     z-index: 1;
@@ -2658,6 +2663,9 @@
         padding: 40px 24px 24px;
         text-align: center;
         justify-content: center;
+    }
+    .about-cta-dots-pattern {
+        display: none;
     }
     .about-cta-watermark {
         left: 50%;
