@@ -1136,19 +1136,19 @@
 .chairman-message-card {
     background: #ffffff;
     border: 1px solid #e0effa;
-    border-radius: var(--adv-radius-xl);
+    border-radius: 24px;
     padding: clamp(26px, 3.2vw, 40px);
     display: grid;
     grid-template-columns: 1.35fr 0.85fr;
     gap: clamp(24px, 3vw, 42px);
     align-items: center;
     box-shadow: 0 10px 30px rgba(8, 59, 122, 0.06);
+    position: relative;
 }
 
-.chairman-message-eyebrow,
-.principal-message-eyebrow {
+.chairman-message-eyebrow {
     display: inline-block;
-    color: var(--adv-sky);
+    color: var(--adv-orange);
     font-family: var(--adv-font-sans);
     font-size: 0.75rem;
     font-weight: 800;
@@ -1157,8 +1157,7 @@
     margin-bottom: 6px;
 }
 
-.chairman-message-title,
-.principal-message-title {
+.chairman-message-title {
     font-family: var(--adv-font-sans);
     font-size: clamp(1.75rem, 2.4vw, 2.25rem);
     font-weight: 800;
@@ -1168,50 +1167,48 @@
     letter-spacing: -0.4px;
 }
 
-.chairman-salutation,
-.principal-salutation {
+.chairman-message-title span {
+    color: var(--adv-orange);
+}
+
+.chairman-salutation {
     font-size: 0.9rem;
     font-weight: 700;
     color: var(--adv-navy);
     margin-bottom: 10px;
-    font-style: italic;
 }
 
-.chairman-message-content p,
-.principal-message-content p {
+.chairman-message-content p {
     font-size: 0.88rem;
     line-height: 1.6;
     color: var(--adv-text-body);
     margin-bottom: 10px;
 }
 
-.chairman-quote-box,
-.principal-quote-box {
-    margin: 12px 0;
+.chairman-quote-box {
+    margin: 14px 0 4px;
     background: #eaf6ff;
-    border-left: 4px solid var(--adv-sky);
-    border-radius: 0 var(--adv-radius-md) var(--adv-radius-md) 0;
-    padding: 10px 16px;
+    border-left: 4.5px solid #0284c7;
+    border-radius: 0 12px 12px 0;
+    padding: 12px 18px;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
 }
 
-.chairman-quote-icon,
-.principal-quote-icon {
-    color: var(--adv-sky);
-    font-size: 1.8rem;
+.chairman-quote-icon {
+    color: #0284c7;
+    font-size: 2.2rem;
     line-height: 1;
     font-family: Georgia, serif;
     font-weight: 800;
     flex-shrink: 0;
 }
 
-.chairman-quote-text,
-.principal-quote-text {
+.chairman-quote-text {
     color: #1e3a5f;
     font-style: italic;
-    font-size: 0.85rem;
+    font-size: 0.875rem;
     line-height: 1.5;
     margin: 0;
     font-weight: 500;
@@ -1219,42 +1216,74 @@
 
 .chairman-profile-col {
     position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .chairman-profile-card-wrapper {
     position: relative;
-    max-width: 300px;
+    width: 100%;
+    max-width: 320px;
     margin: 0 auto;
 }
 
+/* Blue Accent Tab on Right */
+.chairman-profile-blue-tab {
+    position: absolute;
+    top: 50px;
+    right: -24px;
+    width: 45px;
+    height: 90px;
+    background: #0284c7;
+    border-radius: 0 16px 16px 0;
+    z-index: 1;
+}
+
+/* Dot grid decoration outside right */
+.chairman-profile-dots-decor {
+    position: absolute;
+    top: 20px;
+    right: -38px;
+    width: 60px;
+    height: 100px;
+    background-image: radial-gradient(#93c5fd 1.8px, transparent 1.8px);
+    background-size: 14px 14px;
+    opacity: 0.6;
+    z-index: 0;
+    pointer-events: none;
+}
+
 .chairman-profile-card {
+    position: relative;
+    z-index: 2;
     background: #ffffff;
-    border-radius: var(--adv-radius-xl);
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 12px 32px rgba(8, 59, 122, 0.1);
+    box-shadow: 0 14px 36px rgba(8, 59, 122, 0.12);
     border: 1px solid #e0effa;
 }
 
 .chairman-profile-photo-wrap {
     width: 100%;
-    height: 280px;
+    height: 290px;
     overflow: hidden;
-    background: #f1f5f9;
+    background: #f8fafc;
 }
 
 .chairman-profile-photo {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 15%;
+    object-position: center top;
     display: block;
 }
 
 .chairman-profile-info {
-    background: linear-gradient(135deg, #05264f 0%, #083B7A 100%);
+    background: linear-gradient(180deg, #073a76 0%, #032148 100%);
     color: #ffffff;
     padding: 14px 18px;
     text-align: center;
+    border-radius: 0 0 20px 20px;
 }
 
 .chairman-name {
@@ -1266,14 +1295,14 @@
 }
 
 .chairman-role {
-    font-size: 0.75rem;
+    font-size: 0.78125rem;
     font-weight: 700;
     color: var(--adv-orange);
     margin-bottom: 2px;
 }
 
 .chairman-org {
-    font-size: 0.7rem;
+    font-size: 0.72rem;
     color: #cbd5e1;
     margin: 0;
 }

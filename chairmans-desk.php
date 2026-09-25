@@ -140,6 +140,11 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Right: Chairman Profile Column -->
                 <div class="chairman-profile-col">
                     <div class="chairman-profile-card-wrapper">
+                        <!-- Blue Accent Tab on Right -->
+                        <div class="chairman-profile-blue-tab" aria-hidden="true"></div>
+                        <!-- Dot Grid Background Accent -->
+                        <div class="chairman-profile-dots-decor" aria-hidden="true"></div>
+
                         <div class="chairman-profile-card">
                             <div class="chairman-profile-photo-wrap">
                                 <img src="assets/images/chairman-real.png" alt="Shri. Vishal Vishal Wattamwar - Chairman" class="chairman-profile-photo" loading="lazy">
