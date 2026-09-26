@@ -484,7 +484,7 @@ require_once __DIR__ . '/includes/header.php';
 
         <!-- Students Image -->
         <div class="students">
-            <img src="assets/images/about-cta-students-trio.png" alt="Advaita Students" loading="lazy">
+            <img src="assets/images/about-cta-students-trio.png?v=<?php echo filemtime(__DIR__ . '/assets/images/about-cta-students-trio.png'); ?>" alt="Advaita Students" loading="lazy">
         </div>
     </section>
 

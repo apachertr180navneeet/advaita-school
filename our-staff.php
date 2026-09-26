@@ -73,7 +73,7 @@ require_once __DIR__ . '/includes/header.php';
                     <h1 class="staff-hero-title">
                         Meet the Educators<br>
                         Who Inspire Every<br>
-                        <span class="text-orange">Advaita Learner.</span>
+                        <span class="text-orange">Advaita</span> Learner.
                     </h1>
                     
                     <p class="staff-hero-desc">
@@ -306,7 +306,7 @@ require_once __DIR__ . '/includes/header.php';
         <div class="shape-three"></div>
         <!-- Left Graphic: Paper Airplane Image -->
         <div class="staff-join-plane-left" aria-hidden="true">
-            <img src="assets/images/staff-join-airplane-bg.png" alt="Paper Airplane Trail" class="staff-join-plane-img" loading="lazy">
+            <img src="assets/images/staff-airplane-trail.svg?v=<?php echo time(); ?>" alt="Paper Airplane Trail" class="staff-join-plane-img" loading="lazy">
         </div>
 
         <!-- Center Content -->
@@ -335,7 +335,7 @@ require_once __DIR__ . '/includes/header.php';
 
         <!-- Students Image on Right -->
         <div class="students">
-            <img src="assets/images/about-cta-students-trio.png" alt="Advaita Students" loading="lazy">
+            <img src="assets/images/about-cta-students-trio.png?v=<?php echo filemtime(__DIR__ . '/assets/images/about-cta-students-trio.png'); ?>" alt="Advaita Students" loading="lazy">
         </div>
     </section>
 
@@ -359,13 +359,13 @@ require_once __DIR__ . '/includes/header.php';
             <!-- Middle 3 Image Gallery -->
             <div class="staff-showcase-gallery">
                 <div class="staff-showcase-thumb">
-                    <img src="assets/images/about-hero-building.jpg" alt="Advaita Campus Building" class="staff-thumb-img" loading="lazy">
+                    <img src="assets/images/staff-thumb-1.jpg?v=<?php echo filemtime(__DIR__ . '/assets/images/staff-thumb-1.jpg'); ?>" alt="Advaita Campus Building" class="staff-thumb-img" loading="lazy">
                 </div>
                 <div class="staff-showcase-thumb">
-                    <img src="assets/images/fac-library.jpg" alt="Advaita Library" class="staff-thumb-img" loading="lazy">
+                    <img src="assets/images/staff-thumb-2.jpg?v=<?php echo filemtime(__DIR__ . '/assets/images/staff-thumb-2.jpg'); ?>" alt="Advaita Library" class="staff-thumb-img" loading="lazy">
                 </div>
                 <div class="staff-showcase-thumb">
-                    <img src="assets/images/fac-science-lab.jpg" alt="Advaita Science Lab" class="staff-thumb-img" loading="lazy">
+                    <img src="assets/images/staff-thumb-3.jpg?v=<?php echo filemtime(__DIR__ . '/assets/images/staff-thumb-3.jpg'); ?>" alt="Advaita Classroom" class="staff-thumb-img" loading="lazy">
                 </div>
             </div>
 

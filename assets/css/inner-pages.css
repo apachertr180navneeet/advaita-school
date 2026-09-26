@@ -2408,6 +2408,7 @@
     object-fit: contain;
     object-position: left center;
     display: block;
+    mix-blend-mode: multiply;
 }
 
 /* Dots Pattern before Students on right */
