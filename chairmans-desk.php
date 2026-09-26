@@ -239,57 +239,46 @@ require_once __DIR__ . '/includes/header.php';
     <!-- =========================================================================
          4. CTA BANNER SECTION: Be A Part of Advaita (Full Width Layout)
          ========================================================================= -->
-    <section class="admission-banner">
+    <section class="staff-join-section">
         <!-- Background Shapes -->
         <div class="shape-one"></div>
         <div class="shape-two"></div>
         <div class="shape-three"></div>
 
-        <!-- Vector Airplane Decor -->
-        <div class="shape-airplane" aria-hidden="true">
-            <img src="assets/images/staff-airplane-trail.svg" alt="">
+        <!-- Left Graphic: Paper Airplane Image -->
+        <div class="staff-join-plane-left" aria-hidden="true">
+            <img src="assets/images/staff-airplane-trail.svg" alt="Paper Airplane Trail" class="staff-join-plane-img" loading="lazy">
         </div>
 
-        <!-- Dots -->
-        <div class="dot-pattern"></div>
-
-        <!-- Content -->
-        <div class="banner-content">
-            <div class="copy">
-                <!-- Eyebrow -->
-                <div class="eyebrow">
-                    BE A PART OF ADVAITA
-                    <span class="eyebrow-line"></span>
-                </div>
-
-                <!-- Heading -->
+        <!-- Center Content -->
+        <div class="banner-content-center">
+            <div class="copy-center">
+                <div class="eyebrow">— BE A PART OF ADVAITA —</div>
                 <h2 class="headline">
-                    Together, let’s build<br>
-                    <span class="text-orange">brighter tomorrows.</span>
+                    Together, let’s build <span class="text-orange">brighter tomorrows.</span>
                 </h2>
-
-                <!-- Description -->
                 <p class="subtext">
                     Give your child the right start with strong academics, values and endless opportunities.
                 </p>
-
-                <!-- Buttons -->
                 <div class="buttons">
-                    <a href="index.php#admissions" class="btn-enrol">
+                    <a href="index.php#admissions" class="staff-btn-orange">
                         <span>Book a Campus Visit</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
-                    <a href="index.php#contact" class="btn-visit">
+                    <a href="index.php#contact" class="staff-btn-outline">
                         <span>Enquire Now</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
+        </div>
 
-            <!-- Students -->
-            <div class="students" aria-hidden="true">
-                <img src="assets/images/about-cta-students-trio.png" alt="Advaita Students" loading="lazy">
-            </div>
+        <!-- Dots Pattern on Right before students -->
+        <div class="dot-pattern"></div>
+
+        <!-- Students Image on Right -->
+        <div class="students">
+            <img src="assets/images/about-cta-students-trio.png" alt="Advaita Students" loading="lazy">
         </div>
     </section>
 

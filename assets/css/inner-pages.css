@@ -3152,21 +3152,29 @@
     pointer-events: none;
 }
 
-/* Vector Airplane Decor */
+/* Vector Airplane Decor - Large spanning trail connecting left towards center */
 .admission-banner .shape-airplane {
     position: absolute;
-    top: 20px;
-    left: clamp(24px, 4.5vw, 65px);
-    width: clamp(75px, 7vw, 105px);
+    left: clamp(10px, 2.5vw, 40px);
+    top: 0;
+    bottom: 0;
+    width: clamp(260px, 32vw, 440px);
+    height: 100%;
     pointer-events: none;
-    z-index: 6;
-    opacity: 0.92;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    overflow: visible;
 }
 
 .admission-banner .shape-airplane img {
     width: 100%;
-    height: auto;
+    height: 88%;
+    max-height: 230px;
+    object-fit: contain;
+    object-position: left center;
     display: block;
+    opacity: 0.92;
 }
 
 /* Dots Pattern */
@@ -3197,6 +3205,8 @@
 .admission-banner .copy {
     width: 58%;
     padding: 25px 0 22px 5.5%;
+    position: relative;
+    z-index: 5;
 }
 
 .admission-banner .eyebrow {
