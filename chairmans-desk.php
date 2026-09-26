@@ -237,62 +237,85 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
     <!-- =========================================================================
-         4. CTA BANNER SECTION: Be A Part of Advaita
+         4. CTA BANNER SECTION: Be A Part of Advaita (Enclosed Card Layout)
          ========================================================================= -->
-    <section class="admission-banner">
-        <!-- Background Shapes -->
-        <div class="shape-one"></div>
-        <div class="shape-two"></div>
-        <div class="shape-three"></div>
+    <section class="chairman-cta-card-section">
+        <div class="chairman-cta-card-container">
+            <div class="chairman-cta-card">
 
-        <!-- Dots -->
-        <div class="dot-pattern"></div>
+                <!-- Left Content Area -->
+                <div class="chairman-cta-card-left">
+                    <!-- Vector Paper Airplane & Dotted Trail Decor -->
+                    <div class="chairman-cta-airplane-decor" aria-hidden="true">
+                        <img src="assets/images/staff-airplane-trail.svg" alt="" class="cta-airplane-svg">
+                    </div>
 
-        <!-- Airplane Graphic Decor -->
-        <div class="shape-airplane" aria-hidden="true">
-            <img src="assets/images/staff-airplane-trail.svg" alt="" class="airplane-svg">
-        </div>
+                    <!-- Ambient Dot Matrix Decor -->
+                    <div class="chairman-cta-dots-decor" aria-hidden="true"></div>
 
-        <!-- Content -->
-        <div class="banner-content">
-            <div class="copy">
-                <!-- Eyebrow -->
-                <div class="eyebrow">
-                    BE A PART OF ADVAITA
-                    <span class="eyebrow-line"></span>
+                    <div class="chairman-cta-content">
+                        <!-- Eyebrow -->
+                        <div class="chairman-cta-eyebrow">
+                            BE A PART OF ADVAITA
+                            <span class="cta-eyebrow-line"></span>
+                        </div>
+
+                        <!-- Headline -->
+                        <h2 class="chairman-cta-title">
+                            Together, let’s build<br>
+                            <span class="text-orange">brighter tomorrows.</span>
+                        </h2>
+
+                        <!-- Subtext -->
+                        <p class="chairman-cta-desc">
+                            Give your child the right start with strong academics, values and endless opportunities.
+                        </p>
+
+                        <!-- Action Buttons -->
+                        <div class="chairman-cta-actions">
+                            <a href="index.php#admissions" class="chairman-btn-orange">
+                                <span>Book a Campus Visit</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <a href="index.php#contact" class="chairman-btn-enquire">
+                                <span>Enquire Now</span>
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Heading -->
-                <h2 class="headline">
-                    Together, let’s build<br>
-                    <span class="text-orange">brighter tomorrows.</span>
-                </h2>
+                <!-- Right Visual Area with Curved Arch & Students -->
+                <div class="chairman-cta-card-right">
+                    <!-- School Campus Background in Arch -->
+                    <div class="chairman-cta-arch-bg">
+                        <img src="assets/images/about-hero-building.jpg" alt="Advaita Campus" class="cta-arch-campus-img" loading="lazy">
+                    </div>
 
-                <!-- Description -->
-                <p class="subtext">
-                    Give your child the right start with strong academics, values and endless opportunities.
-                </p>
+                    <!-- Wave Arch Mask Overlay with Blue Border -->
+                    <div class="chairman-cta-arch-wave" aria-hidden="true">
+                        <svg viewBox="0 0 500 320" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="ctaArchGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" stop-color="#38BDF8"/>
+                                    <stop offset="50%" stop-color="#0284C7"/>
+                                    <stop offset="100%" stop-color="#0369A1"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- Solid white mask on the left edge of the right visual -->
+                            <path d="M0,0 L65,0 C -5,90 -5,230 65,320 L0,320 Z" fill="#FFFFFF"/>
+                            <!-- Outer blue contour arch stroke -->
+                            <path d="M65,0 C -5,90 -5,230 65,320" stroke="url(#ctaArchGrad)" stroke-width="10" stroke-linecap="round"/>
+                        </svg>
+                    </div>
 
-                <!-- Buttons -->
-                <div class="buttons">
-                    <!-- Enrol Button -->
-                    <a href="index.php#admissions" class="btn-enrol">
-                        <span>Book a Campus Visit</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-
-                    <!-- School Visit -->
-                    <a href="index.php#contact" class="btn-visit">
-                        <span>Enquire Now</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
+                    <!-- 3 Students Cutout Layer -->
+                    <div class="chairman-cta-students-wrap">
+                        <img src="assets/images/about-cta-students-trio.png" alt="Advaita Students" class="cta-students-img" loading="lazy">
+                    </div>
                 </div>
+
             </div>
-        </div>
-
-        <!-- Students Image -->
-        <div class="students">
-            <img src="assets/images/about-cta-students-trio.png" alt="Advaita Students" loading="lazy">
         </div>
     </section>
 

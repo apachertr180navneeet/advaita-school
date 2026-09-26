@@ -3427,7 +3427,224 @@
 }
 
 /* Shared Inner Pages CTA Fallbacks */
-.chairman-cta-banner-section,
+/* ==========================================================================
+   CHAIRMAN CTA FULL-WIDTH SECTION
+   ========================================================================== */
+.chairman-cta-card-section {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    background: #ffffff;
+    overflow: hidden;
+    border-top: 1px solid #edf4fc;
+}
+
+.chairman-cta-card-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.chairman-cta-card {
+    background: #ffffff;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    min-height: clamp(270px, 20vw, 310px);
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Left Content Area */
+.chairman-cta-card-left {
+    position: relative;
+    padding: clamp(32px, 3.8vw, 48px) clamp(20px, 3vw, 40px) clamp(32px, 3.8vw, 48px) clamp(24px, 5.5vw, 85px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 5;
+    background: #ffffff;
+}
+
+.chairman-cta-airplane-decor {
+    position: absolute;
+    top: 18px;
+    left: clamp(20px, 4.5vw, 65px);
+    width: clamp(75px, 6vw, 95px);
+    pointer-events: none;
+    z-index: 6;
+    opacity: 0.95;
+}
+
+.chairman-cta-airplane-decor .cta-airplane-svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.chairman-cta-dots-decor {
+    position: absolute;
+    top: 24px;
+    left: clamp(22px, 4.8vw, 70px);
+    width: 75px;
+    height: 65px;
+    background-image: radial-gradient(#93c5fd 1.8px, transparent 1.8px);
+    background-size: 14px 14px;
+    opacity: 0.45;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.chairman-cta-content {
+    position: relative;
+    z-index: 7;
+}
+
+.chairman-cta-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #0284c7;
+    font-family: var(--adv-font-sans);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.chairman-cta-eyebrow .cta-eyebrow-line {
+    display: inline-block;
+    width: 32px;
+    height: 2px;
+    background: #bae6fd;
+    border-radius: 2px;
+}
+
+.chairman-cta-title {
+    font-family: var(--adv-font-sans);
+    font-size: clamp(1.8rem, 2.4vw, 2.4rem);
+    font-weight: 800;
+    color: #0c2b4d;
+    line-height: 1.15;
+    margin: 0 0 10px;
+    letter-spacing: -0.4px;
+}
+
+.chairman-cta-title .text-orange {
+    color: #F37021;
+}
+
+.chairman-cta-desc {
+    font-size: clamp(0.85rem, 0.95vw, 0.92rem);
+    line-height: 1.55;
+    color: #556987;
+    margin: 0 0 20px;
+    max-width: 480px;
+}
+
+.chairman-cta-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.chairman-btn-enquire {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #ffffff;
+    color: #0c2b4d !important;
+    font-family: var(--adv-font-sans);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 9px 20px;
+    border-radius: 50px;
+    border: 1.5px solid #0c2b4d;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.chairman-btn-enquire:hover {
+    background: #0c2b4d;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(12, 43, 77, 0.15);
+}
+
+/* Right Visual Area */
+.chairman-cta-card-right {
+    position: relative;
+    overflow: hidden;
+    min-height: clamp(270px, 20vw, 310px);
+    background: #e2f0fc;
+}
+
+.chairman-cta-arch-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+.chairman-cta-arch-bg .cta-arch-campus-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+    filter: brightness(1.03) contrast(0.98);
+}
+
+/* Wave Arch Overlay */
+.chairman-cta-arch-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.chairman-cta-arch-wave svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.chairman-cta-students-wrap {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    pointer-events: none;
+}
+
+.chairman-cta-students-wrap .cta-students-img {
+    height: 100%;
+    max-height: 310px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: right bottom;
+    display: block;
+}
+
+/* Shared Inner Pages CTA Fallbacks */
 .vision-cta-banner-section {
     position: relative;
     width: 100%;
@@ -3436,7 +3653,6 @@
     overflow: hidden;
 }
 
-.chairman-cta-banner-full,
 .vision-cta-banner-full {
     position: relative;
     width: 100%;
@@ -3448,7 +3664,6 @@
     overflow: hidden;
 }
 
-.chairman-cta-left-content,
 .vision-cta-left-content {
     position: relative;
     padding: clamp(36px, 4.5vw, 54px) clamp(20px, 3.5vw, 40px) clamp(36px, 4.5vw, 54px) clamp(24px, 5.5vw, 76px);
@@ -3458,7 +3673,6 @@
     z-index: 3;
 }
 
-.chairman-cta-eyebrow,
 .vision-cta-eyebrow,
 .principal-cta-eyebrow {
     display: inline-block;
@@ -3471,7 +3685,6 @@
     margin-bottom: 10px;
 }
 
-.chairman-cta-title,
 .vision-cta-title,
 .principal-cta-title {
     font-family: var(--adv-font-sans);
@@ -3483,7 +3696,6 @@
     letter-spacing: -0.4px;
 }
 
-.chairman-cta-desc,
 .vision-cta-desc,
 .principal-cta-desc {
     font-size: 0.9375rem;
@@ -3493,44 +3705,6 @@
     max-width: 520px;
 }
 
-.chairman-cta-actions {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    flex-wrap: wrap;
-}
-
-.chairman-btn-orange-solid {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: var(--adv-orange, #F37021);
-    color: #ffffff;
-    border-radius: 50px;
-    padding: 12px 26px;
-    font-weight: 700;
-    font-size: 0.875rem;
-    text-decoration: none;
-    box-shadow: 0 6px 18px rgba(243, 112, 33, 0.28);
-    transition: all 0.25s ease;
-}
-
-.chairman-btn-navy-outline {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: #ffffff;
-    color: var(--adv-navy, #0A2540);
-    border: 1.5px solid var(--adv-navy, #0A2540);
-    border-radius: 50px;
-    padding: 11px 24px;
-    font-weight: 700;
-    font-size: 0.875rem;
-    text-decoration: none;
-    transition: all 0.25s ease;
-}
-
-.chairman-cta-arch-wrapper,
 .vision-cta-arch-wrapper {
     position: relative;
     height: 100%;
@@ -3542,7 +3716,6 @@
     z-index: 2;
 }
 
-.chairman-cta-arch-img,
 .vision-cta-arch-img {
     max-height: 315px;
     width: auto;
