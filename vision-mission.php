@@ -211,11 +211,15 @@ require_once __DIR__ . '/includes/header.php';
          4. OUR FOCUS AREAS: Turning Vision into Meaningful Action (8 Cards Grid)
          ========================================================================= -->
     <section class="vision-focus-section">
+        <!-- Ambient Decor Dots -->
+        <div class="vision-focus-dots-left" aria-hidden="true"></div>
+        <div class="vision-focus-dots-right" aria-hidden="true"></div>
+
         <div class="vision-focus-container">
             <div class="about-section-header text-center">
-                <span class="about-eyebrow">— OUR FOCUS AREAS —</span>
+                <span class="vision-focus-eyebrow">OUR FOCUS AREAS</span>
                 <h2 class="about-section-heading">
-                    Turning Vision into <span>Meaningful Action.</span>
+                    Turning Vision into <span class="text-orange">Meaningful Action.</span>
                 </h2>
                 <p class="about-section-subhead">
                     We work towards our mission through focused initiatives that ensure every child receives the right guidance, opportunities and environment to grow.
@@ -248,7 +252,7 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Focus 3: Experienced Faculty -->
                 <div class="vision-focus-card">
                     <div class="vision-focus-icon icon-indigo">
-                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <i class="fa-solid fa-users"></i>
                     </div>
                     <h3 class="vision-focus-card-title">Experienced Faculty</h3>
                     <p class="vision-focus-card-desc">
@@ -317,55 +321,46 @@ require_once __DIR__ . '/includes/header.php';
     <!-- =========================================================================
          5. CTA BANNER SECTION: Be a Part of the Advaita Journey
          ========================================================================= -->
-    <section class="admission-banner">
+    <section class="staff-join-section">
         <!-- Background Shapes -->
         <div class="shape-one"></div>
         <div class="shape-two"></div>
         <div class="shape-three"></div>
 
-        <!-- Dots -->
-        <div class="dot-pattern"></div>
+        <!-- Left Graphic: Paper Airplane Image -->
+        <div class="staff-join-plane-left" aria-hidden="true">
+            <img src="assets/images/staff-airplane-trail.svg" alt="Paper Airplane Trail" class="staff-join-plane-img" loading="lazy">
+        </div>
 
-        <!-- Content -->
-        <div class="banner-content">
-            <div class="copy">
-                <!-- Eyebrow -->
-                <div class="eyebrow">
-                    TOGETHER TOWARDS A BRIGHTER TOMORROW
-                    <span class="eyebrow-line"></span>
-                </div>
-
-                <!-- Heading -->
+        <!-- Center Content -->
+        <div class="banner-content-center">
+            <div class="copy-center">
+                <div class="eyebrow">— TOGETHER TOWARDS A BRIGHTER TOMORROW —</div>
                 <h2 class="headline">
-                    Be a Part of the<br>
-                    <span class="text-orange">Advaita Journey.</span>
+                    Be a Part of the <span class="text-orange">Advaita Journey</span>
                 </h2>
-
-                <!-- Description -->
                 <p class="subtext">
                     Give your child the right start with strong academics, values and endless opportunities.
                 </p>
-
-                <!-- Buttons -->
                 <div class="buttons">
-                    <!-- Enrol Button -->
-                    <a href="index.php#admissions" class="btn-enrol">
+                    <a href="index.php#admissions" class="staff-btn-orange">
                         <span>Book a Campus Visit</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
-
-                    <!-- School Visit -->
-                    <a href="index.php#contact" class="btn-visit">
-                        <i class="fa-solid fa-phone"></i>
+                    <a href="index.php#contact" class="staff-btn-outline">
                         <span>Enquire Now</span>
+                        <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
         </div>
 
-        <!-- Students Image -->
+        <!-- Dots Pattern on Right before students -->
+        <div class="dot-pattern"></div>
+
+        <!-- Students Image on Right -->
         <div class="students">
-            <img src="assets/images/about-cta-students-trio.png" alt="Advaita School Students" loading="lazy">
+            <img src="assets/images/about-cta-students-trio.png" alt="Advaita Students" loading="lazy">
         </div>
     </section>
 

@@ -84,17 +84,19 @@ require_once __DIR__ . '/includes/header.php';
          2. PRINCIPAL'S MESSAGE SECTION
          ========================================================================= -->
     <section class="principal-message-section">
-        <!-- Background Side Dot Matrices -->
+        <!-- Background Side Dot Matrices & Aura -->
+        <div class="principal-message-top-aura" aria-hidden="true"></div>
         <div class="principal-message-dots-left" aria-hidden="true"></div>
         <div class="principal-message-dots-right" aria-hidden="true"></div>
 
         <div class="principal-message-container">
-            <div class="principal-message-card">
+            <div class="principal-message-grid">
 
-                <!-- Left Column: Principal Profile Card with Viewfinder Frame & Stats -->
+                <!-- Left Column: Standalone Profile Card with Viewfinder Frame & Stats -->
                 <div class="principal-profile-col">
-                    <div class="principal-profile-card-wrapper">
-                        <div class="principal-profile-card">
+                    <div class="principal-profile-card">
+                        <!-- Top Body -->
+                        <div class="principal-profile-card-body">
                             <!-- Viewfinder Frame with 4 Corner Brackets -->
                             <div class="principal-viewfinder-frame">
                                 <span class="vf-bracket vf-bracket-tl" aria-hidden="true"></span>
@@ -123,23 +125,23 @@ require_once __DIR__ . '/includes/header.php';
                                     Parbhani
                                 </p>
                             </div>
+                        </div>
 
-                            <!-- 3-Item Stats Bar -->
-                            <div class="principal-stats-bar">
-                                <div class="principal-stat-item">
-                                    <span class="stat-top">Values</span>
-                                    <span class="stat-bot">First</span>
-                                </div>
-                                <div class="principal-stat-divider" aria-hidden="true"></div>
-                                <div class="principal-stat-item">
-                                    <span class="stat-top">360°</span>
-                                    <span class="stat-bot">Development</span>
-                                </div>
-                                <div class="principal-stat-divider" aria-hidden="true"></div>
-                                <div class="principal-stat-item">
-                                    <span class="stat-top">100%</span>
-                                    <span class="stat-bot">Care</span>
-                                </div>
+                        <!-- 3-Item Stats Bar at Bottom of Card -->
+                        <div class="principal-stats-bar">
+                            <div class="principal-stat-item">
+                                <span class="stat-top">Values</span>
+                                <span class="stat-bot">First</span>
+                            </div>
+                            <div class="principal-stat-divider" aria-hidden="true"></div>
+                            <div class="principal-stat-item">
+                                <span class="stat-top">360°</span>
+                                <span class="stat-bot">Development</span>
+                            </div>
+                            <div class="principal-stat-divider" aria-hidden="true"></div>
+                            <div class="principal-stat-item">
+                                <span class="stat-top">100%</span>
+                                <span class="stat-bot">Care</span>
                             </div>
                         </div>
                     </div>
