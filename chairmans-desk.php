@@ -2,7 +2,7 @@
 /**
  * Chairman's Desk - Advaita School of Excellence, Parbhani
  * CBSE Affiliated (Affiliation No. 1130920)
- * Exact Visual Layout matching Official Reference (reference-3.png)
+ * Clean Semantic Layout matching the Official Design
  */
 $pageTitle = "Chairman's Desk - Advaita School of Excellence, Parbhani";
 $activePage = "chairmans-desk";
@@ -10,79 +10,18 @@ $activePage = "chairmans-desk";
 require_once __DIR__ . '/includes/header.php';
 ?>
 
-<div class="inner-page-wrapper chairman-page-wrapper">
+<main id="main" class="main-content-wrapper chairman-page-wrapper">
 
     <!-- =========================================================================
          1. HERO SECTION: Building Stronger Foundations for Brighter Tomorrows
          ========================================================================= -->
-    <section class="inner-hero-section">
-        <div class="inner-hero-canvas">
-            
-            <!-- Left Dot Matrix Decor -->
-            <div class="inner-hero-dots-decor" aria-hidden="true"></div>
-
-            <!-- Left Content Panel -->
-            <div class="inner-hero-left-panel">
-                <div class="inner-hero-content-inner">
-                    <!-- Breadcrumbs -->
-                    <div class="inner-breadcrumb">
-                        <a href="index.php">Home</a>
-                        <span class="sep">›</span>
-                        <a href="about-us.php">About Us</a>
-                        <span class="sep">›</span>
-                        <span class="active">Chairman's Desk</span>
-                    </div>
-
-                    <div class="inner-eyebrow">— FROM THE CHAIRMAN —</div>
-                    
-                    <h1 class="inner-hero-title">
-                        Building Stronger<br>
-                        Foundations for<br>
-                        <span class="text-orange">Brighter Tomorrows.</span>
-                    </h1>
-
-                    <div class="inner-hero-pillars">
-                        <span>Education</span>
-                        <span class="pillar-pipe">|</span>
-                        <span>Values</span>
-                        <span class="pillar-pipe">|</span>
-                        <span>Discipline</span>
-                        <span class="pillar-pipe">|</span>
-                        <span>Opportunities</span>
-                        <span class="pillar-pipe">|</span>
-                        <span>A Better Society</span>
-                    </div>
-                    
-                    <p class="inner-hero-desc">
-                        At Advaita School of Excellence, we go beyond textbooks to create a nurturing environment where every child is encouraged to learn, grow and shape a brighter future.
-                    </p>
-
-                    <div class="inner-hero-actions">
-                        <a href="about-us.php" class="btn-orange-pill">
-                            <span>Our Journey</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                        <a href="index.php#campus-life" class="btn-video-pill">
-                            <i class="fa-solid fa-circle-play"></i>
-                            <span>Watch Video</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right Campus Building Visual with Blue Arch Contour & Script Tag -->
-            <div class="inner-hero-right-visual">
-                <div class="inner-hero-img-frame">
-                    <img src="assets/images/about-hero-building.jpg" alt="Advaita School of Excellence Campus" class="inner-hero-campus-img" loading="eager">
-                    
-                    <!-- Advaita Logo Badge Overlay on Building -->
-                    <div class="inner-hero-building-logo">
-                        <img src="assets/images/logo-cropped.png" alt="Advaita Logo" class="building-logo-img">
-                    </div>
-                </div>
-
+    <section class="chairman-hero-section">
+        <div class="chairman-hero-canvas">
+            <!-- Background Image & Sky on the Right -->
+            <div class="chairman-hero-bg-visual" aria-hidden="true">
+                <img src="assets/images/about-hero-building.jpg" alt="Advaita School of Excellence Campus" class="chairman-hero-bg-img" loading="eager">
                 <!-- Floating Script Badge in Sky -->
-                <div class="inner-hero-script-tag">
+                <div class="chairman-hero-script-tag">
                     <span class="script-title">More<br>Than A School</span>
                     <svg class="script-underline" viewBox="0 0 140 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path d="M4 10C36 4 98 4 136 12" stroke="#F37021" stroke-width="3.5" stroke-linecap="round"/>
@@ -91,6 +30,57 @@ require_once __DIR__ . '/includes/header.php';
                 </div>
             </div>
 
+            <!-- Full Width Wave Mask Overlay with ambient blue contour -->
+            <div class="chairman-hero-wave-overlay" aria-hidden="true">
+                <svg viewBox="0 0 1440 480" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="chairmanWaveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#0284C7"/>
+                            <stop offset="50%" stop-color="#38BDF8"/>
+                            <stop offset="100%" stop-color="#60A5FA"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Ambient soft blue aura at far left -->
+                    <path d="M0,60 C90,60 140,160 140,260 C140,360 85,430 0,450 Z" fill="#E8F4FE" opacity="0.85"/>
+                    <!-- Outer vibrant sky-blue contour wave -->
+                    <path d="M0,0 L615,0 C665,80 725,190 805,280 C895,375 1045,435 1440,458 L1440,480 L0,480 Z" fill="url(#chairmanWaveGrad)" opacity="0.95"/>
+                    <!-- Mid soft blue contour wave -->
+                    <path d="M0,0 L600,0 C650,80 710,190 790,280 C880,375 1030,435 1440,452 L1440,480 L0,480 Z" fill="#BAE6FD"/>
+                    <!-- Main solid white wave panel covering left side completely -->
+                    <path d="M0,0 L585,0 C635,80 695,190 775,280 C865,375 1015,435 1440,445 L1440,480 L0,480 Z" fill="#FFFFFF"/>
+                    <!-- Bottom right gentle wave contours -->
+                    <path d="M850,480 C1020,420 1220,430 1440,455 L1440,480 Z" fill="#DCEEFF" opacity="0.8"/>
+                    <path d="M1060,480 C1200,445 1320,450 1440,468 L1440,480 Z" fill="#BAE6FD" opacity="0.65"/>
+                </svg>
+            </div>
+
+            <!-- Left Dot Matrix Decor -->
+            <div class="chairman-hero-dots-decor" aria-hidden="true"></div>
+
+            <!-- Left Content Panel -->
+            <div class="chairman-hero-left-panel">
+                <div class="chairman-hero-content-inner">
+                    <!-- Breadcrumbs -->
+                    <div class="chairman-breadcrumb">
+                        <a href="index.php">Home</a>
+                        <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
+                        <a href="about-us.php">About Us</a>
+                        <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
+                        <span class="active">Chairman's Desk</span>
+                    </div>
+
+                    <span class="chairman-eyebrow">FROM THE CHAIRMAN</span>
+                    <h1 class="chairman-hero-title">
+                        Building Stronger<br>
+                        Foundations for<br>
+                        <span class="text-orange">Brighter Tomorrows.</span>
+                    </h1>
+
+                    <p class="chairman-hero-desc">
+                        At Advaita School of Excellence, we go beyond textbooks to create a nurturing environment where every child is encouraged to learn, grow and shape a brighter future.
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -98,57 +88,63 @@ require_once __DIR__ . '/includes/header.php';
          2. CHAIRMAN'S MESSAGE SECTION
          ========================================================================= -->
     <section class="chairman-message-section">
-        <div class="section-decor-dots dots-left" aria-hidden="true"></div>
-        <div class="section-decor-dots dots-right" aria-hidden="true"></div>
+        <!-- Background Side Dot Matrices -->
+        <div class="chairman-message-dots-left" aria-hidden="true"></div>
+        <div class="chairman-message-dots-right" aria-hidden="true"></div>
 
         <div class="chairman-message-container">
-            <div class="chairman-message-grid">
-                
+            <div class="chairman-message-card">
+
                 <!-- Left: Message Content -->
-                <div class="chairman-message-left">
-                    <div class="section-eyebrow">— CHAIRMAN'S MESSAGE —</div>
-                    <h2 class="message-title">
+                <div class="chairman-message-content">
+                    <span class="chairman-message-eyebrow">—— CHAIRMAN'S MESSAGE ——</span>
+                    <h2 class="chairman-message-title">
                         A Few Words from<br>
-                        <span class="text-navy">Our Chairman.</span>
+                        <span>Our Chairman.</span>
                     </h2>
 
-                    <div class="message-salutation">
+                    <div class="chairman-salutation">
                         Dear Students, Parents and Well-wishers,
                     </div>
 
-                    <p class="message-paragraph">
+                    <p>
                         At Advaita School of Excellence, our vision has always been to create an education ecosystem that goes beyond textbooks. We believe in nurturing young minds with the right blend of knowledge, values, discipline and life skills, so that they grow into confident, compassionate and responsible global citizens.
                     </p>
 
-                    <p class="message-paragraph">
+                    <p>
                         In today's rapidly evolving world, academic excellence alone is not enough. That is why Advaita is committed to providing a strong foundation for NEET, IIT and various competitive exams along with holistic development in a supportive and inspiring environment.
                     </p>
 
-                    <p class="message-paragraph">
+                    <p>
                         Our focus is on creating opportunities where curiosity is encouraged, creativity is nurtured and every child is given the confidence to excel — not just in exams, but in life.
                     </p>
 
-                    <!-- Blue Quote Box -->
-                    <div class="message-quote-box">
-                        <div class="quote-icon-wrap">
-                            <i class="fa-solid fa-quote-left"></i>
-                        </div>
-                        <p class="quote-text">
+                    <!-- Quote Box -->
+                    <div class="chairman-quote-box">
+                        <div class="chairman-quote-icon" aria-hidden="true">“</div>
+                        <p class="chairman-quote-text">
                             With a strong foundation in education, ethics and innovation, we aim to develop responsible individuals who contribute positively to society.
                         </p>
                     </div>
                 </div>
 
-                <!-- Right: Chairman Profile Card -->
+                <!-- Right: Chairman Profile Column -->
                 <div class="chairman-profile-col">
-                    <div class="chairman-photo-card">
-                        <div class="chairman-photo-wrap">
-                            <img src="assets/images/chairman-real.png" alt="Shri. Vishal Vishal Wattamwar" class="chairman-photo-img" loading="lazy">
-                        </div>
-                        <div class="chairman-card-info-badge">
-                            <h3 class="chairman-card-name">Shri. Vishal Vishal Wattamwar</h3>
-                            <div class="chairman-card-role">Chairman,</div>
-                            <p class="chairman-card-sub">Sanmati Sevabhavi Sansthan, Parbhani</p>
+                    <div class="chairman-profile-card-wrapper">
+                        <!-- Blue Accent Tab on Right -->
+                        <div class="chairman-profile-blue-tab" aria-hidden="true"></div>
+                        <!-- Dot Grid Background Accent -->
+                        <div class="chairman-profile-dots-decor" aria-hidden="true"></div>
+
+                        <div class="chairman-profile-card">
+                            <div class="chairman-profile-photo-wrap">
+                                <img src="assets/images/chairman-real.png" alt="Shri. Vishal Vishal Wattamwar - Chairman" class="chairman-profile-photo" loading="lazy">
+                            </div>
+                            <div class="chairman-profile-info">
+                                <h3 class="chairman-name">Shri. Vishal Vishal Wattamwar</h3>
+                                <div class="chairman-role">Chairman,</div>
+                                <p class="chairman-org">Sanmati Sevabhavi Sansthan, Parbhani</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -158,58 +154,59 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
     <!-- =========================================================================
-         3. FOUR BELIEFS THAT GUIDE US SECTION
+         3. COMMITMENT SECTION: Four Beliefs That Guide Us (4 Cards)
          ========================================================================= -->
-    <section class="four-beliefs-section">
-        <div class="four-beliefs-container">
-            <div class="beliefs-section-header">
-                <div class="section-eyebrow">— OUR COMMITMENT —</div>
-                <h2 class="section-title">
-                    Four Beliefs That <span class="text-orange">Guide Us.</span>
+    <section class="chairman-commitment-section">
+        <div class="chairman-commitment-container">
+            <div class="about-section-header text-center">
+                <span class="about-eyebrow">—— OUR COMMITMENT ——</span>
+                <h2 class="about-section-heading">
+                    Four Beliefs That <span>Guide Us.</span>
                 </h2>
             </div>
 
-            <div class="beliefs-cards-grid">
-                <!-- Belief 1: Excellence -->
-                <div class="belief-card">
-                    <div class="belief-icon-circle icon-blue">
+            <!-- 4 Commitment Cards -->
+            <div class="chairman-commitment-grid">
+                <!-- Card 1: Excellence -->
+                <div class="chairman-commitment-card">
+                    <div class="chairman-commitment-icon icon-blue">
                         <i class="fa-solid fa-graduation-cap"></i>
                     </div>
-                    <h3 class="belief-title">Excellence</h3>
-                    <p class="belief-desc">
+                    <h3 class="chairman-commitment-card-title">Excellence</h3>
+                    <p class="chairman-commitment-desc">
                         Consistent pursuit of academic and personal growth.
                     </p>
                 </div>
 
-                <!-- Belief 2: Opportunity -->
-                <div class="belief-card">
-                    <div class="belief-icon-circle icon-orange">
+                <!-- Card 2: Opportunity -->
+                <div class="chairman-commitment-card">
+                    <div class="chairman-commitment-icon icon-orange">
                         <i class="fa-solid fa-users"></i>
                     </div>
-                    <h3 class="belief-title">Opportunity</h3>
-                    <p class="belief-desc">
+                    <h3 class="chairman-commitment-card-title">Opportunity</h3>
+                    <p class="chairman-commitment-desc">
                         Creating platforms to help every child discover their potential.
                     </p>
                 </div>
 
-                <!-- Belief 3: Values -->
-                <div class="belief-card">
-                    <div class="belief-icon-circle icon-sky">
+                <!-- Card 3: Values -->
+                <div class="chairman-commitment-card">
+                    <div class="chairman-commitment-icon icon-blue">
                         <i class="fa-solid fa-heart"></i>
                     </div>
-                    <h3 class="belief-title">Values</h3>
-                    <p class="belief-desc">
+                    <h3 class="chairman-commitment-card-title">Values</h3>
+                    <p class="chairman-commitment-desc">
                         Nurturing integrity, empathy and responsible citizenship.
                     </p>
                 </div>
 
-                <!-- Belief 4: Future Ready -->
-                <div class="belief-card">
-                    <div class="belief-icon-circle icon-pink">
+                <!-- Card 4: Future Ready -->
+                <div class="chairman-commitment-card">
+                    <div class="chairman-commitment-icon icon-rose">
                         <i class="fa-solid fa-lightbulb"></i>
                     </div>
-                    <h3 class="belief-title">Future Ready</h3>
-                    <p class="belief-desc">
+                    <h3 class="chairman-commitment-card-title">Future Ready</h3>
+                    <p class="chairman-commitment-desc">
                         Preparing students for NEET, IIT and a wide range of competitive exams, along with life skills.
                     </p>
                 </div>
@@ -218,42 +215,61 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
     <!-- =========================================================================
-         4. TOGETHER LET'S BUILD BRIGHTER TOMORROWS (CTA Banner)
+         4. CTA BANNER SECTION: Be A Part of Advaita
          ========================================================================= -->
-    <section class="inner-join-banner-section cta-variant">
-        <div class="inner-join-banner-container">
-            <!-- Left Paper Airplane Graphic -->
-            <div class="join-plane-wrap" aria-hidden="true">
-                <img src="assets/images/staff-join-airplane-bg.png" alt="Airplane Trail" class="join-plane-img" loading="lazy">
-            </div>
+    <section class="admission-banner">
+        <!-- Background Shapes -->
+        <div class="shape-one"></div>
+        <div class="shape-two"></div>
+        <div class="shape-three"></div>
 
-            <!-- Center Content -->
-            <div class="join-content-center">
-                <div class="section-eyebrow">— BE A PART OF ADVAITA —</div>
-                <h2 class="join-title">Together, let's build <span class="text-orange">brighter tomorrows.</span></h2>
-                <p class="join-desc">
+        <!-- Dots -->
+        <div class="dot-pattern"></div>
+
+        <!-- Content -->
+        <div class="banner-content">
+            <div class="copy">
+                <!-- Eyebrow -->
+                <div class="eyebrow">
+                    BE A PART OF ADVAITA
+                    <span class="eyebrow-line"></span>
+                </div>
+
+                <!-- Heading -->
+                <h2 class="headline">
+                    Together, let’s build<br>
+                    <span class="text-orange">brighter tomorrows.</span>
+                </h2>
+
+                <!-- Description -->
+                <p class="subtext">
                     Give your child the right start with strong academics, values and endless opportunities.
                 </p>
-                <div class="join-actions">
-                    <a href="index.php#admissions" class="btn-orange-pill">
+
+                <!-- Buttons -->
+                <div class="buttons">
+                    <!-- Enrol Button -->
+                    <a href="index.php#admissions" class="btn-enrol">
                         <span>Book a Campus Visit</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
-                    <a href="index.php#admissions" class="btn-white-pill">
+
+                    <!-- School Visit -->
+                    <a href="index.php#contact" class="btn-visit">
+                        <i class="fa-solid fa-phone"></i>
                         <span>Enquire Now</span>
-                        <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
+        </div>
 
-            <!-- Right Smiling Students Graphic -->
-            <div class="join-students-wrap">
-                <img src="assets/images/about-cta-students-trio.png" alt="Advaita Students" class="join-students-img" loading="lazy">
-            </div>
+        <!-- Students Image -->
+        <div class="students">
+            <img src="assets/images/about-cta-students-trio.png" alt="Advaita Students" loading="lazy">
         </div>
     </section>
 
-</div>
+</main>
 
 <?php
 require_once __DIR__ . '/includes/footer.php';

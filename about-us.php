@@ -2,7 +2,7 @@
 /**
  * About Us Page - Advaita School of Excellence, Parbhani
  * CBSE Affiliated (Affiliation No. 1130920)
- * Exact Visual Layout matching Official Reference Design
+ * Clean Semantic Layout matching the Official Design
  */
 $pageTitle = "About Us - Advaita School of Excellence, Parbhani | Premier CBSE School";
 $activePage = "about";
@@ -17,7 +17,19 @@ require_once __DIR__ . '/includes/header.php';
          ========================================================================= -->
     <section class="about-hero-section">
         <div class="about-hero-canvas">
-            
+            <!-- Background Image & Sky on the Right -->
+            <div class="about-hero-bg-visual">
+                <img src="assets/images/about-hero-building.jpg" alt="Advaita School of Excellence Campus" class="about-hero-bg-img" loading="eager">
+                <!-- Floating Script Badge in Sky -->
+                <div class="about-hero-script-tag">
+                    <span class="script-title">More<br>Than A School</span>
+                    <svg class="script-underline" viewBox="0 0 140 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M4 10C36 4 98 4 136 12" stroke="#F37021" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M18 14C48 9 92 8 126 15" stroke="#F37021" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
+                    </svg>
+                </div>
+            </div>
+
             <!-- Left Organic White Panel with Curved Boundary -->
             <div class="about-hero-left-panel">
                 <!-- Ambient decorative dots -->
@@ -68,20 +80,6 @@ require_once __DIR__ . '/includes/header.php';
                     </svg>
                 </div>
             </div>
-
-            <!-- Background Image & Sky on the Right -->
-            <div class="about-hero-bg-visual">
-                <img src="assets/images/about-hero-building.jpg" alt="Advaita School of Excellence Campus" class="about-hero-bg-img" loading="eager">
-                <!-- Floating Script Badge in Sky -->
-                <div class="about-hero-script-tag">
-                    <span class="script-title">More<br>Than A School</span>
-                    <svg class="script-underline" viewBox="0 0 140 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path d="M4 10C36 4 98 4 136 12" stroke="#F37021" stroke-width="3.5" stroke-linecap="round"/>
-                        <path d="M18 14C48 9 92 8 126 15" stroke="#F37021" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
-                    </svg>
-                </div>
-            </div>
-
         </div>
 
         <!-- 4 Feature Cards Strip -->
@@ -183,7 +181,7 @@ require_once __DIR__ . '/includes/header.php';
                     <!-- Stats Row -->
                     <div class="about-stats-row">
                         <div class="about-stat-item">
-                            <div class="stat-icon-square icon-orange">
+                            <div class="stat-icon-square">
                                 <i class="fa-solid fa-graduation-cap"></i>
                             </div>
                             <div class="stat-meta">
@@ -193,7 +191,7 @@ require_once __DIR__ . '/includes/header.php';
                         </div>
 
                         <div class="about-stat-item">
-                            <div class="stat-icon-square stat-icon-badge-solid">
+                            <div class="stat-icon-square stat-icon-badge">
                                 <span class="stat-badge-inner">25+</span>
                             </div>
                             <div class="stat-meta">
@@ -203,7 +201,7 @@ require_once __DIR__ . '/includes/header.php';
                         </div>
 
                         <div class="about-stat-item">
-                            <div class="stat-icon-square icon-orange">
+                            <div class="stat-icon-square">
                                 <i class="fa-regular fa-face-smile"></i>
                             </div>
                             <div class="stat-meta">
@@ -291,11 +289,11 @@ require_once __DIR__ . '/includes/header.php';
                 <div class="about-philosophy-pills-col">
                     <div class="about-philosophy-pills-stack">
                         <div class="philosophy-pill-item">
-                            <span class="pill-badge-icon badge-sky"><i class="fa-solid fa-check"></i></span>
+                            <span class="pill-badge-icon badge-blue"><i class="fa-solid fa-check"></i></span>
                             <span class="pill-item-text">NEET Foundation</span>
                         </div>
                         <div class="philosophy-pill-item">
-                            <span class="pill-badge-icon badge-sky"><i class="fa-solid fa-check"></i></span>
+                            <span class="pill-badge-icon badge-blue"><i class="fa-solid fa-check"></i></span>
                             <span class="pill-item-text">Integrated IIT-JEE Foundation</span>
                         </div>
                         <div class="philosophy-pill-item">
@@ -303,15 +301,15 @@ require_once __DIR__ . '/includes/header.php';
                             <span class="pill-item-text">Preparation for Competitive Exams</span>
                         </div>
                         <div class="philosophy-pill-item">
-                            <span class="pill-badge-icon badge-coral"><i class="fa-solid fa-circle-dot"></i></span>
+                            <span class="pill-badge-icon badge-orange"><i class="fa-solid fa-circle-dot"></i></span>
                             <span class="pill-item-text">Beyond Text Learning</span>
                         </div>
                         <div class="philosophy-pill-item">
-                            <span class="pill-badge-icon badge-coral"><i class="fa-solid fa-circle-dot"></i></span>
+                            <span class="pill-badge-icon badge-orange"><i class="fa-solid fa-circle-dot"></i></span>
                             <span class="pill-item-text">Holistic Student Development</span>
                         </div>
                         <div class="philosophy-pill-item">
-                            <span class="pill-badge-icon badge-coral"><i class="fa-solid fa-circle-dot"></i></span>
+                            <span class="pill-badge-icon badge-orange"><i class="fa-solid fa-circle-dot"></i></span>
                             <span class="pill-item-text">Future-Ready Skills</span>
                         </div>
                     </div>
@@ -321,7 +319,7 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
     <!-- =========================================================================
-         5. WHAT MAKES ADVAITA UNIQUE (6 Cards Grid)
+         5. WHAT MAKES ADVAITA UNIQUE (6 Cards)
          ========================================================================= -->
     <section class="about-why-choose">
         <div class="about-section-container">
@@ -365,7 +363,7 @@ require_once __DIR__ . '/includes/header.php';
 
                 <!-- Card 4 -->
                 <div class="about-apart-card">
-                    <div class="apart-icon-box apart-blue">
+                    <div class="apart-icon-box apart-navy">
                         <i class="fa-solid fa-chalkboard-user"></i>
                     </div>
                     <h4 class="apart-title">Experienced<br>Faculty</h4>
@@ -438,33 +436,57 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
     <!-- =========================================================================
-         7. ADMISSION BANNER SECTION (Be a Part of Advaita)
+         7. ADMISSION BANNER SECTION
          ========================================================================= -->
-    <section class="about-admission-banner-section" id="admissions">
-        <div class="about-admission-banner-container">
-            <!-- Left Copy -->
-            <div class="banner-copy-col">
-                <span class="banner-eyebrow">BE A PART OF ADVAITA</span>
-                <h2 class="banner-headline">Together, let's build brighter tomorrows.</h2>
-                <p class="banner-subtext">
-                    Admissions are open for CBSE, NEET/IIT Foundation &amp; Competitive Exam Programmes.
+    <section class="admission-banner">
+        <!-- Background Shapes -->
+        <div class="shape-one"></div>
+        <div class="shape-two"></div>
+        <div class="shape-three"></div>
+
+        <!-- Dots -->
+        <div class="dot-pattern"></div>
+
+        <!-- Content -->
+        <div class="banner-content">
+            <div class="copy">
+                <!-- Eyebrow -->
+                <div class="eyebrow">
+                    BE A PART OF A BRIGHTER
+                    <span class="eyebrow-line"></span>
+                </div>
+
+                <!-- Heading -->
+                <h2 class="headline">
+                    Think Big, Achieve More<br>
+                    for a better you.
+                </h2>
+
+                <!-- Description -->
+                <p class="subtext">
+                    Join us today and take the next step towards a successful future.
                 </p>
-                <div class="banner-btn-group">
-                    <a href="index.php#admissions" class="about-btn-orange">
-                        <span>Enquire Now</span>
-                        <i class="fa-solid fa-arrow-right"></i>
+
+                <!-- Buttons -->
+                <div class="buttons">
+                    <!-- Enrol Button -->
+                    <a href="index.php#admissions" class="btn-enrol">
+                        <span>Enrol Now</span>
+                        <span>&rarr;</span>
                     </a>
-                    <a href="index.php#contact" class="about-btn-white">
-                        <i class="fa-regular fa-calendar-days"></i>
-                        <span>Schedule a Campus Visit</span>
+
+                    <!-- School Visit -->
+                    <a href="index.php#contact" class="btn-visit">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Schedule a School Visit</span>
                     </a>
                 </div>
             </div>
+        </div>
 
-            <!-- Right Students Visual -->
-            <div class="banner-students-col">
-                <img src="assets/images/about-cta-students-trio.png" alt="Advaita School Students" class="banner-students-img" loading="lazy">
-            </div>
+        <!-- Students Image -->
+        <div class="students">
+            <img src="assets/images/about-cta-students-trio.png" alt="Advaita Students" loading="lazy">
         </div>
     </section>
 

@@ -1,39 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Manrope:wght@400;500;600;700;800&display=swap');
+
 /* ==========================================================================
-   Advaita School of Excellence - Master Inner Pages Stylesheet
-   Pages:
-   - About Us (about-us.php -> reference-2.png)
-   - Our Faculty (our-staff.php -> reference-1.png)
-   - Chairman's Desk (chairmans-desk.php -> reference-3.png)
-   - Principal's Message (principals-desk.php -> reference-4.png)
-   - Vision & Mission (vision-mission.php -> reference-5.png)
-   Color Palette: #083B7A (Navy), #F37021 (Orange), #0284C7 (Sky Blue), #F8FAFC (Canvas)
-   Clean Semantic CSS - Zero Inline Styling
+   Advaita School of Excellence - Inner Pages Master Stylesheet
+   Pages: About Us, Our Faculty (Staff), Chairman's Desk, Principal's Message, Vision & Mission
+   Theme: #083B7A (Navy Blue), #F37021 (Orange Accent), #0284C7 (Sky Blue), #f8fafc (Light Canvas)
+   Strictly semantic, zero inline styling, compact & tight modern spacing
    ========================================================================== */
 
 :root {
     --adv-navy: #083B7A;
     --adv-navy-dark: #05264f;
-    --adv-navy-light: #0e4b94;
+    --adv-navy-light: #0d4b96;
     --adv-orange: #F37021;
-    --adv-orange-hover: #dc5e10;
+    --adv-orange-hover: #d95d12;
     --adv-orange-light: #fff5ed;
-    --adv-orange-border: #ffd8bf;
     --adv-sky: #0284C7;
     --adv-sky-light: #e0f2fe;
     --adv-sky-soft: #f0f9ff;
     --adv-text-dark: #0f172a;
     --adv-text-body: #475569;
     --adv-text-muted: #64748b;
-    --adv-border: #e2e8f0;
+    --adv-border-color: #e2e8f0;
+    --adv-card-bg: #ffffff;
+    --adv-radius-sm: 8px;
+    --adv-radius-md: 12px;
+    --adv-radius-lg: 16px;
+    --adv-radius-xl: 22px;
+    --adv-radius-pill: 50px;
+    --adv-shadow-sm: 0 2px 8px rgba(8, 59, 122, 0.04);
+    --adv-shadow-md: 0 6px 20px rgba(8, 59, 122, 0.07);
+    --adv-shadow-lg: 0 12px 32px rgba(8, 59, 122, 0.1);
     --adv-font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --adv-font-body: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --adv-font-script: 'Caveat', cursive, serif;
 }
 
-/* Base Wrapper */
-.main-content-wrapper,
-.inner-page-wrapper,
-.about-page-wrapper {
+/* Base Wrapper for all Inner Pages */
+.main-content-wrapper {
     font-family: var(--adv-font-body);
     color: var(--adv-text-body);
     background: #ffffff;
@@ -41,179 +44,19 @@
     width: 100%;
 }
 
-/* Typography Utilities */
-.text-orange,
-.about-text-orange {
-    color: var(--adv-orange) !important;
-}
-
-.text-navy {
-    color: var(--adv-navy) !important;
-}
-
-/* Shared Eyebrows */
-.about-eyebrow,
-.section-eyebrow,
-.inner-eyebrow {
-    display: inline-block;
-    color: var(--adv-orange);
-    font-family: var(--adv-font-sans);
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
-/* Shared Titles */
-.section-title {
-    font-family: var(--adv-font-sans);
-    font-size: clamp(1.8rem, 2.5vw, 2.3rem);
-    font-weight: 800;
-    color: var(--adv-navy);
-    line-height: 1.22;
-    margin-bottom: 12px;
-    letter-spacing: -0.3px;
-}
-
-.section-subtitle {
-    font-size: 15px;
-    line-height: 1.65;
-    color: var(--adv-text-muted);
-    max-width: 720px;
-    margin: 0 auto 36px;
-}
-
-/* Shared Buttons */
-.about-btn-orange,
-.btn-orange-pill {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    background: linear-gradient(135deg, #F37021 0%, #eb6210 100%);
-    color: #ffffff !important;
-    font-family: var(--adv-font-sans);
-    font-size: 14.5px;
-    font-weight: 700;
-    padding: 12px 28px;
-    border-radius: 9999px;
-    text-decoration: none;
-    box-shadow: 0 4px 14px rgba(243, 112, 33, 0.28);
-    transition: all 0.25s ease;
-    white-space: nowrap;
-    border: none;
-    cursor: pointer;
-}
-
-.about-btn-orange:hover,
-.btn-orange-pill:hover {
-    background: linear-gradient(135deg, #e05e0e 0%, #c94f06 100%);
-    box-shadow: 0 6px 20px rgba(243, 112, 33, 0.4);
-    transform: translateY(-2px);
-}
-
-.about-btn-orange i,
-.btn-orange-pill i {
-    font-size: 13px;
-    transition: transform 0.2s ease;
-}
-
-.about-btn-orange:hover i,
-.btn-orange-pill:hover i {
-    transform: translateX(3px);
-}
-
-.about-btn-white,
-.btn-white-pill {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    background: #ffffff;
-    color: var(--adv-navy) !important;
-    font-family: var(--adv-font-sans);
-    font-size: 14.5px;
-    font-weight: 700;
-    padding: 12px 26px;
-    border-radius: 9999px;
-    text-decoration: none;
-    border: 1.5px solid #cbd5e1;
-    transition: all 0.25s ease;
-    white-space: nowrap;
-    cursor: pointer;
-}
-
-.about-btn-white:hover,
-.btn-white-pill:hover {
-    border-color: var(--adv-orange);
-    color: var(--adv-orange) !important;
-    background: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-}
-
-.about-btn-vision,
-.btn-video-pill {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    background: #ffffff;
-    color: var(--adv-navy) !important;
-    font-family: var(--adv-font-sans);
-    font-size: 14.5px;
-    font-weight: 700;
-    padding: 10px 24px;
-    border-radius: 9999px;
-    text-decoration: none;
-    border: 1.5px solid #cbd5e1;
-    transition: all 0.25s ease;
-    white-space: nowrap;
-    cursor: pointer;
-}
-
-.about-btn-vision:hover,
-.btn-video-pill:hover {
-    border-color: var(--adv-orange);
-    color: var(--adv-orange) !important;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-}
-
-.vision-play-circle {
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    background: var(--adv-navy);
-    color: #ffffff;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 10px;
-    padding-left: 2px;
-    transition: background 0.2s ease;
-}
-
-.about-btn-vision:hover .vision-play-circle {
-    background: var(--adv-orange);
-}
-
 /* ==========================================================================
-   1. HERO SECTION (reference-1, 2, 3, 4, 5)
+   1. SHARED HERO SECTION ARCHITECTURE
    ========================================================================== */
-.about-hero-section,
-.inner-hero-section {
+.about-hero-section {
     position: relative;
     width: 100%;
     background: #ffffff;
     padding-bottom: 0;
 }
 
-.about-hero-canvas,
-.inner-hero-canvas {
+.about-hero-canvas {
     position: relative;
-    min-height: 480px;
+    min-height: 440px;
     display: flex;
     align-items: stretch;
     background: #eef6fc;
@@ -221,151 +64,18 @@
     width: 100%;
 }
 
-.about-hero-left-panel,
-.inner-hero-left-panel {
-    position: relative;
-    z-index: 3;
-    width: 53%;
-    background: #ffffff;
-    display: flex;
-    align-items: center;
-    padding: clamp(36px, 4vw, 56px) clamp(24px, 3.5vw, 64px);
-}
-
-.about-hero-wave-edge {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: -70px;
-    width: 72px;
-    height: 100%;
-    z-index: 4;
-    pointer-events: none;
-}
-
-.about-hero-wave-edge svg {
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-
-.about-hero-dots-decor,
-.inner-hero-dots-decor {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 80px;
-    height: 80px;
-    background-image: radial-gradient(#93c5fd 2px, transparent 2px);
-    background-size: 14px 14px;
-    opacity: 0.5;
-    pointer-events: none;
-    z-index: 1;
-}
-
-.about-hero-content-inner,
-.inner-hero-content-inner {
-    position: relative;
-    z-index: 5;
-    max-width: 560px;
-    width: 100%;
-}
-
-.inner-breadcrumb {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--adv-text-muted);
-    margin-bottom: 12px;
-}
-
-.inner-breadcrumb a {
-    color: var(--adv-text-muted);
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.inner-breadcrumb a:hover {
-    color: var(--adv-orange);
-}
-
-.inner-breadcrumb .sep {
-    font-size: 14px;
-    color: #94a3b8;
-}
-
-.inner-breadcrumb .active {
-    color: var(--adv-navy);
-    font-weight: 700;
-}
-
-.about-hero-title,
-.inner-hero-title {
-    font-family: var(--adv-font-sans);
-    font-size: clamp(2rem, 3.2vw, 2.75rem);
-    font-weight: 800;
-    color: var(--adv-navy);
-    line-height: 1.15;
-    letter-spacing: -0.5px;
-    margin-bottom: 14px;
-}
-
-.about-hero-highlights,
-.inner-hero-pillars {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin-bottom: 16px;
-}
-
-.highlight-line {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13.5px;
-    font-weight: 700;
-    color: var(--adv-navy);
-}
-
-.highlight-pipe,
-.pillar-pipe {
-    color: var(--adv-orange);
-    font-weight: 800;
-}
-
-.about-hero-desc,
-.inner-hero-desc {
-    font-size: 15px;
-    line-height: 1.65;
-    color: var(--adv-text-body);
-    margin-bottom: 24px;
-    max-width: 520px;
-}
-
-.about-hero-actions,
-.inner-hero-actions {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    flex-wrap: wrap;
-}
-
 /* Right Background Building / Sky Image */
-.about-hero-bg-visual,
-.inner-hero-right-visual {
+.about-hero-bg-visual {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
-    width: 58%;
+    width: 60%;
     z-index: 1;
     overflow: hidden;
 }
 
-.about-hero-bg-img,
-.inner-hero-campus-img {
+.about-hero-bg-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -373,41 +83,11 @@
     display: block;
 }
 
-.inner-hero-img-frame {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    min-height: 440px;
-    border-top-left-radius: 220px;
-    border-bottom-left-radius: 220px;
-    overflow: hidden;
-    box-shadow: -8px 0 26px rgba(2, 132, 199, 0.16);
-    border-left: 6px solid #0284C7;
-    background: #eef6fc;
-}
-
-.inner-hero-building-logo {
+/* Floating "More Than A School" Script Badge in Top Right Sky */
+.about-hero-script-tag {
     position: absolute;
-    top: 24%;
-    left: 18%;
-    background: rgba(255, 255, 255, 0.95);
-    padding: 6px 14px;
-    border-radius: 8px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
-    z-index: 4;
-}
-
-.building-logo-img {
-    height: 24px;
-    width: auto;
-    display: block;
-}
-
-.about-hero-script-tag,
-.inner-hero-script-tag {
-    position: absolute;
-    top: 24px;
-    right: clamp(24px, 4vw, 56px);
+    top: 20px;
+    right: clamp(20px, 4vw, 55px);
     z-index: 5;
     text-align: center;
     transform: rotate(-3deg);
@@ -417,10 +97,9 @@
     align-items: center;
 }
 
-.about-hero-script-tag .script-title,
-.inner-hero-script-tag .script-title {
+.about-hero-script-tag .script-title {
     font-family: var(--adv-font-script);
-    font-size: clamp(2.2rem, 3.2vw, 3rem);
+    font-size: clamp(2.2rem, 3vw, 3.1rem);
     font-weight: 700;
     color: var(--adv-navy);
     line-height: 0.95;
@@ -428,335 +107,637 @@
     text-shadow: 0 2px 8px rgba(255, 255, 255, 0.9);
 }
 
-.about-hero-script-tag .script-underline,
-.inner-hero-script-tag .script-underline {
+.about-hero-script-tag .script-underline {
     width: clamp(110px, 9vw, 140px);
     height: 14px;
     display: block;
     margin: 3px auto 0;
 }
 
+/* Left Organic White Panel */
+.about-hero-left-panel {
+    position: relative;
+    z-index: 2;
+    width: 53%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: clamp(26px, 3.2vw, 44px) clamp(20px, 3vw, 45px) clamp(26px, 3.2vw, 44px) clamp(20px, 4.5vw, 68px);
+}
+
+.about-hero-wave-edge {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -70px;
+    width: 72px;
+    height: 100%;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.about-hero-wave-edge svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.about-hero-dots-decor {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    width: 80px;
+    height: 80px;
+    background-image: radial-gradient(#93c5fd 1.8px, transparent 1.8px);
+    background-size: 14px 14px;
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.about-hero-content-inner {
+    position: relative;
+    z-index: 4;
+    max-width: 560px;
+    width: 100%;
+}
+
+/* Breadcrumb Navigation */
+.staff-hero-breadcrumb,
+.chairman-hero-breadcrumb,
+.principal-hero-breadcrumb,
+.vision-hero-breadcrumb {
+    margin-bottom: 12px;
+}
+
+.staff-breadcrumb-list,
+.chairman-breadcrumb-list,
+.principal-breadcrumb-list,
+.vision-breadcrumb-list {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: var(--adv-text-muted);
+}
+
+.staff-breadcrumb-list a,
+.chairman-breadcrumb-list a,
+.principal-breadcrumb-list a,
+.vision-breadcrumb-list a {
+    color: var(--adv-text-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.staff-breadcrumb-list a:hover,
+.chairman-breadcrumb-list a:hover,
+.principal-breadcrumb-list a:hover,
+.vision-breadcrumb-list a:hover {
+    color: var(--adv-orange);
+}
+
+.staff-breadcrumb-sep,
+.chairman-breadcrumb-sep,
+.principal-breadcrumb-sep,
+.vision-breadcrumb-sep {
+    font-size: 0.65rem;
+    color: #94a3b8;
+}
+
+.staff-breadcrumb-current,
+.chairman-breadcrumb-current,
+.principal-breadcrumb-current,
+.vision-breadcrumb-current {
+    color: var(--adv-navy);
+    font-weight: 700;
+}
+
+/* Eyebrows */
+.about-eyebrow,
+.staff-hero-eyebrow,
+.chairman-hero-eyebrow,
+.principal-hero-eyebrow,
+.vision-hero-eyebrow,
+.staff-section-eyebrow,
+.vision-section-eyebrow,
+.principal-commitment-eyebrow {
+    display: inline-block;
+    color: var(--adv-orange);
+    font-family: var(--adv-font-sans);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+/* Titles */
+.about-hero-title,
+.staff-hero-title,
+.chairman-hero-title,
+.principal-hero-title,
+.vision-hero-title {
+    font-family: var(--adv-font-sans);
+    font-size: clamp(1.85rem, 2.7vw, 2.6rem);
+    font-weight: 800;
+    color: var(--adv-navy);
+    line-height: 1.16;
+    margin-bottom: 12px;
+    letter-spacing: -0.4px;
+}
+
+.about-hero-title .about-text-orange,
+.staff-hero-title span,
+.chairman-hero-title span,
+.principal-hero-title span,
+.vision-hero-title span,
+.about-text-orange {
+    color: var(--adv-orange);
+}
+
+/* Hero Highlights & Pillars */
+.about-hero-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 12px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--adv-navy);
+}
+
+.highlight-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.highlight-pipe,
+.pillar-pipe,
+.pillar-dot {
+    color: var(--adv-orange);
+    font-weight: 800;
+    user-select: none;
+}
+
+.chairman-hero-pillars,
+.principal-hero-pillars {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--adv-navy);
+    margin-bottom: 12px;
+}
+
+/* Hero Description */
+.about-hero-desc,
+.staff-hero-desc,
+.chairman-hero-desc,
+.principal-hero-desc,
+.vision-hero-desc {
+    font-size: clamp(0.88rem, 0.96vw, 0.96rem);
+    line-height: 1.6;
+    color: var(--adv-text-body);
+    margin-bottom: 18px;
+}
+
+/* Buttons */
+.about-hero-actions,
+.chairman-hero-actions,
+.staff-strip-right,
+.vision-cta-actions,
+.chairman-cta-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.about-btn-orange,
+.chairman-btn-orange,
+.chairman-btn-orange-solid,
+.vision-btn-orange,
+.staff-strip-btn-orange,
+.principal-btn-orange {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: var(--adv-orange);
+    color: #ffffff;
+    font-family: var(--adv-font-sans);
+    font-size: 0.875rem;
+    font-weight: 700;
+    padding: 10px 22px;
+    border-radius: var(--adv-radius-pill);
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(243, 112, 33, 0.3);
+    transition: all 0.25s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.about-btn-orange:hover,
+.chairman-btn-orange:hover,
+.chairman-btn-orange-solid:hover,
+.vision-btn-orange:hover,
+.staff-strip-btn-orange:hover,
+.principal-btn-orange:hover {
+    background: var(--adv-orange-hover);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(243, 112, 33, 0.4);
+}
+
+.about-btn-vision,
+.chairman-btn-video,
+.staff-strip-btn-video,
+.chairman-btn-navy-outline,
+.vision-btn-enquire,
+.principal-btn-contact {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #ffffff;
+    color: var(--adv-navy);
+    font-family: var(--adv-font-sans);
+    font-size: 0.875rem;
+    font-weight: 700;
+    padding: 9px 20px;
+    border-radius: var(--adv-radius-pill);
+    border: 1.5px solid var(--adv-navy);
+    text-decoration: none;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.about-btn-vision:hover,
+.chairman-btn-video:hover,
+.staff-strip-btn-video:hover,
+.chairman-btn-navy-outline:hover,
+.vision-btn-enquire:hover,
+.principal-btn-contact:hover {
+    background: var(--adv-navy);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(8, 59, 122, 0.15);
+}
+
+.vision-play-circle {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #e0f2fe;
+    color: var(--adv-navy);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6875rem;
+    transition: all 0.25s ease;
+}
+
+.about-btn-vision:hover .vision-play-circle {
+    background: #ffffff;
+    color: var(--adv-navy);
+}
+
+/* Generic Section Containers */
+.about-section-container,
+.chairman-message-container,
+.chairman-commitment-container,
+.principal-message-container,
+.principal-commitment-container,
+.vision-dual-cards-container,
+.vision-beliefs-container,
+.vision-focus-container,
+.staff-grid-container,
+.staff-campus-strip-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
 /* ==========================================================================
-   2. FOUR FEATURES STRIP CARDS (reference-2.png)
+   2. ABOUT US PAGE SPECIFIC STYLES
    ========================================================================== */
+
+/* 4 Features Strip Below Hero */
 .about-features-strip {
     position: relative;
     z-index: 10;
+    margin-top: -28px;
+    margin-bottom: 5px;
     padding: 0 20px;
-    margin-top: -36px;
-    margin-bottom: 50px;
 }
 
-.about-strip-container,
-.inner-stats-strip-container {
-    max-width: 1240px;
+.about-strip-container {
+    max-width: 1200px;
     margin: 0 auto;
 }
 
 .about-strip-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 14px;
 }
 
 .about-strip-card {
     background: #ffffff;
-    border-radius: 18px;
-    padding: 20px 22px;
-    box-shadow: 0 8px 26px rgba(8, 59, 122, 0.08);
-    border: 1px solid #e8f0fe;
+    border: 1px solid #e0effa;
+    border-radius: var(--adv-radius-lg);
+    padding: 14px 16px;
     display: flex;
-    align-items: center;
-    gap: 16px;
-    transition: transform 0.25s ease;
+    align-items: flex-start;
+    gap: 12px;
+    box-shadow: 0 4px 16px rgba(8, 59, 122, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .about-strip-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(8, 59, 122, 0.12);
+    transform: translateY(-3px);
+    border-color: #bae6fd;
+    box-shadow: 0 10px 24px rgba(8, 59, 122, 0.1);
 }
 
 .strip-icon-box {
-    width: 50px;
-    height: 50px;
-    border-radius: 14px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 22px;
+    font-size: 1rem;
     flex-shrink: 0;
 }
 
-.icon-blue { background: #e0f2fe; color: #0284c7; }
-.icon-orange { background: #fff0e6; color: #f37021; }
+.strip-icon-box.icon-blue {
+    background: #e0f2fe;
+    color: var(--adv-sky);
+}
+
+.strip-icon-box.icon-orange {
+    background: #fff7ed;
+    color: var(--adv-orange);
+}
 
 .strip-card-body {
-    display: flex;
-    flex-direction: column;
+    flex: 1;
 }
 
 .strip-card-title {
     font-family: var(--adv-font-sans);
-    font-size: 16px;
+    font-size: 0.95rem;
     font-weight: 800;
     color: var(--adv-navy);
-    margin: 0;
-    line-height: 1.2;
+    margin: 0 0 1px;
 }
 
 .strip-card-subtitle {
-    font-size: 13px;
+    display: block;
+    font-size: 0.75rem;
     font-weight: 700;
-    color: var(--adv-navy);
-    margin-top: 1px;
+    color: var(--adv-orange);
+    margin-bottom: 2px;
 }
 
 .strip-card-desc {
-    font-size: 12.5px;
+    font-size: 0.72rem;
     color: var(--adv-text-muted);
-    margin: 2px 0 0;
-    line-height: 1.4;
+    line-height: 1.35;
+    margin: 0;
 }
 
-/* ==========================================================================
-   3. BUILT ON VALUES SECTION (reference-2.png)
-   ========================================================================== */
-.about-story-section,
-.built-values-section {
-    padding: 40px 20px 60px;
+/* Built on Values Section */
+.about-story-section {
+    padding: clamp(35px, 4.5vw, 50px) 0 clamp(20px, 2.5vw, 30px);
     background: #ffffff;
 }
 
-.about-section-container,
-.home-container {
-    max-width: 1240px;
-    margin: 0 auto;
-}
-
-.about-story-grid,
-.built-values-top-grid {
+.about-story-grid {
     display: grid;
-    grid-template-columns: 0.95fr 1.05fr;
-    gap: 56px;
+    grid-template-columns: 1fr 1.2fr;
+    gap: clamp(24px, 3.5vw, 48px);
     align-items: center;
 }
 
-.about-story-visual-wrap,
-.built-student-col {
+.about-story-visual-wrap {
     position: relative;
 }
 
-.about-story-frame,
-.built-student-img-wrap {
+.about-story-frame {
     position: relative;
-    border-radius: 24px;
-    overflow: visible;
+    border-radius: var(--adv-radius-xl);
+    overflow: hidden;
+    box-shadow: 0 14px 36px rgba(8, 59, 122, 0.12);
 }
 
-.about-story-img,
-.built-student-img {
+.about-story-img {
     width: 100%;
     height: auto;
-    border-radius: 24px;
     display: block;
-    box-shadow: 0 12px 36px rgba(8, 59, 122, 0.12);
+    object-fit: cover;
 }
 
-.about-story-floating-badge,
-.built-student-badge {
+.about-story-floating-badge {
     position: absolute;
-    bottom: -18px;
-    left: 20px;
-    background: var(--adv-navy);
-    border-radius: 16px;
-    padding: 12px 18px;
+    bottom: 16px;
+    left: 16px;
+    background: rgba(8, 59, 122, 0.95);
+    backdrop-filter: blur(8px);
+    border-radius: var(--adv-radius-md);
+    padding: 10px 14px;
     display: flex;
     align-items: center;
-    gap: 14px;
-    box-shadow: 0 8px 24px rgba(8, 59, 122, 0.28);
-    z-index: 4;
+    gap: 10px;
     color: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.story-badge-trophy,
-.badge-trophy-icon {
-    color: #fbbf24;
-    font-size: 24px;
-    flex-shrink: 0;
+.story-badge-trophy {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--adv-orange);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
 }
 
-.story-badge-text,
-.badge-text-wrap {
+.story-badge-text {
     display: flex;
     flex-direction: column;
-    line-height: 1.25;
 }
 
-.story-badge-bold,
-.badge-text-wrap strong {
+.story-badge-bold {
     font-family: var(--adv-font-sans);
-    font-size: 13.5px;
+    font-size: 0.78125rem;
     font-weight: 800;
-    color: #ffffff;
+    line-height: 1.15;
 }
 
-.story-badge-sub,
-.badge-text-wrap span {
-    font-size: 11.5px;
+.story-badge-sub {
+    font-size: 0.65rem;
     color: #cbd5e1;
-    font-weight: 500;
+    margin-top: 1px;
 }
 
-.story-badge-arrow,
-.badge-arrow {
-    width: 26px;
-    height: 26px;
+.story-badge-arrow {
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.15);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 11px;
+    font-size: 0.65rem;
     color: #ffffff;
-    flex-shrink: 0;
 }
 
 .about-story-title {
     font-family: var(--adv-font-sans);
-    font-size: clamp(1.9rem, 2.6vw, 2.4rem);
+    font-size: clamp(1.75rem, 2.5vw, 2.35rem);
     font-weight: 800;
     color: var(--adv-navy);
-    line-height: 1.2;
-    margin-bottom: 16px;
-}
-
-.about-story-desc,
-.section-lead-text {
-    font-size: 15px;
-    line-height: 1.7;
-    color: var(--adv-text-body);
+    line-height: 1.18;
     margin-bottom: 14px;
+    letter-spacing: -0.4px;
 }
 
-.about-stats-row,
-.legacy-stats-row {
+.about-story-desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--adv-text-body);
+    margin-bottom: 12px;
+}
+
+.about-stats-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    margin-top: 28px;
-}
-
-.about-stat-item,
-.legacy-stat-box {
-    display: flex;
-    align-items: center;
     gap: 12px;
+    margin-top: 18px;
 }
 
-.stat-icon-square,
-.legacy-stat-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 14px;
+.about-stat-item {
+    background: #f8fcff;
+    border: 1px solid #e2f0fb;
+    border-radius: var(--adv-radius-md);
+    padding: 12px 14px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    flex-shrink: 0;
+    gap: 10px;
 }
 
-.stat-icon-badge-solid,
-.legacy-stat-badge-orange {
-    width: 48px;
-    height: 48px;
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--adv-orange);
-    color: #ffffff;
-    font-family: var(--adv-font-sans);
-    font-weight: 800;
-    font-size: 16px;
-    flex-shrink: 0;
-}
-
-.stat-num {
-    font-family: var(--adv-font-sans);
-    font-size: 22px;
-    font-weight: 800;
-    color: var(--adv-navy);
-    line-height: 1.1;
-    display: block;
-}
-
-.stat-lbl,
-.stat-name {
-    font-size: 12.5px;
-    font-weight: 600;
-    color: var(--adv-text-muted);
-    display: block;
-}
-
-/* ==========================================================================
-   4. VISION, MISSION & VALUES (3 Distinct Cards)
-   ========================================================================== */
-.about-vmv-section {
-    padding: 30px 20px 60px;
-    background: #ffffff;
-}
-
-.about-vmv-grid,
-.three-pillars-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-}
-
-.about-vmv-card,
-.pillar-box {
-    background: #ffffff;
-    border: 1px solid #e8f0fe;
-    border-radius: 20px;
-    padding: 28px 24px;
-    box-shadow: 0 4px 18px rgba(8, 59, 122, 0.05);
-    transition: all 0.25s ease;
-}
-
-.about-vmv-card:hover,
-.pillar-box:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(8, 59, 122, 0.1);
-    border-color: #bae6fd;
-}
-
-.about-vmv-icon-ring,
-.pillar-icon-circle {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    border: 1.5px solid var(--adv-orange);
+.stat-icon-square {
+    width: 38px;
+    height: 38px;
+    border-radius: var(--adv-radius-sm);
+    background: #fff7ed;
     color: var(--adv-orange);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
-    margin-bottom: 16px;
+    font-size: 1.05rem;
+    flex-shrink: 0;
 }
 
-.about-vmv-title,
-.pillar-heading {
+.stat-icon-badge {
+    background: #e0f2fe;
+    color: var(--adv-sky);
+    font-weight: 800;
+    font-size: 0.85rem;
+}
+
+.stat-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-num {
     font-family: var(--adv-font-sans);
-    font-size: 18px;
+    font-size: 1.1rem;
     font-weight: 800;
     color: var(--adv-navy);
-    margin-bottom: 8px;
+    line-height: 1.1;
 }
 
-.about-vmv-desc,
-.pillar-paragraph {
-    font-size: 14px;
-    line-height: 1.6;
+.stat-lbl {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--adv-text-muted);
+    margin-top: 2px;
+}
+
+/* Vision, Mission, Values 3 Cards Section */
+.about-vmv-section {
+    padding: 10px 0 35px;
+    background: #ffffff;
+}
+
+.about-vmv-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.about-vmv-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--adv-radius-lg);
+    padding: 20px 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    box-shadow: 0 4px 16px rgba(8, 59, 122, 0.04);
+    transition: all 0.2s ease;
+}
+
+.about-vmv-card:hover {
+    transform: translateY(-3px);
+    border-color: #cbd5e1;
+    box-shadow: 0 10px 24px rgba(8, 59, 122, 0.08);
+}
+
+.about-vmv-icon-ring {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #fff7ed;
+    color: var(--adv-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.about-vmv-card:first-child .about-vmv-icon-ring {
+    background: #e0f2fe;
+    color: var(--adv-sky);
+}
+
+.about-vmv-title {
+    font-family: var(--adv-font-sans);
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: var(--adv-navy);
+    margin: 0 0 4px;
+}
+
+.about-vmv-desc {
+    font-size: 0.8125rem;
+    line-height: 1.5;
     color: var(--adv-text-body);
     margin: 0;
 }
@@ -764,1076 +745,2908 @@
 .about-vmv-values-list {
     display: flex;
     flex-direction: column;
-    gap: 6px;
-    font-size: 13.5px;
+    gap: 3px;
+    font-size: 0.8125rem;
     font-weight: 600;
-    color: var(--adv-navy);
+    color: var(--adv-text-body);
+}
+
+.values-pair {
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }
 
 .v-pipe {
-    color: var(--adv-orange);
-    margin: 0 4px;
-    font-weight: 800;
+    color: #cbd5e1;
 }
 
-/* ==========================================================================
-   5. EDUCATION FOR LIFE SECTION (reference-2.png)
-   ========================================================================== */
-.about-philosophy-section,
-.education-life-section {
-    padding: 60px 20px;
-    background: #f8fafc;
+/* Education for Life Section */
+.about-philosophy-section {
+    padding: clamp(35px, 4vw, 50px) 0;
+    background: #f8fcff;
 }
 
-.about-philosophy-grid,
-.edu-life-grid {
+.about-philosophy-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 56px;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: clamp(24px, 3.5vw, 45px);
     align-items: center;
 }
 
 .about-philosophy-title {
     font-family: var(--adv-font-sans);
-    font-size: clamp(1.9rem, 2.6vw, 2.4rem);
+    font-size: clamp(1.75rem, 2.5vw, 2.35rem);
     font-weight: 800;
     color: var(--adv-navy);
-    line-height: 1.2;
-    margin-bottom: 16px;
+    line-height: 1.18;
+    margin-bottom: 14px;
+    letter-spacing: -0.4px;
 }
 
 .about-philosophy-desc {
-    font-size: 15px;
-    line-height: 1.7;
+    font-size: 0.9rem;
+    line-height: 1.6;
     color: var(--adv-text-body);
-    margin-bottom: 24px;
+    margin-bottom: 18px;
 }
 
-.about-philosophy-pills-stack,
-.checklist-grid {
+.about-philosophy-pills-stack {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 10px;
 }
 
-.philosophy-pill-item,
-.checklist-item {
+.philosophy-pill-item {
     background: #ffffff;
-    border: 1px solid #e8f0fe;
-    border-radius: 9999px;
+    border: 1px solid #e0effa;
+    border-radius: var(--adv-radius-pill);
     padding: 10px 18px;
     display: flex;
     align-items: center;
     gap: 12px;
-    box-shadow: 0 2px 10px rgba(8, 59, 122, 0.04);
+    box-shadow: 0 3px 10px rgba(8, 59, 122, 0.03);
+    transition: all 0.2s ease;
 }
 
-.pill-badge-icon,
-.check-icon-wrap {
-    width: 26px;
-    height: 26px;
+.philosophy-pill-item:hover {
+    transform: translateX(3px);
+    border-color: #bae6fd;
+    box-shadow: 0 5px 14px rgba(8, 59, 122, 0.06);
+}
+
+.pill-badge-icon {
+    width: 24px;
+    height: 24px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
+    font-size: 0.7rem;
     flex-shrink: 0;
 }
 
-.badge-sky { background: #e0f2fe; color: #0284c7; }
-.badge-navy { background: #e0e7ff; color: #3730a3; }
-.badge-coral { background: #fff0e6; color: #f37021; }
+.pill-badge-icon.badge-blue {
+    background: #e0f2fe;
+    color: var(--adv-sky);
+}
 
-.pill-item-text,
-.check-label {
-    font-size: 14.5px;
+.pill-badge-icon.badge-navy {
+    background: #e0f2fe;
+    color: var(--adv-navy);
+}
+
+.pill-badge-icon.badge-orange {
+    background: #fff7ed;
+    color: var(--adv-orange);
+}
+
+.pill-item-text {
+    font-family: var(--adv-font-sans);
+    font-size: 0.85rem;
     font-weight: 700;
     color: var(--adv-navy);
 }
 
-/* ==========================================================================
-   6. WHAT MAKES ADVAITA UNIQUE (6 Cards)
-   ========================================================================== */
+/* What Sets Us Apart Section (6 Cards) */
 .about-why-choose {
-    padding: 60px 20px;
+    padding: clamp(35px, 4vw, 50px) 0;
     background: #ffffff;
 }
 
-.about-section-header {
+.about-section-header.text-center {
     text-align: center;
-    margin-bottom: 36px;
+    max-width: 680px;
+    margin: 0 auto clamp(20px, 2.5vw, 32px);
 }
 
 .about-section-heading {
     font-family: var(--adv-font-sans);
-    font-size: clamp(1.85rem, 2.5vw, 2.3rem);
+    font-size: clamp(1.75rem, 2.5vw, 2.35rem);
     font-weight: 800;
     color: var(--adv-navy);
+    line-height: 1.18;
     margin-bottom: 8px;
+    letter-spacing: -0.4px;
 }
 
 .about-section-subhead {
-    font-size: 15px;
-    color: var(--adv-text-muted);
-    max-width: 640px;
-    margin: 0 auto;
+    font-size: 0.9rem;
+    color: var(--adv-text-body);
+    line-height: 1.55;
+    margin: 0;
 }
 
 .about-apart-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    gap: 16px;
+    gap: 12px;
 }
 
 .about-apart-card {
     background: #ffffff;
-    border: 1px solid #e8f0fe;
-    border-radius: 18px;
-    padding: 24px 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--adv-radius-lg);
+    padding: 18px 12px;
     text-align: center;
-    box-shadow: 0 4px 14px rgba(8, 59, 122, 0.04);
-    transition: transform 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 14px rgba(8, 59, 122, 0.03);
+    transition: all 0.2s ease;
 }
 
 .about-apart-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 24px rgba(8, 59, 122, 0.08);
+    transform: translateY(-3px);
+    border-color: #cbd5e1;
+    box-shadow: 0 8px 22px rgba(8, 59, 122, 0.07);
 }
 
 .apart-icon-box {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
+    width: 42px;
+    height: 42px;
+    border-radius: var(--adv-radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
-    margin: 0 auto 14px;
+    font-size: 1.15rem;
+    margin-bottom: 10px;
 }
 
-.apart-orange { background: #fff0e6; color: #f37021; }
-.apart-blue { background: #e0f2fe; color: #0284c7; }
+.apart-icon-box.apart-orange {
+    background: #fff7ed;
+    color: var(--adv-orange);
+}
+
+.apart-icon-box.apart-blue {
+    background: #e0f2fe;
+    color: var(--adv-sky);
+}
+
+.apart-icon-box.apart-navy {
+    background: #e0e7ff;
+    color: var(--adv-navy);
+}
 
 .apart-title {
     font-family: var(--adv-font-sans);
-    font-size: 14px;
+    font-size: 0.85rem;
     font-weight: 800;
     color: var(--adv-navy);
-    line-height: 1.3;
-    margin-bottom: 6px;
+    line-height: 1.25;
+    margin: 0 0 4px;
 }
 
 .apart-desc {
-    font-size: 12px;
+    font-size: 0.72rem;
     color: var(--adv-text-muted);
-    line-height: 1.45;
+    line-height: 1.35;
     margin: 0;
 }
 
-/* ==========================================================================
-   7. CAMPUS SHOWCASE (reference-2.png)
-   ========================================================================== */
+/* Campus Showcase Section */
 .about-campus-showcase {
-    padding: 60px 20px;
-    background: #f8fafc;
+    padding: clamp(45px, 5.5vw, 65px) 0 clamp(40px, 5vw, 55px);
+    background: #ffffff;
+    position: relative;
 }
 
 .about-campus-grid {
     display: grid;
-    grid-template-columns: 0.95fr 1.05fr;
-    gap: 56px;
+    grid-template-columns: 1fr 1.18fr;
+    gap: clamp(32px, 4vw, 52px);
     align-items: center;
+}
+
+.about-campus-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .about-campus-eyebrow {
     display: inline-block;
-    color: var(--adv-orange);
+    color: var(--adv-orange, #F37021);
     font-family: var(--adv-font-sans);
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .about-campus-title {
     font-family: var(--adv-font-sans);
-    font-size: clamp(1.9rem, 2.6vw, 2.4rem);
+    font-size: clamp(2rem, 2.7vw, 2.65rem);
     font-weight: 800;
-    color: var(--adv-navy);
-    line-height: 1.2;
-    margin-bottom: 16px;
+    color: var(--adv-navy, #0A2540);
+    line-height: 1.16;
+    margin-bottom: 15px;
+    letter-spacing: -0.4px;
+}
+
+.about-campus-title .about-text-orange {
+    color: var(--adv-orange, #F37021);
 }
 
 .about-campus-desc {
-    font-size: 15px;
-    line-height: 1.7;
-    color: var(--adv-text-body);
-    margin-bottom: 24px;
+    font-size: 0.90625rem;
+    line-height: 1.65;
+    color: var(--adv-text-body, #475569);
+    margin-bottom: 22px;
+    max-width: 500px;
+}
+
+.about-btn-orange {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--adv-orange, #F37021);
+    color: #ffffff;
+    border-radius: 50px;
+    padding: 12px 26px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(243, 112, 33, 0.28);
+    transition: all 0.25s ease;
+}
+
+.about-btn-orange:hover {
+    background: #e05d0e;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(243, 112, 33, 0.38);
+    color: #ffffff;
 }
 
 .about-campus-visual-wrap {
     position: relative;
+    padding: 10px 0 10px 10px;
 }
 
+/* Decorative Sky-Blue Outer Frame Accent */
 .about-campus-accent-border {
     position: absolute;
-    top: 14px;
-    right: -14px;
-    bottom: -14px;
-    left: 14px;
-    border: 2px solid #bae6fd;
+    top: 0;
+    left: 0;
+    right: 14px;
+    bottom: 14px;
+    border: 2.5px solid #38bdf8;
     border-radius: 24px;
+    pointer-events: none;
     z-index: 1;
 }
 
 .about-campus-frame {
     position: relative;
     z-index: 2;
-    border-radius: 22px;
+    border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 12px 36px rgba(8, 59, 122, 0.12);
+    box-shadow: 0 14px 36px rgba(8, 59, 122, 0.12);
+    background: #ffffff;
 }
 
 .about-campus-img {
     width: 100%;
-    height: auto;
+    height: 320px;
+    object-fit: cover;
+    object-position: center 35%;
     display: block;
 }
 
 .about-floating-campus-card {
     position: absolute;
-    bottom: 18px;
-    right: 18px;
-    z-index: 4;
+    bottom: 0;
+    right: 10px;
     background: #ffffff;
     border-radius: 16px;
-    padding: 10px 14px;
+    padding: 7px 13px 7px 7px;
     display: flex;
     align-items: center;
     gap: 12px;
-    box-shadow: 0 8px 24px rgba(8, 59, 122, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.14);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    z-index: 5;
+    transition: transform 0.25s ease;
+}
+
+.about-floating-campus-card:hover {
+    transform: translateY(-3px);
 }
 
 .campus-thumb {
-    width: 44px;
-    height: 44px;
-    border-radius: 10px;
+    width: 58px;
+    height: 42px;
+    border-radius: 8px;
     object-fit: cover;
 }
 
 .campus-thumb-text {
     display: flex;
     flex-direction: column;
-    line-height: 1.2;
 }
 
 .campus-thumb-text strong {
     font-family: var(--adv-font-sans);
-    font-size: 13px;
+    font-size: 0.8125rem;
     font-weight: 800;
-    color: var(--adv-navy);
+    color: var(--adv-navy, #0A2540);
+    line-height: 1.2;
 }
 
 .campus-thumb-text span {
-    font-size: 11px;
-    color: var(--adv-text-muted);
+    font-size: 0.71875rem;
+    font-weight: 700;
+    color: var(--adv-navy, #0A2540);
+    line-height: 1.2;
 }
 
 .campus-thumb-arrow {
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
-    background: var(--adv-orange);
+    background: var(--adv-orange, #F37021);
     color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
+    font-size: 0.78125rem;
     text-decoration: none;
-    transition: transform 0.2s ease;
+    transition: transform 0.2s ease, background 0.2s ease;
+    margin-left: 2px;
 }
 
 .campus-thumb-arrow:hover {
     transform: scale(1.1);
+    background: #e05d0e;
+    color: #ffffff;
 }
 
 /* ==========================================================================
-   8. ADMISSION BANNER SECTION (reference-1, 2, 3, 5)
+   3. CHAIRMAN'S DESK PAGE SPECIFIC STYLES
    ========================================================================== */
-.about-admission-banner-section,
-.inner-join-banner-section {
-    padding: 40px 20px 80px;
-    background: #ffffff;
-}
-
-.about-admission-banner-container,
-.inner-join-banner-container {
-    max-width: 1240px;
-    margin: 0 auto;
-    background: linear-gradient(135deg, #e8f4fc 0%, #d8ecfa 100%);
-    border-radius: 28px;
-    padding: 40px clamp(20px, 4vw, 56px);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.chairman-message-section {
     position: relative;
-    overflow: hidden;
+    padding: clamp(35px, 4vw, 55px) 0;
+    background: #f4f9fd;
 }
 
-.banner-copy-col,
-.join-content-center {
-    max-width: 580px;
-    z-index: 2;
+.chairman-message-dots-left,
+.chairman-message-dots-right,
+.staff-decor-dots-left,
+.staff-decor-dots-right,
+.vision-dots-left,
+.vision-dots-right {
+    position: absolute;
+    width: 120px;
+    height: 140px;
+    background-image: radial-gradient(#93c5fd 1.8px, transparent 1.8px);
+    background-size: 16px 16px;
+    opacity: 0.35;
+    pointer-events: none;
 }
 
-.banner-eyebrow {
+.chairman-message-dots-left,
+.staff-decor-dots-left,
+.vision-dots-left {
+    top: 40px;
+    left: 16px;
+}
+
+.chairman-message-dots-right,
+.staff-decor-dots-right,
+.vision-dots-right {
+    top: 60px;
+    right: 16px;
+}
+
+.chairman-message-card {
+    background: #ffffff;
+    border: 1px solid #e2edf8;
+    border-radius: 28px;
+    padding: clamp(28px, 3.8vw, 44px);
+    display: grid;
+    grid-template-columns: 1.35fr 0.85fr;
+    gap: clamp(28px, 3.5vw, 48px);
+    align-items: center;
+    box-shadow: 0 12px 36px rgba(8, 59, 122, 0.08);
+    position: relative;
+}
+
+.chairman-message-eyebrow {
     display: inline-block;
+    color: var(--adv-orange);
     font-family: var(--adv-font-sans);
-    font-size: 13px;
+    font-size: 0.75rem;
     font-weight: 800;
-    color: var(--adv-sky);
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
-.banner-headline,
-.join-title {
+.chairman-message-title {
     font-family: var(--adv-font-sans);
-    font-size: clamp(1.8rem, 2.6vw, 2.4rem);
+    font-size: clamp(1.85rem, 2.6vw, 2.45rem);
     font-weight: 800;
     color: var(--adv-navy);
-    line-height: 1.2;
+    line-height: 1.18;
+    margin-bottom: 14px;
+    letter-spacing: -0.4px;
+}
+
+.chairman-message-title span {
+    color: var(--adv-orange);
+}
+
+.chairman-salutation {
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #1e293b;
     margin-bottom: 12px;
 }
 
-.banner-subtext,
-.join-desc {
-    font-size: 15px;
-    line-height: 1.6;
+.chairman-message-content p {
+    font-size: 0.895rem;
+    line-height: 1.65;
     color: var(--adv-text-body);
-    margin-bottom: 24px;
+    margin-bottom: 12px;
 }
 
-.banner-btn-group,
-.join-actions {
+.chairman-quote-box {
+    margin: 18px 0 4px;
+    background: #edf7ff;
+    border-left: 4.5px solid #0284c7;
+    border-radius: 0 14px 14px 0;
+    padding: 14px 20px;
     display: flex;
     align-items: center;
-    gap: 14px;
-    flex-wrap: wrap;
+    gap: 16px;
 }
 
-.banner-students-col,
-.join-students-wrap {
-    width: 38%;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+.chairman-quote-icon {
+    color: #0284c7;
+    font-size: 2.8rem;
+    line-height: 0.8;
+    font-family: Georgia, serif;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.chairman-quote-text {
+    color: #1e3a5f;
+    font-style: italic;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    margin: 0;
+    font-weight: 500;
+}
+
+.chairman-profile-col {
     position: relative;
-    z-index: 2;
-}
-
-.banner-students-img,
-.join-students-img {
-    max-width: 360px;
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-}
-
-.join-plane-wrap {
-    width: 20%;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
-.join-plane-img {
+.chairman-profile-card-wrapper {
+    position: relative;
     width: 100%;
-    max-width: 190px;
-    height: auto;
-    object-fit: contain;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+/* Blue Accent Tab on Left edge of the card */
+.chairman-profile-blue-tab {
+    position: absolute;
+    top: 36%;
+    left: -14px;
+    width: 24px;
+    height: 85px;
+    background: #38bdf8;
+    border-radius: 12px 0 0 12px;
+    z-index: 1;
+}
+
+/* Dot grid decoration outside right */
+.chairman-profile-dots-decor {
+    position: absolute;
+    top: 15px;
+    right: -24px;
+    width: 50px;
+    height: 100px;
+    background-image: radial-gradient(#93c5fd 1.8px, transparent 1.8px);
+    background-size: 14px 14px;
+    opacity: 0.75;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.chairman-profile-card {
+    position: relative;
+    z-index: 2;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 14px 36px rgba(8, 59, 122, 0.12);
+    border: 1px solid #e0effa;
+}
+
+.chairman-profile-photo-wrap {
+    width: 100%;
+    height: 310px;
+    overflow: hidden;
+    background: #faf8f5;
+}
+
+.chairman-profile-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+.chairman-profile-info {
+    background: linear-gradient(180deg, #073a76 0%, #032148 100%);
+    color: #ffffff;
+    padding: 16px 20px;
+    text-align: left;
+    border-radius: 0 0 20px 20px;
+}
+
+.chairman-name {
+    font-family: var(--adv-font-sans);
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 0 0 3px;
+    letter-spacing: -0.2px;
+}
+
+.chairman-role {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--adv-orange);
+    margin-bottom: 2px;
+}
+
+.chairman-org {
+    font-size: 0.75rem;
+    color: #cbd5e1;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Commitment Section (4 Cards) */
+.chairman-commitment-section,
+.principal-commitment-section {
+    padding: clamp(35px, 4vw, 50px) 0;
+    background: #f8fcff;
+}
+
+.chairman-commitment-grid,
+.principal-commitment-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.chairman-commitment-card,
+.principal-commitment-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--adv-radius-lg);
+    padding: 20px 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 14px rgba(8, 59, 122, 0.04);
+    transition: all 0.2s ease;
+}
+
+.chairman-commitment-card:hover,
+.principal-commitment-card:hover {
+    transform: translateY(-3px);
+    border-color: #cbd5e1;
+    box-shadow: 0 8px 22px rgba(8, 59, 122, 0.08);
+}
+
+.chairman-commitment-icon,
+.principal-commitment-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    margin-bottom: 12px;
+}
+
+.icon-blue {
+    background: #e0f2fe;
+    color: var(--adv-sky);
+}
+
+.icon-orange {
+    background: #fff7ed;
+    color: var(--adv-orange);
+}
+
+.icon-purple,
+.icon-indigo {
+    background: #f3e8ff;
+    color: #9333ea;
+}
+
+.icon-rose,
+.icon-pink {
+    background: #fce7f3;
+    color: #db2777;
+}
+
+.icon-sky {
+    background: #e0f2fe;
+    color: #0284c7;
+}
+
+.icon-green {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.icon-amber,
+.icon-yellow {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.chairman-commitment-card-title,
+.principal-commitment-card-title {
+    font-family: var(--adv-font-sans);
+    font-size: 0.98rem;
+    font-weight: 800;
+    color: var(--adv-navy);
+    margin: 0 0 6px;
+}
+
+.chairman-commitment-desc,
+.principal-commitment-desc {
+    font-size: 0.75rem;
+    color: var(--adv-text-muted);
+    line-height: 1.45;
+    margin: 0;
 }
 
 /* ==========================================================================
-   9. FACULTY GRID SECTION (reference-1.png)
+   4. PRINCIPAL'S DESK PAGE SPECIFIC STYLES
    ========================================================================== */
-.faculty-grid-section {
+.principal-message-section {
     position: relative;
-    padding: 60px 20px;
+    padding: clamp(35px, 4vw, 50px) 0 clamp(20px, 2.5vw, 30px);
     background: #ffffff;
 }
 
-.faculty-grid-container {
-    max-width: 1240px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.faculty-cards-grid {
+.principal-message-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    margin-top: 36px;
+    grid-template-columns: 0.85fr 1.35fr;
+    gap: clamp(24px, 3.5vw, 48px);
+    align-items: center;
 }
 
-.faculty-card {
+.principal-profile-card-wrapper {
+    max-width: 290px;
+    margin: 0 auto;
+}
+
+.principal-profile-card {
     background: #ffffff;
-    border: 1px solid #e8f0fe;
-    border-radius: 18px;
-    padding: 28px 18px 22px;
+    border: 1px solid #d8ecff;
+    border-radius: var(--adv-radius-xl);
+    padding: 20px 16px;
     text-align: center;
-    box-shadow: 0 4px 16px rgba(8, 59, 122, 0.04);
-    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(8, 59, 122, 0.07);
+}
+
+.principal-viewfinder-frame {
+    position: relative;
+    padding: 14px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.vf-bracket {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    pointer-events: none;
+}
+
+.vf-bracket-tl {
+    top: 4px;
+    left: 4px;
+    border-top: 2px solid var(--adv-sky);
+    border-left: 2px solid var(--adv-sky);
+}
+
+.vf-bracket-tr {
+    top: 4px;
+    right: 4px;
+    border-top: 2px solid var(--adv-sky);
+    border-right: 2px solid var(--adv-sky);
+}
+
+.vf-bracket-bl {
+    bottom: 4px;
+    left: 4px;
+    border-bottom: 2px solid var(--adv-sky);
+    border-left: 2px solid var(--adv-sky);
+}
+
+.vf-bracket-br {
+    bottom: 4px;
+    right: 4px;
+    border-bottom: 2px solid var(--adv-sky);
+    border-right: 2px solid var(--adv-sky);
+}
+
+.principal-avatar-wrap {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.principal-avatar-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.principal-name {
+    font-family: var(--adv-font-sans);
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--adv-navy);
+    margin: 0 0 2px;
+}
+
+.principal-role {
+    font-size: 0.78125rem;
+    font-weight: 800;
+    color: var(--adv-sky);
+    margin-bottom: 3px;
+}
+
+.principal-org {
+    font-size: 0.72rem;
+    color: var(--adv-text-muted);
+    line-height: 1.35;
+    margin: 0 0 12px;
+}
+
+.principal-stats-bar {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    align-items: center;
+    background: #f8fcff;
+    border: 1px solid #e0effa;
+    border-radius: var(--adv-radius-md);
+    padding: 6px 8px;
+}
+
+.principal-stat-item .stat-top {
+    display: block;
+    font-family: var(--adv-font-sans);
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: var(--adv-navy);
+}
+
+.principal-stat-item .stat-bot {
+    display: block;
+    font-size: 0.65rem;
+    color: var(--adv-text-muted);
+    margin-top: 1px;
+}
+
+.principal-stat-divider {
+    width: 1px;
+    height: 18px;
+    background: #e2e8f0;
+}
+
+.principal-signature-block {
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 1.5px solid #f1f5f9;
+}
+
+.principal-signature-name {
+    font-family: var(--adv-font-sans);
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: var(--adv-navy);
+    margin-bottom: 2px;
+}
+
+.principal-signature-role {
+    font-size: 0.75rem;
+    color: var(--adv-text-muted);
+}
+
+/* Principal Campus Visit CTA Banner */
+.principal-cta-banner-section {
+    position: relative;
+    padding: clamp(35px, 4vw, 50px) 0 0;
+    background: #ffffff;
+}
+
+.principal-cta-banner-full {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: clamp(24px, 3.5vw, 45px);
+    align-items: center;
+}
+
+.principal-cta-features {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 18px;
+}
+
+.principal-feature-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #f8fcff;
+    border: 1px solid #e0effa;
+    border-radius: var(--adv-radius-pill);
+    padding: 6px 14px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--adv-navy);
+}
+
+.principal-feature-badge i {
+    color: var(--adv-sky);
+}
+
+.principal-cta-right-visual {
+    position: relative;
+}
+
+.principal-cta-arch-wrapper {
+    position: relative;
+    border-radius: 50px 16px 16px 16px;
+    overflow: hidden;
+    box-shadow: 0 14px 36px rgba(8, 59, 122, 0.12);
+}
+
+.principal-cta-arch-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.principal-cta-actions-card {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* ==========================================================================
+   5. OUR FACULTY (STAFF) PAGE SPECIFIC STYLES (MATCHING SCREENSHOT)
+   ========================================================================== */
+
+.faculty-page-wrapper {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    overflow-x: hidden;
+    font-family: var(--adv-font-body, 'Plus Jakarta Sans', sans-serif);
+    color: #173d5d;
+}
+
+.faculty-page-wrapper * {
+    box-sizing: border-box;
+}
+
+.text-orange {
+    color: #F37021 !important;
+}
+
+/* =========================================
+   1. HERO SECTION (DYNAMIC SVG WAVE WITH CAMPUS BUILDING)
+   Shared across: Our Faculty, Chairman's Desk, Principal's Desk, Vision & Mission
+========================================= */
+
+.staff-hero-section,
+.chairman-hero-section,
+.principal-hero-section,
+.vision-hero-section {
+    position: relative;
+    width: 100%;
+    background: #ffffff;
+}
+
+.staff-hero-canvas,
+.chairman-hero-canvas,
+.principal-hero-canvas,
+.vision-hero-canvas {
+    position: relative;
+    min-height: clamp(380px, 28vw, 470px);
+    display: flex;
+    align-items: center;
+    background: #ffffff;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Right Background Building / Sky Image */
+.staff-hero-bg-visual,
+.chairman-hero-bg-visual,
+.principal-hero-bg-visual,
+.vision-hero-bg-visual {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 65%;
+    z-index: 1;
+    overflow: hidden;
+    background: #4ea5f2;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.staff-hero-bg-img,
+.chairman-hero-bg-img,
+.principal-hero-bg-img,
+.vision-hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+/* Floating "More Than A School" Script Badge in Sky */
+.staff-hero-script-tag,
+.chairman-hero-script-tag,
+.principal-hero-script-tag,
+.vision-hero-script-tag {
+    position: absolute;
+    top: clamp(18px, 2.8vw, 36px);
+    right: clamp(20px, 4.2vw, 65px);
+    z-index: 5;
+    text-align: center;
+    transform: rotate(-6deg);
+    pointer-events: none;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.faculty-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(8, 59, 122, 0.1);
-    border-color: #bae6fd;
+.staff-hero-script-tag .script-title,
+.chairman-hero-script-tag .script-title,
+.principal-hero-script-tag .script-title,
+.vision-hero-script-tag .script-title {
+    font-family: var(--adv-font-script, 'Caveat', cursive);
+    font-size: clamp(2.2rem, 3.2vw, 3.4rem);
+    font-weight: 700;
+    color: #083B7A;
+    line-height: 0.95;
+    display: block;
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.95);
 }
 
-.faculty-avatar-wrap {
-    margin-bottom: 14px;
+.staff-hero-script-tag .script-underline,
+.chairman-hero-script-tag .script-underline,
+.principal-hero-script-tag .script-underline,
+.vision-hero-script-tag .script-underline {
+    width: clamp(105px, 8.5vw, 135px);
+    height: 16px;
+    display: block;
+    margin: 4px auto 0;
 }
 
-.faculty-avatar-circle {
-    width: 110px;
-    height: 110px;
+/* Full Width SVG Wave Overlay spanning the canvas */
+.staff-hero-wave-overlay,
+.chairman-hero-wave-overlay,
+.principal-hero-wave-overlay,
+.vision-hero-wave-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.staff-hero-wave-overlay svg,
+.chairman-hero-wave-overlay svg,
+.principal-hero-wave-overlay svg,
+.vision-hero-wave-overlay svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Left Dot Matrix Decor */
+.staff-hero-dots-decor,
+.chairman-hero-dots-decor,
+.principal-hero-dots-decor,
+.vision-hero-dots-decor {
+    position: absolute;
+    top: 24px;
+    left: clamp(20px, 4vw, 55px);
+    width: 90px;
+    height: 75px;
+    background-image: radial-gradient(#93c5fd 1.8px, transparent 1.8px);
+    background-size: 15px 15px;
+    opacity: 0.75;
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* Left Content Panel */
+.staff-hero-left-panel,
+.chairman-hero-left-panel,
+.principal-hero-left-panel,
+.vision-hero-left-panel {
+    position: relative;
+    z-index: 4;
+    width: 44%;
+    max-width: 560px;
+    display: flex;
+    align-items: center;
+    padding: clamp(32px, 4vw, 52px) clamp(20px, 3vw, 35px) clamp(35px, 4.5vw, 58px) clamp(24px, 5vw, 80px);
+    background: transparent;
+}
+
+.staff-hero-content-inner,
+.chairman-hero-content-inner,
+.principal-hero-content-inner,
+.vision-hero-content-inner {
+    position: relative;
+    z-index: 5;
+    max-width: 500px;
+    width: 100%;
+}
+
+.staff-breadcrumb,
+.chairman-breadcrumb,
+.principal-breadcrumb,
+.vision-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+.staff-breadcrumb a,
+.chairman-breadcrumb a,
+.principal-breadcrumb a,
+.vision-breadcrumb a {
+    color: #0284C7;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.staff-breadcrumb a:hover,
+.chairman-breadcrumb a:hover,
+.principal-breadcrumb a:hover,
+.vision-breadcrumb a:hover {
+    color: #F37021;
+}
+
+.staff-breadcrumb .sep,
+.chairman-breadcrumb .sep,
+.principal-breadcrumb .sep,
+.vision-breadcrumb .sep {
+    font-size: 0.65rem;
+    color: #94a3b8;
+}
+
+.staff-breadcrumb .active,
+.chairman-breadcrumb .active,
+.principal-breadcrumb .active,
+.vision-breadcrumb .active {
+    color: #083B7A;
+    font-weight: 700;
+}
+
+.staff-eyebrow,
+.chairman-eyebrow,
+.principal-eyebrow,
+.vision-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #F37021;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.staff-eyebrow::before,
+.staff-eyebrow::after,
+.chairman-eyebrow::before,
+.chairman-eyebrow::after,
+.principal-eyebrow::before,
+.principal-eyebrow::after,
+.vision-eyebrow::before,
+.vision-eyebrow::after {
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 2px;
+    background: #F37021;
+}
+
+.staff-hero-title,
+.chairman-hero-title,
+.principal-hero-title,
+.vision-hero-title {
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: clamp(1.95rem, 2.5vw, 2.7rem);
+    font-weight: 800;
+    color: #0c2b4d;
+    line-height: 1.15;
+    margin-bottom: 12px;
+    letter-spacing: -0.4px;
+}
+
+.staff-hero-title span,
+.chairman-hero-title span,
+.principal-hero-title span,
+.vision-hero-title span {
+    color: #F37021;
+}
+
+.staff-hero-desc,
+.chairman-hero-desc,
+.principal-hero-desc,
+.vision-hero-desc {
+    font-size: clamp(0.85rem, 0.95vw, 0.94rem);
+    line-height: 1.6;
+    color: #556987;
+    margin: 0;
+    max-width: 480px;
+}
+
+.chairman-hero-pillars,
+.principal-hero-pillars {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: #083B7A;
+    margin-bottom: 12px;
+}
+
+.chairman-hero-pillars .pillar-pipe,
+.principal-hero-pillars .pillar-pipe {
+    color: #F37021;
+    font-weight: 800;
+    user-select: none;
+}
+
+.chairman-hero-actions,
+.principal-hero-actions,
+.vision-hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 14px;
+}
+
+.chairman-btn-orange,
+.principal-btn-orange,
+.vision-btn-orange {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #F37021;
+    color: #ffffff !important;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 0.875rem;
+    font-weight: 700;
+    padding: 10px 22px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(243, 112, 33, 0.3);
+    transition: all 0.25s ease;
+    border: none;
+}
+
+.chairman-btn-orange:hover,
+.principal-btn-orange:hover,
+.vision-btn-orange:hover {
+    background: #d95d12;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(243, 112, 33, 0.4);
+}
+
+.chairman-btn-video,
+.principal-btn-video,
+.vision-btn-video {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #ffffff;
+    color: #083B7A !important;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 0.875rem;
+    font-weight: 700;
+    padding: 9px 20px;
+    border-radius: 50px;
+    border: 1.5px solid #083B7A;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.chairman-btn-video:hover,
+.principal-btn-video:hover,
+.vision-btn-video:hover {
+    background: #083B7A;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(8, 59, 122, 0.15);
+}
+
+/* =========================================
+   FLOATING STATS STRIP
+========================================= */
+
+.staff-stats-strip-wrapper {
+    position: relative;
+    z-index: 10;
+    margin-top: -38px;
+    padding: 0 clamp(16px, 3vw, 24px);
+    width: 100%;
+}
+
+.staff-stats-strip {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #e1effa;
+    border-radius: 20px;
+    padding: 16px 28px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    box-shadow: 0 10px 32px rgba(8, 59, 122, 0.08);
+}
+
+.staff-stat-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    justify-content: center;
+    border-right: 1px solid #e1edf8;
+    padding: 4px 14px;
+}
+
+.staff-stat-item:last-child {
+    border-right: 0;
+}
+
+.staff-stat-icon {
+    font-size: 1.85rem;
+    color: #0284C7;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.staff-stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.staff-stat-num {
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: #083B7A;
+    line-height: 1.1;
+}
+
+.staff-stat-label {
+    font-size: 0.76rem;
+    font-weight: 600;
+    color: #64748b;
+    margin-top: 2px;
+    white-space: nowrap;
+}
+
+/* =========================================
+   2. EDUCATORS GRID SECTION (8 Cards)
+========================================= */
+
+.staff-grid-section {
+    position: relative;
+    padding: clamp(35px, 4vw, 50px) 0 clamp(12px, 1.8vw, 20px);
+    background: #ffffff;
+}
+
+/* Dot grid decorations */
+.staff-decor-dots-left,
+.staff-decor-dots-right {
+    position: absolute;
+    width: 80px;
+    height: 100px;
+    background-image: radial-gradient(#93c5fd 1.8px, transparent 1.8px);
+    background-size: 16px 16px;
+    opacity: 0.55;
+    pointer-events: none;
+}
+
+.staff-decor-dots-left {
+    top: 40px;
+    left: clamp(15px, 3.5vw, 48px);
+}
+
+.staff-decor-dots-right {
+    top: 40px;
+    right: clamp(15px, 3.5vw, 48px);
+}
+
+.staff-grid-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 clamp(16px, 2.5vw, 24px);
+    position: relative;
+    z-index: 2;
+}
+
+.staff-section-header {
+    text-align: center;
+    max-width: 740px;
+    margin: 0 auto clamp(22px, 2.8vw, 32px);
+}
+
+.staff-educators-eyebrow {
+    display: inline-block;
+    color: #0284c7;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.staff-section-title {
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: clamp(1.85rem, 2.6vw, 2.45rem);
+    font-weight: 800;
+    color: #083B7A;
+    line-height: 1.18;
+    margin-bottom: 12px;
+    letter-spacing: -0.4px;
+}
+
+.staff-section-desc {
+    font-size: clamp(0.88rem, 1.05vw, 0.96rem);
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* 8 Faculty Cards Grid */
+.staff-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(14px, 2vw, 22px);
+}
+
+.staff-card {
+    background: #ffffff;
+    border: 1px solid #e0effa;
+    border-radius: 18px;
+    padding: 24px 14px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 16px rgba(8, 59, 122, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.staff-card:hover {
+    transform: translateY(-4px);
+    border-color: #b9dcf2;
+    box-shadow: 0 10px 28px rgba(8, 59, 122, 0.1);
+}
+
+.staff-card-avatar-wrap {
+    margin-bottom: 12px;
+}
+
+.staff-card-avatar-circle {
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
-    background: #e2e8f0;
+    background: #e0f2fe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     overflow: hidden;
+}
+
+.staff-avatar-svg {
+    width: 85%;
+    height: 85%;
+    display: block;
+}
+
+/* Role Pills */
+.staff-role-pill {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin-bottom: 8px;
+}
+
+.role-orange {
+    background: #fff0e6;
+    color: #e65100;
+}
+
+.role-blue {
+    background: #e0f2fe;
+    color: #0284c7;
+}
+
+.role-purple {
+    background: #f3e8ff;
+    color: #7c3aed;
+}
+
+.role-rose {
+    background: #ffe4e6;
+    color: #e11d48;
+}
+
+.role-green {
+    background: #dcfce7;
+    color: #16a34a;
+}
+
+.role-amber {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.role-cyan {
+    background: #e0f2fe;
+    color: #0284c7;
+}
+
+.role-pink {
+    background: #fce7f3;
+    color: #db2777;
+}
+
+.staff-card-name {
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #083B7A;
+    margin: 0 0 6px;
+    letter-spacing: -0.2px;
+}
+
+/* Qualification */
+.staff-card-qual {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.76rem;
+    font-weight: 600;
+}
+
+.qual-orange {
+    color: #e65100;
+}
+
+.qual-blue {
+    color: #0284c7;
+}
+
+.qual-purple {
+    color: #7c3aed;
+}
+
+.qual-rose {
+    color: #e11d48;
+}
+
+.qual-green {
+    color: #16a34a;
+}
+
+.qual-amber {
+    color: #d97706;
+}
+
+.qual-cyan {
+    color: #0284c7;
+}
+
+.qual-pink {
+    color: #db2777;
+}
+
+/* =========================================
+   3. JOIN OUR TEAM SECTION (CENTERED TEXT LAYOUT)
+========================================= */
+
+.staff-join-section {
+    position: relative;
+    width: 100%;
+    min-height: 250px;
+    overflow: hidden;
+    background: linear-gradient(110deg, #edf8ff 0%, #dceeff 52%, #c9e3fb 100%);
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.faculty-avatar-svg {
+/* Background curved shapes */
+.staff-join-section .shape-one {
+    position: absolute;
+    width: 66%;
+    height: 125%;
+    left: -13%;
+    top: -35%;
+    border-radius: 50%;
+    background: rgba(205, 227, 247, 0.62);
+    transform: rotate(-3deg);
+    pointer-events: none;
+}
+
+.staff-join-section .shape-two {
+    position: absolute;
+    width: 43%;
+    height: 170%;
+    right: 13%;
+    top: -55%;
+    border-radius: 50%;
+    background: rgba(182, 214, 245, 0.48);
+    pointer-events: none;
+}
+
+.staff-join-section .shape-three {
+    position: absolute;
+    width: 31%;
+    height: 145%;
+    right: -5%;
+    top: -42%;
+    border-radius: 50%;
+    background: rgba(238, 248, 255, 0.75);
+    pointer-events: none;
+}
+
+/* Left Paper Airplane Image */
+.staff-join-plane-left {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 32%;
+    max-width: 380px;
+    z-index: 2;
+    pointer-events: none;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.staff-join-plane-img {
+    width: 100%;
+    height: 85%;
+    max-height: 220px;
+    object-fit: contain;
+    object-position: left center;
+    display: block;
+}
+
+/* Dots Pattern before Students on right */
+.staff-join-section .dot-pattern {
+    position: absolute;
+    right: 32%;
+    bottom: 25px;
+    width: 160px;
+    height: 90px;
+    opacity: 0.75;
+    background-image: radial-gradient(#2380c9 1.6px, transparent 1.7px);
+    background-size: 18px 18px;
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* Center Content */
+.banner-content-center {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    max-width: 580px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.copy-center {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.staff-join-section .eyebrow {
+    margin-bottom: 6px;
+    color: #F37021;
+    font-size: 0.78rem;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    text-align: center;
+}
+
+.staff-join-section .headline {
+    margin: 0 0 6px;
+    color: #083B7A;
+    font-size: clamp(22px, 2.3vw, 36px);
+    line-height: 1.15;
+    font-weight: 800;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    text-align: center;
+}
+
+.staff-join-section .subtext {
+    margin: 4px auto 18px;
+    color: #475569;
+    font-size: clamp(12px, 0.95vw, 15px);
+    line-height: 1.45;
+    max-width: 490px;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    text-align: center;
+}
+
+.staff-join-section .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.staff-btn-orange {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #F37021;
+    color: #ffffff !important;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 10px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(243, 112, 33, 0.25);
+    transition: all 0.2s ease;
+}
+
+.staff-btn-orange:hover {
+    background: #e05d0e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(243, 112, 33, 0.35);
+}
+
+.staff-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #083B7A !important;
+    border: 1.5px solid #083B7A;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 9px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.staff-btn-outline:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Students Image on Right */
+.staff-join-section .students {
+    position: absolute;
+    z-index: 4;
+    right: 0;
+    bottom: 0;
+    width: 38%;
+    max-width: 380px;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.staff-join-section .students img {
+    height: 100%;
+    max-height: 290px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: right bottom;
+    display: block;
+}
+
+/* =========================================
+   4. CAMPUS SHOWCASE STRIP (COMPACT WITH ZERO EXCESS GAP)
+========================================= */
+
+.staff-campus-showcase-section {
+    /* padding: 12px 20px 24px; */
+    background: #ffffff;
+    width: 100%;
+}
+
+.staff-campus-showcase-card {
+    max-width: 1140px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1.5px solid #d8ecff;
+    border-radius: 18px;
+    padding: 14px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    box-shadow: 0 6px 20px rgba(8, 59, 122, 0.05);
+    width: 100%;
+}
+
+.staff-showcase-left {
+    position: relative;
+    padding-left: 14px;
+    max-width: 320px;
+    flex-shrink: 0;
+}
+
+.staff-showcase-bar {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    bottom: 2px;
+    width: 4px;
+    background: #0284C7;
+    border-radius: 4px;
+}
+
+.staff-showcase-title {
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: clamp(1.1rem, 1.4vw, 1.35rem);
+    font-weight: 800;
+    color: #083B7A;
+    line-height: 1.2;
+    margin: 0 0 4px;
+    letter-spacing: -0.3px;
+}
+
+.staff-showcase-desc {
+    font-size: 0.76rem;
+    color: #64748b;
+    line-height: 1.38;
+    margin: 0;
+}
+
+.staff-showcase-gallery {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    max-width: 440px;
+}
+
+.staff-showcase-thumb {
+    flex: 1;
+    border-radius: 9px;
+    overflow: hidden;
+    height: 68px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.staff-thumb-img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
 }
 
-.faculty-role-badge {
-    font-family: var(--adv-font-sans);
-    font-size: 10.5px;
-    font-weight: 800;
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-    padding: 4px 12px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-    white-space: nowrap;
+.staff-showcase-thumb:hover .staff-thumb-img {
+    transform: scale(1.06);
 }
 
-.badge-orange { background: #fff0e6; color: #f37021; border: 1px solid #ffd8bf; }
-.badge-blue { background: #e0f2fe; color: #0284c7; border: 1px solid #bae6fd; }
-.badge-purple { background: #f3e8ff; color: #9333ea; border: 1px solid #e9d5ff; }
-.badge-rose { background: #ffe4e6; color: #e11d48; border: 1px solid #fecdd3; }
-.badge-green { background: #dcfce7; color: #16a34a; border: 1px solid #bbf7d0; }
-.badge-amber { background: #fef3c7; color: #d97706; border: 1px solid #fde68a; }
-.badge-cyan { background: #cffafe; color: #0891b2; border: 1px solid #a5f3fc; }
-.badge-pink { background: #fce7f3; color: #db2777; border: 1px solid #fbcfe8; }
-
-.faculty-name {
-    font-family: var(--adv-font-sans);
-    font-size: 17px;
-    font-weight: 700;
-    color: var(--adv-navy);
-    margin-bottom: 6px;
-}
-
-.faculty-qual {
+.staff-showcase-actions {
     display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 13px;
-    font-weight: 600;
+    flex-direction: column;
+    gap: 7px;
+    flex-shrink: 0;
+    min-width: 175px;
 }
 
-.qual-orange { color: #f37021; }
-.qual-blue { color: #0284c7; }
-.qual-purple { color: #9333ea; }
-.qual-rose { color: #e11d48; }
-.qual-green { color: #16a34a; }
-.qual-amber { color: #d97706; }
-.qual-cyan { color: #0891b2; }
-.qual-pink { color: #db2777; }
+.staff-showcase-btn-orange {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #F37021;
+    color: #ffffff;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    box-shadow: 0 3px 10px rgba(243, 112, 33, 0.2);
+    transition: all 0.2s ease;
+}
+
+.staff-showcase-btn-orange:hover {
+    background: #e05d0e;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.staff-showcase-btn-video {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #ffffff;
+    color: #083B7A;
+    border: 1px solid #083B7A;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 0.78rem;
+    font-weight: 700;
+    padding: 8px 16px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.staff-showcase-btn-video i {
+    color: #0284C7;
+}
+
+.staff-showcase-btn-video:hover {
+    background: #f0f7ff;
+    color: #083B7A;
+    transform: translateY(-2px);
+}
+
+/* Tablet Media Query */
+@media (max-width: 991px) {
+    .banner-content-center {
+        max-width: 500px;
+        padding-left: 20px;
+    }
+    .staff-join-plane-left {
+        width: 30%;
+        opacity: 0.8;
+    }
+    .staff-join-section .students {
+        width: 34%;
+    }
+    .staff-campus-showcase-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+    .staff-campus-showcase-section {
+        padding: 14px 16px 24px;
+    }
+}
+
+/* Mobile Media Query */
+@media (max-width: 767px) {
+    .staff-join-section {
+        min-height: 340px;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .staff-join-plane-left {
+        display: none;
+    }
+    .banner-content-center {
+        padding: 25px 20px 15px;
+    }
+    .staff-join-section .students {
+        position: relative;
+        width: 65%;
+        max-width: 260px;
+        height: auto;
+        margin-top: auto;
+    }
+    .staff-join-section .students img {
+        height: auto;
+        max-height: 180px;
+        width: 100%;
+    }
+}
+
+/* =========================================
+   MOBILE RESPONSIVENESS (<= 576px)
+========================================= */
+
+@media (max-width: 576px) {
+    .staff-hero-left-panel {
+        padding: 24px 16px 40px;
+    }
+
+    .staff-hero-title {
+        font-size: 1.85rem;
+    }
+
+    .staff-stats-strip-wrapper {
+        margin-top: -20px;
+        padding: 0 10px;
+    }
+
+    .staff-stats-strip {
+        padding: 12px 10px;
+    }
+
+    .staff-stat-num {
+        font-size: 1.15rem;
+    }
+
+    .staff-stat-label {
+        font-size: 0.7rem;
+    }
+
+    .staff-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .staff-card {
+        padding: 16px 8px 14px;
+    }
+
+    .staff-card-avatar-circle {
+        width: 65px;
+        height: 65px;
+    }
+
+    .staff-card-name {
+        font-size: 0.95rem;
+    }
+
+    .staff-card-qual {
+        font-size: 0.7rem;
+    }
+
+    .staff-join-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .staff-btn-orange,
+    .staff-btn-outline {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .staff-showcase-gallery {
+        gap: 6px;
+    }
+
+    .staff-showcase-thumb {
+        height: 56px;
+    }
+}
 
 /* ==========================================================================
-   10. CHAIRMAN'S MESSAGE SECTION (reference-3.png)
+   6. VISION & MISSION PAGE SPECIFIC STYLES
    ========================================================================== */
-.chairman-message-section {
+
+/* Dual Featured Cards (Vision & Mission Side-by-Side) */
+.vision-dual-cards-section {
     position: relative;
-    padding: 60px 20px;
+    padding: clamp(35px, 4vw, 50px) 0 20px;
     background: #ffffff;
 }
 
-.chairman-message-container {
-    max-width: 1240px;
-    margin: 0 auto;
-}
-
-.chairman-message-grid {
+.vision-dual-cards-grid {
     display: grid;
-    grid-template-columns: 1.25fr 0.75fr;
-    gap: 48px;
-    align-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
-.message-title {
-    font-family: var(--adv-font-sans);
-    font-size: clamp(2rem, 2.6vw, 2.4rem);
-    font-weight: 800;
-    color: var(--adv-navy);
-    line-height: 1.2;
-    margin-bottom: 16px;
-}
-
-.message-salutation {
-    font-family: var(--adv-font-sans);
-    font-size: 15.5px;
-    font-weight: 700;
-    color: var(--adv-navy);
-    margin-bottom: 14px;
-}
-
-.message-paragraph {
-    font-size: 15px;
-    line-height: 1.7;
-    color: var(--adv-text-body);
-    margin-bottom: 16px;
-}
-
-.message-quote-box {
-    background: #f0f7ff;
-    border-left: 4px solid var(--adv-sky);
-    border-radius: 0 14px 14px 0;
-    padding: 18px 22px;
+.vision-featured-card {
+    position: relative;
+    border-radius: var(--adv-radius-xl);
+    overflow: hidden;
+    min-height: 320px;
     display: flex;
-    gap: 14px;
-    align-items: flex-start;
-    margin: 20px 0;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 28px 24px;
+    box-shadow: 0 10px 30px rgba(8, 59, 122, 0.08);
+    border: 1px solid #e0effa;
 }
 
-.quote-icon-wrap {
-    color: var(--adv-sky);
-    font-size: 20px;
-    line-height: 1;
-    margin-top: 2px;
+.vision-card-left {
+    background: linear-gradient(135deg, #05264f 0%, #083B7A 100%);
+    color: #ffffff;
 }
 
-.quote-text {
-    font-size: 14.5px;
-    font-weight: 600;
-    color: var(--adv-navy);
-    line-height: 1.6;
-    margin: 0;
-    font-style: italic;
-}
-
-.chairman-photo-card {
+.mission-card-right {
     background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 20px;
-    box-shadow: 0 12px 36px rgba(8, 59, 122, 0.1);
-    overflow: hidden;
-    max-width: 360px;
-    width: 100%;
+    border: 1.5px solid #d8ecff;
+    color: var(--adv-navy);
 }
 
-.chairman-photo-wrap {
-    width: 100%;
-    height: 340px;
-    background: #f8fafc;
+.vision-card-bg-visual,
+.mission-card-bg-visual {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
     overflow: hidden;
+    z-index: 1;
 }
 
-.chairman-photo-img {
+.vision-mountain-img,
+.mission-student-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center top;
 }
 
-.chairman-card-info-badge {
-    background: var(--adv-navy);
-    color: #ffffff;
-    padding: 16px 20px;
-    text-align: center;
+.vision-mountain-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #083B7A 0%, rgba(8, 59, 122, 0.6) 50%, transparent 100%);
 }
 
-.chairman-card-name {
-    font-family: var(--adv-font-sans);
-    font-size: 17px;
-    font-weight: 800;
-    margin-bottom: 2px;
+.mission-student-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
 }
 
-.chairman-card-role {
-    font-size: 13.5px;
-    color: #ffd8bf;
-    font-weight: 600;
+.vision-card-content {
+    position: relative;
+    z-index: 2;
+    max-width: 72%;
 }
 
-.four-beliefs-section {
-    padding: 60px 20px;
-    background: #f8fafc;
-}
-
-.four-beliefs-container {
-    max-width: 1240px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.beliefs-cards-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-}
-
-.belief-card {
-    background: #ffffff;
-    border: 1px solid #e8f0fe;
-    border-radius: 18px;
-    padding: 28px 20px;
-    text-align: center;
-    box-shadow: 0 4px 16px rgba(8, 59, 122, 0.04);
-    transition: transform 0.25s ease;
-}
-
-.belief-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 28px rgba(8, 59, 122, 0.08);
-}
-
-.belief-icon-circle {
-    width: 54px;
-    height: 54px;
+.vision-card-icon-wrap {
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 22px;
-    margin: 0 auto 16px;
+    font-size: 1.15rem;
+    margin-bottom: 10px;
 }
 
-.belief-title {
+.vision-pill-badge {
+    display: inline-block;
+    padding: 3px 12px;
+    border-radius: var(--adv-radius-pill);
     font-family: var(--adv-font-sans);
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--adv-navy);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.pill-navy {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+}
+
+.pill-orange {
+    background: var(--adv-orange);
+    color: #ffffff;
+}
+
+.vision-card-heading {
+    font-family: var(--adv-font-sans);
+    font-size: clamp(1.2rem, 1.6vw, 1.45rem);
+    font-weight: 800;
+    line-height: 1.25;
     margin-bottom: 8px;
 }
 
-.belief-desc {
-    font-size: 13.5px;
-    line-height: 1.55;
+.vision-card-left .vision-card-heading {
+    color: #ffffff;
+}
+
+.mission-card-right .vision-card-heading {
+    color: var(--adv-navy);
+}
+
+.vision-card-text {
+    font-size: 0.8125rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.vision-card-left .vision-card-text {
+    color: #cbd5e1;
+}
+
+.mission-card-right .vision-card-text {
     color: var(--adv-text-body);
 }
 
-/* ==========================================================================
-   11. PRINCIPAL'S MESSAGE SECTION (reference-4.png)
-   ========================================================================== */
-.principal-message-section {
-    position: relative;
-    padding: 60px 20px;
+/* Vision Beliefs Section (3 Cards) */
+.vision-beliefs-section {
+    padding: clamp(35px, 4vw, 50px) 0;
     background: #ffffff;
 }
 
-.principal-message-container {
-    max-width: 1240px;
-    margin: 0 auto;
-}
-
-.principal-message-grid {
-    display: grid;
-    grid-template-columns: 0.75fr 1.25fr;
-    gap: 48px;
-    align-items: flex-start;
-}
-
-.principal-framed-card {
-    position: relative;
-    background: #f0f7ff;
-    border-radius: 20px;
-    padding: 36px 24px 24px;
-    text-align: center;
-    border: 1px solid #dbeafe;
-}
-
-.principal-avatar-wrap {
-    margin-bottom: 16px;
-}
-
-.principal-avatar-circle {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    background: #e2e8f0;
-    overflow: hidden;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid #ffffff;
-    box-shadow: 0 4px 14px rgba(8, 59, 122, 0.08);
-}
-
-.principal-avatar-svg {
-    width: 100%;
-    height: 100%;
-}
-
-.principal-name {
-    font-family: var(--adv-font-sans);
-    font-size: 20px;
-    font-weight: 800;
-    color: var(--adv-navy);
-    margin-bottom: 2px;
-}
-
-.principal-designation {
-    font-size: 14.5px;
-    font-weight: 600;
-    color: var(--adv-sky);
-    margin-bottom: 4px;
-}
-
-.principal-org {
-    font-size: 13px;
-    color: var(--adv-text-muted);
-    margin-bottom: 20px;
-}
-
-.principal-card-metrics {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding-top: 16px;
-    border-top: 1px solid #dbeafe;
-}
-
-.metric-val {
-    font-family: var(--adv-font-sans);
-    font-size: 15px;
-    font-weight: 800;
-    color: var(--adv-navy);
-}
-
-.metric-sub {
-    font-size: 11.5px;
-    color: var(--adv-text-muted);
-}
-
-.principal-signoff {
-    margin-top: 20px;
-    padding-top: 14px;
-    border-top: 1px solid #f1f5f9;
-}
-
-.signoff-line {
-    font-family: var(--adv-font-sans);
-    font-size: 16px;
-    font-weight: 800;
-    color: var(--adv-navy);
-}
-
-.signoff-role {
-    font-size: 13.5px;
-    color: var(--adv-text-muted);
-}
-
-/* ==========================================================================
-   12. DUAL VISION & MISSION CARDS (reference-5.png)
-   ========================================================================== */
-.dual-vision-mission-section {
-    position: relative;
-    padding: 50px 20px;
-    background: #ffffff;
-}
-
-.dual-vm-container {
-    max-width: 1240px;
-    margin: 0 auto;
-}
-
-.dual-vm-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 28px;
-}
-
-.vm-card {
-    position: relative;
-    border-radius: 24px;
-    padding: 40px 36px;
-    overflow: hidden;
-    min-height: 380px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.card-vision {
-    background: #e8f4fc;
-    border: 1px solid #d0e8f9;
-}
-
-.card-mission {
-    background: #fff5ed;
-    border: 1px solid #ffd8bf;
-}
-
-.vm-card-bg-visual {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 45%;
-    height: 85%;
-    pointer-events: none;
-    opacity: 0.9;
-}
-
-.vm-bg-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center bottom;
-}
-
-.vm-card-content {
-    position: relative;
-    z-index: 2;
-    max-width: 65%;
-}
-
-.vm-badge-wrap {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 16px;
-}
-
-.vm-badge-icon {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-}
-
-.vm-pill-badge {
-    font-family: var(--adv-font-sans);
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    padding: 5px 14px;
-    border-radius: 20px;
-}
-
-.pill-blue { background: #0284c7; color: #ffffff; }
-.pill-orange { background: #f37021; color: #ffffff; }
-
-.vm-card-title {
-    font-family: var(--adv-font-sans);
-    font-size: clamp(1.4rem, 1.8vw, 1.7rem);
-    font-weight: 800;
-    color: var(--adv-navy);
-    line-height: 1.25;
-    margin-bottom: 14px;
-}
-
-.vm-card-desc {
-    font-size: 14px;
-    line-height: 1.65;
-    color: var(--adv-text-body);
-}
-
-.core-beliefs-section {
-    padding: 60px 20px;
-    background: #f8fafc;
-}
-
-.core-beliefs-container {
-    max-width: 1240px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.core-beliefs-grid {
+.vision-beliefs-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
+    gap: 18px;
+    margin-top: 20px;
 }
 
-.core-belief-card {
+.vision-belief-card {
     background: #ffffff;
-    border: 1px solid #e8f0fe;
-    border-radius: 18px;
-    padding: 32px 24px;
-    text-align: center;
-    box-shadow: 0 4px 16px rgba(8, 59, 122, 0.04);
+    border: 1px solid #e2e8f0;
+    border-radius: var(--adv-radius-lg);
+    padding: 22px 18px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 14px rgba(8, 59, 122, 0.03);
+    transition: all 0.2s ease;
 }
 
-.focus-areas-section {
-    padding: 60px 20px;
-    background: #ffffff;
+.vision-belief-card:hover {
+    transform: translateY(-3px);
+    border-color: #cbd5e1;
+    box-shadow: 0 8px 22px rgba(8, 59, 122, 0.07);
 }
 
-.focus-areas-container {
-    max-width: 1240px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.focus-areas-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-}
-
-.focus-card {
-    background: #ffffff;
-    border: 1px solid #e8f0fe;
-    border-radius: 18px;
-    padding: 28px 18px;
-    text-align: center;
-    box-shadow: 0 4px 16px rgba(8, 59, 122, 0.04);
-    transition: transform 0.25s ease;
-}
-
-.focus-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 28px rgba(8, 59, 122, 0.08);
-}
-
-.focus-icon-circle {
-    width: 52px;
-    height: 52px;
+.vision-belief-icon {
+    width: 42px;
+    height: 42px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
-    margin: 0 auto 14px;
+    font-size: 1.15rem;
+    margin-bottom: 12px;
 }
 
-.focus-title {
+.vision-belief-title {
     font-family: var(--adv-font-sans);
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 1.05rem;
+    font-weight: 800;
     color: var(--adv-navy);
-    margin-bottom: 6px;
+    margin: 0 0 6px;
 }
 
-.focus-desc {
-    font-size: 13px;
+.vision-belief-desc {
+    font-size: 0.8125rem;
+    color: var(--adv-text-body);
     line-height: 1.5;
+    margin: 0;
+}
+
+/* Vision Focus Areas (8 Cards Grid) */
+.vision-focus-section {
+    padding: clamp(35px, 4vw, 50px) 0;
+    background: #f8fcff;
+}
+
+.vision-focus-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-top: 20px;
+}
+
+.vision-focus-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--adv-radius-lg);
+    padding: 16px 14px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3px 12px rgba(8, 59, 122, 0.03);
+    transition: all 0.2s ease;
+}
+
+.vision-focus-card:hover {
+    transform: translateY(-3px);
+    border-color: #bae6fd;
+    box-shadow: 0 8px 20px rgba(8, 59, 122, 0.06);
+}
+
+.vision-focus-icon {
+    width: 38px;
+    height: 38px;
+    border-radius: var(--adv-radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.05rem;
+    margin-bottom: 10px;
+}
+
+.vision-focus-card-title {
+    font-family: var(--adv-font-sans);
+    font-size: 0.88rem;
+    font-weight: 800;
+    color: var(--adv-navy);
+    margin: 0 0 4px;
+    line-height: 1.25;
+}
+
+.vision-focus-card-desc {
+    font-size: 0.72rem;
     color: var(--adv-text-muted);
+    line-height: 1.35;
+    margin: 0;
 }
 
 /* ==========================================================================
-   Responsive Breakpoints
+   7. ADMISSION BANNER (EXACT SPECIFICATION)
    ========================================================================== */
-@media (max-width: 1100px) {
+.admission-banner {
+    position: relative;
+    width: 100%;
+    min-height: 250px;
+    overflow: hidden;
+    background: linear-gradient(110deg, #edf8ff 0%, #dceeff 52%, #c9e3fb 100%);
+    margin-top: 0;
+}
+
+/* Background curved shapes */
+.admission-banner .shape-one {
+    position: absolute;
+    width: 66%;
+    height: 125%;
+    left: -13%;
+    top: -35%;
+    border-radius: 50%;
+    background: rgba(205, 227, 247, 0.62);
+    transform: rotate(-3deg);
+    pointer-events: none;
+}
+
+.admission-banner .shape-two {
+    position: absolute;
+    width: 43%;
+    height: 170%;
+    right: 13%;
+    top: -55%;
+    border-radius: 50%;
+    background: rgba(182, 214, 245, 0.48);
+    pointer-events: none;
+}
+
+.admission-banner .shape-three {
+    position: absolute;
+    width: 31%;
+    height: 145%;
+    right: -5%;
+    top: -42%;
+    border-radius: 50%;
+    background: rgba(238, 248, 255, 0.75);
+    pointer-events: none;
+}
+
+/* Dots Pattern */
+.admission-banner .dot-pattern {
+    position: absolute;
+    left: 54%;
+    bottom: 18px;
+    width: 170px;
+    height: 90px;
+    opacity: 0.8;
+    background-image: radial-gradient(#2380c9 1.6px, transparent 1.7px);
+    background-size: 18px 18px;
+    mask-image: linear-gradient(to right, transparent, #000 35%, #000);
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 35%, #000);
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* Content */
+.admission-banner .banner-content {
+    position: relative;
+    z-index: 5;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+}
+
+.admission-banner .copy {
+    width: 58%;
+    padding: 25px 0 22px 5.5%;
+}
+
+.admission-banner .eyebrow {
+    margin-bottom: 5px;
+    color: #2681c7;
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-family: var(--adv-font-sans);
+}
+
+.admission-banner .eyebrow-line {
+    display: inline-block;
+    width: 42px;
+    height: 2px;
+    margin-left: 8px;
+    vertical-align: middle;
+    background: #b7d7ef;
+}
+
+.admission-banner .headline {
+    margin: 0;
+    color: #102f54;
+    font-size: clamp(22px, 2.25vw, 38px);
+    line-height: 1.12;
+    font-weight: 800;
+    font-family: var(--adv-font-sans);
+}
+
+.admission-banner .subtext {
+    margin: 9px 0 15px;
+    color: #617d99;
+    font-size: clamp(11px, 1vw, 16px);
+    line-height: 1.4;
+    font-family: var(--adv-font-sans);
+}
+
+/* Buttons */
+.admission-banner .buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.admission-banner .btn-enrol {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 13px;
+    min-width: 145px;
+    height: 43px;
+    padding: 0 22px;
+    border: 0;
+    border-radius: 25px;
+    background: #ff751b;
+    color: #fff !important;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 5px 14px rgba(255, 117, 27, 0.18);
+    transition: 0.2s;
+}
+
+.admission-banner .btn-enrol:hover {
+    background: #eb6410;
+    color: #fff !important;
+    transform: translateY(-2px);
+}
+
+.admission-banner .btn-visit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    height: 43px;
+    padding: 0 21px;
+    border: 1.5px solid #357fc0;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.88);
+    color: #183b61;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.admission-banner .btn-visit:hover {
+    background: #fff;
+    color: #123452;
+    transform: translateY(-2px);
+}
+
+.admission-banner .btn-visit i {
+    font-size: 15px;
+    color: #286fae;
+}
+
+/* Student Image */
+.admission-banner .students {
+    position: absolute;
+    z-index: 4;
+    right: 0;
+    bottom: 0;
+    width: 48%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.admission-banner .students img {
+    height: 100%;
+    max-height: 290px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: right bottom;
+    display: block;
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+    .admission-banner {
+        min-height: 220px;
+    }
+    .admission-banner .banner-content {
+        min-height: 220px;
+    }
+    .admission-banner .copy {
+        width: 64%;
+        padding-left: 4%;
+    }
+    .admission-banner .students {
+        width: 42%;
+    }
+    .admission-banner .eyebrow {
+        font-size: 12px;
+    }
+    .admission-banner .subtext {
+        margin-top: 6px;
+        margin-bottom: 10px;
+    }
+    .admission-banner .btn-enrol,
+    .admission-banner .btn-visit {
+        height: 38px;
+        font-size: 11px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .admission-banner {
+        min-height: 330px;
+    }
+    .admission-banner .banner-content {
+        min-height: 330px;
+        align-items: flex-start;
+    }
+    .admission-banner .copy {
+        width: 100%;
+        padding: 25px 22px 15px;
+    }
+    .admission-banner .headline {
+        max-width: 62%;
+        font-size: 25px;
+    }
+    .admission-banner .subtext {
+        max-width: 58%;
+        font-size: 11px;
+    }
+    .admission-banner .buttons {
+        position: relative;
+        z-index: 10;
+    }
+    .admission-banner .students {
+        width: 58%;
+        height: 48%;
+        bottom: 0;
+    }
+    .admission-banner .students img {
+        width: 190%;
+    }
+    .admission-banner .dot-pattern {
+        left: auto;
+        right: 33%;
+        bottom: 25px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .admission-banner {
+        min-height: 380px;
+    }
+    .admission-banner .banner-content {
+        min-height: 380px;
+    }
+    .admission-banner .copy {
+        padding: 22px 17px;
+    }
+    .admission-banner .eyebrow {
+        font-size: 10px;
+    }
+    .admission-banner .headline {
+        max-width: 70%;
+        font-size: 21px;
+    }
+    .admission-banner .subtext {
+        max-width: 68%;
+        font-size: 10px;
+    }
+    .admission-banner .buttons {
+        gap: 7px;
+    }
+    .admission-banner .btn-enrol,
+    .admission-banner .btn-visit {
+        height: 35px;
+        padding: 0 13px;
+        font-size: 10px;
+    }
+    .admission-banner .btn-visit {
+        max-width: 180px;
+    }
+}
+
+/* Shared Inner Pages CTA Fallbacks */
+.chairman-cta-banner-section,
+.vision-cta-banner-section {
+    position: relative;
+    width: 100%;
+    background: #ffffff;
+    padding: 0;
+    overflow: hidden;
+}
+
+.chairman-cta-banner-full,
+.vision-cta-banner-full {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(135deg, #edf6fe 0%, #ddedfd 100%);
+    display: grid;
+    grid-template-columns: 1.25fr 0.85fr;
+    align-items: flex-end;
+    min-height: 290px;
+    overflow: hidden;
+}
+
+.chairman-cta-left-content,
+.vision-cta-left-content {
+    position: relative;
+    padding: clamp(36px, 4.5vw, 54px) clamp(20px, 3.5vw, 40px) clamp(36px, 4.5vw, 54px) clamp(24px, 5.5vw, 76px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 3;
+}
+
+.chairman-cta-eyebrow,
+.vision-cta-eyebrow,
+.principal-cta-eyebrow {
+    display: inline-block;
+    color: #0284c7;
+    font-family: var(--adv-font-sans);
+    font-size: 0.8125rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.chairman-cta-title,
+.vision-cta-title,
+.principal-cta-title {
+    font-family: var(--adv-font-sans);
+    font-size: clamp(1.85rem, 2.5vw, 2.45rem);
+    font-weight: 800;
+    color: var(--adv-navy, #0A2540);
+    line-height: 1.18;
+    margin-bottom: 10px;
+    letter-spacing: -0.4px;
+}
+
+.chairman-cta-desc,
+.vision-cta-desc,
+.principal-cta-desc {
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    color: var(--adv-text-body, #475569);
+    margin-bottom: 22px;
+    max-width: 520px;
+}
+
+.chairman-cta-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.chairman-btn-orange-solid {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--adv-orange, #F37021);
+    color: #ffffff;
+    border-radius: 50px;
+    padding: 12px 26px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(243, 112, 33, 0.28);
+    transition: all 0.25s ease;
+}
+
+.chairman-btn-navy-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #ffffff;
+    color: var(--adv-navy, #0A2540);
+    border: 1.5px solid var(--adv-navy, #0A2540);
+    border-radius: 50px;
+    padding: 11px 24px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.chairman-cta-arch-wrapper,
+.vision-cta-arch-wrapper {
+    position: relative;
+    height: 100%;
+    min-height: 290px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    z-index: 2;
+}
+
+.chairman-cta-arch-img,
+.vision-cta-arch-img {
+    max-height: 315px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: right bottom;
+    display: block;
+}
+
+/* ==========================================================================
+   8. RESPONSIVE BREAKPOINTS
+   ========================================================================== */
+@media (max-width: 1200px) {
+    .about-hero-left-panel {
+        width: 56%;
+        padding: 26px 20px 26px 32px;
+    }
+    .about-hero-bg-visual {
+        width: 54%;
+    }
+    .staff-hero-left-panel,
+    .chairman-hero-left-panel,
+    .principal-hero-left-panel,
+    .vision-hero-left-panel {
+        width: 50%;
+        padding: 26px 20px 26px 32px;
+    }
+    .about-apart-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .staff-cards-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+    }
+    .vision-focus-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+    }
+}
+
+@media (max-width: 991px) {
     .about-hero-canvas,
-    .inner-hero-canvas {
+    .staff-hero-canvas,
+    .chairman-hero-canvas,
+    .principal-hero-canvas,
+    .vision-hero-canvas {
         flex-direction: column;
+        min-height: auto;
     }
     .about-hero-left-panel,
-    .inner-hero-left-panel {
+    .staff-hero-left-panel,
+    .chairman-hero-left-panel,
+    .principal-hero-left-panel,
+    .vision-hero-left-panel {
         width: 100%;
-        padding: 40px 24px;
+        padding: 26px 20px;
+        background: #ffffff;
     }
-    .about-hero-wave-edge {
+    .about-hero-wave-edge,
+    .staff-hero-wave-edge,
+    .chairman-hero-wave-edge,
+    .principal-hero-wave-edge,
+    .vision-hero-wave-edge {
         display: none;
     }
     .about-hero-bg-visual,
-    .inner-hero-right-visual {
+    .staff-hero-bg-visual,
+    .chairman-hero-bg-visual,
+    .principal-hero-bg-visual,
+    .vision-hero-bg-visual {
         position: relative;
         width: 100%;
-        height: 300px;
+        height: 240px;
     }
     .about-strip-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     .about-story-grid,
-    .built-values-top-grid,
     .about-philosophy-grid,
-    .edu-life-grid,
     .about-campus-grid,
-    .chairman-message-grid,
+    .chairman-message-card,
     .principal-message-grid,
-    .dual-vm-grid {
+    .principal-cta-banner-full,
+    .vision-dual-cards-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 22px;
     }
-    .about-apart-grid {
-        grid-template-columns: repeat(3, 1fr);
+    .about-vmv-grid,
+    .vision-beliefs-grid {
+        grid-template-columns: 1fr;
     }
-    .about-admission-banner-container,
-    .inner-join-banner-container {
-        flex-direction: column;
-        gap: 30px;
-        text-align: center;
+    .staff-stats-strip {
+        grid-template-columns: repeat(2, 1fr);
+        border-radius: var(--adv-radius-xl);
     }
-    .banner-copy-col,
-    .join-content-center {
-        max-width: 100%;
-    }
-    .banner-btn-group,
-    .join-actions {
-        justify-content: center;
-    }
-    .banner-students-col,
-    .join-students-wrap {
-        width: 100%;
-        justify-content: center;
-    }
-    .faculty-cards-grid,
-    .beliefs-cards-grid,
-    .focus-areas-grid {
+    .staff-cards-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    .inner-hero-img-frame {
-        border-radius: 0;
-        border-left: none;
-        border-top: 6px solid #0284c7;
+    .staff-campus-strip-card {
+        grid-template-columns: 1fr;
+    }
+    .vision-focus-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .chairman-commitment-grid,
+    .principal-commitment-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .about-cta-banner-full,
+    .chairman-cta-banner-full,
+    .vision-cta-banner-full {
+        grid-template-columns: 1fr;
+    }
+    .about-cta-students-wrapper,
+    .chairman-cta-arch-wrapper,
+    .vision-cta-arch-wrapper {
+        min-height: 220px;
+        justify-content: center;
+    }
+    .vision-card-content {
+        max-width: 100%;
     }
 }
 
-@media (max-width: 600px) {
-    .about-strip-grid,
-    .about-vmv-grid,
-    .three-pillars-grid,
-    .about-stats-row,
-    .legacy-stats-row,
-    .about-apart-grid,
-    .faculty-cards-grid,
-    .beliefs-cards-grid,
-    .core-beliefs-grid,
-    .focus-areas-grid {
+@media (max-width: 640px) {
+    .about-strip-grid {
         grid-template-columns: 1fr;
     }
-    .about-campus-accent-border {
-        display: none;
+    .about-apart-grid {
+        grid-template-columns: 1fr;
     }
-    .about-floating-campus-card {
-        bottom: 10px;
-        right: 10px;
-        padding: 8px 10px;
+    .about-stats-row {
+        grid-template-columns: 1fr;
     }
-    .vm-card-content {
-        max-width: 100%;
+    .staff-stats-strip {
+        grid-template-columns: 1fr;
+        padding: 14px;
     }
-    .vm-card-bg-visual {
-        display: none;
+    .staff-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .vision-focus-grid {
+        grid-template-columns: 1fr;
+    }
+    .chairman-commitment-grid,
+    .principal-commitment-grid {
+        grid-template-columns: 1fr;
     }
 }
