@@ -73,9 +73,34 @@ require_once __DIR__ . '/includes/header.php';
                         <span class="text-orange">Brighter Tomorrows.</span>
                     </h1>
 
+                    <!-- Pipeline Sub-list -->
+                    <div class="chairman-hero-pillars">
+                        <span>Education</span>
+                        <span class="pillar-pipe">|</span>
+                        <span>Values</span>
+                        <span class="pillar-pipe">|</span>
+                        <span>Discipline</span>
+                        <span class="pillar-pipe">|</span>
+                        <span>Opportunities</span>
+                        <span class="pillar-pipe">|</span>
+                        <span>A Better Society</span>
+                    </div>
+
                     <p class="chairman-hero-desc">
                         At Advaita School of Excellence, we go beyond textbooks to create a nurturing environment where every child is encouraged to learn, grow and shape a brighter future.
                     </p>
+
+                    <!-- Hero Action Buttons -->
+                    <div class="chairman-hero-actions">
+                        <a href="about-us.php" class="chairman-btn-orange">
+                            <span>Our Journey</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="index.php#tour" class="chairman-btn-video">
+                            <span class="video-circle-icon"><i class="fa-solid fa-play"></i></span>
+                            <span>Watch Video</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -128,7 +153,7 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Right: Chairman Profile Column -->
                 <div class="chairman-profile-col">
                     <div class="chairman-profile-card-wrapper">
-                        <!-- Blue Accent Tab on Right -->
+                        <!-- Blue Accent Tab on Left -->
                         <div class="chairman-profile-blue-tab" aria-hidden="true"></div>
                         <!-- Dot Grid Background Accent -->
                         <div class="chairman-profile-dots-decor" aria-hidden="true"></div>
@@ -223,6 +248,11 @@ require_once __DIR__ . '/includes/header.php';
         <!-- Dots -->
         <div class="dot-pattern"></div>
 
+        <!-- Airplane Graphic Decor -->
+        <div class="shape-airplane" aria-hidden="true">
+            <img src="assets/images/staff-airplane-trail.svg" alt="" class="airplane-svg">
+        </div>
+
         <!-- Content -->
         <div class="banner-content">
             <div class="copy">
@@ -253,8 +283,8 @@ require_once __DIR__ . '/includes/header.php';
 
                     <!-- School Visit -->
                     <a href="index.php#contact" class="btn-visit">
-                        <i class="fa-solid fa-phone"></i>
                         <span>Enquire Now</span>
+                        <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
