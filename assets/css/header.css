@@ -1,1104 +1,509 @@
 /* ==========================================================================
-   Advaita School of Excellence - Master Responsive Header Styles
-   Theme Color: #083B7A (Navy Blue) & #F37021 (Advaita Orange)
-   Optimized for: Desktops, Laptops, Tablets, and Mobile
+   Advaita School of Excellence - Sleek White Navbar Stylesheet
+   Matching Official References (reference-1.png through reference-5.png)
+   Theme: Pure White Nav, #083B7A (Navy), #F37021 (Orange), Plus Jakarta Sans
    ========================================================================== */
 
 :root {
-    --adv-primary: #083B7A;
-    --adv-primary-dark: #052957;
-    --adv-primary-darker: #031c3d;
-    --adv-primary-light: #0c4ea0;
-    --adv-primary-rgb: 8, 59, 122;
-    --adv-accent-orange: #F37021;
-    --adv-accent-orange-hover: #df5d10;
-    --adv-accent-gold: #fdbb2d;
-    --adv-text-white: #ffffff;
-    --adv-text-dark: #1a2d42;
-    --adv-border-color: rgba(255, 255, 255, 0.15);
-    --adv-dropdown-bg: #ffffff;
-    --adv-dropdown-text: #1e293b;
+    --adv-navy: #083B7A;
+    --adv-navy-dark: #05264f;
+    --adv-orange: #F37021;
+    --adv-orange-hover: #dc5e10;
+    --adv-orange-light: #fff5ed;
+    --adv-sky: #0284C7;
+    --adv-text-main: #1e293b;
+    --adv-text-muted: #64748b;
+    --adv-border-color: #e2e8f0;
+    --adv-header-height: 76px;
     --adv-font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --header-transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 115px;
-}
-
-*,
-*::before,
-*::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html,
-body {
-    overflow-x: hidden;
-    max-width: 100%;
-}
-
-body {
+/* Base resets for navigation */
+.adv-main-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--adv-header-height);
+    background: #ffffff;
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 2px 14px rgba(8, 59, 122, 0.04);
+    z-index: 1000;
     font-family: var(--adv-font-main);
-    color: #333333;
-    background-color: #ffffff;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
-body.adv-drawer-open {
-    overflow: hidden !important;
-    touch-action: none;
-}
-
-/* --------------------------------------------------------------------------
-   1. Top Utility Bar (Full Width)
-   -------------------------------------------------------------------------- */
-.adv-topbar {
-    background-color: var(--adv-primary);
-    color: var(--adv-text-white);
-    font-size: 0.75rem;
-    height: 32px;
-    min-height: 32px;
-    padding: 0;
-    position: relative;
-    z-index: 2;
-    width: 100%;
+.adv-navbar-container {
+    max-width: 1360px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 clamp(16px, 2.5vw, 36px);
     display: flex;
     align-items: center;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.adv-topbar-container {
-    width: 100%;
-    margin: 0;
-    padding: 0 clamp(16px, 2.5vw, 44px);
-    display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 32px;
+    gap: 16px;
 }
 
-.adv-topbar-left {
+/* 1. Left Brand Logo */
+.adv-logo-brand {
     display: flex;
     align-items: center;
-    gap: 7px;
-    color: rgba(255, 255, 255, 0.95);
-    font-weight: 500;
-    font-size: 0.75rem;
-    letter-spacing: 0.1px;
-    white-space: nowrap;
-}
-
-.adv-topbar-pin {
-    color: var(--adv-accent-orange);
-    font-size: 0.85rem;
-}
-
-.adv-topbar-sep {
-    color: rgba(255, 255, 255, 0.25);
-    margin-left: 2px;
-}
-
-.adv-topbar-right {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+    text-decoration: none;
     flex-shrink: 0;
 }
 
-.adv-topbar-links {
+.adv-brand-logo-img {
+    height: 48px;
+    width: auto;
+    max-width: 220px;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.adv-logo-brand:hover .adv-brand-logo-img {
+    transform: scale(1.02);
+}
+
+/* 2. Center Desktop Navigation */
+.adv-desktop-nav {
     display: flex;
     align-items: center;
-    gap: 8px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
-.adv-topbar-links li {
-    display: flex;
-    align-items: center;
-}
-
-.adv-topbar-links li.pipe {
-    color: rgba(255, 255, 255, 0.25);
-    font-size: 0.7rem;
-    user-select: none;
-}
-
-.adv-topbar-links a {
-    color: rgba(255, 255, 255, 0.9);
-    text-decoration: none;
-    transition: var(--header-transition);
-    font-weight: 500;
-    font-size: 0.75rem;
-    padding: 2px 2px;
-}
-
-.adv-topbar-links a:hover {
-    color: var(--adv-accent-gold);
-}
-
-.adv-topbar-socials {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.adv-topbar-socials a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 20px;
-    height: 20px;
-    background-color: #ffffff;
-    color: var(--adv-primary);
-    border-radius: 50%;
-    font-size: 0.65rem;
-    transition: var(--header-transition);
-    text-decoration: none;
-}
-
-.adv-topbar-socials a:hover {
-    background-color: var(--adv-accent-orange);
-    color: #ffffff;
-    transform: translateY(-1px);
-    box-shadow: 0 3px 8px rgba(243, 112, 33, 0.4);
-}
-
-/* --------------------------------------------------------------------------
-   2. Main Navigation Header (Full Width Ribbon on Navy Background)
-   -------------------------------------------------------------------------- */
-.adv-main-header {
-    background-color: var(--adv-primary);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    width: 100%;
-    padding: 0;
-    transition: var(--header-transition);
-}
-
-.adv-main-header.is-scrolled {
-    box-shadow: 0 8px 24px rgba(3, 28, 61, 0.25);
-}
-
-.adv-header-fullwidth {
-    width: 100%;
-    background-color: #ffffff;
-    box-shadow: 0 4px 18px rgba(3, 28, 61, 0.08);
-    position: relative;
-    z-index: 10;
-    height: 64px;
-}
-
-/* Far Left & Far Right Orange Corner Wings (Anchored at Ribbon Bottom Corners) */
-.adv-svg-corner {
-    position: absolute;
-    bottom: 0;
-    width: 24px;
-    height: 42px;
-    z-index: 1;
-    pointer-events: none;
-    overflow: hidden;
-}
-
-.adv-svg-corner-left {
-    left: 0;
-}
-
-.adv-svg-corner-right {
-    right: 0;
-}
-
-/* White Full-Width Ribbon */
-.adv-nav-ribbon {
-    position: relative;
-    z-index: 10;
-    background: #ffffff;
-    padding: 0 clamp(16px, 2.5vw, 40px);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 64px;
-    min-height: 64px;
-    width: 100%;
-}
-
-/* Left & Right Nav Sections */
-.adv-nav-section {
-    display: flex;
-    align-items: center;
-    flex: 1;
-    position: relative;
-    z-index: 30;
-    height: 100%;
-}
-
-.adv-nav-section-left {
-    justify-content: flex-end;
-    gap: clamp(6px, 0.9vw, 14px);
-}
-
-.adv-nav-section-right {
-    justify-content: flex-start;
-    gap: clamp(6px, 0.9vw, 14px);
-}
-
-/* Home Button */
-.adv-nav-home-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    background: linear-gradient(180deg, #f7941d 0%, #ea6100 100%);
-    color: #ffffff;
-    padding: 6px 12px;
-    border-radius: 8px;
-    font-size: 0.875rem;
-    font-weight: 700;
-    text-decoration: none;
-    box-shadow: 0 3px 8px rgba(234, 97, 0, 0.3);
-    transition: var(--header-transition);
-    white-space: nowrap;
-}
-
-.adv-nav-home-btn i {
-    font-size: 0.82rem;
-}
-
-.adv-nav-home-btn:hover {
-    background: linear-gradient(180deg, #ea6100 0%, #df5500 100%);
-    transform: translateY(-1px);
-    box-shadow: 0 5px 12px rgba(234, 97, 0, 0.45);
-    color: #ffffff;
-}
-
-/* Desktop Nav Menus - Balanced compact spacing */
-.adv-nav-menu {
+.adv-nav-list {
     display: flex;
     align-items: center;
     list-style: none;
     margin: 0;
     padding: 0;
-    height: 100%;
-    gap: clamp(4px, 0.6vw, 10px);
+    gap: clamp(6px, 1.1vw, 20px);
 }
 
 .adv-nav-item {
     position: relative;
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-.adv-nav-item.has-dropdown {
-    cursor: pointer;
-}
-
-.adv-nav-item.has-dropdown:hover,
-.adv-nav-item.has-dropdown.is-open {
-    z-index: 1050;
 }
 
 .adv-nav-link {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
-    padding: 6px 7px;
-    color: #083B7A;
-    font-size: 0.84375rem;
-    font-weight: 700;
+    gap: 5px;
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--adv-text-main);
     text-decoration: none;
-    border-radius: 4px;
-    transition: var(--header-transition);
+    padding: 8px 10px;
+    border-radius: 6px;
+    transition: all 0.2s ease;
     white-space: nowrap;
-    letter-spacing: -0.1px;
-}
-
-.adv-nav-link i.chevron-icon {
-    font-size: 0.62rem;
-    color: #083B7A;
-    transition: transform 0.25s ease;
-    opacity: 0.9;
-    margin-left: 2px;
 }
 
 .adv-nav-link:hover,
-.adv-nav-item:hover>.adv-nav-link,
-.adv-nav-item.active>.adv-nav-link,
-.adv-nav-item.is-open>.adv-nav-link {
-    color: var(--adv-accent-orange);
-    background-color: transparent;
+.adv-nav-item.active > .adv-nav-link,
+.adv-nav-link.active {
+    color: var(--adv-orange);
 }
 
-.adv-nav-link:hover i.chevron-icon,
-.adv-nav-item:hover>.adv-nav-link i.chevron-icon,
-.adv-nav-item.is-open>.adv-nav-link i.chevron-icon {
+.adv-nav-chevron {
+    font-size: 10px;
+    color: #94a3b8;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.adv-nav-item:hover .adv-nav-chevron {
+    color: var(--adv-orange);
     transform: rotate(180deg);
-    color: var(--adv-accent-orange);
 }
 
-/* Center Brand Pod Anchor in Ribbon Flow */
-.adv-nav-brand-pod {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 64px;
-    width: 244px;
-    flex-shrink: 0;
-    margin: 0 8px;
-    z-index: 25;
-}
-
-/* Sculpted Floating Brand Badge Container */
-.adv-brand-badge-pod {
+/* Dropdown Menu */
+.adv-submenu-dropdown {
     position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 244px;
-    height: 92px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    z-index: 25;
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    padding: 0;
-    transition: transform 0.25s ease;
-}
-
-.adv-brand-badge-pod:hover {
-    transform: translateX(-50%) translateY(-2px);
-}
-
-/* Integrated Sculpted Crest SVG */
-.adv-brand-crest-svg {
-    position: absolute;
-    top: 0;
+    top: calc(100% + 8px);
     left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 1;
-    overflow: visible;
-}
-
-/* Brand Logo Image inside Badge */
-.adv-brand-logo-pod-img {
-    position: relative;
-    z-index: 2;
-    max-height: 50px;
-    max-width: 154px;
-    width: auto;
-    object-fit: contain;
-    display: block;
-    transition: transform 0.25s ease;
-}
-
-.adv-brand-badge-pod:hover .adv-brand-logo-pod-img {
-    transform: scale(1.02);
-}
-
-/* Apply for Admission CTA Button */
-.adv-nav-apply-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    background: linear-gradient(180deg, #f7941d 0%, #ea6100 100%);
-    color: #ffffff;
-    padding: 8px 18px;
-    border-radius: 25px;
-    font-size: 0.9375rem;
-    font-weight: 700;
-    text-decoration: none;
-    box-shadow: 0 4px 12px rgba(234, 97, 0, 0.35);
-    transition: var(--header-transition);
-    white-space: nowrap;
-}
-
-.adv-nav-apply-btn i {
-    font-size: 0.8rem;
-    transition: transform 0.25s ease;
-}
-
-.adv-nav-apply-btn:hover {
-    background: linear-gradient(180deg, #ea6100 0%, #df5500 100%);
-    transform: translateY(-1px);
-    box-shadow: 0 6px 16px rgba(234, 97, 0, 0.45);
-    color: #ffffff;
-}
-
-.adv-nav-apply-btn:hover i {
-    transform: translateX(3px);
-}
-
-/* --------------------------------------------------------------------------
-   3. Desktop Dropdown Menus
-   -------------------------------------------------------------------------- */
-.adv-dropdown {
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%) translateY(8px);
-    background: var(--adv-dropdown-bg);
-    min-width: 240px;
+    min-width: 220px;
+    background: #ffffff;
     border-radius: 12px;
-    padding: 8px;
-    box-shadow: 0 16px 36px rgba(8, 59, 122, 0.2), 0 4px 12px rgba(0, 0, 0, 0.08);
+    padding: 8px 0;
+    list-style: none;
+    box-shadow: 0 12px 32px rgba(8, 59, 122, 0.12);
+    border: 1px solid #f1f5f9;
     opacity: 0;
     visibility: hidden;
-    pointer-events: none;
-    transition: var(--header-transition);
-    list-style: none;
-    z-index: 1060;
-    border: 1px solid rgba(8, 59, 122, 0.08);
+    transform: translateY(10px);
+    transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1010;
 }
 
-/* Invisible Hit Bridge to prevent hover drop-off */
-.adv-dropdown::after {
-    content: '';
-    position: absolute;
-    top: -16px;
-    left: 0;
-    right: 0;
-    height: 16px;
-    background: transparent;
-}
-
-.adv-dropdown::before {
-    content: '';
-    position: absolute;
-    top: -6px;
-    left: 50%;
-    transform: translateX(-50%) rotate(45deg);
-    width: 12px;
-    height: 12px;
-    background: var(--adv-dropdown-bg);
-    border-left: 1px solid rgba(8, 59, 122, 0.08);
-    border-top: 1px solid rgba(8, 59, 122, 0.08);
-    z-index: 1;
-}
-
-.adv-nav-item:hover .adv-dropdown,
-.adv-nav-item.is-open .adv-dropdown {
+.adv-has-dropdown:hover .adv-submenu-dropdown {
     opacity: 1;
     visibility: visible;
-    pointer-events: auto;
-    transform: translateX(-50%) translateY(0);
-}
-
-/* Smart Edge Alignment: Last item in left menu (Admissions) aligns right to avoid center crest collision */
-.adv-nav-menu-left .adv-nav-item:last-child .adv-dropdown {
-    left: auto;
-    right: -10px;
-    transform: translateY(8px);
-}
-
-.adv-nav-menu-left .adv-nav-item:last-child:hover .adv-dropdown,
-.adv-nav-menu-left .adv-nav-item:last-child.is-open .adv-dropdown {
     transform: translateY(0);
 }
 
-.adv-nav-menu-left .adv-nav-item:last-child .adv-dropdown::before {
-    left: auto;
-    right: 36px;
-    transform: rotate(45deg);
-}
-
-.adv-dropdown-item {
-    display: block;
-}
-
-.adv-dropdown-link {
+.adv-submenu-link {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 10px 14px;
-    color: var(--adv-dropdown-text);
-    font-size: 0.875rem;
-    font-weight: 600;
+    padding: 10px 18px;
+    font-size: 13.5px;
+    font-weight: 500;
+    color: #334155;
     text-decoration: none;
-    border-radius: 8px;
-    transition: var(--header-transition);
+    transition: all 0.18s ease;
 }
 
-.adv-dropdown-link i {
-    font-size: 0.85rem;
-    color: var(--adv-primary);
-    opacity: 0.8;
+.adv-submenu-link i {
+    font-size: 13px;
+    color: var(--adv-sky);
     width: 16px;
     text-align: center;
-    transition: var(--header-transition);
 }
 
-.adv-dropdown-link:hover {
-    background-color: #f0f6ff;
-    color: var(--adv-primary);
-    padding-left: 18px;
+.adv-submenu-link:hover,
+.adv-submenu-link.active {
+    background-color: #f8fafc;
+    color: var(--adv-orange);
 }
 
-.adv-dropdown-link:hover i {
-    color: var(--adv-accent-orange);
-    opacity: 1;
-    transform: translateX(2px);
+.adv-submenu-link:hover i,
+.adv-submenu-link.active i {
+    color: var(--adv-orange);
 }
 
-/* --------------------------------------------------------------------------
-   Tablet & Mobile Controls (Navbar Right on Tablet/Mobile)
-   -------------------------------------------------------------------------- */
-.adv-mobile-actions {
-    display: none;
+/* 3. Right Header Actions */
+.adv-header-actions {
+    display: flex;
     align-items: center;
-    gap: 8px;
-    margin-left: auto;
+    gap: 14px;
+    flex-shrink: 0;
 }
 
-.adv-tablet-cta {
+.adv-search-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #64748b;
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    background: linear-gradient(135deg, #f58220 0%, var(--adv-accent-orange) 100%);
-    color: #ffffff;
-    font-size: 0.8125rem;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.adv-search-btn:hover {
+    background: var(--adv-orange-light);
+    color: var(--adv-orange);
+    border-color: #ffd8bf;
+    transform: translateY(-1px);
+}
+
+/* Enquire Now Orange Pill Button */
+.adv-btn-enquire {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #F37021 0%, #eb6210 100%);
+    color: #ffffff !important;
+    font-size: 14px;
     font-weight: 700;
-    padding: 7px 14px;
-    border-radius: 20px;
+    padding: 10px 22px;
+    border-radius: 9999px;
     text-decoration: none;
-    box-shadow: 0 3px 10px rgba(243, 112, 33, 0.35);
-    transition: var(--header-transition);
+    box-shadow: 0 4px 14px rgba(243, 112, 33, 0.28);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     white-space: nowrap;
 }
 
-.adv-tablet-cta:hover {
-    background: var(--adv-accent-orange-hover);
-    transform: translateY(-1px);
-    color: #ffffff;
+.adv-btn-enquire:hover {
+    background: linear-gradient(135deg, #e05e0e 0%, #c94f06 100%);
+    box-shadow: 0 6px 20px rgba(243, 112, 33, 0.4);
+    transform: translateY(-1.5px);
 }
 
-.adv-mobile-nav-toggle {
+.adv-btn-enquire i {
+    font-size: 12px;
+    transition: transform 0.2s ease;
+}
+
+.adv-btn-enquire:hover i {
+    transform: translateX(3px);
+}
+
+/* 4. Mobile Hamburger Button */
+.adv-mobile-hamburger {
     display: none;
-    background: #f0f6ff;
-    border: 1px solid #c8ddfa;
-    color: var(--adv-primary);
     width: 40px;
     height: 40px;
     border-radius: 8px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
     cursor: pointer;
-    font-size: 1.25rem;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: var(--header-transition);
-    touch-action: manipulation;
+    gap: 5px;
+    padding: 8px;
+    transition: all 0.2s ease;
 }
 
-.adv-mobile-nav-toggle:hover,
-.adv-mobile-nav-toggle:active {
-    background: var(--adv-primary);
-    color: #ffffff;
+.adv-ham-bar {
+    width: 20px;
+    height: 2px;
+    background-color: var(--adv-navy);
+    border-radius: 2px;
+    transition: all 0.2s ease;
 }
 
-/* --------------------------------------------------------------------------
-   Mobile & Tablet Drawer Navigation
-   -------------------------------------------------------------------------- */
+/* Mobile Drawer & Backdrop */
 .adv-mobile-drawer {
     position: fixed;
     top: 0;
-    right: -100%;
-    width: min(340px, 86vw);
-    height: 100vh;
-    height: 100dvh;
-    background-color: #ffffff;
-    box-shadow: -6px 0 30px rgba(0, 0, 0, 0.28);
+    right: 0;
+    width: min(85vw, 360px);
+    height: 100%;
+    background: #ffffff;
+    box-shadow: -8px 0 30px rgba(0, 0, 0, 0.15);
     z-index: 2000;
-    transition: right 0.32s cubic-bezier(0.4, 0, 0.2, 1);
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
+    transform: translateX(100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     flex-direction: column;
+    padding: 24px;
+    overflow-y: auto;
 }
 
-.adv-mobile-drawer.is-open {
-    right: 0;
+.adv-mobile-drawer.open {
+    transform: translateX(0);
 }
 
 .adv-mobile-backdrop {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(3, 28, 61, 0.6);
+    width: 100vw;
+    height: 100vh;
+    background: rgba(8, 59, 122, 0.4);
     backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
     z-index: 1999;
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
 }
 
-.adv-mobile-backdrop.is-open {
+.adv-mobile-backdrop.show {
     opacity: 1;
     visibility: visible;
 }
 
-/* Drawer Header */
-.adv-mobile-header {
-    background: linear-gradient(135deg, var(--adv-primary-dark) 0%, var(--adv-primary) 100%);
-    padding: 16px 18px;
+.adv-mobile-drawer-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 3px solid var(--adv-accent-orange);
-    flex-shrink: 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f1f5f9;
+    margin-bottom: 16px;
 }
 
-.adv-mobile-brand-box {
-    background: #ffffff;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    border: 2px solid #ffffff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    padding: 3px;
-}
-
-.adv-mobile-header .adv-brand-logo-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 50%;
+.adv-mobile-logo {
+    height: 38px;
+    width: auto;
 }
 
 .adv-mobile-close {
-    background: rgba(255, 255, 255, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    color: #ffffff;
-    font-size: 1.15rem;
     width: 36px;
     height: 36px;
     border-radius: 50%;
+    background: #f1f5f9;
+    border: none;
+    color: #475569;
+    font-size: 16px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: var(--header-transition);
 }
 
-.adv-mobile-close:hover {
-    background: var(--adv-accent-orange);
-    color: #ffffff;
-    transform: rotate(90deg);
-}
-
-/* Quick Action Strip inside Drawer */
-.adv-mobile-quickbar {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    padding: 12px 16px;
-    background: #f1f5f9;
-    border-bottom: 1px solid #e2e8f0;
-    flex-shrink: 0;
-}
-
-.adv-mobile-quick-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    padding: 8px 10px;
-    background: #ffffff;
-    color: var(--adv-primary);
-    border: 1px solid #cbd5e1;
-    border-radius: 6px;
-    font-size: 0.8125rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: var(--header-transition);
-}
-
-.adv-mobile-quick-btn.whatsapp-btn {
-    color: #25D366;
-    border-color: #25D366;
-}
-
-.adv-mobile-quick-btn.whatsapp-btn:hover {
-    background-color: #f0fdf4;
-}
-
-.adv-drawer-socials {
-    justify-content: center;
-    gap: 8px;
-}
-
-.adv-mobile-quick-btn:hover {
-    transform: translateY(-1px);
-}
-
-/* Drawer Menu Links */
-.adv-mobile-menu {
+.adv-mobile-list {
     list-style: none;
-    padding: 10px 14px;
+    padding: 0;
     margin: 0;
-    flex: 1;
 }
 
-.adv-mobile-item {
-    border-bottom: 1px solid #f1f5f9;
+.adv-mobile-list li {
+    border-bottom: 1px solid #f8fafc;
 }
 
-.adv-mobile-item:last-child {
-    border-bottom: none;
-}
-
-.adv-mobile-link {
+.adv-mobile-link,
+.adv-mobile-sub-trigger {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 13px 10px;
+    padding: 12px 6px;
+    font-size: 15px;
+    font-weight: 600;
     color: #1e293b;
     text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9375rem;
-    border-radius: 8px;
-    transition: var(--header-transition);
-    min-height: 48px;
-    user-select: none;
-    -webkit-user-select: none;
+    cursor: pointer;
 }
 
-.adv-mobile-link-text {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+.adv-mobile-link.active,
+.adv-mobile-link:hover {
+    color: var(--adv-orange);
 }
 
-.adv-mobile-link-text i {
-    color: var(--adv-primary);
-    font-size: 0.95rem;
-    width: 18px;
-    text-align: center;
+.adv-mobile-sub-list {
+    list-style: none;
+    padding: 0 0 8px 16px;
+    margin: 0;
+    display: none;
 }
 
-.adv-mobile-chevron {
-    font-size: 0.75rem;
+.adv-mobile-sub-list.open {
+    display: block;
+}
+
+.adv-mobile-sub-list a {
+    display: block;
+    padding: 8px 0;
+    font-size: 14px;
     color: #64748b;
+    text-decoration: none;
+}
+
+.adv-mobile-sub-list a:hover {
+    color: var(--adv-orange);
+}
+
+.adv-mobile-actions {
+    margin-top: 24px;
+    padding-top: 16px;
+}
+
+.adv-btn-enquire.full-width {
+    width: 100%;
+    justify-content: center;
+    padding: 12px;
+}
+
+/* Search Modal */
+.adv-search-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(8, 59, 122, 0.6);
+    backdrop-filter: blur(6px);
+    z-index: 2500;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 100px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+}
+
+.adv-search-modal.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.adv-search-modal-box {
+    width: min(90%, 600px);
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 24px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    transform: translateY(-20px);
     transition: transform 0.25s ease;
 }
 
-.adv-mobile-item.is-active>.adv-mobile-link .adv-mobile-chevron {
-    transform: rotate(180deg);
-    color: var(--adv-accent-orange);
+.adv-search-modal.open .adv-search-modal-box {
+    transform: translateY(0);
 }
 
-.adv-mobile-link:hover,
-.adv-mobile-link:active {
-    background-color: #f8fafc;
-    color: var(--adv-primary);
-}
-
-/* Submenu Accordion */
-.adv-mobile-submenu {
-    list-style: none;
-    padding: 0 0 8px 12px;
-    margin: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.35s ease-out;
-}
-
-.adv-mobile-submenu.is-expanded {
-    max-height: 500px;
-    transition: max-height 0.4s ease-in;
-}
-
-.adv-mobile-submenu-link {
+.adv-search-input-wrap {
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 9px 12px;
-    color: #475569;
-    text-decoration: none;
-    font-size: 0.875rem;
-    font-weight: 500;
-    border-radius: 6px;
-    transition: var(--header-transition);
-    min-height: 40px;
+    gap: 12px;
+    background: #f8fafc;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 10px 16px;
 }
 
-.adv-mobile-submenu-link i {
-    font-size: 0.78rem;
-    color: var(--adv-accent-orange);
-    opacity: 0.8;
+.adv-search-input-wrap i {
+    color: #94a3b8;
+    font-size: 16px;
 }
 
-.adv-mobile-submenu-link:hover,
-.adv-mobile-submenu-link:active {
-    color: var(--adv-primary);
-    background-color: #f1f5f9;
-    padding-left: 16px;
+.adv-search-input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    color: #1e293b;
+    outline: none;
 }
 
-/* Drawer Footer */
-.adv-mobile-footer {
-    padding: 16px;
-    background-color: #f8fafc;
-    border-top: 1px solid #e2e8f0;
-    flex-shrink: 0;
+.adv-search-close {
+    background: transparent;
+    border: none;
+    color: #94a3b8;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-.adv-mobile-cta {
+.adv-search-quick-links {
+    margin-top: 14px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
     gap: 8px;
-    text-align: center;
-    background: linear-gradient(135deg, var(--adv-accent-orange) 0%, #ff7b24 100%);
-    color: #ffffff;
-    text-decoration: none;
-    padding: 12px 16px;
-    border-radius: 8px;
-    font-weight: 700;
-    font-size: 0.9375rem;
-    margin-bottom: 14px;
-    box-shadow: 0 4px 14px rgba(243, 112, 33, 0.35);
-}
-
-.adv-mobile-footer-meta {
-    text-align: center;
-    font-size: 0.75rem;
+    font-size: 13px;
     color: #64748b;
-    margin-top: 10px;
 }
 
-/* --------------------------------------------------------------------------
-   Responsive Breakpoints: Laptops, Tablets & Mobiles
-   -------------------------------------------------------------------------- */
-
-/* 1. Large Laptops / Screens (1200px - 1400px) */
-@media (max-width: 1400px) {
-    .adv-nav-link {
-        padding: 6px 5px;
-        font-size: 0.875rem;
-    }
-
-    .adv-nav-home-btn {
-        padding: 6px 12px;
-        font-size: 0.875rem;
-    }
-
-    .adv-nav-apply-btn {
-        padding: 7px 16px;
-        font-size: 0.875rem;
-    }
-
-    .adv-nav-brand-pod {
-        width: 228px;
-        margin: 0 6px;
-    }
-
-    .adv-brand-badge-pod {
-        width: 228px;
-        height: 86px;
-        top: -14px;
-        padding: 0;
-    }
-
-    .adv-brand-logo-pod-img {
-        max-height: 42px;
-        max-width: 140px;
-    }
+.adv-search-quick-links a {
+    background: #f1f5f9;
+    padding: 4px 10px;
+    border-radius: 6px;
+    color: var(--adv-navy);
+    text-decoration: none;
+    font-weight: 500;
 }
 
-/* 2. Medium Tablets & Small Laptops (Switch breakpoint: 1180px) */
-@media (max-width: 1180px) {
-    .adv-topbar-left {
-        flex: 1;
-    }
+.adv-search-quick-links a:hover {
+    background: var(--adv-orange-light);
+    color: var(--adv-orange);
+}
 
-    .adv-topbar-links {
+/* Responsive Media Queries */
+@media (max-width: 1100px) {
+    .adv-desktop-nav {
         display: none;
     }
-
-    /* Hide desktop nav elements and center decor */
-    .adv-nav-section-left,
-    .adv-nav-section-right,
-    .adv-brand-crest-svg,
-    .adv-svg-corner {
-        display: none !important;
-    }
-
-    .adv-nav-ribbon {
-        display: flex !important;
-        align-items: center !important;
-        justify-content: space-between !important;
-        border-radius: 0;
-        padding: 6px 16px !important;
-        min-height: 56px !important;
-        height: auto !important;
-        width: 100% !important;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    }
-
-    .adv-nav-brand-pod {
-        position: static !important;
-        margin: 0 !important;
-        width: auto !important;
-        height: auto !important;
-        display: flex !important;
-        align-items: center !important;
-        flex-shrink: 0 !important;
-    }
-
-    .adv-brand-badge-pod {
-        position: static !important;
-        transform: none !important;
-        width: auto !important;
-        min-width: unset !important;
-        height: auto !important;
-        min-height: unset !important;
-        margin: 0 !important;
-        padding: 4px 6px !important;
-        border-radius: 8px !important;
-        box-shadow: none !important;
-        border: none !important;
-    }
-
-    .adv-brand-badge-pod:hover {
-        transform: none !important;
-        box-shadow: none !important;
-    }
-
-    .adv-brand-logo-pod-img {
-        max-height: 42px !important;
-        max-width: 165px !important;
-    }
-
-    .adv-mobile-actions {
-        display: flex !important;
-        align-items: center !important;
-        gap: 8px !important;
-        margin-left: auto !important;
-    }
-
-    .adv-mobile-nav-toggle {
-        display: flex !important;
+    .adv-mobile-hamburger {
+        display: flex;
     }
 }
 
-/* 3. Tablets Portrait (768px - 991px) */
-@media (max-width: 991.98px) {
-    .adv-topbar-left {
-        font-size: 0.75rem;
+@media (max-width: 600px) {
+    .adv-brand-logo-img {
+        height: 38px;
+        max-width: 170px;
     }
-
-    .adv-tablet-cta {
-        display: inline-flex;
-    }
-}
-
-/* 4. Large Mobile Phones (576px - 767px) */
-@media (max-width: 767.98px) {
-    .adv-topbar-left {
+    .adv-btn-enquire span {
         display: none;
     }
-
-    .adv-topbar-container {
-        justify-content: center;
+    .adv-btn-enquire {
+        padding: 8px 14px;
     }
-
-    .adv-tablet-cta {
-        display: none;
-    }
-}
-
-/* 5. Small Mobile Phones (< 576px down to 320px) */
-@media (max-width: 575.98px) {
-    .adv-topbar {
-        padding: 4px 0;
-        width: 100%;
-        overflow: hidden;
-    }
-
-    .adv-topbar-container {
-        padding: 0 10px;
-        justify-content: center;
-    }
-
-    .adv-topbar-socials {
-        gap: 5px;
-    }
-
-    .adv-topbar-socials a {
-        width: 22px;
-        height: 22px;
-        font-size: 0.68rem;
-    }
-
-    .adv-header-fullwidth {
-        width: 100%;
-        padding: 0;
-    }
-
-    .adv-nav-ribbon {
-        padding: 6px 12px !important;
-        min-height: 52px !important;
-        width: 100% !important;
-        display: flex !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-    }
-
-    .adv-brand-logo-pod-img {
-        max-height: 36px !important;
-        max-width: 135px !important;
-    }
-
-    .adv-mobile-actions {
-        display: flex !important;
-        align-items: center !important;
-        gap: 6px !important;
-        margin-left: auto !important;
-    }
-
-    .adv-mobile-nav-toggle {
-        display: flex !important;
-        width: 38px !important;
-        height: 38px !important;
-        font-size: 1.15rem !important;
-    }
-
-    .adv-mobile-drawer {
-        width: 88vw;
-    }
-}
-
-/* 6. Extra Small Screens (< 360px) */
-@media (max-width: 360px) {
-    .adv-brand-logo-pod-img {
-        max-height: 32px !important;
-        max-width: 115px !important;
-    }
-
-    .adv-topbar-socials a {
-        width: 20px;
-        height: 20px;
-        font-size: 0.62rem;
+    .adv-btn-enquire i {
+        font-size: 14px;
+        margin: 0;
     }
 }

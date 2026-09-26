@@ -2,26 +2,73 @@
 /**
  * Principal's Desk - Advaita School of Excellence, Parbhani
  * CBSE Affiliated (Affiliation No. 1130920)
- * Clean Semantic Layout matching the Official Design
+ * Exact Visual Layout matching Official Reference (reference-4.png)
  */
-$pageTitle = "Principal's Desk - Advaita School of Excellence, Parbhani";
+$pageTitle = "Principal's Message - Advaita School of Excellence, Parbhani";
 $activePage = "principals-desk";
 
 require_once __DIR__ . '/includes/header.php';
 ?>
 
-<main id="main" class="main-content-wrapper principal-page-wrapper">
+<div class="inner-page-wrapper principal-page-wrapper">
 
     <!-- =========================================================================
          1. HERO SECTION: Nurturing Potential for a Brighter Tomorrow
          ========================================================================= -->
-    <section class="principal-hero-section">
-        <div class="principal-hero-canvas">
-            <!-- Background Image & Sky on the Right -->
-            <div class="principal-hero-bg-visual" aria-hidden="true">
-                <img src="assets/images/about-hero-building.jpg" alt="Advaita School of Excellence Campus" class="principal-hero-bg-img" loading="eager">
+    <section class="inner-hero-section">
+        <div class="inner-hero-canvas">
+            
+            <!-- Left Dot Matrix Decor -->
+            <div class="inner-hero-dots-decor" aria-hidden="true"></div>
+
+            <!-- Left Content Panel -->
+            <div class="inner-hero-left-panel">
+                <div class="inner-hero-content-inner">
+                    <!-- Breadcrumbs -->
+                    <div class="inner-breadcrumb">
+                        <a href="index.php">Home</a>
+                        <span class="sep">›</span>
+                        <a href="about-us.php">About Us</a>
+                        <span class="sep">›</span>
+                        <span class="active">Principal's Message</span>
+                    </div>
+
+                    <div class="inner-eyebrow">— FROM THE PRINCIPAL —</div>
+                    
+                    <h1 class="inner-hero-title">
+                        Nurturing Potential<br>
+                        for a <span class="text-orange">Brighter Tomorrow</span>
+                    </h1>
+
+                    <div class="inner-hero-pillars">
+                        <span>Academic Excellence</span>
+                        <span class="pillar-pipe">|</span>
+                        <span>Character</span>
+                        <span class="pillar-pipe">|</span>
+                        <span>Opportunities</span>
+                        <span class="pillar-pipe">|</span>
+                        <span>Lifelong Learning</span>
+                    </div>
+                    
+                    <p class="inner-hero-desc">
+                        At Advaita School of Excellence, we are committed to providing a nurturing and inspiring environment where every child is encouraged to learn, grow, and succeed.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Campus Building Visual with Blue Arch Contour & Script Tag -->
+            <div class="inner-hero-right-visual">
+                <div class="inner-hero-img-frame">
+                    <img src="assets/images/about-hero-building.jpg" alt="Advaita School of Excellence Campus" class="inner-hero-campus-img" loading="eager">
+                    
+                    <!-- Advaita Logo Badge Overlay on Building -->
+                    <div class="inner-hero-building-logo">
+                        <img src="assets/images/logo-cropped.png" alt="Advaita Logo" class="building-logo-img">
+                    </div>
+                </div>
+
                 <!-- Floating Script Badge in Sky -->
-                <div class="principal-hero-script-tag">
+                <div class="inner-hero-script-tag">
                     <span class="script-title">More<br>Than A School</span>
                     <svg class="script-underline" viewBox="0 0 140 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path d="M4 10C36 4 98 4 136 12" stroke="#F37021" stroke-width="3.5" stroke-linecap="round"/>
@@ -30,162 +77,101 @@ require_once __DIR__ . '/includes/header.php';
                 </div>
             </div>
 
-            <!-- Full Width Wave Mask Overlay with ambient blue contour -->
-            <div class="principal-hero-wave-overlay" aria-hidden="true">
-                <svg viewBox="0 0 1440 480" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="principalWaveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#0284C7"/>
-                            <stop offset="50%" stop-color="#38BDF8"/>
-                            <stop offset="100%" stop-color="#60A5FA"/>
-                        </linearGradient>
-                    </defs>
-                    <!-- Ambient soft blue aura at far left -->
-                    <path d="M0,60 C90,60 140,160 140,260 C140,360 85,430 0,450 Z" fill="#E8F4FE" opacity="0.85"/>
-                    <!-- Outer vibrant sky-blue contour wave -->
-                    <path d="M0,0 L615,0 C665,80 725,190 805,280 C895,375 1045,435 1440,458 L1440,480 L0,480 Z" fill="url(#principalWaveGrad)" opacity="0.95"/>
-                    <!-- Mid soft blue contour wave -->
-                    <path d="M0,0 L600,0 C650,80 710,190 790,280 C880,375 1030,435 1440,452 L1440,480 L0,480 Z" fill="#BAE6FD"/>
-                    <!-- Main solid white wave panel covering left side completely -->
-                    <path d="M0,0 L585,0 C635,80 695,190 775,280 C865,375 1015,435 1440,445 L1440,480 L0,480 Z" fill="#FFFFFF"/>
-                    <!-- Bottom right gentle wave contours -->
-                    <path d="M850,480 C1020,420 1220,430 1440,455 L1440,480 Z" fill="#DCEEFF" opacity="0.8"/>
-                    <path d="M1060,480 C1200,445 1320,450 1440,468 L1440,480 Z" fill="#BAE6FD" opacity="0.65"/>
-                </svg>
-            </div>
-
-            <!-- Left Dot Matrix Decor -->
-            <div class="principal-hero-dots-decor" aria-hidden="true"></div>
-
-            <!-- Left Content Panel -->
-            <div class="principal-hero-left-panel">
-                <div class="principal-hero-content-inner">
-                    <!-- Breadcrumbs -->
-                    <div class="principal-breadcrumb">
-                        <a href="index.php">Home</a>
-                        <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
-                        <a href="about-us.php">About Us</a>
-                        <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
-                        <span class="active">Principal's Desk</span>
-                    </div>
-
-                    <span class="principal-eyebrow">FROM THE PRINCIPAL</span>
-                    <h1 class="principal-hero-title">
-                        Nurturing Potential<br>
-                        Towards a <span class="text-orange">Brighter<br>Tomorrow.</span>
-                    </h1>
-
-                    <p class="principal-hero-desc">
-                        At Advaita School of Excellence, we are committed to providing a nurturing and inspiring environment where every child is encouraged to learn, grow, and succeed.
-                    </p>
-                </div>
-            </div>
         </div>
     </section>
 
     <!-- =========================================================================
-         2. PRINCIPAL'S MESSAGE SECTION
+         2. PRINCIPAL'S MESSAGE SECTION (Split Card & Letter)
          ========================================================================= -->
     <section class="principal-message-section">
-        <!-- Background Side Dot Matrices -->
-        <div class="principal-message-dots-left" aria-hidden="true"></div>
-        <div class="principal-message-dots-right" aria-hidden="true"></div>
+        <div class="section-decor-dots dots-left" aria-hidden="true"></div>
+        <div class="section-decor-dots dots-right" aria-hidden="true"></div>
 
         <div class="principal-message-container">
             <div class="principal-message-grid">
+                
+                <!-- Left: Principal Profile Card with Corner Brackets -->
+                <div class="principal-card-col">
+                    <div class="principal-framed-card">
+                        <!-- Corner Accent Brackets -->
+                        <span class="corner-bracket top-left" aria-hidden="true"></span>
+                        <span class="corner-bracket bottom-right" aria-hidden="true"></span>
 
-                <!-- Left Column: Principal Profile Card with Viewfinder Frame & Stats -->
-                <div class="principal-profile-col">
-                    <div class="principal-profile-card-wrapper">
-                        <div class="principal-profile-card">
-                            <!-- Viewfinder Frame with 4 Corner Brackets -->
-                            <div class="principal-viewfinder-frame">
-                                <span class="vf-bracket vf-bracket-tl" aria-hidden="true"></span>
-                                <span class="vf-bracket vf-bracket-tr" aria-hidden="true"></span>
-                                <span class="vf-bracket vf-bracket-bl" aria-hidden="true"></span>
-                                <span class="vf-bracket vf-bracket-br" aria-hidden="true"></span>
-                                
-                                <div class="principal-avatar-wrap">
-                                    <svg class="principal-avatar-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Divine Mam - Principal">
-                                        <circle cx="60" cy="60" r="56" fill="#e8f3fe"/>
-                                        <path d="M60 26C51.1634 26 44 33.1634 44 42C44 50.8366 51.1634 58 60 58C68.8366 58 76 50.8366 76 42C76 33.1634 68.8366 26 60 26Z" fill="#78909c"/>
-                                        <path d="M60 20C46 20 40 30 40 44C40 47.5 41.5 54 44 57C45.5 51 51 47 60 47C69 47 74.5 51 76 57C78.5 54 80 47.5 80 44C80 30 74 20 60 20Z" fill="#546e7a"/>
-                                        <path d="M34 94C34 77.4315 45.6406 64 60 64C74.3594 64 86 77.4315 86 94C86 97.3137 83.3137 100 80 100H40C36.6863 100 34 97.3137 34 94Z" fill="#78909c"/>
-                                        <path d="M52 64L60 76L68 64H52Z" fill="#cfd8dc"/>
-                                    </svg>
-                                </div>
+                        <div class="principal-avatar-wrap">
+                            <div class="principal-avatar-circle">
+                                <svg class="principal-avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <circle cx="50" cy="38" r="20" fill="#94a3b8"/>
+                                    <path d="M18 90C18 68 32 62 50 62C68 62 82 68 82 90" fill="#94a3b8"/>
+                                </svg>
                             </div>
+                        </div>
 
-                            <!-- Identity Info -->
-                            <div class="principal-profile-info">
-                                <h3 class="principal-name">Divine Mam</h3>
-                                <div class="principal-role">Principal</div>
-                                <p class="principal-org">
-                                    Advaita School of Excellence<br>
-                                    Parbhani
-                                </p>
+                        <div class="principal-card-meta">
+                            <h3 class="principal-name">Divine Mam</h3>
+                            <div class="principal-designation">Principal</div>
+                            <p class="principal-org">Advaita School of Excellence Parbhani</p>
+                        </div>
+
+                        <!-- 3 Stat Metrics at Card Bottom -->
+                        <div class="principal-card-metrics">
+                            <div class="metric-item">
+                                <span class="metric-val">Values</span>
+                                <span class="metric-sub">First</span>
                             </div>
-
-                            <!-- 3-Item Stats Bar -->
-                            <div class="principal-stats-bar">
-                                <div class="principal-stat-item">
-                                    <span class="stat-top">Values</span>
-                                    <span class="stat-bot">First</span>
-                                </div>
-                                <div class="principal-stat-divider" aria-hidden="true"></div>
-                                <div class="principal-stat-item">
-                                    <span class="stat-top">360°</span>
-                                    <span class="stat-bot">Development</span>
-                                </div>
-                                <div class="principal-stat-divider" aria-hidden="true"></div>
-                                <div class="principal-stat-item">
-                                    <span class="stat-top">100%</span>
-                                    <span class="stat-bot">Care</span>
-                                </div>
+                            <div class="metric-divider"></div>
+                            <div class="metric-item">
+                                <span class="metric-val">360°</span>
+                                <span class="metric-sub">Development</span>
+                            </div>
+                            <div class="metric-divider"></div>
+                            <div class="metric-item">
+                                <span class="metric-val">100%</span>
+                                <span class="metric-sub">Care</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Right Column: Principal's Message Content -->
-                <div class="principal-message-content">
-                    <span class="principal-message-eyebrow">— PRINCIPAL'S MESSAGE —</span>
-                    <h2 class="principal-message-title">
-                        A Few Words from <span>Our Principal</span>
+                <!-- Right: Principal's Letter -->
+                <div class="principal-letter-col">
+                    <div class="section-eyebrow">— PRINCIPAL'S MESSAGE —</div>
+                    <h2 class="message-title">
+                        A Few Words from <span class="text-orange">Our Principal</span>
                     </h2>
 
-                    <div class="principal-salutation">
+                    <div class="message-salutation">
                         Dear Students, Parents and Well-wishers,
                     </div>
 
-                    <p>
-                        At <strong>Advaita School of Excellence</strong>, we are committed to providing a nurturing and inspiring environment where every child is encouraged to learn, grow, and succeed. Our aim is to create a strong academic foundation with a focus on overall personality development.
+                    <p class="message-paragraph">
+                        At Advaita School of Excellence, we are committed to providing a nurturing and inspiring environment where every child is encouraged to learn, grow, and succeed. Our aim is to create a strong academic foundation with a focus on overall personality development.
                     </p>
 
-                    <p>
+                    <p class="message-paragraph">
                         Education, in today's world, is not limited to textbooks. It is about <strong>building character</strong>, developing critical thinking, and preparing students to face real-life challenges with <strong>confidence</strong>. Along with CBSE academics, we provide integrated NEET/IIT foundation and preparation for various competitive exams, ensuring that students are well-prepared for the future.
                     </p>
 
-                    <!-- Quote Box -->
-                    <div class="principal-quote-box">
-                        <div class="principal-quote-icon" aria-hidden="true">“</div>
-                        <p class="principal-quote-text">
+                    <!-- Blue Quote Box -->
+                    <div class="message-quote-box">
+                        <div class="quote-icon-wrap">
+                            <i class="fa-solid fa-quote-left"></i>
+                        </div>
+                        <p class="quote-text">
                             With the support of dedicated teachers, modern teaching methodologies and a student-centric approach, we strive to make learning meaningful and enjoyable.
                         </p>
                     </div>
 
-                    <p>
+                    <p class="message-paragraph">
                         We believe in encouraging curiosity, creativity, and participation in academics, sports, arts and co-curricular activities. Our goal is to guide every student towards excellence and help them realize their true potential.
                     </p>
 
-                    <p>
+                    <p class="message-paragraph">
                         I extend my best wishes to all our students and parents for a successful and enriching journey with us.
                     </p>
 
-                    <!-- Signature Block -->
-                    <div class="principal-signature-block">
-                        <div class="principal-signature-name">— Divine Mam</div>
-                        <div class="principal-signature-role">Principal, Advaita School of Excellence, Parbhani</div>
+                    <div class="principal-signoff">
+                        <div class="signoff-line">— Divine Mam</div>
+                        <div class="signoff-role">Principal, Advaita School of Excellence, Parbhani</div>
                     </div>
                 </div>
 
@@ -194,59 +180,58 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
     <!-- =========================================================================
-         3. OUR COMMITMENT: Four Things We Promise (4 Cards)
+         3. FOUR THINGS WE PROMISE SECTION
          ========================================================================= -->
-    <section class="principal-commitment-section">
-        <div class="principal-commitment-container">
-            <div class="about-section-header text-center">
-                <span class="about-eyebrow">— OUR COMMITMENT —</span>
-                <h2 class="about-section-heading">
-                    Four Things We <span>Promise</span>
+    <section class="four-beliefs-section">
+        <div class="four-beliefs-container">
+            <div class="beliefs-section-header">
+                <div class="section-eyebrow">— OUR COMMITMENT —</div>
+                <h2 class="section-title">
+                    Four Things We <span class="text-orange">Promise</span>
                 </h2>
             </div>
 
-            <!-- 4 Commitment Cards Grid -->
-            <div class="principal-commitment-grid">
-                <!-- Card 1: Strong Academic Foundation -->
-                <div class="principal-commitment-card">
-                    <div class="principal-commitment-icon icon-blue">
+            <div class="beliefs-cards-grid">
+                <!-- Promise 1: Strong Academic Foundation -->
+                <div class="belief-card">
+                    <div class="belief-icon-circle icon-blue">
                         <i class="fa-solid fa-graduation-cap"></i>
                     </div>
-                    <h3 class="principal-commitment-card-title">Strong Academic Foundation</h3>
-                    <p class="principal-commitment-desc">
+                    <h3 class="belief-title">Strong Academic Foundation</h3>
+                    <p class="belief-desc">
                         A robust curriculum with CBSE excellence and integrated NEET/IIT foundation.
                     </p>
                 </div>
 
-                <!-- Card 2: Character & Values -->
-                <div class="principal-commitment-card">
-                    <div class="principal-commitment-icon icon-orange">
+                <!-- Promise 2: Character & Values -->
+                <div class="belief-card">
+                    <div class="belief-icon-circle icon-orange">
                         <i class="fa-solid fa-users"></i>
                     </div>
-                    <h3 class="principal-commitment-card-title">Character &amp; Values</h3>
-                    <p class="principal-commitment-desc">
+                    <h3 class="belief-title">Character &amp; Values</h3>
+                    <p class="belief-desc">
                         Discipline, compassion and a positive attitude — the qualities that shape responsible citizens.
                     </p>
                 </div>
 
-                <!-- Card 3: Curiosity & Creativity -->
-                <div class="principal-commitment-card">
-                    <div class="principal-commitment-icon icon-sky">
+                <!-- Promise 3: Curiosity & Creativity -->
+                <div class="belief-card">
+                    <div class="belief-icon-circle icon-sky">
                         <i class="fa-solid fa-lightbulb"></i>
                     </div>
-                    <h3 class="principal-commitment-card-title">Curiosity &amp; Creativity</h3>
-                    <p class="principal-commitment-desc">
+                    <h3 class="belief-title">Curiosity &amp; Creativity</h3>
+                    <p class="belief-desc">
                         We encourage questions, exploration and original thinking — not just the right answer.
                     </p>
                 </div>
 
-                <!-- Card 4: All-round Excellence -->
-                <div class="principal-commitment-card">
-                    <div class="principal-commitment-icon icon-rose">
+                <!-- Promise 4: All-round Excellence -->
+                <div class="belief-card">
+                    <div class="belief-icon-circle icon-pink">
                         <i class="fa-solid fa-star"></i>
                     </div>
-                    <h3 class="principal-commitment-card-title">All-round Excellence</h3>
-                    <p class="principal-commitment-desc">
+                    <h3 class="belief-title">All-round Excellence</h3>
+                    <p class="belief-desc">
                         Academics, sports, arts and clubs — every child finds a stage to shine on.
                     </p>
                 </div>
@@ -255,61 +240,65 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
     <!-- =========================================================================
-         4. CTA BANNER SECTION: Come see the school for yourself
+         4. COME SEE THE SCHOOL FOR YOURSELF SECTION
          ========================================================================= -->
-    <section class="admission-banner">
-        <!-- Background Shapes -->
-        <div class="shape-one"></div>
-        <div class="shape-two"></div>
-        <div class="shape-three"></div>
-
-        <!-- Dots -->
-        <div class="dot-pattern"></div>
-
-        <!-- Content -->
-        <div class="banner-content">
-            <div class="copy">
-                <!-- Eyebrow -->
-                <div class="eyebrow">
-                    BEGIN YOUR CHILD'S JOURNEY
-                    <span class="eyebrow-line"></span>
-                </div>
-
-                <!-- Heading -->
-                <h2 class="headline">
+    <section class="principal-visit-section">
+        <div class="principal-visit-card">
+            
+            <!-- Left Info Block -->
+            <div class="visit-left-info">
+                <div class="section-eyebrow">— BEGIN YOUR CHILD'S JOURNEY —</div>
+                <h2 class="visit-title">
                     Come see the school<br>
                     <span class="text-orange">for yourself.</span>
                 </h2>
-
-                <!-- Description -->
-                <p class="subtext">
-                    We welcome you to visit our campus, meet our dedicated teachers, and experience the environment where your child will thrive.
+                <p class="visit-desc">
+                    We welcome you to visit the campus, meet our teachers, and see for yourself the environment in which your child will grow.
                 </p>
 
-                <!-- Buttons -->
-                <div class="buttons">
-                    <!-- Enrol Button -->
-                    <a href="index.php#admissions" class="btn-enrol">
-                        <span>Book a Campus Visit</span>
+                <!-- 3 Feature Badges -->
+                <div class="visit-pills-row">
+                    <div class="visit-feature-pill">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <span>Interactive Campus Tour</span>
+                    </div>
+                    <div class="visit-feature-pill">
+                        <i class="fa-solid fa-users"></i>
+                        <span>Meet Our Faculty</span>
+                    </div>
+                    <div class="visit-feature-pill">
+                        <i class="fa-solid fa-atom"></i>
+                        <span>Experience Our Programs</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Campus Visual & Action Buttons -->
+            <div class="visit-right-block">
+                <div class="visit-campus-img-wrap">
+                    <img src="assets/images/about-hero-building.jpg" alt="Advaita Campus Building" class="visit-campus-img" loading="lazy">
+                    <div class="visit-img-overlay-logo">
+                        <img src="assets/images/logo-cropped.png" alt="Advaita Logo" class="visit-logo-img">
+                    </div>
+                </div>
+
+                <div class="visit-actions-column">
+                    <a href="index.php#admissions" class="btn-orange-pill full-width">
+                        <i class="fa-regular fa-calendar-check"></i>
+                        <span>Book A Campus Visit</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
-
-                    <!-- Contact -->
-                    <a href="index.php#contact" class="btn-visit">
+                    <a href="index.php#contact" class="btn-white-pill full-width">
                         <i class="fa-regular fa-envelope"></i>
                         <span>Contact Us</span>
                     </a>
                 </div>
             </div>
-        </div>
 
-        <!-- Students Image -->
-        <div class="students">
-            <img src="assets/images/about-cta-students-trio.png" alt="Advaita Students" loading="lazy">
         </div>
     </section>
 
-</main>
+</div>
 
 <?php
 require_once __DIR__ . '/includes/footer.php';

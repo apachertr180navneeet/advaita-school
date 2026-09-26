@@ -2,7 +2,7 @@
 /**
  * Vision & Mission - Advaita School of Excellence, Parbhani
  * CBSE Affiliated (Affiliation No. 1130920)
- * Clean Semantic Layout matching the Official Design
+ * Exact Visual Layout matching Official Reference (reference-5.png)
  */
 $pageTitle = "Vision & Mission - Advaita School of Excellence, Parbhani";
 $activePage = "vision-mission";
@@ -10,18 +10,55 @@ $activePage = "vision-mission";
 require_once __DIR__ . '/includes/header.php';
 ?>
 
-<main id="main" class="main-content-wrapper vision-page-wrapper">
+<div class="inner-page-wrapper vision-page-wrapper">
 
     <!-- =========================================================================
          1. HERO SECTION: Guiding Young Minds Towards a Brighter Tomorrow
          ========================================================================= -->
-    <section class="vision-hero-section">
-        <div class="vision-hero-canvas">
-            <!-- Background Image & Sky on the Right -->
-            <div class="vision-hero-bg-visual" aria-hidden="true">
-                <img src="assets/images/about-hero-building.jpg" alt="Advaita School of Excellence Campus" class="vision-hero-bg-img" loading="eager">
+    <section class="inner-hero-section">
+        <div class="inner-hero-canvas">
+            
+            <!-- Left Dot Matrix Decor -->
+            <div class="inner-hero-dots-decor" aria-hidden="true"></div>
+
+            <!-- Left Content Panel -->
+            <div class="inner-hero-left-panel">
+                <div class="inner-hero-content-inner">
+                    <!-- Breadcrumbs -->
+                    <div class="inner-breadcrumb">
+                        <a href="index.php">Home</a>
+                        <span class="sep">›</span>
+                        <a href="about-us.php">About Us</a>
+                        <span class="sep">›</span>
+                        <span class="active">Vision &amp; Mission</span>
+                    </div>
+
+                    <div class="inner-eyebrow">— OUR VISION &amp; MISSION —</div>
+                    
+                    <h1 class="inner-hero-title">
+                        Guiding Young Minds<br>
+                        Towards a <span class="text-orange">Brighter<br>Tomorrow.</span>
+                    </h1>
+                    
+                    <p class="inner-hero-desc">
+                        At Advaita School of Excellence, our vision and mission reflect our unwavering commitment to academic excellence, strong values and the all-round development of every child.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Campus Building Visual with Blue Arch Contour & Script Tag -->
+            <div class="inner-hero-right-visual">
+                <div class="inner-hero-img-frame">
+                    <img src="assets/images/about-hero-building.jpg" alt="Advaita School of Excellence Campus" class="inner-hero-campus-img" loading="eager">
+                    
+                    <!-- Advaita Logo Badge Overlay on Building -->
+                    <div class="inner-hero-building-logo">
+                        <img src="assets/images/logo-cropped.png" alt="Advaita Logo" class="building-logo-img">
+                    </div>
+                </div>
+
                 <!-- Floating Script Badge in Sky -->
-                <div class="vision-hero-script-tag">
+                <div class="inner-hero-script-tag">
                     <span class="script-title">More<br>Than A School</span>
                     <svg class="script-underline" viewBox="0 0 140 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path d="M4 10C36 4 98 4 136 12" stroke="#F37021" stroke-width="3.5" stroke-linecap="round"/>
@@ -30,125 +67,60 @@ require_once __DIR__ . '/includes/header.php';
                 </div>
             </div>
 
-            <!-- Full Width Wave Mask Overlay with ambient blue contour -->
-            <div class="vision-hero-wave-overlay" aria-hidden="true">
-                <svg viewBox="0 0 1440 480" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="visionWaveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#0284C7"/>
-                            <stop offset="50%" stop-color="#38BDF8"/>
-                            <stop offset="100%" stop-color="#60A5FA"/>
-                        </linearGradient>
-                    </defs>
-                    <!-- Ambient soft blue aura at far left -->
-                    <path d="M0,60 C90,60 140,160 140,260 C140,360 85,430 0,450 Z" fill="#E8F4FE" opacity="0.85"/>
-                    <!-- Outer vibrant sky-blue contour wave -->
-                    <path d="M0,0 L615,0 C665,80 725,190 805,280 C895,375 1045,435 1440,458 L1440,480 L0,480 Z" fill="url(#visionWaveGrad)" opacity="0.95"/>
-                    <!-- Mid soft blue contour wave -->
-                    <path d="M0,0 L600,0 C650,80 710,190 790,280 C880,375 1030,435 1440,452 L1440,480 L0,480 Z" fill="#BAE6FD"/>
-                    <!-- Main solid white wave panel covering left side completely -->
-                    <path d="M0,0 L585,0 C635,80 695,190 775,280 C865,375 1015,435 1440,445 L1440,480 L0,480 Z" fill="#FFFFFF"/>
-                    <!-- Bottom right gentle wave contours -->
-                    <path d="M850,480 C1020,420 1220,430 1440,455 L1440,480 Z" fill="#DCEEFF" opacity="0.8"/>
-                    <path d="M1060,480 C1200,445 1320,450 1440,468 L1440,480 Z" fill="#BAE6FD" opacity="0.65"/>
-                </svg>
-            </div>
-
-            <!-- Left Dot Matrix Decor -->
-            <div class="vision-hero-dots-decor" aria-hidden="true"></div>
-
-            <!-- Left Content Panel -->
-            <div class="vision-hero-left-panel">
-                <div class="vision-hero-content-inner">
-                    <!-- Breadcrumbs -->
-                    <div class="vision-breadcrumb">
-                        <a href="index.php">Home</a>
-                        <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
-                        <a href="about-us.php">About Us</a>
-                        <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
-                        <span class="active">Vision &amp; Mission</span>
-                    </div>
-
-                    <span class="vision-eyebrow">OUR VISION &amp; MISSION</span>
-                    <h1 class="vision-hero-title">
-                        Guiding Young Minds<br>
-                        Towards a <span class="text-orange">Brighter<br>Tomorrow.</span>
-                    </h1>
-
-                    <p class="vision-hero-desc">
-                        At Advaita School of Excellence, our vision and mission reflect our unwavering commitment to academic excellence, strong values and the all-round development of every child.
-                    </p>
-                </div>
-            </div>
         </div>
     </section>
 
     <!-- =========================================================================
-         2. DUAL FEATURED HERO CARDS: OUR VISION & OUR MISSION
+         2. DUAL VISION & MISSION CARDS SECTION
          ========================================================================= -->
-    <section class="vision-dual-cards-section">
-        <!-- Ambient decorative dots -->
-        <div class="vision-dots-left" aria-hidden="true"></div>
-        <div class="vision-dots-right" aria-hidden="true"></div>
+    <section class="dual-vision-mission-section">
+        <div class="section-decor-dots dots-left" aria-hidden="true"></div>
+        <div class="section-decor-dots dots-right" aria-hidden="true"></div>
 
-        <div class="vision-dual-cards-container">
-            <div class="vision-dual-cards-grid">
-
-                <!-- Card 1: OUR VISION -->
-                <div class="vision-featured-card vision-card-left">
-                    <div class="vision-card-bg-visual">
-                        <img src="assets/images/vision-mountain-peak.jpg" alt="Majestic Mountain Summit - Vision" class="vision-mountain-img" loading="lazy">
-                        <div class="vision-mountain-overlay"></div>
+        <div class="dual-vm-container">
+            <div class="dual-vm-grid">
+                
+                <!-- Card 1: Our Vision (Light Blue with Mountain Background) -->
+                <div class="vm-card card-vision">
+                    <div class="vm-card-bg-visual visual-mountain" aria-hidden="true">
+                        <img src="assets/images/vision-mountain-peak.jpg" alt="Mountain Peak Vision" class="vm-bg-img" loading="lazy">
                     </div>
-                    
-                    <div class="vision-card-content">
-                        <!-- Icon Top Left -->
-                        <div class="vision-card-icon-wrap icon-blue">
-                            <i class="fa-solid fa-eye"></i>
+                    <div class="vm-card-content">
+                        <div class="vm-badge-wrap">
+                            <div class="vm-badge-icon badge-blue">
+                                <i class="fa-regular fa-eye"></i>
+                            </div>
+                            <span class="vm-pill-badge pill-blue">OUR VISION</span>
                         </div>
 
-                        <!-- Pill Badge -->
-                        <div class="vision-pill-badge pill-navy">
-                            OUR VISION
-                        </div>
-
-                        <!-- Main Heading -->
-                        <h2 class="vision-card-heading">
+                        <h2 class="vm-card-title">
                             To nurture confident, creative and responsible global citizens.
                         </h2>
 
-                        <!-- Paragraph -->
-                        <p class="vision-card-text">
+                        <p class="vm-card-desc">
                             We envision a progressive learning community where every child discovers their unique potential, builds a strong character and contributes positively to a brighter and better world.
                         </p>
                     </div>
                 </div>
 
-                <!-- Card 2: OUR MISSION -->
-                <div class="vision-featured-card mission-card-right">
-                    <div class="mission-card-bg-visual">
-                        <img src="assets/images/mission-student-inspirational.jpg" alt="Inspiring Student - Mission" class="mission-student-img" loading="lazy">
-                        <div class="mission-student-overlay"></div>
+                <!-- Card 2: Our Mission (Light Orange with Student Photo) -->
+                <div class="vm-card card-mission">
+                    <div class="vm-card-bg-visual visual-student" aria-hidden="true">
+                        <img src="assets/images/mission-student-inspirational.jpg" alt="Advaita Student Mission" class="vm-bg-img" loading="lazy">
                     </div>
-
-                    <div class="vision-card-content">
-                        <!-- Icon Top Left -->
-                        <div class="vision-card-icon-wrap icon-orange">
-                            <i class="fa-solid fa-bullseye"></i>
+                    <div class="vm-card-content">
+                        <div class="vm-badge-wrap">
+                            <div class="vm-badge-icon badge-orange">
+                                <i class="fa-solid fa-bullseye"></i>
+                            </div>
+                            <span class="vm-pill-badge pill-orange">OUR MISSION</span>
                         </div>
 
-                        <!-- Pill Badge -->
-                        <div class="vision-pill-badge pill-orange">
-                            OUR MISSION
-                        </div>
-
-                        <!-- Main Heading -->
-                        <h2 class="vision-card-heading">
+                        <h2 class="vm-card-title">
                             To provide a holistic, value-based education with strong academic foundations.
                         </h2>
 
-                        <!-- Paragraph -->
-                        <p class="vision-card-text">
+                        <p class="vm-card-desc">
                             Our mission is to integrate modern teaching methodologies with a student-centric approach, encourage curiosity and critical thinking, and prepare students for competitive exams and life beyond the classroom.
                         </p>
                     </div>
@@ -159,50 +131,50 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
     <!-- =========================================================================
-         3. OUR CORE BELIEFS: What We Stand For (3 Cards Grid)
+         3. OUR CORE BELIEFS SECTION (3 Cards)
          ========================================================================= -->
-    <section class="vision-beliefs-section">
-        <div class="vision-beliefs-container">
-            <div class="about-section-header text-center">
-                <span class="about-eyebrow">— WHAT WE STAND FOR —</span>
-                <h2 class="about-section-heading">
-                    Our <span>Core Beliefs</span>
+    <section class="core-beliefs-section">
+        <div class="core-beliefs-container">
+            <div class="beliefs-section-header">
+                <div class="section-eyebrow">— WHAT WE STAND FOR —</div>
+                <h2 class="section-title">
+                    Our <span class="text-orange">Core Beliefs</span>
                 </h2>
-                <p class="about-section-subhead">
+                <p class="section-subtitle">
                     Our vision and mission are built on strong values that shape every learning experience at Advaita.
                 </p>
             </div>
 
-            <div class="vision-beliefs-grid">
+            <div class="core-beliefs-grid">
                 <!-- Belief 1: Academic Excellence -->
-                <div class="vision-belief-card">
-                    <div class="vision-belief-icon icon-blue">
-                        <i class="fa-solid fa-eye"></i>
+                <div class="core-belief-card">
+                    <div class="belief-icon-circle icon-blue">
+                        <i class="fa-regular fa-eye"></i>
                     </div>
-                    <h3 class="vision-belief-title">Academic Excellence</h3>
-                    <p class="vision-belief-desc">
+                    <h3 class="belief-title">Academic Excellence</h3>
+                    <p class="belief-desc">
                         A strong foundation with CBSE academics and integrated NEET/IIT preparation.
                     </p>
                 </div>
 
                 <!-- Belief 2: Character & Values -->
-                <div class="vision-belief-card">
-                    <div class="vision-belief-icon icon-blue">
+                <div class="core-belief-card">
+                    <div class="belief-icon-circle icon-blue">
                         <i class="fa-solid fa-users"></i>
                     </div>
-                    <h3 class="vision-belief-title">Character &amp; Values</h3>
-                    <p class="vision-belief-desc">
+                    <h3 class="belief-title">Character &amp; Values</h3>
+                    <p class="belief-desc">
                         Discipline, empathy and responsibility to create compassionate individuals.
                     </p>
                 </div>
 
                 <!-- Belief 3: Holistic Development -->
-                <div class="vision-belief-card">
-                    <div class="vision-belief-icon icon-blue">
+                <div class="core-belief-card">
+                    <div class="belief-icon-circle icon-blue">
                         <i class="fa-solid fa-lightbulb"></i>
                     </div>
-                    <h3 class="vision-belief-title">Holistic Development</h3>
-                    <p class="vision-belief-desc">
+                    <h3 class="belief-title">Holistic Development</h3>
+                    <p class="belief-desc">
                         Encouraging creativity, curiosity and participation in academics, sports, arts and life skills.
                     </p>
                 </div>
@@ -211,168 +183,133 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
     <!-- =========================================================================
-         4. OUR FOCUS AREAS: Turning Vision into Meaningful Action (8 Cards Grid)
+         4. TURNING VISION INTO MEANINGFUL ACTION (8 Cards Grid)
          ========================================================================= -->
-    <section class="vision-focus-section">
-        <div class="vision-focus-container">
-            <div class="about-section-header text-center">
-                <span class="about-eyebrow">— OUR FOCUS AREAS —</span>
-                <h2 class="about-section-heading">
-                    Turning Vision into <span>Meaningful Action.</span>
+    <section class="focus-areas-section">
+        <div class="focus-areas-container">
+            <div class="beliefs-section-header">
+                <div class="section-eyebrow">— OUR FOCUS AREAS —</div>
+                <h2 class="section-title">
+                    Turning Vision into <span class="text-orange">Meaningful Action.</span>
                 </h2>
-                <p class="about-section-subhead">
+                <p class="section-subtitle">
                     We work towards our mission through focused initiatives that ensure every child receives the right guidance, opportunities and environment to grow.
                 </p>
             </div>
 
-            <div class="vision-focus-grid">
-                <!-- Focus 1: Strong CBSE Foundation -->
-                <div class="vision-focus-card">
-                    <div class="vision-focus-icon icon-blue">
+            <div class="focus-areas-grid">
+                <!-- 1. Strong CBSE Foundation -->
+                <div class="focus-card">
+                    <div class="focus-icon-circle icon-blue">
                         <i class="fa-solid fa-book-open"></i>
                     </div>
-                    <h3 class="vision-focus-card-title">Strong CBSE Foundation</h3>
-                    <p class="vision-focus-card-desc">
-                        Conceptual clarity and academic depth.
-                    </p>
+                    <h3 class="focus-title">Strong CBSE Foundation</h3>
+                    <p class="focus-desc">Conceptual clarity and academic depth.</p>
                 </div>
 
-                <!-- Focus 2: Integrated NEET / IIT Foundation -->
-                <div class="vision-focus-card">
-                    <div class="vision-focus-icon icon-sky">
+                <!-- 2. Integrated NEET / IIT Foundation -->
+                <div class="focus-card">
+                    <div class="focus-icon-circle icon-sky">
                         <i class="fa-solid fa-graduation-cap"></i>
                     </div>
-                    <h3 class="vision-focus-card-title">Integrated NEET / IIT Foundation</h3>
-                    <p class="vision-focus-card-desc">
-                        Early and structured preparation.
-                    </p>
+                    <h3 class="focus-title">Integrated NEET / IIT Foundation</h3>
+                    <p class="focus-desc">Early and structured preparation.</p>
                 </div>
 
-                <!-- Focus 3: Experienced Faculty -->
-                <div class="vision-focus-card">
-                    <div class="vision-focus-icon icon-indigo">
-                        <i class="fa-solid fa-chalkboard-user"></i>
+                <!-- 3. Experienced Faculty -->
+                <div class="focus-card">
+                    <div class="focus-icon-circle icon-blue">
+                        <i class="fa-solid fa-users-gear"></i>
                     </div>
-                    <h3 class="vision-focus-card-title">Experienced Faculty</h3>
-                    <p class="vision-focus-card-desc">
-                        Mentor-led learning and personal attention.
-                    </p>
+                    <h3 class="focus-title">Experienced Faculty</h3>
+                    <p class="focus-desc">Mentor-led learning and personal attention.</p>
                 </div>
 
-                <!-- Focus 4: Modern Infrastructure -->
-                <div class="vision-focus-card">
-                    <div class="vision-focus-icon icon-orange">
+                <!-- 4. Modern Infrastructure -->
+                <div class="focus-card">
+                    <div class="focus-icon-circle icon-orange">
                         <i class="fa-solid fa-building-columns"></i>
                     </div>
-                    <h3 class="vision-focus-card-title">Modern Infrastructure</h3>
-                    <p class="vision-focus-card-desc">
-                        Safe, spacious and well-equipped campus.
-                    </p>
+                    <h3 class="focus-title">Modern Infrastructure</h3>
+                    <p class="focus-desc">Safe, spacious and well-equipped campus.</p>
                 </div>
 
-                <!-- Focus 5: Value-Based Education -->
-                <div class="vision-focus-card">
-                    <div class="vision-focus-icon icon-rose">
+                <!-- 5. Value-Based Education -->
+                <div class="focus-card">
+                    <div class="focus-icon-circle icon-pink">
                         <i class="fa-solid fa-heart"></i>
                     </div>
-                    <h3 class="vision-focus-card-title">Value-Based Education</h3>
-                    <p class="vision-focus-card-desc">
-                        Building integrity, empathy and leadership.
-                    </p>
+                    <h3 class="focus-title">Value-Based Education</h3>
+                    <p class="focus-desc">Building integrity, empathy and leadership.</p>
                 </div>
 
-                <!-- Focus 6: Co-Curricular Opportunities -->
-                <div class="vision-focus-card">
-                    <div class="vision-focus-icon icon-amber">
+                <!-- 6. Co-Curricular Opportunities -->
+                <div class="focus-card">
+                    <div class="focus-icon-circle icon-orange">
                         <i class="fa-solid fa-palette"></i>
                     </div>
-                    <h3 class="vision-focus-card-title">Co-Curricular Opportunities</h3>
-                    <p class="vision-focus-card-desc">
-                        Sports, arts, clubs and life skills.
-                    </p>
+                    <h3 class="focus-title">Co-Curricular Opportunities</h3>
+                    <p class="focus-desc">Sports, arts, clubs and life skills.</p>
                 </div>
 
-                <!-- Focus 7: Career & Life Readiness -->
-                <div class="vision-focus-card">
-                    <div class="vision-focus-icon icon-purple">
-                        <i class="fa-solid fa-bullseye"></i>
+                <!-- 7. Career & Life Readiness -->
+                <div class="focus-card">
+                    <div class="focus-icon-circle icon-purple">
+                        <i class="fa-solid fa-compass"></i>
                     </div>
-                    <h3 class="vision-focus-card-title">Career &amp; Life Readiness</h3>
-                    <p class="vision-focus-card-desc">
-                        Guidance for competitive exams and beyond.
-                    </p>
+                    <h3 class="focus-title">Career &amp; Life Readiness</h3>
+                    <p class="focus-desc">Guidance for competitive exams and beyond.</p>
                 </div>
 
-                <!-- Focus 8: Supportive Environment -->
-                <div class="vision-focus-card">
-                    <div class="vision-focus-icon icon-yellow">
-                        <i class="fa-solid fa-wand-magic-sparkles"></i>
+                <!-- 8. Supportive Environment -->
+                <div class="focus-card">
+                    <div class="focus-icon-circle icon-yellow">
+                        <i class="fa-solid fa-star"></i>
                     </div>
-                    <h3 class="vision-focus-card-title">Supportive Environment</h3>
-                    <p class="vision-focus-card-desc">
-                        Where every child feels safe, valued and inspired.
-                    </p>
+                    <h3 class="focus-title">Supportive Environment</h3>
+                    <p class="focus-desc">Where every child feels safe, valued and inspired.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- =========================================================================
-         5. CTA BANNER SECTION: Be a Part of the Advaita Journey
+         5. BE A PART OF THE ADVAITA JOURNEY (CTA Banner)
          ========================================================================= -->
-    <section class="admission-banner">
-        <!-- Background Shapes -->
-        <div class="shape-one"></div>
-        <div class="shape-two"></div>
-        <div class="shape-three"></div>
+    <section class="inner-join-banner-section cta-variant">
+        <div class="inner-join-banner-container">
+            <!-- Left Paper Airplane Graphic -->
+            <div class="join-plane-wrap" aria-hidden="true">
+                <img src="assets/images/staff-join-airplane-bg.png" alt="Airplane Trail" class="join-plane-img" loading="lazy">
+            </div>
 
-        <!-- Dots -->
-        <div class="dot-pattern"></div>
-
-        <!-- Content -->
-        <div class="banner-content">
-            <div class="copy">
-                <!-- Eyebrow -->
-                <div class="eyebrow">
-                    TOGETHER TOWARDS A BRIGHTER TOMORROW
-                    <span class="eyebrow-line"></span>
-                </div>
-
-                <!-- Heading -->
-                <h2 class="headline">
-                    Be a Part of the<br>
-                    <span class="text-orange">Advaita Journey.</span>
-                </h2>
-
-                <!-- Description -->
-                <p class="subtext">
+            <!-- Center Content -->
+            <div class="join-content-center">
+                <div class="section-eyebrow">— TOGETHER TOWARDS A BRIGHTER TOMORROW —</div>
+                <h2 class="join-title">Be a Part of the <span class="text-orange">Advaita Journey</span></h2>
+                <p class="join-desc">
                     Give your child the right start with strong academics, values and endless opportunities.
                 </p>
-
-                <!-- Buttons -->
-                <div class="buttons">
-                    <!-- Enrol Button -->
-                    <a href="index.php#admissions" class="btn-enrol">
+                <div class="join-actions">
+                    <a href="index.php#admissions" class="btn-orange-pill">
                         <span>Book a Campus Visit</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
-
-                    <!-- School Visit -->
-                    <a href="index.php#contact" class="btn-visit">
-                        <i class="fa-solid fa-phone"></i>
+                    <a href="index.php#admissions" class="btn-white-pill">
                         <span>Enquire Now</span>
+                        <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
-        </div>
 
-        <!-- Students Image -->
-        <div class="students">
-            <img src="assets/images/about-cta-students-trio.png" alt="Advaita School Students" loading="lazy">
+            <!-- Right Smiling Students Graphic -->
+            <div class="join-students-wrap">
+                <img src="assets/images/about-cta-students-trio.png" alt="Advaita Students" class="join-students-img" loading="lazy">
+            </div>
         </div>
     </section>
 
-</main>
+</div>
 
 <?php
 require_once __DIR__ . '/includes/footer.php';
