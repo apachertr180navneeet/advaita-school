@@ -452,33 +452,31 @@ require_once __DIR__ . '/includes/header.php';
             <div class="copy">
                 <!-- Eyebrow -->
                 <div class="eyebrow">
-                    BE A PART OF A BRIGHTER
-                    <span class="eyebrow-line"></span>
+                    BE A PART OF ADVAITA
                 </div>
 
                 <!-- Heading -->
                 <h2 class="headline">
-                    Think Big, Achieve More<br>
-                    for a better you.
+                    Together, let's build brighter tomorrows.
                 </h2>
 
                 <!-- Description -->
                 <p class="subtext">
-                    Join us today and take the next step towards a successful future.
+                    Admissions are open for CBSE, NEET/IIT Foundation &amp; Competitive Exam Programmes.
                 </p>
 
                 <!-- Buttons -->
                 <div class="buttons">
                     <!-- Enrol Button -->
                     <a href="index.php#admissions" class="btn-enrol">
-                        <span>Enrol Now</span>
-                        <span>&rarr;</span>
+                        <span>Enquire Now</span>
+                        <i class="fa-solid fa-arrow-right"></i>
                     </a>
 
                     <!-- School Visit -->
                     <a href="index.php#contact" class="btn-visit">
-                        <i class="fa-solid fa-phone"></i>
-                        <span>Schedule a School Visit</span>
+                        <i class="fa-regular fa-calendar-days"></i>
+                        <span>Schedule a Campus Visit</span>
                     </a>
                 </div>
             </div>

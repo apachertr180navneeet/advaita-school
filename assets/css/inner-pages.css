@@ -653,8 +653,8 @@
 }
 
 .stat-icon-badge {
-    background: #e0f2fe;
-    color: var(--adv-sky);
+    background: #fff7ed;
+    color: var(--adv-orange);
     font-weight: 800;
     font-size: 0.85rem;
 }
@@ -715,16 +715,12 @@
     border-radius: 50%;
     background: #fff7ed;
     color: var(--adv-orange);
+    border: 1.5px solid #fed7aa;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.1rem;
     flex-shrink: 0;
-}
-
-.about-vmv-card:first-child .about-vmv-icon-ring {
-    background: #e0f2fe;
-    color: var(--adv-sky);
 }
 
 .about-vmv-title {
