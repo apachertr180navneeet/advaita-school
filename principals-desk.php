@@ -89,7 +89,7 @@ require_once __DIR__ . '/includes/header.php';
         <div class="principal-message-dots-right" aria-hidden="true"></div>
 
         <div class="principal-message-container">
-            <div class="principal-message-grid">
+            <div class="principal-message-card">
 
                 <!-- Left Column: Principal Profile Card with Viewfinder Frame & Stats -->
                 <div class="principal-profile-col">
@@ -117,6 +117,7 @@ require_once __DIR__ . '/includes/header.php';
                             <div class="principal-profile-info">
                                 <h3 class="principal-name">Divine Mam</h3>
                                 <div class="principal-role">Principal</div>
+                                <div class="principal-role-divider" aria-hidden="true"></div>
                                 <p class="principal-org">
                                     Advaita School of Excellence<br>
                                     Parbhani
@@ -146,9 +147,9 @@ require_once __DIR__ . '/includes/header.php';
 
                 <!-- Right Column: Principal's Message Content -->
                 <div class="principal-message-content">
-                    <span class="principal-message-eyebrow">— PRINCIPAL'S MESSAGE —</span>
+                    <span class="principal-message-eyebrow">PRINCIPAL'S MESSAGE</span>
                     <h2 class="principal-message-title">
-                        A Few Words from <span>Our Principal</span>
+                        A Few Words from <span class="text-orange">Our Principal</span>
                     </h2>
 
                     <div class="principal-salutation">
@@ -165,7 +166,7 @@ require_once __DIR__ . '/includes/header.php';
 
                     <!-- Quote Box -->
                     <div class="principal-quote-box">
-                        <div class="principal-quote-icon" aria-hidden="true">“</div>
+                        <div class="principal-quote-icon" aria-hidden="true"><i class="fa-solid fa-quote-left"></i></div>
                         <p class="principal-quote-text">
                             With the support of dedicated teachers, modern teaching methodologies and a student-centric approach, we strive to make learning meaningful and enjoyable.
                         </p>
@@ -194,11 +195,15 @@ require_once __DIR__ . '/includes/header.php';
          3. OUR COMMITMENT: Four Things We Promise (4 Cards)
          ========================================================================= -->
     <section class="principal-commitment-section">
+        <!-- Side dot decor -->
+        <div class="principal-commitment-dots-left" aria-hidden="true"></div>
+        <div class="principal-commitment-dots-right" aria-hidden="true"></div>
+
         <div class="principal-commitment-container">
-            <div class="about-section-header text-center">
-                <span class="about-eyebrow">— OUR COMMITMENT —</span>
-                <h2 class="about-section-heading">
-                    Four Things We <span>Promise</span>
+            <div class="principal-commitment-header text-center">
+                <span class="principal-commitment-eyebrow">OUR COMMITMENT</span>
+                <h2 class="principal-commitment-heading">
+                    Four Things We <span class="text-orange">Promise</span>
                 </h2>
             </div>
 
@@ -252,57 +257,92 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
     <!-- =========================================================================
-         4. CTA BANNER SECTION: Come see the school for yourself
+         4. CTA BANNER SECTION: Full-Width Wave Banner (Come see the school for yourself)
          ========================================================================= -->
-    <section class="admission-banner">
-        <!-- Background Shapes -->
-        <div class="shape-one"></div>
-        <div class="shape-two"></div>
-        <div class="shape-three"></div>
+    <section class="principal-cta-banner-section">
+        <div class="principal-cta-banner-canvas">
 
-        <!-- Dots -->
-        <div class="dot-pattern"></div>
+            <!-- Background Image & Sky on the Right -->
+            <div class="principal-cta-bg-visual" aria-hidden="true">
+                <img src="assets/images/about-hero-building.jpg" alt="Advaita School of Excellence Campus" class="principal-cta-bg-img" loading="lazy">
+            </div>
 
-        <!-- Content -->
-        <div class="banner-content">
-            <div class="copy">
-                <!-- Eyebrow -->
-                <div class="eyebrow">
-                    BEGIN YOUR CHILD'S JOURNEY
-                    <span class="eyebrow-line"></span>
+            <!-- Full Width Wave Mask Overlay with ambient blue contour -->
+            <div class="principal-cta-wave-overlay" aria-hidden="true">
+                <svg viewBox="0 0 1440 460" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="principalCtaWaveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#0284C7"/>
+                            <stop offset="50%" stop-color="#38BDF8"/>
+                            <stop offset="100%" stop-color="#60A5FA"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Ambient soft blue aura at far left -->
+                    <path d="M0,40 C80,40 130,140 130,240 C130,340 75,410 0,430 Z" fill="#E8F4FE" opacity="0.85"/>
+                    <!-- Outer vibrant sky-blue contour wave -->
+                    <path d="M0,0 L855,0 C790,115 750,230 790,345 C815,400 845,435 870,460 L0,460 Z" fill="url(#principalCtaWaveGrad)" opacity="0.95"/>
+                    <!-- Mid soft blue contour wave -->
+                    <path d="M0,0 L840,0 C775,115 735,230 775,345 C800,400 830,435 855,460 L0,460 Z" fill="#BAE6FD"/>
+                    <!-- Main solid white wave panel covering left side completely -->
+                    <path d="M0,0 L825,0 C760,115 720,230 760,345 C785,400 815,435 840,460 L0,460 Z" fill="#FFFFFF"/>
+                </svg>
+            </div>
+
+            <!-- Left Dot Matrix Decor -->
+            <div class="principal-cta-dots-decor" aria-hidden="true"></div>
+
+            <!-- Right Interactive Elements Overlay (Above Wave) -->
+            <div class="principal-cta-right-overlay">
+                <!-- Floating School Logo Badge on Top Center of Building -->
+                <div class="principal-cta-building-badge">
+                    <img src="assets/images/logo-cropped.png" alt="Advaita School of Excellence">
                 </div>
 
-                <!-- Heading -->
-                <h2 class="headline">
-                    Come see the school<br>
-                    <span class="text-orange">for yourself.</span>
-                </h2>
-
-                <!-- Description -->
-                <p class="subtext">
-                    We welcome you to visit our campus, meet our dedicated teachers, and experience the environment where your child will thrive.
-                </p>
-
-                <!-- Buttons -->
-                <div class="buttons">
-                    <!-- Enrol Button -->
-                    <a href="index.php#admissions" class="btn-enrol">
-                        <span>Book a Campus Visit</span>
-                        <i class="fa-solid fa-arrow-right"></i>
+                <!-- Action Buttons Overlaid on Building -->
+                <div class="principal-cta-action-buttons">
+                    <a href="index.php#admissions" class="principal-cta-btn-orange">
+                        <span class="cta-btn-icon"><i class="fa-solid fa-calendar-days"></i></span>
+                        <span class="cta-btn-text">Book A Campus Visit</span>
+                        <i class="fa-solid fa-arrow-right cta-btn-arrow"></i>
                     </a>
-
-                    <!-- Contact -->
-                    <a href="index.php#contact" class="btn-visit">
-                        <i class="fa-regular fa-envelope"></i>
-                        <span>Contact Us</span>
+                    <a href="index.php#contact" class="principal-cta-btn-white">
+                        <span class="cta-btn-icon"><i class="fa-regular fa-envelope"></i></span>
+                        <span class="cta-btn-text">Contact Us</span>
                     </a>
                 </div>
             </div>
-        </div>
 
-        <!-- Students Image -->
-        <div class="students">
-            <img src="assets/images/about-cta-students-trio.png" alt="Advaita Students" loading="lazy">
+            <!-- Left Content Panel -->
+            <div class="principal-cta-left-panel">
+                <div class="principal-cta-content-inner">
+                    <span class="principal-cta-eyebrow">BEGIN YOUR CHILD'S JOURNEY</span>
+                    <h2 class="principal-cta-title">
+                        Come see the school<br>
+                        for <span class="text-orange">yourself.</span>
+                    </h2>
+                    <p class="principal-cta-desc">
+                        We welcome you to visit the campus, meet our teachers, and<br class="d-none d-lg-inline">
+                        see for yourself the environment in which your child will grow.
+                    </p>
+
+                    <!-- 3 Feature Pills in Single Row -->
+                    <div class="principal-cta-pills-row">
+                        <div class="principal-cta-pill-item">
+                            <span class="cta-pill-icon icon-blue"><i class="fa-solid fa-compass"></i></span>
+                            <span class="cta-pill-text">Interactive Campus Tour</span>
+                        </div>
+                        <div class="principal-cta-pill-item">
+                            <span class="cta-pill-icon icon-orange"><i class="fa-solid fa-users"></i></span>
+                            <span class="cta-pill-text">Meet Our Faculty</span>
+                        </div>
+                        <div class="principal-cta-pill-item">
+                            <span class="cta-pill-icon icon-purple"><i class="fa-solid fa-shapes"></i></span>
+                            <span class="cta-pill-text">Experience Our Programs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
