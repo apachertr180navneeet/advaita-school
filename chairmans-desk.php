@@ -119,7 +119,7 @@ require_once __DIR__ . '/includes/header.php';
 
                 <!-- Left: Message Content -->
                 <div class="chairman-message-content">
-                    <span class="chairman-message-eyebrow">—— CHAIRMAN'S MESSAGE ——</span>
+                    <span class="chairman-message-eyebrow">CHAIRMAN'S MESSAGE</span>
                     <h2 class="chairman-message-title">
                         A Few Words from<br>
                         <span>Our Chairman.</span>
@@ -181,7 +181,7 @@ require_once __DIR__ . '/includes/header.php';
     <section class="chairman-commitment-section">
         <div class="chairman-commitment-container">
             <div class="about-section-header text-center">
-                <span class="about-eyebrow">—— OUR COMMITMENT ——</span>
+                <span class="about-eyebrow">OUR COMMITMENT</span>
                 <h2 class="about-section-heading">
                     Four Beliefs That <span>Guide Us.</span>
                 </h2>

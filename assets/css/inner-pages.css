@@ -866,6 +866,10 @@
     letter-spacing: -0.4px;
 }
 
+.about-section-heading span {
+    color: #F37021;
+}
+
 .about-section-subhead {
     font-size: 0.9rem;
     color: var(--adv-text-body);
@@ -1170,14 +1174,25 @@
 }
 
 .chairman-message-eyebrow {
-    display: inline-block;
-    color: var(--adv-orange);
-    font-family: var(--adv-font-sans);
-    font-size: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #F37021;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 0.78rem;
     font-weight: 800;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+.chairman-message-eyebrow::before,
+.chairman-message-eyebrow::after {
+    content: '';
+    display: inline-block;
+    width: 22px;
+    height: 2px;
+    background: #F37021;
 }
 
 .chairman-message-title {
@@ -1247,19 +1262,19 @@
 .chairman-profile-card-wrapper {
     position: relative;
     width: 100%;
-    max-width: 320px;
+    max-width: 290px;
     margin: 0 auto;
 }
 
 /* Blue Accent Tab on Left edge of the card */
 .chairman-profile-blue-tab {
     position: absolute;
-    top: 36%;
-    left: -14px;
-    width: 24px;
-    height: 85px;
+    top: 14%;
+    left: -10px;
+    width: 22px;
+    height: 235px;
     background: #38bdf8;
-    border-radius: 12px 0 0 12px;
+    border-radius: 14px 0 0 14px;
     z-index: 1;
 }
 
@@ -1267,9 +1282,9 @@
 .chairman-profile-dots-decor {
     position: absolute;
     top: 15px;
-    right: -24px;
-    width: 50px;
-    height: 100px;
+    right: -20px;
+    width: 42px;
+    height: 95px;
     background-image: radial-gradient(#93c5fd 1.8px, transparent 1.8px);
     background-size: 14px 14px;
     opacity: 0.75;
@@ -1289,7 +1304,7 @@
 
 .chairman-profile-photo-wrap {
     width: 100%;
-    height: 310px;
+    height: 270px;
     overflow: hidden;
     background: #faf8f5;
 }
@@ -1298,68 +1313,70 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top;
+    object-position: center 12%;
     display: block;
 }
 
 .chairman-profile-info {
-    background: linear-gradient(180deg, #073a76 0%, #032148 100%);
+    background: linear-gradient(135deg, #0b284e 0%, #123d73 50%, #1a569d 100%);
     color: #ffffff;
-    padding: 16px 20px;
+    padding: 14px 18px 16px;
     text-align: left;
     border-radius: 0 0 20px 20px;
 }
 
 .chairman-name {
-    font-family: var(--adv-font-sans);
-    font-size: 1.05rem;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 0.98rem;
     font-weight: 800;
     color: #ffffff;
-    margin: 0 0 3px;
+    margin: 0 0 4px;
     letter-spacing: -0.2px;
+    line-height: 1.25;
 }
 
 .chairman-role {
-    font-size: 0.8125rem;
+    font-size: 0.8rem;
     font-weight: 700;
-    color: var(--adv-orange);
+    color: #f59e0b;
     margin-bottom: 2px;
 }
 
 .chairman-org {
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     color: #cbd5e1;
-    font-weight: 500;
+    font-weight: 400;
     margin: 0;
+    line-height: 1.35;
 }
 
 /* Commitment Section (4 Cards) */
 .chairman-commitment-section,
 .principal-commitment-section {
-    padding: clamp(35px, 4vw, 50px) 0;
-    background: #f8fcff;
+    padding: clamp(38px, 4.2vw, 55px) 0 clamp(42px, 4.8vw, 62px);
+    background: #f0f7fe;
 }
 
 .chairman-commitment-grid,
 .principal-commitment-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    margin-top: 20px;
+    gap: 20px;
+    margin-top: 24px;
 }
 
 .chairman-commitment-card,
 .principal-commitment-card {
     background: #ffffff;
-    border: 1px solid #eaf2fb;
-    border-radius: 18px;
-    padding: clamp(22px, 2.5vw, 28px) clamp(18px, 2vw, 24px);
+    border: 1px solid #e1effa;
+    border-radius: 20px;
+    padding: 28px 20px 24px;
     text-align: left;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     box-shadow: 0 4px 18px rgba(8, 59, 122, 0.04);
-    transition: all 0.25s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .chairman-commitment-card:hover,
@@ -1383,13 +1400,13 @@
 }
 
 .icon-blue {
-    background: #e0f2fe;
-    color: var(--adv-sky);
+    background: #dbeafe;
+    color: #0284c7;
 }
 
 .icon-orange {
-    background: #fff7ed;
-    color: var(--adv-orange);
+    background: #ffedd5;
+    color: #ea580c;
 }
 
 .icon-purple,
@@ -1405,8 +1422,8 @@
 }
 
 .icon-sky {
-    background: #e0f2fe;
-    color: #0284c7;
+    background: #dbeafe;
+    color: #2563eb;
 }
 
 .icon-green {
@@ -1422,18 +1439,19 @@
 
 .chairman-commitment-card-title,
 .principal-commitment-card-title {
-    font-family: var(--adv-font-sans);
-    font-size: 0.98rem;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 1.05rem;
     font-weight: 800;
-    color: var(--adv-navy);
-    margin: 0 0 6px;
+    color: #083B7A;
+    margin: 0 0 8px;
+    letter-spacing: -0.2px;
 }
 
 .chairman-commitment-desc,
 .principal-commitment-desc {
-    font-size: 0.75rem;
-    color: var(--adv-text-muted);
-    line-height: 1.45;
+    font-size: 0.8125rem;
+    color: #556987;
+    line-height: 1.55;
     margin: 0;
 }
 
@@ -1895,6 +1913,7 @@
     font-weight: 700;
 }
 
+.about-eyebrow,
 .staff-eyebrow,
 .chairman-eyebrow,
 .principal-eyebrow,
@@ -1911,6 +1930,8 @@
     margin-bottom: 10px;
 }
 
+.about-eyebrow::before,
+.about-eyebrow::after,
 .staff-eyebrow::before,
 .staff-eyebrow::after,
 .chairman-eyebrow::before,
