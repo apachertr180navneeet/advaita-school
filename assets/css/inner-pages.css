@@ -1,11 +1,13 @@
 /* ==========================================================================
    Advaita School of Excellence - Master Inner Pages Stylesheet
-   Matching Official References:
-   - reference-1.png (Our Faculty / our-staff.php)
-   - reference-3.png (Chairman's Desk / chairmans-desk.php)
-   - reference-4.png (Principal's Message / principals-desk.php)
-   - reference-5.png (Vision & Mission / vision-mission.php)
-   Theme: #083B7A (Navy), #F37021 (Orange), #0284C7 (Sky Blue), #F8FAFC (Canvas)
+   Pages:
+   - About Us (about-us.php -> reference-2.png)
+   - Our Faculty (our-staff.php -> reference-1.png)
+   - Chairman's Desk (chairmans-desk.php -> reference-3.png)
+   - Principal's Message (principals-desk.php -> reference-4.png)
+   - Vision & Mission (vision-mission.php -> reference-5.png)
+   Color Palette: #083B7A (Navy), #F37021 (Orange), #0284C7 (Sky Blue), #F8FAFC (Canvas)
+   Clean Semantic CSS - Zero Inline Styling
    ========================================================================== */
 
 :root {
@@ -29,7 +31,9 @@
 }
 
 /* Base Wrapper */
-.inner-page-wrapper {
+.main-content-wrapper,
+.inner-page-wrapper,
+.about-page-wrapper {
     font-family: var(--adv-font-body);
     color: var(--adv-text-body);
     background: #ffffff;
@@ -38,7 +42,8 @@
 }
 
 /* Typography Utilities */
-.text-orange {
+.text-orange,
+.about-text-orange {
     color: var(--adv-orange) !important;
 }
 
@@ -46,7 +51,8 @@
     color: var(--adv-navy) !important;
 }
 
-/* Shared Eyebrow */
+/* Shared Eyebrows */
+.about-eyebrow,
 .section-eyebrow,
 .inner-eyebrow {
     display: inline-block;
@@ -59,7 +65,7 @@
     margin-bottom: 10px;
 }
 
-/* Shared Section Title */
+/* Shared Titles */
 .section-title {
     font-family: var(--adv-font-sans);
     font-size: clamp(1.8rem, 2.5vw, 2.3rem);
@@ -79,6 +85,7 @@
 }
 
 /* Shared Buttons */
+.about-btn-orange,
 .btn-orange-pill {
     display: inline-flex;
     align-items: center;
@@ -93,27 +100,31 @@
     border-radius: 9999px;
     text-decoration: none;
     box-shadow: 0 4px 14px rgba(243, 112, 33, 0.28);
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.25s ease;
     white-space: nowrap;
     border: none;
     cursor: pointer;
 }
 
+.about-btn-orange:hover,
 .btn-orange-pill:hover {
     background: linear-gradient(135deg, #e05e0e 0%, #c94f06 100%);
     box-shadow: 0 6px 20px rgba(243, 112, 33, 0.4);
     transform: translateY(-2px);
 }
 
+.about-btn-orange i,
 .btn-orange-pill i {
     font-size: 13px;
     transition: transform 0.2s ease;
 }
 
+.about-btn-orange:hover i,
 .btn-orange-pill:hover i {
     transform: translateX(3px);
 }
 
+.about-btn-white,
 .btn-white-pill {
     display: inline-flex;
     align-items: center;
@@ -124,7 +135,7 @@
     font-family: var(--adv-font-sans);
     font-size: 14.5px;
     font-weight: 700;
-    padding: 11px 26px;
+    padding: 12px 26px;
     border-radius: 9999px;
     text-decoration: none;
     border: 1.5px solid #cbd5e1;
@@ -133,6 +144,7 @@
     cursor: pointer;
 }
 
+.about-btn-white:hover,
 .btn-white-pill:hover {
     border-color: var(--adv-orange);
     color: var(--adv-orange) !important;
@@ -141,97 +153,124 @@
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
 }
 
+.about-btn-vision,
 .btn-video-pill {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 10px;
     background: #ffffff;
     color: var(--adv-navy) !important;
     font-family: var(--adv-font-sans);
     font-size: 14.5px;
     font-weight: 700;
-    padding: 11px 24px;
+    padding: 10px 24px;
     border-radius: 9999px;
     text-decoration: none;
     border: 1.5px solid #cbd5e1;
     transition: all 0.25s ease;
     white-space: nowrap;
+    cursor: pointer;
 }
 
-.btn-video-pill i {
-    font-size: 16px;
-    color: var(--adv-navy);
-    transition: color 0.2s ease;
-}
-
+.about-btn-vision:hover,
 .btn-video-pill:hover {
     border-color: var(--adv-orange);
     color: var(--adv-orange) !important;
     transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
 }
 
-.btn-video-pill:hover i {
-    color: var(--adv-orange);
+.vision-play-circle {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: var(--adv-navy);
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    padding-left: 2px;
+    transition: background 0.2s ease;
 }
 
-.btn-orange-pill.full-width,
-.btn-white-pill.full-width {
-    width: 100%;
+.about-btn-vision:hover .vision-play-circle {
+    background: var(--adv-orange);
 }
 
 /* ==========================================================================
-   1. MASTER HERO SECTION (Exact Reference Match)
+   1. HERO SECTION (reference-1, 2, 3, 4, 5)
    ========================================================================== */
+.about-hero-section,
 .inner-hero-section {
     position: relative;
     width: 100%;
     background: #ffffff;
-    padding-bottom: 30px;
+    padding-bottom: 0;
 }
 
+.about-hero-canvas,
 .inner-hero-canvas {
     position: relative;
-    min-height: 430px;
+    min-height: 480px;
     display: flex;
     align-items: stretch;
-    justify-content: space-between;
-    background: #ffffff;
+    background: #eef6fc;
     overflow: hidden;
-    max-width: 1360px;
-    margin: 0 auto;
+    width: 100%;
 }
 
-/* Left Dot Decor */
+.about-hero-left-panel,
+.inner-hero-left-panel {
+    position: relative;
+    z-index: 3;
+    width: 53%;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: clamp(36px, 4vw, 56px) clamp(24px, 3.5vw, 64px);
+}
+
+.about-hero-wave-edge {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -70px;
+    width: 72px;
+    height: 100%;
+    z-index: 4;
+    pointer-events: none;
+}
+
+.about-hero-wave-edge svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.about-hero-dots-decor,
 .inner-hero-dots-decor {
     position: absolute;
     top: 20px;
     left: 20px;
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
     background-image: radial-gradient(#93c5fd 2px, transparent 2px);
-    background-size: 15px 15px;
-    opacity: 0.55;
+    background-size: 14px 14px;
+    opacity: 0.5;
     pointer-events: none;
     z-index: 1;
 }
 
-/* Left Panel */
-.inner-hero-left-panel {
-    position: relative;
-    z-index: 3;
-    width: 52%;
-    background: #ffffff;
-    display: flex;
-    align-items: center;
-    padding: 40px clamp(20px, 3.8vw, 56px);
-}
-
+.about-hero-content-inner,
 .inner-hero-content-inner {
-    max-width: 540px;
+    position: relative;
+    z-index: 5;
+    max-width: 560px;
+    width: 100%;
 }
 
-/* Breadcrumbs */
 .inner-breadcrumb {
     display: flex;
     align-items: center;
@@ -262,43 +301,50 @@
     font-weight: 700;
 }
 
-/* Hero Title */
+.about-hero-title,
 .inner-hero-title {
     font-family: var(--adv-font-sans);
-    font-size: clamp(2.1rem, 3.2vw, 3rem);
+    font-size: clamp(2rem, 3.2vw, 2.75rem);
     font-weight: 800;
     color: var(--adv-navy);
-    line-height: 1.14;
+    line-height: 1.15;
     letter-spacing: -0.5px;
     margin-bottom: 14px;
 }
 
-/* Pillars Subhead */
+.about-hero-highlights,
 .inner-hero-pillars {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
+}
+
+.highlight-line {
     display: flex;
     align-items: center;
     gap: 8px;
-    flex-wrap: wrap;
-    font-size: 14px;
+    font-size: 13.5px;
     font-weight: 700;
     color: var(--adv-navy);
-    margin-bottom: 14px;
 }
 
+.highlight-pipe,
 .pillar-pipe {
     color: var(--adv-orange);
     font-weight: 800;
 }
 
-/* Hero Description */
+.about-hero-desc,
 .inner-hero-desc {
     font-size: 15px;
     line-height: 1.65;
     color: var(--adv-text-body);
-    margin-bottom: 22px;
+    margin-bottom: 24px;
     max-width: 520px;
 }
 
+.about-hero-actions,
 .inner-hero-actions {
     display: flex;
     align-items: center;
@@ -306,20 +352,32 @@
     flex-wrap: wrap;
 }
 
-/* Right Campus Visual with Swoosh Frame */
+/* Right Background Building / Sky Image */
+.about-hero-bg-visual,
 .inner-hero-right-visual {
-    position: relative;
-    width: 48%;
-    display: flex;
-    align-items: stretch;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 58%;
+    z-index: 1;
     overflow: hidden;
+}
+
+.about-hero-bg-img,
+.inner-hero-campus-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
 }
 
 .inner-hero-img-frame {
     position: relative;
     width: 100%;
     height: 100%;
-    min-height: 420px;
+    min-height: 440px;
     border-top-left-radius: 220px;
     border-bottom-left-radius: 220px;
     overflow: hidden;
@@ -328,15 +386,6 @@
     background: #eef6fc;
 }
 
-.inner-hero-campus-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 30%;
-    display: block;
-}
-
-/* Logo Overlay on Campus Facade */
 .inner-hero-building-logo {
     position: absolute;
     top: 24%;
@@ -354,1298 +403,8 @@
     display: block;
 }
 
-/* Floating Script Badge in Sky */
+.about-hero-script-tag,
 .inner-hero-script-tag {
-    position: absolute;
-    top: 18px;
-    right: 32px;
-    z-index: 5;
-    text-align: center;
-    transform: rotate(-4deg);
-    pointer-events: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.inner-hero-script-tag .script-title {
-    font-family: var(--adv-font-script);
-    font-size: clamp(2.2rem, 3vw, 2.9rem);
-    font-weight: 700;
-    color: var(--adv-navy);
-    line-height: 0.95;
-    display: block;
-    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.95);
-}
-
-.inner-hero-script-tag .script-underline {
-    width: 130px;
-    height: 14px;
-    display: block;
-    margin-top: 2px;
-}
-
-/* Floating 4 Stats Strip */
-.inner-stats-strip-container {
-    max-width: 1240px;
-    margin: -32px auto 0;
-    padding: 0 20px;
-    position: relative;
-    z-index: 10;
-}
-
-.inner-stats-strip-card {
-    background: #ffffff;
-    border-radius: 18px;
-    padding: 22px 36px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    box-shadow: 0 10px 32px rgba(8, 59, 122, 0.08);
-    border: 1px solid #e8f0fe;
-}
-
-.inner-stat-box {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-}
-
-.stat-icon-wrap {
-    width: 48px;
-    height: 48px;
-    border-radius: 12px;
-    background: #e0f2fe;
-    color: #0284C7;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    flex-shrink: 0;
-}
-
-.stat-meta {
-    display: flex;
-    flex-direction: column;
-}
-
-.stat-number {
-    font-family: var(--adv-font-sans);
-    font-size: 26px;
-    font-weight: 800;
-    color: var(--adv-navy);
-    line-height: 1.1;
-}
-
-.stat-label {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--adv-text-muted);
-}
-
-/* ==========================================================================
-   2. OUR FACULTY GRID SECTION (reference-1.png)
-   ========================================================================== */
-.faculty-grid-section {
-    position: relative;
-    padding: 60px 20px;
-    background: #ffffff;
-}
-
-.section-decor-dots {
-    position: absolute;
-    width: 80px;
-    height: 140px;
-    background-image: radial-gradient(#bae6fd 1.8px, transparent 1.8px);
-    background-size: 14px 14px;
-    opacity: 0.6;
-    pointer-events: none;
-}
-
-.section-decor-dots.dots-left {
-    top: 60px;
-    left: 20px;
-}
-
-.section-decor-dots.dots-right {
-    top: 60px;
-    right: 20px;
-}
-
-.faculty-grid-container {
-    max-width: 1240px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.faculty-cards-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-    margin-top: 36px;
-}
-
-.faculty-card {
-    background: #ffffff;
-    border: 1px solid #e8f0fe;
-    border-radius: 18px;
-    padding: 28px 18px 22px;
-    text-align: center;
-    box-shadow: 0 4px 16px rgba(8, 59, 122, 0.04);
-    transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.faculty-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(8, 59, 122, 0.1);
-    border-color: #bae6fd;
-}
-
-.faculty-avatar-wrap {
-    margin-bottom: 14px;
-}
-
-.faculty-avatar-circle {
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    background: #e2e8f0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.faculty-avatar-svg {
-    width: 100%;
-    height: 100%;
-}
-
-.faculty-role-badge {
-    font-family: var(--adv-font-sans);
-    font-size: 10.5px;
-    font-weight: 800;
-    letter-spacing: 0.8px;
-    text-transform: uppercase;
-    padding: 4px 12px;
-    border-radius: 20px;
-    margin-bottom: 10px;
-    white-space: nowrap;
-}
-
-.badge-orange { background: #fff0e6; color: #f37021; border: 1px solid #ffd8bf; }
-.badge-blue { background: #e0f2fe; color: #0284c7; border: 1px solid #bae6fd; }
-.badge-purple { background: #f3e8ff; color: #9333ea; border: 1px solid #e9d5ff; }
-.badge-rose { background: #ffe4e6; color: #e11d48; border: 1px solid #fecdd3; }
-.badge-green { background: #dcfce7; color: #16a34a; border: 1px solid #bbf7d0; }
-.badge-amber { background: #fef3c7; color: #d97706; border: 1px solid #fde68a; }
-.badge-cyan { background: #cffafe; color: #0891b2; border: 1px solid #a5f3fc; }
-.badge-pink { background: #fce7f3; color: #db2777; border: 1px solid #fbcfe8; }
-
-.faculty-name {
-    font-family: var(--adv-font-sans);
-    font-size: 17px;
-    font-weight: 700;
-    color: var(--adv-navy);
-    margin-bottom: 6px;
-}
-
-.faculty-qual {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 13px;
-    font-weight: 600;
-}
-
-.qual-orange { color: #f37021; }
-.qual-blue { color: #0284c7; }
-.qual-purple { color: #9333ea; }
-.qual-rose { color: #e11d48; }
-.qual-green { color: #16a34a; }
-.qual-amber { color: #d97706; }
-.qual-cyan { color: #0891b2; }
-.qual-pink { color: #db2777; }
-
-/* ==========================================================================
-   3. JOIN OUR TEAM / CTA BANNER (reference-1, 3, 5)
-   ========================================================================== */
-.inner-join-banner-section {
-    padding: 20px;
-    background: #ffffff;
-}
-
-.inner-join-banner-container {
-    max-width: 1240px;
-    margin: 0 auto;
-    background: #e8f4fc;
-    border-radius: 28px;
-    padding: 40px clamp(20px, 4vw, 56px);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    overflow: hidden;
-}
-
-.join-plane-wrap {
-    width: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.join-plane-img {
-    width: 100%;
-    max-width: 190px;
-    height: auto;
-    object-fit: contain;
-}
-
-.join-content-center {
-    width: 55%;
-    text-align: center;
-    padding: 0 16px;
-    z-index: 2;
-}
-
-.join-title {
-    font-family: var(--adv-font-sans);
-    font-size: clamp(1.8rem, 2.5vw, 2.3rem);
-    font-weight: 800;
-    color: var(--adv-navy);
-    line-height: 1.2;
-    margin-bottom: 12px;
-}
-
-.join-desc {
-    font-size: 14.5px;
-    line-height: 1.6;
-    color: var(--adv-text-body);
-    margin-bottom: 22px;
-}
-
-.join-actions {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 14px;
-    flex-wrap: wrap;
-}
-
-.join-students-wrap {
-    width: 25%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.join-students-img {
-    width: 100%;
-    max-width: 260px;
-    height: auto;
-    object-fit: contain;
-    border-radius: 20px;
-}
-
-/* ==========================================================================
-   4. CAMPUS SHOWCASE STRIP (reference-1.png)
-   ========================================================================== */
-.campus-showcase-strip-section {
-    padding: 30px 20px 60px;
-    background: #ffffff;
-}
-
-.campus-showcase-card {
-    max-width: 1240px;
-    margin: 0 auto;
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 20px;
-    box-shadow: 0 8px 30px rgba(8, 59, 122, 0.06);
-    padding: 28px 36px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 28px;
-}
-
-.showcase-left-info {
-    display: flex;
-    align-items: stretch;
-    gap: 16px;
-    max-width: 360px;
-}
-
-.showcase-accent-bar {
-    width: 4px;
-    background: var(--adv-sky);
-    border-radius: 4px;
-    flex-shrink: 0;
-}
-
-.showcase-title {
-    font-family: var(--adv-font-sans);
-    font-size: 20px;
-    font-weight: 800;
-    color: var(--adv-navy);
-    line-height: 1.25;
-    margin-bottom: 6px;
-}
-
-.showcase-desc {
-    font-size: 13px;
-    line-height: 1.5;
-    color: var(--adv-text-muted);
-}
-
-.showcase-thumbnails-grid {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-}
-
-.showcase-thumb-box {
-    width: 120px;
-    height: 80px;
-    border-radius: 10px;
-    overflow: hidden;
-    border: 1px solid #e2e8f0;
-    flex-shrink: 0;
-}
-
-.showcase-thumb-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.showcase-actions {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    flex-shrink: 0;
-}
-
-/* ==========================================================================
-   5. CHAIRMAN'S MESSAGE SECTION (reference-3.png)
-   ========================================================================== */
-.chairman-message-section {
-    position: relative;
-    padding: 60px 20px;
-    background: #ffffff;
-}
-
-.chairman-message-container {
-    max-width: 1240px;
-    margin: 0 auto;
-}
-
-.chairman-message-grid {
-    display: grid;
-    grid-template-columns: 1.25fr 0.75fr;
-    gap: 48px;
-    align-items: center;
-}
-
-.message-title {
-    font-family: var(--adv-font-sans);
-    font-size: clamp(2rem, 2.6vw, 2.4rem);
-    font-weight: 800;
-    color: var(--adv-navy);
-    line-height: 1.2;
-    margin-bottom: 16px;
-}
-
-.message-salutation {
-    font-family: var(--adv-font-sans);
-    font-size: 15.5px;
-    font-weight: 700;
-    color: var(--adv-navy);
-    margin-bottom: 14px;
-}
-
-.message-paragraph {
-    font-size: 15px;
-    line-height: 1.7;
-    color: var(--adv-text-body);
-    margin-bottom: 16px;
-}
-
-.message-quote-box {
-    background: #f0f7ff;
-    border-left: 4px solid var(--adv-sky);
-    border-radius: 0 14px 14px 0;
-    padding: 18px 22px;
-    display: flex;
-    gap: 14px;
-    align-items: flex-start;
-    margin: 20px 0;
-}
-
-.quote-icon-wrap {
-    color: var(--adv-sky);
-    font-size: 20px;
-    line-height: 1;
-    margin-top: 2px;
-}
-
-.quote-text {
-    font-size: 14.5px;
-    font-weight: 600;
-    color: var(--adv-navy);
-    line-height: 1.6;
-    margin: 0;
-    font-style: italic;
-}
-
-/* Chairman Photo Card */
-.chairman-profile-col {
-    display: flex;
-    justify-content: center;
-}
-
-.chairman-photo-card {
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 20px;
-    box-shadow: 0 12px 36px rgba(8, 59, 122, 0.1);
-    overflow: hidden;
-    max-width: 360px;
-    width: 100%;
-}
-
-.chairman-photo-wrap {
-    width: 100%;
-    height: 340px;
-    background: #f8fafc;
-    overflow: hidden;
-}
-
-.chairman-photo-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-}
-
-.chairman-card-info-badge {
-    background: var(--adv-navy);
-    color: #ffffff;
-    padding: 16px 20px;
-    text-align: center;
-}
-
-.chairman-card-name {
-    font-family: var(--adv-font-sans);
-    font-size: 17px;
-    font-weight: 800;
-    margin-bottom: 2px;
-}
-
-.chairman-card-role {
-    font-size: 13.5px;
-    color: #ffd8bf;
-    font-weight: 600;
-}
-
-.chairman-card-sub {
-    font-size: 12px;
-    color: #cbd5e1;
-    margin: 0;
-}
-
-/* Four Beliefs Section (reference-3.png) */
-.four-beliefs-section {
-    padding: 60px 20px;
-    background: #f8fafc;
-}
-
-.four-beliefs-container {
-    max-width: 1240px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.beliefs-section-header {
-    margin-bottom: 36px;
-}
-
-.beliefs-cards-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-}
-
-.belief-card {
-    background: #ffffff;
-    border: 1px solid #e8f0fe;
-    border-radius: 18px;
-    padding: 28px 20px;
-    text-align: center;
-    box-shadow: 0 4px 16px rgba(8, 59, 122, 0.04);
-    transition: transform 0.25s ease;
-}
-
-.belief-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 28px rgba(8, 59, 122, 0.08);
-}
-
-.belief-icon-circle {
-    width: 54px;
-    height: 54px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 22px;
-    margin: 0 auto 16px;
-}
-
-.icon-blue { background: #e0f2fe; color: #0284c7; }
-.icon-orange { background: #fff0e6; color: #f37021; }
-.icon-sky { background: #e0f2fe; color: #0284c7; }
-.icon-pink { background: #fce7f3; color: #db2777; }
-.icon-purple { background: #f3e8ff; color: #9333ea; }
-.icon-yellow { background: #fef9c3; color: #ca8a04; }
-
-.belief-title {
-    font-family: var(--adv-font-sans);
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--adv-navy);
-    margin-bottom: 8px;
-}
-
-.belief-desc {
-    font-size: 13.5px;
-    line-height: 1.55;
-    color: var(--adv-text-body);
-}
-
-/* ==========================================================================
-   6. PRINCIPAL'S MESSAGE SECTION (reference-4.png)
-   ========================================================================== */
-.principal-message-section {
-    position: relative;
-    padding: 60px 20px;
-    background: #ffffff;
-}
-
-.principal-message-container {
-    max-width: 1240px;
-    margin: 0 auto;
-}
-
-.principal-message-grid {
-    display: grid;
-    grid-template-columns: 0.75fr 1.25fr;
-    gap: 48px;
-    align-items: flex-start;
-}
-
-.principal-framed-card {
-    position: relative;
-    background: #f0f7ff;
-    border-radius: 20px;
-    padding: 36px 24px 24px;
-    text-align: center;
-    border: 1px solid #dbeafe;
-}
-
-.corner-bracket {
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    border: 3px solid #0284c7;
-    pointer-events: none;
-}
-
-.corner-bracket.top-left {
-    top: 16px;
-    left: 16px;
-    border-right: none;
-    border-bottom: none;
-}
-
-.corner-bracket.bottom-right {
-    bottom: 16px;
-    right: 16px;
-    border-left: none;
-    border-top: none;
-}
-
-.principal-avatar-wrap {
-    margin-bottom: 16px;
-}
-
-.principal-avatar-circle {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    background: #e2e8f0;
-    overflow: hidden;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid #ffffff;
-    box-shadow: 0 4px 14px rgba(8, 59, 122, 0.08);
-}
-
-.principal-avatar-svg {
-    width: 100%;
-    height: 100%;
-}
-
-.principal-name {
-    font-family: var(--adv-font-sans);
-    font-size: 20px;
-    font-weight: 800;
-    color: var(--adv-navy);
-    margin-bottom: 2px;
-}
-
-.principal-designation {
-    font-size: 14.5px;
-    font-weight: 600;
-    color: var(--adv-sky);
-    margin-bottom: 4px;
-}
-
-.principal-org {
-    font-size: 13px;
-    color: var(--adv-text-muted);
-    margin-bottom: 20px;
-}
-
-.principal-card-metrics {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding-top: 16px;
-    border-top: 1px solid #dbeafe;
-}
-
-.metric-item {
-    display: flex;
-    flex-direction: column;
-}
-
-.metric-val {
-    font-family: var(--adv-font-sans);
-    font-size: 15px;
-    font-weight: 800;
-    color: var(--adv-navy);
-}
-
-.metric-sub {
-    font-size: 11.5px;
-    color: var(--adv-text-muted);
-}
-
-.metric-divider {
-    width: 1px;
-    height: 24px;
-    background: #cbd5e1;
-}
-
-.principal-letter-col {
-    padding-left: 8px;
-}
-
-.principal-signoff {
-    margin-top: 20px;
-    padding-top: 14px;
-    border-top: 1px solid #f1f5f9;
-}
-
-.signoff-line {
-    font-family: var(--adv-font-sans);
-    font-size: 16px;
-    font-weight: 800;
-    color: var(--adv-navy);
-}
-
-.signoff-role {
-    font-size: 13.5px;
-    color: var(--adv-text-muted);
-}
-
-/* Principal Visit Section (reference-4.png) */
-.principal-visit-section {
-    padding: 30px 20px 60px;
-    background: #ffffff;
-}
-
-.principal-visit-card {
-    max-width: 1240px;
-    margin: 0 auto;
-    background: #ffffff;
-    border: 1px solid #e2e8f0;
-    border-radius: 24px;
-    box-shadow: 0 8px 30px rgba(8, 59, 122, 0.06);
-    padding: 36px 44px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-}
-
-.visit-left-info {
-    max-width: 520px;
-}
-
-.visit-title {
-    font-family: var(--adv-font-sans);
-    font-size: clamp(1.8rem, 2.4vw, 2.2rem);
-    font-weight: 800;
-    color: var(--adv-navy);
-    line-height: 1.2;
-    margin-bottom: 12px;
-}
-
-.visit-desc {
-    font-size: 14.5px;
-    line-height: 1.6;
-    color: var(--adv-text-body);
-    margin-bottom: 22px;
-}
-
-.visit-pills-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.visit-feature-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 7px;
-    background: #f0f7ff;
-    color: var(--adv-navy);
-    font-size: 12.5px;
-    font-weight: 700;
-    padding: 6px 14px;
-    border-radius: 20px;
-    border: 1px solid #dbeafe;
-}
-
-.visit-feature-pill i {
-    color: var(--adv-sky);
-    font-size: 12px;
-}
-
-.visit-right-block {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    width: 380px;
-    flex-shrink: 0;
-}
-
-.visit-campus-img-wrap {
-    position: relative;
-    border-radius: 14px;
-    overflow: hidden;
-    height: 160px;
-}
-
-.visit-campus-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.visit-img-overlay-logo {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: rgba(255, 255, 255, 0.95);
-    padding: 4px 10px;
-    border-radius: 6px;
-}
-
-.visit-logo-img {
-    height: 18px;
-    width: auto;
-}
-
-.visit-actions-column {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-/* ==========================================================================
-   7. DUAL VISION & MISSION CARDS SECTION (reference-5.png)
-   ========================================================================== */
-.dual-vision-mission-section {
-    position: relative;
-    padding: 50px 20px;
-    background: #ffffff;
-}
-
-.dual-vm-container {
-    max-width: 1240px;
-    margin: 0 auto;
-}
-
-.dual-vm-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 28px;
-}
-
-.vm-card {
-    position: relative;
-    border-radius: 24px;
-    padding: 40px 36px;
-    overflow: hidden;
-    min-height: 380px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.card-vision {
-    background: #e8f4fc;
-    border: 1px solid #d0e8f9;
-}
-
-.card-mission {
-    background: #fff5ed;
-    border: 1px solid #ffd8bf;
-}
-
-.vm-card-bg-visual {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 45%;
-    height: 85%;
-    pointer-events: none;
-    opacity: 0.9;
-}
-
-.vm-bg-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center bottom;
-    mask-image: linear-gradient(to left, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
-    -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
-}
-
-.vm-card-content {
-    position: relative;
-    z-index: 2;
-    max-width: 65%;
-}
-
-.vm-badge-wrap {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 16px;
-}
-
-.vm-badge-icon {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-}
-
-.vm-pill-badge {
-    font-family: var(--adv-font-sans);
-    font-size: 11px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    padding: 5px 14px;
-    border-radius: 20px;
-}
-
-.pill-blue { background: #0284c7; color: #ffffff; }
-.pill-orange { background: #f37021; color: #ffffff; }
-
-.vm-card-title {
-    font-family: var(--adv-font-sans);
-    font-size: clamp(1.4rem, 1.8vw, 1.7rem);
-    font-weight: 800;
-    color: var(--adv-navy);
-    line-height: 1.25;
-    margin-bottom: 14px;
-}
-
-.vm-card-desc {
-    font-size: 14px;
-    line-height: 1.65;
-    color: var(--adv-text-body);
-}
-
-/* Core Beliefs 3-card (reference-5.png) */
-.core-beliefs-section {
-    padding: 60px 20px;
-    background: #f8fafc;
-}
-
-.core-beliefs-container {
-    max-width: 1240px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.core-beliefs-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-}
-
-.core-belief-card {
-    background: #ffffff;
-    border: 1px solid #e8f0fe;
-    border-radius: 18px;
-    padding: 32px 24px;
-    text-align: center;
-    box-shadow: 0 4px 16px rgba(8, 59, 122, 0.04);
-}
-
-/* Focus Areas 8-card grid (reference-5.png) */
-.focus-areas-section {
-    padding: 60px 20px;
-    background: #ffffff;
-}
-
-.focus-areas-container {
-    max-width: 1240px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.focus-areas-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-}
-
-.focus-card {
-    background: #ffffff;
-    border: 1px solid #e8f0fe;
-    border-radius: 18px;
-    padding: 28px 18px;
-    text-align: center;
-    box-shadow: 0 4px 16px rgba(8, 59, 122, 0.04);
-    transition: transform 0.25s ease;
-}
-
-.focus-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 28px rgba(8, 59, 122, 0.08);
-}
-
-.focus-icon-circle {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    margin: 0 auto 14px;
-}
-
-.focus-title {
-    font-family: var(--adv-font-sans);
-    font-size: 16px;
-    font-weight: 700;
-    color: var(--adv-navy);
-    margin-bottom: 6px;
-}
-
-.focus-desc {
-    font-size: 13px;
-    line-height: 1.5;
-    color: var(--adv-text-muted);
-}
-
-/* Responsive Media Queries */
-@media (max-width: 1100px) {
-    .inner-hero-canvas {
-        flex-direction: column;
-    }
-    .inner-hero-left-panel {
-        width: 100%;
-        padding: 40px 24px;
-    }
-    .inner-hero-right-visual {
-        width: 100%;
-        height: 280px;
-    }
-    .inner-hero-img-frame {
-        border-radius: 0;
-        border-left: none;
-        border-top: 6px solid #0284c7;
-    }
-/* ==========================================================================
-   8. ABOUT US PAGE COMPREHENSIVE SECTIONS (reference-2.png)
-   ========================================================================== */
-
-/* 1. About Hero Section */
-.about-hero-section {
-    position: relative;
-    width: 100%;
-    background: #ffffff;
-    padding-bottom: 0;
-}
-
-.about-hero-canvas {
-    position: relative;
-    min-height: 480px;
-    display: flex;
-    align-items: stretch;
-    background: #eef6fc;
-    overflow: hidden;
-    width: 100%;
-}
-
-.about-hero-left-panel {
-    position: relative;
-    z-index: 2;
-    width: 53%;
-    background: #ffffff;
-    display: flex;
-    align-items: center;
-    padding: clamp(36px, 4vw, 56px) clamp(24px, 3.5vw, 64px);
-}
-
-.about-hero-wave-edge {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: -70px;
-    width: 72px;
-    height: 100%;
-    z-index: 3;
-    pointer-events: none;
-}
-
-.about-hero-wave-edge svg {
-    width: 100%;
-    height: 100%;
-    display: block;
-}
-
-.about-hero-dots-decor {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 80px;
-    height: 80px;
-    background-image: radial-gradient(#93c5fd 2px, transparent 2px);
-    background-size: 14px 14px;
-    opacity: 0.5;
-    pointer-events: none;
-}
-
-.about-hero-content-inner {
-    position: relative;
-    z-index: 4;
-    max-width: 560px;
-    width: 100%;
-}
-
-.about-eyebrow {
-    display: inline-block;
-    color: var(--adv-orange);
-    font-family: var(--adv-font-sans);
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-}
-
-.about-hero-title {
-    font-family: var(--adv-font-sans);
-    font-size: clamp(2rem, 3.2vw, 2.75rem);
-    font-weight: 800;
-    color: var(--adv-navy);
-    line-height: 1.15;
-    letter-spacing: -0.5px;
-    margin-bottom: 14px;
-}
-
-.about-text-orange {
-    color: var(--adv-orange) !important;
-}
-
-.about-hero-highlights {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin-bottom: 16px;
-}
-
-.highlight-line {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13.5px;
-    font-weight: 700;
-    color: var(--adv-navy);
-}
-
-.highlight-pipe {
-    color: var(--adv-orange);
-    font-weight: 800;
-}
-
-.about-hero-desc {
-    font-size: 15px;
-    line-height: 1.65;
-    color: var(--adv-text-body);
-    margin-bottom: 24px;
-    max-width: 520px;
-}
-
-.about-hero-actions {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    flex-wrap: wrap;
-}
-
-.about-btn-orange {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    background: linear-gradient(135deg, #F37021 0%, #eb6210 100%);
-    color: #ffffff !important;
-    font-family: var(--adv-font-sans);
-    font-size: 14.5px;
-    font-weight: 700;
-    padding: 12px 28px;
-    border-radius: 9999px;
-    text-decoration: none;
-    box-shadow: 0 4px 14px rgba(243, 112, 33, 0.28);
-    transition: all 0.25s ease;
-    white-space: nowrap;
-    border: none;
-}
-
-.about-btn-orange:hover {
-    background: linear-gradient(135deg, #e05e0e 0%, #c94f06 100%);
-    box-shadow: 0 6px 20px rgba(243, 112, 33, 0.4);
-    transform: translateY(-2px);
-}
-
-.about-btn-orange i {
-    font-size: 13px;
-    transition: transform 0.2s ease;
-}
-
-.about-btn-orange:hover i {
-    transform: translateX(3px);
-}
-
-.about-btn-vision {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: #ffffff;
-    color: var(--adv-navy) !important;
-    font-family: var(--adv-font-sans);
-    font-size: 14.5px;
-    font-weight: 700;
-    padding: 10px 24px;
-    border-radius: 9999px;
-    text-decoration: none;
-    border: 1.5px solid #cbd5e1;
-    transition: all 0.25s ease;
-    white-space: nowrap;
-}
-
-.about-btn-vision:hover {
-    border-color: var(--adv-orange);
-    color: var(--adv-orange) !important;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-}
-
-.vision-play-circle {
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    background: var(--adv-navy);
-    color: #ffffff;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 10px;
-    padding-left: 2px;
-    transition: background 0.2s ease;
-}
-
-.about-btn-vision:hover .vision-play-circle {
-    background: var(--adv-orange);
-}
-
-.about-btn-white {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: #ffffff;
-    color: var(--adv-navy) !important;
-    font-family: var(--adv-font-sans);
-    font-size: 14.5px;
-    font-weight: 700;
-    padding: 12px 26px;
-    border-radius: 9999px;
-    text-decoration: none;
-    border: 1.5px solid #cbd5e1;
-    transition: all 0.25s ease;
-    white-space: nowrap;
-}
-
-.about-btn-white:hover {
-    border-color: var(--adv-orange);
-    color: var(--adv-orange) !important;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-}
-
-/* Right Background Building / Sky Image */
-.about-hero-bg-visual {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 58%;
-    z-index: 1;
-    overflow: hidden;
-}
-
-.about-hero-bg-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    display: block;
-}
-
-.about-hero-script-tag {
     position: absolute;
     top: 24px;
     right: clamp(24px, 4vw, 56px);
@@ -1658,7 +417,8 @@
     align-items: center;
 }
 
-.about-hero-script-tag .script-title {
+.about-hero-script-tag .script-title,
+.inner-hero-script-tag .script-title {
     font-family: var(--adv-font-script);
     font-size: clamp(2.2rem, 3.2vw, 3rem);
     font-weight: 700;
@@ -1668,14 +428,17 @@
     text-shadow: 0 2px 8px rgba(255, 255, 255, 0.9);
 }
 
-.about-hero-script-tag .script-underline {
+.about-hero-script-tag .script-underline,
+.inner-hero-script-tag .script-underline {
     width: clamp(110px, 9vw, 140px);
     height: 14px;
     display: block;
     margin: 3px auto 0;
 }
 
-/* 2. Four Features Strip */
+/* ==========================================================================
+   2. FOUR FEATURES STRIP CARDS (reference-2.png)
+   ========================================================================== */
 .about-features-strip {
     position: relative;
     z-index: 10;
@@ -1684,7 +447,8 @@
     margin-bottom: 50px;
 }
 
-.about-strip-container {
+.about-strip-container,
+.inner-stats-strip-container {
     max-width: 1240px;
     margin: 0 auto;
 }
@@ -1723,6 +487,9 @@
     flex-shrink: 0;
 }
 
+.icon-blue { background: #e0f2fe; color: #0284c7; }
+.icon-orange { background: #fff0e6; color: #f37021; }
+
 .strip-card-body {
     display: flex;
     flex-direction: column;
@@ -1751,35 +518,43 @@
     line-height: 1.4;
 }
 
-/* 3. Built on Values Section */
-.about-story-section {
+/* ==========================================================================
+   3. BUILT ON VALUES SECTION (reference-2.png)
+   ========================================================================== */
+.about-story-section,
+.built-values-section {
     padding: 40px 20px 60px;
     background: #ffffff;
 }
 
-.about-section-container {
+.about-section-container,
+.home-container {
     max-width: 1240px;
     margin: 0 auto;
 }
 
-.about-story-grid {
+.about-story-grid,
+.built-values-top-grid {
     display: grid;
     grid-template-columns: 0.95fr 1.05fr;
     gap: 56px;
     align-items: center;
 }
 
-.about-story-visual-wrap {
+.about-story-visual-wrap,
+.built-student-col {
     position: relative;
 }
 
-.about-story-frame {
+.about-story-frame,
+.built-student-img-wrap {
     position: relative;
     border-radius: 24px;
     overflow: visible;
 }
 
-.about-story-img {
+.about-story-img,
+.built-student-img {
     width: 100%;
     height: auto;
     border-radius: 24px;
@@ -1787,7 +562,8 @@
     box-shadow: 0 12px 36px rgba(8, 59, 122, 0.12);
 }
 
-.about-story-floating-badge {
+.about-story-floating-badge,
+.built-student-badge {
     position: absolute;
     bottom: -18px;
     left: 20px;
@@ -1802,32 +578,37 @@
     color: #ffffff;
 }
 
-.story-badge-trophy {
+.story-badge-trophy,
+.badge-trophy-icon {
     color: #fbbf24;
     font-size: 24px;
     flex-shrink: 0;
 }
 
-.story-badge-text {
+.story-badge-text,
+.badge-text-wrap {
     display: flex;
     flex-direction: column;
     line-height: 1.25;
 }
 
-.story-badge-bold {
+.story-badge-bold,
+.badge-text-wrap strong {
     font-family: var(--adv-font-sans);
     font-size: 13.5px;
     font-weight: 800;
     color: #ffffff;
 }
 
-.story-badge-sub {
+.story-badge-sub,
+.badge-text-wrap span {
     font-size: 11.5px;
     color: #cbd5e1;
     font-weight: 500;
 }
 
-.story-badge-arrow {
+.story-badge-arrow,
+.badge-arrow {
     width: 26px;
     height: 26px;
     border-radius: 50%;
@@ -1849,27 +630,31 @@
     margin-bottom: 16px;
 }
 
-.about-story-desc {
+.about-story-desc,
+.section-lead-text {
     font-size: 15px;
     line-height: 1.7;
     color: var(--adv-text-body);
     margin-bottom: 14px;
 }
 
-.about-stats-row {
+.about-stats-row,
+.legacy-stats-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 16px;
     margin-top: 28px;
 }
 
-.about-stat-item {
+.about-stat-item,
+.legacy-stat-box {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.stat-icon-square {
+.stat-icon-square,
+.legacy-stat-icon {
     width: 48px;
     height: 48px;
     border-radius: 14px;
@@ -1880,12 +665,20 @@
     flex-shrink: 0;
 }
 
-.stat-icon-badge-solid {
+.stat-icon-badge-solid,
+.legacy-stat-badge-orange {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: var(--adv-orange);
     color: #ffffff;
     font-family: var(--adv-font-sans);
     font-weight: 800;
     font-size: 16px;
+    flex-shrink: 0;
 }
 
 .stat-num {
@@ -1897,26 +690,31 @@
     display: block;
 }
 
-.stat-lbl {
+.stat-lbl,
+.stat-name {
     font-size: 12.5px;
     font-weight: 600;
     color: var(--adv-text-muted);
     display: block;
 }
 
-/* 4. Vision, Mission & Values */
+/* ==========================================================================
+   4. VISION, MISSION & VALUES (3 Distinct Cards)
+   ========================================================================== */
 .about-vmv-section {
     padding: 30px 20px 60px;
     background: #ffffff;
 }
 
-.about-vmv-grid {
+.about-vmv-grid,
+.three-pillars-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
 }
 
-.about-vmv-card {
+.about-vmv-card,
+.pillar-box {
     background: #ffffff;
     border: 1px solid #e8f0fe;
     border-radius: 20px;
@@ -1925,13 +723,15 @@
     transition: all 0.25s ease;
 }
 
-.about-vmv-card:hover {
+.about-vmv-card:hover,
+.pillar-box:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 30px rgba(8, 59, 122, 0.1);
     border-color: #bae6fd;
 }
 
-.about-vmv-icon-ring {
+.about-vmv-icon-ring,
+.pillar-icon-circle {
     width: 48px;
     height: 48px;
     border-radius: 50%;
@@ -1944,7 +744,8 @@
     margin-bottom: 16px;
 }
 
-.about-vmv-title {
+.about-vmv-title,
+.pillar-heading {
     font-family: var(--adv-font-sans);
     font-size: 18px;
     font-weight: 800;
@@ -1952,7 +753,8 @@
     margin-bottom: 8px;
 }
 
-.about-vmv-desc {
+.about-vmv-desc,
+.pillar-paragraph {
     font-size: 14px;
     line-height: 1.6;
     color: var(--adv-text-body);
@@ -1974,13 +776,17 @@
     font-weight: 800;
 }
 
-/* 5. Education for Life Section */
-.about-philosophy-section {
+/* ==========================================================================
+   5. EDUCATION FOR LIFE SECTION (reference-2.png)
+   ========================================================================== */
+.about-philosophy-section,
+.education-life-section {
     padding: 60px 20px;
     background: #f8fafc;
 }
 
-.about-philosophy-grid {
+.about-philosophy-grid,
+.edu-life-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 56px;
@@ -2003,13 +809,15 @@
     margin-bottom: 24px;
 }
 
-.about-philosophy-pills-stack {
+.about-philosophy-pills-stack,
+.checklist-grid {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-.philosophy-pill-item {
+.philosophy-pill-item,
+.checklist-item {
     background: #ffffff;
     border: 1px solid #e8f0fe;
     border-radius: 9999px;
@@ -2020,7 +828,8 @@
     box-shadow: 0 2px 10px rgba(8, 59, 122, 0.04);
 }
 
-.pill-badge-icon {
+.pill-badge-icon,
+.check-icon-wrap {
     width: 26px;
     height: 26px;
     border-radius: 50%;
@@ -2035,13 +844,16 @@
 .badge-navy { background: #e0e7ff; color: #3730a3; }
 .badge-coral { background: #fff0e6; color: #f37021; }
 
-.pill-item-text {
+.pill-item-text,
+.check-label {
     font-size: 14.5px;
     font-weight: 700;
     color: var(--adv-navy);
 }
 
-/* 6. What Makes Advaita Unique (6 Cards) */
+/* ==========================================================================
+   6. WHAT MAKES ADVAITA UNIQUE (6 Cards)
+   ========================================================================== */
 .about-why-choose {
     padding: 60px 20px;
     background: #ffffff;
@@ -2101,7 +913,6 @@
 
 .apart-orange { background: #fff0e6; color: #f37021; }
 .apart-blue { background: #e0f2fe; color: #0284c7; }
-.apart-navy { background: #e0e7ff; color: #3730a3; }
 
 .apart-title {
     font-family: var(--adv-font-sans);
@@ -2119,7 +930,9 @@
     margin: 0;
 }
 
-/* 7. Campus Showcase */
+/* ==========================================================================
+   7. CAMPUS SHOWCASE (reference-2.png)
+   ========================================================================== */
 .about-campus-showcase {
     padding: 60px 20px;
     background: #f8fafc;
@@ -2245,13 +1058,17 @@
     transform: scale(1.1);
 }
 
-/* 8. Admission Banner Section */
-.about-admission-banner-section {
+/* ==========================================================================
+   8. ADMISSION BANNER SECTION (reference-1, 2, 3, 5)
+   ========================================================================== */
+.about-admission-banner-section,
+.inner-join-banner-section {
     padding: 40px 20px 80px;
     background: #ffffff;
 }
 
-.about-admission-banner-container {
+.about-admission-banner-container,
+.inner-join-banner-container {
     max-width: 1240px;
     margin: 0 auto;
     background: linear-gradient(135deg, #e8f4fc 0%, #d8ecfa 100%);
@@ -2264,7 +1081,8 @@
     overflow: hidden;
 }
 
-.banner-copy-col {
+.banner-copy-col,
+.join-content-center {
     max-width: 580px;
     z-index: 2;
 }
@@ -2280,7 +1098,8 @@
     margin-bottom: 10px;
 }
 
-.banner-headline {
+.banner-headline,
+.join-title {
     font-family: var(--adv-font-sans);
     font-size: clamp(1.8rem, 2.6vw, 2.4rem);
     font-weight: 800;
@@ -2289,21 +1108,24 @@
     margin-bottom: 12px;
 }
 
-.banner-subtext {
+.banner-subtext,
+.join-desc {
     font-size: 15px;
     line-height: 1.6;
     color: var(--adv-text-body);
     margin-bottom: 24px;
 }
 
-.banner-btn-group {
+.banner-btn-group,
+.join-actions {
     display: flex;
     align-items: center;
     gap: 14px;
     flex-wrap: wrap;
 }
 
-.banner-students-col {
+.banner-students-col,
+.join-students-wrap {
     width: 38%;
     display: flex;
     justify-content: flex-end;
@@ -2312,30 +1134,629 @@
     z-index: 2;
 }
 
-.banner-students-img {
+.banner-students-img,
+.join-students-img {
     max-width: 360px;
     width: 100%;
     height: auto;
     object-fit: contain;
 }
 
+.join-plane-wrap {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.join-plane-img {
+    width: 100%;
+    max-width: 190px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* ==========================================================================
+   9. FACULTY GRID SECTION (reference-1.png)
+   ========================================================================== */
+.faculty-grid-section {
+    position: relative;
+    padding: 60px 20px;
+    background: #ffffff;
+}
+
+.faculty-grid-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.faculty-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 36px;
+}
+
+.faculty-card {
+    background: #ffffff;
+    border: 1px solid #e8f0fe;
+    border-radius: 18px;
+    padding: 28px 18px 22px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(8, 59, 122, 0.04);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faculty-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(8, 59, 122, 0.1);
+    border-color: #bae6fd;
+}
+
+.faculty-avatar-wrap {
+    margin-bottom: 14px;
+}
+
+.faculty-avatar-circle {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: #e2e8f0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.faculty-avatar-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.faculty-role-badge {
+    font-family: var(--adv-font-sans);
+    font-size: 10.5px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+.badge-orange { background: #fff0e6; color: #f37021; border: 1px solid #ffd8bf; }
+.badge-blue { background: #e0f2fe; color: #0284c7; border: 1px solid #bae6fd; }
+.badge-purple { background: #f3e8ff; color: #9333ea; border: 1px solid #e9d5ff; }
+.badge-rose { background: #ffe4e6; color: #e11d48; border: 1px solid #fecdd3; }
+.badge-green { background: #dcfce7; color: #16a34a; border: 1px solid #bbf7d0; }
+.badge-amber { background: #fef3c7; color: #d97706; border: 1px solid #fde68a; }
+.badge-cyan { background: #cffafe; color: #0891b2; border: 1px solid #a5f3fc; }
+.badge-pink { background: #fce7f3; color: #db2777; border: 1px solid #fbcfe8; }
+
+.faculty-name {
+    font-family: var(--adv-font-sans);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--adv-navy);
+    margin-bottom: 6px;
+}
+
+.faculty-qual {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.qual-orange { color: #f37021; }
+.qual-blue { color: #0284c7; }
+.qual-purple { color: #9333ea; }
+.qual-rose { color: #e11d48; }
+.qual-green { color: #16a34a; }
+.qual-amber { color: #d97706; }
+.qual-cyan { color: #0891b2; }
+.qual-pink { color: #db2777; }
+
+/* ==========================================================================
+   10. CHAIRMAN'S MESSAGE SECTION (reference-3.png)
+   ========================================================================== */
+.chairman-message-section {
+    position: relative;
+    padding: 60px 20px;
+    background: #ffffff;
+}
+
+.chairman-message-container {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.chairman-message-grid {
+    display: grid;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.message-title {
+    font-family: var(--adv-font-sans);
+    font-size: clamp(2rem, 2.6vw, 2.4rem);
+    font-weight: 800;
+    color: var(--adv-navy);
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.message-salutation {
+    font-family: var(--adv-font-sans);
+    font-size: 15.5px;
+    font-weight: 700;
+    color: var(--adv-navy);
+    margin-bottom: 14px;
+}
+
+.message-paragraph {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--adv-text-body);
+    margin-bottom: 16px;
+}
+
+.message-quote-box {
+    background: #f0f7ff;
+    border-left: 4px solid var(--adv-sky);
+    border-radius: 0 14px 14px 0;
+    padding: 18px 22px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    margin: 20px 0;
+}
+
+.quote-icon-wrap {
+    color: var(--adv-sky);
+    font-size: 20px;
+    line-height: 1;
+    margin-top: 2px;
+}
+
+.quote-text {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--adv-navy);
+    line-height: 1.6;
+    margin: 0;
+    font-style: italic;
+}
+
+.chairman-photo-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    box-shadow: 0 12px 36px rgba(8, 59, 122, 0.1);
+    overflow: hidden;
+    max-width: 360px;
+    width: 100%;
+}
+
+.chairman-photo-wrap {
+    width: 100%;
+    height: 340px;
+    background: #f8fafc;
+    overflow: hidden;
+}
+
+.chairman-photo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.chairman-card-info-badge {
+    background: var(--adv-navy);
+    color: #ffffff;
+    padding: 16px 20px;
+    text-align: center;
+}
+
+.chairman-card-name {
+    font-family: var(--adv-font-sans);
+    font-size: 17px;
+    font-weight: 800;
+    margin-bottom: 2px;
+}
+
+.chairman-card-role {
+    font-size: 13.5px;
+    color: #ffd8bf;
+    font-weight: 600;
+}
+
+.four-beliefs-section {
+    padding: 60px 20px;
+    background: #f8fafc;
+}
+
+.four-beliefs-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.beliefs-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.belief-card {
+    background: #ffffff;
+    border: 1px solid #e8f0fe;
+    border-radius: 18px;
+    padding: 28px 20px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(8, 59, 122, 0.04);
+    transition: transform 0.25s ease;
+}
+
+.belief-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(8, 59, 122, 0.08);
+}
+
+.belief-icon-circle {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin: 0 auto 16px;
+}
+
+.belief-title {
+    font-family: var(--adv-font-sans);
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--adv-navy);
+    margin-bottom: 8px;
+}
+
+.belief-desc {
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--adv-text-body);
+}
+
+/* ==========================================================================
+   11. PRINCIPAL'S MESSAGE SECTION (reference-4.png)
+   ========================================================================== */
+.principal-message-section {
+    position: relative;
+    padding: 60px 20px;
+    background: #ffffff;
+}
+
+.principal-message-container {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.principal-message-grid {
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+    gap: 48px;
+    align-items: flex-start;
+}
+
+.principal-framed-card {
+    position: relative;
+    background: #f0f7ff;
+    border-radius: 20px;
+    padding: 36px 24px 24px;
+    text-align: center;
+    border: 1px solid #dbeafe;
+}
+
+.principal-avatar-wrap {
+    margin-bottom: 16px;
+}
+
+.principal-avatar-circle {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: #e2e8f0;
+    overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 14px rgba(8, 59, 122, 0.08);
+}
+
+.principal-avatar-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.principal-name {
+    font-family: var(--adv-font-sans);
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--adv-navy);
+    margin-bottom: 2px;
+}
+
+.principal-designation {
+    font-size: 14.5px;
+    font-weight: 600;
+    color: var(--adv-sky);
+    margin-bottom: 4px;
+}
+
+.principal-org {
+    font-size: 13px;
+    color: var(--adv-text-muted);
+    margin-bottom: 20px;
+}
+
+.principal-card-metrics {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 16px;
+    border-top: 1px solid #dbeafe;
+}
+
+.metric-val {
+    font-family: var(--adv-font-sans);
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--adv-navy);
+}
+
+.metric-sub {
+    font-size: 11.5px;
+    color: var(--adv-text-muted);
+}
+
+.principal-signoff {
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 1px solid #f1f5f9;
+}
+
+.signoff-line {
+    font-family: var(--adv-font-sans);
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--adv-navy);
+}
+
+.signoff-role {
+    font-size: 13.5px;
+    color: var(--adv-text-muted);
+}
+
+/* ==========================================================================
+   12. DUAL VISION & MISSION CARDS (reference-5.png)
+   ========================================================================== */
+.dual-vision-mission-section {
+    position: relative;
+    padding: 50px 20px;
+    background: #ffffff;
+}
+
+.dual-vm-container {
+    max-width: 1240px;
+    margin: 0 auto;
+}
+
+.dual-vm-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+}
+
+.vm-card {
+    position: relative;
+    border-radius: 24px;
+    padding: 40px 36px;
+    overflow: hidden;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-vision {
+    background: #e8f4fc;
+    border: 1px solid #d0e8f9;
+}
+
+.card-mission {
+    background: #fff5ed;
+    border: 1px solid #ffd8bf;
+}
+
+.vm-card-bg-visual {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 45%;
+    height: 85%;
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+.vm-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+}
+
+.vm-card-content {
+    position: relative;
+    z-index: 2;
+    max-width: 65%;
+}
+
+.vm-badge-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.vm-badge-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+}
+
+.vm-pill-badge {
+    font-family: var(--adv-font-sans);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 5px 14px;
+    border-radius: 20px;
+}
+
+.pill-blue { background: #0284c7; color: #ffffff; }
+.pill-orange { background: #f37021; color: #ffffff; }
+
+.vm-card-title {
+    font-family: var(--adv-font-sans);
+    font-size: clamp(1.4rem, 1.8vw, 1.7rem);
+    font-weight: 800;
+    color: var(--adv-navy);
+    line-height: 1.25;
+    margin-bottom: 14px;
+}
+
+.vm-card-desc {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--adv-text-body);
+}
+
+.core-beliefs-section {
+    padding: 60px 20px;
+    background: #f8fafc;
+}
+
+.core-beliefs-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.core-beliefs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.core-belief-card {
+    background: #ffffff;
+    border: 1px solid #e8f0fe;
+    border-radius: 18px;
+    padding: 32px 24px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(8, 59, 122, 0.04);
+}
+
+.focus-areas-section {
+    padding: 60px 20px;
+    background: #ffffff;
+}
+
+.focus-areas-container {
+    max-width: 1240px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.focus-areas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.focus-card {
+    background: #ffffff;
+    border: 1px solid #e8f0fe;
+    border-radius: 18px;
+    padding: 28px 18px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(8, 59, 122, 0.04);
+    transition: transform 0.25s ease;
+}
+
+.focus-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 28px rgba(8, 59, 122, 0.08);
+}
+
+.focus-icon-circle {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    margin: 0 auto 14px;
+}
+
+.focus-title {
+    font-family: var(--adv-font-sans);
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--adv-navy);
+    margin-bottom: 6px;
+}
+
+.focus-desc {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--adv-text-muted);
+}
+
 /* ==========================================================================
    Responsive Breakpoints
    ========================================================================== */
 @media (max-width: 1100px) {
-    .inner-hero-canvas,
-    .about-hero-canvas {
+    .about-hero-canvas,
+    .inner-hero-canvas {
         flex-direction: column;
     }
-    .inner-hero-left-panel,
-    .about-hero-left-panel {
+    .about-hero-left-panel,
+    .inner-hero-left-panel {
         width: 100%;
         padding: 40px 24px;
     }
     .about-hero-wave-edge {
         display: none;
     }
-    .about-hero-bg-visual {
+    .about-hero-bg-visual,
+    .inner-hero-right-visual {
         position: relative;
         width: 100%;
         height: 300px;
@@ -2344,77 +1765,61 @@
         grid-template-columns: repeat(2, 1fr);
     }
     .about-story-grid,
+    .built-values-top-grid,
     .about-philosophy-grid,
-    .about-campus-grid {
+    .edu-life-grid,
+    .about-campus-grid,
+    .chairman-message-grid,
+    .principal-message-grid,
+    .dual-vm-grid {
         grid-template-columns: 1fr;
         gap: 40px;
     }
     .about-apart-grid {
         grid-template-columns: repeat(3, 1fr);
     }
-    .about-admission-banner-container {
+    .about-admission-banner-container,
+    .inner-join-banner-container {
         flex-direction: column;
         gap: 30px;
         text-align: center;
     }
-    .banner-copy-col {
+    .banner-copy-col,
+    .join-content-center {
         max-width: 100%;
     }
-    .banner-btn-group {
+    .banner-btn-group,
+    .join-actions {
         justify-content: center;
     }
-    .banner-students-col {
+    .banner-students-col,
+    .join-students-wrap {
         width: 100%;
         justify-content: center;
-    }
-    .inner-hero-right-visual {
-        width: 100%;
-        height: 280px;
-    }
-    .inner-hero-img-frame {
-        border-radius: 0;
-        border-left: none;
-        border-top: 6px solid #0284c7;
     }
     .faculty-cards-grid,
     .beliefs-cards-grid,
     .focus-areas-grid {
         grid-template-columns: repeat(2, 1fr);
     }
-    .inner-stats-strip-card {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-    }
-    .chairman-message-grid,
-    .principal-message-grid,
-    .dual-vm-grid {
-        grid-template-columns: 1fr;
-    }
-    .campus-showcase-card,
-    .principal-visit-card {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .inner-join-banner-container {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-    .join-plane-wrap,
-    .join-content-center,
-    .join-students-wrap {
-        width: 100%;
-    }
-    .join-students-wrap {
-        justify-content: center;
+    .inner-hero-img-frame {
+        border-radius: 0;
+        border-left: none;
+        border-top: 6px solid #0284c7;
     }
 }
 
 @media (max-width: 600px) {
     .about-strip-grid,
     .about-vmv-grid,
+    .three-pillars-grid,
     .about-stats-row,
-    .about-apart-grid {
+    .legacy-stats-row,
+    .about-apart-grid,
+    .faculty-cards-grid,
+    .beliefs-cards-grid,
+    .core-beliefs-grid,
+    .focus-areas-grid {
         grid-template-columns: 1fr;
     }
     .about-campus-accent-border {
@@ -2425,23 +1830,10 @@
         right: 10px;
         padding: 8px 10px;
     }
-    .faculty-cards-grid,
-    .beliefs-cards-grid,
-    .core-beliefs-grid,
-    .focus-areas-grid,
-    .inner-stats-strip-card {
-        grid-template-columns: 1fr;
-    }
     .vm-card-content {
         max-width: 100%;
     }
     .vm-card-bg-visual {
         display: none;
-    }
-    .showcase-thumbnails-grid {
-        display: none;
-    }
-    .visit-right-block {
-        width: 100%;
     }
 }
