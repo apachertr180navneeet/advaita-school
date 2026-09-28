@@ -1830,23 +1830,18 @@
     position: relative;
     width: 100%;
     background: #ffffff;
-    padding: 20px 20px 44px;
+    overflow: hidden;
     margin-top: 0;
 }
 
 .principal-cta-banner-canvas {
     position: relative;
     width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
     min-height: 290px;
     display: flex;
     align-items: center;
     overflow: hidden;
     background: #ffffff;
-    border-radius: var(--adv-radius-xl);
-    border: 1px solid #e0effa;
-    box-shadow: 0 4px 20px rgba(8, 59, 122, 0.05);
 }
 
 .principal-cta-bg-visual {
@@ -2888,18 +2883,14 @@
 
 .staff-join-section {
     position: relative;
-    width: calc(100% - 40px);
-    max-width: 1200px;
+    width: 100%;
     min-height: 200px;
     overflow: hidden;
     background: linear-gradient(110deg, #edf8ff 0%, #dceeff 52%, #c9e3fb 100%);
-    margin: 36px auto 44px;
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: var(--adv-radius-xl);
-    border: 1px solid #e0effa;
-    box-shadow: 0 4px 20px rgba(8, 59, 122, 0.05);
 }
 
 /* Background curved shapes */
@@ -3704,15 +3695,11 @@
    ========================================================================== */
 .admission-banner {
     position: relative;
-    width: calc(100% - 40px);
-    max-width: 1200px;
+    width: 100%;
     min-height: 250px;
     overflow: hidden;
     background: linear-gradient(110deg, #edf8ff 0%, #dceeff 52%, #c9e3fb 100%);
-    margin: 36px auto 44px;
-    border-radius: var(--adv-radius-xl);
-    border: 1px solid #e0effa;
-    box-shadow: 0 4px 20px rgba(8, 59, 122, 0.05);
+    margin-top: 0;
 }
 
 /* Background curved shapes */
