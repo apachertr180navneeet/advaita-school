@@ -54,6 +54,184 @@ body.adv-drawer-open {
     touch-action: none;
 }
 
+/* ==========================================================================
+   0. WEBSITE PRELOADER (CIRCULAR SWAN EMBLEM WITH SMOOTH ANIMATIONS)
+   ========================================================================== */
+.adv-preloader-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #ffffff;
+    z-index: 9999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.55s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.55s ease, transform 0.55s ease;
+}
+
+.adv-preloader-wrap.loaded {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.03);
+    pointer-events: none;
+}
+
+.adv-preloader-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+    position: relative;
+}
+
+.adv-preloader-emblem-wrap {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+
+.adv-preloader-aura {
+    position: absolute;
+    inset: -12px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(2, 132, 199, 0.18) 0%, rgba(243, 112, 33, 0.08) 50%, transparent 72%);
+    animation: preloaderAuraPulse 2s ease-in-out infinite;
+    pointer-events: none;
+}
+
+.adv-preloader-spinner-ring {
+    position: absolute;
+    inset: -5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #0284c7;
+    border-right-color: #f37021;
+    animation: preloaderSpinRing 1.2s cubic-bezier(0.5, 0.1, 0.5, 0.9) infinite;
+    pointer-events: none;
+}
+
+.adv-preloader-logo-circle {
+    position: relative;
+    width: 116px;
+    height: 116px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 8px 26px rgba(8, 59, 122, 0.12), 0 2px 8px rgba(0, 0, 0, 0.04);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 4px;
+    animation: preloaderEmblemBreathe 2.4s ease-in-out infinite;
+}
+
+.adv-preloader-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.adv-preloader-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.adv-preloader-title {
+    font-family: var(--adv-font-main, 'Plus Jakarta Sans', sans-serif);
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #083B7A;
+    letter-spacing: 2px;
+    line-height: 1.1;
+}
+
+.adv-preloader-subtitle {
+    font-family: var(--adv-font-main, 'Plus Jakarta Sans', sans-serif);
+    font-size: 0.68rem;
+    font-weight: 800;
+    color: #F37021;
+    letter-spacing: 2.5px;
+    margin-top: 3px;
+    text-transform: uppercase;
+}
+
+.adv-preloader-progress-track {
+    width: 160px;
+    height: 4px;
+    background: #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.adv-preloader-progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 40%;
+    background: linear-gradient(90deg, #0284c7 0%, #f37021 100%);
+    border-radius: 10px;
+    animation: preloaderProgressMove 1.4s ease-in-out infinite;
+}
+
+@keyframes preloaderSpinRing {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes preloaderAuraPulse {
+    0%, 100% {
+        transform: scale(0.94);
+        opacity: 0.45;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.85;
+    }
+}
+
+@keyframes preloaderEmblemBreathe {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+    }
+}
+
+@keyframes preloaderProgressMove {
+    0% {
+        left: -40%;
+        width: 30%;
+    }
+    50% {
+        left: 35%;
+        width: 50%;
+    }
+    100% {
+        left: 100%;
+        width: 30%;
+    }
+}
+
 /* --------------------------------------------------------------------------
    1. Top Utility Bar (Full Width)
    -------------------------------------------------------------------------- */
@@ -666,23 +844,25 @@ body.adv-drawer-open {
 
 .adv-mobile-brand-box {
     background: #ffffff;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    border: 2px solid #ffffff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    height: 44px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    padding: 3px;
+    padding: 4px 10px;
 }
 
 .adv-mobile-header .adv-brand-logo-img {
-    width: 100%;
-    height: 100%;
+    max-height: 36px;
+    max-width: 140px;
+    width: auto;
+    height: auto;
     object-fit: contain;
-    border-radius: 50%;
+    border-radius: 0;
+    display: block;
 }
 
 .adv-mobile-close {

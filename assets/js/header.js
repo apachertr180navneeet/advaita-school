@@ -1,7 +1,34 @@
 /**
- * Advaita School Header & Responsive Navigation Interactions
+ * Advaita School Header, Preloader & Responsive Navigation Interactions
  * Smooth handling for Mobile, Tablets, and Desktop
  */
+
+// 0. Website Preloader Dismissal
+(function initPreloader() {
+    const dismissPreloader = () => {
+        const preloader = document.getElementById('advSitePreloader');
+        if (preloader && !preloader.classList.contains('loaded')) {
+            preloader.classList.add('loaded');
+            setTimeout(() => {
+                if (preloader && preloader.parentNode) {
+                    preloader.parentNode.removeChild(preloader);
+                }
+            }, 600);
+        }
+    };
+
+    if (document.readyState === 'complete') {
+        setTimeout(dismissPreloader, 350);
+    } else {
+        window.addEventListener('load', () => {
+            setTimeout(dismissPreloader, 350);
+        });
+    }
+
+    // Safety fallback timeout
+    setTimeout(dismissPreloader, 2200);
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Header Sticky Effect
     const mainHeader = document.querySelector('.adv-main-header');

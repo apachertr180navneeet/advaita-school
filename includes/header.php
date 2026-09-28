@@ -29,4 +29,30 @@ $pageTitle = $pageTitle ?? 'Advaita School of Excellence - Sanmati Sevabhavi San
     <link rel="stylesheet" href="assets/css/footer.css?v=<?php echo filemtime(__DIR__ . '/../assets/css/footer.css'); ?>">
 </head>
 <body>
+    <!-- =========================================================================
+         WEBSITE PRELOADER (Circular Swan Emblem with Progress Ring)
+         ========================================================================= -->
+    <div id="advSitePreloader" class="adv-preloader-wrap" aria-hidden="true">
+        <div class="adv-preloader-box">
+            <div class="adv-preloader-emblem-wrap">
+                <!-- Outer Pulsing Glow Aura -->
+                <div class="adv-preloader-aura"></div>
+                <!-- Continuous Smooth Spinning Gradient Ring -->
+                <div class="adv-preloader-spinner-ring"></div>
+                <!-- Circular Emblem Logo -->
+                <div class="adv-preloader-logo-circle">
+                    <img src="assets/images/loader-logo.png?v=<?php echo filemtime(__DIR__ . '/../assets/images/loader-logo.png'); ?>" alt="Advaita School of Excellence Loading..." class="adv-preloader-img" loading="eager">
+                </div>
+            </div>
+            <div class="adv-preloader-brand">
+                <span class="adv-preloader-title">ADVAITA</span>
+                <span class="adv-preloader-subtitle">SCHOOL OF EXCELLENCE</span>
+            </div>
+            <!-- Progress Line Indicator -->
+            <div class="adv-preloader-progress-track">
+                <div class="adv-preloader-progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
     <?php require_once __DIR__ . '/navbar.php'; ?>
