@@ -150,10 +150,7 @@ require_once __DIR__ . '/includes/header.php';
                 <article class="staff-card">
                     <div class="staff-card-avatar-wrap">
                         <div class="staff-card-avatar-circle">
-                            <svg class="staff-avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <circle cx="50" cy="38" r="20" fill="#8d99ae"/>
-                                <path d="M18 90C18 68 32 62 50 62C68 62 82 68 82 90" fill="#8d99ae"/>
-                            </svg>
+                            <img src="assets/images/principal-desk.jpg?v=<?php echo filemtime(__DIR__ . '/assets/images/principal-desk.jpg'); ?>" alt="Divine Mam - Principal" class="staff-avatar-photo" loading="lazy">
                         </div>
                     </div>
                     <span class="staff-role-pill role-orange">PRINCIPAL</span>

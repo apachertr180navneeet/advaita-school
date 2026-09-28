@@ -105,13 +105,7 @@ require_once __DIR__ . '/includes/header.php';
                                 <span class="vf-bracket vf-bracket-br" aria-hidden="true"></span>
                                 
                                 <div class="principal-avatar-wrap">
-                                    <svg class="principal-avatar-svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Divine Mam - Principal">
-                                        <circle cx="60" cy="60" r="56" fill="#e8f3fe"/>
-                                        <path d="M60 26C51.1634 26 44 33.1634 44 42C44 50.8366 51.1634 58 60 58C68.8366 58 76 50.8366 76 42C76 33.1634 68.8366 26 60 26Z" fill="#78909c"/>
-                                        <path d="M60 20C46 20 40 30 40 44C40 47.5 41.5 54 44 57C45.5 51 51 47 60 47C69 47 74.5 51 76 57C78.5 54 80 47.5 80 44C80 30 74 20 60 20Z" fill="#546e7a"/>
-                                        <path d="M34 94C34 77.4315 45.6406 64 60 64C74.3594 64 86 77.4315 86 94C86 97.3137 83.3137 100 80 100H40C36.6863 100 34 97.3137 34 94Z" fill="#78909c"/>
-                                        <path d="M52 64L60 76L68 64H52Z" fill="#cfd8dc"/>
-                                    </svg>
+                                    <img src="assets/images/principal-desk.jpg?v=<?php echo filemtime(__DIR__ . '/assets/images/principal-desk.jpg'); ?>" alt="Divine Mam - Principal, Advaita School of Excellence" class="principal-avatar-img" loading="eager">
                                 </div>
                             </div>
 
