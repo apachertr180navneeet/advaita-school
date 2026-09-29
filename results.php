@@ -2,6 +2,7 @@
 /**
  * Board Results Page - Advaita School of Excellence, Parbhani
  * Programmes > Results: 100% CBSE Results, District Toppers & Academic Achievers
+ * Strictly 1:1 match with official design mockup (media_1790710565135.jpg)
  * Clean Semantic HTML - Header and Footer Preserved
  */
 $pageTitle = "Board Results - Advaita School of Excellence, Parbhani | 100% CBSE Results";
@@ -10,44 +11,21 @@ $activePage = "results";
 require_once __DIR__ . '/includes/header.php';
 ?>
 
+<!-- Dedicated Results Page Stylesheet -->
+<link rel="stylesheet" href="assets/css/results.css?v=<?php echo file_exists(__DIR__ . '/assets/css/results.css') ? filemtime(__DIR__ . '/assets/css/results.css') : '1.0'; ?>">
+
 <main id="main" class="main-content-wrapper results-page-wrapper">
 
     <!-- =========================================================================
-         1. HERO SECTION: Breadcrumb + Title + Visual with Campus & Script Tag
+         1. HERO SECTION: Clean layout, Breadcrumbs, Headline & Campus Facade
          ========================================================================= -->
-    <section class="admission-hero-section">
-        <div class="admission-hero-canvas">
-            <!-- Background Visual with Campus -->
-            <div class="admission-hero-bg-visual" aria-hidden="true">
-                <img src="assets/images/about-campus.jpg" alt="Advaita School Campus" class="admission-hero-bg-img">
-            </div>
-
-            <!-- SVG Wave Overlay for Smooth Translucent Backdrop -->
-            <div class="admission-hero-wave-overlay" aria-hidden="true">
-                <svg viewBox="0 0 1200 440" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0H540C570 120 520 280 620 440H0V0Z" fill="#EEF6FC" fill-opacity="0.96"/>
-                    <path d="M520 0C550 140 500 280 600 440H580C480 280 530 140 500 0H520Z" fill="#F37021" fill-opacity="0.25"/>
-                </svg>
-            </div>
-
-            <!-- School Building Visual on the Right Side -->
-            <div class="admission-hero-students" aria-hidden="true" style="right: 30px; bottom: 0;">
-                <img src="assets/images/about-hero-building.png" alt="Advaita School Building" width="460" height="380" style="object-fit: contain; object-position: bottom right;">
-            </div>
-
-            <!-- Floating Handwritten Script Tag at Top Right -->
-            <div class="admission-hero-script-tag" aria-hidden="true">
-                <span class="script-title">More<br>Than A School</span>
-                <svg class="script-underline" viewBox="0 0 120 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 12C38 3 84 4 116 14" stroke="#083B7A" stroke-width="3" stroke-linecap="round"/>
-                </svg>
-            </div>
-
-            <!-- Left Content Panel -->
-            <div class="admission-hero-left-panel">
-                <div class="admission-hero-content-inner">
+    <section class="results-hero-section">
+        <div class="results-hero-container">
+            <div class="results-hero-grid">
+                <!-- Left Text Content -->
+                <div class="results-hero-text">
                     <!-- Breadcrumbs -->
-                    <nav class="admission-breadcrumb" aria-label="Breadcrumb">
+                    <nav class="results-breadcrumb" aria-label="Breadcrumb">
                         <a href="index.php">Home</a>
                         <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
                         <a href="academics.php">Programmes</a>
@@ -56,17 +34,27 @@ require_once __DIR__ . '/includes/header.php';
                     </nav>
 
                     <!-- Eyebrow -->
-                    <div class="admission-eyebrow">— OUR PERFORMANCE —</div>
+                    <div class="results-eyebrow">
+                        <span class="results-eyebrow-line"></span>
+                        <span>OUR PERFORMANCE</span>
+                        <span class="results-eyebrow-line"></span>
+                    </div>
 
-                    <!-- Main Headline -->
-                    <h1 class="admission-hero-title">
-                        Results that <span class="highlight-orange">speak for themselves.</span>
+                    <!-- Main Title matching mockup exactly -->
+                    <h1 class="results-hero-title">
+                        Results that
+                        <span class="results-title-orange">speak for themselves.</span>
                     </h1>
 
-                    <!-- Description -->
-                    <p class="admission-hero-desc">
+                    <!-- Subtitle -->
+                    <p class="results-hero-desc">
                         Year after year, our students continue to excel, making us proud with outstanding academic results.
                     </p>
+                </div>
+
+                <!-- Right Campus Image with Swoop Border & "More Than A School" -->
+                <div class="results-hero-visual">
+                    <img src="assets/images/results-hero-campus-right.jpg" alt="Advaita School of Excellence - More Than A School" class="results-hero-campus-img">
                 </div>
             </div>
         </div>
@@ -76,72 +64,87 @@ require_once __DIR__ . '/includes/header.php';
     <div class="results-container">
 
         <!-- =========================================================================
-             2. HIGHLIGHT METRICS (4 Stat Cards Floating Below Hero)
+             2. FOUR STAT CARDS (Metrics Bar)
              ========================================================================= -->
-        <div class="results-metrics-wrap">
-            <div class="results-metrics-grid">
-                <!-- Stat 1 -->
-                <div class="results-metric-card">
-                    <div class="results-metric-icon" aria-hidden="true">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                    </div>
-                    <div class="results-metric-body">
-                        <span class="results-metric-sub">Back-to-back</span>
-                        <h3 class="results-metric-val">100% Result</h3>
-                        <span class="results-metric-sub">in Grade 10</span>
-                    </div>
+        <div class="results-stats-row">
+            <!-- Card 1 -->
+            <div class="results-stat-card">
+                <div class="results-stat-icon" aria-hidden="true">
+                    <i class="fa-solid fa-graduation-cap"></i>
                 </div>
-
-                <!-- Stat 2 -->
-                <div class="results-metric-card">
-                    <div class="results-metric-icon" aria-hidden="true">
-                        <i class="fa-solid fa-chart-column"></i>
-                    </div>
-                    <div class="results-metric-body">
-                        <h3 class="results-metric-val">35%</h3>
-                        <span class="results-metric-sub">Students scored 90% and above</span>
-                    </div>
+                <div class="results-stat-info">
+                    <span class="results-stat-kicker">Back-to-back</span>
+                    <strong class="results-stat-val">100% Result</strong>
+                    <span class="results-stat-sub">in Grade 10</span>
                 </div>
+            </div>
 
-                <!-- Stat 3 -->
-                <div class="results-metric-card">
-                    <div class="results-metric-icon" aria-hidden="true">
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                    <div class="results-metric-body">
-                        <h3 class="results-metric-val">~33%</h3>
-                        <span class="results-metric-sub">Students scored 80% – 90%</span>
-                    </div>
+            <!-- Card 2 -->
+            <div class="results-stat-card">
+                <div class="results-stat-icon" aria-hidden="true">
+                    <i class="fa-solid fa-chart-column"></i>
                 </div>
+                <div class="results-stat-info">
+                    <strong class="results-stat-val">35%</strong>
+                    <span class="results-stat-kicker">Students scored</span>
+                    <span class="results-stat-sub">90% and above</span>
+                </div>
+            </div>
 
-                <!-- Stat 4 -->
-                <div class="results-metric-card">
-                    <div class="results-metric-icon" aria-hidden="true">
-                        <i class="fa-solid fa-users"></i>
-                    </div>
-                    <div class="results-metric-body">
-                        <h3 class="results-metric-title">Consistent Excellence</h3>
-                        <span class="results-metric-sub">Every Year</span>
-                    </div>
+            <!-- Card 3 -->
+            <div class="results-stat-card">
+                <div class="results-stat-icon" aria-hidden="true">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="results-stat-info">
+                    <strong class="results-stat-val">~33%</strong>
+                    <span class="results-stat-kicker">Students scored</span>
+                    <span class="results-stat-sub">80% – 90%</span>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="results-stat-card">
+                <div class="results-stat-icon" aria-hidden="true">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <div class="results-stat-info">
+                    <span class="results-stat-kicker">Consistent</span>
+                    <strong class="results-stat-val">Excellence</strong>
+                    <span class="results-stat-sub">Every Year</span>
                 </div>
             </div>
         </div>
 
         <!-- =========================================================================
-             3. SESSION SELECTOR TABS
+             3. YEAR SELECTOR TABS WITH RADIANT SUNBURSTS
              ========================================================================= -->
-        <div class="results-year-tabs-wrap">
-            <div class="results-year-pill-group" role="tablist" aria-label="Academic Session Results">
-                <button type="button" class="btn-result-year active" id="tabYear2026" role="tab" aria-selected="true">
-                    <span>2025 – 26 (Class 10)</span>
+        <div class="results-year-switcher-area">
+            <div class="results-rays-left" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 20L8 14M20 12L7 12M18 4L8 10" stroke="#F37021" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
+            </div>
+
+            <div class="results-year-pills" role="tablist" aria-label="Academic Sessions">
+                <button type="button" class="results-year-btn active" id="tabYear2026" role="tab" aria-selected="true">
+                    <span class="y-main">2025 – 26</span>
+                    <span class="y-sub">(Class 10)</span>
                 </button>
-                <button type="button" class="btn-result-year" id="tabYear2025" role="tab" aria-selected="false">
-                    <span>2024 – 25 (Class 10)</span>
+                <button type="button" class="results-year-btn" id="tabYear2025" role="tab" aria-selected="false">
+                    <span class="y-main">2024 – 25</span>
+                    <span class="y-sub">(Class 10)</span>
                 </button>
-                <button type="button" class="btn-result-year" id="tabPastYears" role="tab" aria-selected="false">
+                <button type="button" class="results-year-btn" id="tabPastYears" role="tab" aria-selected="false">
                     <i class="fa-regular fa-calendar-days"></i>
-                    <span>Past Years</span>
+                    <span class="y-main">Past Years</span>
                 </button>
+            </div>
+
+            <div class="results-rays-right" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M6 20L16 14M4 12L17 12M6 4L16 10" stroke="#F37021" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
             </div>
         </div>
 
@@ -149,90 +152,103 @@ require_once __DIR__ . '/includes/header.php';
              4. MAIN RESULTS SHOWCASE CARD
              ========================================================================= -->
         <div class="results-main-showcase-card" id="resultsShowcaseSection">
-            <!-- Showcase Header -->
-            <div class="results-showcase-head">
-                <div class="results-showcase-left">
-                    <div class="results-trophy-box" aria-hidden="true">
+            <div class="results-showcase-header">
+                <div class="results-showcase-title-group">
+                    <div class="results-trophy-symbol" aria-hidden="true">
                         <i class="fa-solid fa-trophy"></i>
                     </div>
-                    <div class="results-showcase-titles">
+                    <div class="results-showcase-heading-wrap">
                         <h2 class="results-showcase-title">
                             CBSE Results <span class="highlight-orange">2025 – 26</span>
                         </h2>
-                        <div class="results-showcase-sub">Another year of hard work, dedication and excellence!</div>
-                        <p class="results-showcase-desc">
-                            Our students have once again made us proud with an outstanding performance in the CBSE Class 10 Board Examinations.
-                        </p>
+                        <p class="results-showcase-tagline">Another year of hard work, dedication and excellence!</p>
+                        <p class="results-showcase-desc">Our students have once again made us proud with an outstanding performance in the CBSE Class 10 Board Examinations.</p>
                     </div>
                 </div>
 
                 <!-- Laurel Wreath Badge -->
                 <div class="results-laurel-badge" aria-label="100% Result in Grade 10">
-                    <i class="fa-solid fa-award results-laurel-wreath-icon" aria-hidden="true"></i>
-                    <span class="results-laurel-percent">100%</span>
-                    <span class="results-laurel-label">Result in Grade 10</span>
+                    <svg class="laurel-branch left" viewBox="0 0 40 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M35 75C25 65 15 45 18 10" stroke="#E5A93C" stroke-width="2.5" stroke-linecap="round"/>
+                        <path d="M30 68C22 66 18 58 24 55C30 52 32 60 30 68Z" fill="#F37021" opacity="0.85"/>
+                        <path d="M24 53C16 50 14 42 20 40C26 38 28 46 24 53Z" fill="#E5A93C"/>
+                        <path d="M21 38C13 34 13 26 19 25C25 24 26 32 21 38Z" fill="#F37021" opacity="0.85"/>
+                        <path d="M20 23C14 18 16 11 22 12C27 13 26 20 20 23Z" fill="#E5A93C"/>
+                        <path d="M22 10C19 5 23 2 27 4C30 7 27 11 22 10Z" fill="#F37021"/>
+                    </svg>
+                    <div class="results-laurel-inner">
+                        <span class="laurel-number">100%</span>
+                        <span class="laurel-label">Result in Grade 10</span>
+                    </div>
+                    <svg class="laurel-branch right" viewBox="0 0 40 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M5 75C15 65 25 45 22 10" stroke="#E5A93C" stroke-width="2.5" stroke-linecap="round"/>
+                        <path d="M10 68C18 66 22 58 16 55C10 52 8 60 10 68Z" fill="#F37021" opacity="0.85"/>
+                        <path d="M16 53C24 50 26 42 20 40C14 38 12 46 16 53Z" fill="#E5A93C"/>
+                        <path d="M19 38C27 34 27 26 21 25C15 24 14 32 19 38Z" fill="#F37021" opacity="0.85"/>
+                        <path d="M20 23C26 18 24 11 18 12C13 13 14 20 20 23Z" fill="#E5A93C"/>
+                        <path d="M18 10C21 5 17 2 13 4C10 7 13 11 18 10Z" fill="#F37021"/>
+                    </svg>
                 </div>
             </div>
 
-            <!-- Slider / Showcase Viewport -->
-            <div class="results-slider-wrapper">
-                <button type="button" class="results-slider-arrow prev" id="sliderPrevBtn" aria-label="Previous Slide">
+            <!-- Poster Showcase Slider Viewport -->
+            <div class="results-slider-box">
+                <button type="button" class="results-arrow-btn prev" id="sliderPrevBtn" aria-label="Previous Slide">
                     <i class="fa-solid fa-chevron-left"></i>
                 </button>
 
-                <div class="results-posters-viewport">
-                    <div class="results-posters-grid" id="postersGrid">
-                        <!-- Poster 1: District Toppers & 90%+ Achievers -->
-                        <div class="results-poster-card" onclick="openResultsModal('assets/images/results-poster-toppers.jpg', 'CBSE Class 10th District Toppers 2025-26')">
-                            <img src="assets/images/results-poster-toppers.jpg" alt="Advaita School CBSE Class 10th District Toppers 2025-26 - Om Dhoot 98.40%">
-                            <div class="results-poster-zoom-hint">
+                <div class="results-posters-container">
+                    <div class="results-posters-pair" id="postersGrid">
+                        <!-- Left Poster: Toppers Om Dhoot 98.40% -->
+                        <div class="results-poster-frame" onclick="openResultsModal('assets/images/results-poster-toppers.jpg', 'CBSE Class 10th District Toppers 2025-26 - Om Dhoot 98.40%')">
+                            <img src="assets/images/results-poster-toppers.jpg" alt="Advaita School CBSE Results 2025-26 - District Toppers Om Dhoot 98.40%">
+                            <div class="poster-overlay-hint">
                                 <i class="fa-solid fa-magnifying-glass-plus"></i>
-                                <span>Click to expand</span>
+                                <span>Click to view full</span>
                             </div>
                         </div>
 
-                        <!-- Poster 2: 80%+ Achievers & Full Highlights -->
-                        <div class="results-poster-card" onclick="openResultsModal('assets/images/results-poster-achievers.jpg', 'CBSE Class 10th Board Achievers 2025-26')">
-                            <img src="assets/images/results-poster-achievers.jpg" alt="Advaita School CBSE Class 10th Board Achievers Above 80% 2025-26">
-                            <div class="results-poster-zoom-hint">
+                        <!-- Right Poster: Class 10th Board Result Above 90% -->
+                        <div class="results-poster-frame" onclick="openResultsModal('assets/images/results-poster-achievers.jpg', 'CBSE Class 10th Board Result Above 90% Achievers')">
+                            <img src="assets/images/results-poster-achievers.jpg" alt="Advaita School CBSE Results 2025-26 - Class 10th Board Result Above 90%">
+                            <div class="poster-overlay-hint">
                                 <i class="fa-solid fa-magnifying-glass-plus"></i>
-                                <span>Click to expand</span>
+                                <span>Click to view full</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <button type="button" class="results-slider-arrow next" id="sliderNextBtn" aria-label="Next Slide">
+                <button type="button" class="results-arrow-btn next" id="sliderNextBtn" aria-label="Next Slide">
                     <i class="fa-solid fa-chevron-right"></i>
                 </button>
             </div>
 
-            <!-- Pagination Dots -->
-            <div class="results-slider-dots" role="tablist" aria-label="Slider Dots">
-                <button type="button" class="results-dot active" aria-label="Slide 1"></button>
-                <button type="button" class="results-dot" aria-label="Slide 2"></button>
-                <button type="button" class="results-dot" aria-label="Slide 3"></button>
-                <button type="button" class="results-dot" aria-label="Slide 4"></button>
+            <!-- 5 Pagination Dots -->
+            <div class="results-dots-nav" role="tablist" aria-label="Poster Carousel Pagination">
+                <button type="button" class="dot-item active" aria-label="Slide 1"></button>
+                <button type="button" class="dot-item" aria-label="Slide 2"></button>
+                <button type="button" class="dot-item" aria-label="Slide 3"></button>
+                <button type="button" class="dot-item" aria-label="Slide 4"></button>
+                <button type="button" class="dot-item" aria-label="Slide 5"></button>
             </div>
         </div>
 
         <!-- =========================================================================
              5. CONSISTENT ACADEMIC EXCELLENCE & DOWNLOAD PDF BANNER
              ========================================================================= -->
-        <div class="results-download-banner">
-            <div class="results-download-left">
-                <div class="results-medal-icon-box" aria-hidden="true">
-                    <i class="fa-solid fa-certificate"></i>
+        <div class="results-excellence-banner">
+            <div class="excellence-left">
+                <div class="excellence-medal-badge" aria-hidden="true">
+                    <i class="fa-solid fa-award"></i>
                 </div>
-                <div class="results-download-info">
-                    <h3 class="results-download-title">Consistent Academic Excellence</h3>
-                    <p class="results-download-desc">
-                        Our results reflect the hard work of our students, the guidance of our teachers and the trust of our parents. Together, we continue to set higher benchmarks.
-                    </p>
+                <div class="excellence-copy">
+                    <h3 class="excellence-title">Consistent Academic Excellence</h3>
+                    <p class="excellence-desc">Our results reflect the hard work of our students, the guidance of our teachers and the trust of our parents. Together, we continue to set higher benchmarks.</p>
                 </div>
             </div>
 
-            <a href="assets/images/hero-slider-results.jpg" download="Advaita-CBSE-Class-10-Results-2025-26.jpg" class="results-btn-download" target="_blank">
+            <a href="assets/images/results-posters-full.jpg" download="Advaita-CBSE-Class-10-Results-2025-26.jpg" class="btn-excellence-download" target="_blank">
                 <i class="fa-solid fa-download"></i>
                 <span>Download Full Result PDF</span>
             </a>
@@ -241,23 +257,19 @@ require_once __DIR__ . '/includes/header.php';
         <!-- =========================================================================
              6. PRE-FOOTER CTA BOX (Have Questions?)
              ========================================================================= -->
-        <div class="results-cta-banner">
-            <div class="results-cta-left">
-                <span class="results-cta-badge">HAVE QUESTIONS?</span>
-                <h3 class="results-cta-title">
-                    Want to know more about <span class="highlight-orange">our results?</span>
-                </h3>
-                <p class="results-cta-desc">
-                    Our admissions team will be happy to share detailed results and help you with any queries.
-                </p>
+        <div class="results-bottom-cta">
+            <div class="cta-left">
+                <span class="cta-pill-tag">HAVE QUESTIONS?</span>
+                <h3 class="cta-heading">Want to know more about <span class="highlight-orange">our results?</span></h3>
+                <p class="cta-sub">Our admissions team will be happy to share detailed results and help you with any queries.</p>
             </div>
 
-            <div class="results-cta-actions">
-                <a href="tel:+919876543210" class="results-btn-call">
+            <div class="cta-buttons">
+                <a href="tel:+919689998973" class="btn-cta-office">
                     <i class="fa-solid fa-phone"></i>
                     <span>Contact the Office</span>
                 </a>
-                <a href="https://wa.me/919876543210?text=Hello%20Advaita%20School,%20I%20would%20like%20to%20know%20more%20about%20your%20CBSE%20results." target="_blank" rel="noopener noreferrer" class="results-btn-wa">
+                <a href="https://wa.me/919689998973?text=Hello%20Advaita%20School,%20I%20would%20like%20to%20know%20more%20about%20your%20CBSE%20results." target="_blank" rel="noopener noreferrer" class="btn-cta-wa">
                     <i class="fa-brands fa-whatsapp"></i>
                     <span>Chat on WhatsApp</span>
                 </a>
@@ -274,7 +286,7 @@ require_once __DIR__ . '/includes/header.php';
         <button type="button" class="results-modal-close" onclick="closeResultsModal(event)" aria-label="Close Preview">
             <i class="fa-solid fa-xmark"></i>
         </button>
-        <img src="assets/images/hero-slider-results.jpg" alt="Full Board Results Preview" class="results-modal-img" id="modalResultImg">
+        <img src="assets/images/results-posters-full.jpg" alt="Full Board Results Preview" class="results-modal-img" id="modalResultImg">
     </div>
 </div>
 
@@ -284,7 +296,7 @@ function openResultsModal(imgSrc, title) {
     var modal = document.getElementById('resultsModal');
     var modalImg = document.getElementById('modalResultImg');
     if (modal && modalImg) {
-        modalImg.src = imgSrc || 'assets/images/hero-slider-results.jpg';
+        modalImg.src = imgSrc || 'assets/images/results-posters-full.jpg';
         if (title) modalImg.alt = title;
         modal.classList.add('open');
         document.body.style.overflow = 'hidden';
@@ -316,10 +328,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Slider arrows toggle effect
+    // Slider arrows toggle effect & pagination dots
     var prevBtn = document.getElementById('sliderPrevBtn');
     var nextBtn = document.getElementById('sliderNextBtn');
-    var dots = document.querySelectorAll('.results-dot');
+    var dots = document.querySelectorAll('.dot-item');
 
     if (prevBtn && nextBtn) {
         var currentSlide = 0;
