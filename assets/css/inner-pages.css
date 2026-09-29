@@ -5712,16 +5712,6 @@
 /* ==========================================================================
    MANDATORY PUBLIC DISCLOSURE PAGE STYLES
    ========================================================================== */
-.adv-nav-disclosure-link {
-    color: #F37021 !important;
-    font-weight: 700 !important;
-}
-
-.adv-nav-disclosure-link:hover,
-.adv-nav-item.active > .adv-nav-disclosure-link {
-    color: #d95d12 !important;
-}
-
 .disclosure-page-wrapper {
     background-color: #f8fafc;
     padding-bottom: 60px;

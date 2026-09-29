@@ -151,7 +151,7 @@ $currentPage = $activePage ?? '';
                         </a>
                     </li>
                     <li class="adv-nav-item <?php echo ($currentPage === 'mandatory-disclosure') ? 'active' : ''; ?>">
-                        <a href="mandatory-disclosure.php" class="adv-nav-link adv-nav-disclosure-link">
+                        <a href="mandatory-disclosure.php" class="adv-nav-link">
                             <span>Mandatory Disclosure</span>
                         </a>
                     </li>

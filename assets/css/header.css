@@ -993,6 +993,16 @@ body.adv-drawer-open {
     color: var(--adv-primary);
 }
 
+.adv-mobile-item.active > .adv-mobile-link {
+    color: var(--adv-accent-orange);
+    background-color: #fff7ed;
+    font-weight: 700;
+}
+
+.adv-mobile-item.active > .adv-mobile-link .adv-mobile-link-text i {
+    color: var(--adv-accent-orange);
+}
+
 /* Submenu Accordion */
 .adv-mobile-submenu {
     list-style: none;
