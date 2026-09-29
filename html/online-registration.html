@@ -160,7 +160,7 @@
 
                         <!-- Description -->
                         <p class="admission-hero-desc">
-                            Fill out the form in a few simple steps — our admissions counselor will reach out to you within a working day.
+                            Complete the form in a few simple steps — our admissions counselor will reach out to you within a working day.
                         </p>
                     </div>
                 </div>
@@ -168,7 +168,7 @@
         </section>
 
         <!-- =========================================================================
-             2. MULTI-STEP REGISTRATION FORM CARD
+             2. MULTI-STEP REGISTRATION FORM CARD (4 STEPS IN SAME FORM)
              ========================================================================= -->
         <div class="registration-container-relative" id="registrationFormContainer">
             <div class="registration-form-card">
@@ -193,7 +193,7 @@
                         <div class="reg-step-connector" id="connector2" aria-hidden="true"></div>
 
                         <!-- Step 3: Contact Details -->
-                        <div class="reg-step-item" id="stepperTab3">
+                        <div class="reg-step-item" id="stepperTab3" onclick="switchRegStep(3)">
                             <div class="reg-step-circle">3</div>
                             <span class="reg-step-label">Contact Details</span>
                         </div>
@@ -201,7 +201,7 @@
                         <div class="reg-step-connector" id="connector3" aria-hidden="true"></div>
 
                         <!-- Step 4: Documents -->
-                        <div class="reg-step-item" id="stepperTab4">
+                        <div class="reg-step-item" id="stepperTab4" onclick="switchRegStep(4)">
                             <div class="reg-step-circle">4</div>
                             <span class="reg-step-label">Documents</span>
                         </div>
@@ -215,7 +215,7 @@
                     </div>
                 </div>
 
-                <form action="#" method="POST" class="registration-main-form" id="onlineRegForm" onsubmit="event.preventDefault(); alert('Registration submitted successfully! Our admissions counselor will contact you shortly.');">
+                <form action="#" method="POST" enctype="multipart/form-data" class="registration-main-form" id="onlineRegForm" onsubmit="event.preventDefault(); alert('Registration submitted successfully! Our admissions counselor will contact you shortly.');">
                     
                     <!-- =============================================================
                          STEP 1 PANEL: GENERAL DETAILS & PREVIOUS EDUCATION
@@ -906,7 +906,7 @@
                                 <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
                                 <span>Back to Previous</span>
                             </button>
-                            <button type="submit" class="reg-btn-continue">
+                            <button type="button" class="reg-btn-continue" onclick="switchRegStep(3)">
                                 <span>Continue</span>
                                 <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                             </button>
@@ -914,231 +914,608 @@
 
                     </div>
 
-                </form>
-            </div>
-        </div>
+                    <!-- =============================================================
+                         STEP 3 PANEL: CONTACT DETAILS
+                         ============================================================= -->
+                    <div class="reg-step-panel" id="regStepPanel3">
 
-        <!-- =========================================================================
-             3. NEED ASSISTANCE? BOTTOM BANNER
-             ========================================================================= -->
-        <div class="reg-assist-banner">
-            <div class="reg-assist-box">
-                <div class="reg-assist-left">
-                    <span class="reg-assist-eyebrow">NEED ASSISTANCE?</span>
-                    <h2 class="reg-assist-title">
-                        We're Here to <span class="highlight-orange">Help!</span>
-                    </h2>
-                    <p class="reg-assist-desc">
-                        If you face any issues while filling the form, feel free to reach out to our admissions team.
-                    </p>
-                </div>
+                        <div class="reg-section-block">
+                            <div class="reg-section-head">
+                                <div class="reg-section-icon" aria-hidden="true">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <h2 class="reg-section-title">Contact Details</h2>
+                                    <p class="reg-section-sub">Please provide the contact information of the parent/guardian for further communication.</p>
+                                </div>
+                            </div>
 
-                <div class="reg-assist-contacts">
-                    <!-- Phone Contact -->
-                    <div class="reg-assist-item">
-                        <div class="reg-assist-icon-circle" aria-hidden="true">
-                            <i class="fa-solid fa-phone"></i>
-                        </div>
-                        <div class="reg-assist-content">
-                            <span class="reg-assist-label">Call Admissions</span>
-                            <a href="tel:+919876543210" class="reg-assist-val">+91 98765 43210</a>
-                            <span class="reg-assist-sub">Mon – Sat | 8:00 AM – 4:00 PM</span>
-                        </div>
-                    </div>
+                            <!-- Row 1: Guardian Name & Guardian Phone -->
+                            <div class="reg-grid-row two-cols">
+                                <div class="reg-field-group">
+                                    <label for="regGuardName" class="reg-field-label">Guardian Name <span class="req">*</span></label>
+                                    <div class="reg-input-wrap">
+                                        <i class="fa-regular fa-user reg-input-icon" aria-hidden="true"></i>
+                                        <input type="text" id="regGuardName" name="guardian_name" class="reg-input-control" placeholder="Enter guardian's full name">
+                                    </div>
+                                </div>
 
-                    <!-- Email Contact -->
-                    <div class="reg-assist-item">
-                        <div class="reg-assist-icon-circle" aria-hidden="true">
-                            <i class="fa-solid fa-envelope"></i>
-                        </div>
-                        <div class="reg-assist-content">
-                            <span class="reg-assist-label">Email Us</span>
-                            <a href="mailto:info@advaitaschool.edu.in" class="reg-assist-val">info@advaitaschool.edu.in</a>
-                            <span class="reg-assist-sub">We usually respond within 24 hours</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                                <div class="reg-field-group">
+                                    <label for="regGuardPhone" class="reg-field-label">Guardian Phone <span class="req">*</span></label>
+                                    <div class="reg-input-wrap">
+                                        <i class="fa-solid fa-phone reg-input-icon" aria-hidden="true"></i>
+                                        <input type="tel" id="regGuardPhone" name="guardian_phone" class="reg-input-control" placeholder="Enter phone number">
+                                    </div>
+                                </div>
+                            </div>
 
-    </main>
+                            <!-- Row 2: Relationship with Guardian & Guardian Email -->
+                            <div class="reg-grid-row two-cols">
+                                <div class="reg-field-group">
+                                    <label for="regGuardRel" class="reg-field-label">Relationship with Guardian <span class="req">*</span></label>
+                                    <div class="reg-input-wrap">
+                                        <i class="fa-solid fa-user-group reg-input-icon" aria-hidden="true"></i>
+                                        <input type="text" id="regGuardRel" name="guardian_relationship" class="reg-input-control" placeholder="E.g. Father, Mother, Grandparent, etc.">
+                                    </div>
+                                </div>
 
-    <!-- Main Footer -->
-    <footer class="adv-main-footer">
-        <div class="adv-container adv-footer-content-wrap">
-            <div class="adv-footer-grid">
-                <div class="adv-footer-brand-col">
-                    <div class="adv-footer-logo-wrap">
-                        <img src="../assets/images/logo-white.png" alt="Advaita School of Excellence Logo" class="adv-footer-logo-img">
-                    </div>
-                    <p class="adv-footer-bio">
-                        A modern, values-led learning community shaping curious thinkers, principled leaders, and lifelong learners.
-                    </p>
-                    <div class="adv-footer-social-row">
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="adv-footer-social-circle" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="adv-footer-social-circle" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="adv-footer-social-circle" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="adv-footer-social-circle" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                    </div>
-                </div>
+                                <div class="reg-field-group">
+                                    <label for="regGuardEmail" class="reg-field-label">Guardian Email <span class="req">*</span></label>
+                                    <div class="reg-input-wrap">
+                                        <i class="fa-regular fa-envelope reg-input-icon" aria-hidden="true"></i>
+                                        <input type="email" id="regGuardEmail" name="guardian_email" class="reg-input-control" placeholder="Enter email address">
+                                    </div>
+                                </div>
+                            </div>
 
-                <div class="adv-footer-links-col">
-                    <h3 class="adv-footer-col-title">Explore</h3>
-                    <ul class="adv-footer-link-list">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="vision-mission.html">Vision &amp; Mission</a></li>
-                        <li><a href="chairman.html">Chairman's Desk</a></li>
-                        <li><a href="faculty.html">Our Faculty</a></li>
-                        <li><a href="academics.html">Academics</a></li>
-                        <li><a href="neet-iit.html">NEET / IIT Foundation</a></li>
-                        <li><a href="admission-info.html">Admissions</a></li>
-                        <li><a href="campus-life.html">Campus Life</a></li>
-                        <li><a href="facilities.html">Facilities</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
+                            <!-- Row 3: Present Address & Permanent Address -->
+                            <div class="reg-grid-row two-cols">
+                                <div class="reg-field-group">
+                                    <label for="regPresentAddress" class="reg-field-label">Present Address <span class="req">*</span></label>
+                                    <div class="reg-input-wrap">
+                                        <i class="fa-solid fa-house reg-input-icon" style="top: 16px;" aria-hidden="true"></i>
+                                        <textarea id="regPresentAddress" name="present_address" class="reg-input-control" placeholder="Enter complete present address" rows="2"></textarea>
+                                    </div>
+                                </div>
 
-                <div class="adv-footer-links-col">
-                    <h3 class="adv-footer-col-title">Quick Links</h3>
-                    <ul class="adv-footer-link-list">
-                        <li><a href="admission-info.html">Admission Process</a></li>
-                        <li><a href="online-registration.html">Online Registration</a></li>
-                        <li><a href="admission-info.html#fee-structure">Fee Structure</a></li>
-                        <li><a href="mandatory-disclosure.html">Mandatory Disclosure</a></li>
-                        <li><a href="facilities.html">Campus Facilities</a></li>
-                        <li><a href="contact.html">Contact Details</a></li>
-                    </ul>
-                </div>
+                                <div class="reg-field-group">
+                                    <label for="regPermAddress" class="reg-field-label">Permanent Address</label>
+                                    <div class="reg-input-wrap">
+                                        <i class="fa-solid fa-house reg-input-icon" style="top: 16px;" aria-hidden="true"></i>
+                                        <textarea id="regPermAddress" name="permanent_address" class="reg-input-control" placeholder="Enter complete permanent address (if different from present address)" rows="2"></textarea>
+                                    </div>
+                                </div>
+                            </div>
 
-                <div class="adv-footer-contact-col">
-                    <h3 class="adv-footer-col-title">Get in Touch</h3>
-                    <div class="adv-footer-touch-items">
-                        <div class="adv-footer-touch-item">
-                            <div class="adv-footer-touch-icon"><i class="fa-solid fa-location-dot"></i></div>
-                            <div class="adv-footer-touch-content">
-                                <span class="touch-label">Campus</span>
-                                <address class="touch-address">
-                                    Sanmati Campus, Near Highway Ring Road, Parbhani, Maharashtra – 431401
-                                </address>
+                            <!-- Row 4: City & State -->
+                            <div class="reg-grid-row two-cols">
+                                <div class="reg-field-group">
+                                    <label for="regCity" class="reg-field-label">City <span class="req">*</span></label>
+                                    <div class="reg-input-wrap">
+                                        <i class="fa-solid fa-city reg-input-icon" aria-hidden="true"></i>
+                                        <input type="text" id="regCity" name="city" class="reg-input-control" placeholder="Enter city">
+                                    </div>
+                                </div>
+
+                                <div class="reg-field-group">
+                                    <label for="regState" class="reg-field-label">State <span class="req">*</span></label>
+                                    <div class="reg-input-wrap">
+                                        <i class="fa-solid fa-location-dot reg-input-icon" aria-hidden="true"></i>
+                                        <select id="regState" name="state" class="reg-input-control">
+                                            <option value="" disabled selected>Select state</option>
+                                            <option value="Maharashtra" selected>Maharashtra</option>
+                                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                            <option value="Delhi">Delhi</option>
+                                            <option value="Goa">Goa</option>
+                                            <option value="Gujarat">Gujarat</option>
+                                            <option value="Karnataka">Karnataka</option>
+                                            <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                            <option value="Rajasthan">Rajasthan</option>
+                                            <option value="Tamil Nadu">Tamil Nadu</option>
+                                            <option value="Telangana">Telangana</option>
+                                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Row 5: Country & PIN / ZIP Code -->
+                            <div class="reg-grid-row two-cols">
+                                <div class="reg-field-group">
+                                    <label for="regCountry" class="reg-field-label">Country <span class="req">*</span></label>
+                                    <div class="reg-input-wrap">
+                                        <i class="fa-solid fa-globe reg-input-icon" aria-hidden="true"></i>
+                                        <select id="regCountry" name="country" class="reg-input-control">
+                                            <option value="" disabled selected>Select country</option>
+                                            <option value="India" selected>India</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="reg-field-group">
+                                    <label for="regPincode" class="reg-field-label">PIN / ZIP Code <span class="req">*</span></label>
+                                    <div class="reg-input-wrap">
+                                        <i class="fa-regular fa-envelope reg-input-icon" aria-hidden="true"></i>
+                                        <input type="text" id="regPincode" name="pincode" class="reg-input-control" placeholder="Enter PIN / ZIP code">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Row 6: Mobile Number & Landline / Home Phone -->
+                            <div class="reg-grid-row two-cols">
+                                <div class="reg-field-group">
+                                    <label for="regMobile" class="reg-field-label">Mobile Number <span class="req">*</span></label>
+                                    <div class="reg-input-wrap">
+                                        <i class="fa-solid fa-mobile-screen-button reg-input-icon" aria-hidden="true"></i>
+                                        <input type="tel" id="regMobile" name="mobile_number" class="reg-input-control" placeholder="Enter mobile number">
+                                    </div>
+                                </div>
+
+                                <div class="reg-field-group">
+                                    <label for="regLandline" class="reg-field-label">Landline / Home Phone (Optional)</label>
+                                    <div class="reg-input-wrap">
+                                        <i class="fa-solid fa-phone reg-input-icon" aria-hidden="true"></i>
+                                        <input type="tel" id="regLandline" name="landline_number" class="reg-input-control" placeholder="Enter landline number (if any)">
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="adv-footer-touch-item">
-                            <div class="adv-footer-touch-icon"><i class="fa-solid fa-phone"></i></div>
-                            <div class="adv-footer-touch-content">
-                                <span class="touch-label">Phone</span>
-                                <a href="tel:+919876543210" class="touch-link">+91 98765 43210 / 02452-234567</a>
-                            </div>
+
+                        <!-- Step 3 Actions Bar: Back & Continue -->
+                        <div class="reg-actions-bar space-between">
+                            <button type="button" class="reg-btn-back" onclick="switchRegStep(2)">
+                                <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                                <span>Back to Previous</span>
+                            </button>
+                            <button type="button" class="reg-btn-continue" onclick="switchRegStep(4)">
+                                <span>Continue</span>
+                                <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                            </button>
                         </div>
-                        <div class="adv-footer-touch-item">
-                            <div class="adv-footer-touch-icon"><i class="fa-solid fa-envelope"></i></div>
-                            <div class="adv-footer-touch-content">
-                                <span class="touch-label">Email</span>
-                                <a href="mailto:info@advaitaschool.edu.in" class="touch-link">info@advaitaschool.edu.in</a>
+
+                    </div>
+
+                    <!-- =============================================================
+                         STEP 4 PANEL: UPLOAD DOCUMENTS
+                         ============================================================= -->
+                    <div class="reg-step-panel" id="regStepPanel4">
+
+                        <div class="reg-section-block">
+                            <div class="reg-section-head">
+                                <div class="reg-section-icon" aria-hidden="true">
+                                    <i class="fa-solid fa-file-arrow-up"></i>
+                                </div>
+                                <div>
+                                    <h2 class="reg-section-title">Upload Documents</h2>
+                                    <p class="reg-section-sub">Please upload the required documents for verification. Accepted file formats: PDF, JPG, PNG (Max size: 5 MB each).</p>
+                                </div>
                             </div>
+
+                            <!-- Documents Upload Table -->
+                            <div class="docs-table-wrapper">
+                                <table class="docs-table">
+                                <thead>
+                                    <tr>
+                                        <th>Document Type</th>
+                                        <th>Reference Number (if any)</th>
+                                        <th>Upload File</th>
+                                        <th>Preview</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Row 1: Marksheet -->
+                                    <tr>
+                                        <td>
+                                            <div class="doc-type-box">
+                                                <div class="doc-type-icon blue" aria-hidden="true">
+                                                    <i class="fa-regular fa-file-lines"></i>
+                                                </div>
+                                                <div class="doc-type-text">
+                                                    <span class="doc-type-name">Marksheet <span class="req">*</span></span>
+                                                    <span class="doc-type-sub">(Last class attended)</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <input type="text" name="marksheet_ref" class="doc-ref-input" placeholder="Enter reference number (if any)">
+                                        </td>
+                                        <td>
+                                            <div class="doc-upload-cell">
+                                                <label class="btn-choose-file">
+                                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                                    <span>Choose File</span>
+                                                    <input type="file" name="doc_marksheet" style="display:none;" onchange="handleFileSelect(this, 'marksheet_status', 'marksheet_preview')">
+                                                </label>
+                                                <span class="file-status-text" id="marksheet_status">No file chosen</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="doc-preview-cell" id="marksheet_preview">
+                                                <i class="fa-regular fa-file-lines"></i>
+                                                <span>No file selected</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <!-- Row 2: Transfer Certificate -->
+                                    <tr>
+                                        <td>
+                                            <div class="doc-type-box">
+                                                <div class="doc-type-icon mint" aria-hidden="true">
+                                                    <i class="fa-solid fa-file-shield"></i>
+                                                </div>
+                                                <div class="doc-type-text">
+                                                    <span class="doc-type-name">Transfer Certificate (T.C) <span class="req">*</span></span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <input type="text" name="tc_ref" class="doc-ref-input" placeholder="Enter reference number (if any)">
+                                        </td>
+                                        <td>
+                                            <div class="doc-upload-cell">
+                                                <label class="btn-choose-file">
+                                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                                    <span>Choose File</span>
+                                                    <input type="file" name="doc_tc" style="display:none;" onchange="handleFileSelect(this, 'tc_status', 'tc_preview')">
+                                                </label>
+                                                <span class="file-status-text" id="tc_status">No file chosen</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="doc-preview-cell" id="tc_preview">
+                                                <i class="fa-regular fa-file-lines"></i>
+                                                <span>No file selected</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <!-- Row 3: Student Photograph -->
+                                    <tr>
+                                        <td>
+                                            <div class="doc-type-box">
+                                                <div class="doc-type-icon purple" aria-hidden="true">
+                                                    <i class="fa-solid fa-user"></i>
+                                                </div>
+                                                <div class="doc-type-text">
+                                                    <span class="doc-type-name">Student Photograph <span class="req">*</span></span>
+                                                    <span class="doc-type-sub">(Passport size, recent)</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <input type="text" name="photo_ref" class="doc-ref-input" placeholder="Enter reference number (if any)">
+                                        </td>
+                                        <td>
+                                            <div class="doc-upload-cell">
+                                                <label class="btn-choose-file">
+                                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                                    <span>Choose File</span>
+                                                    <input type="file" name="doc_photo" accept="image/*" style="display:none;" onchange="handleFileSelect(this, 'photo_status', 'photo_preview')">
+                                                </label>
+                                                <span class="file-status-text" id="photo_status">No file chosen</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="doc-preview-cell" id="photo_preview">
+                                                <i class="fa-regular fa-file-lines"></i>
+                                                <span>No file selected</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <!-- Row 4: Eligibility Certificate -->
+                                    <tr>
+                                        <td>
+                                            <div class="doc-type-box">
+                                                <div class="doc-type-icon teal" aria-hidden="true">
+                                                    <i class="fa-solid fa-certificate"></i>
+                                                </div>
+                                                <div class="doc-type-text">
+                                                    <span class="doc-type-name">Eligibility Certificate</span>
+                                                    <span class="doc-type-sub">(If applicable)</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <input type="text" name="eligibility_ref" class="doc-ref-input" placeholder="Enter reference number (if any)">
+                                        </td>
+                                        <td>
+                                            <div class="doc-upload-cell">
+                                                <label class="btn-choose-file">
+                                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                                    <span>Choose File</span>
+                                                    <input type="file" name="doc_eligibility" style="display:none;" onchange="handleFileSelect(this, 'eligibility_status', 'eligibility_preview')">
+                                                </label>
+                                                <span class="file-status-text" id="eligibility_status">No file chosen</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="doc-preview-cell" id="eligibility_preview">
+                                                <i class="fa-regular fa-file-lines"></i>
+                                                <span>No file selected</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <div class="adv-footer-touch-item">
-                            <div class="adv-footer-touch-icon"><i class="fa-regular fa-clock"></i></div>
-                            <div class="adv-footer-touch-content">
-                                <span class="touch-label">School Hours</span>
-                                <span class="touch-text">Mon – Sat &nbsp;|&nbsp; 8:00 AM – 3:00 PM</span>
+
+                        <!-- Important Guidelines Box -->
+                        <div class="docs-guidelines-box">
+                            <div class="docs-guide-icon" aria-hidden="true">
+                                <i class="fa-solid fa-circle-info"></i>
+                            </div>
+                            <div class="docs-guide-content">
+                                <div class="docs-guide-title">Important Guidelines:</div>
+                                <ul class="docs-guide-list">
+                                    <li>Please upload clear, legible and original documents.</li>
+                                    <li>Accepted file formats: PDF, JPG, PNG (Max size: 5 MB each).</li>
+                                    <li>Documents will be verified by our admissions team. You may be contacted if any additional documents are required.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Step 4 Actions Bar: Back & Submit Registration -->
+                    <div class="reg-actions-bar space-between">
+                        <button type="button" class="reg-btn-back" onclick="switchRegStep(3)">
+                            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                            <span>Back to Previous</span>
+                        </button>
+                        <button type="submit" class="reg-btn-submit-final">
+                            <span>Submit Registration</span>
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
                 </div>
 
-                <div class="adv-footer-map-col">
-                    <div class="adv-footer-map-card">
-                        <div class="adv-footer-map-iframe-wrap">
-                            <iframe 
-                                src="https://maps.google.com/maps?q=Advaita+School+of+Excellence,+Parbhani&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                                width="100%" 
-                                height="100%" 
-                                style="border:0;" 
-                                allowfullscreen="" 
-                                loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade"
-                                title="Advaita School of Excellence Parbhani Location">
-                            </iframe>
-                        </div>
-                        <a href="https://www.google.com/maps/place/Advaita+School+of+Excellence/@19.2634,76.7749,17z/" target="_blank" rel="noopener noreferrer" class="adv-footer-map-btn">
-                            <span>View on Google Maps</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
+            </form>
+        </div>
+    </div>
+
+    <!-- =========================================================================
+         3. NEED ASSISTANCE? BOTTOM BANNER
+         ========================================================================= -->
+    <div class="reg-assist-banner">
+        <div class="reg-assist-box">
+            <div class="reg-assist-left">
+                <span class="reg-assist-eyebrow">NEED ASSISTANCE?</span>
+                <h2 class="reg-assist-title">
+                    We're Here to <span class="highlight-orange">Help!</span>
+                </h2>
+                <p class="reg-assist-desc">
+                    If you face any issues while filling the form, feel free to reach out to our admissions team.
+                </p>
+            </div>
+
+            <div class="reg-assist-contacts">
+                <!-- Phone Contact -->
+                <div class="reg-assist-item">
+                    <div class="reg-assist-icon-circle" aria-hidden="true">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="reg-assist-content">
+                        <span class="reg-assist-label">Call Admissions</span>
+                        <a href="tel:+919876543210" class="reg-assist-val">+91 98765 43210</a>
+                        <span class="reg-assist-sub">Mon – Sat | 8:00 AM – 4:00 PM</span>
+                    </div>
+                </div>
+
+                <!-- Email Contact -->
+                <div class="reg-assist-item">
+                    <div class="reg-assist-icon-circle" aria-hidden="true">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="reg-assist-content">
+                        <span class="reg-assist-label">Email Us</span>
+                        <a href="mailto:info@advaitaschool.edu.in" class="reg-assist-val">info@advaitaschool.edu.in</a>
+                        <span class="reg-assist-sub">We usually respond within 24 hours</span>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <div class="adv-footer-bottom-strip">
-            <div class="adv-container adv-footer-bottom-container">
-                <div class="adv-footer-copy-text">
-                    <span>&copy; 2026 Advaita School of Excellence, Parbhani. All rights reserved.</span>
+</main>
+
+<!-- Main Footer -->
+<footer class="adv-main-footer">
+    <div class="adv-container adv-footer-content-wrap">
+        <div class="adv-footer-grid">
+            <div class="adv-footer-brand-col">
+                <div class="adv-footer-logo-wrap">
+                    <img src="../assets/images/logo-white.png" alt="Advaita School of Excellence Logo" class="adv-footer-logo-img">
                 </div>
-                <div class="adv-footer-legal-links">
-                    <a href="index.html" class="adv-legal-link">Privacy Policy</a>
-                    <span class="adv-legal-sep">|</span>
-                    <a href="index.html" class="adv-legal-link">Terms &amp; Conditions</a>
-                    <span class="adv-legal-sep">|</span>
-                    <a href="index.html" class="adv-legal-link">Sitemap</a>
+                <p class="adv-footer-bio">
+                    A modern, values-led learning community shaping curious thinkers, principled leaders, and lifelong learners.
+                </p>
+                <div class="adv-footer-social-row">
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="adv-footer-social-circle" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="adv-footer-social-circle" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="adv-footer-social-circle" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="adv-footer-social-circle" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="adv-footer-links-col">
+                <h3 class="adv-footer-col-title">Explore</h3>
+                <ul class="adv-footer-link-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="vision-mission.html">Vision &amp; Mission</a></li>
+                    <li><a href="chairman.html">Chairman's Desk</a></li>
+                    <li><a href="faculty.html">Our Faculty</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="neet-iit.html">NEET / IIT Foundation</a></li>
+                    <li><a href="admission-info.html">Admissions</a></li>
+                    <li><a href="campus-life.html">Campus Life</a></li>
+                    <li><a href="facilities.html">Facilities</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="adv-footer-links-col">
+                <h3 class="adv-footer-col-title">Quick Links</h3>
+                <ul class="adv-footer-link-list">
+                    <li><a href="admission-info.html">Admission Process</a></li>
+                    <li><a href="online-registration.html">Online Registration</a></li>
+                    <li><a href="admission-info.html#fee-structure">Fee Structure</a></li>
+                    <li><a href="mandatory-disclosure.html">Mandatory Disclosure</a></li>
+                    <li><a href="facilities.html">Campus Facilities</a></li>
+                    <li><a href="contact.html">Contact Details</a></li>
+                </ul>
+            </div>
+
+            <div class="adv-footer-contact-col">
+                <h3 class="adv-footer-col-title">Get in Touch</h3>
+                <div class="adv-footer-touch-items">
+                    <div class="adv-footer-touch-item">
+                        <div class="adv-footer-touch-icon"><i class="fa-solid fa-location-dot"></i></div>
+                        <div class="adv-footer-touch-content">
+                            <span class="touch-label">Campus</span>
+                            <address class="touch-address">
+                                Sanmati Campus, Near Highway Ring Road, Parbhani, Maharashtra – 431401
+                            </address>
+                        </div>
+                    </div>
+                    <div class="adv-footer-touch-item">
+                        <div class="adv-footer-touch-icon"><i class="fa-solid fa-phone"></i></div>
+                        <div class="adv-footer-touch-content">
+                            <span class="touch-label">Phone</span>
+                            <a href="tel:+919876543210" class="touch-link">+91 98765 43210 / 02452-234567</a>
+                        </div>
+                    </div>
+                    <div class="adv-footer-touch-item">
+                        <div class="adv-footer-touch-icon"><i class="fa-solid fa-envelope"></i></div>
+                        <div class="adv-footer-touch-content">
+                            <span class="touch-label">Email</span>
+                            <a href="mailto:info@advaitaschool.edu.in" class="touch-link">info@advaitaschool.edu.in</a>
+                        </div>
+                    </div>
+                    <div class="adv-footer-touch-item">
+                        <div class="adv-footer-touch-icon"><i class="fa-regular fa-clock"></i></div>
+                        <div class="adv-footer-touch-content">
+                            <span class="touch-label">School Hours</span>
+                            <span class="touch-text">Mon – Sat &nbsp;|&nbsp; 8:00 AM – 3:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="adv-footer-map-col">
+                <div class="adv-footer-map-card">
+                    <div class="adv-footer-map-iframe-wrap">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Advaita+School+of+Excellence,+Parbhani&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Advaita School of Excellence Parbhani Location">
+                        </iframe>
+                    </div>
+                    <a href="https://www.google.com/maps/place/Advaita+School+of+Excellence/@19.2634,76.7749,17z/" target="_blank" rel="noopener noreferrer" class="adv-footer-map-btn">
+                        <span>View on Google Maps</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
 
-    <script>
-    /**
-     * Switch Registration Step in the same form
-     * @param {number} stepNumber - 1 (General Details) or 2 (Personal Details)
-     */
-    function switchRegStep(stepNumber) {
-        var panel1 = document.getElementById('regStepPanel1');
-        var panel2 = document.getElementById('regStepPanel2');
-        var tab1 = document.getElementById('stepperTab1');
-        var tab2 = document.getElementById('stepperTab2');
-        var conn1 = document.getElementById('connector1');
+    <div class="adv-footer-bottom-strip">
+        <div class="adv-container adv-footer-bottom-container">
+            <div class="adv-footer-copy-text">
+                <span>&copy; 2026 Advaita School of Excellence, Parbhani. All rights reserved.</span>
+            </div>
+            <div class="adv-footer-legal-links">
+                <a href="index.html" class="adv-legal-link">Privacy Policy</a>
+                <span class="adv-legal-sep">|</span>
+                <a href="index.html" class="adv-legal-link">Terms &amp; Conditions</a>
+                <span class="adv-legal-sep">|</span>
+                <a href="index.html" class="adv-legal-link">Sitemap</a>
+            </div>
+        </div>
+    </div>
+</footer>
 
-        if (stepNumber === 2) {
-            if (panel1 && panel2) {
-                panel1.classList.remove('active');
-                panel2.classList.add('active');
-            }
-            if (tab1) {
-                tab1.classList.remove('active');
-                tab1.classList.add('completed');
-            }
-            if (tab2) {
-                tab2.classList.add('active');
-            }
-            if (conn1) {
-                conn1.classList.add('active');
-            }
-        } else {
-            if (panel1 && panel2) {
-                panel2.classList.remove('active');
-                panel1.classList.add('active');
-            }
-            if (tab1) {
-                tab1.classList.add('active');
-                tab1.classList.remove('completed');
-            }
-            if (tab2) {
-                tab2.classList.remove('active');
-            }
-            if (conn1) {
-                conn1.classList.remove('active');
+<script>
+/**
+ * Switch Registration Step across all 4 steps in the same form
+ * @param {number} stepNumber - 1 (General), 2 (Personal), 3 (Contact), 4 (Documents)
+ */
+function switchRegStep(stepNumber) {
+    // Panels
+    for (var i = 1; i <= 4; i++) {
+        var panel = document.getElementById('regStepPanel' + i);
+        var tab = document.getElementById('stepperTab' + i);
+        
+        if (panel) {
+            if (i === stepNumber) {
+                panel.classList.add('active');
+            } else {
+                panel.classList.remove('active');
             }
         }
 
-        // Scroll smoothly to top of form card
-        var container = document.getElementById('registrationFormContainer');
-        if (container) {
-            container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (tab) {
+            tab.classList.remove('active');
+            tab.classList.remove('completed');
+            if (i === stepNumber) {
+                tab.classList.add('active');
+            } else if (i < stepNumber) {
+                tab.classList.add('completed');
+            }
         }
     }
-    </script>
-    <!-- Scripts -->
-    <script src="../assets/js/header.js"></script>
-    <script src="../assets/js/footer.js"></script>
+
+    // Connectors
+    for (var c = 1; c <= 3; c++) {
+        var conn = document.getElementById('connector' + c);
+        if (conn) {
+            if (c < stepNumber) {
+                conn.classList.add('active');
+            } else {
+                conn.classList.remove('active');
+            }
+        }
+    }
+
+    // Scroll smoothly to top of form card
+    var container = document.getElementById('registrationFormContainer');
+    if (container) {
+        container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+/**
+ * Handle File Selection display for Step 4
+ */
+function handleFileSelect(input, statusId, previewId) {
+    if (input.files && input.files[0]) {
+        var fileName = input.files[0].name;
+        var statusEl = document.getElementById(statusId);
+        var previewEl = document.getElementById(previewId);
+        
+        if (statusEl) {
+            statusEl.textContent = fileName;
+            statusEl.style.color = '#059669';
+            statusEl.style.fontWeight = '600';
+        }
+        if (previewEl) {
+            previewEl.innerHTML = '<i class="fa-solid fa-file-circle-check" style="color: #059669;"></i> <span style="color: #059669; font-weight: 600;">' + fileName + '</span>';
+        }
+    }
+}
+</script>
+<!-- Scripts -->
+<script src="../assets/js/header.js"></script>
+<script src="../assets/js/footer.js"></script>
 </body>
 </html>

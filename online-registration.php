@@ -1,7 +1,8 @@
 <?php
 /**
  * Online Registration Page - Advaita School of Excellence
- * Multi-Step Admissions Enquiry & Registration Form
+ * Complete 4-Step Admissions Enquiry & Registration Form:
+ * 1. General Details | 2. Personal Details | 3. Contact Details | 4. Documents
  * Clean Semantic HTML - Header and Footer Preserved
  */
 $pageTitle = "Online Registration 2026-27 - Advaita School of Excellence, Parbhani | Admission Form";
@@ -65,7 +66,7 @@ require_once __DIR__ . '/includes/header.php';
 
                     <!-- Description -->
                     <p class="admission-hero-desc">
-                        Fill out the form in a few simple steps — our admissions counselor will reach out to you within a working day.
+                        Complete the form in a few simple steps — our admissions counselor will reach out to you within a working day.
                     </p>
                 </div>
             </div>
@@ -73,7 +74,7 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
     <!-- =========================================================================
-         2. MULTI-STEP REGISTRATION FORM CARD
+         2. MULTI-STEP REGISTRATION FORM CARD (4 STEPS IN SAME FORM)
          ========================================================================= -->
     <div class="registration-container-relative" id="registrationFormContainer">
         <div class="registration-form-card">
@@ -98,7 +99,7 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="reg-step-connector" id="connector2" aria-hidden="true"></div>
 
                     <!-- Step 3: Contact Details -->
-                    <div class="reg-step-item" id="stepperTab3">
+                    <div class="reg-step-item" id="stepperTab3" onclick="switchRegStep(3)">
                         <div class="reg-step-circle">3</div>
                         <span class="reg-step-label">Contact Details</span>
                     </div>
@@ -106,7 +107,7 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="reg-step-connector" id="connector3" aria-hidden="true"></div>
 
                     <!-- Step 4: Documents -->
-                    <div class="reg-step-item" id="stepperTab4">
+                    <div class="reg-step-item" id="stepperTab4" onclick="switchRegStep(4)">
                         <div class="reg-step-circle">4</div>
                         <span class="reg-step-label">Documents</span>
                     </div>
@@ -120,7 +121,7 @@ require_once __DIR__ . '/includes/header.php';
                 </div>
             </div>
 
-            <form action="#" method="POST" class="registration-main-form" id="onlineRegForm" onsubmit="event.preventDefault(); alert('Registration submitted successfully! Our admissions counselor will contact you shortly.');">
+            <form action="#" method="POST" enctype="multipart/form-data" class="registration-main-form" id="onlineRegForm" onsubmit="event.preventDefault(); alert('Registration submitted successfully! Our admissions counselor will contact you shortly.');">
                 
                 <!-- =============================================================
                      STEP 1 PANEL: GENERAL DETAILS & PREVIOUS EDUCATION
@@ -811,8 +812,367 @@ require_once __DIR__ . '/includes/header.php';
                             <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
                             <span>Back to Previous</span>
                         </button>
-                        <button type="submit" class="reg-btn-continue">
+                        <button type="button" class="reg-btn-continue" onclick="switchRegStep(3)">
                             <span>Continue</span>
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- =============================================================
+                     STEP 3 PANEL: CONTACT DETAILS
+                     ============================================================= -->
+                <div class="reg-step-panel" id="regStepPanel3">
+
+                    <div class="reg-section-block">
+                        <div class="reg-section-head">
+                            <div class="reg-section-icon" aria-hidden="true">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h2 class="reg-section-title">Contact Details</h2>
+                                <p class="reg-section-sub">Please provide the contact information of the parent/guardian for further communication.</p>
+                            </div>
+                        </div>
+
+                        <!-- Row 1: Guardian Name & Guardian Phone -->
+                        <div class="reg-grid-row two-cols">
+                            <div class="reg-field-group">
+                                <label for="regGuardName" class="reg-field-label">Guardian Name <span class="req">*</span></label>
+                                <div class="reg-input-wrap">
+                                    <i class="fa-regular fa-user reg-input-icon" aria-hidden="true"></i>
+                                    <input type="text" id="regGuardName" name="guardian_name" class="reg-input-control" placeholder="Enter guardian's full name">
+                                </div>
+                            </div>
+
+                            <div class="reg-field-group">
+                                <label for="regGuardPhone" class="reg-field-label">Guardian Phone <span class="req">*</span></label>
+                                <div class="reg-input-wrap">
+                                    <i class="fa-solid fa-phone reg-input-icon" aria-hidden="true"></i>
+                                    <input type="tel" id="regGuardPhone" name="guardian_phone" class="reg-input-control" placeholder="Enter phone number">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Row 2: Relationship with Guardian & Guardian Email -->
+                        <div class="reg-grid-row two-cols">
+                            <div class="reg-field-group">
+                                <label for="regGuardRel" class="reg-field-label">Relationship with Guardian <span class="req">*</span></label>
+                                <div class="reg-input-wrap">
+                                    <i class="fa-solid fa-user-group reg-input-icon" aria-hidden="true"></i>
+                                    <input type="text" id="regGuardRel" name="guardian_relationship" class="reg-input-control" placeholder="E.g. Father, Mother, Grandparent, etc.">
+                                </div>
+                            </div>
+
+                            <div class="reg-field-group">
+                                <label for="regGuardEmail" class="reg-field-label">Guardian Email <span class="req">*</span></label>
+                                <div class="reg-input-wrap">
+                                    <i class="fa-regular fa-envelope reg-input-icon" aria-hidden="true"></i>
+                                    <input type="email" id="regGuardEmail" name="guardian_email" class="reg-input-control" placeholder="Enter email address">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Row 3: Present Address & Permanent Address -->
+                        <div class="reg-grid-row two-cols">
+                            <div class="reg-field-group">
+                                <label for="regPresentAddress" class="reg-field-label">Present Address <span class="req">*</span></label>
+                                <div class="reg-input-wrap">
+                                    <i class="fa-solid fa-house reg-input-icon" style="top: 16px;" aria-hidden="true"></i>
+                                    <textarea id="regPresentAddress" name="present_address" class="reg-input-control" placeholder="Enter complete present address" rows="2"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="reg-field-group">
+                                <label for="regPermAddress" class="reg-field-label">Permanent Address</label>
+                                <div class="reg-input-wrap">
+                                    <i class="fa-solid fa-house reg-input-icon" style="top: 16px;" aria-hidden="true"></i>
+                                    <textarea id="regPermAddress" name="permanent_address" class="reg-input-control" placeholder="Enter complete permanent address (if different from present address)" rows="2"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Row 4: City & State -->
+                        <div class="reg-grid-row two-cols">
+                            <div class="reg-field-group">
+                                <label for="regCity" class="reg-field-label">City <span class="req">*</span></label>
+                                <div class="reg-input-wrap">
+                                    <i class="fa-solid fa-city reg-input-icon" aria-hidden="true"></i>
+                                    <input type="text" id="regCity" name="city" class="reg-input-control" placeholder="Enter city">
+                                </div>
+                            </div>
+
+                            <div class="reg-field-group">
+                                <label for="regState" class="reg-field-label">State <span class="req">*</span></label>
+                                <div class="reg-input-wrap">
+                                    <i class="fa-solid fa-location-dot reg-input-icon" aria-hidden="true"></i>
+                                    <select id="regState" name="state" class="reg-input-control">
+                                        <option value="" disabled selected>Select state</option>
+                                        <option value="Maharashtra" selected>Maharashtra</option>
+                                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                        <option value="Delhi">Delhi</option>
+                                        <option value="Goa">Goa</option>
+                                        <option value="Gujarat">Gujarat</option>
+                                        <option value="Karnataka">Karnataka</option>
+                                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                        <option value="Rajasthan">Rajasthan</option>
+                                        <option value="Tamil Nadu">Tamil Nadu</option>
+                                        <option value="Telangana">Telangana</option>
+                                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Row 5: Country & PIN / ZIP Code -->
+                        <div class="reg-grid-row two-cols">
+                            <div class="reg-field-group">
+                                <label for="regCountry" class="reg-field-label">Country <span class="req">*</span></label>
+                                <div class="reg-input-wrap">
+                                    <i class="fa-solid fa-globe reg-input-icon" aria-hidden="true"></i>
+                                    <select id="regCountry" name="country" class="reg-input-control">
+                                        <option value="" disabled selected>Select country</option>
+                                        <option value="India" selected>India</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="reg-field-group">
+                                <label for="regPincode" class="reg-field-label">PIN / ZIP Code <span class="req">*</span></label>
+                                <div class="reg-input-wrap">
+                                    <i class="fa-regular fa-envelope reg-input-icon" aria-hidden="true"></i>
+                                    <input type="text" id="regPincode" name="pincode" class="reg-input-control" placeholder="Enter PIN / ZIP code">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Row 6: Mobile Number & Landline / Home Phone -->
+                        <div class="reg-grid-row two-cols">
+                            <div class="reg-field-group">
+                                <label for="regMobile" class="reg-field-label">Mobile Number <span class="req">*</span></label>
+                                <div class="reg-input-wrap">
+                                    <i class="fa-solid fa-mobile-screen-button reg-input-icon" aria-hidden="true"></i>
+                                    <input type="tel" id="regMobile" name="mobile_number" class="reg-input-control" placeholder="Enter mobile number">
+                                </div>
+                            </div>
+
+                            <div class="reg-field-group">
+                                <label for="regLandline" class="reg-field-label">Landline / Home Phone (Optional)</label>
+                                <div class="reg-input-wrap">
+                                    <i class="fa-solid fa-phone reg-input-icon" aria-hidden="true"></i>
+                                    <input type="tel" id="regLandline" name="landline_number" class="reg-input-control" placeholder="Enter landline number (if any)">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 Actions Bar: Back & Continue -->
+                    <div class="reg-actions-bar space-between">
+                        <button type="button" class="reg-btn-back" onclick="switchRegStep(2)">
+                            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                            <span>Back to Previous</span>
+                        </button>
+                        <button type="button" class="reg-btn-continue" onclick="switchRegStep(4)">
+                            <span>Continue</span>
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- =============================================================
+                     STEP 4 PANEL: UPLOAD DOCUMENTS
+                     ============================================================= -->
+                <div class="reg-step-panel" id="regStepPanel4">
+
+                    <div class="reg-section-block">
+                        <div class="reg-section-head">
+                            <div class="reg-section-icon" aria-hidden="true">
+                                <i class="fa-solid fa-file-arrow-up"></i>
+                            </div>
+                            <div>
+                                <h2 class="reg-section-title">Upload Documents</h2>
+                                <p class="reg-section-sub">Please upload the required documents for verification. Accepted file formats: PDF, JPG, PNG (Max size: 5 MB each).</p>
+                            </div>
+                        </div>
+
+                        <!-- Documents Upload Table -->
+                        <div class="docs-table-wrapper">
+                            <table class="docs-table">
+                                <thead>
+                                    <tr>
+                                        <th>Document Type</th>
+                                        <th>Reference Number (if any)</th>
+                                        <th>Upload File</th>
+                                        <th>Preview</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Row 1: Marksheet -->
+                                    <tr>
+                                        <td>
+                                            <div class="doc-type-box">
+                                                <div class="doc-type-icon blue" aria-hidden="true">
+                                                    <i class="fa-regular fa-file-lines"></i>
+                                                </div>
+                                                <div class="doc-type-text">
+                                                    <span class="doc-type-name">Marksheet <span class="req">*</span></span>
+                                                    <span class="doc-type-sub">(Last class attended)</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <input type="text" name="marksheet_ref" class="doc-ref-input" placeholder="Enter reference number (if any)">
+                                        </td>
+                                        <td>
+                                            <div class="doc-upload-cell">
+                                                <label class="btn-choose-file">
+                                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                                    <span>Choose File</span>
+                                                    <input type="file" name="doc_marksheet" style="display:none;" onchange="handleFileSelect(this, 'marksheet_status', 'marksheet_preview')">
+                                                </label>
+                                                <span class="file-status-text" id="marksheet_status">No file chosen</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="doc-preview-cell" id="marksheet_preview">
+                                                <i class="fa-regular fa-file-lines"></i>
+                                                <span>No file selected</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <!-- Row 2: Transfer Certificate -->
+                                    <tr>
+                                        <td>
+                                            <div class="doc-type-box">
+                                                <div class="doc-type-icon mint" aria-hidden="true">
+                                                    <i class="fa-solid fa-file-shield"></i>
+                                                </div>
+                                                <div class="doc-type-text">
+                                                    <span class="doc-type-name">Transfer Certificate (T.C) <span class="req">*</span></span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <input type="text" name="tc_ref" class="doc-ref-input" placeholder="Enter reference number (if any)">
+                                        </td>
+                                        <td>
+                                            <div class="doc-upload-cell">
+                                                <label class="btn-choose-file">
+                                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                                    <span>Choose File</span>
+                                                    <input type="file" name="doc_tc" style="display:none;" onchange="handleFileSelect(this, 'tc_status', 'tc_preview')">
+                                                </label>
+                                                <span class="file-status-text" id="tc_status">No file chosen</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="doc-preview-cell" id="tc_preview">
+                                                <i class="fa-regular fa-file-lines"></i>
+                                                <span>No file selected</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <!-- Row 3: Student Photograph -->
+                                    <tr>
+                                        <td>
+                                            <div class="doc-type-box">
+                                                <div class="doc-type-icon purple" aria-hidden="true">
+                                                    <i class="fa-solid fa-user"></i>
+                                                </div>
+                                                <div class="doc-type-text">
+                                                    <span class="doc-type-name">Student Photograph <span class="req">*</span></span>
+                                                    <span class="doc-type-sub">(Passport size, recent)</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <input type="text" name="photo_ref" class="doc-ref-input" placeholder="Enter reference number (if any)">
+                                        </td>
+                                        <td>
+                                            <div class="doc-upload-cell">
+                                                <label class="btn-choose-file">
+                                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                                    <span>Choose File</span>
+                                                    <input type="file" name="doc_photo" accept="image/*" style="display:none;" onchange="handleFileSelect(this, 'photo_status', 'photo_preview')">
+                                                </label>
+                                                <span class="file-status-text" id="photo_status">No file chosen</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="doc-preview-cell" id="photo_preview">
+                                                <i class="fa-regular fa-file-lines"></i>
+                                                <span>No file selected</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <!-- Row 4: Eligibility Certificate -->
+                                    <tr>
+                                        <td>
+                                            <div class="doc-type-box">
+                                                <div class="doc-type-icon teal" aria-hidden="true">
+                                                    <i class="fa-solid fa-certificate"></i>
+                                                </div>
+                                                <div class="doc-type-text">
+                                                    <span class="doc-type-name">Eligibility Certificate</span>
+                                                    <span class="doc-type-sub">(If applicable)</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <input type="text" name="eligibility_ref" class="doc-ref-input" placeholder="Enter reference number (if any)">
+                                        </td>
+                                        <td>
+                                            <div class="doc-upload-cell">
+                                                <label class="btn-choose-file">
+                                                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                                                    <span>Choose File</span>
+                                                    <input type="file" name="doc_eligibility" style="display:none;" onchange="handleFileSelect(this, 'eligibility_status', 'eligibility_preview')">
+                                                </label>
+                                                <span class="file-status-text" id="eligibility_status">No file chosen</span>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="doc-preview-cell" id="eligibility_preview">
+                                                <i class="fa-regular fa-file-lines"></i>
+                                                <span>No file selected</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <!-- Important Guidelines Box -->
+                        <div class="docs-guidelines-box">
+                            <div class="docs-guide-icon" aria-hidden="true">
+                                <i class="fa-solid fa-circle-info"></i>
+                            </div>
+                            <div class="docs-guide-content">
+                                <div class="docs-guide-title">Important Guidelines:</div>
+                                <ul class="docs-guide-list">
+                                    <li>Please upload clear, legible and original documents.</li>
+                                    <li>Accepted file formats: PDF, JPG, PNG (Max size: 5 MB each).</li>
+                                    <li>Documents will be verified by our admissions team. You may be contacted if any additional documents are required.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 Actions Bar: Back & Submit Registration -->
+                    <div class="reg-actions-bar space-between">
+                        <button type="button" class="reg-btn-back" onclick="switchRegStep(3)">
+                            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+                            <span>Back to Previous</span>
+                        </button>
+                        <button type="submit" class="reg-btn-submit-final">
+                            <span>Submit Registration</span>
                             <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                         </button>
                     </div>
@@ -870,45 +1230,43 @@ require_once __DIR__ . '/includes/header.php';
 
 <script>
 /**
- * Switch Registration Step in the same form
- * @param {number} stepNumber - 1 (General Details) or 2 (Personal Details)
+ * Switch Registration Step across all 4 steps in the same form
+ * @param {number} stepNumber - 1 (General), 2 (Personal), 3 (Contact), 4 (Documents)
  */
 function switchRegStep(stepNumber) {
-    var panel1 = document.getElementById('regStepPanel1');
-    var panel2 = document.getElementById('regStepPanel2');
-    var tab1 = document.getElementById('stepperTab1');
-    var tab2 = document.getElementById('stepperTab2');
-    var conn1 = document.getElementById('connector1');
+    // Panels
+    for (var i = 1; i <= 4; i++) {
+        var panel = document.getElementById('regStepPanel' + i);
+        var tab = document.getElementById('stepperTab' + i);
+        
+        if (panel) {
+            if (i === stepNumber) {
+                panel.classList.add('active');
+            } else {
+                panel.classList.remove('active');
+            }
+        }
 
-    if (stepNumber === 2) {
-        if (panel1 && panel2) {
-            panel1.classList.remove('active');
-            panel2.classList.add('active');
+        if (tab) {
+            tab.classList.remove('active');
+            tab.classList.remove('completed');
+            if (i === stepNumber) {
+                tab.classList.add('active');
+            } else if (i < stepNumber) {
+                tab.classList.add('completed');
+            }
         }
-        if (tab1) {
-            tab1.classList.remove('active');
-            tab1.classList.add('completed');
-        }
-        if (tab2) {
-            tab2.classList.add('active');
-        }
-        if (conn1) {
-            conn1.classList.add('active');
-        }
-    } else {
-        if (panel1 && panel2) {
-            panel2.classList.remove('active');
-            panel1.classList.add('active');
-        }
-        if (tab1) {
-            tab1.classList.add('active');
-            tab1.classList.remove('completed');
-        }
-        if (tab2) {
-            tab2.classList.remove('active');
-        }
-        if (conn1) {
-            conn1.classList.remove('active');
+    }
+
+    // Connectors
+    for (var c = 1; c <= 3; c++) {
+        var conn = document.getElementById('connector' + c);
+        if (conn) {
+            if (c < stepNumber) {
+                conn.classList.add('active');
+            } else {
+                conn.classList.remove('active');
+            }
         }
     }
 
@@ -916,6 +1274,26 @@ function switchRegStep(stepNumber) {
     var container = document.getElementById('registrationFormContainer');
     if (container) {
         container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+
+/**
+ * Handle File Selection display for Step 4
+ */
+function handleFileSelect(input, statusId, previewId) {
+    if (input.files && input.files[0]) {
+        var fileName = input.files[0].name;
+        var statusEl = document.getElementById(statusId);
+        var previewEl = document.getElementById(previewId);
+        
+        if (statusEl) {
+            statusEl.textContent = fileName;
+            statusEl.style.color = '#059669';
+            statusEl.style.fontWeight = '600';
+        }
+        if (previewEl) {
+            previewEl.innerHTML = '<i class="fa-solid fa-file-circle-check" style="color: #059669;"></i> <span style="color: #059669; font-weight: 600;">' + fileName + '</span>';
+        }
     }
 }
 </script>
