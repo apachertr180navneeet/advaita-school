@@ -57,7 +57,7 @@
                         <li><a href="index.php#neet-iit" class="adv-footer-link">MSIT-710 Foundation</a></li>
                         <li><a href="index.php#admissions" class="adv-footer-link">Admissions</a></li>
                         <li><a href="index.php#campus-life" class="adv-footer-link">Campus Life</a></li>
-                        <li><a href="index.php#facilities" class="adv-footer-link">Facilities</a></li>
+                        <li><a href="facilities.php" class="adv-footer-link">Facilities</a></li>
                         <li><a href="index.php#gallery" class="adv-footer-link">Gallery</a></li>
                         <li><a href="contact.php" class="adv-footer-link">Contact Us</a></li>
                         <li><a href="mandatory-disclosure.php" class="adv-footer-link">Mandatory Public Disclosure</a></li>

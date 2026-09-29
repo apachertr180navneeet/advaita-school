@@ -141,7 +141,7 @@ $currentPage = $activePage ?? '';
                         </a>
                     </li>
                     <li class="adv-nav-item <?php echo ($currentPage === 'facilities') ? 'active' : ''; ?>">
-                        <a href="index.php#facilities" class="adv-nav-link">
+                        <a href="facilities.php" class="adv-nav-link">
                             <span>Facilities</span>
                         </a>
                     </li>
@@ -292,8 +292,8 @@ $currentPage = $activePage ?? '';
             </a>
         </li>
 
-        <li class="adv-mobile-item">
-            <a href="index.php#facilities" class="adv-mobile-link">
+        <li class="adv-mobile-item <?php echo ($currentPage === 'facilities') ? 'active' : ''; ?>">
+            <a href="facilities.php" class="adv-mobile-link">
                 <span class="adv-mobile-link-text">
                     <i class="fa-solid fa-school"></i>
                     <span>Facilities</span>
