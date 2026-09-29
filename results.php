@@ -28,8 +28,6 @@ require_once __DIR__ . '/includes/header.php';
                     <nav class="results-breadcrumb" aria-label="Breadcrumb">
                         <a href="index.php">Home</a>
                         <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
-                        <a href="academics.php">Programmes</a>
-                        <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
                         <span class="active">Results</span>
                     </nav>
 

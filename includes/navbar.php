@@ -113,12 +113,6 @@ $currentPage = $activePage ?? '';
                             </li>
                         </ul>
                     </li>
-
-                    <li class="adv-nav-item <?php echo ($currentPage === 'neet-iit') ? 'active' : ''; ?>">
-                        <a href="index.php#neet-iit" class="adv-nav-link">
-                            <span>NEET / IIT Foundation</span>
-                        </a>
-                    </li>
                 </ul>
             </div>
 
@@ -171,11 +165,6 @@ $currentPage = $activePage ?? '';
                                 </a>
                             </li>
                         </ul>
-                    </li>
-                    <li class="adv-nav-item <?php echo ($currentPage === 'campus-life') ? 'active' : ''; ?>">
-                        <a href="index.php#campus-life" class="adv-nav-link">
-                            <span>Campus Life</span>
-                        </a>
                     </li>
                     <li class="adv-nav-item <?php echo ($currentPage === 'facilities') ? 'active' : ''; ?>">
                         <a href="facilities.php" class="adv-nav-link">
@@ -317,15 +306,6 @@ $currentPage = $activePage ?? '';
             </ul>
         </li>
 
-        <li class="adv-mobile-item">
-            <a href="index.php#neet-iit" class="adv-mobile-link">
-                <span class="adv-mobile-link-text">
-                    <i class="fa-solid fa-atom"></i>
-                    <span>NEET / IIT Foundation</span>
-                </span>
-            </a>
-        </li>
-
         <li class="adv-mobile-item has-children <?php echo ($currentPage === 'admissions' || $currentPage === 'admission-info' || $currentPage === 'online-registration' || $currentPage === 'fee-structure') ? 'is-active' : ''; ?>">
             <a href="#" class="adv-mobile-link" role="button" aria-expanded="false">
                 <span class="adv-mobile-link-text">
@@ -354,15 +334,6 @@ $currentPage = $activePage ?? '';
                     </a>
                 </li>
             </ul>
-        </li>
-
-        <li class="adv-mobile-item">
-            <a href="index.php#campus-life" class="adv-mobile-link">
-                <span class="adv-mobile-link-text">
-                    <i class="fa-solid fa-users"></i>
-                    <span>Campus Life</span>
-                </span>
-            </a>
         </li>
 
         <li class="adv-mobile-item <?php echo ($currentPage === 'facilities') ? 'active' : ''; ?>">

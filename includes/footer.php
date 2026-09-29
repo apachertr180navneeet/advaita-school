@@ -55,11 +55,8 @@
                         <li><a href="our-staff.php" class="adv-footer-link">Our Faculty</a></li>
                         <li><a href="academics.php" class="adv-footer-link">Academics</a></li>
                         <li><a href="results.php" class="adv-footer-link">Board Results</a></li>
-                        <li><a href="index.php#neet-iit" class="adv-footer-link">NEET / IIT Foundation</a></li>
                         <li><a href="admission-info.php" class="adv-footer-link">Admissions</a></li>
-                        <li><a href="index.php#campus-life" class="adv-footer-link">Campus Life</a></li>
                         <li><a href="facilities.php" class="adv-footer-link">Facilities</a></li>
-                        <li><a href="index.php#gallery" class="adv-footer-link">Gallery</a></li>
                         <li><a href="contact.php" class="adv-footer-link">Contact Us</a></li>
                         <li><a href="mandatory-disclosure.php" class="adv-footer-link">Mandatory Public Disclosure</a></li>
                     </ul>
@@ -69,16 +66,11 @@
                 <div class="adv-footer-col">
                     <h3 class="adv-footer-col-title">Quick Links</h3>
                     <ul class="adv-footer-links-list">
-                        <li><a href="admission-info.php#admission-process" class="adv-footer-link">Admission Process</a></li>
+                        <li><a href="admission-info.php" class="adv-footer-link">Admission Info</a></li>
                         <li><a href="online-registration.php" class="adv-footer-link">Online Registration</a></li>
                         <li><a href="fee-structure.php" class="adv-footer-link">Fee Structure</a></li>
                         <li><a href="mandatory-disclosure.php" class="adv-footer-link">Mandatory Disclosure</a></li>
-                        <li><a href="index.php#academics" class="adv-footer-link">Academic Calendar</a></li>
-                        <li><a href="about-us.php" class="adv-footer-link">School Policies</a></li>
-                        <li><a href="index.php" class="adv-footer-link">Downloads</a></li>
                         <li><a href="contact.php#campus-map" class="adv-footer-link">Campus Map &amp; Visit</a></li>
-                        <li><a href="about-us.php" class="adv-footer-link">Career</a></li>
-                        <li><a href="about-us.php" class="adv-footer-link">Alumni</a></li>
                     </ul>
                 </div>
 
