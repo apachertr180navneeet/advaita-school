@@ -5,7 +5,7 @@
  * CBSE Affiliated (Affiliation No. 1130920)
  * Clean Semantic HTML - Header and Footer Preserved
  */
-$pageTitle = "Contact Us - Advaita School of Excellence | We'd Love to Hear From You";
+$pageTitle = "Contact Us - Advaita School of Excellence, Parbhani | We'd Love to Hear From You";
 $activePage = "contact";
 
 require_once __DIR__ . '/includes/header.php';
@@ -94,11 +94,11 @@ require_once __DIR__ . '/includes/header.php';
                         </div>
                         <div class="quick-card-info">
                             <span class="quick-card-label">Call Us</span>
-                            <a href="tel:09413062851" class="quick-card-value">094130 62851</a>
-                            <span class="quick-card-meta">Mon – Sat | 8:00 AM – 5:00 PM</span>
+                            <a href="tel:+919876543210" class="quick-card-value">+91 98765 43210</a>
+                            <span class="quick-card-meta">Mon – Sat | 8:00 AM – 3:00 PM</span>
                         </div>
                     </div>
-                    <a href="tel:09413062851" class="quick-card-btn btn-orange" aria-label="Call admissions at 094130 62851">
+                    <a href="tel:+919876543210" class="quick-card-btn btn-orange" aria-label="Call admissions at +91 98765 43210">
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
@@ -111,11 +111,11 @@ require_once __DIR__ . '/includes/header.php';
                         </div>
                         <div class="quick-card-info">
                             <span class="quick-card-label">WhatsApp</span>
-                            <a href="https://wa.me/919413062851" target="_blank" rel="noopener noreferrer" class="quick-card-value">Chat with us</a>
+                            <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" class="quick-card-value">Chat with us</a>
                             <span class="quick-card-meta">Reply within minutes</span>
                         </div>
                     </div>
-                    <a href="https://wa.me/919413062851" target="_blank" rel="noopener noreferrer" class="quick-card-btn btn-green" aria-label="Chat with school admissions on WhatsApp">
+                    <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" class="quick-card-btn btn-green" aria-label="Chat with school admissions on WhatsApp">
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
@@ -128,11 +128,11 @@ require_once __DIR__ . '/includes/header.php';
                         </div>
                         <div class="quick-card-info">
                             <span class="quick-card-label">Email Us</span>
-                            <a href="mailto:info@pisjodhpur.com" class="quick-card-value">info@pisjodhpur.com</a>
+                            <a href="mailto:info@advaitaschool.edu.in" class="quick-card-value">info@advaitaschool.edu.in</a>
                             <span class="quick-card-meta">Reply in a working day</span>
                         </div>
                     </div>
-                    <a href="mailto:info@pisjodhpur.com" class="quick-card-btn btn-purple" aria-label="Send an email to info@pisjodhpur.com">
+                    <a href="mailto:info@advaitaschool.edu.in" class="quick-card-btn btn-purple" aria-label="Send an email to info@advaitaschool.edu.in">
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
@@ -186,9 +186,9 @@ require_once __DIR__ . '/includes/header.php';
                             <div class="channel-content">
                                 <span class="channel-title">Campus Address</span>
                                 <p class="channel-text">
-                                    Plot no 3, Laxmi Vihar Rd, Basni First Phase, Sector-C, Basni, Jodhpur, Rajasthan 342005
+                                    Sanmati Campus, Near Highway Ring Road, Parbhani, Maharashtra – 431401
                                 </p>
-                                <a href="https://maps.google.com/?q=Advaita+School+of+Excellence+Basni+Jodhpur" target="_blank" rel="noopener noreferrer" class="channel-link orange-link">
+                                <a href="https://www.google.com/maps/place/Advaita+School+of+Excellence/@19.2634,76.7749,17z/" target="_blank" rel="noopener noreferrer" class="channel-link orange-link">
                                     <span>View on Google Maps</span>
                                     <i class="fa-solid fa-arrow-right"></i>
                                 </a>
@@ -202,8 +202,8 @@ require_once __DIR__ . '/includes/header.php';
                             </div>
                             <div class="channel-content">
                                 <span class="channel-title">Phone &amp; Admissions</span>
-                                <a href="tel:09413062851" class="channel-highlight-phone">094130 62851</a>
-                                <span class="channel-time-sub">Mon – Sat: 8:00 AM – 5:00 PM</span>
+                                <a href="tel:+919876543210" class="channel-highlight-phone">+91 98765 43210 / 02452-224455</a>
+                                <span class="channel-time-sub">Mon – Sat: 8:00 AM – 3:00 PM</span>
                             </div>
                         </div>
 
@@ -214,7 +214,7 @@ require_once __DIR__ . '/includes/header.php';
                             </div>
                             <div class="channel-content">
                                 <span class="channel-title">Email Us</span>
-                                <a href="mailto:info@pisjodhpur.com" class="channel-highlight-email">info@pisjodhpur.com</a>
+                                <a href="mailto:info@advaitaschool.edu.in" class="channel-highlight-email">info@advaitaschool.edu.in</a>
                                 <span class="channel-time-sub">For admissions, academics or partnerships</span>
                             </div>
                         </div>
@@ -227,7 +227,7 @@ require_once __DIR__ . '/includes/header.php';
                             <div class="channel-content">
                                 <span class="channel-title">School Timings</span>
                                 <span class="channel-highlight-time">Monday – Saturday</span>
-                                <span class="channel-time-sub">8:00 AM – 4:00 PM</span>
+                                <span class="channel-time-sub">8:00 AM – 3:00 PM</span>
                             </div>
                         </div>
 
@@ -369,7 +369,7 @@ require_once __DIR__ . '/includes/header.php';
     <section class="contact-map-section" id="campus-map">
         <div class="contact-map-container">
             <div class="contact-map-header text-center">
-                <span class="contact-sub-eyebrow">— FIND US IN JODHPUR —</span>
+                <span class="contact-sub-eyebrow">— FIND US IN PARBHANI —</span>
                 <h2 class="contact-section-heading">
                     Come see the school <span class="contact-highlight-serif">in person.</span>
                 </h2>
@@ -380,14 +380,14 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Google Maps Embed -->
                 <iframe 
                     class="contact-google-map-iframe"
-                    src="https://maps.google.com/maps?q=Plot+no+3,+Laxmi+Vihar+Rd,+Basni+First+Phase,+Sector-C,+Basni,+Jodhpur,+Rajasthan+342005&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                    src="https://maps.google.com/maps?q=Advaita+School+of+Excellence,+Parbhani&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                     width="100%" 
                     height="100%" 
                     style="border:0;" 
                     allowfullscreen="" 
                     loading="lazy" 
                     referrerpolicy="no-referrer-when-downgrade"
-                    title="Advaita School of Excellence Jodhpur Location Map">
+                    title="Advaita School of Excellence Parbhani Location Map">
                 </iframe>
 
                 <!-- Floating School Information Card (Top-Left) -->
@@ -403,7 +403,7 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
 
                     <p class="map-card-address">
-                        Plot no 3, Laxmi Vihar Rd, Basni First Phase, Sector-C, Basni, Jodhpur, Rajasthan 342005
+                        Sanmati Campus, Near Highway Ring Road, Parbhani, Maharashtra – 431401
                     </p>
 
                     <div class="map-card-review-bar">
@@ -417,7 +417,7 @@ require_once __DIR__ . '/includes/header.php';
                         </div>
                     </div>
 
-                    <a href="https://maps.google.com/?q=Advaita+School+of+Excellence+Basni+Jodhpur" target="_blank" rel="noopener noreferrer" class="map-card-expand-link">
+                    <a href="https://www.google.com/maps/place/Advaita+School+of+Excellence/@19.2634,76.7749,17z/" target="_blank" rel="noopener noreferrer" class="map-card-expand-link">
                         <span>View larger map</span>
                         <i class="fa-solid fa-arrow-up-right-from-square"></i>
                     </a>
@@ -425,7 +425,7 @@ require_once __DIR__ . '/includes/header.php';
 
                 <!-- Floating Get Directions Button (Bottom-Right) -->
                 <div class="map-floating-action">
-                    <a href="https://www.google.com/maps/dir//Advaita+School+of+Excellence+Basni+Jodhpur" target="_blank" rel="noopener noreferrer" class="map-directions-btn">
+                    <a href="https://www.google.com/maps/dir//Advaita+School+of+Excellence,+Parbhani/@19.2634,76.7749,17z/" target="_blank" rel="noopener noreferrer" class="map-directions-btn">
                         <span>Get Directions</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
@@ -461,12 +461,12 @@ require_once __DIR__ . '/includes/header.php';
 
                 <!-- Center Action Buttons -->
                 <div class="contact-cta-buttons-wrap">
-                    <a href="tel:09413062851" class="cta-action-btn cta-btn-call">
+                    <a href="tel:+919876543210" class="cta-action-btn cta-btn-call">
                         <i class="fa-solid fa-phone"></i>
                         <span>Call the Admissions Team</span>
                     </a>
 
-                    <a href="https://wa.me/919413062851" target="_blank" rel="noopener noreferrer" class="cta-action-btn cta-btn-whatsapp">
+                    <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" class="cta-action-btn cta-btn-whatsapp">
                         <i class="fa-brands fa-whatsapp"></i>
                         <span>Chat on WhatsApp</span>
                     </a>
