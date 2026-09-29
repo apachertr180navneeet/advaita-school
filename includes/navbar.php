@@ -93,7 +93,7 @@ $currentPage = $activePage ?? '';
                     </li>
 
                     <!-- Programmes Dropdown Menu -->
-                    <li class="adv-nav-item has-dropdown <?php echo ($currentPage === 'programmes' || $currentPage === 'academics') ? 'active' : ''; ?>">
+                    <li class="adv-nav-item has-dropdown <?php echo ($currentPage === 'programmes' || $currentPage === 'academics' || $currentPage === 'results') ? 'active' : ''; ?>">
                         <a href="academics.php" class="adv-nav-link" aria-haspopup="true" aria-expanded="false">
                             <span>Programmes</span>
                             <i class="fa-solid fa-chevron-down chevron-icon"></i>
@@ -103,6 +103,12 @@ $currentPage = $activePage ?? '';
                                 <a href="academics.php" class="adv-dropdown-link <?php echo ($currentPage === 'academics') ? 'active' : ''; ?>">
                                     <i class="fa-solid fa-graduation-cap"></i>
                                     <span>Academics</span>
+                                </a>
+                            </li>
+                            <li class="adv-dropdown-item">
+                                <a href="results.php" class="adv-dropdown-link <?php echo ($currentPage === 'results') ? 'active' : ''; ?>">
+                                    <i class="fa-solid fa-square-poll-vertical"></i>
+                                    <span>Results</span>
                                 </a>
                             </li>
                         </ul>
@@ -287,7 +293,7 @@ $currentPage = $activePage ?? '';
             </ul>
         </li>
 
-        <li class="adv-mobile-item has-children <?php echo ($currentPage === 'programmes' || $currentPage === 'academics') ? 'is-active' : ''; ?>">
+        <li class="adv-mobile-item has-children <?php echo ($currentPage === 'programmes' || $currentPage === 'academics' || $currentPage === 'results') ? 'is-active' : ''; ?>">
             <a href="#" class="adv-mobile-link" role="button" aria-expanded="false">
                 <span class="adv-mobile-link-text">
                     <i class="fa-solid fa-book-open-reader"></i>
@@ -300,6 +306,12 @@ $currentPage = $activePage ?? '';
                     <a href="academics.php" class="adv-mobile-submenu-link <?php echo ($currentPage === 'academics') ? 'active' : ''; ?>">
                         <i class="fa-solid fa-graduation-cap"></i>
                         <span>Academics</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="results.php" class="adv-mobile-submenu-link <?php echo ($currentPage === 'results') ? 'active' : ''; ?>">
+                        <i class="fa-solid fa-square-poll-vertical"></i>
+                        <span>Results</span>
                     </a>
                 </li>
             </ul>

@@ -54,6 +54,7 @@
                         <li><a href="principals-desk.php" class="adv-footer-link">Principal's Message</a></li>
                         <li><a href="our-staff.php" class="adv-footer-link">Our Faculty</a></li>
                         <li><a href="academics.php" class="adv-footer-link">Academics</a></li>
+                        <li><a href="results.php" class="adv-footer-link">Board Results</a></li>
                         <li><a href="index.php#neet-iit" class="adv-footer-link">NEET / IIT Foundation</a></li>
                         <li><a href="admission-info.php" class="adv-footer-link">Admissions</a></li>
                         <li><a href="index.php#campus-life" class="adv-footer-link">Campus Life</a></li>
