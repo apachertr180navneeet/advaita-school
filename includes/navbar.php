@@ -130,10 +130,19 @@ $currentPage = $activePage ?? '';
             <!-- Right Desktop Menu -->
             <div class="adv-nav-section adv-nav-section-right">
                 <ul class="adv-nav-menu adv-nav-menu-right">
-                    <li class="adv-nav-item <?php echo ($currentPage === 'admissions') ? 'active' : ''; ?>">
-                        <a href="index.php#admissions" class="adv-nav-link">
+                    <li class="adv-nav-item has-dropdown <?php echo ($currentPage === 'admissions' || $currentPage === 'admission-info') ? 'active' : ''; ?>">
+                        <a href="admission-info.php" class="adv-nav-link" aria-haspopup="true" aria-expanded="false">
                             <span>Admissions</span>
+                            <i class="fa-solid fa-chevron-down chevron-icon"></i>
                         </a>
+                        <ul class="adv-dropdown">
+                            <li class="adv-dropdown-item">
+                                <a href="admission-info.php" class="adv-dropdown-link <?php echo ($currentPage === 'admission-info') ? 'active' : ''; ?>">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span>Admission Info</span>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                     <li class="adv-nav-item <?php echo ($currentPage === 'campus-life') ? 'active' : ''; ?>">
                         <a href="index.php#campus-life" class="adv-nav-link">
@@ -274,13 +283,22 @@ $currentPage = $activePage ?? '';
             </a>
         </li>
 
-        <li class="adv-mobile-item">
-            <a href="index.php#admissions" class="adv-mobile-link">
+        <li class="adv-mobile-item has-children <?php echo ($currentPage === 'admissions' || $currentPage === 'admission-info') ? 'is-active' : ''; ?>">
+            <a href="#" class="adv-mobile-link" role="button" aria-expanded="false">
                 <span class="adv-mobile-link-text">
                     <i class="fa-solid fa-graduation-cap"></i>
                     <span>Admissions</span>
                 </span>
+                <i class="fa-solid fa-chevron-down adv-mobile-chevron"></i>
             </a>
+            <ul class="adv-mobile-submenu">
+                <li>
+                    <a href="admission-info.php" class="adv-mobile-submenu-link <?php echo ($currentPage === 'admission-info') ? 'active' : ''; ?>">
+                        <i class="fa-solid fa-circle-info"></i>
+                        <span>Admission Info</span>
+                    </a>
+                </li>
+            </ul>
         </li>
 
         <li class="adv-mobile-item">

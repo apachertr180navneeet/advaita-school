@@ -6727,5 +6727,753 @@
     }
 }
 
+/* ==========================================================================
+   ADMISSION INFO PAGE STYLES
+   Hero + 5-Step Process + Fee Structure + Uniform & Discipline + CTA Banner
+   ========================================================================== */
+.admission-page-wrapper {
+    background-color: #f8fafc;
+    padding-bottom: 60px;
+}
+
+/* 1. Admission Hero Section */
+.admission-hero-section {
+    position: relative;
+    width: 100%;
+    background: #ffffff;
+    padding: 10px 10px 0;
+}
+
+.admission-hero-canvas {
+    position: relative;
+    min-height: clamp(380px, 28vw, 440px);
+    display: flex;
+    align-items: stretch;
+    background: #eef6fc;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: var(--adv-radius-xl, 22px);
+    border: 1px solid #e0effa;
+    box-shadow: 0 4px 20px rgba(8, 59, 122, 0.05);
+}
+
+.admission-hero-bg-visual {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 58%;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.admission-hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
+}
+
+.admission-hero-students {
+    position: absolute;
+    right: 30px;
+    bottom: 0;
+    height: 92%;
+    max-width: 480px;
+    z-index: 3;
+    pointer-events: none;
+}
+
+.admission-hero-students img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    object-position: bottom right;
+    display: block;
+    filter: drop-shadow(0 12px 28px rgba(8, 59, 122, 0.16));
+}
+
+.admission-hero-script-tag {
+    position: absolute;
+    top: 14px;
+    right: clamp(16px, 3.5vw, 45px);
+    z-index: 5;
+    text-align: center;
+    transform: rotate(-3deg);
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.admission-hero-script-tag .script-title {
+    font-family: var(--adv-font-script, 'Caveat', cursive);
+    font-size: clamp(1.4rem, 2.3vw, 2.1rem);
+    font-weight: 700;
+    color: #083B7A;
+    line-height: 0.95;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.admission-hero-script-tag .script-underline {
+    width: clamp(75px, 9vw, 115px);
+    margin-top: 2px;
+}
+
+.admission-hero-wave-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.admission-hero-wave-overlay svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.admission-hero-left-panel {
+    position: relative;
+    z-index: 4;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 40px clamp(24px, 4vw, 56px);
+}
+
+.admission-hero-content-inner {
+    max-width: 500px;
+}
+
+.admission-breadcrumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 12px;
+}
+
+.admission-breadcrumb a {
+    color: #083B7A;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.admission-breadcrumb a:hover {
+    color: #F37021;
+}
+
+.admission-breadcrumb .sep {
+    font-size: 0.65rem;
+    color: #94a3b8;
+}
+
+.admission-breadcrumb .active {
+    color: #F37021;
+}
+
+.admission-eyebrow {
+    color: #F37021;
+    font-family: var(--adv-font-sans);
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.admission-hero-title {
+    font-family: var(--adv-font-sans);
+    font-size: clamp(2rem, 3.2vw, 2.75rem);
+    font-weight: 800;
+    color: #083B7A;
+    line-height: 1.15;
+    margin: 0 0 14px;
+}
+
+.admission-hero-title .highlight-serif {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-weight: 600;
+    color: #F37021;
+}
+
+.admission-hero-desc {
+    font-size: clamp(0.92rem, 1.2vw, 1rem);
+    color: #475569;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Common Section Layouts */
+.admission-section-container {
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.admission-section-header {
+    text-align: center;
+    max-width: 740px;
+    margin: 0 auto 38px;
+}
+
+.admission-section-title {
+    font-family: var(--adv-font-sans);
+    font-size: clamp(1.75rem, 2.6vw, 2.35rem);
+    font-weight: 800;
+    color: #083B7A;
+    line-height: 1.2;
+    margin: 6px 0 10px;
+}
+
+.admission-section-title .highlight-serif {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-weight: 600;
+    color: #F37021;
+}
+
+.admission-section-desc {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* 2. Five-Step Admission Process */
+.admission-process-section {
+    padding: 56px 0 20px;
+}
+
+.admission-steps-wrapper {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 12px;
+    position: relative;
+}
+
+.admission-step-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 22px 14px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    box-shadow: 0 4px 14px rgba(8, 59, 122, 0.04);
+    position: relative;
+    transition: all 0.25s ease;
+}
+
+.admission-step-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(8, 59, 122, 0.09);
+    border-color: #cbd5e1;
+}
+
+.step-num-pill {
+    position: absolute;
+    top: 12px;
+    left: 14px;
+    font-size: 0.68rem;
+    font-weight: 800;
+    color: #ea580c;
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    padding: 2px 7px;
+    border-radius: 20px;
+    font-family: var(--adv-font-sans);
+}
+
+.step-icon-circle {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    margin: 8px 0 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+}
+
+.step-icon-circle.orange { background: #fff7ed; color: #ea580c; }
+.step-icon-circle.mint   { background: #ecfdf5; color: #059669; }
+.step-icon-circle.purple { background: #f5f3ff; color: #7c3aed; }
+.step-icon-circle.pink   { background: #fdf2f8; color: #db2777; }
+.step-icon-circle.gold   { background: #fefce8; color: #ca8a04; }
+
+.step-card-title {
+    font-family: var(--adv-font-sans);
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #083B7A;
+    margin: 0 0 6px;
+    line-height: 1.3;
+}
+
+.step-card-desc {
+    font-size: 0.8rem;
+    color: #64748b;
+    line-height: 1.45;
+    margin: 0;
+}
+
+.step-arrow-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.admission-process-note {
+    background: #f0f7ff;
+    border: 1px solid #bae6fd;
+    border-radius: 12px;
+    padding: 12px 18px;
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.88rem;
+    color: #334155;
+}
+
+.admission-process-note i {
+    color: #f59e0b;
+    font-size: 1.15rem;
+    flex-shrink: 0;
+}
+
+/* 3. Transparent Fee Structure Section */
+.admission-fee-section {
+    padding: 48px 0 20px;
+}
+
+.fee-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.fee-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(8, 59, 122, 0.05);
+    overflow: hidden;
+    transition: all 0.25s ease;
+}
+
+.fee-card:hover {
+    box-shadow: 0 10px 28px rgba(8, 59, 122, 0.09);
+    border-color: #cbd5e1;
+}
+
+.fee-card-head {
+    padding: 22px 24px 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.fee-head-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: #eff6ff;
+    color: #0284c7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.fee-head-title {
+    font-family: var(--adv-font-sans);
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #083B7A;
+    margin: 0 0 2px;
+}
+
+.fee-head-sub {
+    font-size: 0.84rem;
+    color: #64748b;
+    margin: 0;
+}
+
+.fee-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.fee-table thead th {
+    background: #f8fafc;
+    color: #475569;
+    font-family: var(--adv-font-sans);
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 12px 24px;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.fee-table thead th.th-amount {
+    text-align: right;
+}
+
+.fee-table tbody td {
+    padding: 13px 24px;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+}
+
+.fee-table tbody td.td-amount {
+    text-align: right;
+    font-weight: 600;
+    color: #1e293b;
+    font-family: var(--adv-font-sans);
+}
+
+.fee-table tbody tr.fee-total-row td {
+    background: #f0f9ff;
+    font-family: var(--adv-font-sans);
+    font-weight: 800;
+    font-size: 1.05rem;
+    color: #0284c7;
+    border-top: 2px solid #bae6fd;
+    border-bottom: none;
+    padding: 16px 24px;
+}
+
+.admission-fee-notes-card {
+    background: #f0f7ff;
+    border: 1px solid #bae6fd;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-top: 24px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.fee-note-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #0284c7;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.fee-note-content {
+    flex-grow: 1;
+}
+
+.fee-note-content strong {
+    font-family: var(--adv-font-sans);
+    font-size: 0.92rem;
+    color: #083B7A;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.fee-note-list {
+    margin: 0;
+    padding-left: 20px;
+    color: #475569;
+    font-size: 0.86rem;
+    line-height: 1.6;
+}
+
+/* 4. Uniform & Discipline Section */
+.admission-uniform-section {
+    padding: 48px 0 20px;
+}
+
+.uniform-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.uniform-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 26px 28px;
+    box-shadow: 0 4px 18px rgba(8, 59, 122, 0.05);
+    transition: all 0.25s ease;
+}
+
+.uniform-card:hover {
+    box-shadow: 0 10px 28px rgba(8, 59, 122, 0.09);
+    border-color: #cbd5e1;
+}
+
+.uniform-card-head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.uniform-head-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+.uniform-head-icon.orange { background: linear-gradient(135deg, #F97316 0%, #EA580C 100%); }
+.uniform-head-icon.blue   { background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%); }
+
+.uniform-head-title {
+    font-family: var(--adv-font-sans);
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #083B7A;
+    margin: 0 0 2px;
+}
+
+.uniform-head-sub {
+    font-size: 0.84rem;
+    color: #64748b;
+    margin: 0;
+}
+
+.uniform-checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.uniform-check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.88rem;
+    color: #334155;
+    line-height: 1.45;
+}
+
+.uniform-check-item i {
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.uniform-check-item.orange i { color: #f97316; }
+.uniform-check-item.blue i   { color: #0284c7; }
+
+/* 5. Pre-Footer CTA Banner */
+.admission-cta-section {
+    padding: 40px 0 10px;
+}
+
+.admission-cta-box {
+    background: linear-gradient(135deg, #FFFBF7 0%, #FFF5EC 100%);
+    border: 1px solid #fed7aa;
+    border-radius: 20px;
+    padding: 30px 38px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    box-shadow: 0 8px 24px rgba(243, 112, 33, 0.06);
+    position: relative;
+    overflow: hidden;
+}
+
+.admission-cta-box::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: #F37021;
+}
+
+.admission-cta-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.admission-cta-pill {
+    align-self: flex-start;
+    display: inline-block;
+    background: #083B7A;
+    color: #ffffff;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.admission-cta-headline {
+    font-family: var(--adv-font-sans);
+    font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+    font-weight: 800;
+    color: #083B7A;
+    margin: 2px 0 0;
+    line-height: 1.2;
+}
+
+.admission-cta-desc {
+    color: #64748b;
+    font-size: 0.92rem;
+    margin: 0;
+}
+
+.admission-cta-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
+}
+
+.admission-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: linear-gradient(135deg, #F37021 0%, #d95d12 100%);
+    color: #ffffff;
+    font-family: var(--adv-font-sans);
+    font-weight: 700;
+    font-size: 0.92rem;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(243, 112, 33, 0.32);
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+
+.admission-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(243, 112, 33, 0.42);
+    color: #ffffff;
+}
+
+.admission-btn-visit {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: #ffffff;
+    color: #083B7A;
+    font-family: var(--adv-font-sans);
+    font-weight: 700;
+    font-size: 0.92rem;
+    padding: 12px 22px;
+    border-radius: 50px;
+    border: 1.5px solid #083B7A;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+
+.admission-btn-visit:hover {
+    background: #083B7A;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(8, 59, 122, 0.18);
+}
+
+/* Responsive Media Queries for Admission Info */
+@media (max-width: 1024px) {
+    .admission-steps-wrapper {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    .admission-step-card {
+        flex: 1 1 calc(33.333% - 16px);
+    }
+    .step-arrow-divider {
+        display: none;
+    }
+}
+
+@media (max-width: 860px) {
+    .admission-hero-canvas {
+        min-height: auto;
+    }
+    .admission-hero-bg-visual {
+        display: none;
+    }
+    .admission-hero-left-panel {
+        width: 100%;
+        padding: 34px 20px;
+    }
+    .fee-cards-grid,
+    .uniform-cards-grid {
+        grid-template-columns: 1fr;
+    }
+    .admission-cta-box {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 20px;
+    }
+    .admission-cta-actions {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .admission-btn-primary,
+    .admission-btn-visit {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .admission-step-card {
+        flex: 1 1 100%;
+    }
+    .fee-table thead th,
+    .fee-table tbody td {
+        padding: 10px 14px;
+        font-size: 0.84rem;
+    }
+}
+
+
 
 
