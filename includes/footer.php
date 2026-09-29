@@ -59,7 +59,7 @@
                         <li><a href="index.php#campus-life" class="adv-footer-link">Campus Life</a></li>
                         <li><a href="index.php#facilities" class="adv-footer-link">Facilities</a></li>
                         <li><a href="index.php#gallery" class="adv-footer-link">Gallery</a></li>
-                        <li><a href="index.php#contact" class="adv-footer-link">Contact Us</a></li>
+                        <li><a href="contact.php" class="adv-footer-link">Contact Us</a></li>
                     </ul>
                 </div>
 
@@ -74,7 +74,7 @@
                         <li><a href="index.php#academics" class="adv-footer-link">Academic Calendar</a></li>
                         <li><a href="about-us.php" class="adv-footer-link">School Policies</a></li>
                         <li><a href="index.php" class="adv-footer-link">Downloads</a></li>
-                        <li><a href="index.php#contact" class="adv-footer-link">Campus Map &amp; Visit</a></li>
+                        <li><a href="contact.php#campus-map" class="adv-footer-link">Campus Map &amp; Visit</a></li>
                         <li><a href="about-us.php" class="adv-footer-link">Career</a></li>
                         <li><a href="about-us.php" class="adv-footer-link">Alumni</a></li>
                     </ul>
