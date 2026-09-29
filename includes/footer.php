@@ -60,6 +60,7 @@
                         <li><a href="index.php#facilities" class="adv-footer-link">Facilities</a></li>
                         <li><a href="index.php#gallery" class="adv-footer-link">Gallery</a></li>
                         <li><a href="contact.php" class="adv-footer-link">Contact Us</a></li>
+                        <li><a href="mandatory-disclosure.php" class="adv-footer-link">Mandatory Public Disclosure</a></li>
                     </ul>
                 </div>
 
@@ -70,7 +71,7 @@
                         <li><a href="index.php#admissions" class="adv-footer-link">Admission Process</a></li>
                         <li><a href="index.php#admissions" class="adv-footer-link">Online Registration</a></li>
                         <li><a href="index.php#admissions" class="adv-footer-link">Fee Structure</a></li>
-                        <li><a href="about-us.php#disclosure" class="adv-footer-link">Mandatory Disclosure</a></li>
+                        <li><a href="mandatory-disclosure.php" class="adv-footer-link">Mandatory Disclosure</a></li>
                         <li><a href="index.php#academics" class="adv-footer-link">Academic Calendar</a></li>
                         <li><a href="about-us.php" class="adv-footer-link">School Policies</a></li>
                         <li><a href="index.php" class="adv-footer-link">Downloads</a></li>

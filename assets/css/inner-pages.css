@@ -5709,3 +5709,501 @@
     }
 }
 
+/* ==========================================================================
+   MANDATORY PUBLIC DISCLOSURE PAGE STYLES
+   ========================================================================== */
+.adv-nav-disclosure-link {
+    color: #F37021 !important;
+    font-weight: 700 !important;
+}
+
+.adv-nav-disclosure-link:hover,
+.adv-nav-item.active > .adv-nav-disclosure-link {
+    color: #d95d12 !important;
+}
+
+.disclosure-page-wrapper {
+    background-color: #f8fafc;
+    padding-bottom: 60px;
+}
+
+.disclosure-container {
+    width: 100%;
+    max-width: 1160px;
+    margin: 36px auto 0;
+    padding: 0 20px;
+}
+
+/* Accordions Stack */
+.disclosure-accordions-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Individual Accordion Card */
+.disclosure-accordion-card {
+    background: #ffffff;
+    border-radius: 14px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 16px rgba(8, 59, 122, 0.04);
+    overflow: hidden;
+    transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.disclosure-accordion-card:hover {
+    box-shadow: 0 8px 24px rgba(8, 59, 122, 0.08);
+}
+
+/* Color Themes matching the CBSE Mockup */
+/* Section A & E: Orange theme */
+.disclosure-theme-orange {
+    border-color: #fed7aa;
+}
+.disclosure-theme-orange .disclosure-accordion-header {
+    background: linear-gradient(135deg, #fff7ed 0%, #ffedd5 100%);
+    color: #c2410c;
+}
+.disclosure-theme-orange .disclosure-badge-icon {
+    background: #ea580c;
+    color: #ffffff;
+}
+.disclosure-theme-orange .disclosure-chevron {
+    color: #ea580c;
+}
+
+/* Section B & F: Blue theme */
+.disclosure-theme-blue {
+    border-color: #bfdbfe;
+}
+.disclosure-theme-blue .disclosure-accordion-header {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    color: #1d4ed8;
+}
+.disclosure-theme-blue .disclosure-badge-icon {
+    background: #2563eb;
+    color: #ffffff;
+}
+.disclosure-theme-blue .disclosure-chevron {
+    color: #2563eb;
+}
+
+/* Section C: Green theme */
+.disclosure-theme-green {
+    border-color: #a7f3d0;
+}
+.disclosure-theme-green .disclosure-accordion-header {
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+    color: #047857;
+}
+.disclosure-theme-green .disclosure-badge-icon {
+    background: #059669;
+    color: #ffffff;
+}
+.disclosure-theme-green .disclosure-chevron {
+    color: #059669;
+}
+
+/* Section D: Purple theme */
+.disclosure-theme-purple {
+    border-color: #ddd6fe;
+}
+.disclosure-theme-purple .disclosure-accordion-header {
+    background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+    color: #6d28d9;
+}
+.disclosure-theme-purple .disclosure-badge-icon {
+    background: #7c3aed;
+    color: #ffffff;
+}
+.disclosure-theme-purple .disclosure-chevron {
+    color: #7c3aed;
+}
+
+/* Accordion Header Button */
+.disclosure-accordion-header {
+    width: 100%;
+    padding: 13px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+    user-select: none;
+}
+
+.disclosure-accordion-header:hover {
+    filter: brightness(0.98);
+}
+
+.disclosure-header-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.disclosure-badge-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.05rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.disclosure-header-title {
+    font-family: var(--adv-font-sans);
+    font-size: 1.02rem;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    margin: 0;
+}
+
+.disclosure-chevron {
+    font-size: 0.95rem;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+}
+
+/* Collapsed Accordion State */
+.disclosure-accordion-card.collapsed .disclosure-chevron {
+    transform: rotate(180deg);
+}
+
+.disclosure-accordion-card.collapsed .disclosure-accordion-body {
+    display: none;
+}
+
+/* Accordion Body & Table Container */
+.disclosure-accordion-body {
+    padding: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+}
+
+.disclosure-table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* CBSE Compliance Tables */
+.disclosure-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.885rem;
+    color: #1e293b;
+    margin: 0;
+}
+
+.disclosure-table thead th {
+    background-color: #f8fafc;
+    color: #475569;
+    font-family: var(--adv-font-sans);
+    font-weight: 800;
+    font-size: 0.785rem;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    padding: 12px 18px;
+    text-align: left;
+    border-bottom: 2px solid #e2e8f0;
+    white-space: nowrap;
+}
+
+.disclosure-table thead th.th-sr {
+    width: 80px;
+    text-align: center;
+}
+
+.disclosure-table tbody td {
+    padding: 13px 18px;
+    border-bottom: 1px solid #edf2f7;
+    line-height: 1.55;
+    vertical-align: middle;
+}
+
+.disclosure-table tbody td.td-sr {
+    text-align: center;
+    font-weight: 700;
+    color: #64748b;
+    width: 80px;
+}
+
+.disclosure-table tbody td.td-info {
+    font-weight: 600;
+    color: #1e293b;
+    font-size: 0.875rem;
+}
+
+.disclosure-table tbody td.td-details {
+    color: #334155;
+    font-weight: 500;
+}
+
+.disclosure-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.disclosure-table tbody tr:hover td {
+    background-color: #fafcfe;
+}
+
+.disclosure-sub-item {
+    display: inline-block;
+    color: #475569;
+    font-weight: 600;
+    margin-top: 3px;
+}
+
+.disclosure-list-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* Action Links: Click Here (PDF / Link) */
+.disclosure-pdf-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #dc2626;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-decoration: none;
+    padding: 5px 12px;
+    border-radius: 6px;
+    background: #fef2f2;
+    border: 1px solid #fee2e2;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.disclosure-pdf-link i {
+    font-size: 1.05rem;
+    color: #dc2626;
+    transition: transform 0.2s ease;
+}
+
+.disclosure-pdf-link:hover {
+    background: #dc2626;
+    color: #ffffff;
+    border-color: #dc2626;
+    box-shadow: 0 2px 8px rgba(220, 38, 38, 0.25);
+    transform: translateY(-1px);
+}
+
+.disclosure-pdf-link:hover i {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.disclosure-yt-link {
+    background: #fef2f2;
+    color: #b91c1c;
+}
+
+.disclosure-inline-link {
+    color: #0284c7;
+    font-weight: 700;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+}
+
+.disclosure-inline-link:hover {
+    color: #F37021;
+}
+
+/* Pre-Footer Disclosure CTA Banner */
+.disclosure-cta-wrapper {
+    margin: 44px auto 0;
+    max-width: 1160px;
+    padding: 0 20px;
+}
+
+.disclosure-cta-box {
+    background: linear-gradient(135deg, #FFFBF7 0%, #FFF5EC 100%);
+    border: 1px solid #fed7aa;
+    border-radius: 20px;
+    padding: 26px 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    box-shadow: 0 8px 24px rgba(243, 112, 33, 0.06);
+    position: relative;
+    overflow: hidden;
+}
+
+.disclosure-cta-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.disclosure-cta-icon-circle {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #F37021 0%, #ea580c 100%);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.45rem;
+    box-shadow: 0 6px 18px rgba(243, 112, 33, 0.28);
+    flex-shrink: 0;
+}
+
+.disclosure-cta-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.disclosure-cta-pill {
+    align-self: flex-start;
+    display: inline-block;
+    background: #083B7A;
+    color: #ffffff;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+}
+
+.disclosure-cta-headline {
+    font-family: var(--adv-font-sans);
+    font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+    font-weight: 800;
+    color: #083B7A;
+    margin: 2px 0 0;
+    line-height: 1.2;
+}
+
+.disclosure-cta-headline .highlight-serif {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-weight: 600;
+    color: #F37021;
+}
+
+.disclosure-cta-desc {
+    color: #64748b;
+    font-size: 0.92rem;
+    margin: 0;
+}
+
+.disclosure-cta-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
+}
+
+.disclosure-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: linear-gradient(135deg, #F37021 0%, #d95d12 100%);
+    color: #ffffff;
+    font-family: var(--adv-font-sans);
+    font-weight: 700;
+    font-size: 0.92rem;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(243, 112, 33, 0.32);
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+
+.disclosure-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(243, 112, 33, 0.42);
+    color: #ffffff;
+}
+
+.disclosure-btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: #ffffff;
+    color: #0f172a;
+    font-family: var(--adv-font-sans);
+    font-weight: 700;
+    font-size: 0.92rem;
+    padding: 12px 22px;
+    border-radius: 50px;
+    border: 1.5px solid #e2e8f0;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+
+.disclosure-btn-whatsapp i {
+    color: #22c55e;
+    font-size: 1.15rem;
+}
+
+.disclosure-btn-whatsapp:hover {
+    border-color: #22c55e;
+    color: #15803d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(34, 197, 94, 0.18);
+}
+
+@media (max-width: 900px) {
+    .disclosure-cta-box {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 20px;
+    }
+    .disclosure-cta-actions {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .disclosure-btn-primary,
+    .disclosure-btn-whatsapp {
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .disclosure-accordion-header {
+        padding: 12px 14px;
+    }
+    .disclosure-header-title {
+        font-size: 0.92rem;
+    }
+    .disclosure-badge-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 0.95rem;
+    }
+    .disclosure-table thead th,
+    .disclosure-table tbody td {
+        padding: 10px 12px;
+        font-size: 0.82rem;
+    }
+    .disclosure-cta-left {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
+
+

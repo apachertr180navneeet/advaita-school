@@ -150,6 +150,11 @@ $currentPage = $activePage ?? '';
                             <span>Contact</span>
                         </a>
                     </li>
+                    <li class="adv-nav-item <?php echo ($currentPage === 'mandatory-disclosure') ? 'active' : ''; ?>">
+                        <a href="mandatory-disclosure.php" class="adv-nav-link adv-nav-disclosure-link">
+                            <span>Mandatory Disclosure</span>
+                        </a>
+                    </li>
                 </ul>
 
                 <!-- Apply for Admission Pill CTA Button -->
@@ -301,6 +306,15 @@ $currentPage = $activePage ?? '';
                 <span class="adv-mobile-link-text">
                     <i class="fa-solid fa-envelope"></i>
                     <span>Contact</span>
+                </span>
+            </a>
+        </li>
+
+        <li class="adv-mobile-item <?php echo ($currentPage === 'mandatory-disclosure') ? 'active' : ''; ?>">
+            <a href="mandatory-disclosure.php" class="adv-mobile-link">
+                <span class="adv-mobile-link-text">
+                    <i class="fa-solid fa-file-shield"></i>
+                    <span>Mandatory Disclosure</span>
                 </span>
             </a>
         </li>
