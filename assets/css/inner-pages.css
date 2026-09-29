@@ -9086,6 +9086,703 @@ textarea.reg-input-control {
     }
 }
 
+/* ==========================================================================
+   ACADEMICS PAGE STYLES (Programmes > Academics)
+   ========================================================================== */
+.acad-page-wrapper {
+    background-color: #f8fafc;
+    padding-bottom: 60px;
+}
+
+.acad-container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 30px 20px 0;
+}
+
+/* Sub-Menu Pill Navigation Bar Floating Card */
+.acad-pills-bar-wrap {
+    position: relative;
+    z-index: 10;
+    margin-top: -30px;
+    margin-bottom: 50px;
+}
+
+.acad-pills-bar {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 10px 14px;
+    box-shadow: 0 10px 30px rgba(8, 59, 122, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.acad-pills-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.acad-pill-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 11px 20px;
+    border-radius: 12px;
+    font-family: var(--adv-font-sans);
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #083B7A;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+    border: 1px solid transparent;
+}
+
+.acad-pill-btn i {
+    font-size: 1.05rem;
+    transition: transform 0.25s ease;
+}
+
+.acad-pill-btn:hover {
+    background: #f1f5f9;
+    color: #F37021;
+    transform: translateY(-1px);
+}
+
+.acad-pill-btn.active {
+    background: linear-gradient(135deg, #F37021 0%, #e05e10 100%);
+    color: #ffffff;
+    border-color: #F37021;
+    box-shadow: 0 4px 14px rgba(243, 112, 33, 0.35);
+}
+
+.acad-pill-btn.active i {
+    color: #ffffff;
+}
+
+/* Academics Section Common Header (Centered) */
+.acad-section {
+    padding: 40px 0;
+}
+
+.acad-section-header {
+    text-align: center;
+    max-width: 820px;
+    margin: 0 auto 36px;
+}
+
+.acad-eyebrow {
+    display: inline-block;
+    color: #F37021;
+    font-family: var(--adv-font-sans);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.acad-section-title {
+    font-family: var(--adv-font-sans);
+    font-size: clamp(1.6rem, 2.5vw, 2.15rem);
+    font-weight: 800;
+    color: #083B7A;
+    line-height: 1.25;
+    margin: 0 0 10px;
+}
+
+.acad-section-title .highlight-orange {
+    color: #F37021;
+}
+
+.acad-section-desc {
+    font-size: clamp(0.9rem, 1.1vw, 0.98rem);
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Left-Border Section Headers */
+.acad-left-header-wrap {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 32px;
+}
+
+.acad-accent-bar {
+    width: 4px;
+    height: 32px;
+    background: #F37021;
+    border-radius: 4px;
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+.acad-left-header-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.acad-left-header-content .acad-eyebrow {
+    margin-bottom: 4px;
+}
+
+.acad-left-header-content .acad-section-title {
+    margin: 0 0 6px;
+}
+
+/* 1. Our Curriculum Grid (4 Cards) */
+.acad-curriculum-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.acad-curriculum-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 26px 22px;
+    box-shadow: 0 4px 18px rgba(8, 59, 122, 0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all 0.25s ease;
+}
+
+.acad-curriculum-card:hover {
+    transform: translateY(-4px);
+    border-color: #cbd5e1;
+    box-shadow: 0 10px 28px rgba(8, 59, 122, 0.09);
+}
+
+.acad-curr-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+    flex-shrink: 0;
+}
+
+.acad-curr-icon.orange { background: #fff7ed; color: #ea580c; }
+.acad-curr-icon.blue   { background: #eff6ff; color: #0284c7; }
+.acad-curr-icon.teal   { background: #f0fdfa; color: #0d9488; }
+.acad-curr-icon.pink   { background: #fdf2f8; color: #db2777; }
+
+.acad-curr-title {
+    font-family: var(--adv-font-sans);
+    font-size: 1.06rem;
+    font-weight: 800;
+    color: #083B7A;
+    margin: 0 0 6px;
+    line-height: 1.3;
+}
+
+.acad-curr-desc {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* 2. Academic Stages Grid (4 Cards) */
+.acad-stages-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.acad-stage-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 22px;
+    padding: 30px 22px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 18px rgba(8, 59, 122, 0.04);
+    transition: all 0.25s ease;
+}
+
+.acad-stage-card:hover {
+    transform: translateY(-4px);
+    border-color: #cbd5e1;
+    box-shadow: 0 10px 28px rgba(8, 59, 122, 0.09);
+}
+
+.acad-stage-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.45rem;
+    margin-bottom: 16px;
+    flex-shrink: 0;
+}
+
+.acad-stage-icon.orange { background: #fff7ed; color: #ea580c; }
+.acad-stage-icon.blue   { background: #eff6ff; color: #0284c7; }
+.acad-stage-icon.teal   { background: #f0fdfa; color: #0d9488; }
+.acad-stage-icon.purple { background: #f5f3ff; color: #7c3aed; }
+
+.acad-stage-title {
+    font-family: var(--adv-font-sans);
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: #083B7A;
+    margin: 0 0 4px;
+    line-height: 1.25;
+}
+
+.acad-stage-classes {
+    display: inline-block;
+    font-family: var(--adv-font-sans);
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: #F37021;
+    margin-bottom: 12px;
+}
+
+.acad-stage-desc {
+    font-size: 0.84rem;
+    color: #64748b;
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* 3. Learning Streams Layout (Image Left + 6 Cards Right) */
+.acad-streams-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.65fr;
+    gap: 36px;
+    align-items: center;
+}
+
+.acad-streams-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acad-streams-aura {
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    background: radial-gradient(circle, #fed7aa 0%, #ffedd5 60%, transparent 75%);
+    border-radius: 50%;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.acad-streams-img-box {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 380px;
+    height: 420px;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 14px 34px rgba(8, 59, 122, 0.12);
+    border: 4px solid #ffffff;
+}
+
+.acad-streams-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+.acad-streams-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.acad-stream-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 16px 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    box-shadow: 0 3px 12px rgba(8, 59, 122, 0.03);
+    transition: all 0.25s ease;
+}
+
+.acad-stream-card:hover {
+    transform: translateY(-2px);
+    border-color: #cbd5e1;
+    box-shadow: 0 8px 20px rgba(8, 59, 122, 0.08);
+}
+
+.acad-stream-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    flex-shrink: 0;
+}
+
+.acad-stream-icon.orange { background: #fff7ed; color: #ea580c; }
+.acad-stream-icon.blue   { background: #eff6ff; color: #0284c7; }
+.acad-stream-icon.teal   { background: #f0fdfa; color: #0d9488; }
+.acad-stream-icon.purple { background: #f5f3ff; color: #7c3aed; }
+.acad-stream-icon.pink   { background: #fdf2f8; color: #db2777; }
+.acad-stream-icon.amber  { background: #fef3c7; color: #d97706; }
+
+.acad-stream-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.acad-stream-title {
+    font-family: var(--adv-font-sans);
+    font-size: 0.96rem;
+    font-weight: 800;
+    color: #083B7A;
+    margin: 0 0 3px;
+}
+
+.acad-stream-desc {
+    font-size: 0.78rem;
+    color: #64748b;
+    line-height: 1.45;
+    margin: 0;
+}
+
+/* 4. Our Approach Grid (4 Cards) */
+.acad-approach-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.acad-approach-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 26px 22px;
+    box-shadow: 0 4px 18px rgba(8, 59, 122, 0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all 0.25s ease;
+}
+
+.acad-approach-card:hover {
+    transform: translateY(-4px);
+    border-color: #cbd5e1;
+    box-shadow: 0 10px 28px rgba(8, 59, 122, 0.09);
+}
+
+.acad-approach-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    margin-bottom: 16px;
+    flex-shrink: 0;
+}
+
+.acad-approach-icon.orange { background: #fff7ed; color: #ea580c; }
+.acad-approach-icon.blue   { background: #eff6ff; color: #0284c7; }
+.acad-approach-icon.teal   { background: #f0fdfa; color: #0d9488; }
+.acad-approach-icon.pink   { background: #fdf2f8; color: #db2777; }
+
+.acad-approach-title {
+    font-family: var(--adv-font-sans);
+    font-size: 1.04rem;
+    font-weight: 800;
+    color: #083B7A;
+    margin: 0 0 6px;
+    line-height: 1.3;
+}
+
+.acad-approach-desc {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* 5. Beyond The Classroom (Left: 5 Clubs, Right: Creative Visual) */
+.acad-beyond-layout {
+    display: grid;
+    grid-template-columns: 1.25fr 1fr;
+    gap: 36px;
+    align-items: center;
+}
+
+.acad-clubs-row {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.acad-club-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+    width: 90px;
+}
+
+.acad-club-icon-circle {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    box-shadow: 0 4px 14px rgba(8, 59, 122, 0.08);
+    transition: all 0.25s ease;
+}
+
+.acad-club-item:hover .acad-club-icon-circle {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(8, 59, 122, 0.15);
+}
+
+.acad-club-icon-circle.c1 { background: #eff6ff; color: #0284c7; }
+.acad-club-icon-circle.c2 { background: #fff7ed; color: #ea580c; }
+.acad-club-icon-circle.c3 { background: #f0fdfa; color: #0d9488; }
+.acad-club-icon-circle.c4 { background: #fdf2f8; color: #db2777; }
+.acad-club-icon-circle.c5 { background: #ecfdf5; color: #059669; }
+
+.acad-club-name {
+    font-family: var(--adv-font-sans);
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: #083B7A;
+    line-height: 1.25;
+}
+
+.acad-beyond-visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.acad-beyond-aura {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, #fed7aa 0%, #ffedd5 60%, transparent 75%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.acad-beyond-img-box {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 360px;
+    height: 280px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(8, 59, 122, 0.1);
+    border: 4px solid #ffffff;
+}
+
+.acad-beyond-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+/* 6. Admissions Open CTA Banner */
+.acad-cta-banner {
+    background: #ffffff;
+    border: 1px solid #fed7aa;
+    border-radius: 22px;
+    padding: 30px 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    box-shadow: 0 8px 30px rgba(243, 112, 33, 0.08);
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.acad-cta-banner::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 6px;
+    background: #F37021;
+}
+
+.acad-cta-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.acad-cta-eyebrow {
+    color: #ea580c;
+    font-family: var(--adv-font-sans);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+}
+
+.acad-cta-title {
+    font-family: var(--adv-font-sans);
+    font-size: clamp(1.35rem, 2vw, 1.85rem);
+    font-weight: 800;
+    color: #083B7A;
+    margin: 0 0 4px;
+    line-height: 1.25;
+}
+
+.acad-cta-title .highlight-orange {
+    color: #F37021;
+}
+
+.acad-cta-desc {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.acad-cta-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-shrink: 0;
+}
+
+.acad-btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #F37021 0%, #d95d12 100%);
+    color: #ffffff;
+    font-family: var(--adv-font-sans);
+    font-weight: 700;
+    font-size: 0.92rem;
+    padding: 12px 24px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(243, 112, 33, 0.35);
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+
+.acad-btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(243, 112, 33, 0.45);
+    color: #ffffff;
+}
+
+.acad-btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    color: #083B7A;
+    font-family: var(--adv-font-sans);
+    font-weight: 700;
+    font-size: 0.92rem;
+    padding: 12px 22px;
+    border-radius: 50px;
+    border: 1.5px solid #083B7A;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    white-space: nowrap;
+}
+
+.acad-btn-secondary:hover {
+    background: #083B7A;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(8, 59, 122, 0.16);
+}
+
+/* Responsive Academics */
+@media (max-width: 1024px) {
+    .acad-curriculum-grid,
+    .acad-stages-grid,
+    .acad-approach-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .acad-streams-layout,
+    .acad-beyond-layout {
+        grid-template-columns: 1fr;
+    }
+    .acad-streams-img-box {
+        max-width: 320px;
+        height: 340px;
+    }
+}
+
+@media (max-width: 768px) {
+    .acad-cta-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 20px;
+    }
+    .acad-cta-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    .acad-btn-primary,
+    .acad-btn-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+    .acad-clubs-row {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 580px) {
+    .acad-curriculum-grid,
+    .acad-stages-grid,
+    .acad-streams-grid,
+    .acad-approach-grid {
+        grid-template-columns: 1fr;
+    }
+    .acad-pills-bar {
+        justify-content: flex-start;
+    }
+}
+
 
 
 

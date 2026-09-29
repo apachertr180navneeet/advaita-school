@@ -53,8 +53,8 @@
                         <li><a href="chairmans-desk.php" class="adv-footer-link">Chairman's Desk</a></li>
                         <li><a href="principals-desk.php" class="adv-footer-link">Principal's Message</a></li>
                         <li><a href="our-staff.php" class="adv-footer-link">Our Faculty</a></li>
-                        <li><a href="index.php#academics" class="adv-footer-link">Academics</a></li>
-                        <li><a href="index.php#neet-iit" class="adv-footer-link">MSIT-710 Foundation</a></li>
+                        <li><a href="academics.php" class="adv-footer-link">Academics</a></li>
+                        <li><a href="index.php#neet-iit" class="adv-footer-link">NEET / IIT Foundation</a></li>
                         <li><a href="admission-info.php" class="adv-footer-link">Admissions</a></li>
                         <li><a href="index.php#campus-life" class="adv-footer-link">Campus Life</a></li>
                         <li><a href="facilities.php" class="adv-footer-link">Facilities</a></li>

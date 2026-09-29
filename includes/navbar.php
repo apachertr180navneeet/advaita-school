@@ -92,10 +92,20 @@ $currentPage = $activePage ?? '';
                         </ul>
                     </li>
 
-                    <li class="adv-nav-item <?php echo ($currentPage === 'academics') ? 'active' : ''; ?>">
-                        <a href="index.php#academics" class="adv-nav-link">
-                            <span>Academics</span>
+                    <!-- Programmes Dropdown Menu -->
+                    <li class="adv-nav-item has-dropdown <?php echo ($currentPage === 'programmes' || $currentPage === 'academics') ? 'active' : ''; ?>">
+                        <a href="academics.php" class="adv-nav-link" aria-haspopup="true" aria-expanded="false">
+                            <span>Programmes</span>
+                            <i class="fa-solid fa-chevron-down chevron-icon"></i>
                         </a>
+                        <ul class="adv-dropdown">
+                            <li class="adv-dropdown-item">
+                                <a href="academics.php" class="adv-dropdown-link <?php echo ($currentPage === 'academics') ? 'active' : ''; ?>">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                    <span>Academics</span>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
 
                     <li class="adv-nav-item <?php echo ($currentPage === 'neet-iit') ? 'active' : ''; ?>">
@@ -277,13 +287,22 @@ $currentPage = $activePage ?? '';
             </ul>
         </li>
 
-        <li class="adv-mobile-item">
-            <a href="index.php#academics" class="adv-mobile-link">
+        <li class="adv-mobile-item has-children <?php echo ($currentPage === 'programmes' || $currentPage === 'academics') ? 'is-active' : ''; ?>">
+            <a href="#" class="adv-mobile-link" role="button" aria-expanded="false">
                 <span class="adv-mobile-link-text">
                     <i class="fa-solid fa-book-open-reader"></i>
-                    <span>Academics</span>
+                    <span>Programmes</span>
                 </span>
+                <i class="fa-solid fa-chevron-down adv-mobile-chevron"></i>
             </a>
+            <ul class="adv-mobile-submenu">
+                <li>
+                    <a href="academics.php" class="adv-mobile-submenu-link <?php echo ($currentPage === 'academics') ? 'active' : ''; ?>">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span>Academics</span>
+                    </a>
+                </li>
+            </ul>
         </li>
 
         <li class="adv-mobile-item">
