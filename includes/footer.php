@@ -70,7 +70,7 @@
                     <ul class="adv-footer-links-list">
                         <li><a href="admission-info.php#admission-process" class="adv-footer-link">Admission Process</a></li>
                         <li><a href="online-registration.php" class="adv-footer-link">Online Registration</a></li>
-                        <li><a href="admission-info.php#fee-structure" class="adv-footer-link">Fee Structure</a></li>
+                        <li><a href="fee-structure.php" class="adv-footer-link">Fee Structure</a></li>
                         <li><a href="mandatory-disclosure.php" class="adv-footer-link">Mandatory Disclosure</a></li>
                         <li><a href="index.php#academics" class="adv-footer-link">Academic Calendar</a></li>
                         <li><a href="about-us.php" class="adv-footer-link">School Policies</a></li>

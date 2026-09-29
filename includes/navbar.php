@@ -130,7 +130,7 @@ $currentPage = $activePage ?? '';
             <!-- Right Desktop Menu -->
             <div class="adv-nav-section adv-nav-section-right">
                 <ul class="adv-nav-menu adv-nav-menu-right">
-                    <li class="adv-nav-item has-dropdown <?php echo ($currentPage === 'admissions' || $currentPage === 'admission-info' || $currentPage === 'online-registration') ? 'active' : ''; ?>">
+                    <li class="adv-nav-item has-dropdown <?php echo ($currentPage === 'admissions' || $currentPage === 'admission-info' || $currentPage === 'online-registration' || $currentPage === 'fee-structure') ? 'active' : ''; ?>">
                         <a href="admission-info.php" class="adv-nav-link" aria-haspopup="true" aria-expanded="false">
                             <span>Admissions</span>
                             <i class="fa-solid fa-chevron-down chevron-icon"></i>
@@ -146,6 +146,12 @@ $currentPage = $activePage ?? '';
                                 <a href="online-registration.php" class="adv-dropdown-link <?php echo ($currentPage === 'online-registration') ? 'active' : ''; ?>">
                                     <i class="fa-solid fa-file-pen"></i>
                                     <span>Online Registration</span>
+                                </a>
+                            </li>
+                            <li class="adv-dropdown-item">
+                                <a href="fee-structure.php" class="adv-dropdown-link <?php echo ($currentPage === 'fee-structure') ? 'active' : ''; ?>">
+                                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                                    <span>Fee Structure</span>
                                 </a>
                             </li>
                         </ul>
@@ -289,7 +295,7 @@ $currentPage = $activePage ?? '';
             </a>
         </li>
 
-        <li class="adv-mobile-item has-children <?php echo ($currentPage === 'admissions' || $currentPage === 'admission-info' || $currentPage === 'online-registration') ? 'is-active' : ''; ?>">
+        <li class="adv-mobile-item has-children <?php echo ($currentPage === 'admissions' || $currentPage === 'admission-info' || $currentPage === 'online-registration' || $currentPage === 'fee-structure') ? 'is-active' : ''; ?>">
             <a href="#" class="adv-mobile-link" role="button" aria-expanded="false">
                 <span class="adv-mobile-link-text">
                     <i class="fa-solid fa-graduation-cap"></i>
@@ -308,6 +314,12 @@ $currentPage = $activePage ?? '';
                     <a href="online-registration.php" class="adv-mobile-submenu-link <?php echo ($currentPage === 'online-registration') ? 'active' : ''; ?>">
                         <i class="fa-solid fa-file-pen"></i>
                         <span>Online Registration</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="fee-structure.php" class="adv-mobile-submenu-link <?php echo ($currentPage === 'fee-structure') ? 'active' : ''; ?>">
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+                        <span>Fee Structure</span>
                     </a>
                 </li>
             </ul>
