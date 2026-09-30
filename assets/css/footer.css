@@ -317,6 +317,58 @@ a.touch-link:hover {
     user-select: none;
 }
 
+.adv-footer-credit {
+    color: #94A3B8;
+    font-size: 0.8125rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.adv-footer-heart {
+    color: #ef4444;
+    font-size: 0.8125rem;
+    margin: 0 4px;
+    display: inline-block;
+    animation: advHeartBeat 1.8s ease-in-out infinite;
+    transform-origin: center;
+}
+
+@keyframes advHeartBeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+    14% {
+        transform: scale(1.28);
+    }
+    28% {
+        transform: scale(1);
+    }
+    42% {
+        transform: scale(1.2);
+    }
+    70% {
+        transform: scale(1);
+    }
+}
+
+.adv-credit-name,
+.adv-credit-link {
+    color: #CBD5E1;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    text-decoration: none;
+    transition: color 0.25s ease, text-decoration-color 0.25s ease;
+}
+
+.adv-credit-link:hover,
+.adv-footer-credit:hover .adv-credit-name,
+.adv-footer-credit:hover .adv-credit-link {
+    color: #F37021;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
 /* --------------------------------------------------------------------------
    Floating Badges & Quick Action Buttons
    -------------------------------------------------------------------------- */
@@ -430,6 +482,12 @@ a.touch-link:hover {
 
     .adv-footer-map-col {
         grid-column: span 2;
+    }
+
+    .adv-footer-bottom-container {
+        justify-content: center;
+        text-align: center;
+        gap: 12px 24px;
     }
 }
 
