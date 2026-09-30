@@ -17,9 +17,9 @@ require_once __DIR__ . '/includes/header.php';
          ========================================================================= -->
     <section class="admission-hero-section">
         <div class="admission-hero-canvas">
-            <!-- Background Visual with Campus -->
+            <!-- Hero Students Visual -->
             <div class="admission-hero-bg-visual" aria-hidden="true">
-                <img src="assets/images/about-campus.jpg" alt="Advaita School Campus" class="admission-hero-bg-img">
+                <img src="assets/images/about-cta-students-clean.png?v=<?php echo filemtime(__DIR__ . '/assets/images/about-cta-students-clean.png'); ?>" alt="Advaita Students" class="admission-hero-bg-img" width="1024" height="682">
             </div>
 
             <!-- SVG Wave Overlay for Smooth Translucent Backdrop -->
@@ -30,10 +30,6 @@ require_once __DIR__ . '/includes/header.php';
                 </svg>
             </div>
 
-            <!-- Student Cutout on the Right Side -->
-            <div class="admission-hero-students" aria-hidden="true">
-                <img src="assets/images/about-cta-students-final.png" alt="Advaita Students in School Uniform" width="480" height="400">
-            </div>
 
             <!-- Floating Handwritten Script Tag at Top Right -->
             <div class="admission-hero-script-tag" aria-hidden="true">
