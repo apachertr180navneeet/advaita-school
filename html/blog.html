@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog & News - Advaita School of Excellence | Insights, Stories and Updates</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fraunces:opsz,wght,SOFT@9..144,400;9..144,600;9..144,700,50&family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/slider.css">
+    <link rel="stylesheet" href="../assets/css/homepage.css">
+    <link rel="stylesheet" href="../assets/css/inner-pages.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/blog.css">
+</head>
+<body>
+
+    <!-- =========================================================================
+         HEADER NAVBAR (Matches Design Mockup 1:1)
+         ========================================================================= -->
+    <header class="adv-navbar-header">
+        <div class="adv-navbar-container">
+            <!-- School Brand / Logo -->
+            <a href="index.html" class="adv-navbar-brand" title="Advaita School of Excellence">
+                <img src="../assets/images/logo-cropped.png" alt="Advaita School of Excellence" class="adv-navbar-logo-img">
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="adv-navbar-nav" aria-label="Main Navigation">
+                <a href="index.html" class="adv-nav-link">Home</a>
+                <a href="about.html" class="adv-nav-link">About Us</a>
+                <a href="academics.html" class="adv-nav-link">Academics</a>
+                <a href="mandatory-disclosure.html" class="adv-nav-link">CBSE CORNER</a>
+                <a href="contact.html" class="adv-nav-link">Career</a>
+                <a href="contact.html" class="adv-nav-link">Contact</a>
+                <a href="mandatory-disclosure.html" class="adv-nav-link">Mandatory Public Disclosure</a>
+            </nav>
+
+            <!-- Right Actions: Search + Enquire Now Button -->
+            <div class="adv-navbar-actions">
+                <button type="button" class="adv-nav-search-btn" id="advNavSearchToggle" aria-label="Search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <a href="contact.html" class="adv-nav-enquire-btn">
+                    <span>Enquire Now</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <button type="button" class="adv-nav-mobile-btn" id="advNavMobileToggle" aria-label="Open mobile menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div class="adv-navbar-drawer" id="advNavbarDrawer">
+            <div class="adv-drawer-inner">
+                <div class="adv-drawer-top">
+                    <img src="../assets/images/logo-cropped.png" alt="Advaita Logo" class="adv-drawer-logo">
+                    <button type="button" class="adv-drawer-close" id="advDrawerClose" aria-label="Close menu">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <div class="adv-drawer-links">
+                    <a href="index.html" class="adv-drawer-link">Home</a>
+                    <a href="about.html" class="adv-drawer-link">About Us</a>
+                    <a href="academics.html" class="adv-drawer-link">Academics</a>
+                    <a href="mandatory-disclosure.html" class="adv-drawer-link">CBSE CORNER</a>
+                    <a href="contact.html" class="adv-drawer-link">Career</a>
+                    <a href="contact.html" class="adv-drawer-link">Contact</a>
+                    <a href="mandatory-disclosure.html" class="adv-drawer-link">Mandatory Public Disclosure</a>
+                    <a href="gallery.html" class="adv-drawer-link">Gallery</a>
+                    <a href="blog.html" class="adv-drawer-link">Blog &amp; News</a>
+                </div>
+                <div class="adv-drawer-bottom">
+                    <a href="contact.html" class="adv-drawer-enquire-btn">
+                        <span>Enquire Now</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="adv-navbar-drawer-backdrop" id="advDrawerBackdrop"></div>
+    </header>
+
+    <main id="main" class="main-content-wrapper adv-blog-page-wrapper">
+
+        <!-- 1. HERO SECTION -->
+        <section class="adv-blog-hero-section">
+            <div class="adv-blog-hero-dots-decor" aria-hidden="true"></div>
+            <div class="adv-blog-hero-dots-decor-right" aria-hidden="true"></div>
+
+            <div class="adv-blog-container">
+                <nav class="adv-blog-breadcrumb" aria-label="Breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
+                    <span class="current">Blog</span>
+                </nav>
+
+                <div class="adv-blog-hero-grid">
+                    <div class="adv-blog-hero-content">
+                        <div class="adv-blog-kicker">
+                            <span class="kicker-line">—</span> OUR STORIES <span class="kicker-line">—</span>
+                        </div>
+                        <h1 class="adv-blog-hero-title">
+                            Insights, stories and <span class="adv-blog-highlight">updates.</span>
+                        </h1>
+                        <p class="adv-blog-hero-desc">
+                            Discover the latest news, achievements, events and stories from Advaita School of Excellence.
+                        </p>
+                    </div>
+
+                    <div class="adv-blog-hero-visual-wrap">
+                        <div class="adv-blog-hero-card-frame">
+                            <img src="../assets/images/about-hero-building.jpg" alt="Advaita School of Excellence Campus Building" class="adv-blog-hero-img">
+                            <div class="adv-blog-hero-badge" aria-label="More Than A School">
+                                <span class="badge-text">More<br>Than A School</span>
+                                <svg class="badge-underline" viewBox="0 0 76 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 9.5C24 3.5 54 2 74 6" stroke="#0084FF" stroke-width="2.5" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. CATEGORY TABS ROW -->
+        <section class="adv-blog-categories-section">
+            <div class="adv-blog-container">
+                <div class="adv-blog-filters-scroll" role="tablist" aria-label="Blog categories filter">
+                    <button type="button" class="adv-blog-cat-btn active" data-category="all" role="tab" aria-selected="true">
+                        <span class="cat-icon"><i class="fa-solid fa-border-all"></i></span>
+                        <span class="cat-name">All Posts</span>
+                    </button>
+                    <button type="button" class="adv-blog-cat-btn" data-category="news" role="tab" aria-selected="false">
+                        <span class="cat-icon"><i class="fa-solid fa-newspaper"></i></span>
+                        <span class="cat-name">School News</span>
+                    </button>
+                    <button type="button" class="adv-blog-cat-btn" data-category="events" role="tab" aria-selected="false">
+                        <span class="cat-icon"><i class="fa-solid fa-calendar-days"></i></span>
+                        <span class="cat-name">Events</span>
+                    </button>
+                    <button type="button" class="adv-blog-cat-btn" data-category="achievements" role="tab" aria-selected="false">
+                        <span class="cat-icon"><i class="fa-solid fa-trophy"></i></span>
+                        <span class="cat-name">Achievements</span>
+                    </button>
+                    <button type="button" class="adv-blog-cat-btn" data-category="insights" role="tab" aria-selected="false">
+                        <span class="cat-icon"><i class="fa-solid fa-book-open"></i></span>
+                        <span class="cat-name">Academic Insights</span>
+                    </button>
+                    <button type="button" class="adv-blog-cat-btn" data-category="student-life" role="tab" aria-selected="false">
+                        <span class="cat-icon"><i class="fa-solid fa-users"></i></span>
+                        <span class="cat-name">Student Life</span>
+                    </button>
+                    <button type="button" class="adv-blog-cat-btn" data-category="parent-corner" role="tab" aria-selected="false">
+                        <span class="cat-icon"><i class="fa-solid fa-user-group"></i></span>
+                        <span class="cat-name">Parent Corner</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. SEARCH & SORT TOOLBAR -->
+        <section class="adv-blog-toolbar-section">
+            <div class="adv-blog-container">
+                <div class="adv-blog-toolbar">
+                    <div class="adv-blog-search-box">
+                        <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
+                        <input type="text" id="advBlogSearch" class="adv-blog-search-input" placeholder="Search articles, news, events..." aria-label="Search blog articles">
+                        <button type="button" id="advBlogSearchClear" class="adv-blog-search-clear" aria-label="Clear search text">&times;</button>
+                    </div>
+
+                    <div class="adv-blog-sort-box">
+                        <i class="fa-solid fa-arrow-down-short-wide sort-icon" aria-hidden="true"></i>
+                        <select id="advBlogSort" class="adv-blog-sort-select" aria-label="Sort blog articles">
+                            <option value="latest">Latest First</option>
+                            <option value="oldest">Oldest First</option>
+                            <option value="title-asc">Title (A-Z)</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down sort-chevron" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. MAIN CONTENT SECTION -->
+        <section class="adv-blog-main-section" id="advBlogMainSection">
+            <div class="adv-blog-container">
+                <div class="adv-blog-main-grid">
+
+                    <div class="adv-blog-posts-grid" id="advBlogPostsGrid">
+
+                        <!-- Card 1 -->
+                        <article class="adv-blog-card" data-category="news" data-title="A New Academic Session Begins with New Aspirations" data-index="1">
+                            <div class="adv-blog-card-thumb">
+                                <span class="adv-blog-badge news"><i class="fa-solid fa-newspaper"></i> School News</span>
+                                <img src="../assets/images/gallery/academic.jpg" alt="A New Academic Session Begins with New Aspirations" loading="lazy">
+                            </div>
+                            <div class="adv-blog-card-body">
+                                <span class="adv-blog-card-date"><i class="fa-regular fa-calendar"></i> 20 May 2025</span>
+                                <h3 class="adv-blog-card-title"><a href="javascript:void(0);">A New Academic Session Begins with New Aspirations</a></h3>
+                                <p class="adv-blog-card-excerpt">The campus came alive as we welcomed our students for the new academic session 2025–26 with enthusiasm, hope and big dreams.</p>
+                                <a href="javascript:void(0);" class="adv-blog-card-link"><span>Read More</span><i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Card 2 -->
+                        <article class="adv-blog-card" data-category="events" data-title="Annual Cultural Fest 2025 A Celebration of Creativity" data-index="2">
+                            <div class="adv-blog-card-thumb">
+                                <span class="adv-blog-badge events"><i class="fa-solid fa-calendar-days"></i> Events</span>
+                                <img src="../assets/images/gallery/dance.jpg" alt="Annual Cultural Fest 2025 A Celebration of Creativity" loading="lazy">
+                            </div>
+                            <div class="adv-blog-card-body">
+                                <span class="adv-blog-card-date"><i class="fa-regular fa-calendar"></i> 15 May 2025</span>
+                                <h3 class="adv-blog-card-title"><a href="javascript:void(0);">Annual Cultural Fest 2025 A Celebration of Creativity</a></h3>
+                                <p class="adv-blog-card-excerpt">Our Annual Cultural Fest 2025 showcased the exceptional talent and creativity of our students through music, dance, drama and art.</p>
+                                <a href="javascript:void(0);" class="adv-blog-card-link"><span>Read More</span><i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Card 3 -->
+                        <article class="adv-blog-card" data-category="achievements" data-title="Advaita Students Shine in CBSE Class X Result 2025" data-index="3">
+                            <div class="adv-blog-card-thumb">
+                                <span class="adv-blog-badge achievements"><i class="fa-solid fa-trophy"></i> Achievements</span>
+                                <img src="../assets/images/gallery/achievements.jpg" alt="Advaita Students Shine in CBSE Class X Result 2025" loading="lazy">
+                            </div>
+                            <div class="adv-blog-card-body">
+                                <span class="adv-blog-card-date"><i class="fa-regular fa-calendar"></i> 10 May 2025</span>
+                                <h3 class="adv-blog-card-title"><a href="javascript:void(0);">Advaita Students Shine in CBSE Class X Result 2025</a></h3>
+                                <p class="adv-blog-card-excerpt">We are proud to announce an outstanding performance in the CBSE Class X Board Examination 2025, with several students scoring above 90%.</p>
+                                <a href="javascript:void(0);" class="adv-blog-card-link"><span>Read More</span><i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Card 4 -->
+                        <article class="adv-blog-card" data-category="insights" data-title="Learning Beyond Textbooks The Power of Practical Education" data-index="4">
+                            <div class="adv-blog-card-thumb">
+                                <span class="adv-blog-badge insights"><i class="fa-solid fa-book-open"></i> Academic Insights</span>
+                                <img src="../assets/images/gallery/workshops.jpg" alt="Learning Beyond Textbooks The Power of Practical Education" loading="lazy">
+                            </div>
+                            <div class="adv-blog-card-body">
+                                <span class="adv-blog-card-date"><i class="fa-regular fa-calendar"></i> 28 Apr 2025</span>
+                                <h3 class="adv-blog-card-title"><a href="javascript:void(0);">Learning Beyond Textbooks The Power of Practical Education</a></h3>
+                                <p class="adv-blog-card-excerpt">At Advaita, we believe in hands-on learning. Our well-equipped laboratories help students explore, experiment and innovate beyond the classroom.</p>
+                                <a href="javascript:void(0);" class="adv-blog-card-link"><span>Read More</span><i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Card 5 -->
+                        <article class="adv-blog-card" data-category="student-life" data-title="Sports Build Stronger Minds and Friendships" data-index="5">
+                            <div class="adv-blog-card-thumb">
+                                <span class="adv-blog-badge student-life"><i class="fa-solid fa-users"></i> Student Life</span>
+                                <img src="../assets/images/gallery/sports.jpg" alt="Sports Build Stronger Minds and Friendships" loading="lazy">
+                            </div>
+                            <div class="adv-blog-card-body">
+                                <span class="adv-blog-card-date"><i class="fa-regular fa-calendar"></i> 21 Apr 2025</span>
+                                <h3 class="adv-blog-card-title"><a href="javascript:void(0);">Sports Build Stronger Minds and Friendships</a></h3>
+                                <p class="adv-blog-card-excerpt">From football to athletics, our sports programs empower students to stay fit, learn teamwork and develop a winning attitude.</p>
+                                <a href="javascript:void(0);" class="adv-blog-card-link"><span>Read More</span><i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <!-- Card 6 -->
+                        <article class="adv-blog-card" data-category="outreach" data-title="Students Spread Smiles Through Community Service" data-index="6">
+                            <div class="adv-blog-card-thumb">
+                                <span class="adv-blog-badge outreach"><i class="fa-solid fa-hand-holding-heart"></i> Community Outreach</span>
+                                <img src="../assets/images/gallery/outreach.jpg" alt="Students Spread Smiles Through Community Service" loading="lazy">
+                            </div>
+                            <div class="adv-blog-card-body">
+                                <span class="adv-blog-card-date"><i class="fa-regular fa-calendar"></i> 18 Apr 2025</span>
+                                <h3 class="adv-blog-card-title"><a href="javascript:void(0);">Students Spread Smiles Through Community Service</a></h3>
+                                <p class="adv-blog-card-excerpt">Our students visited a nearby village as part of the community outreach program, spreading awareness about education and hygiene.</p>
+                                <a href="javascript:void(0);" class="adv-blog-card-link"><span>Read More</span><i class="fa-solid fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <div class="adv-blog-empty-state" id="advBlogEmpty">
+                            <i class="fa-regular fa-folder-open"></i>
+                            <h3>No articles found</h3>
+                            <p>Try searching for a different keyword or selecting another category.</p>
+                        </div>
+
+                    </div>
+
+                    <!-- Right Column: Sidebar -->
+                    <aside class="adv-blog-sidebar">
+                        <div class="adv-blog-widget">
+                            <h4 class="adv-blog-widget-title">Popular Posts</h4>
+                            <div class="adv-blog-popular-list">
+                                <a href="javascript:void(0);" class="adv-blog-popular-item">
+                                    <div class="adv-blog-popular-thumb"><img src="../assets/images/gallery/academic.jpg" alt="A New Academic Session Begins"></div>
+                                    <div class="adv-blog-popular-info">
+                                        <h5 class="adv-blog-popular-title">A New Academic Session Begins with New Aspirations</h5>
+                                        <span class="adv-blog-popular-date"><i class="fa-regular fa-calendar"></i> 20 May 2025</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:void(0);" class="adv-blog-popular-item">
+                                    <div class="adv-blog-popular-thumb"><img src="../assets/images/gallery/dance.jpg" alt="Annual Cultural Fest 2025"></div>
+                                    <div class="adv-blog-popular-info">
+                                        <h5 class="adv-blog-popular-title">Annual Cultural Fest 2025</h5>
+                                        <span class="adv-blog-popular-date"><i class="fa-regular fa-calendar"></i> 15 May 2025</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:void(0);" class="adv-blog-popular-item">
+                                    <div class="adv-blog-popular-thumb"><img src="../assets/images/gallery/science-exhibition.jpg" alt="Science Exhibition Showcases Innovative Ideas"></div>
+                                    <div class="adv-blog-popular-info">
+                                        <h5 class="adv-blog-popular-title">Science Exhibition Showcases Innovative Ideas</h5>
+                                        <span class="adv-blog-popular-date"><i class="fa-regular fa-calendar"></i> 28 Apr 2025</span>
+                                    </div>
+                                </a>
+                                <a href="javascript:void(0);" class="adv-blog-popular-item">
+                                    <div class="adv-blog-popular-thumb"><img src="../assets/images/gallery/yoga.jpg" alt="Yoga for a Healthier Tomorrow"></div>
+                                    <div class="adv-blog-popular-info">
+                                        <h5 class="adv-blog-popular-title">Yoga for a Healthier Tomorrow</h5>
+                                        <span class="adv-blog-popular-date"><i class="fa-regular fa-calendar"></i> 21 Apr 2025</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="adv-blog-widget">
+                            <h4 class="adv-blog-widget-title">Categories</h4>
+                            <ul class="adv-blog-cat-list">
+                                <li class="adv-blog-cat-item news">
+                                    <a href="javascript:void(0);" data-category="news">
+                                        <div class="adv-blog-cat-item-left">
+                                            <div class="adv-blog-cat-item-icon"><i class="fa-solid fa-newspaper"></i></div>
+                                            <span class="adv-blog-cat-item-name">School News</span>
+                                        </div>
+                                        <span class="adv-blog-cat-item-count">(12)</span>
+                                    </a>
+                                </li>
+                                <li class="adv-blog-cat-item events">
+                                    <a href="javascript:void(0);" data-category="events">
+                                        <div class="adv-blog-cat-item-left">
+                                            <div class="adv-blog-cat-item-icon"><i class="fa-solid fa-calendar-days"></i></div>
+                                            <span class="adv-blog-cat-item-name">Events</span>
+                                        </div>
+                                        <span class="adv-blog-cat-item-count">(18)</span>
+                                    </a>
+                                </li>
+                                <li class="adv-blog-cat-item achievements">
+                                    <a href="javascript:void(0);" data-category="achievements">
+                                        <div class="adv-blog-cat-item-left">
+                                            <div class="adv-blog-cat-item-icon"><i class="fa-solid fa-trophy"></i></div>
+                                            <span class="adv-blog-cat-item-name">Achievements</span>
+                                        </div>
+                                        <span class="adv-blog-cat-item-count">(15)</span>
+                                    </a>
+                                </li>
+                                <li class="adv-blog-cat-item insights">
+                                    <a href="javascript:void(0);" data-category="insights">
+                                        <div class="adv-blog-cat-item-left">
+                                            <div class="adv-blog-cat-item-icon"><i class="fa-solid fa-book-open"></i></div>
+                                            <span class="adv-blog-cat-item-name">Academic Insights</span>
+                                        </div>
+                                        <span class="adv-blog-cat-item-count">(10)</span>
+                                    </a>
+                                </li>
+                                <li class="adv-blog-cat-item student-life">
+                                    <a href="javascript:void(0);" data-category="student-life">
+                                        <div class="adv-blog-cat-item-left">
+                                            <div class="adv-blog-cat-item-icon"><i class="fa-solid fa-users"></i></div>
+                                            <span class="adv-blog-cat-item-name">Student Life</span>
+                                        </div>
+                                        <span class="adv-blog-cat-item-count">(14)</span>
+                                    </a>
+                                </li>
+                                <li class="adv-blog-cat-item parent-corner">
+                                    <a href="javascript:void(0);" data-category="parent-corner">
+                                        <div class="adv-blog-cat-item-left">
+                                            <div class="adv-blog-cat-item-icon"><i class="fa-solid fa-user-group"></i></div>
+                                            <span class="adv-blog-cat-item-name">Parent Corner</span>
+                                        </div>
+                                        <span class="adv-blog-cat-item-count">(6)</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </aside>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. PAGINATION -->
+        <section class="adv-blog-pagination-section">
+            <div class="adv-blog-container">
+                <div class="adv-blog-pagination" role="navigation" aria-label="Blog pagination">
+                    <button type="button" class="adv-blog-page-btn prev-btn" aria-label="Previous Page"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button type="button" class="adv-blog-page-btn active" aria-label="Page 1">1</button>
+                    <button type="button" class="adv-blog-page-btn" aria-label="Page 2">2</button>
+                    <button type="button" class="adv-blog-page-btn" aria-label="Page 3">3</button>
+                    <button type="button" class="adv-blog-page-btn" aria-label="Page 4">4</button>
+                    <button type="button" class="adv-blog-page-btn" aria-label="Page 5">5</button>
+                    <button type="button" class="adv-blog-page-btn next-btn" aria-label="Next Page"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CTA NEWSLETTER BANNER -->
+        <section class="adv-blog-cta-section">
+            <div class="adv-blog-container">
+                <div class="adv-blog-cta-card">
+                    <div class="adv-blog-cta-content">
+                        <span class="adv-blog-cta-tag">BE PART OF OUR JOURNEY</span>
+                        <h2 class="adv-blog-cta-title">
+                            Stay connected with <span class="adv-blog-cta-highlight">Advaita.</span>
+                        </h2>
+                        <p class="adv-blog-cta-desc">
+                            Get the latest updates, stories and achievements delivered to you.
+                        </p>
+                    </div>
+
+                    <form class="adv-blog-cta-form" id="advBlogSubscribeForm" action="#" method="POST">
+                        <div class="adv-blog-input-wrap">
+                            <i class="fa-regular fa-envelope mail-icon" aria-hidden="true"></i>
+                            <input type="email" class="adv-blog-email-input" placeholder="Enter your email address" required aria-label="Your email address">
+                        </div>
+                        <button type="submit" class="adv-blog-subscribe-btn">
+                            <span>Subscribe</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </form>
+
+                    <div class="adv-blog-cta-doodle" aria-hidden="true">
+                        <svg viewBox="0 0 74 62" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M72.5 1.5L1.5 32.5L28.5 44.5L59.5 12.5L34.5 47.5L55.5 59.5L72.5 1.5Z" stroke="#2563EB" stroke-width="2.2" stroke-linejoin="round" stroke-dasharray="3 2" fill="none"/>
+                            <path d="M28.5 44.5V58.5L36.5 48.5" stroke="#2563EB" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 56 C2 52 -2 40 4 32 C10 24 22 28 20 38" stroke="#93C5FD" stroke-width="1.8" stroke-dasharray="3 3" fill="none"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Main Footer -->
+    <footer class="adv-footer-wrapper" id="contact" aria-label="Footer Navigation">
+        <div class="adv-footer-main">
+            <div class="adv-container adv-footer-container">
+                <div class="adv-footer-brand-col">
+                    <a href="index.html" class="adv-footer-logo-link" title="Advaita School of Excellence">
+                        <img src="../assets/images/footer-logo-white.png" alt="Advaita School of Excellence Logo" class="adv-footer-logo-img">
+                    </a>
+                    <p class="adv-footer-bio">
+                        A modern, values-led learning community shaping curious thinkers, principled leaders, and lifelong learners.
+                    </p>
+                    <div class="adv-footer-socials">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="adv-footer-social-btn instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="adv-footer-social-btn facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="adv-footer-social-btn youtube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="adv-footer-social-btn linkedin"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="adv-footer-col">
+                    <h3 class="adv-footer-col-title">Explore</h3>
+                    <ul class="adv-footer-links-list">
+                        <li><a href="index.html" class="adv-footer-link">Home</a></li>
+                        <li><a href="about.html" class="adv-footer-link">About Us</a></li>
+                        <li><a href="vision-mission.html" class="adv-footer-link">Vision &amp; Mission</a></li>
+                        <li><a href="academics.html" class="adv-footer-link">Academics</a></li>
+                        <li><a href="results.html" class="adv-footer-link">Board Results</a></li>
+                        <li><a href="admission-info.html" class="adv-footer-link">Admissions</a></li>
+                        <li><a href="facilities.html" class="adv-footer-link">Facilities</a></li>
+                        <li><a href="contact.html" class="adv-footer-link">Contact Us</a></li>
+                        <li><a href="mandatory-disclosure.html" class="adv-footer-link">Mandatory Public Disclosure</a></li>
+                    </ul>
+                </div>
+
+                <div class="adv-footer-col">
+                    <h3 class="adv-footer-col-title">Quick Links</h3>
+                    <ul class="adv-footer-links-list">
+                        <li><a href="admission-info.html" class="adv-footer-link">Admission Info</a></li>
+                        <li><a href="fee-structure.html" class="adv-footer-link">Fee Structure</a></li>
+                        <li><a href="mandatory-disclosure.html" class="adv-footer-link">School Policies</a></li>
+                        <li><a href="mandatory-disclosure.html" class="adv-footer-link">Downloads</a></li>
+                        <li><a href="gallery.html" class="adv-footer-link">Gallery</a></li>
+                        <li><a href="blog.html" class="adv-footer-link">Blog &amp; News</a></li>
+                        <li><a href="contact.html#campus-map" class="adv-footer-link">Campus Map &amp; Visit</a></li>
+                    </ul>
+                </div>
+
+                <div class="adv-footer-col adv-footer-touch-col">
+                    <h3 class="adv-footer-col-title">Get in Touch</h3>
+                    <div class="adv-footer-contact-list">
+                        <div class="adv-footer-touch-item">
+                            <div class="adv-footer-touch-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="adv-footer-touch-content">
+                                <span class="touch-label">Campus</span>
+                                <span class="touch-text">Plot no 3, Laxmi Vihar Rd, Basni First Phase, Jodhpur, Rajasthan 342005</span>
+                            </div>
+                        </div>
+                        <div class="adv-footer-touch-item">
+                            <div class="adv-footer-touch-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="adv-footer-touch-content">
+                                <span class="touch-label">Phone</span>
+                                <a href="tel:09413062851" class="touch-text touch-link">094130 62851</a>
+                            </div>
+                        </div>
+                        <div class="adv-footer-touch-item">
+                            <div class="adv-footer-touch-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="adv-footer-touch-content">
+                                <span class="touch-label">Email</span>
+                                <a href="mailto:info@pisjodhpur.com" class="touch-text touch-link">info@pisjodhpur.com</a>
+                            </div>
+                        </div>
+                        <div class="adv-footer-touch-item">
+                            <div class="adv-footer-touch-icon"><i class="fa-regular fa-clock"></i></div>
+                            <div class="adv-footer-touch-content">
+                                <span class="touch-label">School Hours</span>
+                                <span class="touch-text">Mon – Sat &nbsp;|&nbsp; 8:00 AM – 4:00 PM</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="adv-footer-map-col">
+                    <div class="adv-footer-map-card">
+                        <div class="adv-footer-map-iframe-wrap">
+                            <iframe 
+                                src="https://maps.google.com/maps?q=Advaita+School+of+Excellence&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                                width="100%" 
+                                height="100%" 
+                                style="border:0;" 
+                                allowfullscreen="" 
+                                loading="lazy" 
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Advaita School Location">
+                            </iframe>
+                        </div>
+                        <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="adv-footer-map-btn">
+                            <span>View on Google Maps</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="adv-footer-bottom-strip">
+            <div class="adv-container adv-footer-bottom-container">
+                <div class="adv-footer-copy-text">
+                    <span>&copy; 2026 Advaita School of Excellence. All rights reserved.</span>
+                </div>
+                <div class="adv-footer-legal-links">
+                    <a href="index.html" class="adv-legal-link">Privacy Policy</a>
+                    <span class="adv-legal-sep">|</span>
+                    <a href="index.html" class="adv-legal-link">Terms &amp; Conditions</a>
+                    <span class="adv-legal-sep">|</span>
+                    <a href="index.html" class="adv-legal-link">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/footer.js"></script>
+    <script src="../assets/js/blog.js"></script>
+</body>
+</html>

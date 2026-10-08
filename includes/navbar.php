@@ -6,6 +6,76 @@
  * Clean Semantic HTML - Strictly No Inline CSS
  */
 $currentPage = $activePage ?? '';
+
+if ($currentPage === 'blog' || $currentPage === 'gallery' || (isset($navbarStyle) && $navbarStyle === 'modern')):
+?>
+<!-- Modern White Header Navbar (Strictly Matches Design Mockup 1:1) -->
+<header class="adv-navbar-header">
+    <div class="adv-navbar-container">
+        <!-- School Brand / Logo -->
+        <a href="index.php" class="adv-navbar-brand" title="Advaita School of Excellence">
+            <img src="assets/images/logo-cropped.png" alt="Advaita School of Excellence" class="adv-navbar-logo-img">
+        </a>
+
+        <!-- Navigation Links -->
+        <nav class="adv-navbar-nav" aria-label="Main Navigation">
+            <a href="index.php" class="adv-nav-link <?php echo ($currentPage === 'index' || $currentPage === 'home') ? 'active' : ''; ?>">Home</a>
+            <a href="about-us.php" class="adv-nav-link <?php echo ($currentPage === 'about' || $currentPage === 'about-us') ? 'active' : ''; ?>">About Us</a>
+            <a href="academics.php" class="adv-nav-link <?php echo ($currentPage === 'academics') ? 'active' : ''; ?>">Academics</a>
+            <a href="mandatory-disclosure.php" class="adv-nav-link">CBSE CORNER</a>
+            <a href="contact.php" class="adv-nav-link">Career</a>
+            <a href="contact.php" class="adv-nav-link <?php echo ($currentPage === 'contact') ? 'active' : ''; ?>">Contact</a>
+            <a href="mandatory-disclosure.php" class="adv-nav-link <?php echo ($currentPage === 'mandatory-disclosure') ? 'active' : ''; ?>">Mandatory Public Disclosure</a>
+        </nav>
+
+        <!-- Right Actions: Search + Enquire Now Button -->
+        <div class="adv-navbar-actions">
+            <button type="button" class="adv-nav-search-btn" id="advNavSearchToggle" aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <a href="contact.php" class="adv-nav-enquire-btn">
+                <span>Enquire Now</span>
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <button type="button" class="adv-nav-mobile-btn" id="advNavMobileToggle" aria-label="Open mobile menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="adv-navbar-drawer" id="advNavbarDrawer">
+        <div class="adv-drawer-inner">
+            <div class="adv-drawer-top">
+                <img src="assets/images/logo-cropped.png" alt="Advaita Logo" class="adv-drawer-logo">
+                <button type="button" class="adv-drawer-close" id="advDrawerClose" aria-label="Close menu">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <div class="adv-drawer-links">
+                <a href="index.php" class="adv-drawer-link">Home</a>
+                <a href="about-us.php" class="adv-drawer-link">About Us</a>
+                <a href="academics.php" class="adv-drawer-link">Academics</a>
+                <a href="mandatory-disclosure.php" class="adv-drawer-link">CBSE CORNER</a>
+                <a href="contact.php" class="adv-drawer-link">Career</a>
+                <a href="contact.php" class="adv-drawer-link">Contact</a>
+                <a href="mandatory-disclosure.php" class="adv-drawer-link">Mandatory Public Disclosure</a>
+                <a href="gallery.php" class="adv-drawer-link <?php echo ($currentPage === 'gallery') ? 'active' : ''; ?>">Gallery</a>
+                <a href="blog.php" class="adv-drawer-link <?php echo ($currentPage === 'blog') ? 'active' : ''; ?>">Blog &amp; News</a>
+            </div>
+            <div class="adv-drawer-bottom">
+                <a href="contact.php" class="adv-drawer-enquire-btn">
+                    <span>Enquire Now</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="adv-navbar-drawer-backdrop" id="advDrawerBackdrop"></div>
+</header>
+<?php
+return;
+endif;
 ?>
 
 <!-- Main Navigation Header -->

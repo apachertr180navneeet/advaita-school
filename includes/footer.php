@@ -67,9 +67,11 @@
                     <h3 class="adv-footer-col-title">Quick Links</h3>
                     <ul class="adv-footer-links-list">
                         <li><a href="admission-info.php" class="adv-footer-link">Admission Info</a></li>
-                        <li><a href="online-registration.php" class="adv-footer-link">Online Registration</a></li>
                         <li><a href="fee-structure.php" class="adv-footer-link">Fee Structure</a></li>
-                        <li><a href="mandatory-disclosure.php" class="adv-footer-link">Mandatory Disclosure</a></li>
+                        <li><a href="mandatory-disclosure.php" class="adv-footer-link">School Policies</a></li>
+                        <li><a href="mandatory-disclosure.php" class="adv-footer-link">Downloads</a></li>
+                        <li><a href="gallery.php" class="adv-footer-link">Gallery</a></li>
+                        <li><a href="blog.php" class="adv-footer-link">Blog &amp; News</a></li>
                         <li><a href="contact.php#campus-map" class="adv-footer-link">Campus Map &amp; Visit</a></li>
                     </ul>
                 </div>
