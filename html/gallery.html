@@ -24,71 +24,111 @@
 </head>
 <body>
 
-    <!-- =========================================================================
-         HEADER NAVBAR (Matches Design Mockup 1:1)
-         ========================================================================= -->
-    <header class="adv-navbar-header">
-        <div class="adv-navbar-container">
-            <!-- School Brand / Logo -->
-            <a href="index.html" class="adv-navbar-brand" title="Advaita School of Excellence">
-                <img src="../assets/images/logo-cropped.png" alt="Advaita School of Excellence" class="adv-navbar-logo-img">
-            </a>
-
-            <!-- Navigation Links -->
-            <nav class="adv-navbar-nav" aria-label="Main Navigation">
-                <a href="index.html" class="adv-nav-link">Home</a>
-                <a href="about.html" class="adv-nav-link">About Us</a>
-                <a href="academics.html" class="adv-nav-link">Academics</a>
-                <a href="mandatory-disclosure.html" class="adv-nav-link">CBSE CORNER</a>
-                <a href="contact.html" class="adv-nav-link">Career</a>
-                <a href="contact.html" class="adv-nav-link">Contact</a>
-                <a href="mandatory-disclosure.html" class="adv-nav-link">Mandatory Public Disclosure</a>
-            </nav>
-
-            <!-- Right Actions: Search + Enquire Now Button -->
-            <div class="adv-navbar-actions">
-                <button type="button" class="adv-nav-search-btn" id="advNavSearchToggle" aria-label="Search">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-                <a href="contact.html" class="adv-nav-enquire-btn">
-                    <span>Enquire Now</span>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-                <button type="button" class="adv-nav-mobile-btn" id="advNavMobileToggle" aria-label="Open mobile menu">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
+    <!-- Main Navigation Header -->
+    <header class="adv-main-header">
+        <div class="adv-topbar">
+            <div class="adv-topbar-container">
+                <div class="adv-topbar-left">
+                    <i class="fa-solid fa-location-dot adv-topbar-pin"></i>
+                    <span>Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)</span>
+                </div>
+                <div class="adv-topbar-right">
+                    <div class="adv-topbar-socials">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <!-- Mobile Drawer Menu -->
-        <div class="adv-navbar-drawer" id="advNavbarDrawer">
-            <div class="adv-drawer-inner">
-                <div class="adv-drawer-top">
-                    <img src="../assets/images/logo-cropped.png" alt="Advaita Logo" class="adv-drawer-logo">
-                    <button type="button" class="adv-drawer-close" id="advDrawerClose" aria-label="Close menu">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
+        <div class="adv-header-fullwidth">
+            <div class="adv-nav-ribbon">
+                <svg class="adv-svg-corner adv-svg-corner-left" viewBox="0 0 24 42" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+                    <path d="M0 8 C0 22 10 36 24 42 H0 V8 Z" fill="#F37021"/>
+                </svg>
+                <div class="adv-nav-section adv-nav-section-left">
+                    <a href="index.html" class="adv-nav-home-btn" title="Home">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Home</span>
+                    </a>
+                    <ul class="adv-nav-menu adv-nav-menu-left">
+                        <li class="adv-nav-item"><a href="about.html" class="adv-nav-link"><span>About Us</span></a></li>
+                        <li class="adv-nav-item has-dropdown">
+                            <a href="academics.html" class="adv-nav-link" aria-haspopup="true" aria-expanded="false">
+                                <span>Programmes</span>
+                                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+                            </a>
+                            <ul class="adv-dropdown">
+                                <li class="adv-dropdown-item">
+                                    <a href="academics.html" class="adv-dropdown-link">
+                                        <i class="fa-solid fa-graduation-cap"></i>
+                                        <span>Academics</span>
+                                    </a>
+                                </li>
+                                <li class="adv-dropdown-item">
+                                    <a href="results.html" class="adv-dropdown-link">
+                                        <i class="fa-solid fa-square-poll-vertical"></i>
+                                        <span>Results</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-                <div class="adv-drawer-links">
-                    <a href="index.html" class="adv-drawer-link">Home</a>
-                    <a href="about.html" class="adv-drawer-link">About Us</a>
-                    <a href="academics.html" class="adv-drawer-link">Academics</a>
-                    <a href="mandatory-disclosure.html" class="adv-drawer-link">CBSE CORNER</a>
-                    <a href="contact.html" class="adv-drawer-link">Career</a>
-                    <a href="contact.html" class="adv-drawer-link">Contact</a>
-                    <a href="mandatory-disclosure.html" class="adv-drawer-link">Mandatory Public Disclosure</a>
-                    <a href="gallery.html" class="adv-drawer-link">Gallery</a>
-                    <a href="blog.html" class="adv-drawer-link">Blog &amp; News</a>
+
+                <div class="adv-nav-brand-pod">
+                    <a href="index.html" class="adv-brand-badge-pod" title="Advaita School of Excellence">
+                        <img src="../assets/images/logo-cropped.png" alt="Advaita School of Excellence" class="adv-brand-logo-pod-img">
+                    </a>
                 </div>
-                <div class="adv-drawer-bottom">
-                    <a href="contact.html" class="adv-drawer-enquire-btn">
-                        <span>Enquire Now</span>
+
+                <div class="adv-nav-section adv-nav-section-right">
+                    <ul class="adv-nav-menu adv-nav-menu-right">
+                        <li class="adv-nav-item has-dropdown">
+                            <a href="admission-info.html" class="adv-nav-link" aria-haspopup="true" aria-expanded="false">
+                                <span>Admissions</span>
+                                <i class="fa-solid fa-chevron-down chevron-icon"></i>
+                            </a>
+                            <ul class="adv-dropdown">
+                                <li class="adv-dropdown-item">
+                                    <a href="admission-info.html" class="adv-dropdown-link">
+                                        <i class="fa-solid fa-circle-info"></i>
+                                        <span>Admission Info</span>
+                                    </a>
+                                </li>
+                                <li class="adv-dropdown-item">
+                                    <a href="online-registration.html" class="adv-dropdown-link">
+                                        <i class="fa-solid fa-file-pen"></i>
+                                        <span>Online Registration</span>
+                                    </a>
+                                </li>
+                                <li class="adv-dropdown-item">
+                                    <a href="fee-structure.html" class="adv-dropdown-link">
+                                        <i class="fa-solid fa-indian-rupee-sign"></i>
+                                        <span>Fee Structure</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="adv-nav-item"><a href="facilities.html" class="adv-nav-link"><span>Facilities</span></a></li>
+                        <li class="adv-nav-item active"><a href="gallery.html" class="adv-nav-link"><span>Gallery</span></a></li>
+                        <li class="adv-nav-item"><a href="blog.html" class="adv-nav-link"><span>Blog</span></a></li>
+                        <li class="adv-nav-item"><a href="contact.html" class="adv-nav-link"><span>Contact</span></a></li>
+                        <li class="adv-nav-item"><a href="mandatory-disclosure.html" class="adv-nav-link"><span>Mandatory Disclosure</span></a></li>
+                    </ul>
+                    <a href="admissions.html" class="adv-nav-apply-btn">
+                        <span>Apply for Admission</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
+                <svg class="adv-svg-corner adv-svg-corner-right" viewBox="0 0 24 42" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" aria-hidden="true">
+                    <path d="M24 8 C24 22 14 36 0 42 H24 V8 Z" fill="#F37021"/>
+                </svg>
             </div>
         </div>
-        <div class="adv-navbar-drawer-backdrop" id="advDrawerBackdrop"></div>
     </header>
 
     <main id="main" class="main-content-wrapper adv-gallery-page-wrapper">
