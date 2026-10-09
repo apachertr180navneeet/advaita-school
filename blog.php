@@ -20,8 +20,33 @@ require_once __DIR__ . '/includes/header.php';
          1. HERO SECTION: "OUR STORIES" & SCULPTED CAMPUS VISUAL
          ========================================================================= -->
     <section class="adv-blog-hero-section">
+        <!-- Decorative subtle pattern dots on the far left -->
         <div class="adv-blog-hero-dots-decor" aria-hidden="true"></div>
-        <div class="adv-blog-hero-dots-decor-right" aria-hidden="true"></div>
+
+        <!-- Full-Bleed Right Visual: Sculpted Campus Panorama with Royal Blue Ribbon -->
+        <div class="adv-blog-hero-curved-visual">
+            <svg class="adv-blog-hero-curved-svg" viewBox="0 0 1000 480" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <defs>
+                    <clipPath id="advBlogHeroCurveClip">
+                        <path d="M 0 -10 C 25 130, 80 270, 220 365 C 360 450, 600 475, 1000 480 L 1000 -10 Z" />
+                    </clipPath>
+                </defs>
+
+                <!-- Campus Photo clipped to the organic curve -->
+                <image href="assets/images/about-hero-building.jpg" xlink:href="assets/images/about-hero-building.jpg" x="0" y="0" width="1000" height="480" preserveAspectRatio="xMidYMid slice" clip-path="url(#advBlogHeroCurveClip)"/>
+
+                <!-- Royal Blue Organic Ribbon Stroke along the curved boundary -->
+                <path d="M 0 -10 C 25 130, 80 270, 220 365 C 360 450, 600 475, 1000 480" stroke="#0084FF" stroke-width="26" fill="none" stroke-linecap="round"/>
+            </svg>
+
+            <!-- "More Than A School" Script Badge in Top-Right Sky Area -->
+            <div class="adv-blog-hero-badge" aria-label="More Than A School">
+                <span class="badge-text">More<br>Than A School</span>
+                <svg class="badge-underline" viewBox="0 0 76 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 9.5C24 3.5 54 2 74 6" stroke="#F37021" stroke-width="2.8" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </div>
 
         <div class="adv-blog-container">
             <!-- Breadcrumbs -->
@@ -45,21 +70,6 @@ require_once __DIR__ . '/includes/header.php';
                     <p class="adv-blog-hero-desc">
                         Discover the latest news, achievements, events and stories from Advaita School of Excellence.
                     </p>
-                </div>
-
-                <!-- Right Visual: Sculpted Campus Frame with "More Than A School" Overlay -->
-                <div class="adv-blog-hero-visual-wrap">
-                    <div class="adv-blog-hero-card-frame">
-                        <img src="assets/images/about-hero-building.jpg" alt="Advaita School of Excellence Campus Building" class="adv-blog-hero-img">
-
-                        <!-- "More Than A School" Script Badge -->
-                        <div class="adv-blog-hero-badge" aria-label="More Than A School">
-                            <span class="badge-text">More<br>Than A School</span>
-                            <svg class="badge-underline" viewBox="0 0 76 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M2 9.5C24 3.5 54 2 74 6" stroke="#0084FF" stroke-width="2.5" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
