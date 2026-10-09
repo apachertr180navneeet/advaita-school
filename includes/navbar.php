@@ -113,6 +113,41 @@ $currentPage = $activePage ?? '';
                             </li>
                         </ul>
                     </li>
+
+                    <!-- Admissions Dropdown Menu -->
+                    <li class="adv-nav-item has-dropdown <?php echo ($currentPage === 'admissions' || $currentPage === 'admission-info' || $currentPage === 'online-registration' || $currentPage === 'fee-structure') ? 'active' : ''; ?>">
+                        <a href="admission-info.php" class="adv-nav-link" aria-haspopup="true" aria-expanded="false">
+                            <span>Admissions</span>
+                            <i class="fa-solid fa-chevron-down chevron-icon"></i>
+                        </a>
+                        <ul class="adv-dropdown">
+                            <li class="adv-dropdown-item">
+                                <a href="admission-info.php" class="adv-dropdown-link <?php echo ($currentPage === 'admission-info') ? 'active' : ''; ?>">
+                                    <i class="fa-solid fa-circle-info"></i>
+                                    <span>Admission Info</span>
+                                </a>
+                            </li>
+                            <li class="adv-dropdown-item">
+                                <a href="online-registration.php" class="adv-dropdown-link <?php echo ($currentPage === 'online-registration') ? 'active' : ''; ?>">
+                                    <i class="fa-solid fa-file-pen"></i>
+                                    <span>Online Registration</span>
+                                </a>
+                            </li>
+                            <li class="adv-dropdown-item">
+                                <a href="fee-structure.php" class="adv-dropdown-link <?php echo ($currentPage === 'fee-structure') ? 'active' : ''; ?>">
+                                    <i class="fa-solid fa-indian-rupee-sign"></i>
+                                    <span>Fee Structure</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- Facilities Link -->
+                    <li class="adv-nav-item <?php echo ($currentPage === 'facilities') ? 'active' : ''; ?>">
+                        <a href="facilities.php" class="adv-nav-link">
+                            <span>Facilities</span>
+                        </a>
+                    </li>
                 </ul>
             </div>
 
@@ -140,37 +175,6 @@ $currentPage = $activePage ?? '';
             <!-- Right Desktop Menu -->
             <div class="adv-nav-section adv-nav-section-right">
                 <ul class="adv-nav-menu adv-nav-menu-right">
-                    <li class="adv-nav-item has-dropdown <?php echo ($currentPage === 'admissions' || $currentPage === 'admission-info' || $currentPage === 'online-registration' || $currentPage === 'fee-structure') ? 'active' : ''; ?>">
-                        <a href="admission-info.php" class="adv-nav-link" aria-haspopup="true" aria-expanded="false">
-                            <span>Admissions</span>
-                            <i class="fa-solid fa-chevron-down chevron-icon"></i>
-                        </a>
-                        <ul class="adv-dropdown">
-                            <li class="adv-dropdown-item">
-                                <a href="admission-info.php" class="adv-dropdown-link <?php echo ($currentPage === 'admission-info') ? 'active' : ''; ?>">
-                                    <i class="fa-solid fa-circle-info"></i>
-                                    <span>Admission Info</span>
-                                </a>
-                            </li>
-                            <li class="adv-dropdown-item">
-                                <a href="online-registration.php" class="adv-dropdown-link <?php echo ($currentPage === 'online-registration') ? 'active' : ''; ?>">
-                                    <i class="fa-solid fa-file-pen"></i>
-                                    <span>Online Registration</span>
-                                </a>
-                            </li>
-                            <li class="adv-dropdown-item">
-                                <a href="fee-structure.php" class="adv-dropdown-link <?php echo ($currentPage === 'fee-structure') ? 'active' : ''; ?>">
-                                    <i class="fa-solid fa-indian-rupee-sign"></i>
-                                    <span>Fee Structure</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="adv-nav-item <?php echo ($currentPage === 'facilities') ? 'active' : ''; ?>">
-                        <a href="facilities.php" class="adv-nav-link">
-                            <span>Facilities</span>
-                        </a>
-                    </li>
                     <li class="adv-nav-item <?php echo ($currentPage === 'gallery') ? 'active' : ''; ?>">
                         <a href="gallery.php" class="adv-nav-link">
                             <span>Gallery</span>
