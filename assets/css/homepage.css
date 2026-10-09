@@ -189,7 +189,7 @@
 .parshv-stats-section {
     position: relative;
     z-index: 10;
-    margin-top: 28px;
+    margin-top: -28px;
     padding: 0 24px;
 }
 

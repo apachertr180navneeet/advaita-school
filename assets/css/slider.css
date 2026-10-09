@@ -74,28 +74,77 @@
     display: block;
 }
 
-/* Real Interactive Action Buttons on Slide 1 */
+/* Premium Hero Action Buttons Pod */
 .adv-banner-hero-actions {
     position: absolute;
-    left: clamp(16px, 3.8cqi, 40px);
-    bottom: clamp(16px, 2.8cqi, 36px);
+    left: clamp(18px, 4cqi, 48px);
+    bottom: clamp(48px, 5.2cqi, 68px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(8px, 1.1cqi, 12px);
+    z-index: 10;
+}
+
+/* Micro Eyebrow Badge Pill */
+.adv-hero-badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: rgba(3, 28, 61, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    color: #ffffff;
+    font-size: clamp(0.68rem, 0.88cqi, 0.78rem);
+    font-weight: 700;
+    padding: 4px 13px;
+    border-radius: 30px;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 14px rgba(3, 28, 61, 0.25);
+    text-transform: uppercase;
+}
+
+.adv-hero-badge-pill .adv-pulse-indicator {
+    width: 7px;
+    height: 7px;
+    background-color: #22c55e;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 8px #22c55e;
+    animation: advGreenPulse 2s infinite ease-in-out;
+}
+
+@keyframes advGreenPulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.35);
+        opacity: 0.65;
+    }
+}
+
+/* Buttons Row */
+.adv-hero-btn-row {
     display: flex;
     align-items: center;
-    gap: clamp(8px, 1.2cqi, 16px);
-    z-index: 10;
+    gap: clamp(8px, 1.2cqi, 14px);
+    flex-wrap: wrap;
 }
 
 .adv-hero-real-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: clamp(6px, 0.75vw, 10px);
+    gap: 8px;
     text-decoration: none;
     border-radius: 50px;
     font-family: inherit;
     font-weight: 700;
-    font-size: clamp(0.72rem, 1.1vw, 0.95rem);
-    padding: clamp(6px, 0.95vw, 12px) clamp(14px, 1.8vw, 24px);
+    font-size: clamp(0.78rem, 1cqi, 0.9375rem);
+    padding: clamp(8px, 1.1cqi, 12px) clamp(16px, 1.8cqi, 24px);
     line-height: 1.25;
     cursor: pointer;
     white-space: nowrap;
@@ -103,12 +152,12 @@
     transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Primary "Apply for Admission" Button */
+/* 1. Primary "Apply for Admission" - Vibrant Sunset Gradient */
 .adv-hero-btn-apply {
-    background: linear-gradient(135deg, #f58220 0%, #ea580c 100%);
-    color: #ffffff;
-    border: 2px solid transparent;
-    box-shadow: 0 4px 16px rgba(234, 88, 12, 0.42), 0 2px 5px rgba(0, 0, 0, 0.08);
+    background: linear-gradient(135deg, #f7941d 0%, #ea6100 100%);
+    color: #ffffff !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 6px 20px rgba(234, 97, 0, 0.45), 0 2px 6px rgba(0, 0, 0, 0.12);
 }
 
 .adv-hero-btn-apply i {
@@ -117,10 +166,10 @@
 }
 
 .adv-hero-btn-apply:hover {
-    background: linear-gradient(135deg, #ff8c2b 0%, #f58220 100%);
-    color: #ffffff;
+    background: linear-gradient(135deg, #ff9f2e 0%, #f06a00 100%);
+    color: #ffffff !important;
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(234, 88, 12, 0.58), 0 3px 8px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 10px 28px rgba(234, 97, 0, 0.58), 0 4px 10px rgba(0, 0, 0, 0.16);
 }
 
 .adv-hero-btn-apply:hover i {
@@ -129,28 +178,41 @@
 
 .adv-hero-btn-apply:active {
     transform: translateY(0);
-    box-shadow: 0 2px 8px rgba(234, 88, 12, 0.35);
+    box-shadow: 0 3px 10px rgba(234, 97, 0, 0.35);
 }
 
-/* Secondary "Explore Our School" Button */
+/* 2. Secondary "Explore Our School" - Frosted Glass Sheen */
 .adv-hero-btn-explore {
-    background: #ffffff;
-    color: #031c3d;
-    border: 2px solid #031c3d;
-    box-shadow: 0 4px 14px rgba(3, 28, 61, 0.1);
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    color: #083B7A !important;
+    border: 1.5px solid rgba(255, 255, 255, 0.95);
+    box-shadow: 0 6px 20px rgba(8, 59, 122, 0.16), 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.adv-hero-btn-explore i {
+    font-size: 0.9em;
+    color: #f7941d;
+    transition: transform 0.25s ease, color 0.25s ease;
 }
 
 .adv-hero-btn-explore:hover {
-    background: #031c3d;
-    color: #ffffff;
-    border-color: #031c3d;
+    background: #083B7A;
+    color: #ffffff !important;
+    border-color: #083B7A;
     transform: translateY(-2px);
-    box-shadow: 0 8px 22px rgba(3, 28, 61, 0.28);
+    box-shadow: 0 10px 28px rgba(8, 59, 122, 0.35), 0 4px 10px rgba(0, 0, 0, 0.16);
+}
+
+.adv-hero-btn-explore:hover i {
+    color: #ffffff;
+    transform: rotate(35deg);
 }
 
 .adv-hero-btn-explore:active {
     transform: translateY(0);
-    box-shadow: 0 2px 8px rgba(3, 28, 61, 0.15);
+    box-shadow: 0 3px 10px rgba(8, 59, 122, 0.2);
 }
 
 /* Slide 2 Rich Content Overlays */
@@ -662,7 +724,7 @@
 /* Dots Pagination */
 .adv-slider-dots {
     position: absolute;
-    bottom: clamp(12px, 2cqi, 20px);
+    bottom: clamp(36px, 3.8cqi, 46px);
     left: 50%;
     transform: translateX(-50%);
     display: flex;

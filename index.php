@@ -25,15 +25,22 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="adv-slide-banner-wrap">
                         <img src="assets/images/hero-slider-campus.png" alt="Advaita School of Excellence - Building Curious Minds. Shaping Confident Futures." class="adv-slide-banner-img" loading="eager">
                         
-                        <!-- Real Interactive Hero Action Buttons -->
+                        <!-- Premium Hero Call-To-Action Pod -->
                         <div class="adv-banner-hero-actions">
-                            <a href="#admissions" class="adv-hero-real-btn adv-hero-btn-apply" title="Apply for Admission">
-                                <span>Apply for Admission</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                            <a href="#about" class="adv-hero-real-btn adv-hero-btn-explore" title="Explore Our School">
-                                <span>Explore Our School</span>
-                            </a>
+                            <div class="adv-hero-badge-pill">
+                                <span class="adv-pulse-indicator"></span>
+                                <span>Admissions Open 2026–27</span>
+                            </div>
+                            <div class="adv-hero-btn-row">
+                                <a href="#admissions" class="adv-hero-real-btn adv-hero-btn-apply" title="Apply for Admission">
+                                    <span>Apply for Admission</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                                <a href="#about" class="adv-hero-real-btn adv-hero-btn-explore" title="Explore Our School">
+                                    <i class="fa-solid fa-compass"></i>
+                                    <span>Explore Our School</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -44,15 +51,23 @@ require_once __DIR__ . '/includes/header.php';
                 <div class="adv-slide" data-slide-index="1">
                     <div class="adv-slide-banner-wrap">
                         <img src="assets/images/hero-slider-campus.png" alt="Advaita School of Excellence - Building Curious Minds. Shaping Confident Futures." class="adv-slide-banner-img" loading="lazy">
-                        <!-- Real Interactive Hero Action Buttons -->
+                        
+                        <!-- Premium Hero Call-To-Action Pod -->
                         <div class="adv-banner-hero-actions">
-                            <a href="#admissions" class="adv-hero-real-btn adv-hero-btn-apply" title="Apply for Admission">
-                                <span>Apply for Admission</span>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                            <a href="#about" class="adv-hero-real-btn adv-hero-btn-explore" title="Explore Our School">
-                                <span>Explore Our School</span>
-                            </a>
+                            <div class="adv-hero-badge-pill">
+                                <span class="adv-pulse-indicator"></span>
+                                <span>Admissions Open 2026–27</span>
+                            </div>
+                            <div class="adv-hero-btn-row">
+                                <a href="#admissions" class="adv-hero-real-btn adv-hero-btn-apply" title="Apply for Admission">
+                                    <span>Apply for Admission</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                                <a href="#about" class="adv-hero-real-btn adv-hero-btn-explore" title="Explore Our School">
+                                    <i class="fa-solid fa-compass"></i>
+                                    <span>Explore Our School</span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
