@@ -13,7 +13,7 @@
 .adv-hero-slider-section {
     position: relative;
     width: 100%;
-    aspect-ratio: 1024 / 520;
+    aspect-ratio: 1024 / 540;
     height: auto;
     max-height: 860px;
     background-color: #f8fafc;
@@ -63,19 +63,9 @@
     container-type: inline-size;
 }
 
-/* Soft light gradient scrim on the left side to guarantee high contrast and readability */
+/* Clean natural hero wrapper - no milky scrim over background photos */
 .adv-slide-banner-wrap::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(90deg, 
-        rgba(255, 255, 255, 0.95) 0%, 
-        rgba(255, 255, 255, 0.91) 36%, 
-        rgba(255, 255, 255, 0.60) 50%, 
-        rgba(255, 255, 255, 0) 68%
-    );
-    z-index: 2;
-    pointer-events: none;
+    display: none;
 }
 
 .adv-slide-banner-img {
@@ -95,34 +85,64 @@
 }
 
 /* --------------------------------------------------------------------------
-   Hero Text Overlay (Exact Text Rendered On Banner Image)
+   Modern Frosted Glass Hero Card
+   Sleek glassmorphism card on left with clean backdrop blur, high contrast,
+   and zero wash-out over students or campus imagery.
    -------------------------------------------------------------------------- */
 .adv-hero-text-overlay {
     position: absolute;
     top: 50%;
-    left: clamp(20px, 4.2cqi, 64px);
+    left: clamp(24px, 4cqi, 60px);
     transform: translateY(-50%);
-    width: min(580px, 54cqi);
+    width: min(530px, 47cqi);
     z-index: 5;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: clamp(5px, 0.95cqi, 11px);
+    gap: clamp(7px, 1.1cqi, 12px);
     text-align: left;
+
+    /* Ultra-Premium Frosted Glassmorphism */
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(20px) saturate(190%);
+    -webkit-backdrop-filter: blur(20px) saturate(190%);
+    border: 1.5px solid rgba(255, 255, 255, 0.95);
+    border-radius: clamp(18px, 2.2cqi, 26px);
+    padding: clamp(20px, 2.8cqi, 32px) clamp(22px, 3.2cqi, 36px);
+    box-shadow: 
+        0 24px 56px rgba(3, 28, 61, 0.16),
+        0 8px 20px rgba(3, 28, 61, 0.08),
+        inset 0 1px 1px rgba(255, 255, 255, 1);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
 }
 
-/* 1. Milestone Pill Badge */
+/* 1. Milestone Pill Badge with Double Orange Stripes */
 .adv-hero-milestone-wrap {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    margin-bottom: 2px;
+    gap: clamp(8px, 1.1cqi, 12px);
+    margin-bottom: 1px;
 }
 
-.adv-milestone-dash {
-    display: inline-block;
-    width: clamp(14px, 2.2cqi, 26px);
-    height: 2px;
+.adv-milestone-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    justify-content: center;
+}
+
+.adv-milestone-bars .bar-top {
+    display: block;
+    width: clamp(20px, 2.8cqi, 32px);
+    height: 3px;
+    background: #F37021;
+    border-radius: 2px;
+}
+
+.adv-milestone-bars .bar-bottom {
+    display: block;
+    width: clamp(12px, 1.8cqi, 20px);
+    height: 3px;
     background: #F37021;
     border-radius: 2px;
 }
@@ -130,30 +150,28 @@
 .adv-hero-milestone-badge {
     display: inline-flex;
     align-items: center;
-    gap: 6px;
-    background: #031C3D;
+    justify-content: center;
+    background: linear-gradient(135deg, #022557 0%, #061e47 100%);
     color: #ffffff;
-    font-size: clamp(0.72rem, 0.92cqi, 0.85rem);
-    font-weight: 800;
-    letter-spacing: 0.6px;
-    padding: clamp(4px, 0.6cqi, 6px) clamp(12px, 1.5cqi, 18px);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(0.74rem, 0.92cqi, 0.85rem);
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    padding: clamp(4px, 0.6cqi, 6px) clamp(14px, 1.6cqi, 18px);
     border-radius: 30px;
-    box-shadow: 0 4px 12px rgba(3, 28, 61, 0.25);
-    text-transform: uppercase;
-}
-
-.adv-hero-milestone-badge i {
-    color: #F37021;
-    font-size: 0.85em;
+    box-shadow: 0 4px 12px rgba(2, 37, 87, 0.28);
+    white-space: nowrap;
 }
 
 /* 2. Trust Label: Sanmati Sevabhavi Sanstha's */
 .adv-hero-trust-label {
-    font-size: clamp(0.8125rem, 1.05cqi, 1rem);
+    font-family: 'Montserrat', 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(0.85rem, 1.2cqi, 1.05rem);
     font-weight: 700;
-    color: #0A2540;
+    color: #031C3D;
     letter-spacing: 0.3px;
     line-height: 1.2;
+    margin: 0;
 }
 
 /* 3. Brand Lockup: ADVAITA SCHOOL OF EXCELLENCE */
@@ -165,24 +183,27 @@
 }
 
 .adv-hero-brand-title {
-    font-size: clamp(2.4rem, 4.6cqi, 4.2rem);
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(2.6rem, 4.8cqi, 4.2rem);
     font-weight: 900;
     letter-spacing: -0.5px;
-    line-height: 1;
-    background: linear-gradient(135deg, #FF6A00 0%, #EE4D00 55%, #D43800 100%);
+    line-height: 0.95;
+    background: linear-gradient(135deg, #FF6A00 0%, #EE4D00 50%, #D43800 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 2px 6px rgba(238, 77, 0, 0.22));
+    filter: drop-shadow(0 2px 8px rgba(238, 77, 0, 0.25));
     margin: 0;
+    text-transform: uppercase;
 }
 
 .adv-hero-brand-sub {
-    font-size: clamp(0.95rem, 1.6cqi, 1.45rem);
-    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.95rem, 1.5cqi, 1.35rem);
+    font-weight: 900;
     color: #031C3D;
-    letter-spacing: clamp(1.5px, 0.35cqi, 3.5px);
+    letter-spacing: clamp(2.5px, 0.45cqi, 4.5px);
     text-transform: uppercase;
-    margin-top: 4px;
+    margin-top: clamp(3px, 0.5cqi, 6px);
     line-height: 1.15;
 }
 
@@ -191,64 +212,72 @@
     display: flex;
     flex-direction: column;
     gap: 2px;
-    font-size: clamp(1.05rem, 1.65cqi, 1.5rem);
-    font-weight: 800;
-    line-height: 1.22;
-    margin-top: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.15rem, 1.85cqi, 1.65rem);
+    font-weight: 900;
+    line-height: 1.2;
+    margin-top: clamp(2px, 0.4cqi, 6px);
 }
 
 .adv-hero-taglines .tagline-blue {
-    color: #0A2540;
+    color: #031C3D;
+    letter-spacing: -0.2px;
 }
 
 .adv-hero-taglines .tagline-orange {
     color: #F37021;
+    letter-spacing: -0.2px;
 }
 
 /* 5. Paragraph Description */
 .adv-hero-lead-desc {
-    font-size: clamp(0.8125rem, 1cqi, 0.95rem);
-    color: #334155;
-    line-height: 1.5;
-    max-width: 480px;
-    margin: 2px 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(0.8125rem, 1cqi, 0.92rem);
+    color: #475569;
+    line-height: 1.55;
+    max-width: 100%;
+    margin: 1px 0;
     font-weight: 500;
 }
 
-/* 6. Three Pillar Badges */
+/* 6. Three Pillar Badges (Balanced 3-Column Strip) */
 .adv-hero-pillars-grid {
-    display: flex;
-    align-items: center;
-    gap: clamp(10px, 1.4cqi, 18px);
-    margin: 3px 0;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(8px, 1.2cqi, 14px);
+    width: 100%;
+    padding-top: clamp(6px, 1cqi, 10px);
+    border-top: 1px solid rgba(3, 28, 61, 0.09);
+    margin: 2px 0;
 }
 
 .adv-hero-pillar-badge {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: clamp(6px, 0.85cqi, 9px);
+    gap: clamp(6px, 0.9cqi, 9px);
 }
 
 .adv-hero-pillar-badge .pillar-icon-box {
-    width: clamp(28px, 3.2cqi, 36px);
-    height: clamp(28px, 3.2cqi, 36px);
+    width: clamp(32px, 3.8cqi, 38px);
+    height: clamp(32px, 3.8cqi, 38px);
     border-radius: 50%;
-    background: #031C3D;
+    background: linear-gradient(135deg, #04295e 0%, #011a40 100%);
+    border: 1.5px solid rgba(255, 255, 255, 0.9);
     color: #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: clamp(0.7rem, 0.85cqi, 0.88rem);
+    font-size: clamp(0.75rem, 0.95cqi, 0.88rem);
     flex-shrink: 0;
-    box-shadow: 0 3px 8px rgba(3, 28, 61, 0.22);
+    box-shadow: 0 4px 10px rgba(1, 26, 64, 0.22);
 }
 
 .adv-hero-pillar-badge .pillar-text {
-    font-size: clamp(0.72rem, 0.86cqi, 0.82rem);
-    font-weight: 700;
-    color: #0A2540;
-    line-height: 1.2;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(0.68rem, 0.82cqi, 0.78rem);
+    font-weight: 800;
+    color: #031C3D;
+    line-height: 1.18;
 }
 
 /* 7. Action CTAs Group */
@@ -257,35 +286,41 @@
     align-items: center;
     gap: clamp(8px, 1.2cqi, 14px);
     margin-top: clamp(4px, 0.8cqi, 8px);
+    width: 100%;
     flex-wrap: wrap;
 }
 
 /* Right Sky Script Tag Accent */
 .adv-hero-sky-badge {
     position: absolute;
-    top: clamp(16px, 3.5cqi, 40px);
-    right: clamp(18px, 3.8cqi, 48px);
+    top: clamp(20px, 4.5cqi, 55px);
+    right: clamp(24px, 7cqi, 90px);
     display: flex;
     flex-direction: column;
     align-items: center;
     z-index: 5;
     pointer-events: none;
+    transform: rotate(-5deg);
 }
 
 .adv-sky-script {
-    font-family: 'Fraunces', serif;
-    font-style: italic;
-    font-size: clamp(0.95rem, 1.4cqi, 1.25rem);
+    font-family: 'Caveat', cursive;
+    font-size: clamp(1.4rem, 2.4cqi, 2.2rem);
     font-weight: 700;
-    color: #031C3D;
-    line-height: 1.15;
+    color: #00275C;
+    line-height: 1.05;
     text-align: center;
+    white-space: nowrap;
+    text-shadow: 
+        0 2px 10px rgba(255, 255, 255, 0.95),
+        0 1px 3px rgba(0, 39, 92, 0.25);
 }
 
 .adv-sky-swoosh {
-    width: clamp(70px, 9cqi, 110px);
+    width: clamp(75px, 10cqi, 120px);
     height: auto;
-    margin-top: 2px;
+    margin-top: 1px;
+    filter: drop-shadow(0 2px 4px rgba(243, 112, 33, 0.4));
 }
 
 /* Micro Eyebrow Badge Pill */
@@ -343,23 +378,23 @@
     gap: 8px;
     text-decoration: none;
     border-radius: 50px;
-    font-family: inherit;
-    font-weight: 700;
-    font-size: clamp(0.78rem, 1cqi, 0.9375rem);
-    padding: clamp(8px, 1.1cqi, 12px) clamp(16px, 1.8cqi, 24px);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: clamp(0.82rem, 1.05cqi, 0.96rem);
+    padding: clamp(9px, 1.2cqi, 13px) clamp(18px, 2cqi, 26px);
     line-height: 1.25;
     cursor: pointer;
     white-space: nowrap;
-    letter-spacing: 0.2px;
+    letter-spacing: 0.3px;
     transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* 1. Primary "Apply for Admission" - Vibrant Sunset Gradient */
 .adv-hero-btn-apply {
-    background: linear-gradient(135deg, #f7941d 0%, #ea6100 100%);
+    background: linear-gradient(135deg, #FF7A00 0%, #E85000 100%);
     color: #ffffff !important;
     border: 1.5px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 6px 20px rgba(234, 97, 0, 0.45), 0 2px 6px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 6px 20px rgba(232, 80, 0, 0.42), 0 2px 6px rgba(0, 0, 0, 0.12);
 }
 
 .adv-hero-btn-apply i {
@@ -368,10 +403,10 @@
 }
 
 .adv-hero-btn-apply:hover {
-    background: linear-gradient(135deg, #ff9f2e 0%, #f06a00 100%);
+    background: linear-gradient(135deg, #ff8e22 0%, #f05a00 100%);
     color: #ffffff !important;
     transform: translateY(-2px);
-    box-shadow: 0 10px 28px rgba(234, 97, 0, 0.58), 0 4px 10px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 10px 28px rgba(232, 80, 0, 0.55), 0 4px 10px rgba(0, 0, 0, 0.16);
 }
 
 .adv-hero-btn-apply:hover i {
@@ -380,17 +415,15 @@
 
 .adv-hero-btn-apply:active {
     transform: translateY(0);
-    box-shadow: 0 3px 10px rgba(234, 97, 0, 0.35);
+    box-shadow: 0 3px 10px rgba(232, 80, 0, 0.35);
 }
 
 /* 2. Secondary "Explore Our School" - Frosted Glass Sheen */
 .adv-hero-btn-explore {
-    background: rgba(255, 255, 255, 0.94);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    color: #083B7A !important;
-    border: 1.5px solid rgba(255, 255, 255, 0.95);
-    box-shadow: 0 6px 20px rgba(8, 59, 122, 0.16), 0 2px 6px rgba(0, 0, 0, 0.08);
+    background: #ffffff;
+    color: #031C3D !important;
+    border: 1.5px solid rgba(3, 28, 61, 0.16);
+    box-shadow: 0 4px 16px rgba(3, 28, 61, 0.12), 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
 .adv-hero-btn-explore i {
@@ -988,18 +1021,14 @@
     }
 
     .adv-slide-banner-wrap::before {
-        background: linear-gradient(90deg, 
-            rgba(255, 255, 255, 0.96) 0%, 
-            rgba(255, 255, 255, 0.92) 48%, 
-            rgba(255, 255, 255, 0.6) 70%, 
-            rgba(255, 255, 255, 0) 100%
-        );
+        display: none !important;
     }
     
     .adv-hero-text-overlay {
-        width: 65%;
-        max-width: 480px;
-        gap: 6px;
+        width: min(490px, 58cqi);
+        left: 20px;
+        padding: 20px 24px;
+        gap: 8px;
     }
     
     .adv-mobile-hero-cta-bar {
@@ -1039,12 +1068,7 @@
     }
 
     .adv-slide-banner-wrap::before {
-        background: linear-gradient(90deg, 
-            rgba(255, 255, 255, 0.97) 0%, 
-            rgba(255, 255, 255, 0.94) 60%, 
-            rgba(255, 255, 255, 0.75) 85%, 
-            rgba(255, 255, 255, 0.4) 100%
-        );
+        display: none !important;
     }
 
     .adv-hero-text-overlay {
@@ -1052,14 +1076,17 @@
         top: unset;
         left: unset;
         transform: none;
-        width: 100%;
-        max-width: 100%;
-        padding: 24px 20px;
-        gap: 6px;
+        width: calc(100% - 32px);
+        max-width: 520px;
+        margin: 24px auto;
+        padding: 22px 18px;
+        border-radius: 20px;
+        gap: 8px;
+        box-shadow: 0 16px 40px rgba(3, 28, 61, 0.14);
     }
 
     .adv-hero-actions-group {
-        display: none !important;
+        display: flex !important;
     }
 
     .adv-hero-sky-badge {
@@ -1067,12 +1094,7 @@
     }
     
     .adv-mobile-hero-cta-bar {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        padding: 12px 16px;
-        background: #ffffff;
-        box-shadow: 0 4px 14px rgba(3, 28, 61, 0.08);
+        display: none !important;
     }
     
     .adv-mobile-hero-btn {
