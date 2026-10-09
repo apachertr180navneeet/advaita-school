@@ -19,19 +19,71 @@ require_once __DIR__ . '/includes/header.php';
             <div class="adv-slider-wrapper">
 
                 <!-- ----------------------------------------------------
-                     SLIDE 1: Main Banner (Building Curious Minds)
+                     SLIDE 1: Main Banner (10 Years of Excellence - Building Curious Minds)
                      ---------------------------------------------------- -->
                 <div class="adv-slide active" data-slide-index="0">
                     <div class="adv-slide-banner-wrap">
                         <img src="assets/images/hero-slider-campus.png" alt="Advaita School of Excellence - Building Curious Minds. Shaping Confident Futures." class="adv-slide-banner-img" loading="eager">
                         
-                        <!-- Premium Hero Call-To-Action Pod -->
-                        <div class="adv-banner-hero-actions">
-                            <div class="adv-hero-badge-pill">
-                                <span class="adv-pulse-indicator"></span>
-                                <span>Admissions Open 2026–27</span>
+                        <!-- Premium Hero Content Overlay (Text Rendered on Banner Image) -->
+                        <div class="adv-hero-text-overlay">
+                            
+                            <!-- 1. Milestone Pill Badge -->
+                            <div class="adv-hero-milestone-wrap">
+                                <span class="adv-milestone-dash" aria-hidden="true"></span>
+                                <div class="adv-hero-milestone-badge">
+                                    <i class="fa-solid fa-award" aria-hidden="true"></i>
+                                    <span>10 Years of Excellence</span>
+                                </div>
+                                <span class="adv-milestone-dash" aria-hidden="true"></span>
                             </div>
-                            <div class="adv-hero-btn-row">
+
+                            <!-- 2. Trust / Society Name -->
+                            <div class="adv-hero-trust-label">
+                                <span>Sanmati Sevabhavi Sanstha’s</span>
+                            </div>
+
+                            <!-- 3. Brand Lockup: ADVAITA SCHOOL OF EXCELLENCE -->
+                            <div class="adv-hero-brand-lockup">
+                                <h1 class="adv-hero-brand-title">ADVAITA</h1>
+                                <h2 class="adv-hero-brand-sub">SCHOOL OF EXCELLENCE</h2>
+                            </div>
+
+                            <!-- 4. Tagline: Building Curious Minds. Shaping Confident Futures. -->
+                            <div class="adv-hero-taglines">
+                                <span class="tagline-blue">Building Curious Minds.</span>
+                                <span class="tagline-orange">Shaping Confident Futures.</span>
+                            </div>
+
+                            <!-- 5. Descriptive Paragraph -->
+                            <p class="adv-hero-lead-desc">
+                                Where knowledge meets values, creativity meets opportunity, and every child is encouraged to discover their true potential.
+                            </p>
+
+                            <!-- 6. Three Pillar Badges -->
+                            <div class="adv-hero-pillars-grid">
+                                <div class="adv-hero-pillar-badge">
+                                    <div class="pillar-icon-box">
+                                        <i class="fa-solid fa-book-open"></i>
+                                    </div>
+                                    <span class="pillar-text">Academic<br>Excellence</span>
+                                </div>
+                                <div class="adv-hero-pillar-badge">
+                                    <div class="pillar-icon-box">
+                                        <i class="fa-solid fa-users"></i>
+                                    </div>
+                                    <span class="pillar-text">Holistic<br>Development</span>
+                                </div>
+                                <div class="adv-hero-pillar-badge">
+                                    <div class="pillar-icon-box">
+                                        <i class="fa-solid fa-shield-halved"></i>
+                                    </div>
+                                    <span class="pillar-text">Safe &amp; Supportive<br>Campus</span>
+                                </div>
+                            </div>
+
+                            <!-- 7. Interactive CTA Action Buttons -->
+                            <div class="adv-hero-actions-group">
                                 <a href="#admissions" class="adv-hero-real-btn adv-hero-btn-apply" title="Apply for Admission">
                                     <span>Apply for Admission</span>
                                     <i class="fa-solid fa-arrow-right"></i>
@@ -41,7 +93,17 @@ require_once __DIR__ . '/includes/header.php';
                                     <span>Explore Our School</span>
                                 </a>
                             </div>
+
                         </div>
+
+                        <!-- Right Sky Script Tag Accent -->
+                        <div class="adv-hero-sky-badge" aria-hidden="true">
+                            <span class="adv-sky-script">Excellence<br>in Every Child</span>
+                            <svg class="adv-sky-swoosh" viewBox="0 0 140 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 16 C 45 4, 95 4, 136 18" stroke="#F37021" stroke-width="3" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+
                     </div>
                 </div>
 
@@ -50,25 +112,9 @@ require_once __DIR__ . '/includes/header.php';
                      ---------------------------------------------------- -->
                 <div class="adv-slide" data-slide-index="1">
                     <div class="adv-slide-banner-wrap">
-                        <img src="assets/images/hero-slider-campus.png" alt="Advaita School of Excellence - Building Curious Minds. Shaping Confident Futures." class="adv-slide-banner-img" loading="lazy">
-                        
-                        <!-- Premium Hero Call-To-Action Pod -->
-                        <div class="adv-banner-hero-actions">
-                            <div class="adv-hero-badge-pill">
-                                <span class="adv-pulse-indicator"></span>
-                                <span>Admissions Open 2026–27</span>
-                            </div>
-                            <div class="adv-hero-btn-row">
-                                <a href="#admissions" class="adv-hero-real-btn adv-hero-btn-apply" title="Apply for Admission">
-                                    <span>Apply for Admission</span>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                                <a href="#about" class="adv-hero-real-btn adv-hero-btn-explore" title="Explore Our School">
-                                    <i class="fa-solid fa-compass"></i>
-                                    <span>Explore Our School</span>
-                                </a>
-                            </div>
-                        </div>
+                        <a href="results.php" class="adv-slide-link" title="Advaita School of Excellence - CBSE Results 2025–26 Proud Achievers">
+                            <img src="assets/images/hero-slider-results.jpg" alt="Advaita School of Excellence - CBSE Results 2025-26 Proud Achievers. 100% Class 10th Result, District Topper Om Dhoot 98.40%, Vedant Rugle 97.00%, Hari Dhoot 95.60%." class="adv-slide-banner-img" loading="lazy">
+                        </a>
                     </div>
                 </div>
 

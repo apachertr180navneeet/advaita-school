@@ -13,7 +13,7 @@
 .adv-hero-slider-section {
     position: relative;
     width: 100%;
-    aspect-ratio: 1024 / 373;
+    aspect-ratio: 1024 / 520;
     height: auto;
     max-height: 860px;
     background-color: #f8fafc;
@@ -58,32 +58,234 @@
     position: relative;
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
     background-color: #ffffff;
     container-type: inline-size;
+}
+
+/* Soft light gradient scrim on the left side to guarantee high contrast and readability */
+.adv-slide-banner-wrap::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, 
+        rgba(255, 255, 255, 0.95) 0%, 
+        rgba(255, 255, 255, 0.91) 36%, 
+        rgba(255, 255, 255, 0.60) 50%, 
+        rgba(255, 255, 255, 0) 68%
+    );
+    z-index: 2;
+    pointer-events: none;
 }
 
 .adv-slide-banner-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top;
+    object-position: right center;
     display: block;
 }
 
-/* Premium Hero Action Buttons Pod */
-.adv-banner-hero-actions {
+.adv-slide-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------
+   Hero Text Overlay (Exact Text Rendered On Banner Image)
+   -------------------------------------------------------------------------- */
+.adv-hero-text-overlay {
     position: absolute;
-    left: clamp(18px, 4cqi, 48px);
-    bottom: clamp(48px, 5.2cqi, 68px);
+    top: 50%;
+    left: clamp(20px, 4.2cqi, 64px);
+    transform: translateY(-50%);
+    width: min(580px, 54cqi);
+    z-index: 5;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: clamp(8px, 1.1cqi, 12px);
-    z-index: 10;
+    gap: clamp(5px, 0.95cqi, 11px);
+    text-align: left;
+}
+
+/* 1. Milestone Pill Badge */
+.adv-hero-milestone-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 2px;
+}
+
+.adv-milestone-dash {
+    display: inline-block;
+    width: clamp(14px, 2.2cqi, 26px);
+    height: 2px;
+    background: #F37021;
+    border-radius: 2px;
+}
+
+.adv-hero-milestone-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: #031C3D;
+    color: #ffffff;
+    font-size: clamp(0.72rem, 0.92cqi, 0.85rem);
+    font-weight: 800;
+    letter-spacing: 0.6px;
+    padding: clamp(4px, 0.6cqi, 6px) clamp(12px, 1.5cqi, 18px);
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(3, 28, 61, 0.25);
+    text-transform: uppercase;
+}
+
+.adv-hero-milestone-badge i {
+    color: #F37021;
+    font-size: 0.85em;
+}
+
+/* 2. Trust Label: Sanmati Sevabhavi Sanstha's */
+.adv-hero-trust-label {
+    font-size: clamp(0.8125rem, 1.05cqi, 1rem);
+    font-weight: 700;
+    color: #0A2540;
+    letter-spacing: 0.3px;
+    line-height: 1.2;
+}
+
+/* 3. Brand Lockup: ADVAITA SCHOOL OF EXCELLENCE */
+.adv-hero-brand-lockup {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    margin: 1px 0;
+}
+
+.adv-hero-brand-title {
+    font-size: clamp(2.4rem, 4.6cqi, 4.2rem);
+    font-weight: 900;
+    letter-spacing: -0.5px;
+    line-height: 1;
+    background: linear-gradient(135deg, #FF6A00 0%, #EE4D00 55%, #D43800 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 6px rgba(238, 77, 0, 0.22));
+    margin: 0;
+}
+
+.adv-hero-brand-sub {
+    font-size: clamp(0.95rem, 1.6cqi, 1.45rem);
+    font-weight: 800;
+    color: #031C3D;
+    letter-spacing: clamp(1.5px, 0.35cqi, 3.5px);
+    text-transform: uppercase;
+    margin-top: 4px;
+    line-height: 1.15;
+}
+
+/* 4. Taglines: Building Curious Minds. Shaping Confident Futures. */
+.adv-hero-taglines {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    font-size: clamp(1.05rem, 1.65cqi, 1.5rem);
+    font-weight: 800;
+    line-height: 1.22;
+    margin-top: 2px;
+}
+
+.adv-hero-taglines .tagline-blue {
+    color: #0A2540;
+}
+
+.adv-hero-taglines .tagline-orange {
+    color: #F37021;
+}
+
+/* 5. Paragraph Description */
+.adv-hero-lead-desc {
+    font-size: clamp(0.8125rem, 1cqi, 0.95rem);
+    color: #334155;
+    line-height: 1.5;
+    max-width: 480px;
+    margin: 2px 0;
+    font-weight: 500;
+}
+
+/* 6. Three Pillar Badges */
+.adv-hero-pillars-grid {
+    display: flex;
+    align-items: center;
+    gap: clamp(10px, 1.4cqi, 18px);
+    margin: 3px 0;
+    flex-wrap: wrap;
+}
+
+.adv-hero-pillar-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: clamp(6px, 0.85cqi, 9px);
+}
+
+.adv-hero-pillar-badge .pillar-icon-box {
+    width: clamp(28px, 3.2cqi, 36px);
+    height: clamp(28px, 3.2cqi, 36px);
+    border-radius: 50%;
+    background: #031C3D;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(0.7rem, 0.85cqi, 0.88rem);
+    flex-shrink: 0;
+    box-shadow: 0 3px 8px rgba(3, 28, 61, 0.22);
+}
+
+.adv-hero-pillar-badge .pillar-text {
+    font-size: clamp(0.72rem, 0.86cqi, 0.82rem);
+    font-weight: 700;
+    color: #0A2540;
+    line-height: 1.2;
+}
+
+/* 7. Action CTAs Group */
+.adv-hero-actions-group {
+    display: flex;
+    align-items: center;
+    gap: clamp(8px, 1.2cqi, 14px);
+    margin-top: clamp(4px, 0.8cqi, 8px);
+    flex-wrap: wrap;
+}
+
+/* Right Sky Script Tag Accent */
+.adv-hero-sky-badge {
+    position: absolute;
+    top: clamp(16px, 3.5cqi, 40px);
+    right: clamp(18px, 3.8cqi, 48px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.adv-sky-script {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: clamp(0.95rem, 1.4cqi, 1.25rem);
+    font-weight: 700;
+    color: #031C3D;
+    line-height: 1.15;
+    text-align: center;
+}
+
+.adv-sky-swoosh {
+    width: clamp(70px, 9cqi, 110px);
+    height: auto;
+    margin-top: 2px;
 }
 
 /* Micro Eyebrow Badge Pill */
@@ -767,22 +969,41 @@
 @media (max-width: 991px) {
     .adv-hero-slider-section {
         height: auto;
-        aspect-ratio: 1024 / 373;
-        min-height: unset;
+        aspect-ratio: auto;
+        min-height: 520px;
         max-height: unset;
     }
     
-    .adv-banner-hero-actions {
-        gap: 8px;
+    .adv-slide-banner-wrap {
+        min-height: 520px;
+    }
+
+    .adv-slide-banner-img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: right 30%;
+    }
+
+    .adv-slide-banner-wrap::before {
+        background: linear-gradient(90deg, 
+            rgba(255, 255, 255, 0.96) 0%, 
+            rgba(255, 255, 255, 0.92) 48%, 
+            rgba(255, 255, 255, 0.6) 70%, 
+            rgba(255, 255, 255, 0) 100%
+        );
     }
     
-    .adv-hero-real-btn {
-        padding: 6px 14px;
-        font-size: 0.75rem;
+    .adv-hero-text-overlay {
+        width: 65%;
+        max-width: 480px;
+        gap: 6px;
     }
     
     .adv-mobile-hero-cta-bar {
-        display: grid;
+        display: none !important;
     }
     
     .adv-slider-arrow {
@@ -807,12 +1028,41 @@
 @media (max-width: 768px) {
     .adv-hero-slider-section {
         height: auto;
-        aspect-ratio: 1024 / 373;
-        min-height: unset;
+        aspect-ratio: auto;
+        min-height: 480px;
     }
-    
-    .adv-banner-hero-actions,
-    .adv-banner-overlay-actions {
+
+    .adv-slide-banner-wrap {
+        min-height: 480px;
+        align-items: center;
+        display: flex;
+    }
+
+    .adv-slide-banner-wrap::before {
+        background: linear-gradient(90deg, 
+            rgba(255, 255, 255, 0.97) 0%, 
+            rgba(255, 255, 255, 0.94) 60%, 
+            rgba(255, 255, 255, 0.75) 85%, 
+            rgba(255, 255, 255, 0.4) 100%
+        );
+    }
+
+    .adv-hero-text-overlay {
+        position: relative;
+        top: unset;
+        left: unset;
+        transform: none;
+        width: 100%;
+        max-width: 100%;
+        padding: 24px 20px;
+        gap: 6px;
+    }
+
+    .adv-hero-actions-group {
+        display: none !important;
+    }
+
+    .adv-hero-sky-badge {
         display: none !important;
     }
     
@@ -869,6 +1119,10 @@
 }
 
 @media (max-width: 480px) {
+    .adv-hero-text-overlay {
+        padding: 20px 16px;
+    }
+
     .adv-mobile-hero-cta-bar {
         grid-template-columns: 1fr;
         gap: 8px;
