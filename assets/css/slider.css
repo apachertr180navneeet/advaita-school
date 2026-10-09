@@ -13,7 +13,7 @@
 .adv-hero-slider-section {
     position: relative;
     width: 100%;
-    aspect-ratio: 1024 / 586;
+    aspect-ratio: 1024 / 373;
     height: auto;
     max-height: 860px;
     background-color: #f8fafc;
@@ -77,10 +77,8 @@
 /* Real Interactive Action Buttons on Slide 1 */
 .adv-banner-hero-actions {
     position: absolute;
-    left: 3.9%;
-    left: 3.9cqi;
-    top: 38.8vw;
-    top: 38.8cqi;
+    left: clamp(16px, 3.8cqi, 40px);
+    bottom: clamp(16px, 2.8cqi, 36px);
     display: flex;
     align-items: center;
     gap: clamp(8px, 1.2cqi, 16px);
@@ -664,7 +662,7 @@
 /* Dots Pagination */
 .adv-slider-dots {
     position: absolute;
-    bottom: 58px;
+    bottom: clamp(12px, 2cqi, 20px);
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -707,7 +705,7 @@
 @media (max-width: 991px) {
     .adv-hero-slider-section {
         height: auto;
-        aspect-ratio: 1024 / 586;
+        aspect-ratio: 1024 / 373;
         min-height: unset;
         max-height: unset;
     }
@@ -747,7 +745,7 @@
 @media (max-width: 768px) {
     .adv-hero-slider-section {
         height: auto;
-        aspect-ratio: 1024 / 586;
+        aspect-ratio: 1024 / 373;
         min-height: unset;
     }
     
