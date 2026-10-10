@@ -25,7 +25,7 @@
 .adv-footer-main {
     position: relative;
     z-index: 2;
-    padding: 56px 0 44px 0;
+    padding: 36px 0 28px 0;
 }
 
 .adv-footer-container {
@@ -498,7 +498,7 @@ a.touch-link:hover {
     }
     
     .adv-footer-main {
-        padding: 45px 0 32px;
+        padding: 28px 0 24px;
     }
 
     .adv-footer-map-col {

@@ -1304,7 +1304,8 @@
 
 @media (max-width: 640px) {
     .adv-blog-hero-title {
-        font-size: 2.3rem;
+        font-size: clamp(1.6rem, 6vw, 2.2rem) !important;
+        line-height: 1.22 !important;
     }
 
     .adv-blog-toolbar {

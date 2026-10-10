@@ -162,6 +162,61 @@ p {
     html {
         scroll-padding-top: 80px;
     }
+
+    /* Inner Page Hero Banners (Tablet) */
+    .about-hero-canvas,
+    .staff-hero-canvas,
+    .chairman-hero-canvas,
+    .principal-hero-canvas,
+    .vision-hero-canvas,
+    .contact-hero-canvas,
+    .admission-hero-canvas,
+    .facilities-hero-canvas,
+    .adv-gal-hero-section,
+    .adv-blog-hero-section,
+    .results-hero-grid {
+        flex-direction: column !important;
+        min-height: auto !important;
+    }
+
+    .about-hero-left-panel,
+    .staff-hero-left-panel,
+    .chairman-hero-left-panel,
+    .principal-hero-left-panel,
+    .vision-hero-left-panel,
+    .contact-hero-left-panel,
+    .admission-hero-left-panel,
+    .facilities-hero-left-panel {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 26px 20px !important;
+    }
+
+    .about-hero-bg-visual,
+    .staff-hero-bg-visual,
+    .chairman-hero-bg-visual,
+    .principal-hero-bg-visual,
+    .vision-hero-bg-visual,
+    .contact-hero-bg-visual,
+    .adv-gal-hero-curved-visual,
+    .adv-blog-hero-curved-visual {
+        position: relative !important;
+        width: 100% !important;
+        height: 240px !important;
+        max-height: 260px !important;
+    }
+
+    /* Desk Message Cards (Chairman / Principal) */
+    .chairman-message-card,
+    .principal-message-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+
+    .principal-profile-col {
+        max-width: 320px;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 768px) {
@@ -175,6 +230,211 @@ p {
     .adv-container-medium {
         padding-left: 14px;
         padding-right: 14px;
+    }
+
+    /* Fluid Inner Page Titles */
+    .about-hero-title,
+    .staff-hero-title,
+    .chairman-hero-title,
+    .principal-hero-title,
+    .vision-hero-title,
+    .contact-hero-title,
+    .facilities-hero-title,
+    .admission-hero-title,
+    .acad-hero-title,
+    .adv-gal-hero-title,
+    .adv-blog-hero-title,
+    .results-hero-title {
+        font-size: clamp(1.4rem, 5.5vw, 1.95rem) !important;
+        line-height: 1.24 !important;
+        word-break: break-word;
+    }
+
+    /* Inner Page Hero Backgrounds (Mobile) */
+    .about-hero-bg-visual,
+    .staff-hero-bg-visual,
+    .chairman-hero-bg-visual,
+    .principal-hero-bg-visual,
+    .vision-hero-bg-visual,
+    .contact-hero-bg-visual,
+    .adv-gal-hero-curved-visual,
+    .adv-blog-hero-curved-visual {
+        height: 200px !important;
+    }
+
+    /* Universal Responsive Tables (Fee Structure, Disclosures, Results) */
+    .table-responsive,
+    .docs-table-wrapper,
+    .fee-table-container,
+    .fee-classwise-wrapper,
+    .disclosure-table-wrap,
+    .results-table-wrap {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        display: block !important;
+        margin-bottom: 20px !important;
+        border-radius: 12px !important;
+    }
+
+    .docs-table,
+    .fee-table,
+    .fee-classwise-table,
+    .disclosure-table,
+    .results-table {
+        min-width: 580px !important;
+    }
+
+    .docs-table th,
+    .docs-table td,
+    .fee-table th,
+    .fee-table td,
+    .fee-classwise-table th,
+    .fee-classwise-table td {
+        padding: 10px 12px !important;
+        font-size: 0.8125rem !important;
+    }
+
+    /* Forms on Inner Pages (Contact Us & Online Registration) */
+    .contact-columns-grid,
+    .form-row-two-col,
+    .reg-grid-row.two-cols,
+    .reg-grid-row.three-cols {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+    }
+
+    .contact-input,
+    .contact-textarea,
+    .contact-select,
+    .reg-input,
+    .reg-select,
+    .reg-textarea {
+        font-size: 16px !important; /* Prevents auto-zoom in iOS Safari */
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .form-actions-bar,
+    .reg-actions-bar {
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 12px !important;
+    }
+
+    .contact-submit-btn,
+    .reg-btn-draft,
+    .reg-btn-continue,
+    .reg-btn-back {
+        width: 100% !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    /* Inner Page Multi-Card Grids (Mobile Stack) */
+    .about-story-grid,
+    .about-philosophy-grid,
+    .about-campus-grid,
+    .about-vmv-grid,
+    .about-apart-grid,
+    .about-stats-row,
+    .staff-cards-grid,
+    .vision-dual-cards-grid,
+    .vision-focus-grid,
+    .facilities-grid,
+    .acad-curriculum-grid,
+    .acad-stages-grid,
+    .acad-streams-grid,
+    .acad-approach-grid,
+    .acad-streams-layout,
+    .acad-beyond-layout,
+    .fee-cards-grid,
+    .uniform-cards-grid,
+    .adv-blog-posts-grid,
+    .adv-blog-sidebar,
+    .results-posters-pair,
+    .results-stats-row {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    /* Universal CTA Banners on Inner Pages */
+    .about-cta-banner-full,
+    .chairman-cta-banner-full,
+    .principal-cta-banner-full,
+    .vision-cta-banner-full,
+    .contact-cta-banner-box,
+    .facilities-cta-box,
+    .admission-cta-box,
+    .fee-cta-box,
+    .acad-cta-banner,
+    .results-bottom-cta {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 24px 18px !important;
+        width: 100% !important;
+    }
+
+    .about-cta-actions,
+    .chairman-cta-actions,
+    .principal-cta-actions,
+    .vision-cta-actions,
+    .contact-cta-buttons-wrap,
+    .facilities-cta-actions,
+    .admission-cta-actions,
+    .fee-cta-actions,
+    .acad-cta-actions,
+    .cta-buttons {
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 10px !important;
+        margin-top: 16px !important;
+    }
+
+    .about-cta-actions a,
+    .about-cta-actions button,
+    .contact-cta-buttons-wrap a,
+    .contact-cta-buttons-wrap button,
+    .facilities-cta-actions a,
+    .facilities-cta-actions button,
+    .admission-cta-actions a,
+    .admission-cta-actions button,
+    .fee-cta-actions a,
+    .fee-cta-actions button,
+    .acad-cta-actions a,
+    .acad-cta-actions button,
+    .cta-buttons a,
+    .cta-buttons button {
+        width: 100% !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    /* Quick Cards (Contact Us) */
+    .contact-quick-cards-grid {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+    }
+
+    /* Admission Process Stepper */
+    .admission-step-card {
+        flex: 1 1 100% !important;
+    }
+
+    /* Gallery Category Filter Pills (Mobile Swipe) */
+    .adv-gal-filters-scroll {
+        display: flex !important;
+        overflow-x: auto !important;
+        gap: 10px !important;
+        padding: 6px 2px 14px 2px !important;
+        scrollbar-width: thin !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+
+    .adv-gal-cat-btn {
+        flex: 0 0 105px !important;
+        min-width: 105px !important;
     }
 }
 
@@ -190,6 +450,35 @@ p {
         padding-left: 12px;
         padding-right: 12px;
     }
+
+    .about-hero-bg-visual,
+    .staff-hero-bg-visual,
+    .chairman-hero-bg-visual,
+    .principal-hero-bg-visual,
+    .vision-hero-bg-visual,
+    .contact-hero-bg-visual,
+    .adv-gal-hero-curved-visual,
+    .adv-blog-hero-curved-visual {
+        height: 170px !important;
+    }
+
+    .registration-form-card {
+        padding: 16px 12px !important;
+    }
+
+    .registration-stepper {
+        gap: 4px !important;
+    }
+
+    .reg-step-circle {
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 0.8rem !important;
+    }
+
+    .reg-step-connector {
+        margin: 0 4px 18px !important;
+    }
 }
 
 @media (max-width: 360px) {
@@ -203,5 +492,20 @@ p {
     .adv-container-medium {
         padding-left: 10px;
         padding-right: 10px;
+    }
+
+    .about-eyebrow,
+    .contact-eyebrow,
+    .facilities-eyebrow,
+    .admission-eyebrow {
+        font-size: 0.72rem !important;
+        letter-spacing: 0.3px !important;
+    }
+
+    .about-hero-title,
+    .contact-hero-title,
+    .facilities-hero-title,
+    .admission-hero-title {
+        font-size: 1.35rem !important;
     }
 }

@@ -239,28 +239,44 @@ require_once __DIR__ . '/includes/header.php';
 
 
     <!-- ====================================================================
-         SECTION 3: WELCOME / ABOUT SCHOOL SECTION (DESIGN SPEC)
+         SECTION 3: WELCOME / ABOUT SCHOOL SECTION
          ==================================================================== -->
     <section class="adv-welcome-section" id="about" aria-label="About Advaita School of Excellence">
-        <!-- Subtle decorative leaf watermark in top right -->
-        <div class="adv-welcome-watermark-leaves" aria-hidden="true">
-            <svg width="220" height="180" viewBox="0 0 220 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M195 20C145 35 115 85 125 155C155 130 195 115 210 60C215 35 210 20 195 20Z" fill="#D0E3F5" fill-opacity="0.45"/>
-                <path d="M125 10C95 50 88 110 115 165C138 130 165 102 158 48C150 20 138 10 125 10Z" fill="#BBD7EE" fill-opacity="0.35"/>
-                <path d="M68 35C45 75 58 130 92 170C108 135 120 108 108 68C95 40 82 35 68 35Z" fill="#D0E3F5" fill-opacity="0.38"/>
-            </svg>
-        </div>
+        <!-- Subtle Ambient Background Accents -->
+        <div class="adv-welcome-bg-glow" aria-hidden="true"></div>
+        <div class="adv-welcome-dots-pattern" aria-hidden="true"></div>
 
         <div class="adv-welcome-container">
             <div class="adv-welcome-grid">
                 
-                <!-- Left Visual with School Campus and Excellence Script Overlay -->
+                <!-- Left Visual Column with Multi-layer Campus Frame -->
                 <div class="adv-welcome-visual-col">
-                    <div class="adv-welcome-image-card">
-                        <img src="assets/images/about-advaita-visual.jpg" alt="Advaita School of Excellence Campus - Excellence in Every Child" class="adv-welcome-img" loading="lazy">
-                        
-                        <!-- Curved Swoosh Edge overlay for organic transition on desktop -->
-                        <div class="adv-welcome-curve-mask" aria-hidden="true"></div>
+                    <div class="adv-welcome-frame-wrap">
+                        <!-- Decorative Backdrop Offset Accent -->
+                        <div class="adv-welcome-backdrop-accent" aria-hidden="true"></div>
+
+                        <!-- Main Clean Campus Image Card -->
+                        <div class="adv-welcome-image-card">
+                            <img src="assets/images/about-advaita-visual-clean.jpg?v=2" alt="Advaita School of Excellence Campus - Premier CBSE School Parbhani" class="adv-welcome-img" loading="eager">
+                            <div class="adv-welcome-img-overlay" aria-hidden="true"></div>
+                            
+                            <!-- Floating Tag on Image -->
+                            <div class="adv-welcome-script-pill">
+                                <i class="fa-solid fa-sparkles"></i>
+                                <span>Excellence in Every Child</span>
+                            </div>
+                        </div>
+
+                        <!-- Floating Stat & Affiliation Trust Badge -->
+                        <div class="adv-welcome-trust-badge">
+                            <div class="adv-trust-badge-icon">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <div class="adv-trust-badge-content">
+                                <span class="adv-trust-num">Play Group to XII</span>
+                                <span class="adv-trust-sub">CBSE Affiliation No. 1130920</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -269,6 +285,7 @@ require_once __DIR__ . '/includes/header.php';
                     
                     <!-- Eyebrow Pill Badge -->
                     <div class="adv-welcome-pill-badge">
+                        <span class="badge-dot"></span>
                         <i class="fa-solid fa-landmark"></i>
                         <span>ABOUT OUR SCHOOL</span>
                     </div>
@@ -280,22 +297,27 @@ require_once __DIR__ . '/includes/header.php';
                     </h2>
                     <div class="adv-heading-underline-bar"></div>
 
-                    <!-- Lead Quote Text -->
-                    <p class="adv-welcome-quote">
-                        &ldquo;At Advaita School of Excellence, we believe education is more than academic achievement. It is about developing confident, responsible and compassionate individuals who are prepared for the future.&rdquo;
-                    </p>
+                    <!-- Refined Quote Callout Box -->
+                    <div class="adv-welcome-quote-card">
+                        <div class="adv-quote-mark" aria-hidden="true">
+                            <i class="fa-solid fa-quote-left"></i>
+                        </div>
+                        <p class="adv-welcome-quote-text">
+                            &ldquo;At Advaita School of Excellence, we believe education is more than academic achievement. It is about developing confident, responsible and compassionate individuals who are prepared for the future.&rdquo;
+                        </p>
+                    </div>
 
                     <!-- Explanatory Paragraph -->
                     <p class="adv-welcome-desc">
                         Established with a deep commitment to educational excellence, Advaita School of Excellence provides a seamless educational journey from Play Group through Class XII. We harmonize rigorous CBSE academic standards with experiential learning, cultural values, and modern 21st-century competencies.
                     </p>
 
-                    <!-- 4 Core Feature Badges (2x2 Grid) -->
+                    <!-- 4 Core Feature Cards (2x2 Grid) -->
                     <div class="adv-welcome-features-grid">
                         
                         <!-- Feature 1: Academic Excellence -->
-                        <div class="adv-welcome-feature-item">
-                            <div class="adv-feature-circle icon-orange">
+                        <div class="adv-welcome-feature-card feature-theme-orange">
+                            <div class="adv-feature-icon-box">
                                 <i class="fa-solid fa-book-open"></i>
                             </div>
                             <div class="adv-feature-info">
@@ -305,8 +327,8 @@ require_once __DIR__ . '/includes/header.php';
                         </div>
 
                         <!-- Feature 2: Holistic Development -->
-                        <div class="adv-welcome-feature-item">
-                            <div class="adv-feature-circle icon-blue">
+                        <div class="adv-welcome-feature-card feature-theme-blue">
+                            <div class="adv-feature-icon-box">
                                 <i class="fa-solid fa-user-group"></i>
                             </div>
                             <div class="adv-feature-info">
@@ -316,8 +338,8 @@ require_once __DIR__ . '/includes/header.php';
                         </div>
 
                         <!-- Feature 3: Safe & Supportive Campus -->
-                        <div class="adv-welcome-feature-item">
-                            <div class="adv-feature-circle icon-blue">
+                        <div class="adv-welcome-feature-card feature-theme-teal">
+                            <div class="adv-feature-icon-box">
                                 <i class="fa-solid fa-shield-halved"></i>
                             </div>
                             <div class="adv-feature-info">
@@ -327,8 +349,8 @@ require_once __DIR__ . '/includes/header.php';
                         </div>
 
                         <!-- Feature 4: Future-Ready Learning -->
-                        <div class="adv-welcome-feature-item">
-                            <div class="adv-feature-circle icon-amber">
+                        <div class="adv-welcome-feature-card feature-theme-amber">
+                            <div class="adv-feature-icon-box">
                                 <i class="fa-regular fa-lightbulb"></i>
                             </div>
                             <div class="adv-feature-info">
@@ -346,7 +368,7 @@ require_once __DIR__ . '/includes/header.php';
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
                         <a href="#gallery" class="adv-btn-welcome-outline">
-                            <i class="fa-solid fa-landmark"></i>
+                            <i class="fa-solid fa-building-columns"></i>
                             <span>Take a Campus Tour</span>
                         </a>
                     </div>

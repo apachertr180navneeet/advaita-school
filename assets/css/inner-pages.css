@@ -4917,7 +4917,7 @@
 
 /* 3. MAIN TWO-COLUMN SECTION */
 .contact-main-section {
-    padding: 65px 16px 40px;
+    padding: 32px 16px 28px;
     background: #ffffff;
 }
 
@@ -6408,7 +6408,7 @@
 
 /* 2. Main Facilities Grid Section */
 .facilities-main-section {
-    padding: 60px 0 30px;
+    padding: 32px 0 20px;
 }
 
 .facilities-container {
@@ -7002,7 +7002,7 @@
 
 /* 2. Five-Step Admission Process */
 .admission-process-section {
-    padding: 56px 0 20px;
+    padding: 30px 0 16px;
 }
 
 .admission-steps-wrapper {

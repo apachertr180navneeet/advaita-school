@@ -1394,11 +1394,12 @@
 
 @media (max-width: 640px) {
     .adv-gal-hero-title {
-        font-size: 2.4rem;
+        font-size: clamp(1.6rem, 6vw, 2.2rem) !important;
+        line-height: 1.22 !important;
     }
 
     .adv-gal-hero-subtitle {
-        font-size: 1.3rem;
+        font-size: clamp(1rem, 3.5vw, 1.25rem) !important;
     }
 
     .adv-gal-grid {

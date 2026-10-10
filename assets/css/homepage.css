@@ -9,7 +9,7 @@
    -------------------------------------------------------------------------- */
 .parshv-section {
     position: relative;
-    padding: 96px 0;
+    padding: 36px 0;
     overflow: hidden;
 }
 
@@ -44,7 +44,7 @@
 
 /* Section Header Typography */
 .parshv-section-header {
-    margin-bottom: 56px;
+    margin-bottom: 26px;
 }
 
 .parshv-section-header.text-center,
@@ -272,22 +272,39 @@
 }
 
 /* --------------------------------------------------------------------------
-   Section 3: Welcome / About School Section (Matching Reference Design)
+/* --------------------------------------------------------------------------
+   Section 3: Welcome / About School Section (Modern Institutional Design)
    -------------------------------------------------------------------------- */
 .adv-welcome-section {
     position: relative;
-    padding: 80px 0 90px 0;
+    padding: 24px 0 16px 0;
     background: #ffffff;
     overflow: hidden;
 }
 
-.adv-welcome-watermark-leaves {
+/* Ambient Subtle Background Accents */
+.adv-welcome-bg-glow {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: -100px;
+    left: -120px;
+    width: 550px;
+    height: 550px;
+    background: radial-gradient(circle, rgba(243, 112, 33, 0.08) 0%, rgba(8, 59, 122, 0.04) 50%, transparent 70%);
     pointer-events: none;
     z-index: 1;
-    opacity: 0.6;
+}
+
+.adv-welcome-dots-pattern {
+    position: absolute;
+    right: 2%;
+    top: 12%;
+    width: 140px;
+    height: 140px;
+    background-image: radial-gradient(#CBD5E1 1.5px, transparent 1.5px);
+    background-size: 14px 14px;
+    opacity: 0.55;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .adv-welcome-container {
@@ -301,40 +318,164 @@
 .adv-welcome-grid {
     display: grid;
     grid-template-columns: 1fr 1.15fr;
-    gap: 52px;
+    gap: 36px;
     align-items: center;
 }
 
-/* Left Visual */
+/* --------------------------------------------------------------------------
+   Left Visual Column: Multi-layer Campus Frame with Floating Badges
+   -------------------------------------------------------------------------- */
 .adv-welcome-visual-col {
     position: relative;
 }
 
-.adv-welcome-image-card {
+.adv-welcome-frame-wrap {
     position: relative;
-    border-radius: 28px;
-    overflow: hidden;
-    box-shadow: 0 20px 48px rgba(8, 59, 122, 0.14);
-    background: #f8fafc;
-    border: 4px solid #ffffff;
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    padding: 14px 18px 24px 14px;
 }
 
-.adv-welcome-image-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 26px 56px rgba(8, 59, 122, 0.20);
+/* Offset Backdrop Layer */
+.adv-welcome-backdrop-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 28px;
+    bottom: 12px;
+    border-radius: 32px;
+    background: linear-gradient(135deg, rgba(243, 112, 33, 0.10) 0%, rgba(8, 59, 122, 0.08) 100%);
+    border: 2px dashed rgba(243, 112, 33, 0.35);
+    z-index: 1;
+    transition: transform 0.4s ease;
+}
+
+.adv-welcome-frame-wrap:hover .adv-welcome-backdrop-accent {
+    transform: translate(-5px, -5px);
+}
+
+/* Main Clean Campus Image Card */
+.adv-welcome-image-card {
+    position: relative;
+    z-index: 2;
+    border-radius: 26px;
+    overflow: hidden;
+    box-shadow: 0 24px 50px -12px rgba(8, 59, 122, 0.18), 0 8px 20px rgba(0, 0, 0, 0.05);
+    border: 4px solid #ffffff;
+    background: #f8fafc;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.adv-welcome-frame-wrap:hover .adv-welcome-image-card {
+    transform: translateY(-5px);
+    box-shadow: 0 30px 60px -12px rgba(8, 59, 122, 0.24), 0 12px 28px rgba(0, 0, 0, 0.08);
 }
 
 .adv-welcome-img {
     width: 100%;
     height: 100%;
-    max-height: 520px;
+    min-height: 360px;
+    max-height: 420px;
     object-fit: cover;
-    object-position: center left;
+    object-position: center;
     display: block;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Right Content */
+.adv-welcome-frame-wrap:hover .adv-welcome-img {
+    transform: scale(1.035);
+}
+
+.adv-welcome-img-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10, 37, 64, 0.15) 0%, transparent 40%, rgba(10, 37, 64, 0.25) 100%);
+    pointer-events: none;
+}
+
+/* Floating Script Tag on Image */
+.adv-welcome-script-pill {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(10, 37, 64, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    color: #ffffff;
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+    z-index: 3;
+}
+
+.adv-welcome-script-pill i {
+    color: #FBBF24;
+    font-size: 0.85rem;
+}
+
+/* Floating Stat & Affiliation Trust Badge */
+.adv-welcome-trust-badge {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: #ffffff;
+    padding: 14px 22px;
+    border-radius: 20px;
+    box-shadow: 0 18px 40px rgba(8, 59, 122, 0.16), 0 4px 12px rgba(0, 0, 0, 0.06);
+    border: 2px solid #F1F5F9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.adv-welcome-frame-wrap:hover .adv-welcome-trust-badge {
+    transform: translateY(-4px);
+    box-shadow: 0 22px 48px rgba(8, 59, 122, 0.20), 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.adv-trust-badge-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    background: linear-gradient(135deg, #F37021 0%, #EA580C 100%);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    box-shadow: 0 6px 14px rgba(243, 112, 33, 0.35);
+}
+
+.adv-trust-badge-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.adv-trust-num {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #0A2540;
+    line-height: 1.2;
+}
+
+.adv-trust-sub {
+    font-size: 0.78rem;
+    color: #64748B;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Right Content Column
+   -------------------------------------------------------------------------- */
 .adv-welcome-content-col {
     display: flex;
     flex-direction: column;
@@ -345,17 +486,31 @@
 .adv-welcome-pill-badge {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
+    gap: 9px;
     background: #FFF7ED;
-    border: 1px solid #FED7AA;
+    border: 1px solid #FFEDD5;
     color: #EA580C;
     font-size: 0.8125rem;
-    font-weight: 700;
-    letter-spacing: 0.6px;
-    padding: 6px 16px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    padding: 7px 18px;
     border-radius: 999px;
     margin-bottom: 16px;
-    box-shadow: 0 2px 8px rgba(234, 88, 12, 0.08);
+    box-shadow: 0 2px 10px rgba(234, 88, 12, 0.08);
+}
+
+.adv-welcome-pill-badge .badge-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #EA580C;
+    display: inline-block;
+    animation: advPulseDot 2s infinite ease-in-out;
+}
+
+@keyframes advPulseDot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.8); }
 }
 
 .adv-welcome-pill-badge i {
@@ -367,70 +522,104 @@
 .adv-welcome-heading {
     margin: 0;
     font-family: var(--adv-font-main);
-    line-height: 1.2;
+    line-height: 1.18;
     display: flex;
     flex-direction: column;
+    gap: 4px;
 }
 
 .adv-heading-prefix {
-    font-size: 2.15rem;
-    font-weight: 800;
+    font-size: 2rem;
+    font-weight: 700;
     color: #0A2540;
-    letter-spacing: -0.5px;
+    letter-spacing: -0.3px;
 }
 
 .adv-heading-brand {
-    font-size: 2.35rem;
-    font-weight: 800;
+    font-size: 2.45rem;
+    font-weight: 850;
     color: #F37021;
     letter-spacing: -0.5px;
 }
 
 .adv-heading-underline-bar {
-    width: 54px;
-    height: 3.5px;
-    background: #F37021;
+    width: 62px;
+    height: 4px;
+    background: linear-gradient(90deg, #F37021 0%, #FF8A3D 100%);
     border-radius: 4px;
-    margin: 10px 0 18px 0;
+    margin: 8px 0 14px 0;
 }
 
-/* Lead Quote Text */
-.adv-welcome-quote {
-    font-size: 1.05rem;
+/* Refined Quote Callout Box */
+.adv-welcome-quote-card {
+    position: relative;
+    background: #F8FAFC;
+    border-left: 4px solid #F37021;
+    border-radius: 0 16px 16px 0;
+    padding: 14px 18px 14px 20px;
+    margin-bottom: 14px;
+    box-shadow: 0 4px 16px rgba(15, 41, 66, 0.03);
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.adv-quote-mark {
+    color: rgba(243, 112, 33, 0.35);
+    font-size: 1.5rem;
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.adv-welcome-quote-text {
+    font-size: 1.02rem;
     font-weight: 600;
     color: #0F2942;
     line-height: 1.65;
-    margin-bottom: 14px;
-    font-style: normal;
+    margin: 0;
 }
 
 /* Body Description */
 .adv-welcome-desc {
-    font-size: 0.9375rem;
+    font-size: 0.95rem;
     color: #475569;
     line-height: 1.7;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 }
 
-/* 4 Feature Badges (2x2 Grid) */
+/* --------------------------------------------------------------------------
+   4 Core Feature Cards (2x2 Grid)
+   -------------------------------------------------------------------------- */
 .adv-welcome-features-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px 24px;
+    gap: 14px;
     width: 100%;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
 }
 
-.adv-welcome-feature-item {
+.adv-welcome-feature-card {
     display: flex;
     align-items: center;
     gap: 14px;
+    padding: 14px 16px;
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(10, 37, 64, 0.04);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.adv-feature-circle {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
+.adv-welcome-feature-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(10, 37, 64, 0.08);
+}
+
+.adv-feature-icon-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -439,46 +628,75 @@
     transition: transform 0.3s ease;
 }
 
-.adv-welcome-feature-item:hover .adv-feature-circle {
-    transform: scale(1.08);
+.adv-welcome-feature-card:hover .adv-feature-icon-box {
+    transform: scale(1.1);
 }
 
-.adv-feature-circle.icon-orange {
-    background: #FFEDD5;
+/* Feature Card Color Themes */
+.feature-theme-orange .adv-feature-icon-box {
+    background: #FFF7ED;
     color: #EA580C;
 }
 
-.adv-feature-circle.icon-blue {
-    background: #E0F2FE;
+.feature-theme-orange:hover {
+    border-color: #FED7AA;
+    background: #FFFDF9;
+}
+
+.feature-theme-blue .adv-feature-icon-box {
+    background: #EFF6FF;
     color: #0284C7;
 }
 
-.adv-feature-circle.icon-amber {
+.feature-theme-blue:hover {
+    border-color: #BFDBFE;
+    background: #F8FAFF;
+}
+
+.feature-theme-teal .adv-feature-icon-box {
+    background: #F0FDF4;
+    color: #16A34A;
+}
+
+.feature-theme-teal:hover {
+    border-color: #BBF7D0;
+    background: #F9FEFA;
+}
+
+.feature-theme-amber .adv-feature-icon-box {
     background: #FEF3C7;
     color: #D97706;
+}
+
+.feature-theme-amber:hover {
+    border-color: #FDE68A;
+    background: #FFFEF7;
 }
 
 .adv-feature-info {
     display: flex;
     flex-direction: column;
+    min-width: 0;
 }
 
 .adv-feature-heading {
-    font-size: 0.975rem;
-    font-weight: 700;
+    font-size: 0.95rem;
+    font-weight: 750;
     color: #0A2540;
-    margin: 0 0 2px 0;
+    margin: 0 0 3px 0;
     line-height: 1.25;
 }
 
 .adv-feature-subtext {
-    font-size: 0.8125rem;
+    font-size: 0.8rem;
     color: #64748B;
     margin: 0;
     line-height: 1.35;
 }
 
-/* Bottom Action Buttons */
+/* --------------------------------------------------------------------------
+   Bottom Action Buttons
+   -------------------------------------------------------------------------- */
 .adv-welcome-actions {
     display: flex;
     align-items: center;
@@ -490,21 +708,29 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: linear-gradient(135deg, #F37021 0%, #E05D0E 100%);
+    background: linear-gradient(135deg, #F37021 0%, #EA580C 100%);
     color: #ffffff !important;
     font-size: 0.95rem;
     font-weight: 700;
     padding: 13px 28px;
     border-radius: 999px;
     text-decoration: none;
-    box-shadow: 0 8px 20px rgba(243, 112, 33, 0.30);
+    box-shadow: 0 8px 22px rgba(243, 112, 33, 0.32);
     transition: all 0.3s ease;
 }
 
 .adv-btn-welcome-orange:hover {
-    background: linear-gradient(135deg, #E05D0E 0%, #C44C06 100%);
+    background: linear-gradient(135deg, #EA580C 0%, #C2410C 100%);
     transform: translateY(-2px);
-    box-shadow: 0 12px 26px rgba(243, 112, 33, 0.40);
+    box-shadow: 0 12px 28px rgba(243, 112, 33, 0.42);
+}
+
+.adv-btn-welcome-orange i {
+    transition: transform 0.3s ease;
+}
+
+.adv-btn-welcome-orange:hover i {
+    transform: translateX(4px);
 }
 
 .adv-btn-welcome-outline {
@@ -512,8 +738,8 @@
     align-items: center;
     gap: 10px;
     background: #ffffff;
-    color: #083B7A !important;
-    border: 2px solid #083B7A;
+    color: #0A2540 !important;
+    border: 2px solid #CBD5E1;
     font-size: 0.95rem;
     font-weight: 700;
     padding: 11px 26px;
@@ -523,10 +749,11 @@
 }
 
 .adv-btn-welcome-outline:hover {
-    background: #083B7A;
+    border-color: #0A2540;
+    background: #0A2540;
     color: #ffffff !important;
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(8, 59, 122, 0.25);
+    box-shadow: 0 8px 20px rgba(10, 37, 64, 0.18);
 }
 
 .parshv-about-actions {
@@ -539,7 +766,7 @@
    Section 4: What Makes Advaita Special (Three Pillars Matching Design)
    -------------------------------------------------------------------------- */
 .adv-pillars-section {
-    padding: 85px 0 95px 0;
+    padding: 16px 0 24px 0;
     background: #F8FAFC;
     position: relative;
     overflow: hidden;
@@ -557,7 +784,7 @@
 .adv-pillars-header {
     text-align: center;
     max-width: 800px;
-    margin: 0 auto 52px auto;
+    margin: 0 auto 16px auto;
 }
 
 .adv-pillars-eyebrow {
@@ -572,7 +799,7 @@
     letter-spacing: 0.6px;
     padding: 6px 16px;
     border-radius: 999px;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     box-shadow: 0 2px 8px rgba(234, 88, 12, 0.08);
 }
 
@@ -582,7 +809,7 @@
 }
 
 .adv-pillars-title {
-    margin: 0 0 10px 0;
+    margin: 0 0 6px 0;
     font-family: var(--adv-font-main);
     line-height: 1.25;
 }
@@ -608,7 +835,7 @@
     height: 3.5px;
     background: #F37021;
     border-radius: 4px;
-    margin: 10px auto 16px auto;
+    margin: 6px auto 10px auto;
 }
 
 .adv-pillars-subtitle {
@@ -623,7 +850,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-    margin-bottom: 48px;
+    margin-bottom: 0px;
 }
 
 /* Card */
@@ -833,7 +1060,7 @@
    Section 5: Why Choose Advaita? (Matching Design Spec)
    -------------------------------------------------------------------------- */
 .adv-why-section {
-    padding: 85px 0 95px 0;
+    padding: 24px 0 26px 0;
     background: #ffffff;
     position: relative;
     overflow: hidden;
@@ -898,7 +1125,7 @@
 .adv-why-header {
     text-align: center;
     max-width: 780px;
-    margin: 0 auto 52px auto;
+    margin: 0 auto 18px auto;
 }
 
 .adv-why-eyebrow {
@@ -913,7 +1140,7 @@
     letter-spacing: 0.6px;
     padding: 6px 16px;
     border-radius: 999px;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     box-shadow: 0 2px 8px rgba(234, 88, 12, 0.08);
 }
 
@@ -923,7 +1150,7 @@
 }
 
 .adv-why-title {
-    margin: 0 0 10px 0;
+    margin: 0 0 6px 0;
     font-family: var(--adv-font-main);
     line-height: 1.25;
 }
@@ -947,7 +1174,7 @@
     height: 3.5px;
     background: #F37021;
     border-radius: 4px;
-    margin: 10px auto 16px auto;
+    margin: 6px auto 10px auto;
 }
 
 .adv-why-subtitle {
@@ -1246,7 +1473,7 @@
    Section 6: Campus Visit / Admissions CTA Banner (Matching Design Spec)
    -------------------------------------------------------------------------- */
 .adv-visit-banner-section {
-    padding: 70px 0 85px 0;
+    padding: 20px 0 22px 0;
     background: #F8FAFC;
     position: relative;
     overflow: hidden;
@@ -1614,7 +1841,7 @@
    Section 7: Campus Gallery (A Day at Advaita, in pictures)
    -------------------------------------------------------------------------- */
 .adv-gallery-section {
-    padding: 85px 0 95px 0;
+    padding: 24px 0 26px 0;
     background: linear-gradient(180deg, #f8fafc 0%, #eef2f7 40%, #e8edf4 70%, #f0f4f8 100%);
     position: relative;
     overflow: hidden;
@@ -1632,7 +1859,7 @@
 .adv-gallery-header {
     text-align: center;
     max-width: 780px;
-    margin: 0 auto 40px auto;
+    margin: 0 auto 18px auto;
 }
 
 .adv-gallery-eyebrow {
@@ -1647,7 +1874,7 @@
     letter-spacing: 0.6px;
     padding: 6px 16px;
     border-radius: 999px;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     box-shadow: 0 2px 8px rgba(234, 88, 12, 0.08);
 }
 
@@ -1657,7 +1884,7 @@
 }
 
 .adv-gallery-title {
-    margin: 0 0 12px 0;
+    margin: 0 0 6px 0;
     font-family: var(--adv-font-main);
     line-height: 1.25;
 }
@@ -1893,7 +2120,7 @@
    Section 8: Parent Testimonials (Voices That Inspire Us)
    -------------------------------------------------------------------------- */
 .adv-testimonials-section {
-    padding: 85px 0 95px 0;
+    padding: 24px 0 24px 0;
     background: #F8FAFC;
     position: relative;
     overflow: hidden;
@@ -1911,7 +2138,7 @@
 .adv-testimonials-header {
     text-align: center;
     max-width: 780px;
-    margin: 0 auto 48px auto;
+    margin: 0 auto 18px auto;
 }
 
 .adv-testimonials-eyebrow {
@@ -1926,7 +2153,7 @@
     letter-spacing: 0.6px;
     padding: 6px 16px;
     border-radius: 999px;
-    margin-bottom: 16px;
+    margin-bottom: 8px;
     box-shadow: 0 2px 8px rgba(234, 88, 12, 0.08);
 }
 
@@ -1936,7 +2163,7 @@
 }
 
 .adv-testimonials-title {
-    margin: 0 0 10px 0;
+    margin: 0 0 6px 0;
     font-family: var(--adv-font-main);
     line-height: 1.25;
 }
@@ -1960,7 +2187,7 @@
     height: 3.5px;
     background: #F37021;
     border-radius: 4px;
-    margin: 10px auto 16px auto;
+    margin: 6px auto 10px auto;
 }
 
 .adv-testimonials-subtitle {
@@ -1975,7 +2202,7 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 28px;
-    margin-bottom: 36px;
+    margin-bottom: 16px;
 }
 
 /* Card */
@@ -2132,7 +2359,7 @@
    Section 9: Frequently Asked Questions (FAQ Accordion)
    -------------------------------------------------------------------------- */
 .adv-faq-section {
-    padding: 85px 0 95px 0;
+    padding: 24px 0 28px 0;
     background: #ffffff;
     position: relative;
     overflow: hidden;
@@ -2188,14 +2415,14 @@
 .adv-faq-header {
     text-align: center;
     max-width: 780px;
-    margin: 0 auto 48px auto;
+    margin: 0 auto 18px auto;
 }
 
 .adv-faq-eyebrow {
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 }
 
 .adv-faq-eyebrow .faq-dash {
@@ -2215,7 +2442,7 @@
 }
 
 .adv-faq-title {
-    margin: 0 0 14px 0;
+    margin: 0 0 6px 0;
     font-family: var(--adv-font-main);
     line-height: 1.25;
 }
@@ -3129,7 +3356,7 @@
 
 @media (max-width: 991px) {
     .parshv-section {
-        padding: 72px 0;
+        padding: 46px 0;
     }
 
     .parshv-about-grid {
@@ -3149,26 +3376,36 @@
     }
 
     .adv-welcome-section {
-        padding: 60px 0 68px 0;
+        padding: 24px 0 24px 0;
     }
 
     .adv-welcome-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 28px;
     }
 
-    .adv-welcome-img {
-        max-height: 420px;
+    .adv-welcome-visual-col {
+        max-width: 640px;
+        margin: 0 auto;
         width: 100%;
     }
 
-    .adv-heading-prefix,
+    .adv-welcome-img {
+        max-height: 380px;
+        min-height: 300px;
+        width: 100%;
+    }
+
+    .adv-heading-prefix {
+        font-size: 1.85rem;
+    }
+
     .adv-heading-brand {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     .adv-pillars-section {
-        padding: 65px 0 75px 0;
+        padding: 20px 0 22px 0;
     }
 
     .adv-pillars-grid {
@@ -3186,7 +3423,7 @@
     }
 
     .adv-why-section {
-        padding: 65px 0 75px 0;
+        padding: 22px 0 24px 0;
     }
 
     .adv-why-grid {
@@ -3211,8 +3448,36 @@
         display: none;
     }
 
+    .adv-visit-banner-section {
+        padding: 22px 0 24px 0;
+    }
+
+    .adv-visit-card {
+        grid-template-columns: 1fr;
+        border-radius: 24px;
+        min-height: auto;
+    }
+
+    .adv-visit-card::before,
+    .adv-visit-curve-mask {
+        display: none !important;
+    }
+
+    .adv-visit-content-side {
+        padding: 32px 28px;
+    }
+
+    .adv-visit-heading {
+        font-size: 2.1rem;
+    }
+
+    .adv-visit-visual-side {
+        min-height: 260px;
+        height: 260px;
+    }
+
     .adv-gallery-section {
-        padding: 65px 0 75px 0;
+        padding: 22px 0 24px 0;
     }
 
     .adv-gallery-grid {
@@ -3240,7 +3505,7 @@
     }
 
     .adv-testimonials-section {
-        padding: 65px 0 75px 0;
+        padding: 22px 0 22px 0;
     }
 
     .adv-testimonials-grid {
@@ -3258,7 +3523,7 @@
     }
 
     .adv-faq-section {
-        padding: 65px 0 75px 0;
+        padding: 22px 0 24px 0;
     }
 
     .adv-faq-title .title-dark,
@@ -3280,7 +3545,7 @@
     .adv-gallery-section,
     .adv-testimonials-section,
     .adv-faq-section {
-        padding: 44px 0 !important;
+        padding: 20px 0 !important;
     }
 
     .parshv-container,
@@ -3377,28 +3642,60 @@
     /* Section 3: Welcome */
     .adv-welcome-grid {
         grid-template-columns: 1fr !important;
-        gap: 28px !important;
+        gap: 32px !important;
     }
 
-    .adv-welcome-image-card {
-        border-radius: 18px !important;
+    .adv-welcome-frame-wrap {
+        padding: 0 0 16px 0 !important;
     }
 
-    .adv-welcome-img {
-        max-height: 260px !important;
-        height: 240px !important;
-        object-fit: cover !important;
-    }
-
-    .adv-welcome-curve-mask,
-    .adv-welcome-watermark-leaves {
+    .adv-welcome-backdrop-accent {
         display: none !important;
     }
 
-    .adv-welcome-quote {
+    .adv-welcome-image-card {
+        border-radius: 20px !important;
+    }
+
+    .adv-welcome-img {
+        min-height: 260px !important;
+        max-height: 300px !important;
+        height: 260px !important;
+        object-fit: cover !important;
+    }
+
+    .adv-welcome-trust-badge {
+        position: static !important;
+        margin-top: 14px !important;
+        width: 100% !important;
+        justify-content: flex-start !important;
+        border-radius: 16px !important;
+        padding: 12px 16px !important;
+    }
+
+    .adv-welcome-script-pill {
+        top: 14px !important;
+        left: 14px !important;
+        font-size: 0.78rem !important;
+        padding: 6px 14px !important;
+    }
+
+    .adv-welcome-heading .adv-heading-prefix {
+        font-size: 1.5rem !important;
+    }
+
+    .adv-welcome-heading .adv-heading-brand {
+        font-size: 1.85rem !important;
+    }
+
+    .adv-welcome-quote-card {
+        padding: 14px 16px !important;
+        margin-bottom: 16px !important;
+    }
+
+    .adv-welcome-quote-text {
         font-size: 0.9375rem !important;
         line-height: 1.6 !important;
-        padding: 12px 14px !important;
     }
 
     .adv-welcome-features-grid {
@@ -3406,14 +3703,14 @@
         gap: 12px !important;
     }
 
-    .adv-welcome-feature-item {
+    .adv-welcome-feature-card {
         padding: 12px 14px !important;
     }
 
     .adv-welcome-actions {
         flex-direction: column !important;
         width: 100% !important;
-        gap: 10px !important;
+        gap: 12px !important;
     }
 
     .adv-btn-welcome-orange,
@@ -3437,6 +3734,7 @@
         border-radius: 18px !important;
     }
 
+    .adv-pillar-image-wrap,
     .adv-pillar-img-box {
         height: 200px !important;
     }
@@ -3699,8 +3997,22 @@
         grid-template-columns: 1fr !important;
     }
 
+    .parshv-stat-card {
+        border-right: none !important;
+        border-bottom: 1px solid #f1f5f9 !important;
+    }
+
+    .parshv-stat-card:last-child {
+        border-bottom: none !important;
+    }
+
     .parshv-stat-card:nth-child(5) {
         grid-column: span 1 !important;
+    }
+
+    .adv-pillar-image-wrap,
+    .adv-pillar-img-box {
+        height: 180px !important;
     }
 
     .adv-pillar-tags-grid {
@@ -3735,6 +4047,33 @@
 
     .adv-onload-footer-actions {
         grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 360px) {
+    .adv-welcome-pill-badge,
+    .adv-pillars-eyebrow,
+    .adv-why-eyebrow,
+    .adv-gallery-eyebrow,
+    .adv-testimonials-eyebrow {
+        font-size: 0.72rem !important;
+        padding: 4px 12px !important;
+        letter-spacing: 0.3px !important;
+    }
+
+    .adv-btn-welcome-orange,
+    .adv-btn-welcome-outline,
+    .adv-btn-pillars-primary,
+    .adv-btn-why-cta,
+    .adv-btn-visit-primary,
+    .adv-btn-visit-outline,
+    .adv-btn-gallery-primary {
+        padding: 10px 18px !important;
+        font-size: 0.85rem !important;
+    }
+
+    .adv-stat-num {
+        font-size: 1.3rem !important;
     }
 }
 
