@@ -43,17 +43,6 @@ require_once __DIR__ . '/includes/header.php';
                                 </div>
                             </div>
 
-                            <!-- 2. Trust / Society Name -->
-                            <div class="adv-hero-trust-label">
-                                <span>Sanmati Sevabhavi Sanstha’s</span>
-                            </div>
-
-                            <!-- 3. Brand Lockup: ADVAITA SCHOOL OF EXCELLENCE -->
-                            <div class="adv-hero-brand-lockup">
-                                <h1 class="adv-hero-brand-title">ADVAITA</h1>
-                                <h2 class="adv-hero-brand-sub">SCHOOL OF EXCELLENCE</h2>
-                            </div>
-
                             <!-- 4. Tagline: Building Curious Minds. Shaping Confident Futures. -->
                             <div class="adv-hero-taglines">
                                 <span class="tagline-blue">Building Curious Minds.</span>
@@ -64,28 +53,6 @@ require_once __DIR__ . '/includes/header.php';
                             <p class="adv-hero-lead-desc">
                                 Where knowledge meets values, creativity meets opportunity, and every child is encouraged to discover their true potential.
                             </p>
-
-                            <!-- 6. Three Pillar Badges -->
-                            <div class="adv-hero-pillars-grid">
-                                <div class="adv-hero-pillar-badge">
-                                    <div class="pillar-icon-box">
-                                        <i class="fa-solid fa-book-open"></i>
-                                    </div>
-                                    <span class="pillar-text">Academic<br>Excellence</span>
-                                </div>
-                                <div class="adv-hero-pillar-badge">
-                                    <div class="pillar-icon-box">
-                                        <i class="fa-solid fa-users"></i>
-                                    </div>
-                                    <span class="pillar-text">Holistic<br>Development</span>
-                                </div>
-                                <div class="adv-hero-pillar-badge">
-                                    <div class="pillar-icon-box">
-                                        <i class="fa-solid fa-shield-halved"></i>
-                                    </div>
-                                    <span class="pillar-text">Safe &amp; Supportive<br>Campus</span>
-                                </div>
-                            </div>
 
                             <!-- 7. Interactive CTA Action Buttons -->
                             <div class="adv-hero-actions-group">
@@ -137,17 +104,6 @@ require_once __DIR__ . '/includes/header.php';
                                 </div>
                             </div>
 
-                            <!-- 2. Trust / Society Name -->
-                            <div class="adv-hero-trust-label">
-                                <span>Sanmati Sevabhavi Sanstha’s</span>
-                            </div>
-
-                            <!-- 3. Brand Lockup: ADVAITA SCHOOL OF EXCELLENCE -->
-                            <div class="adv-hero-brand-lockup">
-                                <div class="adv-hero-brand-title">ADVAITA</div>
-                                <div class="adv-hero-brand-sub">SCHOOL OF EXCELLENCE</div>
-                            </div>
-
                             <!-- 4. Tagline: Building Curious Minds. Shaping Confident Futures. -->
                             <div class="adv-hero-taglines">
                                 <span class="tagline-blue">Building Curious Minds.</span>
@@ -159,27 +115,6 @@ require_once __DIR__ . '/includes/header.php';
                                 Where knowledge meets values, creativity meets opportunity, and every child is encouraged to discover their true potential.
                             </p>
 
-                            <!-- 6. Three Pillar Badges -->
-                            <div class="adv-hero-pillars-grid">
-                                <div class="adv-hero-pillar-badge">
-                                    <div class="pillar-icon-box">
-                                        <i class="fa-solid fa-book-open"></i>
-                                    </div>
-                                    <span class="pillar-text">Academic<br>Excellence</span>
-                                </div>
-                                <div class="adv-hero-pillar-badge">
-                                    <div class="pillar-icon-box">
-                                        <i class="fa-solid fa-users"></i>
-                                    </div>
-                                    <span class="pillar-text">Holistic<br>Development</span>
-                                </div>
-                                <div class="adv-hero-pillar-badge">
-                                    <div class="pillar-icon-box">
-                                        <i class="fa-solid fa-shield-halved"></i>
-                                    </div>
-                                    <span class="pillar-text">Safe &amp; Supportive<br>Campus</span>
-                                </div>
-                            </div>
 
                             <!-- 7. Interactive CTA Action Buttons -->
                             <div class="adv-hero-actions-group">

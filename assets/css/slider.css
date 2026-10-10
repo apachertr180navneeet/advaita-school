@@ -93,6 +93,7 @@
     position: absolute;
     top: 50%;
     left: clamp(24px, 4cqi, 60px);
+    margin-left: 5%;
     transform: translateY(-50%);
     width: min(530px, 47cqi);
     z-index: 5;
@@ -160,48 +161,14 @@
     white-space: nowrap;
 }
 
-/* 2. Trust Label: Sanmati Sevabhavi Sanstha's */
+/* 2. Trust Label: Sanmati Sevabhavi Sanstha's (Hidden from banner) */
 .adv-hero-trust-label {
-    font-family: 'Montserrat', 'Plus Jakarta Sans', sans-serif;
-    font-size: clamp(0.85rem, 1.2cqi, 1.05rem);
-    font-weight: 700;
-    color: #031C3D;
-    letter-spacing: 0.3px;
-    line-height: 1.2;
-    margin: 0;
+    display: none !important;
 }
 
-/* 3. Brand Lockup: ADVAITA SCHOOL OF EXCELLENCE */
+/* 3. Brand Lockup: ADVAITA SCHOOL OF EXCELLENCE (Hidden from banner) */
 .adv-hero-brand-lockup {
-    display: flex;
-    flex-direction: column;
-    line-height: 1;
-    margin: 1px 0;
-}
-
-.adv-hero-brand-title {
-    font-family: 'Montserrat', sans-serif;
-    font-size: clamp(2.6rem, 4.8cqi, 4.2rem);
-    font-weight: 900;
-    letter-spacing: -0.5px;
-    line-height: 0.95;
-    background: linear-gradient(135deg, #FF6A00 0%, #EE4D00 50%, #D43800 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0 2px 8px rgba(238, 77, 0, 0.25));
-    margin: 0;
-    text-transform: uppercase;
-}
-
-.adv-hero-brand-sub {
-    font-family: 'Montserrat', sans-serif;
-    font-size: clamp(0.95rem, 1.5cqi, 1.35rem);
-    font-weight: 900;
-    color: #031C3D;
-    letter-spacing: clamp(2.5px, 0.45cqi, 4.5px);
-    text-transform: uppercase;
-    margin-top: clamp(3px, 0.5cqi, 6px);
-    line-height: 1.15;
+    display: none !important;
 }
 
 /* 4. Taglines: Building Curious Minds. Shaping Confident Futures. */
@@ -227,14 +194,15 @@
 }
 
 /* 5. Paragraph Description */
-.adv-hero-lead-desc {
+p.adv-hero-lead-desc {
+    text-align: justify;
+    color: #e36019;
+    font-weight: bold;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: clamp(0.8125rem, 1cqi, 0.92rem);
-    color: #475569;
     line-height: 1.55;
     max-width: 100%;
     margin: 1px 0;
-    font-weight: 500;
 }
 
 /* 6. Three Pillar Badges (Balanced 3-Column Strip) */
