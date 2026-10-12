@@ -63,9 +63,20 @@
     container-type: inline-size;
 }
 
-/* Clean natural hero wrapper - no milky scrim over background photos */
+/* Subtle left-side light gradient vignette - guarantees high contrast & 100% legibility */
 .adv-slide-banner-wrap::before {
-    display: none;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, 
+        rgba(255, 255, 255, 0.96) 0%, 
+        rgba(255, 255, 255, 0.90) 30%, 
+        rgba(255, 255, 255, 0.60) 45%, 
+        rgba(255, 255, 255, 0.15) 58%, 
+        rgba(255, 255, 255, 0) 68%
+    );
+    z-index: 2;
+    pointer-events: none;
 }
 
 .adv-slide-banner-img {
@@ -93,24 +104,27 @@
     position: absolute;
     top: 50%;
     left: clamp(24px, 4cqi, 60px);
-    margin-left: 5%;
+    margin-left: 3%;
     transform: translateY(-50%);
-    width: min(530px, 47cqi);
+    width: min(540px, 48cqi);
     z-index: 5;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: clamp(7px, 1.1cqi, 12px);
+    gap: clamp(8px, 1.2cqi, 14px);
     text-align: left;
 
-    /* Transparent Overlay Container - Card background removed */
-    background: transparent;
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-    border: none;
-    border-radius: 0;
-    padding: 0;
-    box-shadow: none;
+    /* Frosted Glass Overlay Card - 100% crystal clear readability */
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 24px;
+    padding: clamp(20px, 2.6cqi, 32px) clamp(22px, 2.8cqi, 36px);
+    box-shadow: 
+        0 20px 45px -12px rgba(2, 37, 87, 0.12),
+        0 4px 16px rgba(0, 0, 0, 0.03),
+        0 0 0 1px rgba(255, 255, 255, 0.7) inset;
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -175,9 +189,9 @@
 .adv-hero-taglines {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 3px;
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(1.15rem, 1.85cqi, 1.65rem);
+    font-size: clamp(1.2rem, 1.95cqi, 1.75rem);
     font-weight: 900;
     line-height: 1.2;
     margin-top: clamp(2px, 0.4cqi, 6px);
@@ -195,14 +209,14 @@
 
 /* 5. Paragraph Description */
 p.adv-hero-lead-desc {
-    text-align: justify;
-    color: #e36019;
-    font-weight: bold;
+    text-align: left;
+    color: #334155;
+    font-weight: 500;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: clamp(0.8125rem, 1cqi, 0.92rem);
-    line-height: 1.55;
+    font-size: clamp(0.85rem, 1.05cqi, 0.95rem);
+    line-height: 1.6;
     max-width: 100%;
-    margin: 1px 0;
+    margin: 2px 0 4px 0;
 }
 
 /* 6. Three Pillar Badges (Balanced 3-Column Strip) */
@@ -986,13 +1000,20 @@ p.adv-hero-lead-desc {
     }
 
     .adv-slide-banner-wrap::before {
-        display: none !important;
+        display: block !important;
+        background: linear-gradient(90deg, 
+            rgba(255, 255, 255, 0.96) 0%, 
+            rgba(255, 255, 255, 0.92) 48%, 
+            rgba(255, 255, 255, 0.6) 72%, 
+            rgba(255, 255, 255, 0) 100%
+        );
     }
     
     .adv-hero-text-overlay {
-        width: min(490px, 58cqi);
+        width: min(500px, 60cqi);
         left: 20px;
-        padding: 0;
+        margin-left: 0;
+        padding: 20px 24px;
         gap: 8px;
     }
     
@@ -1033,7 +1054,12 @@ p.adv-hero-lead-desc {
     }
 
     .adv-slide-banner-wrap::before {
-        display: none !important;
+        display: block !important;
+        background: linear-gradient(180deg, 
+            rgba(255, 255, 255, 0.95) 0%, 
+            rgba(255, 255, 255, 0.88) 60%, 
+            rgba(255, 255, 255, 0.60) 100%
+        );
     }
 
     .adv-hero-text-overlay {
@@ -1044,13 +1070,13 @@ p.adv-hero-lead-desc {
         width: calc(100% - 32px);
         max-width: 520px;
         margin: 24px auto;
-        padding: 0;
-        border-radius: 0;
-        box-shadow: none;
-        background: transparent;
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-        border: none;
+        padding: 22px 20px;
+        border-radius: 20px;
+        box-shadow: 0 16px 40px rgba(3, 28, 61, 0.14);
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.95);
         gap: 8px;
     }
 
@@ -1111,7 +1137,8 @@ p.adv-hero-lead-desc {
 
 @media (max-width: 480px) {
     .adv-hero-text-overlay {
-        padding: 0;
+        padding: 18px 16px;
+        margin: 16px auto;
     }
 
     .adv-mobile-hero-cta-bar {
