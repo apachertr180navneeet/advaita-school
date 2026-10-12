@@ -408,7 +408,7 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Pillar 01: Labs & Smart Classrooms (Orange) -->
                 <div class="adv-pillar-card theme-orange">
                     <div class="adv-pillar-image-wrap">
-                        <img src="assets/images/pillar-card-1.jpg" alt="Future-ready Labs & Smart Classrooms" class="adv-pillar-img" loading="lazy">
+                        <img src="assets/images/pillar-card-1.jpg?v=2" alt="Future-ready Labs & Smart Classrooms" class="adv-pillar-img" loading="lazy">
                         <div class="adv-pillar-num-badge">01</div>
                         <div class="adv-pillar-floating-icon orange">
                             <i class="fa-solid fa-microscope"></i>
@@ -447,7 +447,7 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Pillar 02: Vibrant Year-round Calendar (Blue) -->
                 <div class="adv-pillar-card theme-blue">
                     <div class="adv-pillar-image-wrap">
-                        <img src="assets/images/pillar-card-2.jpg" alt="A Vibrant Year-round Calendar" class="adv-pillar-img" loading="lazy">
+                        <img src="assets/images/pillar-card-2.jpg?v=2" alt="A Vibrant Year-round Calendar" class="adv-pillar-img" loading="lazy">
                         <div class="adv-pillar-num-badge">02</div>
                         <div class="adv-pillar-floating-icon blue">
                             <i class="fa-solid fa-user-group"></i>
@@ -490,7 +490,7 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Pillar 03: Five Quiet Promises (Teal/Green) -->
                 <div class="adv-pillar-card theme-teal">
                     <div class="adv-pillar-image-wrap">
-                        <img src="assets/images/pillar-card-3.jpg" alt="Five Quiet Promises" class="adv-pillar-img" loading="lazy">
+                        <img src="assets/images/pillar-card-3.jpg?v=2" alt="Five Quiet Promises" class="adv-pillar-img" loading="lazy">
                         <div class="adv-pillar-num-badge">03</div>
                         <div class="adv-pillar-floating-icon teal">
                             <i class="fa-solid fa-shield-halved"></i>
