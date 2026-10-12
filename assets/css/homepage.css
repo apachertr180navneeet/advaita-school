@@ -916,44 +916,14 @@
     background: linear-gradient(135deg, #059669 0%, #047857 100%);
 }
 
-/* Floating Icon */
+/* Floating Icon (Hidden) */
 .adv-pillar-floating-icon {
-    position: absolute;
-    bottom: -22px;
-    left: 24px;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.15rem;
-    color: #ffffff;
-    border: 3.5px solid #ffffff;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.18);
-    z-index: 3;
-    transition: transform 0.3s ease;
-}
-
-.adv-pillar-card:hover .adv-pillar-floating-icon {
-    transform: scale(1.1);
-}
-
-.adv-pillar-floating-icon.orange {
-    background: #F37021;
-}
-
-.adv-pillar-floating-icon.blue {
-    background: #0284C7;
-}
-
-.adv-pillar-floating-icon.teal {
-    background: #059669;
+    display: none !important;
 }
 
 /* Content Area */
 .adv-pillar-content {
-    padding: 34px 20px 24px 20px;
+    padding: 22px 20px 24px 20px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;

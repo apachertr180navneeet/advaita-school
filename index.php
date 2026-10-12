@@ -410,9 +410,6 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="adv-pillar-image-wrap">
                         <img src="assets/images/pillar-card-1.jpg?v=2" alt="Future-ready Labs & Smart Classrooms" class="adv-pillar-img" loading="lazy">
                         <div class="adv-pillar-num-badge">01</div>
-                        <div class="adv-pillar-floating-icon orange">
-                            <i class="fa-solid fa-microscope"></i>
-                        </div>
                     </div>
                     <div class="adv-pillar-content">
                         <h3 class="adv-pillar-heading">Future-ready Labs &amp; Smart Classrooms</h3>
@@ -449,9 +446,6 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="adv-pillar-image-wrap">
                         <img src="assets/images/pillar-card-2.jpg?v=2" alt="A Vibrant Year-round Calendar" class="adv-pillar-img" loading="lazy">
                         <div class="adv-pillar-num-badge">02</div>
-                        <div class="adv-pillar-floating-icon blue">
-                            <i class="fa-solid fa-user-group"></i>
-                        </div>
                     </div>
                     <div class="adv-pillar-content">
                         <h3 class="adv-pillar-heading">A Vibrant Year-round Calendar</h3>
@@ -492,9 +486,6 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="adv-pillar-image-wrap">
                         <img src="assets/images/pillar-card-3.jpg?v=2" alt="Five Quiet Promises" class="adv-pillar-img" loading="lazy">
                         <div class="adv-pillar-num-badge">03</div>
-                        <div class="adv-pillar-floating-icon teal">
-                            <i class="fa-solid fa-shield-halved"></i>
-                        </div>
                     </div>
                     <div class="adv-pillar-content">
                         <h3 class="adv-pillar-heading">Five Quiet Promises</h3>
