@@ -4,10 +4,10 @@
  * CBSE Affiliated (Affiliation No. 1130920)
  * Clean Semantic Layout matching the Official Design
  */
-$pageTitle = "About Us - Advaita School of Excellence, Parbhani | Premier CBSE School";
-$activePage = "about";
+$pageTitle = 'About Us - Advaita School of Excellence, Parbhani | Premier CBSE School';
+$activePage = 'about';
 
-require_once __DIR__ . '/includes/header.php';
+require_once __DIR__.'/includes/header.php';
 ?>
 
 <main id="main" class="main-content-wrapper about-page-wrapper">
@@ -484,12 +484,12 @@ require_once __DIR__ . '/includes/header.php';
 
         <!-- Students Image -->
         <div class="students">
-            <img src="assets/images/about-cta-students-trio.png?v=<?php echo filemtime(__DIR__ . '/assets/images/about-cta-students-trio.png'); ?>" alt="Advaita Students" loading="lazy">
+            <img src="assets/images/about-cta-students-trio.png?v=<?php echo filemtime(__DIR__.'/assets/images/about-cta-students-trio.png'); ?>" alt="Advaita Students" loading="lazy">
         </div>
     </section>
 
 </main>
 
 <?php
-require_once __DIR__ . '/includes/footer.php';
+require_once __DIR__.'/includes/footer.php';
 ?>

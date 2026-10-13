@@ -27,10 +27,10 @@ class RegistrationController extends Controller
             $search = $request->search;
             $query->where(function ($q) use ($search) {
                 $q->where('full_name', 'like', "%{$search}%")
-                  ->orWhere('application_no', 'like', "%{$search}%")
-                  ->orWhere('email', 'like', "%{$search}%")
-                  ->orWhere('phone', 'like', "%{$search}%")
-                  ->orWhere('father_name', 'like', "%{$search}%");
+                    ->orWhere('application_no', 'like', "%{$search}%")
+                    ->orWhere('email', 'like', "%{$search}%")
+                    ->orWhere('phone', 'like', "%{$search}%")
+                    ->orWhere('father_name', 'like', "%{$search}%");
             });
         }
 
@@ -67,7 +67,7 @@ class RegistrationController extends Controller
 
         return redirect()->back()->with(
             'success',
-            "Application #{$registration->application_no} status updated to " . ucfirst(str_replace('_', ' ', $request->status)) . "."
+            "Application #{$registration->application_no} status updated to ".ucfirst(str_replace('_', ' ', $request->status)).'.'
         );
     }
 

@@ -1154,3 +1154,54 @@ p.adv-hero-lead-desc {
         font-size: 0.875rem;
     }
 }
+
+/* --------------------------------------------------------------------------
+   Image on Image (Floating Overlay Graphic / Student Cutout / Featured Badge)
+   -------------------------------------------------------------------------- */
+.adv-hero-overlay-image-container {
+    position: absolute;
+    right: clamp(30px, 7cqi, 110px);
+    bottom: 0;
+    z-index: 4;
+    pointer-events: none;
+    max-width: clamp(200px, 30cqi, 450px);
+    height: 94%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    filter: drop-shadow(0 14px 28px rgba(0, 0, 0, 0.4));
+    animation: advFloatingOverlay 5.5s ease-in-out infinite alternate;
+}
+
+.adv-hero-floating-overlay-img {
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    transform-origin: bottom center;
+}
+
+@keyframes advFloatingOverlay {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-8px);
+    }
+}
+
+@media (max-width: 992px) {
+    .adv-hero-overlay-image-container {
+        opacity: 0.45;
+        right: 15px;
+        max-width: 240px;
+        height: 70%;
+    }
+}
+
+@media (max-width: 768px) {
+    .adv-hero-overlay-image-container {
+        display: none;
+    }
+}
+

@@ -20,8 +20,8 @@ class AdminPortalTest extends TestCase
         parent::setUp();
 
         $this->admin = User::create([
-            'name'     => 'Advaita Administrator',
-            'email'    => 'admin@advaita.com',
+            'name' => 'Advaita Administrator',
+            'email' => 'admin@advaita.com',
             'password' => Hash::make('admin123'),
         ]);
     }
@@ -43,7 +43,7 @@ class AdminPortalTest extends TestCase
     public function test_admin_can_login_with_valid_credentials(): void
     {
         $response = $this->post('/admin/login', [
-            'email'    => 'admin@advaita.com',
+            'email' => 'admin@advaita.com',
             'password' => 'admin123',
         ]);
 
@@ -54,7 +54,7 @@ class AdminPortalTest extends TestCase
     public function test_admin_cannot_login_with_invalid_credentials(): void
     {
         $response = $this->post('/admin/login', [
-            'email'    => 'admin@advaita.com',
+            'email' => 'admin@advaita.com',
             'password' => 'wrongpassword',
         ]);
 
@@ -74,10 +74,10 @@ class AdminPortalTest extends TestCase
     {
         $registration = OnlineRegistration::create([
             'application_no' => 'ADV-2026-TEST',
-            'full_name'      => 'Test Student',
+            'full_name' => 'Test Student',
             'applying_class' => 'Class 6',
-            'phone'          => '9876543210',
-            'status'         => 'submitted',
+            'phone' => '9876543210',
+            'status' => 'submitted',
         ]);
 
         $response = $this->actingAs($this->admin)->get('/admin/registrations');
@@ -92,7 +92,7 @@ class AdminPortalTest extends TestCase
         $updateResponse->assertSessionHas('success');
 
         $this->assertDatabaseHas('online_registrations', [
-            'id'     => $registration->id,
+            'id' => $registration->id,
             'status' => 'approved',
         ]);
     }
@@ -100,11 +100,11 @@ class AdminPortalTest extends TestCase
     public function test_authenticated_admin_can_view_inquiries_and_update_status(): void
     {
         $inquiry = ContactInquiry::create([
-            'name'    => 'Test Parent',
-            'email'   => 'parent@example.com',
+            'name' => 'Test Parent',
+            'email' => 'parent@example.com',
             'subject' => 'Admissions query',
             'message' => 'Please provide information about Class 6 admission details.',
-            'status'  => 'new',
+            'status' => 'new',
         ]);
 
         $response = $this->actingAs($this->admin)->get('/admin/inquiries');
@@ -118,7 +118,7 @@ class AdminPortalTest extends TestCase
         $updateResponse->assertSessionHas('success');
 
         $this->assertDatabaseHas('contact_inquiries', [
-            'id'     => $inquiry->id,
+            'id' => $inquiry->id,
             'status' => 'resolved',
         ]);
     }

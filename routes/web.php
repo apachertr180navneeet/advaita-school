@@ -4,9 +4,10 @@ use App\Http\Controllers\Admin\AuthController as AdminAuthController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\Admin\InquiryController as AdminInquiryController;
 use App\Http\Controllers\Admin\RegistrationController as AdminRegistrationController;
+use App\Http\Controllers\Admin\SliderController as AdminSliderController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
-use App\Http\Controllers\ContactController;
 use App\Http\Controllers\RegistrationController;
 use Illuminate\Support\Facades\Route;
 
@@ -59,7 +60,7 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
     // Protected Admin Routes
     Route::middleware('auth')->group(function () {
-        Route::get('/', fn() => redirect()->route('admin.dashboard'));
+        Route::get('/', fn () => redirect()->route('admin.dashboard'));
         Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
 
         // Student Registrations Management
@@ -73,26 +74,30 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/inquiries/{id}', [AdminInquiryController::class, 'show'])->name('inquiries.show');
         Route::patch('/inquiries/{id}/status', [AdminInquiryController::class, 'updateStatus'])->name('inquiries.status');
         Route::delete('/inquiries/{id}', [AdminInquiryController::class, 'destroy'])->name('inquiries.destroy');
+
+        // Hero Sliders Management
+        Route::patch('/sliders/{id}/toggle-status', [AdminSliderController::class, 'toggleStatus'])->name('sliders.toggle-status');
+        Route::resource('sliders', AdminSliderController::class)->except(['show']);
     });
 });
 
 // Standard /login route redirect
-Route::get('/login', fn() => redirect()->route('admin.login'))->name('login');
+Route::get('/login', fn () => redirect()->route('admin.login'))->name('login');
 
 // Backward Compatibility / Legacy .php URL Redirects
-Route::get('/index.php', fn() => redirect()->route('home', [], 301));
-Route::get('/about-us.php', fn() => redirect()->route('about-us', [], 301));
-Route::get('/vision-mission.php', fn() => redirect()->route('vision-mission', [], 301));
-Route::get('/chairmans-desk.php', fn() => redirect()->route('chairmans-desk', [], 301));
-Route::get('/principals-desk.php', fn() => redirect()->route('principals-desk', [], 301));
-Route::get('/our-staff.php', fn() => redirect()->route('our-staff', [], 301));
-Route::get('/academics.php', fn() => redirect()->route('academics', [], 301));
-Route::get('/results.php', fn() => redirect()->route('results', [], 301));
-Route::get('/admission-info.php', fn() => redirect()->route('admission-info', [], 301));
-Route::get('/fee-structure.php', fn() => redirect()->route('fee-structure', [], 301));
-Route::get('/online-registration.php', fn() => redirect()->route('online-registration', [], 301));
-Route::get('/facilities.php', fn() => redirect()->route('facilities', [], 301));
-Route::get('/gallery.php', fn() => redirect()->route('gallery', [], 301));
-Route::get('/blog.php', fn() => redirect()->route('blog', [], 301));
-Route::get('/contact.php', fn() => redirect()->route('contact', [], 301));
-Route::get('/mandatory-disclosure.php', fn() => redirect()->route('mandatory-disclosure', [], 301));
+Route::get('/index.php', fn () => redirect()->route('home', [], 301));
+Route::get('/about-us.php', fn () => redirect()->route('about-us', [], 301));
+Route::get('/vision-mission.php', fn () => redirect()->route('vision-mission', [], 301));
+Route::get('/chairmans-desk.php', fn () => redirect()->route('chairmans-desk', [], 301));
+Route::get('/principals-desk.php', fn () => redirect()->route('principals-desk', [], 301));
+Route::get('/our-staff.php', fn () => redirect()->route('our-staff', [], 301));
+Route::get('/academics.php', fn () => redirect()->route('academics', [], 301));
+Route::get('/results.php', fn () => redirect()->route('results', [], 301));
+Route::get('/admission-info.php', fn () => redirect()->route('admission-info', [], 301));
+Route::get('/fee-structure.php', fn () => redirect()->route('fee-structure', [], 301));
+Route::get('/online-registration.php', fn () => redirect()->route('online-registration', [], 301));
+Route::get('/facilities.php', fn () => redirect()->route('facilities', [], 301));
+Route::get('/gallery.php', fn () => redirect()->route('gallery', [], 301));
+Route::get('/blog.php', fn () => redirect()->route('blog', [], 301));
+Route::get('/contact.php', fn () => redirect()->route('contact', [], 301));
+Route::get('/mandatory-disclosure.php', fn () => redirect()->route('mandatory-disclosure', [], 301));

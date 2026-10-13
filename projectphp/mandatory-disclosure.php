@@ -5,10 +5,10 @@
  * Affiliation No. 1130920 | School Code: 30882
  * Clean Semantic HTML - Header and Footer Preserved
  */
-$pageTitle = "Mandatory Public Disclosure - Advaita School of Excellence, Parbhani | CBSE Compliance";
-$activePage = "mandatory-disclosure";
+$pageTitle = 'Mandatory Public Disclosure - Advaita School of Excellence, Parbhani | CBSE Compliance';
+$activePage = 'mandatory-disclosure';
 
-require_once __DIR__ . '/includes/header.php';
+require_once __DIR__.'/includes/header.php';
 ?>
 
 <main id="main" class="main-content-wrapper disclosure-page-wrapper">
@@ -583,8 +583,8 @@ require_once __DIR__ . '/includes/header.php';
 </main>
 
 <!-- Accordion Toggle JavaScript -->
-<script src="assets/js/mandatory-disclosure.js?v=<?php echo filemtime(__DIR__ . '/assets/js/mandatory-disclosure.js'); ?>"></script>
+<script src="assets/js/mandatory-disclosure.js?v=<?php echo filemtime(__DIR__.'/assets/js/mandatory-disclosure.js'); ?>"></script>
 
 <?php
-require_once __DIR__ . '/includes/footer.php';
+require_once __DIR__.'/includes/footer.php';
 ?>

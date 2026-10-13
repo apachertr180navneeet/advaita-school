@@ -5,9 +5,9 @@
  * Clean Semantic Layout matching the Official Design
  */
 $pageTitle = "Chairman's Desk - Advaita School of Excellence, Parbhani";
-$activePage = "chairmans-desk";
+$activePage = 'chairmans-desk';
 
-require_once __DIR__ . '/includes/header.php';
+require_once __DIR__.'/includes/header.php';
 ?>
 
 <main id="main" class="main-content-wrapper chairman-page-wrapper">
@@ -285,5 +285,5 @@ require_once __DIR__ . '/includes/header.php';
 </main>
 
 <?php
-require_once __DIR__ . '/includes/footer.php';
+require_once __DIR__.'/includes/footer.php';
 ?>

@@ -4,10 +4,10 @@
  * CBSE Affiliated (Affiliation No. 1130920)
  * Exact Visual Layout matching the Official Design
  */
-$pageTitle = "Our Faculty - Advaita School of Excellence, Parbhani";
-$activePage = "our-staff";
+$pageTitle = 'Our Faculty - Advaita School of Excellence, Parbhani';
+$activePage = 'our-staff';
 
-require_once __DIR__ . '/includes/header.php';
+require_once __DIR__.'/includes/header.php';
 ?>
 
 <div class="faculty-page-wrapper">
@@ -150,7 +150,7 @@ require_once __DIR__ . '/includes/header.php';
                 <article class="staff-card">
                     <div class="staff-card-avatar-wrap">
                         <div class="staff-card-avatar-circle">
-                            <img src="assets/images/principal-desk.jpg?v=<?php echo filemtime(__DIR__ . '/assets/images/principal-desk.jpg'); ?>" alt="Divine Mam - Principal" class="staff-avatar-photo" loading="lazy">
+                            <img src="assets/images/principal-desk.jpg?v=<?php echo filemtime(__DIR__.'/assets/images/principal-desk.jpg'); ?>" alt="Divine Mam - Principal" class="staff-avatar-photo" loading="lazy">
                         </div>
                     </div>
                     <span class="staff-role-pill role-orange">PRINCIPAL</span>
@@ -329,7 +329,7 @@ require_once __DIR__ . '/includes/header.php';
 
         <!-- Students Image on Right -->
         <div class="students">
-            <img src="assets/images/about-cta-students-trio.png?v=<?php echo filemtime(__DIR__ . '/assets/images/about-cta-students-trio.png'); ?>" alt="Advaita Students" loading="lazy">
+            <img src="assets/images/about-cta-students-trio.png?v=<?php echo filemtime(__DIR__.'/assets/images/about-cta-students-trio.png'); ?>" alt="Advaita Students" loading="lazy">
         </div>
     </section>
 
@@ -353,13 +353,13 @@ require_once __DIR__ . '/includes/header.php';
             <!-- Middle 3 Image Gallery -->
             <div class="staff-showcase-gallery">
                 <div class="staff-showcase-thumb">
-                    <img src="assets/images/staff-thumb-1.jpg?v=<?php echo filemtime(__DIR__ . '/assets/images/staff-thumb-1.jpg'); ?>" alt="Advaita Campus Building" class="staff-thumb-img" loading="lazy">
+                    <img src="assets/images/staff-thumb-1.jpg?v=<?php echo filemtime(__DIR__.'/assets/images/staff-thumb-1.jpg'); ?>" alt="Advaita Campus Building" class="staff-thumb-img" loading="lazy">
                 </div>
                 <div class="staff-showcase-thumb">
-                    <img src="assets/images/staff-thumb-2.jpg?v=<?php echo filemtime(__DIR__ . '/assets/images/staff-thumb-2.jpg'); ?>" alt="Advaita Library" class="staff-thumb-img" loading="lazy">
+                    <img src="assets/images/staff-thumb-2.jpg?v=<?php echo filemtime(__DIR__.'/assets/images/staff-thumb-2.jpg'); ?>" alt="Advaita Library" class="staff-thumb-img" loading="lazy">
                 </div>
                 <div class="staff-showcase-thumb">
-                    <img src="assets/images/staff-thumb-3.jpg?v=<?php echo filemtime(__DIR__ . '/assets/images/staff-thumb-3.jpg'); ?>" alt="Advaita Classroom" class="staff-thumb-img" loading="lazy">
+                    <img src="assets/images/staff-thumb-3.jpg?v=<?php echo filemtime(__DIR__.'/assets/images/staff-thumb-3.jpg'); ?>" alt="Advaita Classroom" class="staff-thumb-img" loading="lazy">
                 </div>
             </div>
 
@@ -380,5 +380,5 @@ require_once __DIR__ . '/includes/header.php';
 </div>
 
 <?php
-require_once __DIR__ . '/includes/footer.php';
+require_once __DIR__.'/includes/footer.php';
 ?>

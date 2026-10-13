@@ -5,14 +5,14 @@
  * Strictly 1:1 match with official reference design mockup
  * Clean Semantic HTML - Header and Footer Preserved
  */
-$pageTitle = "Gallery - Advaita School of Excellence | Moments That Matter";
-$activePage = "gallery";
+$pageTitle = 'Gallery - Advaita School of Excellence | Moments That Matter';
+$activePage = 'gallery';
 
-require_once __DIR__ . '/includes/header.php';
+require_once __DIR__.'/includes/header.php';
 ?>
 
 <!-- Dedicated Gallery Page Stylesheet -->
-<link rel="stylesheet" href="assets/css/gallery.css?v=<?php echo file_exists(__DIR__ . '/assets/css/gallery.css') ? filemtime(__DIR__ . '/assets/css/gallery.css') : '1.0'; ?>">
+<link rel="stylesheet" href="assets/css/gallery.css?v=<?php echo file_exists(__DIR__.'/assets/css/gallery.css') ? filemtime(__DIR__.'/assets/css/gallery.css') : '1.0'; ?>">
 
 <main id="main" class="main-content-wrapper adv-gallery-page-wrapper">
 
@@ -697,6 +697,6 @@ require_once __DIR__ . '/includes/header.php';
 </div>
 
 <!-- Dedicated Gallery JavaScript -->
-<script src="assets/js/gallery.js?v=<?php echo file_exists(__DIR__ . '/assets/js/gallery.js') ? filemtime(__DIR__ . '/assets/js/gallery.js') : '1.0'; ?>"></script>
+<script src="assets/js/gallery.js?v=<?php echo file_exists(__DIR__.'/assets/js/gallery.js') ? filemtime(__DIR__.'/assets/js/gallery.js') : '1.0'; ?>"></script>
 
-<?php require_once __DIR__ . '/includes/footer.php'; ?>
+<?php require_once __DIR__.'/includes/footer.php'; ?>

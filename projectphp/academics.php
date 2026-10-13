@@ -4,10 +4,10 @@
  * Programmes > Academics: Holistic Curriculum, Stages, Streams, Approach & Activities
  * Clean Semantic HTML - Header and Footer Preserved
  */
-$pageTitle = "Academics - Advaita School of Excellence, Parbhani | Holistic Learning";
-$activePage = "academics";
+$pageTitle = 'Academics - Advaita School of Excellence, Parbhani | Holistic Learning';
+$activePage = 'academics';
 
-require_once __DIR__ . '/includes/header.php';
+require_once __DIR__.'/includes/header.php';
 ?>
 
 <main id="main" class="main-content-wrapper acad-page-wrapper">
@@ -19,7 +19,7 @@ require_once __DIR__ . '/includes/header.php';
         <div class="admission-hero-canvas">
             <!-- Hero Students Visual -->
             <div class="admission-hero-bg-visual" aria-hidden="true">
-                <img src="assets/images/about-cta-students-clean.png?v=<?php echo filemtime(__DIR__ . '/assets/images/about-cta-students-clean.png'); ?>" alt="Advaita Students" class="admission-hero-bg-img" width="1024" height="682">
+                <img src="assets/images/about-cta-students-clean.png?v=<?php echo filemtime(__DIR__.'/assets/images/about-cta-students-clean.png'); ?>" alt="Advaita Students" class="admission-hero-bg-img" width="1024" height="682">
             </div>
 
             <!-- SVG Wave Overlay for Smooth Translucent Backdrop -->
@@ -422,4 +422,4 @@ require_once __DIR__ . '/includes/header.php';
 
 </main>
 
-<?php require_once __DIR__ . '/includes/footer.php'; ?>
+<?php require_once __DIR__.'/includes/footer.php'; ?>

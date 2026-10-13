@@ -2,14 +2,13 @@
 
 namespace Tests\Feature;
 
-use App\Models\ContactInquiry;
-use App\Models\OnlineRegistration;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
 class SchoolPagesAndFormsTest extends TestCase
 {
     use RefreshDatabase;
+
     public function test_all_school_pages_load_successfully(): void
     {
         $routes = [
@@ -40,9 +39,9 @@ class SchoolPagesAndFormsTest extends TestCase
     public function test_contact_form_submits_and_saves_to_database(): void
     {
         $payload = [
-            'name'    => 'Ramesh Sharma',
-            'email'   => 'ramesh@example.com',
-            'phone'   => '9876543210',
+            'name' => 'Ramesh Sharma',
+            'email' => 'ramesh@example.com',
+            'phone' => '9876543210',
             'subject' => 'Admissions enquiry',
             'message' => 'Please provide information about Class 6 admission details.',
         ];
@@ -52,29 +51,29 @@ class SchoolPagesAndFormsTest extends TestCase
 
         $this->assertDatabaseHas('contact_inquiries', [
             'email' => 'ramesh@example.com',
-            'name'  => 'Ramesh Sharma',
+            'name' => 'Ramesh Sharma',
         ]);
     }
 
     public function test_online_registration_submits_and_saves_to_database(): void
     {
         $payload = [
-            'username'       => 'aarav_sharma',
-            'email'          => 'aarav.parent@example.com',
-            'full_name'      => 'Aarav Sharma',
-            'phone'          => '9876543210',
+            'username' => 'aarav_sharma',
+            'email' => 'aarav.parent@example.com',
+            'full_name' => 'Aarav Sharma',
+            'phone' => '9876543210',
             'applying_class' => 'Class 5',
-            'academic_year'  => '2026-2027',
-            'father_name'    => 'Ramesh Sharma',
-            'mother_name'    => 'Sunita Sharma',
-            'city'           => 'Parbhani',
+            'academic_year' => '2026-2027',
+            'father_name' => 'Ramesh Sharma',
+            'mother_name' => 'Sunita Sharma',
+            'city' => 'Parbhani',
         ];
 
         $response = $this->post('/online-registration', $payload);
         $response->assertSessionHas('success');
 
         $this->assertDatabaseHas('online_registrations', [
-            'email'     => 'aarav.parent@example.com',
+            'email' => 'aarav.parent@example.com',
             'full_name' => 'Aarav Sharma',
         ]);
     }

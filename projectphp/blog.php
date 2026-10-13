@@ -5,14 +5,14 @@
  * Strictly 1:1 match with official reference design mockup
  * Clean Semantic HTML - Header and Footer Preserved
  */
-$pageTitle = "Blog & News - Advaita School of Excellence | Insights, Stories and Updates";
-$activePage = "blog";
+$pageTitle = 'Blog & News - Advaita School of Excellence | Insights, Stories and Updates';
+$activePage = 'blog';
 
-require_once __DIR__ . '/includes/header.php';
+require_once __DIR__.'/includes/header.php';
 ?>
 
 <!-- Dedicated Blog Page Stylesheet -->
-<link rel="stylesheet" href="assets/css/blog.css?v=<?php echo file_exists(__DIR__ . '/assets/css/blog.css') ? filemtime(__DIR__ . '/assets/css/blog.css') : '1.0'; ?>">
+<link rel="stylesheet" href="assets/css/blog.css?v=<?php echo file_exists(__DIR__.'/assets/css/blog.css') ? filemtime(__DIR__.'/assets/css/blog.css') : '1.0'; ?>">
 
 <main id="main" class="main-content-wrapper adv-blog-page-wrapper">
 
@@ -513,6 +513,6 @@ require_once __DIR__ . '/includes/header.php';
 </main>
 
 <!-- Dedicated Blog JavaScript -->
-<script src="assets/js/blog.js?v=<?php echo file_exists(__DIR__ . '/assets/js/blog.js') ? filemtime(__DIR__ . '/assets/js/blog.js') : '1.0'; ?>"></script>
+<script src="assets/js/blog.js?v=<?php echo file_exists(__DIR__.'/assets/js/blog.js') ? filemtime(__DIR__.'/assets/js/blog.js') : '1.0'; ?>"></script>
 
-<?php require_once __DIR__ . '/includes/footer.php'; ?>
+<?php require_once __DIR__.'/includes/footer.php'; ?>

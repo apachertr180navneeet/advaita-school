@@ -4,10 +4,10 @@
  * World-Class Infrastructure & Learning Spaces
  * Clean Semantic HTML - Header and Footer Preserved
  */
-$pageTitle = "Campus Facilities - Advaita School of Excellence, Parbhani | Modern Learning Spaces";
-$activePage = "facilities";
+$pageTitle = 'Campus Facilities - Advaita School of Excellence, Parbhani | Modern Learning Spaces';
+$activePage = 'facilities';
 
-require_once __DIR__ . '/includes/header.php';
+require_once __DIR__.'/includes/header.php';
 ?>
 
 <main id="main" class="main-content-wrapper facilities-page-wrapper">
@@ -400,5 +400,5 @@ require_once __DIR__ . '/includes/header.php';
 </main>
 
 <?php
-require_once __DIR__ . '/includes/footer.php';
+require_once __DIR__.'/includes/footer.php';
 ?>

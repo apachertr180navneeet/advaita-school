@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('online_registrations', function (Blueprint $table) {
             $table->id();
             $table->string('application_no')->unique()->nullable();
-            
+
             // Step 1: General & Admission Details
             $table->string('username')->nullable();
             $table->string('email')->nullable();

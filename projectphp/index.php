@@ -3,10 +3,10 @@
  * Home Page - Advaita School of Excellence
  * Modern, Premium, Clean and Responsive School Website UI
  */
-$pageTitle = "Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)";
-$activePage = "index";
+$pageTitle = 'Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)';
+$activePage = 'index';
 
-require_once __DIR__ . '/includes/header.php';
+require_once __DIR__.'/includes/header.php';
 ?>
 
 <main id="main" class="main-content-wrapper">
@@ -796,7 +796,7 @@ require_once __DIR__ . '/includes/header.php';
 
                 <!-- Right Visual Area with Floating Pods -->
                 <div class="adv-visit-visual-side">
-                    <img src="assets/images/campus-visit-visual.jpg?v=<?php echo filemtime(__DIR__ . '/assets/images/campus-visit-visual.jpg'); ?>" alt="Advaita School of Excellence Campus Visit" class="adv-visit-campus-img" loading="lazy">
+                    <img src="assets/images/campus-visit-visual.jpg?v=<?php echo filemtime(__DIR__.'/assets/images/campus-visit-visual.jpg'); ?>" alt="Advaita School of Excellence Campus Visit" class="adv-visit-campus-img" loading="lazy">
                     
                     <!-- Curved Arch Divider -->
                     <div class="adv-visit-curve-mask" aria-hidden="true">
@@ -1290,5 +1290,5 @@ require_once __DIR__ . '/includes/header.php';
 </main>
 
 <?php
-require_once __DIR__ . '/includes/footer.php';
+require_once __DIR__.'/includes/footer.php';
 ?>

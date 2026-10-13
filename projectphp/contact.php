@@ -6,9 +6,9 @@
  * Clean Semantic HTML - Header and Footer Preserved
  */
 $pageTitle = "Contact Us - Advaita School of Excellence, Parbhani | We'd Love to Hear From You";
-$activePage = "contact";
+$activePage = 'contact';
 
-require_once __DIR__ . '/includes/header.php';
+require_once __DIR__.'/includes/header.php';
 ?>
 
 <main id="main" class="main-content-wrapper contact-page-wrapper">
@@ -484,8 +484,8 @@ require_once __DIR__ . '/includes/header.php';
 </main>
 
 <!-- Page Specific JavaScript for Form Validation & Interactions -->
-<script src="assets/js/contact.js?v=<?php echo filemtime(__DIR__ . '/assets/js/contact.js'); ?>"></script>
+<script src="assets/js/contact.js?v=<?php echo filemtime(__DIR__.'/assets/js/contact.js'); ?>"></script>
 
 <?php
-require_once __DIR__ . '/includes/footer.php';
+require_once __DIR__.'/includes/footer.php';
 ?>

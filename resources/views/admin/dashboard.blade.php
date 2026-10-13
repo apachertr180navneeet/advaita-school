@@ -528,6 +528,10 @@
             <div class="welcome-pill-val">{{ $stats['total_inquiries'] }}</div>
             <div class="welcome-pill-lbl">Contact Enquiries</div>
         </div>
+        <div class="welcome-pill">
+            <div class="welcome-pill-val">{{ $stats['total_sliders'] ?? 0 }}</div>
+            <div class="welcome-pill-lbl">Hero Sliders</div>
+        </div>
     </div>
 </div>
 
@@ -591,6 +595,21 @@
             <span>Documents being verified</span>
         </div>
     </div>
+
+    <!-- Stat 5: Hero Sliders Management -->
+    <a href="{{ route('admin.sliders.index') }}" class="stat-card" style="text-decoration: none; color: inherit;">
+        <div class="stat-card-head">
+            <span class="stat-title">Hero Sliders</span>
+            <div class="stat-icon-circle stat-icon-orange">
+                <i class="fa-solid fa-images"></i>
+            </div>
+        </div>
+        <div class="stat-value">{{ $stats['total_sliders'] ?? 0 }}</div>
+        <div class="stat-subtext">
+            <span class="sub-badge green">{{ $stats['active_sliders'] ?? 0 }} Active</span>
+            <span>manage banner images & sizes &rarr;</span>
+        </div>
+    </a>
 </div>
 
 <!-- 3. Master Interactive List: Both Registrations and Enquiries -->

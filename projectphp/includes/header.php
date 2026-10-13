@@ -21,12 +21,12 @@ $pageTitle = $pageTitle ?? 'Advaita School of Excellence - Sanmati Sevabhavi San
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="assets/css/header.css?v=<?php echo filemtime(__DIR__ . '/../assets/css/header.css'); ?>">
-    <link rel="stylesheet" href="assets/css/slider.css?v=<?php echo filemtime(__DIR__ . '/../assets/css/slider.css'); ?>">
-    <link rel="stylesheet" href="assets/css/homepage.css?v=<?php echo filemtime(__DIR__ . '/../assets/css/homepage.css'); ?>">
-    <link rel="stylesheet" href="assets/css/inner-pages.css?v=<?php echo filemtime(__DIR__ . '/../assets/css/inner-pages.css'); ?>">
+    <link rel="stylesheet" href="assets/css/header.css?v=<?php echo filemtime(__DIR__.'/../assets/css/header.css'); ?>">
+    <link rel="stylesheet" href="assets/css/slider.css?v=<?php echo filemtime(__DIR__.'/../assets/css/slider.css'); ?>">
+    <link rel="stylesheet" href="assets/css/homepage.css?v=<?php echo filemtime(__DIR__.'/../assets/css/homepage.css'); ?>">
+    <link rel="stylesheet" href="assets/css/inner-pages.css?v=<?php echo filemtime(__DIR__.'/../assets/css/inner-pages.css'); ?>">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/footer.css?v=<?php echo filemtime(__DIR__ . '/../assets/css/footer.css'); ?>">
+    <link rel="stylesheet" href="assets/css/footer.css?v=<?php echo filemtime(__DIR__.'/../assets/css/footer.css'); ?>">
 </head>
 <body>
     <!-- =========================================================================
@@ -41,7 +41,7 @@ $pageTitle = $pageTitle ?? 'Advaita School of Excellence - Sanmati Sevabhavi San
                 <div class="adv-preloader-spinner-ring"></div>
                 <!-- Circular Emblem Logo -->
                 <div class="adv-preloader-logo-circle">
-                    <img src="assets/images/loader-logo.png?v=<?php echo filemtime(__DIR__ . '/../assets/images/loader-logo.png'); ?>" alt="Advaita School of Excellence Loading..." class="adv-preloader-img" loading="eager">
+                    <img src="assets/images/loader-logo.png?v=<?php echo filemtime(__DIR__.'/../assets/images/loader-logo.png'); ?>" alt="Advaita School of Excellence Loading..." class="adv-preloader-img" loading="eager">
                 </div>
             </div>
             <div class="adv-preloader-brand">
@@ -55,4 +55,4 @@ $pageTitle = $pageTitle ?? 'Advaita School of Excellence - Sanmati Sevabhavi San
         </div>
     </div>
 
-    <?php require_once __DIR__ . '/navbar.php'; ?>
+    <?php require_once __DIR__.'/navbar.php'; ?>

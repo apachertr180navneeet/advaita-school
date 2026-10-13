@@ -5,9 +5,9 @@
  * Clean Semantic Layout matching the Official Design
  */
 $pageTitle = "Principal's Desk - Advaita School of Excellence, Parbhani";
-$activePage = "principals-desk";
+$activePage = 'principals-desk';
 
-require_once __DIR__ . '/includes/header.php';
+require_once __DIR__.'/includes/header.php';
 ?>
 
 <main id="main" class="main-content-wrapper principal-page-wrapper">
@@ -105,7 +105,7 @@ require_once __DIR__ . '/includes/header.php';
                                 <span class="vf-bracket vf-bracket-br" aria-hidden="true"></span>
                                 
                                 <div class="principal-avatar-wrap">
-                                    <img src="assets/images/principal-desk.jpg?v=<?php echo filemtime(__DIR__ . '/assets/images/principal-desk.jpg'); ?>" alt="Divine Mam - Principal, Advaita School of Excellence" class="principal-avatar-img" loading="eager">
+                                    <img src="assets/images/principal-desk.jpg?v=<?php echo filemtime(__DIR__.'/assets/images/principal-desk.jpg'); ?>" alt="Divine Mam - Principal, Advaita School of Excellence" class="principal-avatar-img" loading="eager">
                                 </div>
                             </div>
 
@@ -345,5 +345,5 @@ require_once __DIR__ . '/includes/header.php';
 </main>
 
 <?php
-require_once __DIR__ . '/includes/footer.php';
+require_once __DIR__.'/includes/footer.php';
 ?>

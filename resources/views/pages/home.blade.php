@@ -12,17 +12,92 @@
         <div class="adv-slider-container">
             <div class="adv-slider-wrapper">
 
-                <!-- ----------------------------------------------------
-                     SLIDE 1: Main Banner (10 Years of Excellence - Building Curious Minds)
-                     ---------------------------------------------------- -->
-                <!-- ----------------------------------------------------
-                     SLIDE 1: Main Banner (10 Years of Excellence - Building Curious Minds)
-                     ---------------------------------------------------- -->
+                @php
+                    $sliderList = isset($sliders) && $sliders->count() > 0 ? $sliders : collect();
+                @endphp
+
+                @forelse($sliderList as $index => $slide)
+                <div class="adv-slide {{ $loop->first ? 'active' : '' }}" data-slide-index="{{ $index }}">
+                    <div class="adv-slide-banner-wrap">
+                        <img src="{{ $slide->image_url }}" alt="{{ $slide->title_1 }} {{ $slide->title_2 }}" class="adv-slide-banner-img" loading="{{ $loop->first ? 'eager' : 'lazy' }}">
+                        
+                        <!-- Decorative Orange Arc Accents (Top Left & Bottom Left) -->
+                        <div class="adv-hero-decor-arc top-left" aria-hidden="true">
+                            <svg viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="0" cy="0" r="160" stroke="#F37021" stroke-width="3.5" stroke-opacity="0.85"/>
+                                <circle cx="0" cy="0" r="220" stroke="#F37021" stroke-width="2" stroke-opacity="0.45"/>
+                            </svg>
+                        </div>
+                        <div class="adv-hero-decor-arc bottom-left" aria-hidden="true">
+                            <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="0" cy="320" r="190" stroke="#F37021" stroke-width="14" stroke-opacity="0.85"/>
+                                <circle cx="0" cy="320" r="255" stroke="#F37021" stroke-width="3" stroke-opacity="0.45"/>
+                            </svg>
+                        </div>
+
+                        <!-- Premium Hero Content Overlay (Text Rendered on Banner Image) -->
+                        <div class="adv-hero-text-overlay">
+                            <!-- Taglines: Title 1 and Title 2 -->
+                            <h1 class="adv-hero-taglines">
+                                <span class="tagline-white">{{ $slide->title_1 }}</span>
+                                @if($slide->title_2)
+                                    <span class="tagline-orange">{{ $slide->title_2 }}</span>
+                                @endif
+                            </h1>
+
+                            <!-- Descriptive Paragraph -->
+                            @if($slide->description)
+                                <p class="adv-hero-lead-desc">
+                                    {{ $slide->description }}
+                                </p>
+                            @endif
+
+                            <!-- Interactive CTA Action Buttons -->
+                            @if($slide->button_1_text || $slide->button_2_text)
+                                <div class="adv-hero-actions-group">
+                                    @if($slide->button_1_text)
+                                        <a href="{{ $slide->button_1_url ?: '#admissions' }}" class="adv-hero-real-btn adv-hero-btn-apply" title="{{ $slide->button_1_text }}">
+                                            <span>{{ $slide->button_1_text }}</span>
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    @endif
+                                    @if($slide->button_2_text)
+                                        <a href="{{ $slide->button_2_url ?: '#about' }}" class="adv-hero-real-btn adv-hero-btn-explore" title="{{ $slide->button_2_text }}">
+                                            <span class="adv-hero-play-circle" aria-hidden="true">
+                                                <i class="fa-solid fa-play"></i>
+                                            </span>
+                                            <span>{{ $slide->button_2_text }}</span>
+                                        </a>
+                                    @endif
+                                </div>
+                            @endif
+                        </div>
+
+                        <!-- Image on Image (Floating Overlay Graphic / Student Cutout / Featured Badge) -->
+                        @if($slide->overlay_image)
+                            <div class="adv-hero-overlay-image-container" aria-hidden="true">
+                                <img src="{{ $slide->overlay_image_url }}" alt="Overlay - {{ $slide->title_1 }}" class="adv-hero-floating-overlay-img" loading="lazy">
+                            </div>
+                        @endif
+
+                        <!-- Right Sky Script Tag Accent -->
+                        @if($slide->badge_text)
+                            <div class="adv-hero-sky-badge" aria-hidden="true">
+                                <span class="adv-sky-script">{!! nl2br(e($slide->badge_text)) !!}</span>
+                                <svg class="adv-sky-swoosh" viewBox="0 0 140 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 16 C 45 4, 95 4, 136 18" stroke="#F37021" stroke-width="3" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                        @endif
+
+                    </div>
+                </div>
+                @empty
+                <!-- Fallback slide if empty -->
                 <div class="adv-slide active" data-slide-index="0">
                     <div class="adv-slide-banner-wrap">
                         <img src="{{ asset('assets/images/hero-slider-campus.png') }}" alt="Advaita School of Excellence - Building Curious Minds. Shaping Confident Futures." class="adv-slide-banner-img" loading="eager">
                         
-                        <!-- Decorative Orange Arc Accents (Top Left & Bottom Left) -->
                         <div class="adv-hero-decor-arc top-left" aria-hidden="true">
                             <svg viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="0" cy="0" r="160" stroke="#F37021" stroke-width="3.5" stroke-opacity="0.85"/>
@@ -36,23 +111,14 @@
                             </svg>
                         </div>
 
-                        <!-- Premium Hero Content Overlay (Text Rendered on Banner Image) -->
                         <div class="adv-hero-text-overlay">
-                            
-
-
-                            <!-- 2. Tagline: Building Curious Minds. Shaping Confident Futures. -->
                             <h1 class="adv-hero-taglines">
                                 <span class="tagline-white">Building Curious Minds.</span>
                                 <span class="tagline-orange">Shaping Confident Futures.</span>
                             </h1>
-
-                            <!-- 3. Descriptive Paragraph -->
                             <p class="adv-hero-lead-desc">
                                 Where knowledge meets values, creativity meets opportunity, and every child is encouraged to discover their true potential.
                             </p>
-
-                            <!-- 4. Interactive CTA Action Buttons -->
                             <div class="adv-hero-actions-group">
                                 <a href="#admissions" class="adv-hero-real-btn adv-hero-btn-apply" title="Apply for Admission">
                                     <span>Apply for Admission</span>
@@ -65,99 +131,39 @@
                                     <span>Explore Our School</span>
                                 </a>
                             </div>
-
                         </div>
 
-                        <!-- Right Sky Script Tag Accent -->
                         <div class="adv-hero-sky-badge" aria-hidden="true">
                             <span class="adv-sky-script">Excellence.<br>In Every Child</span>
                             <svg class="adv-sky-swoosh" viewBox="0 0 140 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M4 16 C 45 4, 95 4, 136 18" stroke="#F37021" stroke-width="3" stroke-linecap="round"/>
                             </svg>
                         </div>
-
                     </div>
                 </div>
-
-                <!-- ----------------------------------------------------
-                     SLIDE 2: Secondary Banner (10 Years of Excellence - Building Curious Minds)
-                     ---------------------------------------------------- -->
-                <div class="adv-slide" data-slide-index="1">
-                    <div class="adv-slide-banner-wrap">
-                        <img src="{{ asset('assets/images/hero-slider-campus.png') }}" alt="Advaita School of Excellence - Building Curious Minds. Shaping Confident Futures." class="adv-slide-banner-img" loading="lazy">
-                        
-                        <!-- Decorative Orange Arc Accents (Top Left & Bottom Left) -->
-                        <div class="adv-hero-decor-arc top-left" aria-hidden="true">
-                            <svg viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="0" cy="0" r="160" stroke="#F37021" stroke-width="3.5" stroke-opacity="0.85"/>
-                                <circle cx="0" cy="0" r="220" stroke="#F37021" stroke-width="2" stroke-opacity="0.45"/>
-                            </svg>
-                        </div>
-                        <div class="adv-hero-decor-arc bottom-left" aria-hidden="true">
-                            <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="0" cy="320" r="190" stroke="#F37021" stroke-width="14" stroke-opacity="0.85"/>
-                                <circle cx="0" cy="320" r="255" stroke="#F37021" stroke-width="3" stroke-opacity="0.45"/>
-                            </svg>
-                        </div>
-
-                        <!-- Premium Hero Content Overlay (Text Rendered on Banner Image) -->
-                        <div class="adv-hero-text-overlay">
-                            
-
-
-                            <!-- 2. Tagline: Building Curious Minds. Shaping Confident Futures. -->
-                            <h1 class="adv-hero-taglines">
-                                <span class="tagline-white">Building Curious Minds.</span>
-                                <span class="tagline-orange">Shaping Confident Futures.</span>
-                            </h1>
-
-                            <!-- 3. Descriptive Paragraph -->
-                            <p class="adv-hero-lead-desc">
-                                Where knowledge meets values, creativity meets opportunity, and every child is encouraged to discover their true potential.
-                            </p>
-
-                            <!-- 4. Interactive CTA Action Buttons -->
-                            <div class="adv-hero-actions-group">
-                                <a href="#admissions" class="adv-hero-real-btn adv-hero-btn-apply" title="Apply for Admission">
-                                    <span>Apply for Admission</span>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                                <a href="#about" class="adv-hero-real-btn adv-hero-btn-explore" title="Explore Our School">
-                                    <span class="adv-hero-play-circle" aria-hidden="true">
-                                        <i class="fa-solid fa-play"></i>
-                                    </span>
-                                    <span>Explore Our School</span>
-                                </a>
-                            </div>
-
-                        </div>
-
-                        <!-- Right Sky Script Tag Accent -->
-                        <div class="adv-hero-sky-badge" aria-hidden="true">
-                            <span class="adv-sky-script">Excellence.<br>In Every Child</span>
-                            <svg class="adv-sky-swoosh" viewBox="0 0 140 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4 16 C 45 4, 95 4, 136 18" stroke="#F37021" stroke-width="3" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-
-                    </div>
-                </div>
+                @endforelse
 
             </div>
 
-            <!-- Slider Arrows -->
-            <button type="button" class="adv-slider-arrow prev-arrow" aria-label="Previous Slide">
-                <i class="fa-solid fa-chevron-left"></i>
-            </button>
-            <button type="button" class="adv-slider-arrow next-arrow" aria-label="Next Slide">
-                <i class="fa-solid fa-chevron-right"></i>
-            </button>
+            <!-- Slider Arrows (Rendered when multiple slides exist) -->
+            @php
+                $totalSlideCount = isset($sliderList) && $sliderList->count() > 0 ? $sliderList->count() : 1;
+            @endphp
+            @if($totalSlideCount > 1)
+                <button type="button" class="adv-slider-arrow prev-arrow" aria-label="Previous Slide">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button type="button" class="adv-slider-arrow next-arrow" aria-label="Next Slide">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
 
-            <!-- Slider Dots -->
-            <div class="adv-slider-dots" role="tablist" aria-label="Slide Selection">
-                <button type="button" class="adv-slider-dot active" role="tab" aria-selected="true" aria-label="Slide 1"></button>
-                <button type="button" class="adv-slider-dot" role="tab" aria-selected="false" aria-label="Slide 2"></button>
-            </div>
+                <!-- Slider Dots -->
+                <div class="adv-slider-dots" role="tablist" aria-label="Slide Selection">
+                    @for($i = 0; $i < $totalSlideCount; $i++)
+                        <button type="button" class="adv-slider-dot {{ $i === 0 ? 'active' : '' }}" role="tab" aria-selected="{{ $i === 0 ? 'true' : 'false' }}" aria-label="Slide {{ $i + 1 }}"></button>
+                    @endfor
+                </div>
+            @endif
         </div>
     </section>
 

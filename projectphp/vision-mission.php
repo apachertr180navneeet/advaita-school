@@ -4,10 +4,10 @@
  * CBSE Affiliated (Affiliation No. 1130920)
  * Clean Semantic Layout matching the Official Design
  */
-$pageTitle = "Vision & Mission - Advaita School of Excellence, Parbhani";
-$activePage = "vision-mission";
+$pageTitle = 'Vision & Mission - Advaita School of Excellence, Parbhani';
+$activePage = 'vision-mission';
 
-require_once __DIR__ . '/includes/header.php';
+require_once __DIR__.'/includes/header.php';
 ?>
 
 <main id="main" class="main-content-wrapper vision-page-wrapper">
@@ -367,5 +367,5 @@ require_once __DIR__ . '/includes/header.php';
 </main>
 
 <?php
-require_once __DIR__ . '/includes/footer.php';
+require_once __DIR__.'/includes/footer.php';
 ?>

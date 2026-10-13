@@ -5,10 +5,10 @@
  * 1. General Details | 2. Personal Details | 3. Contact Details | 4. Documents
  * Clean Semantic HTML - Header and Footer Preserved
  */
-$pageTitle = "Online Registration 2026-27 - Advaita School of Excellence, Parbhani | Admission Form";
-$activePage = "online-registration";
+$pageTitle = 'Online Registration 2026-27 - Advaita School of Excellence, Parbhani | Admission Form';
+$activePage = 'online-registration';
 
-require_once __DIR__ . '/includes/header.php';
+require_once __DIR__.'/includes/header.php';
 ?>
 
 <main id="main" class="main-content-wrapper registration-page-wrapper">
@@ -20,7 +20,7 @@ require_once __DIR__ . '/includes/header.php';
         <div class="admission-hero-canvas">
             <!-- Hero Students Visual -->
             <div class="admission-hero-bg-visual" aria-hidden="true">
-                <img src="assets/images/about-cta-students-clean.png?v=<?php echo filemtime(__DIR__ . '/assets/images/about-cta-students-clean.png'); ?>" alt="Advaita Students" class="admission-hero-bg-img" width="1024" height="682">
+                <img src="assets/images/about-cta-students-clean.png?v=<?php echo filemtime(__DIR__.'/assets/images/about-cta-students-clean.png'); ?>" alt="Advaita Students" class="admission-hero-bg-img" width="1024" height="682">
             </div>
 
             <!-- SVG Wave Overlay for Smooth Translucent Backdrop -->
@@ -1295,5 +1295,5 @@ function handleFileSelect(input, statusId, previewId) {
 </script>
 
 <?php
-require_once __DIR__ . '/includes/footer.php';
+require_once __DIR__.'/includes/footer.php';
 ?>

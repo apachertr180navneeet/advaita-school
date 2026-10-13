@@ -26,7 +26,7 @@ class AuthController extends Controller
     public function login(Request $request)
     {
         $credentials = $request->validate([
-            'email'    => ['required', 'email'],
+            'email' => ['required', 'email'],
             'password' => ['required', 'string'],
         ]);
 
@@ -37,7 +37,7 @@ class AuthController extends Controller
 
             return redirect()->intended(route('admin.dashboard'))->with(
                 'success',
-                'Welcome back, ' . Auth::user()->name . '! Logged in successfully.'
+                'Welcome back, '.Auth::user()->name.'! Logged in successfully.'
             );
         }
 

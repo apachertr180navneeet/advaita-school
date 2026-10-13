@@ -4,10 +4,10 @@
  * Academic Session 2026–27 | Class-wise fee breakdown, Add-ons, Covers, Payment options & FAQs
  * Semantic HTML & Consistent Design - Header and Footer Preserved
  */
-$pageTitle = "Fee Structure 2026-27 - Advaita School of Excellence, Parbhani | Transparent Fees";
-$activePage = "fee-structure";
+$pageTitle = 'Fee Structure 2026-27 - Advaita School of Excellence, Parbhani | Transparent Fees';
+$activePage = 'fee-structure';
 
-require_once __DIR__ . '/includes/header.php';
+require_once __DIR__.'/includes/header.php';
 ?>
 
 <main id="main" class="main-content-wrapper fee-page-wrapper">
@@ -19,7 +19,7 @@ require_once __DIR__ . '/includes/header.php';
         <div class="admission-hero-canvas">
             <!-- Hero Students Visual -->
             <div class="admission-hero-bg-visual" aria-hidden="true">
-                <img src="assets/images/about-cta-students-clean.png?v=<?php echo filemtime(__DIR__ . '/assets/images/about-cta-students-clean.png'); ?>" alt="Advaita Students" class="admission-hero-bg-img" width="1024" height="682">
+                <img src="assets/images/about-cta-students-clean.png?v=<?php echo filemtime(__DIR__.'/assets/images/about-cta-students-clean.png'); ?>" alt="Advaita Students" class="admission-hero-bg-img" width="1024" height="682">
             </div>
 
             <!-- SVG Wave Overlay for Smooth Translucent Backdrop -->
@@ -681,4 +681,4 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<?php require_once __DIR__ . '/includes/footer.php'; ?>
+<?php require_once __DIR__.'/includes/footer.php'; ?>

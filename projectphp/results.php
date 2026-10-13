@@ -5,14 +5,14 @@
  * Strictly 1:1 match with official design mockup (media_1790710565135.jpg)
  * Clean Semantic HTML - Header and Footer Preserved
  */
-$pageTitle = "Board Results - Advaita School of Excellence, Parbhani | 100% CBSE Results";
-$activePage = "results";
+$pageTitle = 'Board Results - Advaita School of Excellence, Parbhani | 100% CBSE Results';
+$activePage = 'results';
 
-require_once __DIR__ . '/includes/header.php';
+require_once __DIR__.'/includes/header.php';
 ?>
 
 <!-- Dedicated Results Page Stylesheet -->
-<link rel="stylesheet" href="assets/css/results.css?v=<?php echo file_exists(__DIR__ . '/assets/css/results.css') ? filemtime(__DIR__ . '/assets/css/results.css') : '1.0'; ?>">
+<link rel="stylesheet" href="assets/css/results.css?v=<?php echo file_exists(__DIR__.'/assets/css/results.css') ? filemtime(__DIR__.'/assets/css/results.css') : '1.0'; ?>">
 
 <main id="main" class="main-content-wrapper results-page-wrapper">
 
@@ -368,4 +368,4 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<?php require_once __DIR__ . '/includes/footer.php'; ?>
+<?php require_once __DIR__.'/includes/footer.php'; ?>

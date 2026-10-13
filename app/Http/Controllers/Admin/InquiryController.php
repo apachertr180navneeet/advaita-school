@@ -23,10 +23,10 @@ class InquiryController extends Controller
             $search = $request->search;
             $query->where(function ($q) use ($search) {
                 $q->where('name', 'like', "%{$search}%")
-                  ->orWhere('email', 'like', "%{$search}%")
-                  ->orWhere('phone', 'like', "%{$search}%")
-                  ->orWhere('subject', 'like', "%{$search}%")
-                  ->orWhere('message', 'like', "%{$search}%");
+                    ->orWhere('email', 'like', "%{$search}%")
+                    ->orWhere('phone', 'like', "%{$search}%")
+                    ->orWhere('subject', 'like', "%{$search}%")
+                    ->orWhere('message', 'like', "%{$search}%");
             });
         }
 
@@ -63,7 +63,7 @@ class InquiryController extends Controller
 
         return redirect()->back()->with(
             'success',
-            "Inquiry from {$inquiry->name} marked as " . ucfirst(str_replace('_', ' ', $request->status)) . "."
+            "Inquiry from {$inquiry->name} marked as ".ucfirst(str_replace('_', ' ', $request->status)).'.'
         );
     }
 

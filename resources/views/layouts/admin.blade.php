@@ -442,6 +442,18 @@
                         @endif
                     </a>
                 </li>
+                <li>
+                    <a href="{{ route('admin.sliders.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.sliders.*') ? 'active' : '' }}">
+                        <i class="fa-solid fa-images"></i>
+                        <span>Hero Sliders</span>
+                        @php
+                            $sliderNavCount = \App\Models\Slider::count();
+                        @endphp
+                        @if($sliderNavCount > 0)
+                            <span class="nav-badge">{{ $sliderNavCount }}</span>
+                        @endif
+                    </a>
+                </li>
             </ul>
 
             <div class="menu-category-title">Quick Actions</div>
