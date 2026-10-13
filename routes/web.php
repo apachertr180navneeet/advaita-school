@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\Admin\AuthController as AdminAuthController;
+use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\Admin\InquiryController as AdminInquiryController;
+use App\Http\Controllers\Admin\RegistrationController as AdminRegistrationController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ContactController;
@@ -41,6 +45,39 @@ Route::get('/mandatory-disclosure', [PageController::class, 'mandatoryDisclosure
 // Contact
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
+
+/*
+|--------------------------------------------------------------------------
+| Admin Portal Routes
+|--------------------------------------------------------------------------
+*/
+Route::prefix('admin')->name('admin.')->group(function () {
+    // Guest Admin Auth Routes
+    Route::get('/login', [AdminAuthController::class, 'showLogin'])->name('login');
+    Route::post('/login', [AdminAuthController::class, 'login'])->name('login.submit');
+    Route::post('/logout', [AdminAuthController::class, 'logout'])->name('logout');
+
+    // Protected Admin Routes
+    Route::middleware('auth')->group(function () {
+        Route::get('/', fn() => redirect()->route('admin.dashboard'));
+        Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
+
+        // Student Registrations Management
+        Route::get('/registrations', [AdminRegistrationController::class, 'index'])->name('registrations.index');
+        Route::get('/registrations/{id}', [AdminRegistrationController::class, 'show'])->name('registrations.show');
+        Route::patch('/registrations/{id}/status', [AdminRegistrationController::class, 'updateStatus'])->name('registrations.status');
+        Route::delete('/registrations/{id}', [AdminRegistrationController::class, 'destroy'])->name('registrations.destroy');
+
+        // Contact Inquiries Management
+        Route::get('/inquiries', [AdminInquiryController::class, 'index'])->name('inquiries.index');
+        Route::get('/inquiries/{id}', [AdminInquiryController::class, 'show'])->name('inquiries.show');
+        Route::patch('/inquiries/{id}/status', [AdminInquiryController::class, 'updateStatus'])->name('inquiries.status');
+        Route::delete('/inquiries/{id}', [AdminInquiryController::class, 'destroy'])->name('inquiries.destroy');
+    });
+});
+
+// Standard /login route redirect
+Route::get('/login', fn() => redirect()->route('admin.login'))->name('login');
 
 // Backward Compatibility / Legacy .php URL Redirects
 Route::get('/index.php', fn() => redirect()->route('home', [], 301));
