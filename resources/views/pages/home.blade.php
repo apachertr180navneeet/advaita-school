@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
-@section('title', "Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)")
+@section('title', $seo['title'] ?? 'Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)')
+@section('meta_description', $seo['description'] ?? 'Advaita School of Excellence, Parbhani - CBSE Affiliated English Medium School (No. 1130920). Offering future-ready education, modern robotics & science labs, holistic sports, and values-based learning from Pre-Primary to Class 10.')
+@section('meta_keywords', $seo['keywords'] ?? 'Advaita School of Excellence, Parbhani School, CBSE School Parbhani, Best School in Parbhani, CBSE Affiliated School 1130920, Robotics Lab School, English Medium School Parbhani')
 
 @section('content')
 <main id="main" class="main-content-wrapper">
@@ -383,25 +385,63 @@
             <div class="adv-pillars-header text-center">
                 <div class="adv-pillars-eyebrow">
                     <i class="fa-solid fa-landmark"></i>
-                    <span>WHAT MAKES ADVAITA SPECIAL</span>
+                    <span>{{ $pillarSettings['eyebrow'] ?? 'WHAT MAKES ADVAITA SPECIAL' }}</span>
                 </div>
                 <h2 class="adv-pillars-title">
-                    <span class="title-dark">Three pillars that shape</span>
-                    <span class="title-orange">brighter futures.</span>
+                    <span class="title-dark">{{ $pillarSettings['title_1'] ?? 'Three pillars that shape' }}</span>
+                    @if(!empty($pillarSettings['title_2']))
+                        <span class="title-orange">{{ $pillarSettings['title_2'] }}</span>
+                    @endif
                 </h2>
                 <div class="adv-pillars-underline-bar"></div>
-                <p class="adv-pillars-subtitle">
-                    At Advaita, everything we do is driven by a clear purpose — to create an environment where children learn, grow, and discover their unique potential.
-                </p>
+                @if(!empty($pillarSettings['subtitle']))
+                    <p class="adv-pillars-subtitle">
+                        {{ $pillarSettings['subtitle'] }}
+                    </p>
+                @endif
             </div>
 
-            <!-- 3 Modern Pillar Cards -->
+            <!-- Dynamic Pillar Cards -->
             <div class="adv-pillars-grid">
-                
-                <!-- Pillar 01: Labs & Smart Classrooms (Orange) -->
+                @php
+                    $pillarList = isset($pillars) && $pillars->count() > 0 ? $pillars : collect();
+                @endphp
+
+                @forelse($pillarList as $pillar)
+                <div class="adv-pillar-card theme-{{ $pillar->theme_color ?: 'orange' }}">
+                    <div class="adv-pillar-image-wrap">
+                        <img src="{{ $pillar->image_url }}" alt="{{ $pillar->title }}" class="adv-pillar-img" loading="lazy">
+                        <div class="adv-pillar-num-badge">{{ $pillar->badge_label }}</div>
+                    </div>
+                    <div class="adv-pillar-content">
+                        <h3 class="adv-pillar-heading">{{ $pillar->title }}</h3>
+                        @if($pillar->description)
+                            <p class="adv-pillar-desc">
+                                {{ $pillar->description }}
+                            </p>
+                        @endif
+                        @if(!empty($pillar->tags) && is_array($pillar->tags))
+                            <div class="adv-pillar-tags-grid">
+                                @foreach($pillar->tags as $tag)
+                                    @php
+                                        $tagLabel = is_array($tag) ? ($tag['label'] ?? '') : $tag;
+                                        $tagIcon = is_array($tag) ? ($tag['icon'] ?? 'fa-solid fa-check') : 'fa-solid fa-check';
+                                    @endphp
+                                    @if(!empty($tagLabel))
+                                    <div class="adv-pillar-tag">
+                                        <i class="{{ $tagIcon }}"></i>
+                                        <span>{{ $tagLabel }}</span>
+                                    </div>
+                                    @endif
+                                @endforeach
+                            </div>
+                        @endif
+                    </div>
+                </div>
+                @empty
                 <div class="adv-pillar-card theme-orange">
                     <div class="adv-pillar-image-wrap">
-                        <img src="{{ asset('assets/images/pillar-card-1.jpg?v=3') }}" alt="Future-ready Labs & Smart Classrooms" class="adv-pillar-img" loading="lazy">
+                        <img src="{{ asset('assets/images/pillar-card-1.jpg') }}" alt="Future-ready Labs & Smart Classrooms" class="adv-pillar-img" loading="lazy">
                         <div class="adv-pillar-num-badge">01</div>
                     </div>
                     <div class="adv-pillar-content">
@@ -409,113 +449,16 @@
                         <p class="adv-pillar-desc">
                             From robotics for the youngest to digital language for senior school — learning that comes alive when you can touch it.
                         </p>
-                        <div class="adv-pillar-tags-grid">
-                            <div class="adv-pillar-tag">
-                                <i class="fa-solid fa-robot"></i>
-                                <span>Robotics Lab</span>
-                            </div>
-                            <div class="adv-pillar-tag">
-                                <i class="fa-solid fa-display"></i>
-                                <span>Computer Lab</span>
-                            </div>
-                            <div class="adv-pillar-tag">
-                                <i class="fa-solid fa-flask"></i>
-                                <span>Science Lab</span>
-                            </div>
-                            <div class="adv-pillar-tag">
-                                <i class="fa-solid fa-calculator"></i>
-                                <span>Digital Maths Lab</span>
-                            </div>
-                            <div class="adv-pillar-tag">
-                                <i class="fa-solid fa-earth-americas"></i>
-                                <span>Language Lab</span>
-                            </div>
-                        </div>
                     </div>
                 </div>
-
-                <!-- Pillar 02: Vibrant Year-round Calendar (Blue) -->
-                <div class="adv-pillar-card theme-blue">
-                    <div class="adv-pillar-image-wrap">
-                        <img src="{{ asset('assets/images/pillar-card-2.jpg?v=3') }}" alt="A Vibrant Year-round Calendar" class="adv-pillar-img" loading="lazy">
-                        <div class="adv-pillar-num-badge">02</div>
-                    </div>
-                    <div class="adv-pillar-content">
-                        <h3 class="adv-pillar-heading">A Vibrant Year-round Calendar</h3>
-                        <p class="adv-pillar-desc">
-                            Beyond books — the sports, music, art and travel that turn a school into a community.
-                        </p>
-                        <div class="adv-pillar-tags-grid">
-                            <div class="adv-pillar-tag">
-                                <i class="fa-solid fa-trophy"></i>
-                                <span>Sports &amp; Games</span>
-                            </div>
-                            <div class="adv-pillar-tag">
-                                <i class="fa-solid fa-music"></i>
-                                <span>Cultural Programs</span>
-                            </div>
-                            <div class="adv-pillar-tag">
-                                <i class="fa-solid fa-palette"></i>
-                                <span>Co-Curricular</span>
-                            </div>
-                            <div class="adv-pillar-tag">
-                                <i class="fa-solid fa-bus"></i>
-                                <span>Educational Tours</span>
-                            </div>
-                            <div class="adv-pillar-tag">
-                                <i class="fa-solid fa-campground"></i>
-                                <span>Night Camps</span>
-                            </div>
-                            <div class="adv-pillar-tag">
-                                <i class="fa-solid fa-medal"></i>
-                                <span>Inter-School Competitions</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pillar 03: Five Quiet Promises (Teal/Green) -->
-                <div class="adv-pillar-card theme-teal">
-                    <div class="adv-pillar-image-wrap">
-                        <img src="{{ asset('assets/images/pillar-card-3.jpg?v=3') }}" alt="Five Quiet Promises" class="adv-pillar-img" loading="lazy">
-                        <div class="adv-pillar-num-badge">03</div>
-                    </div>
-                    <div class="adv-pillar-content">
-                        <h3 class="adv-pillar-heading">Five Quiet Promises</h3>
-                        <p class="adv-pillar-desc">
-                            The things parents tell us make the difference — small in description, big in daily impact.
-                        </p>
-                        <div class="adv-pillar-tags-grid">
-                            <div class="adv-pillar-tag">
-                                <i class="fa-solid fa-chalkboard-user"></i>
-                                <span>Experienced Faculty</span>
-                            </div>
-                            <div class="adv-pillar-tag">
-                                <i class="fa-solid fa-display"></i>
-                                <span>Smart Classes</span>
-                            </div>
-                            <div class="adv-pillar-tag">
-                                <i class="fa-solid fa-shield"></i>
-                                <span>Safe Environment</span>
-                            </div>
-                            <div class="adv-pillar-tag">
-                                <i class="fa-solid fa-heart"></i>
-                                <span>Value-Based Education</span>
-                            </div>
-                            <div class="adv-pillar-tag">
-                                <i class="fa-solid fa-school"></i>
-                                <span>All-in-One Campus</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                @endforelse
 
             </div>
 
             <!-- Bottom CTA Button -->
             <div class="adv-pillars-cta-wrap text-center">
-                <a href="#why-choose" class="adv-btn-pillars-primary">
-                    <span>Discover the Advaita Difference</span>
+                <a href="{{ $pillarSettings['cta_url'] ?? '#why-choose' }}" class="adv-btn-pillars-primary">
+                    <span>{{ $pillarSettings['cta_text'] ?? 'Discover the Advaita Difference' }}</span>
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
@@ -552,19 +495,23 @@
             <div class="adv-why-header text-center">
                 <div class="adv-why-eyebrow">
                     <i class="fa-solid fa-graduation-cap"></i>
-                    <span>WHY CHOOSE ADVAITA?</span>
+                    <span>{{ $whyChooseSettings['eyebrow'] ?? 'WHY CHOOSE ADVAITA?' }}</span>
                 </div>
                 <h2 class="adv-why-title">
-                    <span class="title-dark">Why Choose</span>
-                    <span class="title-orange">Advaita?</span>
+                    <span class="title-dark">{{ $whyChooseSettings['title_1'] ?? 'Why Choose' }}</span>
+                    @if(!empty($whyChooseSettings['title_2']))
+                        <span class="title-orange">{{ $whyChooseSettings['title_2'] }}</span>
+                    @endif
                 </h2>
                 <div class="adv-why-underline-bar"></div>
-                <p class="adv-why-subtitle">
-                    A nurturing and future-focused ecosystem designed to ignite curiosity, instill integrity, and inspire every child to excel.
-                </p>
+                @if(!empty($whyChooseSettings['subtitle']))
+                    <p class="adv-why-subtitle">
+                        {{ $whyChooseSettings['subtitle'] }}
+                    </p>
+                @endif
             </div>
 
-            <!-- 6 Modern Advantage Cards (Slider) -->
+            <!-- Advantage Cards (Dynamic Slider) -->
             <div class="adv-why-slider-wrap">
 
                 <!-- Left Nav Arrow -->
@@ -574,91 +521,27 @@
 
                 <div class="adv-why-slider-viewport">
                     <div class="adv-why-grid six-cards">
-                
-                        <!-- Card 01: Holistic Education (Orange) -->
-                        <div class="adv-why-card theme-orange">
-                            <div class="adv-why-image-wrap">
-                                <img src="{{ asset('assets/images/adv-choose-1.jpg?v=2') }}" alt="Holistic Education at Advaita" class="adv-why-img" loading="lazy">
-                                <div class="adv-why-num-badge">01</div>
-                            </div>
-                            <div class="adv-why-content">
-                                <h3 class="adv-why-card-title">Holistic Education</h3>
-                                <p class="adv-why-card-desc">
-                                    A balanced integration of academic excellence, cultural arts, athletic fitness, and moral leadership for all-round personality development.
-                                </p>
-                            </div>
-                        </div>
+                        @php
+                            $cardList = isset($whyChooseCards) && $whyChooseCards->count() > 0 ? $whyChooseCards : collect();
+                        @endphp
 
-                        <!-- Card 02: Experienced Faculty (Blue) -->
-                        <div class="adv-why-card theme-blue">
-                            <div class="adv-why-image-wrap">
-                                <img src="{{ asset('assets/images/adv-choose-2.jpg?v=2') }}" alt="Experienced Faculty at Advaita" class="adv-why-img" loading="lazy">
-                                <div class="adv-why-num-badge">02</div>
+                        @forelse($cardList as $card)
+                            <!-- Card {{ $card->badge_label }}: {{ $card->title }} ({{ $card->theme_color }}) -->
+                            <div class="adv-why-card {{ $card->theme_class }}">
+                                <div class="adv-why-image-wrap">
+                                    <img src="{{ $card->image_url }}" alt="{{ $card->title }} at Advaita" class="adv-why-img" loading="lazy">
+                                    <div class="adv-why-num-badge">{{ $card->badge_label }}</div>
+                                </div>
+                                <div class="adv-why-content">
+                                    <h3 class="adv-why-card-title">{{ $card->title }}</h3>
+                                    <p class="adv-why-card-desc">
+                                        {{ $card->description }}
+                                    </p>
+                                </div>
                             </div>
-                            <div class="adv-why-content">
-                                <h3 class="adv-why-card-title">Experienced Faculty</h3>
-                                <p class="adv-why-card-desc">
-                                    Dedicated, compassionate, and highly qualified educators focused on personalized attention and nurturing every learner's individual strengths.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Card 03: Smart Learning (Green/Teal) -->
-                        <div class="adv-why-card theme-teal">
-                            <div class="adv-why-image-wrap">
-                                <img src="{{ asset('assets/images/adv-choose-3.jpg?v=2') }}" alt="Smart Learning & Labs at Advaita" class="adv-why-img" loading="lazy">
-                                <div class="adv-why-num-badge">03</div>
-                            </div>
-                            <div class="adv-why-content">
-                                <h3 class="adv-why-card-title">Smart Learning</h3>
-                                <p class="adv-why-card-desc">
-                                    Interactive digital classrooms, modern audio-visual learning tools, and specialized STEM laboratories that bring concepts to life.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Card 04: Safe & Secure Campus (Purple) -->
-                        <div class="adv-why-card theme-purple">
-                            <div class="adv-why-image-wrap">
-                                <img src="{{ asset('assets/images/adv-choose-4.jpg?v=2') }}" alt="Safe & Secure Campus at Advaita" class="adv-why-img" loading="lazy">
-                                <div class="adv-why-num-badge">04</div>
-                            </div>
-                            <div class="adv-why-content">
-                                <h3 class="adv-why-card-title">Safe &amp; Secure Campus</h3>
-                                <p class="adv-why-card-desc">
-                                    24/7 CCTV surveillance, verified support staff, emergency response protocols, and a caring, supportive atmosphere where every child feels safe.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Card 05: Future-Ready Skills (Coral/Red) -->
-                        <div class="adv-why-card theme-coral">
-                            <div class="adv-why-image-wrap">
-                                <img src="{{ asset('assets/images/adv-choose-5.jpg?v=2') }}" alt="Future-Ready Skills at Advaita" class="adv-why-img" loading="lazy">
-                                <div class="adv-why-num-badge">05</div>
-                            </div>
-                            <div class="adv-why-content">
-                                <h3 class="adv-why-card-title">Future-Ready Skills</h3>
-                                <p class="adv-why-card-desc">
-                                    Inquiry-driven learning, robotics, coding, public speaking, critical reasoning, and entrepreneurial mindset tailored for tomorrow's world.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Card 06: Strong Academic Results (Cyan/Teal) -->
-                        <div class="adv-why-card theme-cyan">
-                            <div class="adv-why-image-wrap">
-                                <img src="{{ asset('assets/images/adv-choose-6.jpg?v=2') }}" alt="Strong Academic Results at Advaita" class="adv-why-img" loading="lazy">
-                                <div class="adv-why-num-badge">06</div>
-                            </div>
-                            <div class="adv-why-content">
-                                <h3 class="adv-why-card-title">Strong Academic Results</h3>
-                                <p class="adv-why-card-desc">
-                                    Consistent 100% board examination pass records, state &amp; national Olympiad ranks, and successful career placements in premier universities.
-                                </p>
-                            </div>
-                        </div>
-
+                        @empty
+                            <p class="text-center" style="grid-column: 1 / -1; color: #64748B; padding: 40px 0;">No advantage cards available at the moment.</p>
+                        @endforelse
                     </div>
                 </div>
 
@@ -669,19 +552,28 @@
 
             </div>
 
-            <!-- Slider Dots -->
-            <div class="adv-why-dots" role="tablist" aria-label="Why Choose Advaita slide navigation">
-                <button type="button" class="adv-why-dot active" role="tab" aria-selected="true" aria-label="Slide 1"></button>
-                <button type="button" class="adv-why-dot" role="tab" aria-selected="false" aria-label="Slide 2"></button>
-            </div>
+            @php
+                $cardCount = $cardList->count();
+                $totalPages = ceil($cardCount / 3);
+            @endphp
+            @if($totalPages > 1)
+                <!-- Slider Dots -->
+                <div class="adv-why-dots" role="tablist" aria-label="Why Choose Advaita slide navigation">
+                    @for($i = 0; $i < $totalPages; $i++)
+                        <button type="button" class="adv-why-dot {{ $i === 0 ? 'active' : '' }}" role="tab" aria-selected="{{ $i === 0 ? 'true' : 'false' }}" aria-label="Slide {{ $i + 1 }}"></button>
+                    @endfor
+                </div>
+            @endif
 
-            <!-- Bottom CTA Button -->
-            <div class="adv-why-cta-wrap text-center">
-                <a href="#admissions" class="adv-btn-why-primary">
-                    <span>Discover the Advaita Difference</span>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </div>
+            @if(!empty($whyChooseSettings['cta_text']))
+                <!-- Bottom CTA Button -->
+                <div class="adv-why-cta-wrap text-center">
+                    <a href="{{ $whyChooseSettings['cta_url'] ?? '#admissions' }}" class="adv-btn-why-primary">
+                        <span>{{ $whyChooseSettings['cta_text'] }}</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            @endif
 
         </div>
     </section>

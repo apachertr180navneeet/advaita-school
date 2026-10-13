@@ -2,12 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pillar;
+use App\Models\Setting;
 use App\Models\Slider;
+use App\Models\WhyChooseCard;
+use Database\Seeders\PillarSeeder;
+use Database\Seeders\WhyChooseCardSeeder;
 
 class HomeController extends Controller
 {
     /**
-     * Display the Homepage with dynamic hero sliders.
+     * Display the Homepage with dynamic hero sliders, three pillars, and why choose cards.
      */
     public function index()
     {
@@ -16,12 +21,56 @@ class HomeController extends Controller
             $this->seedInitialSliders();
         }
 
+        // Auto-seed default pillars if table is empty
+        if (Pillar::count() === 0) {
+            (new PillarSeeder)->run();
+        }
+
+        // Auto-seed default why choose cards if table is empty
+        if (WhyChooseCard::count() === 0) {
+            (new WhyChooseCardSeeder)->run();
+        }
+
         $sliders = Slider::where('is_active', true)
             ->orderBy('order', 'asc')
             ->orderBy('id', 'asc')
             ->get();
 
-        return view('pages.home', compact('sliders'));
+        $pillars = Pillar::where('is_active', true)
+            ->orderBy('order', 'asc')
+            ->orderBy('id', 'asc')
+            ->get();
+
+        $pillarSettings = [
+            'eyebrow' => Setting::get('pillar_section_eyebrow', 'WHAT MAKES ADVAITA SPECIAL'),
+            'title_1' => Setting::get('pillar_section_title_1', 'Three pillars that shape'),
+            'title_2' => Setting::get('pillar_section_title_2', 'brighter futures.'),
+            'subtitle' => Setting::get('pillar_section_subtitle', 'At Advaita, everything we do is driven by a clear purpose — to create an environment where children learn, grow, and discover their unique potential.'),
+            'cta_text' => Setting::get('pillar_section_cta_text', 'Discover the Advaita Difference'),
+            'cta_url' => Setting::get('pillar_section_cta_url', '#why-choose'),
+        ];
+
+        $whyChooseCards = WhyChooseCard::where('is_active', true)
+            ->orderBy('order', 'asc')
+            ->orderBy('id', 'asc')
+            ->get();
+
+        $whyChooseSettings = [
+            'eyebrow' => Setting::get('why_choose_eyebrow', 'WHY CHOOSE ADVAITA?'),
+            'title_1' => Setting::get('why_choose_title_1', 'Why Choose'),
+            'title_2' => Setting::get('why_choose_title_2', 'Advaita?'),
+            'subtitle' => Setting::get('why_choose_subtitle', 'A nurturing and future-focused ecosystem designed to ignite curiosity, instill integrity, and inspire every child to excel.'),
+            'cta_text' => Setting::get('why_choose_cta_text', 'Discover the Advaita Difference'),
+            'cta_url' => Setting::get('why_choose_cta_url', '#admissions'),
+        ];
+
+        $seo = [
+            'title' => Setting::get('home_seo_title', 'Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)'),
+            'description' => Setting::get('home_seo_description', 'Advaita School of Excellence, Parbhani - CBSE Affiliated English Medium School (No. 1130920). Offering future-ready education, modern robotics & science labs, holistic sports, and values-based learning from Pre-Primary to Class 10.'),
+            'keywords' => Setting::get('home_seo_keywords', 'Advaita School of Excellence, Parbhani School, CBSE School Parbhani, Best School in Parbhani, CBSE Affiliated School 1130920, Robotics Lab School, English Medium School Parbhani'),
+        ];
+
+        return view('pages.home', compact('sliders', 'pillars', 'pillarSettings', 'whyChooseCards', 'whyChooseSettings', 'seo'));
     }
 
     /**

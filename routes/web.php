@@ -3,8 +3,11 @@
 use App\Http\Controllers\Admin\AuthController as AdminAuthController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\Admin\InquiryController as AdminInquiryController;
+use App\Http\Controllers\Admin\PillarController as AdminPillarController;
 use App\Http\Controllers\Admin\RegistrationController as AdminRegistrationController;
+use App\Http\Controllers\Admin\SeoController as AdminSeoController;
 use App\Http\Controllers\Admin\SliderController as AdminSliderController;
+use App\Http\Controllers\Admin\WhyChooseController as AdminWhyChooseController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
@@ -78,6 +81,20 @@ Route::prefix('admin')->name('admin.')->group(function () {
         // Hero Sliders Management
         Route::patch('/sliders/{id}/toggle-status', [AdminSliderController::class, 'toggleStatus'])->name('sliders.toggle-status');
         Route::resource('sliders', AdminSliderController::class)->except(['show']);
+
+        // Three Pillars (What Makes Advaita Special) Management
+        Route::patch('/pillars/section-header', [AdminPillarController::class, 'updateSectionHeader'])->name('pillars.section-header');
+        Route::patch('/pillars/{id}/toggle-status', [AdminPillarController::class, 'toggleStatus'])->name('pillars.toggle-status');
+        Route::resource('pillars', AdminPillarController::class)->except(['show']);
+
+        // Homepage SEO Management
+        Route::get('/seo', [AdminSeoController::class, 'index'])->name('seo.index');
+        Route::patch('/seo', [AdminSeoController::class, 'update'])->name('seo.update');
+
+        // Why Choose Advaita Section & Cards Management
+        Route::patch('/why-choose/section-header', [AdminWhyChooseController::class, 'updateSectionHeader'])->name('why-choose.section-header');
+        Route::patch('/why-choose/{whyChooseCard}/toggle-status', [AdminWhyChooseController::class, 'toggleStatus'])->name('why-choose.toggle-status');
+        Route::resource('why-choose', AdminWhyChooseController::class)->except(['show'])->parameters(['why-choose' => 'whyChooseCard']);
     });
 });
 

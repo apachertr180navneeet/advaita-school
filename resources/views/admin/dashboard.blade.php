@@ -610,6 +610,36 @@
             <span>manage banner images & sizes &rarr;</span>
         </div>
     </a>
+
+    <!-- Stat 6: Three Pillars Management -->
+    <a href="{{ route('admin.pillars.index') }}" class="stat-card" style="text-decoration: none; color: inherit;">
+        <div class="stat-card-head">
+            <span class="stat-title">Three Pillars</span>
+            <div class="stat-icon-circle stat-icon-blue">
+                <i class="fa-solid fa-shapes"></i>
+            </div>
+        </div>
+        <div class="stat-value">{{ $stats['total_pillars'] ?? 0 }}</div>
+        <div class="stat-subtext">
+            <span class="sub-badge green">{{ $stats['active_pillars'] ?? 0 }} Active</span>
+            <span>manage cards, themes & tags &rarr;</span>
+        </div>
+    </a>
+
+    <!-- Stat 7: Why Choose Advaita Cards Management -->
+    <a href="{{ route('admin.why-choose.index') }}" class="stat-card" style="text-decoration: none; color: inherit;">
+        <div class="stat-card-head">
+            <span class="stat-title">Why Choose Cards</span>
+            <div class="stat-icon-circle stat-icon-purple">
+                <i class="fa-solid fa-award"></i>
+            </div>
+        </div>
+        <div class="stat-value">{{ $stats['total_why_choose'] ?? 0 }}</div>
+        <div class="stat-subtext">
+            <span class="sub-badge green">{{ $stats['active_why_choose'] ?? 0 }} Active</span>
+            <span>manage slider advantage cards &rarr;</span>
+        </div>
+    </a>
 </div>
 
 <!-- 3. Master Interactive List: Both Registrations and Enquiries -->

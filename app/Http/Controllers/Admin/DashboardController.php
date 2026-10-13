@@ -5,7 +5,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\ContactInquiry;
 use App\Models\OnlineRegistration;
+use App\Models\Pillar;
 use App\Models\Slider;
+use App\Models\WhyChooseCard;
 
 class DashboardController extends Controller
 {
@@ -26,6 +28,12 @@ class DashboardController extends Controller
 
             'total_sliders' => Slider::count(),
             'active_sliders' => Slider::where('is_active', true)->count(),
+
+            'total_pillars' => Pillar::count(),
+            'active_pillars' => Pillar::where('is_active', true)->count(),
+
+            'total_why_choose' => WhyChooseCard::count(),
+            'active_why_choose' => WhyChooseCard::where('is_active', true)->count(),
         ];
 
         $registrations = OnlineRegistration::latest()->get();

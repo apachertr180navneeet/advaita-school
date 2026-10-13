@@ -5,6 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', 'Advaita School of Excellence - Sanmati Sevabhavi Sanstha')</title>
+
+    <!-- Meta Description & Keywords -->
+    <meta name="description" content="@yield('meta_description', 'Advaita School of Excellence, Parbhani - CBSE Affiliated English Medium School (No. 1130920). Nurturing young minds through holistic education, modern STEAM labs, and values-based learning.')">
+    <meta name="keywords" content="@yield('meta_keywords', 'Advaita School of Excellence, CBSE School Parbhani, Best School in Parbhani, CBSE Affiliated School 1130920, Robotics Lab School, English Medium School Parbhani')">
+    <meta name="author" content="Advaita School of Excellence">
+
+    <!-- Open Graph / Facebook / WhatsApp -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:title" content="@yield('title', 'Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)')">
+    <meta property="og:description" content="@yield('meta_description', 'Advaita School of Excellence, Parbhani - CBSE Affiliated English Medium School (No. 1130920).')">
+    <meta property="og:image" content="{{ asset('assets/images/logo.png') }}">
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ url()->current() }}">
+    <meta property="twitter:title" content="@yield('title', 'Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)')">
+    <meta property="twitter:description" content="@yield('meta_description', 'Advaita School of Excellence, Parbhani - CBSE Affiliated English Medium School (No. 1130920).')">
+    <meta property="twitter:image" content="{{ asset('assets/images/logo.png') }}">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

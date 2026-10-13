@@ -454,6 +454,36 @@
                         @endif
                     </a>
                 </li>
+                <li>
+                    <a href="{{ route('admin.pillars.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.pillars.*') ? 'active' : '' }}">
+                        <i class="fa-solid fa-shapes"></i>
+                        <span>Three Pillars</span>
+                        @php
+                            $pillarNavCount = \App\Models\Pillar::count();
+                        @endphp
+                        @if($pillarNavCount > 0)
+                            <span class="nav-badge">{{ $pillarNavCount }}</span>
+                        @endif
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.why-choose.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.why-choose.*') ? 'active' : '' }}">
+                        <i class="fa-solid fa-award"></i>
+                        <span>Why Choose Advaita</span>
+                        @php
+                            $whyChooseNavCount = \App\Models\WhyChooseCard::count();
+                        @endphp
+                        @if($whyChooseNavCount > 0)
+                            <span class="nav-badge">{{ $whyChooseNavCount }}</span>
+                        @endif
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.seo.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.seo.*') ? 'active' : '' }}">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        <span>SEO Management</span>
+                    </a>
+                </li>
             </ul>
 
             <div class="menu-category-title">Quick Actions</div>

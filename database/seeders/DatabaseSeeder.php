@@ -250,5 +250,12 @@ class DatabaseSeeder extends Seeder
                 'status' => 'new',
             ]);
         }
+
+        // 4. Seed Sliders, Pillars & Why Choose Advaita Cards
+        $this->call([
+            SliderSeeder::class,
+            PillarSeeder::class,
+            WhyChooseCardSeeder::class,
+        ]);
     }
 }
