@@ -959,7 +959,95 @@ require_once __DIR__ . '/includes/header.php';
                             </div>
                         </div>
 
-                        <!-- Card 2: Smart Classroom Learning -->
+                        <!-- Card 2: Math & Science Practical Lab -->
+                        <div class="adv-gallery-card">
+                            <div class="adv-gallery-img-box">
+                                <img src="assets/images/gallery/gallery-math-science-lab.jpg" alt="Mathematics and Practical Lab Experiment Session" class="adv-gallery-img" loading="lazy">
+                                <div class="adv-gallery-card-badge">
+                                    <i class="fa-solid fa-flask-vial"></i>
+                                    <span>Math &amp; Science Labs</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 3: Football League & Turf Sprint -->
+                        <div class="adv-gallery-card">
+                            <div class="adv-gallery-img-box">
+                                <img src="assets/images/gallery/gallery-football-match-sprint.jpg" alt="Inter-House Football Championship and Sprint on Green Turf" class="adv-gallery-img" loading="lazy">
+                                <div class="adv-gallery-card-badge">
+                                    <i class="fa-solid fa-futbol"></i>
+                                    <span>Football League &amp; Turf</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 4: Art Studio & Origami Paper Airplanes -->
+                        <div class="adv-gallery-card">
+                            <div class="adv-gallery-img-box">
+                                <img src="assets/images/gallery/gallery-art-studio-origami-planes.jpg" alt="Art Studio Creative Origami Paper Airplanes Workshop" class="adv-gallery-img" loading="lazy">
+                                <div class="adv-gallery-card-badge">
+                                    <i class="fa-solid fa-paper-plane"></i>
+                                    <span>Art Studio &amp; Origami</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 5: Splash Pool & Aquatic Play Arena -->
+                        <div class="adv-gallery-card">
+                            <div class="adv-gallery-img-box">
+                                <img src="assets/images/gallery/gallery-splash-pool-kids-play.jpg" alt="Young Children Splash Pool and Water Play Area with Slide" class="adv-gallery-img" loading="lazy">
+                                <div class="adv-gallery-card-badge">
+                                    <i class="fa-solid fa-water-ladder"></i>
+                                    <span>Splash Pool &amp; Play Arena</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 6: Football Freestyle & Ball Skills -->
+                        <div class="adv-gallery-card">
+                            <div class="adv-gallery-img-box">
+                                <img src="assets/images/gallery/gallery-football-juggling-boy.jpg" alt="Student Practicing Football Freestyle Ball Control" class="adv-gallery-img" loading="lazy">
+                                <div class="adv-gallery-card-badge">
+                                    <i class="fa-solid fa-medal"></i>
+                                    <span>Freestyle &amp; Ball Skills</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 7: Creative Arts & Hand Painting -->
+                        <div class="adv-gallery-card">
+                            <div class="adv-gallery-img-box">
+                                <img src="assets/images/gallery/gallery-painted-hands-girl.jpg" alt="Young Student Showing Joyful Painted Hands on Lawn" class="adv-gallery-img" loading="lazy">
+                                <div class="adv-gallery-card-badge">
+                                    <i class="fa-solid fa-palette"></i>
+                                    <span>Creative Arts &amp; Expression</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 8: Lawn Gymnastics & Cartwheels -->
+                        <div class="adv-gallery-card">
+                            <div class="adv-gallery-img-box">
+                                <img src="assets/images/gallery/gallery-gymnastics-cartwheel.jpg" alt="Student Performing Gymnastics Cartwheel on Lawn" class="adv-gallery-img" loading="lazy">
+                                <div class="adv-gallery-card-badge">
+                                    <i class="fa-solid fa-person-walking-dashed-line-arrow-right"></i>
+                                    <span>Gymnastics &amp; Tumbling</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 9: Rainbow Parachute Teamwork -->
+                        <div class="adv-gallery-card">
+                            <div class="adv-gallery-img-box">
+                                <img src="assets/images/gallery/gallery-parachute-lawn-building.jpg" alt="Primary Students Playing with Rainbow Parachute Before Campus Building" class="adv-gallery-img" loading="lazy">
+                                <div class="adv-gallery-card-badge">
+                                    <i class="fa-solid fa-shapes"></i>
+                                    <span>Joyful Teamwork &amp; Play</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Card 10: Smart Classroom Learning -->
                         <div class="adv-gallery-card">
                             <div class="adv-gallery-img-box">
                                 <img src="assets/images/gallery/gallery-classroom-learning.jpg" alt="Attentive Students in Classroom Learning Session" class="adv-gallery-img" loading="lazy">
@@ -970,51 +1058,7 @@ require_once __DIR__ . '/includes/header.php';
                             </div>
                         </div>
 
-                        <!-- Card 3: Early Years Splash Pool Fun -->
-                        <div class="adv-gallery-card">
-                            <div class="adv-gallery-img-box">
-                                <img src="assets/images/gallery/gallery-splash-pool-fun.jpg" alt="Young Children Splash Pool and Water Play Area" class="adv-gallery-img" loading="lazy">
-                                <div class="adv-gallery-card-badge">
-                                    <i class="fa-solid fa-water-ladder"></i>
-                                    <span>Splash Pool &amp; Water Fun</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 4: Joyful Creative Arts Circle -->
-                        <div class="adv-gallery-card">
-                            <div class="adv-gallery-img-box">
-                                <img src="assets/images/gallery/gallery-art-circle-kids.jpg" alt="Young Students Creative Arts Painted Hands Activity on Campus Lawn" class="adv-gallery-img" loading="lazy">
-                                <div class="adv-gallery-card-badge">
-                                    <i class="fa-solid fa-palette"></i>
-                                    <span>Creative Arts &amp; Expression</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 5: Sports Obstacle & Agility Arena -->
-                        <div class="adv-gallery-card">
-                            <div class="adv-gallery-img-box">
-                                <img src="assets/images/gallery/gallery-sports-field-agility.jpg" alt="Campus Sports Ground and Agility Obstacle Training Arena" class="adv-gallery-img" loading="lazy">
-                                <div class="adv-gallery-card-badge">
-                                    <i class="fa-solid fa-medal"></i>
-                                    <span>Sports &amp; Fitness Arena</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 6: Rainbow Parachute Fun Activity -->
-                        <div class="adv-gallery-card">
-                            <div class="adv-gallery-img-box">
-                                <img src="assets/images/gallery/gallery-parachute-activity.jpg" alt="Primary Students Playing with Rainbow Parachute on Campus Lawn" class="adv-gallery-img" loading="lazy">
-                                <div class="adv-gallery-card-badge">
-                                    <i class="fa-solid fa-shapes"></i>
-                                    <span>Joyful Learning &amp; Play</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 7: Foundation Excellence (IIT-JEE & NEET Batch) -->
+                        <!-- Card 11: Foundation Excellence (IIT-JEE & NEET Batch) -->
                         <div class="adv-gallery-card">
                             <div class="adv-gallery-img-box">
                                 <img src="assets/images/gallery/gallery-foundation-achievers.jpg" alt="Students and Faculty with IIT-JEE and NEET Foundation Banner" class="adv-gallery-img" loading="lazy">
@@ -1044,6 +1088,10 @@ require_once __DIR__ . '/includes/header.php';
                 <button type="button" class="adv-gallery-dot" role="tab" aria-selected="false" aria-label="Slide 5"></button>
                 <button type="button" class="adv-gallery-dot" role="tab" aria-selected="false" aria-label="Slide 6"></button>
                 <button type="button" class="adv-gallery-dot" role="tab" aria-selected="false" aria-label="Slide 7"></button>
+                <button type="button" class="adv-gallery-dot" role="tab" aria-selected="false" aria-label="Slide 8"></button>
+                <button type="button" class="adv-gallery-dot" role="tab" aria-selected="false" aria-label="Slide 9"></button>
+                <button type="button" class="adv-gallery-dot" role="tab" aria-selected="false" aria-label="Slide 10"></button>
+                <button type="button" class="adv-gallery-dot" role="tab" aria-selected="false" aria-label="Slide 11"></button>
             </div>
 
             <!-- Bottom Action Buttons -->

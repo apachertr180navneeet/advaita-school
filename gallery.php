@@ -193,10 +193,10 @@ require_once __DIR__ . '/includes/header.php';
         <div class="adv-gal-container">
             <div class="adv-gal-grid" id="advGalleryGrid">
 
-                <!-- Card 1: Academic Activities -->
-                <article class="adv-gal-card" data-category="academic" data-title="Academic Activities" data-count="32" data-index="1">
+                <!-- Card 1: Academic Activities (Math Lab) -->
+                <article class="adv-gal-card" data-category="academic" data-title="Mathematics & Practical Labs" data-count="38" data-index="1">
                     <div class="adv-gal-card-thumb">
-                        <img src="assets/images/gallery/academic.jpg" alt="Academic Activities" loading="lazy">
+                        <img src="assets/images/gallery/gallery-math-science-lab.jpg" alt="Mathematics & Practical Labs" loading="lazy">
                         <div class="adv-gal-card-overlay">
                             <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
                         </div>
@@ -204,23 +204,23 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
                             <div class="adv-gal-card-icon" style="background: #fee2e2; color: #ef4444;">
-                                <i class="fa-regular fa-image"></i>
+                                <i class="fa-solid fa-flask-vial"></i>
                             </div>
                             <div class="adv-gal-card-text">
-                                <h3 class="adv-gal-card-title">Academic Activities</h3>
-                                <span class="adv-gal-card-count">32 Photos</span>
+                                <h3 class="adv-gal-card-title">Math &amp; Practical Labs</h3>
+                                <span class="adv-gal-card-count">38 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" style="background: #ef4444;" aria-label="View Academic Activities">
+                        <button type="button" class="adv-gal-card-btn" style="background: #ef4444;" aria-label="View Mathematics & Practical Labs">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
                 </article>
 
-                <!-- Card 2: Events & Celebrations -->
-                <article class="adv-gal-card" data-category="events" data-title="Events & Celebrations" data-count="45" data-index="2">
+                <!-- Card 2: Events & Celebrations (Band) -->
+                <article class="adv-gal-card" data-category="events" data-title="School Band & Assembly Events" data-count="45" data-index="2">
                     <div class="adv-gal-card-thumb">
-                        <img src="assets/images/gallery/dance.jpg" alt="Events & Celebrations" loading="lazy">
+                        <img src="assets/images/gallery/gallery-school-band.jpg" alt="School Band & Assembly Events" loading="lazy">
                         <div class="adv-gal-card-overlay">
                             <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
                         </div>
@@ -228,23 +228,23 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
                             <div class="adv-gal-card-icon" style="background: #ffedd5; color: #f97316;">
-                                <i class="fa-solid fa-trophy"></i>
+                                <i class="fa-solid fa-drum"></i>
                             </div>
                             <div class="adv-gal-card-text">
-                                <h3 class="adv-gal-card-title">Events &amp; Celebrations</h3>
+                                <h3 class="adv-gal-card-title">School Band &amp; Events</h3>
                                 <span class="adv-gal-card-count">45 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" style="background: #f97316;" aria-label="View Events & Celebrations">
+                        <button type="button" class="adv-gal-card-btn" style="background: #f97316;" aria-label="View School Band & Assembly Events">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
                 </article>
 
-                <!-- Card 3: Sports & Games -->
-                <article class="adv-gal-card" data-category="sports" data-title="Sports & Games" data-count="28" data-index="3">
+                <!-- Card 3: Sports & Games (Football Match) -->
+                <article class="adv-gal-card" data-category="sports" data-title="Football League & Athletic Action" data-count="34" data-index="3">
                     <div class="adv-gal-card-thumb">
-                        <img src="assets/images/gallery/sports.jpg" alt="Sports & Games" loading="lazy">
+                        <img src="assets/images/gallery/gallery-football-match-sprint.jpg" alt="Football League & Athletic Action" loading="lazy">
                         <div class="adv-gal-card-overlay">
                             <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
                         </div>
@@ -252,23 +252,23 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
                             <div class="adv-gal-card-icon" style="background: #dcfce7; color: #22c55e;">
-                                <i class="fa-solid fa-volleyball"></i>
+                                <i class="fa-solid fa-futbol"></i>
                             </div>
                             <div class="adv-gal-card-text">
-                                <h3 class="adv-gal-card-title">Sports &amp; Games</h3>
-                                <span class="adv-gal-card-count">28 Photos</span>
+                                <h3 class="adv-gal-card-title">Football Turf Action</h3>
+                                <span class="adv-gal-card-count">34 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" style="background: #22c55e;" aria-label="View Sports & Games">
+                        <button type="button" class="adv-gal-card-btn" style="background: #22c55e;" aria-label="View Football League & Athletic Action">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
                 </article>
 
-                <!-- Card 4: Arts & Culture -->
-                <article class="adv-gal-card" data-category="arts" data-title="Arts & Culture" data-count="21" data-index="4">
+                <!-- Card 4: Arts & Culture (Art Studio Origami Planes) -->
+                <article class="adv-gal-card" data-category="arts" data-title="Art Studio & Origami Craft" data-count="42" data-index="4">
                     <div class="adv-gal-card-thumb">
-                        <img src="assets/images/gallery/arts.jpg" alt="Arts & Culture" loading="lazy">
+                        <img src="assets/images/gallery/gallery-art-studio-origami-planes.jpg" alt="Art Studio & Origami Craft" loading="lazy">
                         <div class="adv-gal-card-overlay">
                             <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
                         </div>
@@ -276,23 +276,23 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
                             <div class="adv-gal-card-icon" style="background: #f3e8ff; color: #8b5cf6;">
-                                <i class="fa-solid fa-palette"></i>
+                                <i class="fa-solid fa-paper-plane"></i>
                             </div>
                             <div class="adv-gal-card-text">
-                                <h3 class="adv-gal-card-title">Arts &amp; Culture</h3>
-                                <span class="adv-gal-card-count">21 Photos</span>
+                                <h3 class="adv-gal-card-title">Art Studio &amp; Origami</h3>
+                                <span class="adv-gal-card-count">42 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" style="background: #8b5cf6;" aria-label="View Arts & Culture">
+                        <button type="button" class="adv-gal-card-btn" style="background: #8b5cf6;" aria-label="View Art Studio & Origami Craft">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
                 </article>
 
-                <!-- Card 5: Student Life -->
-                <article class="adv-gal-card" data-category="student-life" data-title="Student Life" data-count="36" data-index="5">
+                <!-- Card 5: Student Life (Parachute Building Lawn) -->
+                <article class="adv-gal-card" data-category="student-life" data-title="Student Life & Teamwork" data-count="36" data-index="5">
                     <div class="adv-gal-card-thumb">
-                        <img src="assets/images/gallery/student-life.jpg" alt="Student Life" loading="lazy">
+                        <img src="assets/images/gallery/gallery-parachute-lawn-building.jpg" alt="Student Life & Teamwork" loading="lazy">
                         <div class="adv-gal-card-overlay">
                             <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
                         </div>
@@ -303,20 +303,20 @@ require_once __DIR__ . '/includes/header.php';
                                 <i class="fa-solid fa-users"></i>
                             </div>
                             <div class="adv-gal-card-text">
-                                <h3 class="adv-gal-card-title">Student Life</h3>
+                                <h3 class="adv-gal-card-title">Student Life &amp; Teamwork</h3>
                                 <span class="adv-gal-card-count">36 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" style="background: #ec4899;" aria-label="View Student Life">
+                        <button type="button" class="adv-gal-card-btn" style="background: #ec4899;" aria-label="View Student Life & Teamwork">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
                 </article>
 
-                <!-- Card 6: Campus Infrastructure -->
-                <article class="adv-gal-card" data-category="infrastructure" data-title="Campus Infrastructure" data-count="18" data-index="6">
+                <!-- Card 6: Infrastructure (Splash Pool Kids Play) -->
+                <article class="adv-gal-card" data-category="infrastructure" data-title="Splash Pool & Kids Water Arena" data-count="28" data-index="6">
                     <div class="adv-gal-card-thumb">
-                        <img src="assets/images/gallery/campus.jpg" alt="Campus Infrastructure" loading="lazy">
+                        <img src="assets/images/gallery/gallery-splash-pool-kids-play.jpg" alt="Splash Pool & Kids Water Arena" loading="lazy">
                         <div class="adv-gal-card-overlay">
                             <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
                         </div>
@@ -324,23 +324,23 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
                             <div class="adv-gal-card-icon" style="background: #e0f2fe; color: #0284c7;">
-                                <i class="fa-solid fa-building-columns"></i>
+                                <i class="fa-solid fa-water-ladder"></i>
                             </div>
                             <div class="adv-gal-card-text">
-                                <h3 class="adv-gal-card-title">Campus Infrastructure</h3>
-                                <span class="adv-gal-card-count">18 Photos</span>
+                                <h3 class="adv-gal-card-title">Splash Pool &amp; Play Arena</h3>
+                                <span class="adv-gal-card-count">28 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" style="background: #0284c7;" aria-label="View Campus Infrastructure">
+                        <button type="button" class="adv-gal-card-btn" style="background: #0284c7;" aria-label="View Splash Pool & Kids Water Arena">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
                 </article>
 
-                <!-- Card 7: Workshops & Competitions -->
-                <article class="adv-gal-card" data-category="workshops" data-title="Workshops & Competitions" data-count="26" data-index="7">
+                <!-- Card 7: Sports (Early Years Agility) -->
+                <article class="adv-gal-card" data-category="sports" data-title="Early Years Agility & Ring Obstacles" data-count="26" data-index="7">
                     <div class="adv-gal-card-thumb">
-                        <img src="assets/images/gallery/workshops.jpg" alt="Workshops & Competitions" loading="lazy">
+                        <img src="assets/images/gallery/gallery-hula-hoop-kid.jpg" alt="Early Years Agility & Ring Obstacles" loading="lazy">
                         <div class="adv-gal-card-overlay">
                             <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
                         </div>
@@ -348,23 +348,23 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
                             <div class="adv-gal-card-icon" style="background: #ccfbf1; color: #0d9488;">
-                                <i class="fa-solid fa-flask"></i>
+                                <i class="fa-solid fa-person-running"></i>
                             </div>
                             <div class="adv-gal-card-text">
-                                <h3 class="adv-gal-card-title">Workshops &amp; Competitions</h3>
+                                <h3 class="adv-gal-card-title">Early Years Agility &amp; Play</h3>
                                 <span class="adv-gal-card-count">26 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" style="background: #0d9488;" aria-label="View Workshops & Competitions">
+                        <button type="button" class="adv-gal-card-btn" style="background: #0d9488;" aria-label="View Early Years Agility & Ring Obstacles">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
                 </article>
 
-                <!-- Card 8: Community Outreach -->
-                <article class="adv-gal-card" data-category="outreach" data-title="Community Outreach" data-count="19" data-index="8">
+                <!-- Card 8: Student Life (Tunnel Fun) -->
+                <article class="adv-gal-card" data-category="student-life" data-title="Kindergarten Caterpillar Tunnel" data-count="19" data-index="8">
                     <div class="adv-gal-card-thumb">
-                        <img src="assets/images/gallery/outreach.jpg" alt="Community Outreach" loading="lazy">
+                        <img src="assets/images/gallery/gallery-crawl-tunnel-kids.jpg" alt="Kindergarten Caterpillar Tunnel" loading="lazy">
                         <div class="adv-gal-card-overlay">
                             <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
                         </div>
@@ -372,23 +372,23 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
                             <div class="adv-gal-card-icon" style="background: #ffe4e6; color: #e11d48;">
-                                <i class="fa-solid fa-hand-holding-heart"></i>
+                                <i class="fa-solid fa-shapes"></i>
                             </div>
                             <div class="adv-gal-card-text">
-                                <h3 class="adv-gal-card-title">Community Outreach</h3>
+                                <h3 class="adv-gal-card-title">Tunnel Play &amp; Activities</h3>
                                 <span class="adv-gal-card-count">19 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" style="background: #e11d48;" aria-label="View Community Outreach">
+                        <button type="button" class="adv-gal-card-btn" style="background: #e11d48;" aria-label="View Kindergarten Caterpillar Tunnel">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
                 </article>
 
-                <!-- Card 9: Cultural Fest -->
-                <article class="adv-gal-card" data-category="events" data-title="Cultural Fest" data-count="40" data-index="9">
+                <!-- Card 9: Sports (Gymnastics) -->
+                <article class="adv-gal-card" data-category="sports" data-title="Gymnastics & Tumbling" data-count="40" data-index="9">
                     <div class="adv-gal-card-thumb">
-                        <img src="assets/images/gallery/cultural.jpg" alt="Cultural Fest" loading="lazy">
+                        <img src="assets/images/gallery/gallery-gymnastics-cartwheel.jpg" alt="Gymnastics & Tumbling" loading="lazy">
                         <div class="adv-gal-card-overlay">
                             <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
                         </div>
@@ -396,23 +396,71 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
                             <div class="adv-gal-card-icon" style="background: #fef3c7; color: #f59e0b;">
-                                <i class="fa-solid fa-masks-theater"></i>
+                                <i class="fa-solid fa-person-walking-dashed-line-arrow-right"></i>
                             </div>
                             <div class="adv-gal-card-text">
-                                <h3 class="adv-gal-card-title">Cultural Fest</h3>
+                                <h3 class="adv-gal-card-title">Gymnastics &amp; Tumbling</h3>
                                 <span class="adv-gal-card-count">40 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" style="background: #f59e0b;" aria-label="View Cultural Fest">
+                        <button type="button" class="adv-gal-card-btn" style="background: #f59e0b;" aria-label="View Gymnastics & Tumbling">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
                 </article>
 
-                <!-- Card 10: Science Exhibitions -->
-                <article class="adv-gal-card" data-category="workshops" data-title="Science Exhibitions" data-count="24" data-index="10">
+                <!-- Card 10: Sports (Football Skills & Juggling) -->
+                <article class="adv-gal-card" data-category="sports" data-title="Football Freestyle & Ball Control" data-count="30" data-index="10">
                     <div class="adv-gal-card-thumb">
-                        <img src="assets/images/gallery/science-exhibition.jpg" alt="Science Exhibitions" loading="lazy">
+                        <img src="assets/images/gallery/gallery-football-juggling-boy.jpg" alt="Football Freestyle & Ball Control" loading="lazy">
+                        <div class="adv-gal-card-overlay">
+                            <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
+                        </div>
+                    </div>
+                    <div class="adv-gal-card-info">
+                        <div class="adv-gal-card-meta">
+                            <div class="adv-gal-card-icon" style="background: #bbf7d0; color: #16a34a;">
+                                <i class="fa-solid fa-medal"></i>
+                            </div>
+                            <div class="adv-gal-card-text">
+                                <h3 class="adv-gal-card-title">Freestyle &amp; Ball Skills</h3>
+                                <span class="adv-gal-card-count">30 Photos</span>
+                            </div>
+                        </div>
+                        <button type="button" class="adv-gal-card-btn" style="background: #16a34a;" aria-label="View Football Freestyle & Ball Control">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 11: Arts (Painted Hands Girl) -->
+                <article class="adv-gal-card" data-category="arts" data-title="Colors & Hand Art Studio" data-count="24" data-index="11">
+                    <div class="adv-gal-card-thumb">
+                        <img src="assets/images/gallery/gallery-painted-hands-girl.jpg" alt="Colors & Hand Art Studio" loading="lazy">
+                        <div class="adv-gal-card-overlay">
+                            <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
+                        </div>
+                    </div>
+                    <div class="adv-gal-card-info">
+                        <div class="adv-gal-card-meta">
+                            <div class="adv-gal-card-icon" style="background: #fbcfe8; color: #db2777;">
+                                <i class="fa-solid fa-palette"></i>
+                            </div>
+                            <div class="adv-gal-card-text">
+                                <h3 class="adv-gal-card-title">Colors &amp; Hand Art</h3>
+                                <span class="adv-gal-card-count">24 Photos</span>
+                            </div>
+                        </div>
+                        <button type="button" class="adv-gal-card-btn" style="background: #db2777;" aria-label="View Colors & Hand Art Studio">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 12: Arts (Art Circle Kids) -->
+                <article class="adv-gal-card" data-category="arts" data-title="Collaborative Art Circle" data-count="27" data-index="12">
+                    <div class="adv-gal-card-thumb">
+                        <img src="assets/images/gallery/gallery-art-circle-kids.jpg" alt="Collaborative Art Circle" loading="lazy">
                         <div class="adv-gal-card-overlay">
                             <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
                         </div>
@@ -420,23 +468,47 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
                             <div class="adv-gal-card-icon" style="background: #cffafe; color: #06b6d4;">
-                                <i class="fa-solid fa-atom"></i>
+                                <i class="fa-solid fa-paintbrush"></i>
                             </div>
                             <div class="adv-gal-card-text">
-                                <h3 class="adv-gal-card-title">Science Exhibitions</h3>
-                                <span class="adv-gal-card-count">24 Photos</span>
+                                <h3 class="adv-gal-card-title">Art Collaboration Circle</h3>
+                                <span class="adv-gal-card-count">27 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" style="background: #06b6d4;" aria-label="View Science Exhibitions">
+                        <button type="button" class="adv-gal-card-btn" style="background: #06b6d4;" aria-label="View Collaborative Art Circle">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
                 </article>
 
-                <!-- Card 11: Achievements -->
-                <article class="adv-gal-card" data-category="academic" data-title="Achievements" data-count="22" data-index="11">
+                <!-- Card 13: Academic (Smart Classroom Learning) -->
+                <article class="adv-gal-card" data-category="academic" data-title="Smart Classroom Learning" data-count="32" data-index="13">
                     <div class="adv-gal-card-thumb">
-                        <img src="assets/images/gallery/achievements.jpg" alt="Achievements" loading="lazy">
+                        <img src="assets/images/gallery/gallery-classroom-learning.jpg" alt="Smart Classroom Learning" loading="lazy">
+                        <div class="adv-gal-card-overlay">
+                            <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
+                        </div>
+                    </div>
+                    <div class="adv-gal-card-info">
+                        <div class="adv-gal-card-meta">
+                            <div class="adv-gal-card-icon" style="background: #ffedd5; color: #ea580c;">
+                                <i class="fa-solid fa-chalkboard-user"></i>
+                            </div>
+                            <div class="adv-gal-card-text">
+                                <h3 class="adv-gal-card-title">Smart Classrooms</h3>
+                                <span class="adv-gal-card-count">32 Photos</span>
+                            </div>
+                        </div>
+                        <button type="button" class="adv-gal-card-btn" style="background: #ea580c;" aria-label="View Smart Classroom Learning">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 14: Academic (Foundation Achievers) -->
+                <article class="adv-gal-card" data-category="academic" data-title="IIT-JEE & NEET Foundation Batch" data-count="22" data-index="14">
+                    <div class="adv-gal-card-thumb">
+                        <img src="assets/images/gallery/gallery-foundation-achievers.jpg" alt="IIT-JEE & NEET Foundation Batch" loading="lazy">
                         <div class="adv-gal-card-overlay">
                             <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
                         </div>
@@ -444,23 +516,23 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
                             <div class="adv-gal-card-icon" style="background: #ede9fe; color: #7c3aed;">
-                                <i class="fa-solid fa-award"></i>
+                                <i class="fa-solid fa-graduation-cap"></i>
                             </div>
                             <div class="adv-gal-card-text">
-                                <h3 class="adv-gal-card-title">Achievements</h3>
+                                <h3 class="adv-gal-card-title">IIT-JEE Foundation</h3>
                                 <span class="adv-gal-card-count">22 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" style="background: #7c3aed;" aria-label="View Achievements">
+                        <button type="button" class="adv-gal-card-btn" style="background: #7c3aed;" aria-label="View IIT-JEE & NEET Foundation Batch">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
                 </article>
 
-                <!-- Card 12: Educational Tours -->
-                <article class="adv-gal-card" data-category="student-life" data-title="Educational Tours" data-count="31" data-index="12">
+                <!-- Card 15: Student Life (Rainbow Parachute Activity) -->
+                <article class="adv-gal-card" data-category="student-life" data-title="Rainbow Parachute Lawn Activities" data-count="31" data-index="15">
                     <div class="adv-gal-card-thumb">
-                        <img src="assets/images/gallery/educational-tour.jpg" alt="Educational Tours" loading="lazy">
+                        <img src="assets/images/gallery/gallery-parachute-activity.jpg" alt="Rainbow Parachute Lawn Activities" loading="lazy">
                         <div class="adv-gal-card-overlay">
                             <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
                         </div>
@@ -468,14 +540,38 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
                             <div class="adv-gal-card-icon" style="background: #dbeafe; color: #2563eb;">
-                                <i class="fa-solid fa-bus-simple"></i>
+                                <i class="fa-solid fa-sun"></i>
                             </div>
                             <div class="adv-gal-card-text">
-                                <h3 class="adv-gal-card-title">Educational Tours</h3>
+                                <h3 class="adv-gal-card-title">Rainbow Parachute Play</h3>
                                 <span class="adv-gal-card-count">31 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" style="background: #2563eb;" aria-label="View Educational Tours">
+                        <button type="button" class="adv-gal-card-btn" style="background: #2563eb;" aria-label="View Rainbow Parachute Lawn Activities">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 16: Sports (Sports Arena Field) -->
+                <article class="adv-gal-card" data-category="sports" data-title="Campus Sports Ground & Agility" data-count="35" data-index="16">
+                    <div class="adv-gal-card-thumb">
+                        <img src="assets/images/gallery/gallery-sports-field-agility.jpg" alt="Campus Sports Ground & Agility" loading="lazy">
+                        <div class="adv-gal-card-overlay">
+                            <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
+                        </div>
+                    </div>
+                    <div class="adv-gal-card-info">
+                        <div class="adv-gal-card-meta">
+                            <div class="adv-gal-card-icon" style="background: #dcfce7; color: #15803d;">
+                                <i class="fa-solid fa-trophy"></i>
+                            </div>
+                            <div class="adv-gal-card-text">
+                                <h3 class="adv-gal-card-title">Sports Ground &amp; Arena</h3>
+                                <span class="adv-gal-card-count">35 Photos</span>
+                            </div>
+                        </div>
+                        <button type="button" class="adv-gal-card-btn" style="background: #15803d;" aria-label="View Campus Sports Ground & Agility">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
