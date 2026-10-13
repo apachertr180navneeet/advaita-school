@@ -567,6 +567,42 @@
                     </a>
                 </li>
                 <li>
+                    <a href="{{ route('admin.gallery.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.gallery.*') ? 'active' : '' }}">
+                        <i class="fa-solid fa-camera-retro"></i>
+                        <span>Campus Gallery</span>
+                        @php
+                            $galleryNavCount = \App\Models\GalleryItem::count();
+                        @endphp
+                        @if($galleryNavCount > 0)
+                            <span class="nav-badge">{{ $galleryNavCount }}</span>
+                        @endif
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.testimonials.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.testimonials.*') ? 'active' : '' }}">
+                        <i class="fa-solid fa-comment-dots"></i>
+                        <span>Testimonials</span>
+                        @php
+                            $testiNavCount = \App\Models\Testimonial::count();
+                        @endphp
+                        @if($testiNavCount > 0)
+                            <span class="nav-badge">{{ $testiNavCount }}</span>
+                        @endif
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.faqs.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.faqs.*') ? 'active' : '' }}">
+                        <i class="fa-solid fa-circle-question"></i>
+                        <span>FAQs</span>
+                        @php
+                            $faqNavCount = \App\Models\Faq::count();
+                        @endphp
+                        @if($faqNavCount > 0)
+                            <span class="nav-badge">{{ $faqNavCount }}</span>
+                        @endif
+                    </a>
+                </li>
+                <li>
                     <a href="{{ route('admin.seo.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.seo.*') ? 'active' : '' }}">
                         <i class="fa-solid fa-magnifying-glass-chart"></i>
                         <span>SEO Management</span>

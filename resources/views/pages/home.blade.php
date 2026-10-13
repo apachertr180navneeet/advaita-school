@@ -755,17 +755,26 @@
             <div class="adv-gallery-header text-center">
                 <div class="adv-gallery-eyebrow">
                     <i class="fa-solid fa-camera"></i>
-                    <span>CAMPUS GALLERY</span>
+                    <span>{{ $gallerySettings['eyebrow'] ?? 'CAMPUS GALLERY' }}</span>
                 </div>
                 <h2 class="adv-gallery-title">
-                    <span class="title-dark">A day at Advaita,</span>
-                    <span class="title-orange">in <span class="highlight-text">pictures.</span></span>
+                    <span class="title-dark">{{ $gallerySettings['title_1'] ?? 'A day at Advaita,' }}</span>
+                    @if(!empty($gallerySettings['title_2']))
+                        <span class="title-orange">{{ $gallerySettings['title_2'] }}</span>
+                    @endif
                 </h2>
-                <p class="adv-gallery-subtitle">
-                    Glimpses from morning assembly, classrooms, labs, sports, celebrations and everything in between &mdash; the rhythm of life at our campus.
-                </p>
+                @if(!empty($gallerySettings['subtitle']))
+                    <p class="adv-gallery-subtitle">
+                        {{ $gallerySettings['subtitle'] }}
+                    </p>
+                @endif
             </div>
 
+            @php
+                $activeGalleryItems = isset($galleryItems) && $galleryItems->count() > 0 ? $galleryItems : collect();
+            @endphp
+
+            @if($activeGalleryItems->isNotEmpty())
             <!-- Gallery Cards Slider Container -->
             <div class="adv-gallery-slider-wrap">
                 
@@ -778,128 +787,20 @@
                 <div class="adv-gallery-viewport">
                     <!-- Cards Track -->
                     <div class="adv-gallery-grid">
-                        
-                        <!-- Card 1: School Band & Morning Assembly -->
-                        <div class="adv-gallery-card">
-                            <div class="adv-gallery-img-box">
-                                <img src="{{ asset('assets/images/gallery/gallery-school-band.jpg') }}" alt="Advaita School Marching Band and Drum Troupe" class="adv-gallery-img position-center-band" loading="lazy">
-                                <div class="adv-gallery-card-badge">
-                                    <i class="fa-solid fa-drum"></i>
-                                    <span>School Band &amp; Assembly</span>
+                        @foreach($activeGalleryItems as $item)
+                            <!-- Card {{ $loop->iteration }}: {{ $item->category }} -->
+                            <div class="adv-gallery-card">
+                                <div class="adv-gallery-img-box">
+                                    <img src="{{ $item->image_url }}" alt="{{ $item->caption ?? $item->category ?? 'Advaita School Campus' }}" class="adv-gallery-img {{ $item->custom_class }}" loading="lazy">
+                                    @if(!empty($item->category))
+                                        <div class="adv-gallery-card-badge">
+                                            <i class="{{ $item->icon ?: 'fa-solid fa-camera' }}"></i>
+                                            <span>{{ $item->category }}</span>
+                                        </div>
+                                    @endif
                                 </div>
                             </div>
-                        </div>
-
-                        <!-- Card 2: Math & Science Practical Lab -->
-                        <div class="adv-gallery-card">
-                            <div class="adv-gallery-img-box">
-                                <img src="{{ asset('assets/images/gallery/gallery-math-science-lab.jpg') }}" alt="Mathematics and Practical Lab Experiment Session" class="adv-gallery-img" loading="lazy">
-                                <div class="adv-gallery-card-badge">
-                                    <i class="fa-solid fa-flask-vial"></i>
-                                    <span>Math &amp; Science Labs</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 3: Football League & Turf Sprint -->
-                        <div class="adv-gallery-card">
-                            <div class="adv-gallery-img-box">
-                                <img src="{{ asset('assets/images/gallery/gallery-football-match-sprint.jpg') }}" alt="Inter-House Football Championship and Sprint on Green Turf" class="adv-gallery-img" loading="lazy">
-                                <div class="adv-gallery-card-badge">
-                                    <i class="fa-solid fa-futbol"></i>
-                                    <span>Football League &amp; Turf</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 4: Art Studio & Origami Paper Airplanes -->
-                        <div class="adv-gallery-card">
-                            <div class="adv-gallery-img-box">
-                                <img src="{{ asset('assets/images/gallery/gallery-art-studio-origami-planes.jpg') }}" alt="Art Studio Creative Origami Paper Airplanes Workshop" class="adv-gallery-img" loading="lazy">
-                                <div class="adv-gallery-card-badge">
-                                    <i class="fa-solid fa-paper-plane"></i>
-                                    <span>Art Studio &amp; Origami</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 5: Splash Pool & Aquatic Play Arena -->
-                        <div class="adv-gallery-card">
-                            <div class="adv-gallery-img-box">
-                                <img src="{{ asset('assets/images/gallery/gallery-splash-pool-kids-play.jpg') }}" alt="Young Children Splash Pool and Water Play Area with Slide" class="adv-gallery-img" loading="lazy">
-                                <div class="adv-gallery-card-badge">
-                                    <i class="fa-solid fa-water-ladder"></i>
-                                    <span>Splash Pool &amp; Play Arena</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 6: Football Freestyle & Ball Skills -->
-                        <div class="adv-gallery-card">
-                            <div class="adv-gallery-img-box">
-                                <img src="{{ asset('assets/images/gallery/gallery-football-juggling-boy.jpg') }}" alt="Student Practicing Football Freestyle Ball Control" class="adv-gallery-img" loading="lazy">
-                                <div class="adv-gallery-card-badge">
-                                    <i class="fa-solid fa-medal"></i>
-                                    <span>Freestyle &amp; Ball Skills</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 7: Creative Arts & Hand Painting -->
-                        <div class="adv-gallery-card">
-                            <div class="adv-gallery-img-box">
-                                <img src="{{ asset('assets/images/gallery/gallery-painted-hands-girl.jpg') }}" alt="Young Student Showing Joyful Painted Hands on Lawn" class="adv-gallery-img" loading="lazy">
-                                <div class="adv-gallery-card-badge">
-                                    <i class="fa-solid fa-palette"></i>
-                                    <span>Creative Arts &amp; Expression</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 8: Lawn Gymnastics & Cartwheels -->
-                        <div class="adv-gallery-card">
-                            <div class="adv-gallery-img-box">
-                                <img src="{{ asset('assets/images/gallery/gallery-gymnastics-cartwheel.jpg') }}" alt="Student Performing Gymnastics Cartwheel on Lawn" class="adv-gallery-img" loading="lazy">
-                                <div class="adv-gallery-card-badge">
-                                    <i class="fa-solid fa-person-walking-dashed-line-arrow-right"></i>
-                                    <span>Gymnastics &amp; Tumbling</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 9: Rainbow Parachute Teamwork -->
-                        <div class="adv-gallery-card">
-                            <div class="adv-gallery-img-box">
-                                <img src="{{ asset('assets/images/gallery/gallery-parachute-lawn-building.jpg') }}" alt="Primary Students Playing with Rainbow Parachute Before Campus Building" class="adv-gallery-img" loading="lazy">
-                                <div class="adv-gallery-card-badge">
-                                    <i class="fa-solid fa-shapes"></i>
-                                    <span>Joyful Teamwork &amp; Play</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 10: Smart Classroom Learning -->
-                        <div class="adv-gallery-card">
-                            <div class="adv-gallery-img-box">
-                                <img src="{{ asset('assets/images/gallery/gallery-classroom-learning.jpg') }}" alt="Attentive Students in Classroom Learning Session" class="adv-gallery-img" loading="lazy">
-                                <div class="adv-gallery-card-badge">
-                                    <i class="fa-solid fa-chalkboard-user"></i>
-                                    <span>Smart Classroom Learning</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Card 11: Foundation Excellence (IIT-JEE & NEET Batch) -->
-                        <div class="adv-gallery-card">
-                            <div class="adv-gallery-img-box">
-                                <img src="{{ asset('assets/images/gallery/gallery-foundation-achievers.jpg') }}" alt="Students and Faculty with IIT-JEE and NEET Foundation Banner" class="adv-gallery-img" loading="lazy">
-                                <div class="adv-gallery-card-badge">
-                                    <i class="fa-solid fa-graduation-cap"></i>
-                                    <span>IIT-JEE &amp; NEET Foundation</span>
-                                </div>
-                            </div>
-                        </div>
-
+                        @endforeach
                     </div>
                 </div>
 
@@ -912,31 +813,28 @@
 
             <!-- Slider Pagination Dots -->
             <div class="adv-gallery-dots" role="tablist" aria-label="Gallery slide navigation">
-                <button type="button" class="adv-gallery-dot active" role="tab" aria-selected="true" aria-label="Slide 1"></button>
-                <button type="button" class="adv-gallery-dot" role="tab" aria-selected="false" aria-label="Slide 2"></button>
-                <button type="button" class="adv-gallery-dot" role="tab" aria-selected="false" aria-label="Slide 3"></button>
-                <button type="button" class="adv-gallery-dot" role="tab" aria-selected="false" aria-label="Slide 4"></button>
-                <button type="button" class="adv-gallery-dot" role="tab" aria-selected="false" aria-label="Slide 5"></button>
-                <button type="button" class="adv-gallery-dot" role="tab" aria-selected="false" aria-label="Slide 6"></button>
-                <button type="button" class="adv-gallery-dot" role="tab" aria-selected="false" aria-label="Slide 7"></button>
-                <button type="button" class="adv-gallery-dot" role="tab" aria-selected="false" aria-label="Slide 8"></button>
-                <button type="button" class="adv-gallery-dot" role="tab" aria-selected="false" aria-label="Slide 9"></button>
-                <button type="button" class="adv-gallery-dot" role="tab" aria-selected="false" aria-label="Slide 10"></button>
-                <button type="button" class="adv-gallery-dot" role="tab" aria-selected="false" aria-label="Slide 11"></button>
+                @foreach($activeGalleryItems as $item)
+                    <button type="button" class="adv-gallery-dot {{ $loop->first ? 'active' : '' }}" role="tab" aria-selected="{{ $loop->first ? 'true' : 'false' }}" aria-label="Slide {{ $loop->iteration }}"></button>
+                @endforeach
             </div>
+            @endif
 
             <!-- Bottom Action Buttons -->
             <div class="adv-gallery-actions">
-                <a href="{{ route('gallery') }}" class="adv-btn-gallery-primary">
-                    <span>Explore Photo Gallery</span>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-                <a href="#hero" class="adv-btn-gallery-video">
-                    <div class="video-play-circle">
-                        <i class="fa-solid fa-play"></i>
-                    </div>
-                    <span>Watch Campus Highlights</span>
-                </a>
+                @if(!empty($gallerySettings['btn_1_text']))
+                    <a href="{{ $gallerySettings['btn_1_url'] ?? route('gallery') }}" class="adv-btn-gallery-primary">
+                        <span>{{ $gallerySettings['btn_1_text'] }}</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                @endif
+                @if(!empty($gallerySettings['btn_2_text']))
+                    <a href="{{ $gallerySettings['btn_2_url'] ?? '#hero' }}" class="adv-btn-gallery-video">
+                        <div class="video-play-circle">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                        <span>{{ $gallerySettings['btn_2_text'] }}</span>
+                    </a>
+                @endif
             </div>
 
         </div>
@@ -953,110 +851,66 @@
             <div class="adv-testimonials-header text-center">
                 <div class="adv-testimonials-eyebrow">
                     <i class="fa-solid fa-comment-dots"></i>
-                    <span>TESTIMONIALS</span>
+                    <span>{{ $testimonialSettings['eyebrow'] ?? 'TESTIMONIALS' }}</span>
                 </div>
                 <h2 class="adv-testimonials-title">
-                    <span class="title-dark">Voices That</span>
-                    <span class="title-orange">Inspire Us</span>
+                    <span class="title-dark">{{ $testimonialSettings['title_1'] ?? 'Voices That' }}</span>
+                    @if(!empty($testimonialSettings['title_2']))
+                        <span class="title-orange">{{ $testimonialSettings['title_2'] }}</span>
+                    @endif
                 </h2>
                 <div class="adv-testimonials-underline-bar"></div>
-                <p class="adv-testimonials-subtitle">
-                    Here&rsquo;s what our parents have to say about their journey with Advaita.
-                </p>
+                @if(!empty($testimonialSettings['subtitle']))
+                    <p class="adv-testimonials-subtitle">
+                        {{ $testimonialSettings['subtitle'] }}
+                    </p>
+                @endif
             </div>
 
-            <!-- 3 Testimonial Cards Grid -->
+            @php
+                $activeTestimonials = isset($testimonials) && $testimonials->count() > 0 ? $testimonials : collect();
+            @endphp
+
+            @if($activeTestimonials->isNotEmpty())
+            <!-- Testimonial Cards Grid -->
             <div class="adv-testimonials-grid">
-                
-                <!-- Card 1: Priya Sharma -->
-                <div class="adv-testi-card theme-orange">
-                    <div class="adv-testi-top-bar">
-                        <span class="adv-testi-quote-mark orange">&ldquo;</span>
-                        <div class="adv-testi-stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
+                @foreach($activeTestimonials as $testi)
+                    <!-- Card: {{ $testi->parent_name }} -->
+                    <div class="adv-testi-card {{ $testi->theme_color === 'blue' ? 'theme-blue' : 'theme-orange' }}">
+                        <div class="adv-testi-top-bar">
+                            <span class="adv-testi-quote-mark {{ $testi->theme_color === 'blue' ? 'blue' : 'orange' }}">&ldquo;</span>
+                            <div class="adv-testi-stars">
+                                @for($i = 1; $i <= ($testi->rating ?: 5); $i++)
+                                    <i class="fa-solid fa-star"></i>
+                                @endfor
+                            </div>
+                        </div>
+                        <p class="adv-testi-text">
+                            {{ $testi->content }}
+                        </p>
+                        <div class="adv-testi-footer">
+                            <div class="adv-testi-avatar-box">
+                                <img src="{{ $testi->avatar_url }}" alt="{{ $testi->parent_name }} - Parent at Advaita" class="adv-testi-avatar" loading="lazy">
+                            </div>
+                            <div class="adv-testi-author-info">
+                                <h3 class="adv-testi-name">{{ $testi->parent_name }}</h3>
+                                @if(!empty($testi->child_info))
+                                    <span class="adv-testi-role">{!! nl2br(e($testi->child_info)) !!}</span>
+                                @endif
+                            </div>
+                            <span class="adv-testi-close-quote {{ $testi->theme_color === 'blue' ? 'blue' : 'orange' }}">&rdquo;</span>
                         </div>
                     </div>
-                    <p class="adv-testi-text">
-                        Advaita has been a blessing for our family. The school provides a perfect balance of academics, values and co-curricular activities. We have seen our daughter grow into a confident, responsible and curious learner.
-                    </p>
-                    <div class="adv-testi-footer">
-                        <div class="adv-testi-avatar-box">
-                            <img src="{{ asset('assets/images/testimonial-parent-1.jpg') }}" alt="Priya Sharma - Parent at Advaita" class="adv-testi-avatar" loading="lazy">
-                        </div>
-                        <div class="adv-testi-author-info">
-                            <h3 class="adv-testi-name">Priya Sharma</h3>
-                            <span class="adv-testi-role">Parent of Ananya Sharma <br>Class VI</span>
-                        </div>
-                        <span class="adv-testi-close-quote orange">&rdquo;</span>
-                    </div>
-                </div>
-
-                <!-- Card 2: Rahul Mehta -->
-                <div class="adv-testi-card theme-blue">
-                    <div class="adv-testi-top-bar">
-                        <span class="adv-testi-quote-mark blue">&ldquo;</span>
-                        <div class="adv-testi-stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                    </div>
-                    <p class="adv-testi-text">
-                        The teachers at Advaita are truly dedicated and supportive. The school's focus on holistic development has helped my son discover his strengths and build leadership skills. We are grateful to be a part of the Advaita family.
-                    </p>
-                    <div class="adv-testi-footer">
-                        <div class="adv-testi-avatar-box">
-                            <img src="{{ asset('assets/images/testimonial-parent-2.jpg') }}" alt="Rahul Mehta - Parent at Advaita" class="adv-testi-avatar" loading="lazy">
-                        </div>
-                        <div class="adv-testi-author-info">
-                            <h3 class="adv-testi-name">Rahul Mehta</h3>
-                            <span class="adv-testi-role">Parent of Vihaan Mehta <br>Class VIII</span>
-                        </div>
-                        <span class="adv-testi-close-quote blue">&rdquo;</span>
-                    </div>
-                </div>
-
-                <!-- Card 3: Sneha Iyer -->
-                <div class="adv-testi-card theme-orange">
-                    <div class="adv-testi-top-bar">
-                        <span class="adv-testi-quote-mark orange">&ldquo;</span>
-                        <div class="adv-testi-stars">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                        </div>
-                    </div>
-                    <p class="adv-testi-text">
-                        Advaita offers a safe, nurturing and inspiring environment. The blend of modern infrastructure, caring faculty and value-based education gives us complete confidence in our child's future.
-                    </p>
-                    <div class="adv-testi-footer">
-                        <div class="adv-testi-avatar-box">
-                            <img src="{{ asset('assets/images/testimonial-parent-3.jpg') }}" alt="Sneha Iyer - Parent at Advaita" class="adv-testi-avatar" loading="lazy">
-                        </div>
-                        <div class="adv-testi-author-info">
-                            <h3 class="adv-testi-name">Sneha Iyer</h3>
-                            <span class="adv-testi-role">Parent of Arjun Iyer <br>Class V</span>
-                        </div>
-                        <span class="adv-testi-close-quote orange">&rdquo;</span>
-                    </div>
-                </div>
-
+                @endforeach
             </div>
 
             <!-- Carousel Pagination Dots -->
             <div class="adv-testimonials-dots" role="tablist" aria-label="Testimonials pagination">
-                <span class="adv-testi-dot" role="tab" aria-selected="false"></span>
-                <span class="adv-testi-dot active" role="tab" aria-selected="true"></span>
-                <span class="adv-testi-dot" role="tab" aria-selected="false"></span>
+                @foreach($activeTestimonials as $testi)
+                    <span class="adv-testi-dot {{ $loop->iteration === 2 ? 'active' : '' }}" role="tab" aria-selected="{{ $loop->iteration === 2 ? 'true' : 'false' }}"></span>
+                @endforeach
             </div>
+            @endif
 
         </div>
     </section>
@@ -1077,113 +931,50 @@
             <div class="adv-faq-header text-center">
                 <div class="adv-faq-eyebrow">
                     <span class="faq-dash"></span>
-                    <span class="faq-eyebrow-text">FAQ</span>
+                    <span class="faq-eyebrow-text">{{ $faqSettings['eyebrow'] ?? 'FAQ' }}</span>
                     <span class="faq-dash"></span>
                 </div>
                 <h2 class="adv-faq-title">
-                    <span class="title-dark">Frequently Asked</span>
-                    <span class="title-orange">Questions</span>
+                    <span class="title-dark">{{ $faqSettings['title_1'] ?? 'Frequently Asked' }}</span>
+                    @if(!empty($faqSettings['title_2']))
+                        <span class="title-orange">{{ $faqSettings['title_2'] }}</span>
+                    @endif
                 </h2>
-                <p class="adv-faq-subtitle">
-                    Find quick answers to common questions about admissions, academics,<br>
-                    campus life, and more at Advaita.
-                </p>
+                @if(!empty($faqSettings['subtitle']))
+                    <p class="adv-faq-subtitle">
+                        {!! nl2br(e($faqSettings['subtitle'])) !!}
+                    </p>
+                @endif
             </div>
 
+            @php
+                $activeFaqs = isset($faqs) && $faqs->count() > 0 ? $faqs : collect();
+            @endphp
+
+            @if($activeFaqs->isNotEmpty())
             <!-- Accordion List Container -->
             <div class="adv-faq-accordion" id="advFaqAccordion">
-                
-                <!-- FAQ Item 01 (Active by default) -->
-                <div class="adv-faq-item active">
-                    <button type="button" class="adv-faq-btn" aria-expanded="true" aria-controls="faq-ans-1">
-                        <span class="adv-faq-num">01</span>
-                        <span class="adv-faq-question">What curriculum does Advaita follow?</span>
-                        <span class="adv-faq-icon">
-                            <i class="fa-solid fa-minus"></i>
-                        </span>
-                    </button>
-                    <div class="adv-faq-answer" id="faq-ans-1" style="display: block;">
-                        <div class="adv-faq-answer-inner">
-                            <p>
-                                Advaita is a CBSE affiliated school (Affiliation No. 1130920) and follows a holistic, future-focused curriculum. Our approach blends academic excellence with co-curricular, value-based, and experiential learning to help every child grow into a confident, compassionate, and capable individual.
-                            </p>
+                @foreach($activeFaqs as $faq)
+                    <!-- FAQ Item {{ sprintf('%02d', $loop->iteration) }} -->
+                    <div class="adv-faq-item {{ $loop->first ? 'active' : '' }}">
+                        <button type="button" class="adv-faq-btn" aria-expanded="{{ $loop->first ? 'true' : 'false' }}" aria-controls="faq-ans-{{ $faq->id }}">
+                            <span class="adv-faq-num">{{ sprintf('%02d', $loop->iteration) }}</span>
+                            <span class="adv-faq-question">{{ $faq->question }}</span>
+                            <span class="adv-faq-icon">
+                                <i class="fa-solid {{ $loop->first ? 'fa-minus' : 'fa-plus' }}"></i>
+                            </span>
+                        </button>
+                        <div class="adv-faq-answer" id="faq-ans-{{ $faq->id }}" style="{{ $loop->first ? 'display: block;' : '' }}">
+                            <div class="adv-faq-answer-inner">
+                                <p>
+                                    {{ $faq->answer }}
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- FAQ Item 02 -->
-                <div class="adv-faq-item">
-                    <button type="button" class="adv-faq-btn" aria-expanded="false" aria-controls="faq-ans-2">
-                        <span class="adv-faq-num">02</span>
-                        <span class="adv-faq-question">What is the admission process for new students?</span>
-                        <span class="adv-faq-icon">
-                            <i class="fa-solid fa-plus"></i>
-                        </span>
-                    </button>
-                    <div class="adv-faq-answer" id="faq-ans-2">
-                        <div class="adv-faq-answer-inner">
-                            <p>
-                                Our admission process is straightforward and supportive. It begins with submitting an enquiry or registration form online or at our school campus, followed by an interactive meeting and guided campus tour. After verification of previous academic records and essential documents, admission is finalized upon confirmation of enrolment and fee completion.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 03 -->
-                <div class="adv-faq-item">
-                    <button type="button" class="adv-faq-btn" aria-expanded="false" aria-controls="faq-ans-3">
-                        <span class="adv-faq-num">03</span>
-                        <span class="adv-faq-question">What are the age criteria for admission to pre-primary and primary classes?</span>
-                        <span class="adv-faq-icon">
-                            <i class="fa-solid fa-plus"></i>
-                        </span>
-                    </button>
-                    <div class="adv-faq-answer" id="faq-ans-3">
-                        <div class="adv-faq-answer-inner">
-                            <p>
-                                In accordance with CBSE and state education regulatory standards, minimum age requirements as of the commencement of the academic year are: Nursery (3+ years), LKG (4+ years), UKG (5+ years), and Grade 1 (6+ years). For higher grades, admissions are based on successful completion of the preceding class.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 04 -->
-                <div class="adv-faq-item">
-                    <button type="button" class="adv-faq-btn" aria-expanded="false" aria-controls="faq-ans-4">
-                        <span class="adv-faq-num">04</span>
-                        <span class="adv-faq-question">What extracurricular activities does the school offer?</span>
-                        <span class="adv-faq-icon">
-                            <i class="fa-solid fa-plus"></i>
-                        </span>
-                    </button>
-                    <div class="adv-faq-answer" id="faq-ans-4">
-                        <div class="adv-faq-answer-inner">
-                            <p>
-                                Advaita offers an expansive spectrum of co-curricular opportunities designed to foster creativity, teamwork, and athletic skills. These include robotics &amp; AI lab projects, coding clubs, vocal &amp; instrumental music, classical and contemporary dance, theatre, public speaking &amp; debates, martial arts, cricket, football, basketball, badminton, table tennis, and yoga.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- FAQ Item 05 -->
-                <div class="adv-faq-item">
-                    <button type="button" class="adv-faq-btn" aria-expanded="false" aria-controls="faq-ans-5">
-                        <span class="adv-faq-num">05</span>
-                        <span class="adv-faq-question">How does Advaita ensure the safety of its students?</span>
-                        <span class="adv-faq-icon">
-                            <i class="fa-solid fa-plus"></i>
-                        </span>
-                    </button>
-                    <div class="adv-faq-answer" id="faq-ans-5">
-                        <div class="adv-faq-answer-inner">
-                            <p>
-                                Student safety is our foremost priority. Our campus features 24/7 high-resolution CCTV monitoring, controlled access entry gates with security personnel, GPS-enabled school transport with certified drivers and female attendants, an equipped medical infirmary with qualified nursing care, and rigorous child protection policies across all premises.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
+                @endforeach
             </div>
+            @endif
 
         </div>
     </section>

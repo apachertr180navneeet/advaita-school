@@ -3,11 +3,14 @@
 use App\Http\Controllers\Admin\AuthController as AdminAuthController;
 use App\Http\Controllers\Admin\CampusVisitController as AdminCampusVisitController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\Admin\FaqController as AdminFaqController;
+use App\Http\Controllers\Admin\GalleryController as AdminGalleryController;
 use App\Http\Controllers\Admin\InquiryController as AdminInquiryController;
 use App\Http\Controllers\Admin\PillarController as AdminPillarController;
 use App\Http\Controllers\Admin\RegistrationController as AdminRegistrationController;
 use App\Http\Controllers\Admin\SeoController as AdminSeoController;
 use App\Http\Controllers\Admin\SliderController as AdminSliderController;
+use App\Http\Controllers\Admin\TestimonialController as AdminTestimonialController;
 use App\Http\Controllers\Admin\WhyChooseController as AdminWhyChooseController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
@@ -100,6 +103,21 @@ Route::prefix('admin')->name('admin.')->group(function () {
         // Campus Visit & Admissions CTA Banner Management
         Route::get('/campus-visit', [AdminCampusVisitController::class, 'index'])->name('campus-visit.index');
         Route::patch('/campus-visit', [AdminCampusVisitController::class, 'update'])->name('campus-visit.update');
+
+        // Campus Gallery Management
+        Route::patch('/gallery/section-header', [AdminGalleryController::class, 'updateSectionHeader'])->name('gallery.section-header');
+        Route::patch('/gallery/{gallery}/toggle-status', [AdminGalleryController::class, 'toggle'])->name('gallery.toggle-status');
+        Route::resource('gallery', AdminGalleryController::class)->except(['show']);
+
+        // Parent Testimonials Management
+        Route::patch('/testimonials/section-header', [AdminTestimonialController::class, 'updateSectionHeader'])->name('testimonials.section-header');
+        Route::patch('/testimonials/{testimonial}/toggle-status', [AdminTestimonialController::class, 'toggle'])->name('testimonials.toggle-status');
+        Route::resource('testimonials', AdminTestimonialController::class)->except(['show']);
+
+        // Frequently Asked Questions (FAQ) Management
+        Route::patch('/faqs/section-header', [AdminFaqController::class, 'updateSectionHeader'])->name('faqs.section-header');
+        Route::patch('/faqs/{faq}/toggle-status', [AdminFaqController::class, 'toggle'])->name('faqs.toggle-status');
+        Route::resource('faqs', AdminFaqController::class)->except(['show']);
     });
 });
 

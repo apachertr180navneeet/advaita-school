@@ -251,11 +251,14 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
-        // 4. Seed Sliders, Pillars & Why Choose Advaita Cards
+        // 4. Seed Sliders, Pillars, Why Choose, Gallery, Testimonials & FAQs
         $this->call([
             SliderSeeder::class,
             PillarSeeder::class,
             WhyChooseCardSeeder::class,
+            GalleryItemSeeder::class,
+            TestimonialSeeder::class,
+            FaqSeeder::class,
         ]);
     }
 }

@@ -2,17 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Faq;
+use App\Models\GalleryItem;
 use App\Models\Pillar;
 use App\Models\Setting;
 use App\Models\Slider;
+use App\Models\Testimonial;
 use App\Models\WhyChooseCard;
+use Database\Seeders\FaqSeeder;
+use Database\Seeders\GalleryItemSeeder;
 use Database\Seeders\PillarSeeder;
+use Database\Seeders\TestimonialSeeder;
 use Database\Seeders\WhyChooseCardSeeder;
 
 class HomeController extends Controller
 {
     /**
-     * Display the Homepage with dynamic hero sliders, three pillars, and why choose cards.
+     * Display the Homepage with dynamic hero sliders, three pillars, why choose cards, gallery, testimonials, and FAQs.
      */
     public function index()
     {
@@ -29,6 +35,21 @@ class HomeController extends Controller
         // Auto-seed default why choose cards if table is empty
         if (WhyChooseCard::count() === 0) {
             (new WhyChooseCardSeeder)->run();
+        }
+
+        // Auto-seed default gallery items if table is empty
+        if (GalleryItem::count() === 0) {
+            (new GalleryItemSeeder)->run();
+        }
+
+        // Auto-seed default testimonials if table is empty
+        if (Testimonial::count() === 0) {
+            (new TestimonialSeeder)->run();
+        }
+
+        // Auto-seed default FAQs if table is empty
+        if (Faq::count() === 0) {
+            (new FaqSeeder)->run();
         }
 
         $sliders = Slider::where('is_active', true)
@@ -84,13 +105,67 @@ class HomeController extends Controller
             'phone_number' => Setting::get('campus_visit_phone_number', '094130 62851'),
         ];
 
+        $galleryItems = GalleryItem::where('is_active', true)
+            ->orderBy('order', 'asc')
+            ->orderBy('id', 'asc')
+            ->get();
+
+        $gallerySettings = [
+            'eyebrow' => Setting::get('gallery_eyebrow', 'CAMPUS GALLERY'),
+            'title_1' => Setting::get('gallery_title_1', 'A day at Advaita,'),
+            'title_2' => Setting::get('gallery_title_2', 'in pictures.'),
+            'subtitle' => Setting::get('gallery_subtitle', 'Glimpses from morning assembly, classrooms, labs, sports, celebrations and everything in between — the rhythm of life at our campus.'),
+            'btn_1_text' => Setting::get('gallery_btn_1_text', 'Explore Photo Gallery'),
+            'btn_1_url' => Setting::get('gallery_btn_1_url', route('gallery')),
+            'btn_2_text' => Setting::get('gallery_btn_2_text', 'Watch Campus Highlights'),
+            'btn_2_url' => Setting::get('gallery_btn_2_url', '#hero'),
+        ];
+
+        $testimonials = Testimonial::where('is_active', true)
+            ->orderBy('order', 'asc')
+            ->orderBy('id', 'asc')
+            ->get();
+
+        $testimonialSettings = [
+            'eyebrow' => Setting::get('testimonials_eyebrow', 'TESTIMONIALS'),
+            'title_1' => Setting::get('testimonials_title_1', 'Voices That'),
+            'title_2' => Setting::get('testimonials_title_2', 'Inspire Us'),
+            'subtitle' => Setting::get('testimonials_subtitle', 'Here’s what our parents have to say about their journey with Advaita.'),
+        ];
+
+        $faqs = Faq::where('is_active', true)
+            ->orderBy('order', 'asc')
+            ->orderBy('id', 'asc')
+            ->get();
+
+        $faqSettings = [
+            'eyebrow' => Setting::get('faq_eyebrow', 'FAQ'),
+            'title_1' => Setting::get('faq_title_1', 'Frequently Asked'),
+            'title_2' => Setting::get('faq_title_2', 'Questions'),
+            'subtitle' => Setting::get('faq_subtitle', "Find quick answers to common questions about admissions, academics,\ncampus life, and more at Advaita."),
+        ];
+
         $seo = [
             'title' => Setting::get('home_seo_title', 'Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)'),
             'description' => Setting::get('home_seo_description', 'Advaita School of Excellence, Parbhani - CBSE Affiliated English Medium School (No. 1130920). Offering future-ready education, modern robotics & science labs, holistic sports, and values-based learning from Pre-Primary to Class 10.'),
             'keywords' => Setting::get('home_seo_keywords', 'Advaita School of Excellence, Parbhani School, CBSE School Parbhani, Best School in Parbhani, CBSE Affiliated School 1130920, Robotics Lab School, English Medium School Parbhani'),
         ];
 
-        return view('pages.home', compact('sliders', 'pillars', 'pillarSettings', 'whyChooseCards', 'whyChooseSettings', 'campusVisit', 'seo'));
+        return view('pages.home', compact(
+            'sliders',
+            'pillars',
+            'pillarSettings',
+            'whyChooseCards',
+            'whyChooseSettings',
+            'campusVisit',
+            'galleryItems',
+            'gallerySettings',
+            'testimonials',
+            'testimonialSettings',
+            'faqs',
+            'faqSettings',
+            'seo'
+        ));
     }
 
     /**
