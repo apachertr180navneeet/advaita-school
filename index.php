@@ -265,7 +265,7 @@ require_once __DIR__ . '/includes/header.php';
 
                         <!-- Main Clean Campus Image Card -->
                         <div class="adv-welcome-image-card">
-                            <img src="assets/images/about-advaita-visual-clean.jpg?v=2" alt="Advaita School of Excellence Campus - Premier CBSE School Parbhani" class="adv-welcome-img" loading="eager">
+                            <img src="assets/images/about-advaita-visual-clean.jpg?v=3" alt="Advaita School of Excellence Campus - Premier CBSE School Parbhani" class="adv-welcome-img" loading="eager">
                             <div class="adv-welcome-img-overlay" aria-hidden="true"></div>
                             
                             <!-- Floating Tag on Image -->
@@ -416,7 +416,7 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Pillar 01: Labs & Smart Classrooms (Orange) -->
                 <div class="adv-pillar-card theme-orange">
                     <div class="adv-pillar-image-wrap">
-                        <img src="assets/images/pillar-card-1.jpg?v=2" alt="Future-ready Labs & Smart Classrooms" class="adv-pillar-img" loading="lazy">
+                        <img src="assets/images/pillar-card-1.jpg?v=3" alt="Future-ready Labs & Smart Classrooms" class="adv-pillar-img" loading="lazy">
                         <div class="adv-pillar-num-badge">01</div>
                     </div>
                     <div class="adv-pillar-content">
@@ -452,7 +452,7 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Pillar 02: Vibrant Year-round Calendar (Blue) -->
                 <div class="adv-pillar-card theme-blue">
                     <div class="adv-pillar-image-wrap">
-                        <img src="assets/images/pillar-card-2.jpg?v=2" alt="A Vibrant Year-round Calendar" class="adv-pillar-img" loading="lazy">
+                        <img src="assets/images/pillar-card-2.jpg?v=3" alt="A Vibrant Year-round Calendar" class="adv-pillar-img" loading="lazy">
                         <div class="adv-pillar-num-badge">02</div>
                     </div>
                     <div class="adv-pillar-content">
@@ -492,7 +492,7 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Pillar 03: Five Quiet Promises (Teal/Green) -->
                 <div class="adv-pillar-card theme-teal">
                     <div class="adv-pillar-image-wrap">
-                        <img src="assets/images/pillar-card-3.jpg?v=2" alt="Five Quiet Promises" class="adv-pillar-img" loading="lazy">
+                        <img src="assets/images/pillar-card-3.jpg?v=3" alt="Five Quiet Promises" class="adv-pillar-img" loading="lazy">
                         <div class="adv-pillar-num-badge">03</div>
                     </div>
                     <div class="adv-pillar-content">
