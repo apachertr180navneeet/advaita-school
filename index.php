@@ -45,33 +45,7 @@ require_once __DIR__ . '/includes/header.php';
                         <!-- Premium Hero Content Overlay (Text Rendered on Banner Image) -->
                         <div class="adv-hero-text-overlay">
                             
-                            <!-- 1. Milestone Pill Badge with Double Stripes and Flying Paper Airplane -->
-                            <div class="adv-hero-milestone-row">
-                                <div class="adv-hero-milestone-wrap">
-                                    <div class="adv-milestone-bars" aria-hidden="true">
-                                        <span class="bar-top"></span>
-                                        <span class="bar-bottom"></span>
-                                    </div>
-                                    <div class="adv-hero-milestone-badge">
-                                        <span>10 Years of Excellence</span>
-                                    </div>
-                                    <div class="adv-milestone-bars" aria-hidden="true">
-                                        <span class="bar-top"></span>
-                                        <span class="bar-bottom"></span>
-                                    </div>
-                                </div>
 
-                                <!-- Flying Paper Airplane Doodle -->
-                                <div class="adv-hero-paper-plane" aria-hidden="true">
-                                    <svg viewBox="0 0 130 75" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10 65 C 40 68, 65 52, 92 26" stroke="rgba(255,255,255,0.75)" stroke-width="2" stroke-dasharray="4 4" stroke-linecap="round"/>
-                                        <g transform="translate(90, 8) rotate(22)">
-                                            <polygon points="0,22 34,0 18,34 12,22" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linejoin="round"/>
-                                            <line x1="34" y1="0" x2="12" y2="22" stroke="#ffffff" stroke-width="1.8"/>
-                                        </g>
-                                    </svg>
-                                </div>
-                            </div>
 
                             <!-- 2. Tagline: Building Curious Minds. Shaping Confident Futures. -->
                             <h1 class="adv-hero-taglines">
@@ -135,33 +109,7 @@ require_once __DIR__ . '/includes/header.php';
                         <!-- Premium Hero Content Overlay (Text Rendered on Banner Image) -->
                         <div class="adv-hero-text-overlay">
                             
-                            <!-- 1. Milestone Pill Badge with Double Stripes and Flying Paper Airplane -->
-                            <div class="adv-hero-milestone-row">
-                                <div class="adv-hero-milestone-wrap">
-                                    <div class="adv-milestone-bars" aria-hidden="true">
-                                        <span class="bar-top"></span>
-                                        <span class="bar-bottom"></span>
-                                    </div>
-                                    <div class="adv-hero-milestone-badge">
-                                        <span>10 Years of Excellence</span>
-                                    </div>
-                                    <div class="adv-milestone-bars" aria-hidden="true">
-                                        <span class="bar-top"></span>
-                                        <span class="bar-bottom"></span>
-                                    </div>
-                                </div>
 
-                                <!-- Flying Paper Airplane Doodle -->
-                                <div class="adv-hero-paper-plane" aria-hidden="true">
-                                    <svg viewBox="0 0 130 75" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M10 65 C 40 68, 65 52, 92 26" stroke="rgba(255,255,255,0.75)" stroke-width="2" stroke-dasharray="4 4" stroke-linecap="round"/>
-                                        <g transform="translate(90, 8) rotate(22)">
-                                            <polygon points="0,22 34,0 18,34 12,22" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linejoin="round"/>
-                                            <line x1="34" y1="0" x2="12" y2="22" stroke="#ffffff" stroke-width="1.8"/>
-                                        </g>
-                                    </svg>
-                                </div>
-                            </div>
 
                             <!-- 2. Tagline: Building Curious Minds. Shaping Confident Futures. -->
                             <h1 class="adv-hero-taglines">
