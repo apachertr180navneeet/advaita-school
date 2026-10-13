@@ -113,31 +113,52 @@ document.addEventListener('DOMContentLoaded', function () {
             const originalText = submitBtn.innerHTML;
             submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> <span>Sending...</span>';
 
-            setTimeout(function () {
+            // Real AJAX Submission to Laravel
+            const formData = new FormData(contactForm);
+            fetch(contactForm.action, {
+                method: 'POST',
+                headers: {
+                    'X-Requested-With': 'XMLHttpRequest',
+                    'Accept': 'application/json'
+                },
+                body: formData
+            })
+            .then(res => res.json())
+            .then(data => {
                 submitBtn.disabled = false;
                 submitBtn.classList.remove('btn-loading');
                 submitBtn.innerHTML = originalText;
 
-                // Show success banner
-                if (successBanner) {
-                    successBanner.style.display = 'flex';
-                    successBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                }
-
-                // Reset form
-                contactForm.reset();
-                Object.keys(fields).forEach(key => {
-                    const item = fields[key];
-                    if (item.input) {
-                        item.input.classList.remove('is-valid', 'has-error');
+                if (data.success) {
+                    if (successBanner) {
+                        const successText = successBanner.querySelector('.success-info p');
+                        if (successText && data.message) {
+                            successText.textContent = data.message;
+                        }
+                        successBanner.style.display = 'flex';
+                        successBanner.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
                     }
-                });
-
-                // Auto hide banner after 8 seconds
-                setTimeout(function () {
-                    if (successBanner) successBanner.style.display = 'none';
-                }, 8000);
-            }, 1200);
+                    contactForm.reset();
+                    Object.keys(fields).forEach(key => {
+                        const item = fields[key];
+                        if (item.input) {
+                            item.input.classList.remove('is-valid', 'has-error');
+                        }
+                    });
+                    setTimeout(function () {
+                        if (successBanner) successBanner.style.display = 'none';
+                    }, 8000);
+                } else {
+                    alert(data.message || 'Something went wrong. Please try again.');
+                }
+            })
+            .catch(err => {
+                submitBtn.disabled = false;
+                submitBtn.classList.remove('btn-loading');
+                submitBtn.innerHTML = originalText;
+                // Fallback to normal form submit if fetch fails
+                contactForm.submit();
+            });
         }
     });
 });
