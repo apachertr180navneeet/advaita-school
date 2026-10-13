@@ -21,47 +21,79 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- ----------------------------------------------------
                      SLIDE 1: Main Banner (10 Years of Excellence - Building Curious Minds)
                      ---------------------------------------------------- -->
+                <!-- ----------------------------------------------------
+                     SLIDE 1: Main Banner (10 Years of Excellence - Building Curious Minds)
+                     ---------------------------------------------------- -->
                 <div class="adv-slide active" data-slide-index="0">
                     <div class="adv-slide-banner-wrap">
                         <img src="assets/images/hero-slider-campus.png" alt="Advaita School of Excellence - Building Curious Minds. Shaping Confident Futures." class="adv-slide-banner-img" loading="eager">
                         
+                        <!-- Decorative Orange Arc Accents (Top Left & Bottom Left) -->
+                        <div class="adv-hero-decor-arc top-left" aria-hidden="true">
+                            <svg viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="0" cy="0" r="160" stroke="#F37021" stroke-width="3.5" stroke-opacity="0.85"/>
+                                <circle cx="0" cy="0" r="220" stroke="#F37021" stroke-width="2" stroke-opacity="0.45"/>
+                            </svg>
+                        </div>
+                        <div class="adv-hero-decor-arc bottom-left" aria-hidden="true">
+                            <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="0" cy="320" r="190" stroke="#F37021" stroke-width="14" stroke-opacity="0.85"/>
+                                <circle cx="0" cy="320" r="255" stroke="#F37021" stroke-width="3" stroke-opacity="0.45"/>
+                            </svg>
+                        </div>
+
                         <!-- Premium Hero Content Overlay (Text Rendered on Banner Image) -->
                         <div class="adv-hero-text-overlay">
                             
-                            <!-- 1. Milestone Pill Badge with Double Stripes -->
-                            <div class="adv-hero-milestone-wrap">
-                                <div class="adv-milestone-bars" aria-hidden="true">
-                                    <span class="bar-top"></span>
-                                    <span class="bar-bottom"></span>
+                            <!-- 1. Milestone Pill Badge with Double Stripes and Flying Paper Airplane -->
+                            <div class="adv-hero-milestone-row">
+                                <div class="adv-hero-milestone-wrap">
+                                    <div class="adv-milestone-bars" aria-hidden="true">
+                                        <span class="bar-top"></span>
+                                        <span class="bar-bottom"></span>
+                                    </div>
+                                    <div class="adv-hero-milestone-badge">
+                                        <span>10 Years of Excellence</span>
+                                    </div>
+                                    <div class="adv-milestone-bars" aria-hidden="true">
+                                        <span class="bar-top"></span>
+                                        <span class="bar-bottom"></span>
+                                    </div>
                                 </div>
-                                <div class="adv-hero-milestone-badge">
-                                    <span>10 Years of Excellence</span>
-                                </div>
-                                <div class="adv-milestone-bars" aria-hidden="true">
-                                    <span class="bar-top"></span>
-                                    <span class="bar-bottom"></span>
+
+                                <!-- Flying Paper Airplane Doodle -->
+                                <div class="adv-hero-paper-plane" aria-hidden="true">
+                                    <svg viewBox="0 0 130 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 65 C 40 68, 65 52, 92 26" stroke="rgba(255,255,255,0.75)" stroke-width="2" stroke-dasharray="4 4" stroke-linecap="round"/>
+                                        <g transform="translate(90, 8) rotate(22)">
+                                            <polygon points="0,22 34,0 18,34 12,22" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linejoin="round"/>
+                                            <line x1="34" y1="0" x2="12" y2="22" stroke="#ffffff" stroke-width="1.8"/>
+                                        </g>
+                                    </svg>
                                 </div>
                             </div>
 
-                            <!-- 4. Tagline: Building Curious Minds. Shaping Confident Futures. -->
-                            <div class="adv-hero-taglines">
-                                <span class="tagline-blue">Building Curious Minds.</span>
+                            <!-- 2. Tagline: Building Curious Minds. Shaping Confident Futures. -->
+                            <h1 class="adv-hero-taglines">
+                                <span class="tagline-white">Building Curious Minds.</span>
                                 <span class="tagline-orange">Shaping Confident Futures.</span>
-                            </div>
+                            </h1>
 
-                            <!-- 5. Descriptive Paragraph -->
+                            <!-- 3. Descriptive Paragraph -->
                             <p class="adv-hero-lead-desc">
                                 Where knowledge meets values, creativity meets opportunity, and every child is encouraged to discover their true potential.
                             </p>
 
-                            <!-- 7. Interactive CTA Action Buttons -->
+                            <!-- 4. Interactive CTA Action Buttons -->
                             <div class="adv-hero-actions-group">
                                 <a href="#admissions" class="adv-hero-real-btn adv-hero-btn-apply" title="Apply for Admission">
                                     <span>Apply for Admission</span>
                                     <i class="fa-solid fa-arrow-right"></i>
                                 </a>
                                 <a href="#about" class="adv-hero-real-btn adv-hero-btn-explore" title="Explore Our School">
-                                    <i class="fa-solid fa-compass"></i>
+                                    <span class="adv-hero-play-circle" aria-hidden="true">
+                                        <i class="fa-solid fa-play"></i>
+                                    </span>
                                     <span>Explore Our School</span>
                                 </a>
                             </div>
@@ -70,7 +102,7 @@ require_once __DIR__ . '/includes/header.php';
 
                         <!-- Right Sky Script Tag Accent -->
                         <div class="adv-hero-sky-badge" aria-hidden="true">
-                            <span class="adv-sky-script">Excellence<br>in Every Child</span>
+                            <span class="adv-sky-script">Excellence.<br>In Every Child</span>
                             <svg class="adv-sky-swoosh" viewBox="0 0 140 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M4 16 C 45 4, 95 4, 136 18" stroke="#F37021" stroke-width="3" stroke-linecap="round"/>
                             </svg>
@@ -86,44 +118,72 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="adv-slide-banner-wrap">
                         <img src="assets/images/hero-slider-campus.png" alt="Advaita School of Excellence - Building Curious Minds. Shaping Confident Futures." class="adv-slide-banner-img" loading="lazy">
                         
+                        <!-- Decorative Orange Arc Accents (Top Left & Bottom Left) -->
+                        <div class="adv-hero-decor-arc top-left" aria-hidden="true">
+                            <svg viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="0" cy="0" r="160" stroke="#F37021" stroke-width="3.5" stroke-opacity="0.85"/>
+                                <circle cx="0" cy="0" r="220" stroke="#F37021" stroke-width="2" stroke-opacity="0.45"/>
+                            </svg>
+                        </div>
+                        <div class="adv-hero-decor-arc bottom-left" aria-hidden="true">
+                            <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="0" cy="320" r="190" stroke="#F37021" stroke-width="14" stroke-opacity="0.85"/>
+                                <circle cx="0" cy="320" r="255" stroke="#F37021" stroke-width="3" stroke-opacity="0.45"/>
+                            </svg>
+                        </div>
+
                         <!-- Premium Hero Content Overlay (Text Rendered on Banner Image) -->
                         <div class="adv-hero-text-overlay">
                             
-                            <!-- 1. Milestone Pill Badge with Double Stripes -->
-                            <div class="adv-hero-milestone-wrap">
-                                <div class="adv-milestone-bars" aria-hidden="true">
-                                    <span class="bar-top"></span>
-                                    <span class="bar-bottom"></span>
+                            <!-- 1. Milestone Pill Badge with Double Stripes and Flying Paper Airplane -->
+                            <div class="adv-hero-milestone-row">
+                                <div class="adv-hero-milestone-wrap">
+                                    <div class="adv-milestone-bars" aria-hidden="true">
+                                        <span class="bar-top"></span>
+                                        <span class="bar-bottom"></span>
+                                    </div>
+                                    <div class="adv-hero-milestone-badge">
+                                        <span>10 Years of Excellence</span>
+                                    </div>
+                                    <div class="adv-milestone-bars" aria-hidden="true">
+                                        <span class="bar-top"></span>
+                                        <span class="bar-bottom"></span>
+                                    </div>
                                 </div>
-                                <div class="adv-hero-milestone-badge">
-                                    <span>10 Years of Excellence</span>
-                                </div>
-                                <div class="adv-milestone-bars" aria-hidden="true">
-                                    <span class="bar-top"></span>
-                                    <span class="bar-bottom"></span>
+
+                                <!-- Flying Paper Airplane Doodle -->
+                                <div class="adv-hero-paper-plane" aria-hidden="true">
+                                    <svg viewBox="0 0 130 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10 65 C 40 68, 65 52, 92 26" stroke="rgba(255,255,255,0.75)" stroke-width="2" stroke-dasharray="4 4" stroke-linecap="round"/>
+                                        <g transform="translate(90, 8) rotate(22)">
+                                            <polygon points="0,22 34,0 18,34 12,22" fill="none" stroke="#ffffff" stroke-width="2.2" stroke-linejoin="round"/>
+                                            <line x1="34" y1="0" x2="12" y2="22" stroke="#ffffff" stroke-width="1.8"/>
+                                        </g>
+                                    </svg>
                                 </div>
                             </div>
 
-                            <!-- 4. Tagline: Building Curious Minds. Shaping Confident Futures. -->
-                            <div class="adv-hero-taglines">
-                                <span class="tagline-blue">Building Curious Minds.</span>
+                            <!-- 2. Tagline: Building Curious Minds. Shaping Confident Futures. -->
+                            <h1 class="adv-hero-taglines">
+                                <span class="tagline-white">Building Curious Minds.</span>
                                 <span class="tagline-orange">Shaping Confident Futures.</span>
-                            </div>
+                            </h1>
 
-                            <!-- 5. Descriptive Paragraph -->
+                            <!-- 3. Descriptive Paragraph -->
                             <p class="adv-hero-lead-desc">
                                 Where knowledge meets values, creativity meets opportunity, and every child is encouraged to discover their true potential.
                             </p>
 
-
-                            <!-- 7. Interactive CTA Action Buttons -->
+                            <!-- 4. Interactive CTA Action Buttons -->
                             <div class="adv-hero-actions-group">
                                 <a href="#admissions" class="adv-hero-real-btn adv-hero-btn-apply" title="Apply for Admission">
                                     <span>Apply for Admission</span>
                                     <i class="fa-solid fa-arrow-right"></i>
                                 </a>
                                 <a href="#about" class="adv-hero-real-btn adv-hero-btn-explore" title="Explore Our School">
-                                    <i class="fa-solid fa-compass"></i>
+                                    <span class="adv-hero-play-circle" aria-hidden="true">
+                                        <i class="fa-solid fa-play"></i>
+                                    </span>
                                     <span>Explore Our School</span>
                                 </a>
                             </div>
@@ -132,7 +192,7 @@ require_once __DIR__ . '/includes/header.php';
 
                         <!-- Right Sky Script Tag Accent -->
                         <div class="adv-hero-sky-badge" aria-hidden="true">
-                            <span class="adv-sky-script">Excellence<br>in Every Child</span>
+                            <span class="adv-sky-script">Excellence.<br>In Every Child</span>
                             <svg class="adv-sky-swoosh" viewBox="0 0 140 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M4 16 C 45 4, 95 4, 136 18" stroke="#F37021" stroke-width="3" stroke-linecap="round"/>
                             </svg>

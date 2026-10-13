@@ -63,20 +63,48 @@
     container-type: inline-size;
 }
 
-/* Subtle left-side light gradient vignette - guarantees high contrast & 100% legibility */
+/* Rich left-side dark vignette gradient - matches screenshot UI and gives crisp white & orange contrast */
 .adv-slide-banner-wrap::before {
     content: "";
     position: absolute;
     inset: 0;
     background: linear-gradient(90deg, 
-        rgba(255, 255, 255, 0.96) 0%, 
-        rgba(255, 255, 255, 0.90) 30%, 
-        rgba(255, 255, 255, 0.60) 45%, 
-        rgba(255, 255, 255, 0.15) 58%, 
-        rgba(255, 255, 255, 0) 68%
+        rgba(8, 26, 56, 0.95) 0%, 
+        rgba(8, 26, 56, 0.90) 28%, 
+        rgba(8, 26, 56, 0.76) 42%, 
+        rgba(8, 26, 56, 0.35) 56%, 
+        rgba(8, 26, 56, 0.06) 68%, 
+        rgba(8, 26, 56, 0) 76%
     );
     z-index: 2;
     pointer-events: none;
+}
+
+/* Decorative Geometric Orange Curved Arcs (Top Left & Bottom Left) */
+.adv-hero-decor-arc {
+    position: absolute;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.adv-hero-decor-arc.top-left {
+    top: 0;
+    left: 0;
+    width: clamp(140px, 20cqi, 240px);
+    height: clamp(140px, 20cqi, 240px);
+}
+
+.adv-hero-decor-arc.bottom-left {
+    bottom: 0;
+    left: 0;
+    width: clamp(180px, 26cqi, 320px);
+    height: clamp(180px, 26cqi, 320px);
+}
+
+.adv-hero-decor-arc svg {
+    width: 100%;
+    height: 100%;
+    display: block;
 }
 
 .adv-slide-banner-img {
@@ -96,15 +124,13 @@
 }
 
 /* --------------------------------------------------------------------------
-   Modern Frosted Glass Hero Card
-   Sleek glassmorphism card on left with clean backdrop blur, high contrast,
-   and zero wash-out over students or campus imagery.
+   Hero Text Overlay (Left Positioned, Crisp Modern Educational UI)
    -------------------------------------------------------------------------- */
 .adv-hero-text-overlay {
     position: absolute;
-    top: 50%;
-    left: clamp(24px, 4cqi, 60px);
-    margin-left: 3%;
+    top: 48%;
+    left: clamp(28px, 4.5cqi, 68px);
+    margin-left: 2%;
     transform: translateY(-50%);
     width: min(580px, 52cqi);
     z-index: 5;
@@ -113,8 +139,6 @@
     align-items: flex-start;
     gap: clamp(10px, 1.3cqi, 16px);
     text-align: left;
-
-    /* Transparent Overlay Container - Card background removed */
     background: transparent;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
@@ -125,12 +149,19 @@
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* 1. Milestone Pill Badge with Double Orange Stripes */
+/* 1. Milestone Row with Badge & Flying Paper Airplane */
+.adv-hero-milestone-row {
+    display: flex;
+    align-items: center;
+    gap: clamp(10px, 1.5cqi, 18px);
+    position: relative;
+    width: 100%;
+}
+
 .adv-hero-milestone-wrap {
     display: inline-flex;
     align-items: center;
     gap: clamp(8px, 1.1cqi, 12px);
-    margin-bottom: 1px;
 }
 
 .adv-milestone-bars {
@@ -140,18 +171,11 @@
     justify-content: center;
 }
 
-.adv-milestone-bars .bar-top {
-    display: block;
-    width: clamp(20px, 2.8cqi, 32px);
-    height: 3px;
-    background: #F37021;
-    border-radius: 2px;
-}
-
+.adv-milestone-bars .bar-top,
 .adv-milestone-bars .bar-bottom {
     display: block;
-    width: clamp(12px, 1.8cqi, 20px);
-    height: 3px;
+    width: clamp(18px, 2.4cqi, 28px);
+    height: 2.5px;
     background: #F37021;
     border-radius: 2px;
 }
@@ -160,108 +184,84 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #022557 0%, #061e47 100%);
+    background: #061938;
+    border: 1px solid rgba(255, 255, 255, 0.16);
     color: #ffffff;
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: clamp(0.82rem, 1.05cqi, 0.95rem);
     font-weight: 700;
     letter-spacing: 0.3px;
-    padding: clamp(5px, 0.7cqi, 7px) clamp(16px, 1.8cqi, 20px);
+    padding: clamp(6px, 0.7cqi, 8px) clamp(18px, 1.8cqi, 22px);
     border-radius: 30px;
-    box-shadow: 0 4px 12px rgba(2, 37, 87, 0.28);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
     white-space: nowrap;
 }
 
-/* 2. Trust Label: Sanmati Sevabhavi Sanstha's (Hidden from banner) */
-.adv-hero-trust-label {
-    display: none !important;
+/* Flying Paper Airplane Doodle */
+.adv-hero-paper-plane {
+    width: clamp(70px, 8.5cqi, 105px);
+    height: auto;
+    opacity: 0.92;
+    margin-bottom: 6px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+    flex-shrink: 0;
 }
 
-/* 3. Brand Lockup: ADVAITA SCHOOL OF EXCELLENCE (Hidden from banner) */
-.adv-hero-brand-lockup {
-    display: none !important;
+.adv-hero-paper-plane svg {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-/* 4. Taglines: Building Curious Minds. Shaping Confident Futures. */
+/* 2. Taglines: Building Curious Minds. Shaping Confident Futures. */
 .adv-hero-taglines {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 3px;
     font-family: 'Montserrat', sans-serif;
-    font-size: clamp(1.45rem, 2.45cqi, 2.25rem);
-    font-weight: 900;
-    line-height: 1.18;
+    font-size: clamp(1.6rem, 2.85cqi, 2.7rem);
+    font-weight: 800;
+    line-height: 1.15;
     margin-top: clamp(2px, 0.4cqi, 6px);
+    margin-bottom: 0;
 }
 
-.adv-hero-taglines .tagline-blue {
-    color: #031C3D;
-    letter-spacing: -0.2px;
+.adv-hero-taglines .tagline-white {
+    color: #ffffff;
+    letter-spacing: -0.3px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
 }
 
 .adv-hero-taglines .tagline-orange {
     color: #F37021;
-    letter-spacing: -0.2px;
+    letter-spacing: -0.3px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
 }
 
-/* 5. Paragraph Description */
+/* Backward compatibility for previous classes */
+.adv-hero-taglines .tagline-blue {
+    color: #ffffff;
+}
+
+/* 3. Paragraph Description */
 p.adv-hero-lead-desc {
     text-align: left;
-    color: #334155;
+    color: rgba(255, 255, 255, 0.92);
     font-weight: 500;
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: clamp(0.95rem, 1.25cqi, 1.1rem);
-    line-height: 1.65;
-    max-width: 100%;
+    font-size: clamp(0.92rem, 1.2cqi, 1.05rem);
+    line-height: 1.62;
+    max-width: 530px;
     margin: 2px 0 6px 0;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.35);
 }
 
-/* 6. Three Pillar Badges (Balanced 3-Column Strip) */
-.adv-hero-pillars-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: clamp(8px, 1.2cqi, 14px);
-    width: 100%;
-    padding-top: clamp(6px, 1cqi, 10px);
-    border-top: 1px solid rgba(3, 28, 61, 0.09);
-    margin: 2px 0;
-}
-
-.adv-hero-pillar-badge {
-    display: flex;
-    align-items: center;
-    gap: clamp(6px, 0.9cqi, 9px);
-}
-
-.adv-hero-pillar-badge .pillar-icon-box {
-    width: clamp(32px, 3.8cqi, 38px);
-    height: clamp(32px, 3.8cqi, 38px);
-    border-radius: 50%;
-    background: linear-gradient(135deg, #04295e 0%, #011a40 100%);
-    border: 1.5px solid rgba(255, 255, 255, 0.9);
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: clamp(0.75rem, 0.95cqi, 0.88rem);
-    flex-shrink: 0;
-    box-shadow: 0 4px 10px rgba(1, 26, 64, 0.22);
-}
-
-.adv-hero-pillar-badge .pillar-text {
-    font-family: 'Montserrat', sans-serif;
-    font-size: clamp(0.68rem, 0.82cqi, 0.78rem);
-    font-weight: 800;
-    color: #031C3D;
-    line-height: 1.18;
-}
-
-/* 7. Action CTAs Group */
+/* 4. Action CTAs Group */
 .adv-hero-actions-group {
     display: flex;
     align-items: center;
-    gap: clamp(8px, 1.2cqi, 14px);
-    margin-top: clamp(4px, 0.8cqi, 8px);
+    gap: clamp(10px, 1.4cqi, 18px);
+    margin-top: clamp(4px, 0.8cqi, 10px);
     width: 100%;
     flex-wrap: wrap;
 }
@@ -351,38 +351,38 @@ p.adv-hero-lead-desc {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 10px;
     text-decoration: none;
     border-radius: 50px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
-    font-size: clamp(0.88rem, 1.15cqi, 1.02rem);
-    padding: clamp(11px, 1.35cqi, 15px) clamp(22px, 2.2cqi, 28px);
+    font-size: clamp(0.86rem, 1.12cqi, 1rem);
+    padding: clamp(12px, 1.4cqi, 16px) clamp(24px, 2.4cqi, 32px);
     line-height: 1.25;
     cursor: pointer;
     white-space: nowrap;
     letter-spacing: 0.3px;
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* 1. Primary "Apply for Admission" - Vibrant Sunset Gradient */
+/* 1. Primary "Apply for Admission" - Vibrant Orange Pill with Arrow */
 .adv-hero-btn-apply {
-    background: linear-gradient(135deg, #FF7A00 0%, #E85000 100%);
+    background: #F37021;
     color: #ffffff !important;
-    border: 1.5px solid rgba(255, 255, 255, 0.4);
-    box-shadow: 0 6px 20px rgba(232, 80, 0, 0.42), 0 2px 6px rgba(0, 0, 0, 0.12);
+    border: none;
+    box-shadow: 0 6px 20px rgba(243, 112, 33, 0.42), 0 2px 6px rgba(0, 0, 0, 0.12);
 }
 
 .adv-hero-btn-apply i {
-    font-size: 0.85em;
+    font-size: 0.88em;
     transition: transform 0.25s ease;
 }
 
 .adv-hero-btn-apply:hover {
-    background: linear-gradient(135deg, #ff8e22 0%, #f05a00 100%);
+    background: #ff7e33;
     color: #ffffff !important;
     transform: translateY(-2px);
-    box-shadow: 0 10px 28px rgba(232, 80, 0, 0.55), 0 4px 10px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 10px 28px rgba(243, 112, 33, 0.55), 0 4px 10px rgba(0, 0, 0, 0.16);
 }
 
 .adv-hero-btn-apply:hover i {
@@ -391,39 +391,47 @@ p.adv-hero-lead-desc {
 
 .adv-hero-btn-apply:active {
     transform: translateY(0);
-    box-shadow: 0 3px 10px rgba(232, 80, 0, 0.35);
+    box-shadow: 0 3px 10px rgba(243, 112, 33, 0.35);
 }
 
-/* 2. Secondary "Explore Our School" - Frosted Glass Sheen */
+/* 2. Secondary "Explore Our School" - Crisp White Pill with Orange Play Circle */
 .adv-hero-btn-explore {
     background: #ffffff;
     color: #031C3D !important;
-    border: 1.5px solid rgba(3, 28, 61, 0.16);
-    box-shadow: 0 4px 16px rgba(3, 28, 61, 0.12), 0 2px 4px rgba(0, 0, 0, 0.04);
+    border: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18), 0 2px 6px rgba(0, 0, 0, 0.08);
 }
 
-.adv-hero-btn-explore i {
-    font-size: 0.9em;
-    color: #f7941d;
-    transition: transform 0.25s ease, color 0.25s ease;
+.adv-hero-play-circle {
+    width: clamp(24px, 2.8cqi, 28px);
+    height: clamp(24px, 2.8cqi, 28px);
+    border-radius: 50%;
+    background: #F37021;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(0.55rem, 0.7cqi, 0.68rem);
+    padding-left: 2px;
+    flex-shrink: 0;
+    transition: transform 0.25s ease, background 0.25s ease;
 }
 
 .adv-hero-btn-explore:hover {
-    background: #083B7A;
-    color: #ffffff !important;
-    border-color: #083B7A;
+    background: #ffffff;
+    color: #F37021 !important;
     transform: translateY(-2px);
-    box-shadow: 0 10px 28px rgba(8, 59, 122, 0.35), 0 4px 10px rgba(0, 0, 0, 0.16);
+    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.24);
 }
 
-.adv-hero-btn-explore:hover i {
-    color: #ffffff;
-    transform: rotate(35deg);
+.adv-hero-btn-explore:hover .adv-hero-play-circle {
+    transform: scale(1.1);
+    background: #ff7e33;
 }
 
 .adv-hero-btn-explore:active {
     transform: translateY(0);
-    box-shadow: 0 3px 10px rgba(8, 59, 122, 0.2);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
 }
 
 /* Slide 2 Rich Content Overlays */
@@ -935,20 +943,20 @@ p.adv-hero-lead-desc {
 /* Dots Pagination */
 .adv-slider-dots {
     position: absolute;
-    bottom: clamp(36px, 3.8cqi, 46px);
+    bottom: clamp(62px, 6.5cqi, 82px);
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     align-items: center;
     gap: 8px;
-    z-index: 10;
+    z-index: 12;
 }
 
 .adv-slider-dot {
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.45);
     border: none;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -956,22 +964,19 @@ p.adv-hero-lead-desc {
 }
 
 .adv-slider-dot.active {
-    width: 28px;
+    width: 26px;
     border-radius: 10px;
-    background: var(--adv-accent-orange);
+    background: #F37021;
     box-shadow: 0 0 10px rgba(243, 112, 33, 0.8);
 }
 
 /* --------------------------------------------------------------------------
    Responsive Rules
    -------------------------------------------------------------------------- */
-/* --------------------------------------------------------------------------
-   Responsive Rules
-   -------------------------------------------------------------------------- */
 @media (max-width: 1200px) {
     .adv-hero-real-btn {
-        padding: 7px 18px;
-        font-size: 0.8125rem;
+        padding: 10px 22px;
+        font-size: 0.85rem;
     }
 }
 
@@ -999,10 +1004,10 @@ p.adv-hero-lead-desc {
     .adv-slide-banner-wrap::before {
         display: block !important;
         background: linear-gradient(90deg, 
-            rgba(255, 255, 255, 0.96) 0%, 
-            rgba(255, 255, 255, 0.92) 48%, 
-            rgba(255, 255, 255, 0.6) 72%, 
-            rgba(255, 255, 255, 0) 100%
+            rgba(8, 26, 56, 0.96) 0%, 
+            rgba(8, 26, 56, 0.92) 50%, 
+            rgba(8, 26, 56, 0.65) 75%, 
+            rgba(8, 26, 56, 0) 100%
         );
     }
     
@@ -1053,9 +1058,9 @@ p.adv-hero-lead-desc {
     .adv-slide-banner-wrap::before {
         display: block !important;
         background: linear-gradient(180deg, 
-            rgba(255, 255, 255, 0.95) 0%, 
-            rgba(255, 255, 255, 0.88) 60%, 
-            rgba(255, 255, 255, 0.60) 100%
+            rgba(8, 26, 56, 0.95) 0%, 
+            rgba(8, 26, 56, 0.90) 65%, 
+            rgba(8, 26, 56, 0.70) 100%
         );
     }
 
