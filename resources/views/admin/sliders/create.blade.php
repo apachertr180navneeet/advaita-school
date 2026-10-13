@@ -320,80 +320,42 @@
             </div>
         </div>
 
-        <!-- 2. Images & Image Size Section -->
+        <!-- 2. Slider Image & Size Section -->
         <div class="form-container-card">
             <h3 style="font-size: 16px; font-weight: 800; color: var(--admin-navy); margin-bottom: 20px; display: flex; align-items: center; gap: 8px;">
-                <i class="fa-solid fa-images" style="color: var(--admin-orange);"></i> 2. Main Image & Image on Image Upload
+                <i class="fa-solid fa-image" style="color: var(--admin-orange);"></i> 2. Slider Image & Size Inspection
             </h3>
 
-            <div class="form-grid-2">
-                <!-- Main Image Upload -->
-                <div class="form-group">
-                    <label class="form-label">
-                        Main Image (Background Banner) <span class="required">*</span>
-                    </label>
-                    <div class="upload-zone-card" id="mainImageDropzone">
-                        <div class="upload-guide-banner">
-                            <i class="fa-solid fa-ruler-combined"></i>
-                            <div>
-                                <strong>Recommended Image Size:</strong> 1920 × 800 px (or 1024 × 540 px)<br>
-                                <span style="font-size: 11.5px; color: #3B82F6;">Optimal ~16:9 / 2:1 aspect ratio | Allowed: JPG, PNG, WebP (Max 5MB)</span>
-                            </div>
-                        </div>
-
-                        <label for="mainImageInput" class="file-trigger-btn">
-                            <i class="fa-solid fa-cloud-arrow-up"></i> Choose Main Image
-                        </label>
-                        <input type="file" id="mainImageInput" name="image" class="custom-file-input" accept="image/*" required>
-
-                        <!-- Live Size Detector Box -->
-                        <div class="preview-box" id="mainImagePreviewBox">
-                            <div class="preview-img-container">
-                                <img id="mainImagePreview" src="" alt="Main Image Preview">
-                            </div>
-                            <div class="size-detector-details">
-                                <div class="size-filename" id="mainImageName"></div>
-                                <div class="size-live-badge">
-                                    <i class="fa-solid fa-circle-check"></i> <span id="mainImageDimensions"></span>
-                                </div>
-                                <div class="size-dim-text" id="mainImageFileSize"></div>
-                            </div>
+            <!-- Slider Image Upload -->
+            <div class="form-group">
+                <label class="form-label">
+                    Slider Image (Banner) <span class="required">*</span>
+                </label>
+                <div class="upload-zone-card" id="mainImageDropzone">
+                    <div class="upload-guide-banner">
+                        <i class="fa-solid fa-ruler-combined"></i>
+                        <div>
+                            <strong>Recommended Image Size:</strong> 1920 × 800 px (or 1024 × 540 px, ~16:9 aspect ratio)<br>
+                            <span style="font-size: 11.5px; color: #3B82F6;">Allowed formats: JPG, PNG, WebP (Max 5MB). The system automatically analyzes dimensions & file size on select.</span>
                         </div>
                     </div>
-                </div>
 
-                <!-- Image on Image Upload -->
-                <div class="form-group">
-                    <label class="form-label">
-                        Image on Image (Overlay Graphic / Cutout)
-                        <span class="helper-hint">(Optional)</span>
+                    <label for="mainImageInput" class="file-trigger-btn">
+                        <i class="fa-solid fa-cloud-arrow-up"></i> Choose Slider Image
                     </label>
-                    <div class="upload-zone-card" id="overlayImageDropzone">
-                        <div class="upload-guide-banner overlay-guide">
-                            <i class="fa-solid fa-layer-group"></i>
-                            <div>
-                                <strong>Recommended Image Size:</strong> 500 × 600 px (or 400 × 400 px)<br>
-                                <span style="font-size: 11.5px; color: #EA580C;">Transparent PNG / WebP for floating sticker, badge or student cutout</span>
-                            </div>
+                    <input type="file" id="mainImageInput" name="image" class="custom-file-input" accept="image/*" required>
+
+                    <!-- Live Size Detector Box -->
+                    <div class="preview-box" id="mainImagePreviewBox">
+                        <div class="preview-img-container">
+                            <img id="mainImagePreview" src="" alt="Slider Image Preview">
                         </div>
-
-                        <label for="overlayImageInput" class="file-trigger-btn" style="background: #334155;">
-                            <i class="fa-solid fa-wand-magic-sparkles"></i> Choose Image on Image
-                        </label>
-                        <input type="file" id="overlayImageInput" name="image_on_image" class="custom-file-input" accept="image/*">
-
-                        <!-- Live Size Detector Box -->
-                        <div class="preview-box" id="overlayImagePreviewBox">
-                            <div class="preview-img-container overlay-mode">
-                                <img id="overlayImagePreview" src="" alt="Image on Image Preview">
+                        <div class="size-detector-details">
+                            <div class="size-filename" id="mainImageName"></div>
+                            <div class="size-live-badge">
+                                <i class="fa-solid fa-circle-check"></i> <span id="mainImageDimensions"></span>
                             </div>
-                            <div class="size-detector-details">
-                                <div class="size-filename" id="overlayImageName"></div>
-                                <div class="size-live-badge" style="background: #FFEDD5; color: #9A3412; border-color: #FED7AA;">
-                                    <i class="fa-solid fa-circle-check"></i> <span id="overlayImageDimensions"></span>
-                                </div>
-                                <div class="size-dim-text" id="overlayImageFileSize"></div>
-                            </div>
+                            <div class="size-dim-text" id="mainImageFileSize"></div>
                         </div>
                     </div>
                 </div>
@@ -415,7 +377,7 @@
                     <label class="form-label">Status</label>
                     <select name="is_active" class="form-control" style="font-weight: 700;">
                         <option value="1" {{ old('is_active', '1') == '1' ? 'selected' : '' }}>Active (Visible)</option>
-                        <option value="0" {{ old('is_active') == '0' ? 'selected' : '' }}>Inactive (Hidden)</option>
+                        <option value="0" {{ old('is_active', '0') == '0' ? 'selected' : '' }}>Inactive (Hidden)</option>
                     </select>
                 </div>
             </div>
@@ -434,7 +396,7 @@
 </div>
 
 <script>
-    // Live Image Size & Dimension Detectors
+    // Live Image Size & Dimension Detector
     function setupImageSizeDetector(inputId, previewBoxId, previewImgId, nameId, dimId, sizeId) {
         const input = document.getElementById(inputId);
         const previewBox = document.getElementById(previewBoxId);
@@ -477,7 +439,6 @@
 
     document.addEventListener('DOMContentLoaded', function() {
         setupImageSizeDetector('mainImageInput', 'mainImagePreviewBox', 'mainImagePreview', 'mainImageName', 'mainImageDimensions', 'mainImageFileSize');
-        setupImageSizeDetector('overlayImageInput', 'overlayImagePreviewBox', 'overlayImagePreview', 'overlayImageName', 'overlayImageDimensions', 'overlayImageFileSize');
     });
 </script>
 @endsection

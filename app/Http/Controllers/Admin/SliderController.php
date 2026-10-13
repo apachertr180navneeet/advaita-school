@@ -41,7 +41,6 @@ class SliderController extends Controller
             'title_2' => ['nullable', 'string', 'max:255'],
             'description' => ['nullable', 'string'],
             'image' => ['required', 'image', 'mimes:jpeg,png,jpg,webp,svg', 'max:5120'],
-            'image_on_image' => ['nullable', 'image', 'mimes:jpeg,png,jpg,webp,svg', 'max:5120'],
             'order' => ['nullable', 'integer', 'min:0'],
             'is_active' => ['nullable', 'boolean'],
         ]);
@@ -59,13 +58,6 @@ class SliderController extends Controller
             $mainFile = $request->file('image');
             $mainPath = $mainFile->store('sliders', 'public');
             $data['image'] = $mainPath;
-        }
-
-        // Process Image on Image (Overlay)
-        if ($request->hasFile('image_on_image')) {
-            $overlayFile = $request->file('image_on_image');
-            $overlayPath = $overlayFile->store('sliders/overlays', 'public');
-            $data['image_on_image'] = $overlayPath;
         }
 
         Slider::create($data);
@@ -95,8 +87,6 @@ class SliderController extends Controller
             'title_2' => ['nullable', 'string', 'max:255'],
             'description' => ['nullable', 'string'],
             'image' => ['nullable', 'image', 'mimes:jpeg,png,jpg,webp,svg', 'max:5120'],
-            'image_on_image' => ['nullable', 'image', 'mimes:jpeg,png,jpg,webp,svg', 'max:5120'],
-            'remove_image_on_image' => ['nullable', 'boolean'],
             'order' => ['nullable', 'integer', 'min:0'],
             'is_active' => ['nullable', 'boolean'],
         ]);
@@ -117,23 +107,6 @@ class SliderController extends Controller
             $slider->image = $mainFile->store('sliders', 'public');
         }
 
-        // Handle Image on Image removal
-        if ($request->boolean('remove_image_on_image')) {
-            if ($slider->image_on_image && ! str_starts_with($slider->image_on_image, 'assets/')) {
-                Storage::disk('public')->delete($slider->image_on_image);
-            }
-            $slider->image_on_image = null;
-        }
-        // Handle Image on Image replacement
-        elseif ($request->hasFile('image_on_image')) {
-            if ($slider->image_on_image && ! str_starts_with($slider->image_on_image, 'assets/')) {
-                Storage::disk('public')->delete($slider->image_on_image);
-            }
-
-            $overlayFile = $request->file('image_on_image');
-            $slider->image_on_image = $overlayFile->store('sliders/overlays', 'public');
-        }
-
         $slider->save();
 
         return redirect()->route('admin.sliders.index')->with('success', 'Hero slide updated successfully!');
@@ -148,10 +121,6 @@ class SliderController extends Controller
 
         if ($slider->image && ! str_starts_with($slider->image, 'assets/')) {
             Storage::disk('public')->delete($slider->image);
-        }
-
-        if ($slider->image_on_image && ! str_starts_with($slider->image_on_image, 'assets/')) {
-            Storage::disk('public')->delete($slider->image_on_image);
         }
 
         $slider->delete();

@@ -67,13 +67,6 @@
                             </div>
                         </div>
 
-                        <!-- Image on Image (Floating Overlay Graphic / Student Cutout / Featured Badge) -->
-                        @if($slide->image_on_image)
-                            <div class="adv-hero-overlay-image-container" aria-hidden="true">
-                                <img src="{{ $slide->image_on_image_url }}" alt="Overlay - {{ $slide->title_1 }}" class="adv-hero-floating-overlay-img" loading="lazy">
-                            </div>
-                        @endif
-
                         <!-- Right Sky Script Tag Accent -->
                         <div class="adv-hero-sky-badge" aria-hidden="true">
                             <span class="adv-sky-script">Excellence.<br>In Every Child</span>

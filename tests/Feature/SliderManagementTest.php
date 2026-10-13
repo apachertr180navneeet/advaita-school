@@ -42,7 +42,6 @@ class SliderManagementTest extends TestCase
             'title_2' => 'Second Highlight Tagline',
             'description' => 'A wonderful inspiring description.',
             'image' => 'assets/images/hero-slider-campus.png',
-            'image_on_image' => 'assets/images/contact-student-pointing-transparent.png',
             'order' => 1,
             'is_active' => true,
         ]);
@@ -62,20 +61,18 @@ class SliderManagementTest extends TestCase
         $response->assertStatus(200);
         $response->assertSee('Create New Hero Slide');
         $response->assertSee('Recommended Image Size:');
-        $response->assertSee('Image on Image (Overlay Graphic / Cutout)');
+        $response->assertSee('Slider Image (Banner)');
     }
 
-    public function test_admin_can_create_new_slider_with_images(): void
+    public function test_admin_can_create_new_slider_with_image(): void
     {
         $mainImage = UploadedFile::fake()->image('banner.jpg', 1920, 800);
-        $overlayImage = UploadedFile::fake()->image('student_cutout.png', 500, 600);
 
         $response = $this->actingAs($this->admin)->post(route('admin.sliders.store'), [
             'title_1' => 'Empowering Future Leaders',
             'title_2' => 'World-Class Learning',
             'description' => 'Developing critical thinking and global vision.',
             'image' => $mainImage,
-            'image_on_image' => $overlayImage,
             'order' => 1,
             'is_active' => '1',
         ]);
@@ -144,14 +141,13 @@ class SliderManagementTest extends TestCase
         $this->assertDatabaseMissing('sliders', ['id' => $slider->id]);
     }
 
-    public function test_homepage_renders_dynamic_slides_with_image_and_overlay(): void
+    public function test_homepage_renders_dynamic_slides_with_image(): void
     {
         Slider::create([
             'title_1' => 'Dynamic Curious Minds',
             'title_2' => 'Dynamic Confident Futures',
             'description' => 'Dynamic school description for tests.',
             'image' => 'assets/images/hero-slider-campus.png',
-            'image_on_image' => 'assets/images/contact-student-pointing-transparent.png',
             'order' => 1,
             'is_active' => true,
         ]);
@@ -162,6 +158,5 @@ class SliderManagementTest extends TestCase
         $response->assertSee('Dynamic Curious Minds');
         $response->assertSee('Dynamic Confident Futures');
         $response->assertSee('Dynamic school description for tests.');
-        $response->assertSee('adv-hero-overlay-image-container');
     }
 }

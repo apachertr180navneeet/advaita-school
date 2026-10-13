@@ -38,34 +38,6 @@ class Slider extends Model
     }
 
     /**
-     * Get the full URL for the image on image (overlay graphic).
-     */
-    public function getImageOnImageUrlAttribute(): ?string
-    {
-        if (empty($this->image_on_image)) {
-            return null;
-        }
-
-        if (str_starts_with($this->image_on_image, 'http://') || str_starts_with($this->image_on_image, 'https://')) {
-            return $this->image_on_image;
-        }
-
-        if (str_starts_with($this->image_on_image, 'assets/')) {
-            return asset($this->image_on_image);
-        }
-
-        return asset('storage/'.ltrim($this->image_on_image, '/'));
-    }
-
-    /**
-     * Backward-compatible alias for image on image URL.
-     */
-    public function getOverlayImageUrlAttribute(): ?string
-    {
-        return $this->image_on_image_url;
-    }
-
-    /**
      * Resolve absolute disk path of the main image.
      */
     public function getImageRealPath(): ?string
@@ -90,30 +62,6 @@ class Slider extends Model
     }
 
     /**
-     * Resolve absolute disk path of the image on image.
-     */
-    public function getImageOnImageRealPath(): ?string
-    {
-        if (empty($this->image_on_image)) {
-            return null;
-        }
-
-        if (str_starts_with($this->image_on_image, 'assets/')) {
-            $path = public_path($this->image_on_image);
-
-            return file_exists($path) ? $path : null;
-        }
-
-        if (Storage::disk('public')->exists($this->image_on_image)) {
-            return Storage::disk('public')->path($this->image_on_image);
-        }
-
-        $directPath = public_path('storage/'.ltrim($this->image_on_image, '/'));
-
-        return file_exists($directPath) ? $directPath : null;
-    }
-
-    /**
      * Dynamic file size of the main image computed from disk.
      */
     public function getImageSizeAttribute(): ?string
@@ -132,35 +80,6 @@ class Slider extends Model
     public function getImageDimensionsAttribute(): ?string
     {
         $realPath = $this->getImageRealPath();
-        if ($realPath && file_exists($realPath)) {
-            $info = @getimagesize($realPath);
-            if ($info && isset($info[0], $info[1])) {
-                return "{$info[0]} × {$info[1]} px";
-            }
-        }
-
-        return null;
-    }
-
-    /**
-     * Dynamic file size of image on image computed from disk.
-     */
-    public function getImageOnImageSizeAttribute(): ?string
-    {
-        $realPath = $this->getImageOnImageRealPath();
-        if ($realPath && file_exists($realPath)) {
-            return $this->formatBytes(filesize($realPath));
-        }
-
-        return null;
-    }
-
-    /**
-     * Dynamic dimensions of image on image (e.g. "500 × 600 px").
-     */
-    public function getImageOnImageDimensionsAttribute(): ?string
-    {
-        $realPath = $this->getImageOnImageRealPath();
         if ($realPath && file_exists($realPath)) {
             $info = @getimagesize($realPath);
             if ($info && isset($info[0], $info[1])) {

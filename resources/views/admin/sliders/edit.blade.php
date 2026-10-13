@@ -387,133 +387,64 @@
             </div>
         </div>
 
-        <!-- 2. Images & Image Size Section -->
+        <!-- 2. Slider Image & Size Section -->
         <div class="form-container-card">
             <h3 style="font-size: 16px; font-weight: 800; color: var(--admin-navy); margin-bottom: 20px; display: flex; align-items: center; gap: 8px;">
-                <i class="fa-solid fa-images" style="color: var(--admin-orange);"></i> 2. Main Image & Image on Image
+                <i class="fa-solid fa-image" style="color: var(--admin-orange);"></i> 2. Slider Image & Size Inspection
             </h3>
 
-            <div class="form-grid-2">
-                <!-- Main Image Upload -->
-                <div class="form-group">
-                    <label class="form-label">Main Image (Background Banner)</label>
+            <!-- Slider Image Upload -->
+            <div class="form-group">
+                <label class="form-label">Slider Image (Banner)</label>
 
-                    <!-- Existing Image Details & Dimensions -->
-                    <div class="current-img-box">
-                        <a href="{{ $slider->image_url }}" target="_blank" class="current-thumb-wrap" title="View Full Image">
-                            <img src="{{ $slider->image_url }}" alt="{{ $slider->title_1 }}">
-                        </a>
-                        <div class="current-meta-info">
-                            <div style="font-size: 12.5px; font-weight: 700; color: var(--admin-navy);">Current Image Size:</div>
-                            <div style="display: flex; flex-wrap: wrap; gap: 4px;">
-                                @if($slider->image_dimensions)
-                                    <span class="current-meta-badge">
-                                        <i class="fa-solid fa-expand"></i> {{ $slider->image_dimensions }}
-                                    </span>
-                                @endif
-                                @if($slider->image_size)
-                                    <span class="current-meta-badge filesize">
-                                        <i class="fa-solid fa-hard-drive"></i> {{ $slider->image_size }}
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Replace Image Zone -->
-                    <div class="upload-zone-card" id="mainImageDropzone">
-                        <div class="upload-guide-banner">
-                            <i class="fa-solid fa-ruler-combined"></i>
-                            <div>
-                                <strong>Recommended Size:</strong> 1920 × 800 px (or 1024 × 540 px)<br>
-                                <span style="font-size: 11.5px; color: #3B82F6;">Leave empty to keep existing. Allowed: JPG, PNG, WebP (Max 5MB)</span>
-                            </div>
-                        </div>
-
-                        <label for="mainImageInput" class="file-trigger-btn">
-                            <i class="fa-solid fa-cloud-arrow-up"></i> Choose New Main Image
-                        </label>
-                        <input type="file" id="mainImageInput" name="image" class="custom-file-input" accept="image/*">
-
-                        <!-- Live Size Detector Box -->
-                        <div class="preview-box" id="mainImagePreviewBox">
-                            <div class="preview-img-container">
-                                <img id="mainImagePreview" src="" alt="Main Image Preview">
-                            </div>
-                            <div class="size-detector-details">
-                                <div class="size-filename" id="mainImageName"></div>
-                                <div class="size-live-badge">
-                                    <i class="fa-solid fa-circle-check"></i> <span id="mainImageDimensions"></span>
-                                </div>
-                                <div class="size-dim-text" id="mainImageFileSize"></div>
-                            </div>
+                <!-- Existing Image Details & Dimensions -->
+                <div class="current-img-box">
+                    <a href="{{ $slider->image_url }}" target="_blank" class="current-thumb-wrap" title="View Full Image">
+                        <img src="{{ $slider->image_url }}" alt="{{ $slider->title_1 }}">
+                    </a>
+                    <div class="current-meta-info">
+                        <div style="font-size: 12.5px; font-weight: 700; color: var(--admin-navy);">Current Image Size:</div>
+                        <div style="display: flex; flex-wrap: wrap; gap: 4px;">
+                            @if($slider->image_dimensions)
+                                <span class="current-meta-badge">
+                                    <i class="fa-solid fa-expand"></i> {{ $slider->image_dimensions }}
+                                </span>
+                            @endif
+                            @if($slider->image_size)
+                                <span class="current-meta-badge filesize">
+                                    <i class="fa-solid fa-hard-drive"></i> {{ $slider->image_size }}
+                                </span>
+                            @endif
                         </div>
                     </div>
                 </div>
 
-                <!-- Image on Image Upload -->
-                <div class="form-group">
-                    <label class="form-label">Image on Image (Overlay Graphic)</label>
-
-                    @if($slider->image_on_image)
-                        <!-- Current Overlay Info -->
-                        <div class="current-img-box">
-                            <a href="{{ $slider->image_on_image_url }}" target="_blank" class="current-thumb-wrap overlay-wrap" title="View Image on Image">
-                                <img src="{{ $slider->image_on_image_url }}" alt="Image on Image">
-                            </a>
-                            <div class="current-meta-info" style="flex: 1;">
-                                <div style="font-size: 12.5px; font-weight: 700; color: #9A3412;">Current Overlay Size:</div>
-                                <div style="display: flex; flex-wrap: wrap; gap: 4px;">
-                                    @if($slider->image_on_image_dimensions)
-                                        <span class="current-meta-badge" style="background: #FFEDD5; color: #9A3412; border-color: #FED7AA;">
-                                            <i class="fa-solid fa-expand"></i> {{ $slider->image_on_image_dimensions }}
-                                        </span>
-                                    @endif
-                                    @if($slider->image_on_image_size)
-                                        <span class="current-meta-badge filesize">
-                                            <i class="fa-solid fa-hard-drive"></i> {{ $slider->image_on_image_size }}
-                                        </span>
-                                    @endif
-                                </div>
-                                <label style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: #EF4444; font-weight: 600; margin-top: 4px; cursor: pointer;">
-                                    <input type="checkbox" name="remove_image_on_image" value="1">
-                                    <i class="fa-solid fa-trash-can"></i> Remove image on image
-                                </label>
-                            </div>
+                <!-- Replace Image Zone -->
+                <div class="upload-zone-card" id="mainImageDropzone">
+                    <div class="upload-guide-banner">
+                        <i class="fa-solid fa-ruler-combined"></i>
+                        <div>
+                            <strong>Recommended Size:</strong> 1920 × 800 px (or 1024 × 540 px, ~16:9 aspect ratio)<br>
+                            <span style="font-size: 11.5px; color: #3B82F6;">Leave empty to keep existing image. Allowed: JPG, PNG, WebP (Max 5MB)</span>
                         </div>
-                    @else
-                        <div style="font-size: 12.5px; color: #64748B; background: #F8FAFC; border: 1px dashed #CBD5E1; padding: 10px 14px; border-radius: 8px; margin-bottom: 12px;">
-                            <i class="fa-solid fa-info-circle"></i> No overlay graphic currently attached to this slide.
+                    </div>
+
+                    <label for="mainImageInput" class="file-trigger-btn">
+                        <i class="fa-solid fa-cloud-arrow-up"></i> Choose New Slider Image
+                    </label>
+                    <input type="file" id="mainImageInput" name="image" class="custom-file-input" accept="image/*">
+
+                    <!-- Live Size Detector Box -->
+                    <div class="preview-box" id="mainImagePreviewBox">
+                        <div class="preview-img-container">
+                            <img id="mainImagePreview" src="" alt="Main Image Preview">
                         </div>
-                    @endif
-
-                    <!-- Upload / Replace Image on Image Zone -->
-                    <div class="upload-zone-card" id="overlayImageDropzone">
-                        <div class="upload-guide-banner overlay-guide">
-                            <i class="fa-solid fa-layer-group"></i>
-                            <div>
-                                <strong>Recommended Size:</strong> 500 × 600 px (or 400 × 400 px)<br>
-                                <span style="font-size: 11.5px; color: #EA580C;">Transparent PNG / WebP for student cutout or badge</span>
+                        <div class="size-detector-details">
+                            <div class="size-filename" id="mainImageName"></div>
+                            <div class="size-live-badge">
+                                <i class="fa-solid fa-circle-check"></i> <span id="mainImageDimensions"></span>
                             </div>
-                        </div>
-
-                        <label for="overlayImageInput" class="file-trigger-btn" style="background: #334155;">
-                            <i class="fa-solid fa-wand-magic-sparkles"></i> Choose Image on Image
-                        </label>
-                        <input type="file" id="overlayImageInput" name="image_on_image" class="custom-file-input" accept="image/*">
-
-                        <!-- Live Size Detector Box -->
-                        <div class="preview-box" id="overlayImagePreviewBox">
-                            <div class="preview-img-container overlay-mode">
-                                <img id="overlayImagePreview" src="" alt="Image on Image Preview">
-                            </div>
-                            <div class="size-detector-details">
-                                <div class="size-filename" id="overlayImageName"></div>
-                                <div class="size-live-badge" style="background: #FFEDD5; color: #9A3412; border-color: #FED7AA;">
-                                    <i class="fa-solid fa-circle-check"></i> <span id="overlayImageDimensions"></span>
-                                </div>
-                                <div class="size-dim-text" id="overlayImageFileSize"></div>
-                            </div>
+                            <div class="size-dim-text" id="mainImageFileSize"></div>
                         </div>
                     </div>
                 </div>
@@ -554,7 +485,7 @@
 </div>
 
 <script>
-    // Live Image Size & Dimension Detectors
+    // Live Image Size & Dimension Detector
     function setupImageSizeDetector(inputId, previewBoxId, previewImgId, nameId, dimId, sizeId) {
         const input = document.getElementById(inputId);
         const previewBox = document.getElementById(previewBoxId);
@@ -597,7 +528,6 @@
 
     document.addEventListener('DOMContentLoaded', function() {
         setupImageSizeDetector('mainImageInput', 'mainImagePreviewBox', 'mainImagePreview', 'mainImageName', 'mainImageDimensions', 'mainImageFileSize');
-        setupImageSizeDetector('overlayImageInput', 'overlayImagePreviewBox', 'overlayImagePreview', 'overlayImageName', 'overlayImageDimensions', 'overlayImageFileSize');
     });
 </script>
 @endsection

@@ -369,7 +369,7 @@
     <div class="slider-header-action-bar">
         <div>
             <h2 style="font-size: 22px; font-weight: 800; color: var(--admin-navy); margin-bottom: 4px;">Homepage Hero Sliders</h2>
-            <p style="font-size: 13.5px; color: var(--admin-text-muted);">Manage dynamic slides: banner image, title 1, title 2, description, image on image & image sizes.</p>
+            <p style="font-size: 13.5px; color: var(--admin-text-muted);">Manage dynamic slides: slider banner image, title 1, title 2, description & image file sizes.</p>
         </div>
         <div style="display: flex; gap: 12px; align-items: center;">
             <a href="{{ route('home') }}" target="_blank" class="btn-view-live" title="View Frontend Homepage">
@@ -390,15 +390,11 @@
         </div>
         <div class="slider-guide-text">
             <h4>Recommended Image Dimensions & Specifications</h4>
-            <p>Dimensions and file sizes are dynamically analyzed and shown below for every slide:</p>
+            <p>Dimensions and file sizes are dynamically analyzed and shown below for every slide image:</p>
             <div class="slider-guide-pills">
                 <span class="size-guide-pill">
                     <i class="fa-solid fa-image"></i>
-                    <strong>Main Banner Image:</strong> 1920 × 800 px (or 1024 × 540 px, ~16:9 aspect ratio, max 5MB)
-                </span>
-                <span class="size-guide-pill overlay-pill">
-                    <i class="fa-solid fa-layer-group"></i>
-                    <strong>Image on Image (Overlay):</strong> 500 × 600 px or 400 × 400 px (transparent PNG / WebP cutout)
+                    <strong>Slider Image:</strong> 1920 × 800 px (or 1024 × 540 px, ~16:9 aspect ratio, max 5MB JPG/PNG/WebP)
                 </span>
             </div>
         </div>
@@ -410,8 +406,7 @@
             <thead>
                 <tr>
                     <th style="width: 60px; text-align: center;">Order</th>
-                    <th style="width: 220px;">Main Banner & Size</th>
-                    <th style="width: 190px;">Image on Image & Size</th>
+                    <th style="width: 260px;">Slider Image & Size</th>
                     <th>Title 1, Title 2 & Description</th>
                     <th style="width: 120px; text-align: center;">Status</th>
                     <th style="width: 110px; text-align: right;">Actions</th>
@@ -428,7 +423,7 @@
                     <!-- Main Image & Size -->
                     <td>
                         <div class="thumb-wrapper">
-                            <a href="{{ $slide->image_url }}" target="_blank" class="slide-thumb-img-box" title="View Full Main Image">
+                            <a href="{{ $slide->image_url }}" target="_blank" class="slide-thumb-img-box" title="View Full Image">
                                 <img src="{{ $slide->image_url }}" alt="{{ $slide->title_1 }}">
                             </a>
                             <div style="display: flex; flex-wrap: wrap; gap: 4px;">
@@ -444,33 +439,6 @@
                                 @endif
                             </div>
                         </div>
-                    </td>
-
-                    <!-- Image on Image & Size -->
-                    <td>
-                        @if($slide->image_on_image)
-                            <div class="thumb-wrapper">
-                                <a href="{{ $slide->image_on_image_url }}" target="_blank" class="overlay-thumb-img-box" title="View Image on Image">
-                                    <img src="{{ $slide->image_on_image_url }}" alt="Image on Image">
-                                </a>
-                                <div style="display: flex; flex-direction: column; gap: 3px;">
-                                    @if($slide->image_on_image_dimensions)
-                                        <span class="img-meta-badge overlay" title="Overlay Dimensions">
-                                            <i class="fa-solid fa-expand"></i> {{ $slide->image_on_image_dimensions }}
-                                        </span>
-                                    @endif
-                                    @if($slide->image_on_image_size)
-                                        <span class="img-meta-badge filesize" title="Overlay File Size">
-                                            <i class="fa-solid fa-hard-drive"></i> {{ $slide->image_on_image_size }}
-                                        </span>
-                                    @endif
-                                </div>
-                            </div>
-                        @else
-                            <span class="badge-no-overlay">
-                                <i class="fa-solid fa-minus"></i> No Overlay
-                            </span>
-                        @endif
                     </td>
 
                     <!-- Titles & Description -->
@@ -514,7 +482,7 @@
                 </tr>
                 @empty
                 <tr>
-                    <td colspan="6" style="text-align: center; padding: 48px 20px; color: var(--admin-text-muted);">
+                    <td colspan="5" style="text-align: center; padding: 48px 20px; color: var(--admin-text-muted);">
                         <i class="fa-solid fa-images" style="font-size: 38px; color: #CBD5E1; margin-bottom: 12px; display: block;"></i>
                         <h4 style="font-size: 16px; color: var(--admin-navy); margin-bottom: 6px;">No hero slides created yet</h4>
                         <p style="font-size: 13.5px; margin-bottom: 16px;">Create your first hero slide to customize the homepage slider banner.</p>
