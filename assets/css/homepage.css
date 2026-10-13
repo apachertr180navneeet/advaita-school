@@ -1327,6 +1327,7 @@
 
 /* Floating Icon */
 .adv-why-floating-icon {
+    display: none !important;
     position: absolute;
     bottom: -22px;
     left: 24px;
@@ -1417,7 +1418,7 @@
 
 /* Content Area */
 .adv-why-content {
-    padding: 34px 22px 24px 22px;
+    padding: 22px 22px 24px 22px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;

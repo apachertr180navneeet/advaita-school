@@ -593,11 +593,8 @@ require_once __DIR__ . '/includes/header.php';
                         <!-- Card 01: Holistic Education (Orange) -->
                         <div class="adv-why-card theme-orange">
                             <div class="adv-why-image-wrap">
-                                <img src="assets/images/adv-choose-1.jpg" alt="Holistic Education at Advaita" class="adv-why-img" loading="lazy">
+                                <img src="assets/images/adv-choose-1.jpg?v=2" alt="Holistic Education at Advaita" class="adv-why-img" loading="lazy">
                                 <div class="adv-why-num-badge">01</div>
-                                <div class="adv-why-floating-icon orange">
-                                    <i class="fa-solid fa-book-open"></i>
-                                </div>
                             </div>
                             <div class="adv-why-content">
                                 <h3 class="adv-why-card-title">Holistic Education</h3>
@@ -610,11 +607,8 @@ require_once __DIR__ . '/includes/header.php';
                         <!-- Card 02: Experienced Faculty (Blue) -->
                         <div class="adv-why-card theme-blue">
                             <div class="adv-why-image-wrap">
-                                <img src="assets/images/adv-choose-2.jpg" alt="Experienced Faculty at Advaita" class="adv-why-img" loading="lazy">
+                                <img src="assets/images/adv-choose-2.jpg?v=2" alt="Experienced Faculty at Advaita" class="adv-why-img" loading="lazy">
                                 <div class="adv-why-num-badge">02</div>
-                                <div class="adv-why-floating-icon blue">
-                                    <i class="fa-solid fa-user-group"></i>
-                                </div>
                             </div>
                             <div class="adv-why-content">
                                 <h3 class="adv-why-card-title">Experienced Faculty</h3>
@@ -627,11 +621,8 @@ require_once __DIR__ . '/includes/header.php';
                         <!-- Card 03: Smart Learning (Green/Teal) -->
                         <div class="adv-why-card theme-teal">
                             <div class="adv-why-image-wrap">
-                                <img src="assets/images/adv-choose-3.jpg" alt="Smart Learning & Labs at Advaita" class="adv-why-img" loading="lazy">
+                                <img src="assets/images/adv-choose-3.jpg?v=2" alt="Smart Learning & Labs at Advaita" class="adv-why-img" loading="lazy">
                                 <div class="adv-why-num-badge">03</div>
-                                <div class="adv-why-floating-icon teal">
-                                    <i class="fa-solid fa-laptop-code"></i>
-                                </div>
                             </div>
                             <div class="adv-why-content">
                                 <h3 class="adv-why-card-title">Smart Learning</h3>
@@ -644,11 +635,8 @@ require_once __DIR__ . '/includes/header.php';
                         <!-- Card 04: Safe & Secure Campus (Purple) -->
                         <div class="adv-why-card theme-purple">
                             <div class="adv-why-image-wrap">
-                                <img src="assets/images/adv-choose-4.jpg" alt="Safe & Secure Campus at Advaita" class="adv-why-img" loading="lazy">
+                                <img src="assets/images/adv-choose-4.jpg?v=2" alt="Safe & Secure Campus at Advaita" class="adv-why-img" loading="lazy">
                                 <div class="adv-why-num-badge">04</div>
-                                <div class="adv-why-floating-icon purple">
-                                    <i class="fa-solid fa-shield-halved"></i>
-                                </div>
                             </div>
                             <div class="adv-why-content">
                                 <h3 class="adv-why-card-title">Safe &amp; Secure Campus</h3>
@@ -661,11 +649,8 @@ require_once __DIR__ . '/includes/header.php';
                         <!-- Card 05: Future-Ready Skills (Coral/Red) -->
                         <div class="adv-why-card theme-coral">
                             <div class="adv-why-image-wrap">
-                                <img src="assets/images/adv-choose-5.jpg" alt="Future-Ready Skills at Advaita" class="adv-why-img" loading="lazy">
+                                <img src="assets/images/adv-choose-5.jpg?v=2" alt="Future-Ready Skills at Advaita" class="adv-why-img" loading="lazy">
                                 <div class="adv-why-num-badge">05</div>
-                                <div class="adv-why-floating-icon coral">
-                                    <i class="fa-solid fa-rocket"></i>
-                                </div>
                             </div>
                             <div class="adv-why-content">
                                 <h3 class="adv-why-card-title">Future-Ready Skills</h3>
@@ -678,11 +663,8 @@ require_once __DIR__ . '/includes/header.php';
                         <!-- Card 06: Strong Academic Results (Cyan/Teal) -->
                         <div class="adv-why-card theme-cyan">
                             <div class="adv-why-image-wrap">
-                                <img src="assets/images/adv-choose-6.jpg" alt="Strong Academic Results at Advaita" class="adv-why-img" loading="lazy">
+                                <img src="assets/images/adv-choose-6.jpg?v=2" alt="Strong Academic Results at Advaita" class="adv-why-img" loading="lazy">
                                 <div class="adv-why-num-badge">06</div>
-                                <div class="adv-why-floating-icon cyan">
-                                    <i class="fa-solid fa-graduation-cap"></i>
-                                </div>
                             </div>
                             <div class="adv-why-content">
                                 <h3 class="adv-why-card-title">Strong Academic Results</h3>
