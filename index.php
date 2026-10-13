@@ -948,52 +948,80 @@ require_once __DIR__ . '/includes/header.php';
                     <!-- Cards Track -->
                     <div class="adv-gallery-grid">
                         
-                        <!-- Card 1: School Building Exterior -->
+                        <!-- Card 1: School Band & Morning Assembly -->
                         <div class="adv-gallery-card">
                             <div class="adv-gallery-img-box">
-                                <img src="assets/images/gallery-day-1.jpg" alt="Advaita School Building and Green Campus" class="adv-gallery-img" loading="lazy">
+                                <img src="assets/images/gallery/gallery-school-band.jpg" alt="Advaita School Marching Band and Drum Troupe" class="adv-gallery-img position-center-band" loading="lazy">
+                                <div class="adv-gallery-card-badge">
+                                    <i class="fa-solid fa-drum"></i>
+                                    <span>School Band &amp; Assembly</span>
+                                </div>
                             </div>
                         </div>
 
                         <!-- Card 2: Smart Classroom Learning -->
                         <div class="adv-gallery-card">
                             <div class="adv-gallery-img-box">
-                                <img src="assets/images/gallery-day-2.jpg" alt="Interactive Digital Smart Classroom Session" class="adv-gallery-img" loading="lazy">
+                                <img src="assets/images/gallery/gallery-classroom-learning.jpg" alt="Attentive Students in Classroom Learning Session" class="adv-gallery-img" loading="lazy">
+                                <div class="adv-gallery-card-badge">
+                                    <i class="fa-solid fa-chalkboard-user"></i>
+                                    <span>Smart Classroom Learning</span>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Card 3: Sports and Basketball Court -->
+                        <!-- Card 3: Early Years Splash Pool Fun -->
                         <div class="adv-gallery-card">
                             <div class="adv-gallery-img-box">
-                                <img src="assets/images/gallery-day-3.jpg" alt="Students Playing Basketball on Campus Court" class="adv-gallery-img" loading="lazy">
+                                <img src="assets/images/gallery/gallery-splash-pool-fun.jpg" alt="Young Children Splash Pool and Water Play Area" class="adv-gallery-img" loading="lazy">
+                                <div class="adv-gallery-card-badge">
+                                    <i class="fa-solid fa-water-ladder"></i>
+                                    <span>Splash Pool &amp; Water Fun</span>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Card 4: STEM & Robotics Laboratory -->
+                        <!-- Card 4: Joyful Creative Arts Circle -->
                         <div class="adv-gallery-card">
                             <div class="adv-gallery-img-box">
-                                <img src="assets/images/gallery-stem.jpg" alt="Students in STEM and Robotics Laboratory" class="adv-gallery-img" loading="lazy">
+                                <img src="assets/images/gallery/gallery-art-circle-kids.jpg" alt="Young Students Creative Arts Painted Hands Activity on Campus Lawn" class="adv-gallery-img" loading="lazy">
+                                <div class="adv-gallery-card-badge">
+                                    <i class="fa-solid fa-palette"></i>
+                                    <span>Creative Arts &amp; Expression</span>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Card 5: Cultural Arts and Stage Events -->
+                        <!-- Card 5: Sports Obstacle & Agility Arena -->
                         <div class="adv-gallery-card">
                             <div class="adv-gallery-img-box">
-                                <img src="assets/images/gallery-cultural.jpg" alt="Cultural Arts Celebration and Stage Performance" class="adv-gallery-img" loading="lazy">
+                                <img src="assets/images/gallery/gallery-sports-field-agility.jpg" alt="Campus Sports Ground and Agility Obstacle Training Arena" class="adv-gallery-img" loading="lazy">
+                                <div class="adv-gallery-card-badge">
+                                    <i class="fa-solid fa-medal"></i>
+                                    <span>Sports &amp; Fitness Arena</span>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Card 6: Morning Assembly & Campus Life -->
+                        <!-- Card 6: Rainbow Parachute Fun Activity -->
                         <div class="adv-gallery-card">
                             <div class="adv-gallery-img-box">
-                                <img src="assets/images/gallery-assembly.jpg" alt="Morning Assembly and Student Gathering" class="adv-gallery-img" loading="lazy">
+                                <img src="assets/images/gallery/gallery-parachute-activity.jpg" alt="Primary Students Playing with Rainbow Parachute on Campus Lawn" class="adv-gallery-img" loading="lazy">
+                                <div class="adv-gallery-card-badge">
+                                    <i class="fa-solid fa-shapes"></i>
+                                    <span>Joyful Learning &amp; Play</span>
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Card 7: Athletic Fitness & Track Arena -->
+                        <!-- Card 7: Foundation Excellence (IIT-JEE & NEET Batch) -->
                         <div class="adv-gallery-card">
                             <div class="adv-gallery-img-box">
-                                <img src="assets/images/gallery-sports.jpg" alt="Sports and Athletic Track Field" class="adv-gallery-img" loading="lazy">
+                                <img src="assets/images/gallery/gallery-foundation-achievers.jpg" alt="Students and Faculty with IIT-JEE and NEET Foundation Banner" class="adv-gallery-img" loading="lazy">
+                                <div class="adv-gallery-card-badge">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                    <span>IIT-JEE &amp; NEET Foundation</span>
+                                </div>
                             </div>
                         </div>
 
@@ -1014,11 +1042,13 @@ require_once __DIR__ . '/includes/header.php';
                 <button type="button" class="adv-gallery-dot" role="tab" aria-selected="false" aria-label="Slide 3"></button>
                 <button type="button" class="adv-gallery-dot" role="tab" aria-selected="false" aria-label="Slide 4"></button>
                 <button type="button" class="adv-gallery-dot" role="tab" aria-selected="false" aria-label="Slide 5"></button>
+                <button type="button" class="adv-gallery-dot" role="tab" aria-selected="false" aria-label="Slide 6"></button>
+                <button type="button" class="adv-gallery-dot" role="tab" aria-selected="false" aria-label="Slide 7"></button>
             </div>
 
             <!-- Bottom Action Buttons -->
             <div class="adv-gallery-actions">
-                <a href="#gallery" class="adv-btn-gallery-primary">
+                <a href="gallery.php" class="adv-btn-gallery-primary">
                     <span>Explore Photo Gallery</span>
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
