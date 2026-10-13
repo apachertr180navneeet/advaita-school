@@ -68,7 +68,7 @@
     }
 
     textarea.form-control {
-        min-height: 90px;
+        min-height: 100px;
         resize: vertical;
     }
 
@@ -330,7 +330,7 @@
     <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px;">
         <div>
             <h2 style="font-size: 22px; font-weight: 800; color: var(--admin-navy);">Edit Hero Slide #{{ $slider->id }}</h2>
-            <p style="font-size: 13.5px; color: var(--admin-text-muted);">Modify slide headings, replace banner or overlay image, review image sizes and change status.</p>
+            <p style="font-size: 13.5px; color: var(--admin-text-muted);">Modify titles, description, main banner image, image on image and display settings.</p>
         </div>
         <a href="{{ route('admin.sliders.index') }}" class="btn-cancel">
             <i class="fa-solid fa-arrow-left"></i> Back to Sliders
@@ -352,10 +352,10 @@
         @csrf
         @method('PUT')
 
-        <!-- 1. Titles & Taglines -->
+        <!-- 1. Titles & Description -->
         <div class="form-container-card">
             <h3 style="font-size: 16px; font-weight: 800; color: var(--admin-navy); margin-bottom: 20px; display: flex; align-items: center; gap: 8px;">
-                <i class="fa-solid fa-heading" style="color: var(--admin-orange);"></i> 1. Slide Taglines & Headings
+                <i class="fa-solid fa-heading" style="color: var(--admin-orange);"></i> 1. Title 1, Title 2 & Description
             </h3>
 
             <div class="form-grid-2">
@@ -380,7 +380,7 @@
                 <!-- Description -->
                 <div class="form-group full-width">
                     <label class="form-label">
-                        Slide Description Paragraph
+                        Description
                     </label>
                     <textarea name="description" class="form-control">{{ old('description', $slider->description) }}</textarea>
                 </div>
@@ -390,13 +390,13 @@
         <!-- 2. Images & Image Size Section -->
         <div class="form-container-card">
             <h3 style="font-size: 16px; font-weight: 800; color: var(--admin-navy); margin-bottom: 20px; display: flex; align-items: center; gap: 8px;">
-                <i class="fa-solid fa-images" style="color: var(--admin-orange);"></i> 2. Slide Banner Images & Image Size Specifications
+                <i class="fa-solid fa-images" style="color: var(--admin-orange);"></i> 2. Main Image & Image on Image
             </h3>
 
             <div class="form-grid-2">
                 <!-- Main Image Upload -->
                 <div class="form-group">
-                    <label class="form-label">Main Slide Background Image</label>
+                    <label class="form-label">Main Image (Background Banner)</label>
 
                     <!-- Existing Image Details & Dimensions -->
                     <div class="current-img-box">
@@ -406,9 +406,9 @@
                         <div class="current-meta-info">
                             <div style="font-size: 12.5px; font-weight: 700; color: var(--admin-navy);">Current Image Size:</div>
                             <div style="display: flex; flex-wrap: wrap; gap: 4px;">
-                                @if($slider->image_dimensions_formatted)
+                                @if($slider->image_dimensions)
                                     <span class="current-meta-badge">
-                                        <i class="fa-solid fa-expand"></i> {{ $slider->image_dimensions_formatted }}
+                                        <i class="fa-solid fa-expand"></i> {{ $slider->image_dimensions }}
                                     </span>
                                 @endif
                                 @if($slider->image_size)
@@ -420,13 +420,13 @@
                         </div>
                     </div>
 
-                    <!-- Replace Image Upload Zone -->
+                    <!-- Replace Image Zone -->
                     <div class="upload-zone-card" id="mainImageDropzone">
                         <div class="upload-guide-banner">
                             <i class="fa-solid fa-ruler-combined"></i>
                             <div>
                                 <strong>Recommended Size:</strong> 1920 × 800 px (or 1024 × 540 px)<br>
-                                <span style="font-size: 11.5px; color: #3B82F6;">Leave empty to keep existing image. Allowed: JPG, PNG, WebP (Max 5MB)</span>
+                                <span style="font-size: 11.5px; color: #3B82F6;">Leave empty to keep existing. Allowed: JPG, PNG, WebP (Max 5MB)</span>
                             </div>
                         </div>
 
@@ -451,33 +451,33 @@
                     </div>
                 </div>
 
-                <!-- Overlay Image ("Image on Image") Upload -->
+                <!-- Image on Image Upload -->
                 <div class="form-group">
-                    <label class="form-label">Image on Image (Floating Overlay Graphic)</label>
+                    <label class="form-label">Image on Image (Overlay Graphic)</label>
 
-                    @if($slider->overlay_image)
+                    @if($slider->image_on_image)
                         <!-- Current Overlay Info -->
                         <div class="current-img-box">
-                            <a href="{{ $slider->overlay_image_url }}" target="_blank" class="current-thumb-wrap overlay-wrap" title="View Full Overlay Image">
-                                <img src="{{ $slider->overlay_image_url }}" alt="Overlay">
+                            <a href="{{ $slider->image_on_image_url }}" target="_blank" class="current-thumb-wrap overlay-wrap" title="View Image on Image">
+                                <img src="{{ $slider->image_on_image_url }}" alt="Image on Image">
                             </a>
                             <div class="current-meta-info" style="flex: 1;">
                                 <div style="font-size: 12.5px; font-weight: 700; color: #9A3412;">Current Overlay Size:</div>
                                 <div style="display: flex; flex-wrap: wrap; gap: 4px;">
-                                    @if($slider->overlay_image_dimensions_formatted)
+                                    @if($slider->image_on_image_dimensions)
                                         <span class="current-meta-badge" style="background: #FFEDD5; color: #9A3412; border-color: #FED7AA;">
-                                            <i class="fa-solid fa-expand"></i> {{ $slider->overlay_image_dimensions_formatted }}
+                                            <i class="fa-solid fa-expand"></i> {{ $slider->image_on_image_dimensions }}
                                         </span>
                                     @endif
-                                    @if($slider->overlay_image_size)
+                                    @if($slider->image_on_image_size)
                                         <span class="current-meta-badge filesize">
-                                            <i class="fa-solid fa-hard-drive"></i> {{ $slider->overlay_image_size }}
+                                            <i class="fa-solid fa-hard-drive"></i> {{ $slider->image_on_image_size }}
                                         </span>
                                     @endif
                                 </div>
                                 <label style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: #EF4444; font-weight: 600; margin-top: 4px; cursor: pointer;">
-                                    <input type="checkbox" name="remove_overlay_image" value="1">
-                                    <i class="fa-solid fa-trash-can"></i> Remove this overlay image
+                                    <input type="checkbox" name="remove_image_on_image" value="1">
+                                    <i class="fa-solid fa-trash-can"></i> Remove image on image
                                 </label>
                             </div>
                         </div>
@@ -487,25 +487,25 @@
                         </div>
                     @endif
 
-                    <!-- Upload / Replace Overlay Zone -->
+                    <!-- Upload / Replace Image on Image Zone -->
                     <div class="upload-zone-card" id="overlayImageDropzone">
                         <div class="upload-guide-banner overlay-guide">
                             <i class="fa-solid fa-layer-group"></i>
                             <div>
                                 <strong>Recommended Size:</strong> 500 × 600 px (or 400 × 400 px)<br>
-                                <span style="font-size: 11.5px; color: #EA580C;">Transparent background PNG / WebP for student cutout or badge</span>
+                                <span style="font-size: 11.5px; color: #EA580C;">Transparent PNG / WebP for student cutout or badge</span>
                             </div>
                         </div>
 
                         <label for="overlayImageInput" class="file-trigger-btn" style="background: #334155;">
-                            <i class="fa-solid fa-wand-magic-sparkles"></i> Choose Overlay Image
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> Choose Image on Image
                         </label>
-                        <input type="file" id="overlayImageInput" name="overlay_image" class="custom-file-input" accept="image/*">
+                        <input type="file" id="overlayImageInput" name="image_on_image" class="custom-file-input" accept="image/*">
 
                         <!-- Live Size Detector Box -->
                         <div class="preview-box" id="overlayImagePreviewBox">
                             <div class="preview-img-container overlay-mode">
-                                <img id="overlayImagePreview" src="" alt="Overlay Image Preview">
+                                <img id="overlayImagePreview" src="" alt="Image on Image Preview">
                             </div>
                             <div class="size-detector-details">
                                 <div class="size-filename" id="overlayImageName"></div>
@@ -520,64 +520,27 @@
             </div>
         </div>
 
-        <!-- 3. Actions, Badge & Order -->
+        <!-- 3. Sort Order & Status -->
         <div class="form-container-card">
             <h3 style="font-size: 16px; font-weight: 800; color: var(--admin-navy); margin-bottom: 20px; display: flex; align-items: center; gap: 8px;">
-                <i class="fa-solid fa-sliders" style="color: var(--admin-orange);"></i> 3. Call-to-Action Buttons & Settings
+                <i class="fa-solid fa-sliders" style="color: var(--admin-orange);"></i> 3. Display Settings
             </h3>
 
             <div class="form-grid-2">
-                <!-- Button 1 Text -->
-                <div class="form-group">
-                    <label class="form-label">Primary Button 1 Text</label>
-                    <input type="text" name="button_1_text" class="form-control" value="{{ old('button_1_text', $slider->button_1_text) }}">
+                <div>
+                    <label class="form-label">Display Order</label>
+                    <input type="number" name="order" class="form-control" value="{{ old('order', $slider->order) }}" min="1">
                 </div>
-
-                <!-- Button 1 URL -->
-                <div class="form-group">
-                    <label class="form-label">Primary Button 1 Link URL</label>
-                    <input type="text" name="button_1_url" class="form-control" value="{{ old('button_1_url', $slider->button_1_url) }}">
-                </div>
-
-                <!-- Button 2 Text -->
-                <div class="form-group">
-                    <label class="form-label">Secondary Button 2 Text</label>
-                    <input type="text" name="button_2_text" class="form-control" value="{{ old('button_2_text', $slider->button_2_text) }}">
-                </div>
-
-                <!-- Button 2 URL -->
-                <div class="form-group">
-                    <label class="form-label">Secondary Button 2 Link URL</label>
-                    <input type="text" name="button_2_url" class="form-control" value="{{ old('button_2_url', $slider->button_2_url) }}">
-                </div>
-
-                <!-- Badge Text -->
-                <div class="form-group">
-                    <label class="form-label">
-                        Corner Script Badge Tag
-                    </label>
-                    <input type="text" name="badge_text" class="form-control" value="{{ old('badge_text', $slider->badge_text) }}">
-                </div>
-
-                <!-- Sort Order & Active -->
-                <div class="form-group">
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
-                        <div>
-                            <label class="form-label">Display Order</label>
-                            <input type="number" name="order" class="form-control" value="{{ old('order', $slider->order) }}" min="1">
-                        </div>
-                        <div>
-                            <label class="form-label">Status</label>
-                            <select name="is_active" class="form-control" style="font-weight: 700;">
-                                <option value="1" {{ old('is_active', $slider->is_active ? '1' : '0') == '1' ? 'selected' : '' }}>Active (Visible)</option>
-                                <option value="0" {{ old('is_active', $slider->is_active ? '1' : '0') == '0' ? 'selected' : '' }}>Inactive (Hidden)</option>
-                            </select>
-                        </div>
-                    </div>
+                <div>
+                    <label class="form-label">Status</label>
+                    <select name="is_active" class="form-control" style="font-weight: 700;">
+                        <option value="1" {{ old('is_active', $slider->is_active ? '1' : '0') == '1' ? 'selected' : '' }}>Active (Visible)</option>
+                        <option value="0" {{ old('is_active', $slider->is_active ? '1' : '0') == '0' ? 'selected' : '' }}>Inactive (Hidden)</option>
+                    </select>
                 </div>
             </div>
 
-            <!-- Bottom Action Buttons -->
+            <!-- Bottom Actions -->
             <div class="form-actions-bar">
                 <a href="{{ route('admin.sliders.index') }}" class="btn-cancel">Cancel</a>
                 <button type="submit" class="btn-submit">

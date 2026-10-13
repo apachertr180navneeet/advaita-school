@@ -147,8 +147,8 @@
 
     .overlay-thumb-img-box {
         position: relative;
-        width: 60px;
-        height: 60px;
+        width: 65px;
+        height: 65px;
         border-radius: 8px;
         overflow: hidden;
         border: 1px solid #E2E8F0;
@@ -229,18 +229,6 @@
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         overflow: hidden;
-    }
-
-    .slide-badge-tag {
-        display: inline-block;
-        font-size: 10.5px;
-        font-weight: 700;
-        color: #4338CA;
-        background: #EEF2FF;
-        border: 1px solid #C7D2FE;
-        padding: 2px 8px;
-        border-radius: 4px;
-        margin-top: 6px;
     }
 
     /* Order badge */
@@ -331,7 +319,6 @@
         color: #ffffff;
     }
 
-    /* Button Primary */
     .btn-add-slide {
         background: linear-gradient(135deg, var(--admin-orange) 0%, #E05A0B 100%);
         color: #ffffff;
@@ -382,7 +369,7 @@
     <div class="slider-header-action-bar">
         <div>
             <h2 style="font-size: 22px; font-weight: 800; color: var(--admin-navy); margin-bottom: 4px;">Homepage Hero Sliders</h2>
-            <p style="font-size: 13.5px; color: var(--admin-text-muted);">Manage dynamic slides, banner images, overlay elements, taglines and image dimensions.</p>
+            <p style="font-size: 13.5px; color: var(--admin-text-muted);">Manage dynamic slides: banner image, title 1, title 2, description, image on image & image sizes.</p>
         </div>
         <div style="display: flex; gap: 12px; align-items: center;">
             <a href="{{ route('home') }}" target="_blank" class="btn-view-live" title="View Frontend Homepage">
@@ -403,11 +390,11 @@
         </div>
         <div class="slider-guide-text">
             <h4>Recommended Image Dimensions & Specifications</h4>
-            <p>To ensure high visual quality and fast page load times across desktops, tablets, and phones, follow these recommended image specifications:</p>
+            <p>Dimensions and file sizes are dynamically analyzed and shown below for every slide:</p>
             <div class="slider-guide-pills">
                 <span class="size-guide-pill">
                     <i class="fa-solid fa-image"></i>
-                    <strong>Main Banner Image:</strong> 1920 × 800 px (or 1024 × 540 px, ~16:9 aspect ratio, max 4MB)
+                    <strong>Main Banner Image:</strong> 1920 × 800 px (or 1024 × 540 px, ~16:9 aspect ratio, max 5MB)
                 </span>
                 <span class="size-guide-pill overlay-pill">
                     <i class="fa-solid fa-layer-group"></i>
@@ -424,8 +411,8 @@
                 <tr>
                     <th style="width: 60px; text-align: center;">Order</th>
                     <th style="width: 220px;">Main Banner & Size</th>
-                    <th style="width: 180px;">Image on Image (Overlay)</th>
-                    <th>Taglines & Description</th>
+                    <th style="width: 190px;">Image on Image & Size</th>
+                    <th>Title 1, Title 2 & Description</th>
                     <th style="width: 120px; text-align: center;">Status</th>
                     <th style="width: 110px; text-align: right;">Actions</th>
                 </tr>
@@ -445,9 +432,9 @@
                                 <img src="{{ $slide->image_url }}" alt="{{ $slide->title_1 }}">
                             </a>
                             <div style="display: flex; flex-wrap: wrap; gap: 4px;">
-                                @if($slide->image_dimensions_formatted)
+                                @if($slide->image_dimensions)
                                     <span class="img-meta-badge" title="Image Resolution">
-                                        <i class="fa-solid fa-expand"></i> {{ $slide->image_dimensions_formatted }}
+                                        <i class="fa-solid fa-expand"></i> {{ $slide->image_dimensions }}
                                     </span>
                                 @endif
                                 @if($slide->image_size)
@@ -459,22 +446,22 @@
                         </div>
                     </td>
 
-                    <!-- Overlay Image ("Image on Image") & Size -->
+                    <!-- Image on Image & Size -->
                     <td>
-                        @if($slide->overlay_image)
+                        @if($slide->image_on_image)
                             <div class="thumb-wrapper">
-                                <a href="{{ $slide->overlay_image_url }}" target="_blank" class="overlay-thumb-img-box" title="View Overlay Image">
-                                    <img src="{{ $slide->overlay_image_url }}" alt="Overlay">
+                                <a href="{{ $slide->image_on_image_url }}" target="_blank" class="overlay-thumb-img-box" title="View Image on Image">
+                                    <img src="{{ $slide->image_on_image_url }}" alt="Image on Image">
                                 </a>
                                 <div style="display: flex; flex-direction: column; gap: 3px;">
-                                    @if($slide->overlay_image_dimensions_formatted)
+                                    @if($slide->image_on_image_dimensions)
                                         <span class="img-meta-badge overlay" title="Overlay Dimensions">
-                                            <i class="fa-solid fa-expand"></i> {{ $slide->overlay_image_dimensions_formatted }}
+                                            <i class="fa-solid fa-expand"></i> {{ $slide->image_on_image_dimensions }}
                                         </span>
                                     @endif
-                                    @if($slide->overlay_image_size)
+                                    @if($slide->image_on_image_size)
                                         <span class="img-meta-badge filesize" title="Overlay File Size">
-                                            <i class="fa-solid fa-hard-drive"></i> {{ $slide->overlay_image_size }}
+                                            <i class="fa-solid fa-hard-drive"></i> {{ $slide->image_on_image_size }}
                                         </span>
                                     @endif
                                 </div>
@@ -495,19 +482,6 @@
                         @if($slide->description)
                             <div class="slide-desc-snippet">{{ $slide->description }}</div>
                         @endif
-
-                        <div style="display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 6px;">
-                            @if($slide->badge_text)
-                                <span class="slide-badge-tag">
-                                    <i class="fa-solid fa-award"></i> {{ $slide->badge_text }}
-                                </span>
-                            @endif
-                            @if($slide->button_1_text)
-                                <span style="font-size: 11px; color: #64748B;">
-                                    <i class="fa-solid fa-link"></i> {{ $slide->button_1_text }}
-                                </span>
-                            @endif
-                        </div>
                     </td>
 
                     <!-- Status -->

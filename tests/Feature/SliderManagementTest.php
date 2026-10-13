@@ -35,20 +35,14 @@ class SliderManagementTest extends TestCase
         $response->assertRedirect(route('admin.login'));
     }
 
-    public function test_admin_can_view_sliders_index_with_size_info(): void
+    public function test_admin_can_view_sliders_index(): void
     {
         $slider = Slider::create([
             'title_1' => 'First Test Headline',
             'title_2' => 'Second Highlight Tagline',
             'description' => 'A wonderful inspiring description.',
             'image' => 'assets/images/hero-slider-campus.png',
-            'image_width' => 1920,
-            'image_height' => 800,
-            'image_size' => '450 KB',
-            'overlay_image' => 'assets/images/contact-student-pointing-transparent.png',
-            'overlay_image_width' => 500,
-            'overlay_image_height' => 600,
-            'overlay_image_size' => '180 KB',
+            'image_on_image' => 'assets/images/contact-student-pointing-transparent.png',
             'order' => 1,
             'is_active' => true,
         ]);
@@ -58,10 +52,6 @@ class SliderManagementTest extends TestCase
         $response->assertStatus(200);
         $response->assertSee('First Test Headline');
         $response->assertSee('Second Highlight Tagline');
-        $response->assertSee('1920 × 800 px');
-        $response->assertSee('450 KB');
-        $response->assertSee('500 × 600 px');
-        $response->assertSee('180 KB');
         $response->assertSee('Recommended Image Dimensions');
     }
 
@@ -71,12 +61,11 @@ class SliderManagementTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertSee('Create New Hero Slide');
-        $response->assertSee('Recommended Size:');
-        $response->assertSee('1920 × 800 px');
-        $response->assertSee('Image on Image (Floating Overlay Graphic)');
+        $response->assertSee('Recommended Image Size:');
+        $response->assertSee('Image on Image (Overlay Graphic / Cutout)');
     }
 
-    public function test_admin_can_create_new_slider_with_images_and_size_calculation(): void
+    public function test_admin_can_create_new_slider_with_images(): void
     {
         $mainImage = UploadedFile::fake()->image('banner.jpg', 1920, 800);
         $overlayImage = UploadedFile::fake()->image('student_cutout.png', 500, 600);
@@ -86,12 +75,7 @@ class SliderManagementTest extends TestCase
             'title_2' => 'World-Class Learning',
             'description' => 'Developing critical thinking and global vision.',
             'image' => $mainImage,
-            'overlay_image' => $overlayImage,
-            'button_1_text' => 'Apply Online',
-            'button_1_url' => '/online-registration',
-            'button_2_text' => 'Explore Campus',
-            'button_2_url' => '/facilities',
-            'badge_text' => '100% CBSE Excellence',
+            'image_on_image' => $overlayImage,
             'order' => 1,
             'is_active' => '1',
         ]);
@@ -100,10 +84,6 @@ class SliderManagementTest extends TestCase
         $this->assertDatabaseHas('sliders', [
             'title_1' => 'Empowering Future Leaders',
             'title_2' => 'World-Class Learning',
-            'image_width' => 1920,
-            'image_height' => 800,
-            'overlay_image_width' => 500,
-            'overlay_image_height' => 600,
             'is_active' => true,
         ]);
     }
@@ -113,9 +93,6 @@ class SliderManagementTest extends TestCase
         $slider = Slider::create([
             'title_1' => 'Original Title',
             'image' => 'assets/images/hero-slider-campus.png',
-            'image_width' => 1024,
-            'image_height' => 373,
-            'image_size' => '700 KB',
             'order' => 1,
             'is_active' => true,
         ]);
@@ -174,10 +151,7 @@ class SliderManagementTest extends TestCase
             'title_2' => 'Dynamic Confident Futures',
             'description' => 'Dynamic school description for tests.',
             'image' => 'assets/images/hero-slider-campus.png',
-            'overlay_image' => 'assets/images/contact-student-pointing-transparent.png',
-            'button_1_text' => 'Apply Today',
-            'button_1_url' => '#admissions',
-            'badge_text' => 'Excellence In Every Child',
+            'image_on_image' => 'assets/images/contact-student-pointing-transparent.png',
             'order' => 1,
             'is_active' => true,
         ]);
@@ -188,7 +162,6 @@ class SliderManagementTest extends TestCase
         $response->assertSee('Dynamic Curious Minds');
         $response->assertSee('Dynamic Confident Futures');
         $response->assertSee('Dynamic school description for tests.');
-        $response->assertSee('Apply Today');
         $response->assertSee('adv-hero-overlay-image-container');
     }
 }

@@ -14,7 +14,7 @@ class Slider extends Model
 
     protected $casts = [
         'is_active' => 'boolean',
-        'order'     => 'integer',
+        'order' => 'integer',
     ];
 
     /**
@@ -34,7 +34,7 @@ class Slider extends Model
             return asset($this->image);
         }
 
-        return asset('storage/' . ltrim($this->image, '/'));
+        return asset('storage/'.ltrim($this->image, '/'));
     }
 
     /**
@@ -54,7 +54,7 @@ class Slider extends Model
             return asset($this->image_on_image);
         }
 
-        return asset('storage/' . ltrim($this->image_on_image, '/'));
+        return asset('storage/'.ltrim($this->image_on_image, '/'));
     }
 
     /**
@@ -76,6 +76,7 @@ class Slider extends Model
 
         if (str_starts_with($this->image, 'assets/')) {
             $path = public_path($this->image);
+
             return file_exists($path) ? $path : null;
         }
 
@@ -83,7 +84,8 @@ class Slider extends Model
             return Storage::disk('public')->path($this->image);
         }
 
-        $directPath = public_path('storage/' . ltrim($this->image, '/'));
+        $directPath = public_path('storage/'.ltrim($this->image, '/'));
+
         return file_exists($directPath) ? $directPath : null;
     }
 
@@ -98,6 +100,7 @@ class Slider extends Model
 
         if (str_starts_with($this->image_on_image, 'assets/')) {
             $path = public_path($this->image_on_image);
+
             return file_exists($path) ? $path : null;
         }
 
@@ -105,7 +108,8 @@ class Slider extends Model
             return Storage::disk('public')->path($this->image_on_image);
         }
 
-        $directPath = public_path('storage/' . ltrim($this->image_on_image, '/'));
+        $directPath = public_path('storage/'.ltrim($this->image_on_image, '/'));
+
         return file_exists($directPath) ? $directPath : null;
     }
 
@@ -182,6 +186,6 @@ class Slider extends Model
 
         $value = $bytes / (1024 ** $power);
 
-        return round($value, $precision) . ' ' . $units[$power];
+        return round($value, $precision).' '.$units[$power];
     }
 }

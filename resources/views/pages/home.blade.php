@@ -53,42 +53,34 @@
                             @endif
 
                             <!-- Interactive CTA Action Buttons -->
-                            @if($slide->button_1_text || $slide->button_2_text)
-                                <div class="adv-hero-actions-group">
-                                    @if($slide->button_1_text)
-                                        <a href="{{ $slide->button_1_url ?: '#admissions' }}" class="adv-hero-real-btn adv-hero-btn-apply" title="{{ $slide->button_1_text }}">
-                                            <span>{{ $slide->button_1_text }}</span>
-                                            <i class="fa-solid fa-arrow-right"></i>
-                                        </a>
-                                    @endif
-                                    @if($slide->button_2_text)
-                                        <a href="{{ $slide->button_2_url ?: '#about' }}" class="adv-hero-real-btn adv-hero-btn-explore" title="{{ $slide->button_2_text }}">
-                                            <span class="adv-hero-play-circle" aria-hidden="true">
-                                                <i class="fa-solid fa-play"></i>
-                                            </span>
-                                            <span>{{ $slide->button_2_text }}</span>
-                                        </a>
-                                    @endif
-                                </div>
-                            @endif
+                            <div class="adv-hero-actions-group">
+                                <a href="#admissions" class="adv-hero-real-btn adv-hero-btn-apply" title="Apply for Admission">
+                                    <span>Apply for Admission</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                                <a href="#about" class="adv-hero-real-btn adv-hero-btn-explore" title="Explore Our School">
+                                    <span class="adv-hero-play-circle" aria-hidden="true">
+                                        <i class="fa-solid fa-play"></i>
+                                    </span>
+                                    <span>Explore Our School</span>
+                                </a>
+                            </div>
                         </div>
 
                         <!-- Image on Image (Floating Overlay Graphic / Student Cutout / Featured Badge) -->
-                        @if($slide->overlay_image)
+                        @if($slide->image_on_image)
                             <div class="adv-hero-overlay-image-container" aria-hidden="true">
-                                <img src="{{ $slide->overlay_image_url }}" alt="Overlay - {{ $slide->title_1 }}" class="adv-hero-floating-overlay-img" loading="lazy">
+                                <img src="{{ $slide->image_on_image_url }}" alt="Overlay - {{ $slide->title_1 }}" class="adv-hero-floating-overlay-img" loading="lazy">
                             </div>
                         @endif
 
                         <!-- Right Sky Script Tag Accent -->
-                        @if($slide->badge_text)
-                            <div class="adv-hero-sky-badge" aria-hidden="true">
-                                <span class="adv-sky-script">{!! nl2br(e($slide->badge_text)) !!}</span>
-                                <svg class="adv-sky-swoosh" viewBox="0 0 140 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 16 C 45 4, 95 4, 136 18" stroke="#F37021" stroke-width="3" stroke-linecap="round"/>
-                                </svg>
-                            </div>
-                        @endif
+                        <div class="adv-hero-sky-badge" aria-hidden="true">
+                            <span class="adv-sky-script">Excellence.<br>In Every Child</span>
+                            <svg class="adv-sky-swoosh" viewBox="0 0 140 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 16 C 45 4, 95 4, 136 18" stroke="#F37021" stroke-width="3" stroke-linecap="round"/>
+                            </svg>
+                        </div>
 
                     </div>
                 </div>

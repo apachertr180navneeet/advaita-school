@@ -41,12 +41,7 @@ class SliderController extends Controller
             'title_2' => ['nullable', 'string', 'max:255'],
             'description' => ['nullable', 'string'],
             'image' => ['required', 'image', 'mimes:jpeg,png,jpg,webp,svg', 'max:5120'],
-            'overlay_image' => ['nullable', 'image', 'mimes:jpeg,png,jpg,webp,svg', 'max:5120'],
-            'button_1_text' => ['nullable', 'string', 'max:100'],
-            'button_1_url' => ['nullable', 'string', 'max:255'],
-            'button_2_text' => ['nullable', 'string', 'max:100'],
-            'button_2_url' => ['nullable', 'string', 'max:255'],
-            'badge_text' => ['nullable', 'string', 'max:150'],
+            'image_on_image' => ['nullable', 'image', 'mimes:jpeg,png,jpg,webp,svg', 'max:5120'],
             'order' => ['nullable', 'integer', 'min:0'],
             'is_active' => ['nullable', 'boolean'],
         ]);
@@ -55,11 +50,6 @@ class SliderController extends Controller
             'title_1' => $validated['title_1'],
             'title_2' => $validated['title_2'] ?? null,
             'description' => $validated['description'] ?? null,
-            'button_1_text' => $validated['button_1_text'] ?? null,
-            'button_1_url' => $validated['button_1_url'] ?? null,
-            'button_2_text' => $validated['button_2_text'] ?? null,
-            'button_2_url' => $validated['button_2_url'] ?? null,
-            'badge_text' => $validated['badge_text'] ?? null,
             'order' => $validated['order'] ?? ((Slider::max('order') ?? 0) + 1),
             'is_active' => $request->boolean('is_active', true),
         ];
@@ -69,23 +59,13 @@ class SliderController extends Controller
             $mainFile = $request->file('image');
             $mainPath = $mainFile->store('sliders', 'public');
             $data['image'] = $mainPath;
-
-            $meta = $this->getImageMetadata($mainFile);
-            $data['image_width'] = $meta['width'];
-            $data['image_height'] = $meta['height'];
-            $data['image_size'] = $meta['size_formatted'];
         }
 
-        // Process Overlay Image ("Image on Image")
-        if ($request->hasFile('overlay_image')) {
-            $overlayFile = $request->file('overlay_image');
+        // Process Image on Image (Overlay)
+        if ($request->hasFile('image_on_image')) {
+            $overlayFile = $request->file('image_on_image');
             $overlayPath = $overlayFile->store('sliders/overlays', 'public');
-            $data['overlay_image'] = $overlayPath;
-
-            $overlayMeta = $this->getImageMetadata($overlayFile);
-            $data['overlay_image_width'] = $overlayMeta['width'];
-            $data['overlay_image_height'] = $overlayMeta['height'];
-            $data['overlay_image_size'] = $overlayMeta['size_formatted'];
+            $data['image_on_image'] = $overlayPath;
         }
 
         Slider::create($data);
@@ -115,13 +95,8 @@ class SliderController extends Controller
             'title_2' => ['nullable', 'string', 'max:255'],
             'description' => ['nullable', 'string'],
             'image' => ['nullable', 'image', 'mimes:jpeg,png,jpg,webp,svg', 'max:5120'],
-            'overlay_image' => ['nullable', 'image', 'mimes:jpeg,png,jpg,webp,svg', 'max:5120'],
-            'remove_overlay_image' => ['nullable', 'boolean'],
-            'button_1_text' => ['nullable', 'string', 'max:100'],
-            'button_1_url' => ['nullable', 'string', 'max:255'],
-            'button_2_text' => ['nullable', 'string', 'max:100'],
-            'button_2_url' => ['nullable', 'string', 'max:255'],
-            'badge_text' => ['nullable', 'string', 'max:150'],
+            'image_on_image' => ['nullable', 'image', 'mimes:jpeg,png,jpg,webp,svg', 'max:5120'],
+            'remove_image_on_image' => ['nullable', 'boolean'],
             'order' => ['nullable', 'integer', 'min:0'],
             'is_active' => ['nullable', 'boolean'],
         ]);
@@ -129,55 +104,34 @@ class SliderController extends Controller
         $slider->title_1 = $validated['title_1'];
         $slider->title_2 = $validated['title_2'] ?? null;
         $slider->description = $validated['description'] ?? null;
-        $slider->button_1_text = $validated['button_1_text'] ?? null;
-        $slider->button_1_url = $validated['button_1_url'] ?? null;
-        $slider->button_2_text = $validated['button_2_text'] ?? null;
-        $slider->button_2_url = $validated['button_2_url'] ?? null;
-        $slider->badge_text = $validated['badge_text'] ?? null;
         $slider->order = $validated['order'] ?? $slider->order;
         $slider->is_active = $request->boolean('is_active');
 
         // Handle Main Image replacement
         if ($request->hasFile('image')) {
-            // Delete old uploaded file if in storage
             if ($slider->image && ! str_starts_with($slider->image, 'assets/')) {
                 Storage::disk('public')->delete($slider->image);
             }
 
             $mainFile = $request->file('image');
-            $mainPath = $mainFile->store('sliders', 'public');
-            $slider->image = $mainPath;
-
-            $meta = $this->getImageMetadata($mainFile);
-            $slider->image_width = $meta['width'];
-            $slider->image_height = $meta['height'];
-            $slider->image_size = $meta['size_formatted'];
+            $slider->image = $mainFile->store('sliders', 'public');
         }
 
-        // Handle Overlay Image removal
-        if ($request->boolean('remove_overlay_image')) {
-            if ($slider->overlay_image && ! str_starts_with($slider->overlay_image, 'assets/')) {
-                Storage::disk('public')->delete($slider->overlay_image);
+        // Handle Image on Image removal
+        if ($request->boolean('remove_image_on_image')) {
+            if ($slider->image_on_image && ! str_starts_with($slider->image_on_image, 'assets/')) {
+                Storage::disk('public')->delete($slider->image_on_image);
             }
-            $slider->overlay_image = null;
-            $slider->overlay_image_width = null;
-            $slider->overlay_image_height = null;
-            $slider->overlay_image_size = null;
+            $slider->image_on_image = null;
         }
-        // Handle Overlay Image replacement
-        elseif ($request->hasFile('overlay_image')) {
-            if ($slider->overlay_image && ! str_starts_with($slider->overlay_image, 'assets/')) {
-                Storage::disk('public')->delete($slider->overlay_image);
+        // Handle Image on Image replacement
+        elseif ($request->hasFile('image_on_image')) {
+            if ($slider->image_on_image && ! str_starts_with($slider->image_on_image, 'assets/')) {
+                Storage::disk('public')->delete($slider->image_on_image);
             }
 
-            $overlayFile = $request->file('overlay_image');
-            $overlayPath = $overlayFile->store('sliders/overlays', 'public');
-            $slider->overlay_image = $overlayPath;
-
-            $overlayMeta = $this->getImageMetadata($overlayFile);
-            $slider->overlay_image_width = $overlayMeta['width'];
-            $slider->overlay_image_height = $overlayMeta['height'];
-            $slider->overlay_image_size = $overlayMeta['size_formatted'];
+            $overlayFile = $request->file('image_on_image');
+            $slider->image_on_image = $overlayFile->store('sliders/overlays', 'public');
         }
 
         $slider->save();
@@ -196,8 +150,8 @@ class SliderController extends Controller
             Storage::disk('public')->delete($slider->image);
         }
 
-        if ($slider->overlay_image && ! str_starts_with($slider->overlay_image, 'assets/')) {
-            Storage::disk('public')->delete($slider->overlay_image);
+        if ($slider->image_on_image && ! str_starts_with($slider->image_on_image, 'assets/')) {
+            Storage::disk('public')->delete($slider->image_on_image);
         }
 
         $slider->delete();
@@ -217,50 +171,5 @@ class SliderController extends Controller
         $statusLabel = $slider->is_active ? 'activated' : 'deactivated';
 
         return redirect()->route('admin.sliders.index')->with('success', "Slide #{$slider->id} has been {$statusLabel}.");
-    }
-
-    /**
-     * Helper to extract image dimensions and formatted file size.
-     */
-    protected function getImageMetadata($file): array
-    {
-        $path = $file->getRealPath();
-        $sizeBytes = $file->getSize();
-
-        $width = null;
-        $height = null;
-
-        $info = @getimagesize($path);
-        if ($info && isset($info[0], $info[1])) {
-            $width = (int) $info[0];
-            $height = (int) $info[1];
-        }
-
-        $sizeFormatted = $this->formatBytes($sizeBytes);
-
-        return [
-            'width' => $width,
-            'height' => $height,
-            'size_bytes' => $sizeBytes,
-            'size_formatted' => $sizeFormatted,
-        ];
-    }
-
-    /**
-     * Format bytes into readable string (e.g., 450 KB, 1.2 MB).
-     */
-    protected function formatBytes(int $bytes, int $precision = 1): string
-    {
-        if ($bytes <= 0) {
-            return '0 B';
-        }
-
-        $units = ['B', 'KB', 'MB', 'GB'];
-        $power = floor(log($bytes, 1024));
-        $power = min($power, count($units) - 1);
-
-        $value = $bytes / (1024 ** $power);
-
-        return round($value, $precision).' '.$units[$power];
     }
 }

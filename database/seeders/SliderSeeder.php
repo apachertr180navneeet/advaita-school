@@ -14,23 +14,23 @@ class SliderSeeder extends Seeder
     {
         if (Slider::count() === 0) {
             Slider::create([
-                'title_1'        => 'Building Curious Minds.',
-                'title_2'        => 'Shaping Confident Futures.',
-                'description'    => 'Where knowledge meets values, creativity meets opportunity, and every child is encouraged to discover their true potential.',
-                'image'          => 'assets/images/hero-slider-campus.png',
+                'title_1' => 'Building Curious Minds.',
+                'title_2' => 'Shaping Confident Futures.',
+                'description' => 'Where knowledge meets values, creativity meets opportunity, and every child is encouraged to discover their true potential.',
+                'image' => 'assets/images/hero-slider-campus.png',
                 'image_on_image' => 'assets/images/contact-student-pointing-transparent.png',
-                'order'          => 1,
-                'is_active'      => true,
+                'order' => 1,
+                'is_active' => true,
             ]);
 
             Slider::create([
-                'title_1'        => 'Nurturing Global Thinkers.',
-                'title_2'        => 'CBSE Accredited Excellence.',
-                'description'    => 'Empowering students through innovative STEAM labs, holistic sports academy, and world-class faculty dedicated to individualized growth.',
-                'image'          => 'assets/images/hero-slider-excellence-banner.png',
+                'title_1' => 'Nurturing Global Thinkers.',
+                'title_2' => 'CBSE Accredited Excellence.',
+                'description' => 'Empowering students through innovative STEAM labs, holistic sports academy, and world-class faculty dedicated to individualized growth.',
+                'image' => 'assets/images/hero-slider-excellence-banner.png',
                 'image_on_image' => 'assets/images/about-cta-students-trio.png',
-                'order'          => 2,
-                'is_active'      => true,
+                'order' => 2,
+                'is_active' => true,
             ]);
         }
     }
