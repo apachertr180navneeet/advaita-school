@@ -369,6 +369,88 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
+        /* Global Admin Tables */
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .admin-table {
+            width: 100% !important;
+            border-collapse: separate;
+            border-spacing: 0;
+            font-size: 13.5px;
+            text-align: left;
+        }
+
+        .admin-table th {
+            text-align: left;
+            padding: 14px 18px;
+            font-size: 11.5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: #64748B;
+            background: #F8FAFC;
+            border-bottom: 2px solid #E2E8F0;
+            white-space: nowrap;
+        }
+
+        .admin-table td {
+            padding: 16px 18px;
+            border-bottom: 1px solid #F1F5F9;
+            vertical-align: middle;
+            color: #334155;
+            background: #ffffff;
+        }
+
+        .admin-table tr:hover td {
+            background: #F8FAFC;
+        }
+
+        .btn-action-view {
+            background: rgba(8, 59, 122, 0.08);
+            border: 1px solid rgba(8, 59, 122, 0.18);
+            color: var(--admin-navy);
+            border-radius: 8px;
+            padding: 7px 12px;
+            font-size: 12.5px;
+            font-weight: 700;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            text-decoration: none;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .btn-action-view:hover {
+            background: var(--admin-navy);
+            color: #ffffff;
+        }
+
+        .btn-action-delete, .btn-delete {
+            background: transparent;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            color: #EF4444;
+            border-radius: 8px;
+            padding: 7px 10px;
+            cursor: pointer;
+            font-size: 12.5px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+
+        .btn-action-delete:hover, .btn-delete:hover {
+            background: #EF4444;
+            color: #ffffff;
+            border-color: #EF4444;
+        }
+
         /* Responsive Breakpoints */
         @media (max-width: 992px) {
             .admin-sidebar {
@@ -476,6 +558,12 @@
                         @if($whyChooseNavCount > 0)
                             <span class="nav-badge">{{ $whyChooseNavCount }}</span>
                         @endif
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.campus-visit.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.campus-visit.*') ? 'active' : '' }}">
+                        <i class="fa-solid fa-school-flag"></i>
+                        <span>Campus Visit Banner</span>
                     </a>
                 </li>
                 <li>

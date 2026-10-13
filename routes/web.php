@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\AuthController as AdminAuthController;
+use App\Http\Controllers\Admin\CampusVisitController as AdminCampusVisitController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\Admin\InquiryController as AdminInquiryController;
 use App\Http\Controllers\Admin\PillarController as AdminPillarController;
@@ -95,6 +96,10 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::patch('/why-choose/section-header', [AdminWhyChooseController::class, 'updateSectionHeader'])->name('why-choose.section-header');
         Route::patch('/why-choose/{whyChooseCard}/toggle-status', [AdminWhyChooseController::class, 'toggleStatus'])->name('why-choose.toggle-status');
         Route::resource('why-choose', AdminWhyChooseController::class)->except(['show'])->parameters(['why-choose' => 'whyChooseCard']);
+
+        // Campus Visit & Admissions CTA Banner Management
+        Route::get('/campus-visit', [AdminCampusVisitController::class, 'index'])->name('campus-visit.index');
+        Route::patch('/campus-visit', [AdminCampusVisitController::class, 'update'])->name('campus-visit.update');
     });
 });
 

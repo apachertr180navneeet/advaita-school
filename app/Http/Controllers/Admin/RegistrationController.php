@@ -36,7 +36,15 @@ class RegistrationController extends Controller
 
         $registrations = $query->paginate(15)->withQueryString();
 
-        return view('admin.registrations.index', compact('registrations'));
+        $counts = [
+            'all' => OnlineRegistration::count(),
+            'submitted' => OnlineRegistration::where('status', 'submitted')->count(),
+            'under_review' => OnlineRegistration::where('status', 'under_review')->count(),
+            'approved' => OnlineRegistration::where('status', 'approved')->count(),
+            'rejected' => OnlineRegistration::where('status', 'rejected')->count(),
+        ];
+
+        return view('admin.registrations.index', compact('registrations', 'counts'));
     }
 
     /**

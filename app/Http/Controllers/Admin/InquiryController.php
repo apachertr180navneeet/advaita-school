@@ -32,7 +32,14 @@ class InquiryController extends Controller
 
         $inquiries = $query->paginate(15)->withQueryString();
 
-        return view('admin.inquiries.index', compact('inquiries'));
+        $counts = [
+            'all' => ContactInquiry::count(),
+            'new' => ContactInquiry::where('status', 'new')->count(),
+            'in_progress' => ContactInquiry::where('status', 'in_progress')->count(),
+            'resolved' => ContactInquiry::where('status', 'resolved')->count(),
+        ];
+
+        return view('admin.inquiries.index', compact('inquiries', 'counts'));
     }
 
     /**

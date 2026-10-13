@@ -587,23 +587,45 @@
             <div class="adv-visit-card">
                 
                 <!-- Left Content Area -->
+                @php
+                    $visitImg = $campusVisit['image'] ?? 'assets/images/campus-visit-visual.jpg';
+                    if (str_starts_with($visitImg, 'assets/')) {
+                        $visitImgUrl = asset($visitImg);
+                    } elseif (str_starts_with($visitImg, 'http')) {
+                        $visitImgUrl = $visitImg;
+                    } else {
+                        $visitImgUrl = asset('storage/' . ltrim($visitImg, '/'));
+                    }
+
+                    $phoneClean = preg_replace('/[^0-9+]/', '', $campusVisit['phone_number'] ?? '+919413062851');
+                @endphp
+
+                <!-- Left Content Area -->
                 <div class="adv-visit-content-side">
                     
+                    @if(!empty($campusVisit['badge']))
                     <!-- Top Eyebrow Badge -->
                     <div class="adv-visit-pill-badge">
                         <i class="fa-solid fa-calendar-check"></i>
-                        <span>ADMISSIONS 2026–27 OPEN</span>
+                        <span>{{ $campusVisit['badge'] }}</span>
                     </div>
+                    @endif
 
                     <!-- Main Heading with Plane Accent -->
                     <div class="adv-visit-heading-wrap">
                         <h2 class="adv-visit-heading">
-                            Come see the school <br>
-                            for <span class="highlight-orange">yourself.
-                                <svg class="heading-swoosh" width="140" height="12" viewBox="0 0 140 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M3 5C45 11 95 12 137 5" stroke="#F37021" stroke-width="3" stroke-linecap="round"/>
-                                </svg>
-                            </span>
+                            {{ $campusVisit['title_1'] ?? 'Come see the school' }} <br>
+                            @if(!empty($campusVisit['title_2']))
+                                @php
+                                    $rawTitle2 = trim($campusVisit['title_2']);
+                                    $highlightWord = str_starts_with(strtolower($rawTitle2), 'for ') ? trim(substr($rawTitle2, 4)) : $rawTitle2;
+                                @endphp
+                                for <span class="highlight-orange">{{ $highlightWord }}
+                                    <svg class="heading-swoosh" width="140" height="12" viewBox="0 0 140 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M3 5C45 11 95 12 137 5" stroke="#F37021" stroke-width="3" stroke-linecap="round"/>
+                                    </svg>
+                                </span>
+                            @endif
                         </h2>
                         <!-- Paper plane vector icon with dotted loop trail -->
                         <div class="adv-visit-plane-icon" aria-hidden="true">
@@ -620,15 +642,17 @@
                     <!-- Description & Cursive Tag Row -->
                     <div class="adv-visit-desc-row">
                         <p class="adv-visit-desc">
-                            Walk our campus, meet our faculty, experience our learning environment, and get all your questions answered &mdash; the best way to know if Advaita is the right home for your child.
+                            {{ $campusVisit['description'] ?? 'Walk our campus, meet our faculty, experience our learning environment, and get all your questions answered — the best way to know if Advaita is the right home for your child.' }}
                         </p>
+                        @if(!empty($campusVisit['cursive_tag']))
                         <!-- Experience it Yourself Cursive Tag -->
                         <div class="adv-visit-cursive-tag" aria-hidden="true">
-                            <span>Experience <br><em>it Yourself</em></span>
+                            <span>{{ $campusVisit['cursive_tag'] }}</span>
                             <svg width="86" height="12" viewBox="0 0 86 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M3 4C28 10 58 11 83 4" stroke="#F37021" stroke-width="2.5" stroke-linecap="round"/>
                             </svg>
                         </div>
+                        @endif
                     </div>
 
                     <div class="adv-visit-separator"></div>
@@ -641,8 +665,8 @@
                                 <i class="fa-solid fa-users"></i>
                             </div>
                             <div class="adv-visit-feat-info">
-                                <span class="feat-title">Counsellors available</span>
-                                <span class="feat-sub">Mon–Sat &middot; 9 AM to 5 PM</span>
+                                <span class="feat-title">{{ $campusVisit['feat_1_title'] ?? 'Counsellors available' }}</span>
+                                <span class="feat-sub">{{ $campusVisit['feat_1_sub'] ?? 'Mon–Sat · 9 AM to 5 PM' }}</span>
                             </div>
                         </div>
 
@@ -652,8 +676,8 @@
                                 <i class="fa-solid fa-comment-dots"></i>
                             </div>
                             <div class="adv-visit-feat-info">
-                                <span class="feat-title">Hindi &middot; English</span>
-                                <span class="feat-sub">On-call &amp; on-campus</span>
+                                <span class="feat-title">{{ $campusVisit['feat_2_title'] ?? 'Hindi · English' }}</span>
+                                <span class="feat-sub">{{ $campusVisit['feat_2_sub'] ?? 'On-call & on-campus' }}</span>
                             </div>
                         </div>
 
@@ -663,8 +687,8 @@
                                 <i class="fa-solid fa-heart"></i>
                             </div>
                             <div class="adv-visit-feat-info">
-                                <span class="feat-title">No obligation</span>
-                                <span class="feat-sub">Just a friendly chat</span>
+                                <span class="feat-title">{{ $campusVisit['feat_3_title'] ?? 'No obligation' }}</span>
+                                <span class="feat-sub">{{ $campusVisit['feat_3_sub'] ?? 'Just a friendly chat' }}</span>
                             </div>
                         </div>
                     </div>
@@ -673,7 +697,7 @@
 
                 <!-- Right Visual Area with Floating Pods -->
                 <div class="adv-visit-visual-side">
-                    <img src="{{ asset('assets/images/campus-visit-visual.jpg') }}" alt="Advaita School of Excellence Campus Visit" class="adv-visit-campus-img" loading="lazy">
+                    <img src="{{ $visitImgUrl }}" alt="{{ $campusVisit['title_1'] ?? 'Advaita School of Excellence Campus Visit' }}" class="adv-visit-campus-img" loading="lazy">
                     
                     <!-- Curved Arch Divider -->
                     <div class="adv-visit-curve-mask" aria-hidden="true">
@@ -689,13 +713,13 @@
                     <div class="adv-visit-action-pods">
                         
                         <!-- Pod 1: Book A Campus Visit -->
-                        <a href="#contact" class="adv-visit-pod-orange">
+                        <a href="{{ $campusVisit['btn_url'] ?? '#contact' }}" class="adv-visit-pod-orange">
                             <div class="pod-icon-box">
                                 <i class="fa-solid fa-calendar-days"></i>
                             </div>
                             <div class="pod-text-box">
-                                <span class="pod-title">Book A Campus Visit</span>
-                                <span class="pod-sub">Pick A Slot &middot; Free</span>
+                                <span class="pod-title">{{ $campusVisit['btn_title'] ?? 'Book A Campus Visit' }}</span>
+                                <span class="pod-sub">{{ $campusVisit['btn_sub'] ?? 'Pick A Slot · Free' }}</span>
                             </div>
                             <div class="pod-arrow-btn">
                                 <i class="fa-solid fa-arrow-right"></i>
@@ -703,13 +727,13 @@
                         </a>
 
                         <!-- Pod 2: Call Counsellor -->
-                        <a href="tel:+919413062851" class="adv-visit-pod-white">
+                        <a href="tel:{{ $phoneClean }}" class="adv-visit-pod-white">
                             <div class="pod-phone-circle">
                                 <i class="fa-solid fa-phone"></i>
                             </div>
                             <div class="pod-phone-info">
-                                <span class="phone-label">TALK TO OUR COUNSELLOR</span>
-                                <span class="phone-number">094130 62851</span>
+                                <span class="phone-label">{{ $campusVisit['phone_label'] ?? 'TALK TO OUR COUNSELLOR' }}</span>
+                                <span class="phone-number">{{ $campusVisit['phone_number'] ?? '094130 62851' }}</span>
                             </div>
                         </a>
 
