@@ -14,7 +14,7 @@
                 </a>
                 
                 <p class="adv-footer-bio">
-                    A modern, values-led learning community shaping curious thinkers, principled leaders, and lifelong learners.
+                    A modern learning community nurturing curious minds, principled leaders, and lifelong learners through academic excellence, creativity, compassion, confidence, and meaningful educational experiences.
                 </p>
                 
                 <div class="adv-footer-socials" aria-label="Social media channels">
