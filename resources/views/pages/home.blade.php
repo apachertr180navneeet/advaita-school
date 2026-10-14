@@ -773,16 +773,10 @@
                     <!-- Cards Track -->
                     <div class="adv-gallery-grid">
                         @foreach($activeGalleryItems as $item)
-                            <!-- Card {{ $loop->iteration }}: {{ $item->category }} -->
+                            <!-- Card {{ $loop->iteration }} -->
                             <div class="adv-gallery-card">
                                 <div class="adv-gallery-img-box">
                                     <img src="{{ $item->image_url }}" alt="{{ $item->caption ?? $item->category ?? 'Advaita School Campus' }}" class="adv-gallery-img {{ $item->custom_class }}" loading="lazy">
-                                    @if(!empty($item->category))
-                                        <div class="adv-gallery-card-badge">
-                                            <i class="{{ $item->icon ?: 'fa-solid fa-camera' }}"></i>
-                                            <span>{{ $item->category }}</span>
-                                        </div>
-                                    @endif
                                 </div>
                             </div>
                         @endforeach

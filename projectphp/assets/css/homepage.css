@@ -2003,60 +2003,14 @@
     transform: scale(1.06);
 }
 
-/* Subtle gradient scrim at bottom of image for readability */
+/* Gallery Image Box Overlay (clean full visual) */
 .adv-gallery-img-box::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 60%, rgba(3, 28, 61, 0.45) 100%);
-    pointer-events: none;
-    z-index: 2;
-    transition: background 0.3s ease;
+    display: none;
 }
 
-.adv-gallery-card:hover .adv-gallery-img-box::after {
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, rgba(3, 28, 61, 0.6) 100%);
-}
-
-/* Frosted Card Badge */
+/* Frosted Card Badge (Hidden) */
 .adv-gallery-card-badge {
-    position: absolute;
-    bottom: 14px;
-    left: 14px;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    background: rgba(3, 28, 61, 0.82);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.22);
-    color: #ffffff;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 0.8125rem;
-    font-weight: 700;
-    padding: 6px 14px;
-    border-radius: 30px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
-    z-index: 3;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.adv-gallery-card-badge i {
-    color: #F37021;
-    font-size: 0.85rem;
-    transition: color 0.3s ease;
-}
-
-.adv-gallery-card:hover .adv-gallery-card-badge {
-    background: #F37021;
-    border-color: #F37021;
-    color: #ffffff;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(243, 112, 33, 0.45);
-}
-
-.adv-gallery-card:hover .adv-gallery-card-badge i {
-    color: #ffffff;
+    display: none !important;
 }
 
 /* Dots */

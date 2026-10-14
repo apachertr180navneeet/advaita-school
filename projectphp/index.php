@@ -806,10 +806,6 @@ require_once __DIR__.'/includes/header.php';
                         <div class="adv-gallery-card">
                             <div class="adv-gallery-img-box">
                                 <img src="assets/images/gallery/gallery-school-band.jpg" alt="Advaita School Marching Band and Drum Troupe" class="adv-gallery-img position-center-band" loading="lazy">
-                                <div class="adv-gallery-card-badge">
-                                    <i class="fa-solid fa-drum"></i>
-                                    <span>School Band &amp; Assembly</span>
-                                </div>
                             </div>
                         </div>
 
@@ -817,10 +813,6 @@ require_once __DIR__.'/includes/header.php';
                         <div class="adv-gallery-card">
                             <div class="adv-gallery-img-box">
                                 <img src="assets/images/gallery/gallery-math-science-lab.jpg" alt="Mathematics and Practical Lab Experiment Session" class="adv-gallery-img" loading="lazy">
-                                <div class="adv-gallery-card-badge">
-                                    <i class="fa-solid fa-flask-vial"></i>
-                                    <span>Math &amp; Science Labs</span>
-                                </div>
                             </div>
                         </div>
 
@@ -828,10 +820,6 @@ require_once __DIR__.'/includes/header.php';
                         <div class="adv-gallery-card">
                             <div class="adv-gallery-img-box">
                                 <img src="assets/images/gallery/gallery-football-match-sprint.jpg" alt="Inter-House Football Championship and Sprint on Green Turf" class="adv-gallery-img" loading="lazy">
-                                <div class="adv-gallery-card-badge">
-                                    <i class="fa-solid fa-futbol"></i>
-                                    <span>Football League &amp; Turf</span>
-                                </div>
                             </div>
                         </div>
 
@@ -839,10 +827,6 @@ require_once __DIR__.'/includes/header.php';
                         <div class="adv-gallery-card">
                             <div class="adv-gallery-img-box">
                                 <img src="assets/images/gallery/gallery-art-studio-origami-planes.jpg" alt="Art Studio Creative Origami Paper Airplanes Workshop" class="adv-gallery-img" loading="lazy">
-                                <div class="adv-gallery-card-badge">
-                                    <i class="fa-solid fa-paper-plane"></i>
-                                    <span>Art Studio &amp; Origami</span>
-                                </div>
                             </div>
                         </div>
 
@@ -850,10 +834,6 @@ require_once __DIR__.'/includes/header.php';
                         <div class="adv-gallery-card">
                             <div class="adv-gallery-img-box">
                                 <img src="assets/images/gallery/gallery-splash-pool-kids-play.jpg" alt="Young Children Splash Pool and Water Play Area with Slide" class="adv-gallery-img" loading="lazy">
-                                <div class="adv-gallery-card-badge">
-                                    <i class="fa-solid fa-water-ladder"></i>
-                                    <span>Splash Pool &amp; Play Arena</span>
-                                </div>
                             </div>
                         </div>
 
@@ -861,10 +841,6 @@ require_once __DIR__.'/includes/header.php';
                         <div class="adv-gallery-card">
                             <div class="adv-gallery-img-box">
                                 <img src="assets/images/gallery/gallery-football-juggling-boy.jpg" alt="Student Practicing Football Freestyle Ball Control" class="adv-gallery-img" loading="lazy">
-                                <div class="adv-gallery-card-badge">
-                                    <i class="fa-solid fa-medal"></i>
-                                    <span>Freestyle &amp; Ball Skills</span>
-                                </div>
                             </div>
                         </div>
 
@@ -872,10 +848,6 @@ require_once __DIR__.'/includes/header.php';
                         <div class="adv-gallery-card">
                             <div class="adv-gallery-img-box">
                                 <img src="assets/images/gallery/gallery-painted-hands-girl.jpg" alt="Young Student Showing Joyful Painted Hands on Lawn" class="adv-gallery-img" loading="lazy">
-                                <div class="adv-gallery-card-badge">
-                                    <i class="fa-solid fa-palette"></i>
-                                    <span>Creative Arts &amp; Expression</span>
-                                </div>
                             </div>
                         </div>
 
@@ -883,10 +855,6 @@ require_once __DIR__.'/includes/header.php';
                         <div class="adv-gallery-card">
                             <div class="adv-gallery-img-box">
                                 <img src="assets/images/gallery/gallery-gymnastics-cartwheel.jpg" alt="Student Performing Gymnastics Cartwheel on Lawn" class="adv-gallery-img" loading="lazy">
-                                <div class="adv-gallery-card-badge">
-                                    <i class="fa-solid fa-person-walking-dashed-line-arrow-right"></i>
-                                    <span>Gymnastics &amp; Tumbling</span>
-                                </div>
                             </div>
                         </div>
 
@@ -894,10 +862,6 @@ require_once __DIR__.'/includes/header.php';
                         <div class="adv-gallery-card">
                             <div class="adv-gallery-img-box">
                                 <img src="assets/images/gallery/gallery-parachute-lawn-building.jpg" alt="Primary Students Playing with Rainbow Parachute Before Campus Building" class="adv-gallery-img" loading="lazy">
-                                <div class="adv-gallery-card-badge">
-                                    <i class="fa-solid fa-shapes"></i>
-                                    <span>Joyful Teamwork &amp; Play</span>
-                                </div>
                             </div>
                         </div>
 
@@ -905,10 +869,6 @@ require_once __DIR__.'/includes/header.php';
                         <div class="adv-gallery-card">
                             <div class="adv-gallery-img-box">
                                 <img src="assets/images/gallery/gallery-classroom-learning.jpg" alt="Attentive Students in Classroom Learning Session" class="adv-gallery-img" loading="lazy">
-                                <div class="adv-gallery-card-badge">
-                                    <i class="fa-solid fa-chalkboard-user"></i>
-                                    <span>Smart Classroom Learning</span>
-                                </div>
                             </div>
                         </div>
 
@@ -916,10 +876,6 @@ require_once __DIR__.'/includes/header.php';
                         <div class="adv-gallery-card">
                             <div class="adv-gallery-img-box">
                                 <img src="assets/images/gallery/gallery-foundation-achievers.jpg" alt="Students and Faculty with IIT-JEE and NEET Foundation Banner" class="adv-gallery-img" loading="lazy">
-                                <div class="adv-gallery-card-badge">
-                                    <i class="fa-solid fa-graduation-cap"></i>
-                                    <span>IIT-JEE &amp; NEET Foundation</span>
-                                </div>
                             </div>
                         </div>
 

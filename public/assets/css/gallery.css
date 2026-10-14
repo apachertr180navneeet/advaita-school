@@ -1447,3 +1447,8 @@
         font-size: 1rem;
     }
 }
+
+/* Ensure no floating card badges appear */
+.adv-gallery-card-badge {
+    display: none !important;
+}
