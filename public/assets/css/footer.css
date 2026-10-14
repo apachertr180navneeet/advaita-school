@@ -44,8 +44,6 @@
 .adv-footer-brand-col {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
 }
 
 .adv-footer-logo-link {
@@ -53,7 +51,8 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    margin-bottom: 18px;
+    margin-bottom: 20px;
+    width: 100%;
     transition: opacity 0.25s ease;
 }
 
@@ -74,15 +73,14 @@
     color: #94A3B8;
     font-size: 0.9375rem;
     line-height: 1.65;
-    margin: 0 auto 20px auto;
-    max-width: 320px;
-    text-align: center;
+    margin: 0 0 22px 0;
+    max-width: 340px;
+    text-align: left;
 }
 
 .adv-footer-socials {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 12px;
 }
 
@@ -342,18 +340,24 @@ a.touch-link:hover {
 }
 
 @keyframes advHeartBeat {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
     }
+
     14% {
         transform: scale(1.28);
     }
+
     28% {
         transform: scale(1);
     }
+
     42% {
         transform: scale(1.2);
     }
+
     70% {
         transform: scale(1);
     }
@@ -503,7 +507,7 @@ a.touch-link:hover {
         grid-template-columns: 1fr;
         gap: 32px;
     }
-    
+
     .adv-footer-main {
         padding: 28px 0 24px;
     }
@@ -516,7 +520,7 @@ a.touch-link:hover {
     .adv-footer-map-card {
         max-width: 100%;
     }
-    
+
     .adv-footer-bottom-container {
         flex-direction: column;
         text-align: center;
