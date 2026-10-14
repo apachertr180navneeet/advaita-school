@@ -13,7 +13,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const prevBtn = slider.querySelector('.adv-slider-arrow.prev-arrow');
     const nextBtn = slider.querySelector('.adv-slider-arrow.next-arrow');
 
-    if (slides.length <= 1) return;
+    if (slides.length <= 1) {
+        if (prevBtn) prevBtn.style.display = 'none';
+        if (nextBtn) nextBtn.style.display = 'none';
+        const dotsWrap = slider.querySelector('.adv-slider-dots');
+        if (dotsWrap) dotsWrap.style.display = 'none';
+        return;
+    }
 
     let currentIndex = 0;
     let autoplayTimer = null;

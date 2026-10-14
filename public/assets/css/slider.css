@@ -70,10 +70,10 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(90deg, 
-        rgba(5, 22, 51, 0.75) 0%, 
-        rgba(5, 22, 51, 0.55) 28%, 
-        rgba(5, 22, 51, 0.22) 44%, 
-        transparent 60%
+        rgba(5, 22, 51, 0.85) 0%, 
+        rgba(5, 22, 51, 0.72) min(38%, 680px), 
+        rgba(5, 22, 51, 0.35) 55%, 
+        transparent 70%
     );
     z-index: 2;
     pointer-events: none;
@@ -90,7 +90,7 @@
 
 .adv-hero-dots-decor.top-left {
     top: clamp(16px, 4cqi, 36px);
-    left: clamp(24px, 4.5cqi, 55px);
+    left: max(24px, calc((100% - 1320px) / 2 + 24px));
     width: clamp(80px, 11cqi, 115px);
     height: clamp(34px, 4.5cqi, 46px);
 }
@@ -119,13 +119,13 @@
 }
 
 /* --------------------------------------------------------------------------
-   Hero Text Overlay (Left Positioned, Crisp Modern Educational UI)
+   Hero Text Overlay (Aligned with Site Container & About Section Grid)
    -------------------------------------------------------------------------- */
 .adv-hero-text-overlay {
     position: absolute;
     top: 50%;
-    left: clamp(24px, 4.8cqi, 55px);
-    margin-left: 25%;
+    left: max(24px, calc((100% - 1320px) / 2 + 24px));
+    margin-left: 0;
     transform: translateY(-50%);
     width: min(530px, 48cqi);
     z-index: 5;
@@ -230,6 +230,7 @@
     color: #F37021;
     letter-spacing: -0.3px;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+    font-size: clamp(1.25rem, 2.2cqi, 1.85rem);
 }
 
 /* Backward compatibility for previous classes */
@@ -978,11 +979,15 @@ p.adv-hero-lead-desc {
     }
     
     .adv-hero-text-overlay {
-        width: min(540px, 62cqi);
-        left: 20px;
+        width: min(520px, calc(100% - 48px));
+        left: 24px;
         margin-left: 0;
         padding: 0;
         gap: 10px;
+    }
+
+    .adv-hero-dots-decor.top-left {
+        left: 24px;
     }
     
     .adv-mobile-hero-cta-bar {
@@ -1035,10 +1040,11 @@ p.adv-hero-lead-desc {
         top: unset;
         left: unset;
         transform: none;
-        width: calc(100% - 32px);
-        max-width: 520px;
-        margin: 24px auto;
-        padding: 0;
+        width: 100%;
+        max-width: 100%;
+        margin: 24px 0;
+        padding: 0 16px;
+        box-sizing: border-box;
         border-radius: 0;
         box-shadow: none;
         background: transparent;
@@ -1048,8 +1054,28 @@ p.adv-hero-lead-desc {
         gap: 8px;
     }
 
+    .adv-hero-dots-decor.top-left {
+        display: none !important;
+    }
+
+    .adv-hero-taglines {
+        font-size: clamp(1.4rem, 5.5vw, 1.85rem);
+    }
+
+    .adv-hero-taglines .tagline-orange {
+        font-size: clamp(1.15rem, 4.2vw, 1.45rem);
+    }
+
+    p.adv-hero-lead-desc {
+        max-width: 100%;
+        font-size: 0.875rem;
+        line-height: 1.55;
+        margin-bottom: 16px;
+    }
+
     .adv-hero-actions-group {
         display: flex !important;
+        gap: 10px;
     }
 
     .adv-hero-sky-badge {
@@ -1105,8 +1131,16 @@ p.adv-hero-lead-desc {
 
 @media (max-width: 480px) {
     .adv-hero-text-overlay {
-        padding: 0;
-        margin: 16px auto;
+        padding: 0 16px;
+        margin: 16px 0;
+    }
+
+    .adv-hero-taglines {
+        font-size: clamp(1.28rem, 5.8vw, 1.55rem);
+    }
+
+    .adv-hero-taglines .tagline-orange {
+        font-size: clamp(1.05rem, 4.5vw, 1.25rem);
     }
 
     .adv-mobile-hero-cta-bar {
