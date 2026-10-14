@@ -50,12 +50,16 @@
 .adv-footer-brand-col {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .adv-footer-logo-link {
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
-    margin-bottom: 16px;
+    margin-bottom: 18px;
     transition: opacity 0.25s ease;
 }
 
@@ -64,25 +68,28 @@
 }
 
 .adv-footer-logo-img {
-    max-height: 52px;
+    max-height: 72px;
     width: auto;
     max-width: 100%;
     object-fit: contain;
     display: block;
+    margin: 0 auto;
 }
 
 .adv-footer-bio {
     color: #94A3B8;
-    font-size: 0.8125rem;
-    line-height: 1.6;
-    margin: 0 0 20px 0;
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    margin: 0 auto 20px auto;
     max-width: 320px;
+    text-align: center;
 }
 
 .adv-footer-socials {
     display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    gap: 12px;
 }
 
 .adv-footer-social-btn {

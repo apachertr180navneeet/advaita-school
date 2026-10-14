@@ -774,7 +774,7 @@
                     <div class="adv-gallery-grid">
                         @foreach($activeGalleryItems as $item)
                             <!-- Card {{ $loop->iteration }} -->
-                            <div class="adv-gallery-card">
+                            <div class="adv-gallery-card" data-category="{{ $item->category }}">
                                 <div class="adv-gallery-img-box">
                                     <img src="{{ $item->image_url }}" alt="{{ $item->caption ?? $item->category ?? 'Advaita School Campus' }}" class="adv-gallery-img {{ $item->custom_class }}" loading="lazy">
                                 </div>

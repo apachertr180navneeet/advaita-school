@@ -36,10 +36,10 @@
     <!-- Core Stylesheets -->
     <link rel="stylesheet" href="{{ asset('assets/css/header.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/slider.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/homepage.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/homepage.css') }}?v={{ file_exists(public_path('assets/css/homepage.css')) ? filemtime(public_path('assets/css/homepage.css')) : '1.0' }}">
     <link rel="stylesheet" href="{{ asset('assets/css/inner-pages.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/footer.css') }}?v={{ file_exists(public_path('assets/css/footer.css')) ? filemtime(public_path('assets/css/footer.css')) : '1.0' }}">
     
     <style>
         .adv-flash-alert-container {
