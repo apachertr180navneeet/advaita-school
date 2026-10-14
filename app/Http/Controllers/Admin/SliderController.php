@@ -40,6 +40,10 @@ class SliderController extends Controller
             'title_1' => ['required', 'string', 'max:255'],
             'title_2' => ['nullable', 'string', 'max:255'],
             'description' => ['nullable', 'string'],
+            'btn_1_text' => ['nullable', 'string', 'max:100'],
+            'btn_1_url' => ['nullable', 'string', 'max:255'],
+            'btn_2_text' => ['nullable', 'string', 'max:100'],
+            'btn_2_url' => ['nullable', 'string', 'max:255'],
             'image' => ['required', 'image', 'mimes:jpeg,png,jpg,webp,svg', 'max:5120'],
             'order' => ['nullable', 'integer', 'min:0'],
             'is_active' => ['nullable', 'boolean'],
@@ -49,6 +53,10 @@ class SliderController extends Controller
             'title_1' => $validated['title_1'],
             'title_2' => $validated['title_2'] ?? null,
             'description' => $validated['description'] ?? null,
+            'btn_1_text' => $validated['btn_1_text'] ?? null,
+            'btn_1_url' => $validated['btn_1_url'] ?? null,
+            'btn_2_text' => $validated['btn_2_text'] ?? null,
+            'btn_2_url' => $validated['btn_2_url'] ?? null,
             'order' => $validated['order'] ?? ((Slider::max('order') ?? 0) + 1),
             'is_active' => $request->boolean('is_active', true),
         ];
@@ -86,6 +94,10 @@ class SliderController extends Controller
             'title_1' => ['required', 'string', 'max:255'],
             'title_2' => ['nullable', 'string', 'max:255'],
             'description' => ['nullable', 'string'],
+            'btn_1_text' => ['nullable', 'string', 'max:100'],
+            'btn_1_url' => ['nullable', 'string', 'max:255'],
+            'btn_2_text' => ['nullable', 'string', 'max:100'],
+            'btn_2_url' => ['nullable', 'string', 'max:255'],
             'image' => ['nullable', 'image', 'mimes:jpeg,png,jpg,webp,svg', 'max:5120'],
             'order' => ['nullable', 'integer', 'min:0'],
             'is_active' => ['nullable', 'boolean'],
@@ -94,6 +106,10 @@ class SliderController extends Controller
         $slider->title_1 = $validated['title_1'];
         $slider->title_2 = $validated['title_2'] ?? null;
         $slider->description = $validated['description'] ?? null;
+        $slider->btn_1_text = $validated['btn_1_text'] ?? null;
+        $slider->btn_1_url = $validated['btn_1_url'] ?? null;
+        $slider->btn_2_text = $validated['btn_2_text'] ?? null;
+        $slider->btn_2_url = $validated['btn_2_url'] ?? null;
         $slider->order = $validated['order'] ?? $slider->order;
         $slider->is_active = $request->boolean('is_active');
 

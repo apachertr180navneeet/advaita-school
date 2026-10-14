@@ -23,19 +23,9 @@
                     <div class="adv-slide-banner-wrap">
                         <img src="{{ $slide->image_url }}" alt="{{ $slide->title_1 }} {{ $slide->title_2 }}" class="adv-slide-banner-img" loading="{{ $loop->first ? 'eager' : 'lazy' }}">
                         
-                        <!-- Decorative Orange Arc Accents (Top Left & Bottom Left) -->
-                        <div class="adv-hero-decor-arc top-left" aria-hidden="true">
-                            <svg viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="0" cy="0" r="160" stroke="#F37021" stroke-width="3.5" stroke-opacity="0.85"/>
-                                <circle cx="0" cy="0" r="220" stroke="#F37021" stroke-width="2" stroke-opacity="0.45"/>
-                            </svg>
-                        </div>
-                        <div class="adv-hero-decor-arc bottom-left" aria-hidden="true">
-                            <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="0" cy="320" r="190" stroke="#F37021" stroke-width="14" stroke-opacity="0.85"/>
-                                <circle cx="0" cy="320" r="255" stroke="#F37021" stroke-width="3" stroke-opacity="0.45"/>
-                            </svg>
-                        </div>
+                        <!-- Dot Grid Matrix Accents (Top Left & Bottom Right) -->
+                        <div class="adv-hero-dots-decor top-left" aria-hidden="true"></div>
+                        <div class="adv-hero-dots-decor bottom-right" aria-hidden="true"></div>
 
                         <!-- Premium Hero Content Overlay (Text Rendered on Banner Image) -->
                         <div class="adv-hero-text-overlay">
@@ -47,6 +37,9 @@
                                 @endif
                             </h1>
 
+                            <!-- Orange Underline Accent Bar -->
+                            <div class="adv-hero-title-bar" aria-hidden="true"></div>
+
                             <!-- Descriptive Paragraph -->
                             @if($slide->description)
                                 <p class="adv-hero-lead-desc">
@@ -56,15 +49,15 @@
 
                             <!-- Interactive CTA Action Buttons -->
                             <div class="adv-hero-actions-group">
-                                <a href="#admissions" class="adv-hero-real-btn adv-hero-btn-apply" title="Apply for Admission">
-                                    <span>Apply for Admission</span>
+                                <a href="{{ $slide->button_1_url }}" class="adv-hero-real-btn adv-hero-btn-apply" title="{{ $slide->button_1_text }}">
+                                    <span>{{ $slide->button_1_text }}</span>
                                     <i class="fa-solid fa-arrow-right"></i>
                                 </a>
-                                <a href="#about" class="adv-hero-real-btn adv-hero-btn-explore" title="Explore Our School">
+                                <a href="{{ $slide->button_2_url }}" class="adv-hero-real-btn adv-hero-btn-explore" title="{{ $slide->button_2_text }}">
                                     <span class="adv-hero-play-circle" aria-hidden="true">
                                         <i class="fa-solid fa-play"></i>
                                     </span>
-                                    <span>Explore Our School</span>
+                                    <span>{{ $slide->button_2_text }}</span>
                                 </a>
                             </div>
                         </div>
@@ -85,24 +78,16 @@
                     <div class="adv-slide-banner-wrap">
                         <img src="{{ asset('assets/images/hero-slider-campus.png') }}" alt="Advaita School of Excellence - Building Curious Minds. Shaping Confident Futures." class="adv-slide-banner-img" loading="eager">
                         
-                        <div class="adv-hero-decor-arc top-left" aria-hidden="true">
-                            <svg viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="0" cy="0" r="160" stroke="#F37021" stroke-width="3.5" stroke-opacity="0.85"/>
-                                <circle cx="0" cy="0" r="220" stroke="#F37021" stroke-width="2" stroke-opacity="0.45"/>
-                            </svg>
-                        </div>
-                        <div class="adv-hero-decor-arc bottom-left" aria-hidden="true">
-                            <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="0" cy="320" r="190" stroke="#F37021" stroke-width="14" stroke-opacity="0.85"/>
-                                <circle cx="0" cy="320" r="255" stroke="#F37021" stroke-width="3" stroke-opacity="0.45"/>
-                            </svg>
-                        </div>
+                        <!-- Dot Grid Matrix Accents (Top Left & Bottom Right) -->
+                        <div class="adv-hero-dots-decor top-left" aria-hidden="true"></div>
+                        <div class="adv-hero-dots-decor bottom-right" aria-hidden="true"></div>
 
                         <div class="adv-hero-text-overlay">
                             <h1 class="adv-hero-taglines">
                                 <span class="tagline-white">Building Curious Minds.</span>
                                 <span class="tagline-orange">Shaping Confident Futures.</span>
                             </h1>
+                            <div class="adv-hero-title-bar" aria-hidden="true"></div>
                             <p class="adv-hero-lead-desc">
                                 Where knowledge meets values, creativity meets opportunity, and every child is encouraged to discover their true potential.
                             </p>

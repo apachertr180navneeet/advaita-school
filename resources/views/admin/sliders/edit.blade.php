@@ -387,10 +387,53 @@
             </div>
         </div>
 
-        <!-- 2. Slider Image & Size Section -->
+        <!-- 2. Call-to-Action Buttons -->
         <div class="form-container-card">
             <h3 style="font-size: 16px; font-weight: 800; color: var(--admin-navy); margin-bottom: 20px; display: flex; align-items: center; gap: 8px;">
-                <i class="fa-solid fa-image" style="color: var(--admin-orange);"></i> 2. Slider Image & Size Inspection
+                <i class="fa-solid fa-link" style="color: var(--admin-orange);"></i> 2. Call-to-Action Buttons
+            </h3>
+
+            <div class="form-grid-2">
+                <!-- Button 1 Text -->
+                <div class="form-group">
+                    <label class="form-label">
+                        Button 1 Label
+                        <span class="helper-hint">(Primary Orange Pill Button)</span>
+                    </label>
+                    <input type="text" name="btn_1_text" class="form-control" value="{{ old('btn_1_text', $slider->btn_1_text ?? 'Apply for Admission') }}" placeholder="Apply for Admission">
+                </div>
+
+                <!-- Button 1 URL -->
+                <div class="form-group">
+                    <label class="form-label">
+                        Button 1 URL / Anchor Link
+                    </label>
+                    <input type="text" name="btn_1_url" class="form-control" value="{{ old('btn_1_url', $slider->btn_1_url ?? '#admissions') }}" placeholder="#admissions">
+                </div>
+
+                <!-- Button 2 Text -->
+                <div class="form-group">
+                    <label class="form-label">
+                        Button 2 Label
+                        <span class="helper-hint">(Secondary Frosted Pill Button)</span>
+                    </label>
+                    <input type="text" name="btn_2_text" class="form-control" value="{{ old('btn_2_text', $slider->btn_2_text ?? 'Explore Our School') }}" placeholder="Explore Our School">
+                </div>
+
+                <!-- Button 2 URL -->
+                <div class="form-group">
+                    <label class="form-label">
+                        Button 2 URL / Anchor Link
+                    </label>
+                    <input type="text" name="btn_2_url" class="form-control" value="{{ old('btn_2_url', $slider->btn_2_url ?? '#about') }}" placeholder="#about">
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Slider Image & Size Section -->
+        <div class="form-container-card">
+            <h3 style="font-size: 16px; font-weight: 800; color: var(--admin-navy); margin-bottom: 20px; display: flex; align-items: center; gap: 8px;">
+                <i class="fa-solid fa-image" style="color: var(--admin-orange);"></i> 3. Slider Image & Size Inspection
             </h3>
 
             <!-- Slider Image Upload -->
@@ -424,7 +467,7 @@
                     <div class="upload-guide-banner">
                         <i class="fa-solid fa-ruler-combined"></i>
                         <div>
-                            <strong>Recommended Size:</strong> 1920 × 800 px (or 1024 × 540 px, ~16:9 aspect ratio)<br>
+                            <strong>Recommended Size:</strong> 1024 × 460 px (or 1920 × 860 px, ~2.2:1 aspect ratio)<br>
                             <span style="font-size: 11.5px; color: #3B82F6;">Leave empty to keep existing image. Allowed: JPG, PNG, WebP (Max 5MB)</span>
                         </div>
                     </div>

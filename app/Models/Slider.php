@@ -18,6 +18,38 @@ class Slider extends Model
     ];
 
     /**
+     * Primary action button label (default: 'Apply for Admission').
+     */
+    public function getButton1TextAttribute(): string
+    {
+        return ! empty($this->btn_1_text) ? $this->btn_1_text : 'Apply for Admission';
+    }
+
+    /**
+     * Primary action button link (default: '#admissions').
+     */
+    public function getButton1UrlAttribute(): string
+    {
+        return ! empty($this->btn_1_url) ? $this->btn_1_url : '#admissions';
+    }
+
+    /**
+     * Secondary action button label (default: 'Explore Our School').
+     */
+    public function getButton2TextAttribute(): string
+    {
+        return ! empty($this->btn_2_text) ? $this->btn_2_text : 'Explore Our School';
+    }
+
+    /**
+     * Secondary action button link (default: '#about').
+     */
+    public function getButton2UrlAttribute(): string
+    {
+        return ! empty($this->btn_2_url) ? $this->btn_2_url : '#about';
+    }
+
+    /**
      * Get the full URL for the main slide banner image.
      */
     public function getImageUrlAttribute(): string
