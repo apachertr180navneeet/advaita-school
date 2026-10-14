@@ -15,7 +15,7 @@
         
         <!-- Main 5-Column Content Area -->
         <div class="adv-footer-main">
-            <div class="adv-container adv-footer-container">
+            <div class="adv-footer-container">
                 
                 <!-- Column 1: School Brand & Identity -->
                 <div class="adv-footer-brand-col">
@@ -157,7 +157,7 @@
 
         <!-- Bottom Copyright Strip -->
         <div class="adv-footer-bottom-strip">
-            <div class="adv-container adv-footer-bottom-container">
+            <div class="adv-footer-bottom-container">
                 <div class="adv-footer-copy-text">
                     <span>&copy; <?php echo date('Y'); ?> Advaita School of Excellence, Parbhani. All rights reserved.</span>
                 </div>

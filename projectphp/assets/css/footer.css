@@ -28,13 +28,19 @@
     padding: 36px 0 28px 0;
 }
 
+.adv-footer-wrapper .adv-container {
+    max-width: 100%;
+    width: 100%;
+}
+
 .adv-footer-container {
-    max-width: 1360px;
-    margin: 0 auto;
-    padding: 0 24px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 clamp(20px, 3.5vw, 60px);
     display: grid;
     grid-template-columns: 1.4fr 0.85fr 0.95fr 1.35fr 1.05fr;
-    gap: 32px;
+    gap: clamp(24px, 2.5vw, 44px);
     align-items: start;
 }
 
@@ -70,7 +76,7 @@
     font-size: 0.8125rem;
     line-height: 1.6;
     margin: 0 0 20px 0;
-    max-width: 280px;
+    max-width: 320px;
 }
 
 .adv-footer-socials {
@@ -279,9 +285,10 @@ a.touch-link:hover {
 }
 
 .adv-footer-bottom-container {
-    max-width: 1360px;
-    margin: 0 auto;
-    padding: 0 24px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 clamp(20px, 3.5vw, 60px);
     display: flex;
     align-items: center;
     justify-content: space-between;
