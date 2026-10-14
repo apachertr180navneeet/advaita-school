@@ -19,103 +19,26 @@ require_once __DIR__.'/includes/header.php';
             <div class="adv-slider-wrapper">
 
                 <!-- ----------------------------------------------------
-                     SLIDE 1: Main Banner (10 Years of Excellence - Building Curious Minds)
-                     ---------------------------------------------------- -->
-                <!-- ----------------------------------------------------
-                     SLIDE 1: Main Banner (10 Years of Excellence - Building Curious Minds)
+                     SLIDE 1: Main Banner (Building Curious Minds. Shaping Confident Futures.)
                      ---------------------------------------------------- -->
                 <div class="adv-slide active" data-slide-index="0">
                     <div class="adv-slide-banner-wrap">
                         <img src="assets/images/hero-slider-campus.png" alt="Advaita School of Excellence - Building Curious Minds. Shaping Confident Futures." class="adv-slide-banner-img" loading="eager">
                         
-                        <!-- Decorative Orange Arc Accents (Top Left & Bottom Left) -->
-                        <div class="adv-hero-decor-arc top-left" aria-hidden="true">
-                            <svg viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="0" cy="0" r="160" stroke="#F37021" stroke-width="3.5" stroke-opacity="0.85"/>
-                                <circle cx="0" cy="0" r="220" stroke="#F37021" stroke-width="2" stroke-opacity="0.45"/>
-                            </svg>
-                        </div>
-                        <div class="adv-hero-decor-arc bottom-left" aria-hidden="true">
-                            <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="0" cy="320" r="190" stroke="#F37021" stroke-width="14" stroke-opacity="0.85"/>
-                                <circle cx="0" cy="320" r="255" stroke="#F37021" stroke-width="3" stroke-opacity="0.45"/>
-                            </svg>
-                        </div>
+                        <!-- Dot Grid Matrix Accents (Top Left & Bottom Right) -->
+                        <div class="adv-hero-dots-decor top-left" aria-hidden="true"></div>
+                        <div class="adv-hero-dots-decor bottom-right" aria-hidden="true"></div>
 
                         <!-- Premium Hero Content Overlay (Text Rendered on Banner Image) -->
                         <div class="adv-hero-text-overlay">
-                            
-
-
                             <!-- 2. Tagline: Building Curious Minds. Shaping Confident Futures. -->
                             <h1 class="adv-hero-taglines">
                                 <span class="tagline-white">Building Curious Minds.</span>
                                 <span class="tagline-orange">Shaping Confident Futures.</span>
                             </h1>
 
-                            <!-- 3. Descriptive Paragraph -->
-                            <p class="adv-hero-lead-desc">
-                                Where knowledge meets values, creativity meets opportunity, and every child is encouraged to discover their true potential.
-                            </p>
-
-                            <!-- 4. Interactive CTA Action Buttons -->
-                            <div class="adv-hero-actions-group">
-                                <a href="#admissions" class="adv-hero-real-btn adv-hero-btn-apply" title="Apply for Admission">
-                                    <span>Apply for Admission</span>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                                <a href="#about" class="adv-hero-real-btn adv-hero-btn-explore" title="Explore Our School">
-                                    <span class="adv-hero-play-circle" aria-hidden="true">
-                                        <i class="fa-solid fa-play"></i>
-                                    </span>
-                                    <span>Explore Our School</span>
-                                </a>
-                            </div>
-
-                        </div>
-
-                        <!-- Right Sky Script Tag Accent -->
-                        <div class="adv-hero-sky-badge" aria-hidden="true">
-                            <span class="adv-sky-script">Excellence.<br>In Every Child</span>
-                            <svg class="adv-sky-swoosh" viewBox="0 0 140 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M4 16 C 45 4, 95 4, 136 18" stroke="#F37021" stroke-width="3" stroke-linecap="round"/>
-                            </svg>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- ----------------------------------------------------
-                     SLIDE 2: Secondary Banner (10 Years of Excellence - Building Curious Minds)
-                     ---------------------------------------------------- -->
-                <div class="adv-slide" data-slide-index="1">
-                    <div class="adv-slide-banner-wrap">
-                        <img src="assets/images/hero-slider-campus.png" alt="Advaita School of Excellence - Building Curious Minds. Shaping Confident Futures." class="adv-slide-banner-img" loading="lazy">
-                        
-                        <!-- Decorative Orange Arc Accents (Top Left & Bottom Left) -->
-                        <div class="adv-hero-decor-arc top-left" aria-hidden="true">
-                            <svg viewBox="0 0 260 260" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="0" cy="0" r="160" stroke="#F37021" stroke-width="3.5" stroke-opacity="0.85"/>
-                                <circle cx="0" cy="0" r="220" stroke="#F37021" stroke-width="2" stroke-opacity="0.45"/>
-                            </svg>
-                        </div>
-                        <div class="adv-hero-decor-arc bottom-left" aria-hidden="true">
-                            <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="0" cy="320" r="190" stroke="#F37021" stroke-width="14" stroke-opacity="0.85"/>
-                                <circle cx="0" cy="320" r="255" stroke="#F37021" stroke-width="3" stroke-opacity="0.45"/>
-                            </svg>
-                        </div>
-
-                        <!-- Premium Hero Content Overlay (Text Rendered on Banner Image) -->
-                        <div class="adv-hero-text-overlay">
-                            
-
-
-                            <!-- 2. Tagline: Building Curious Minds. Shaping Confident Futures. -->
-                            <h1 class="adv-hero-taglines">
-                                <span class="tagline-white">Building Curious Minds.</span>
-                                <span class="tagline-orange">Shaping Confident Futures.</span>
-                            </h1>
+                            <!-- Orange Underline Accent Bar -->
+                            <div class="adv-hero-title-bar" aria-hidden="true"></div>
 
                             <!-- 3. Descriptive Paragraph -->
                             <p class="adv-hero-lead-desc">
@@ -163,6 +86,7 @@ require_once __DIR__.'/includes/header.php';
             <div class="adv-slider-dots" role="tablist" aria-label="Slide Selection">
                 <button type="button" class="adv-slider-dot active" role="tab" aria-selected="true" aria-label="Slide 1"></button>
                 <button type="button" class="adv-slider-dot" role="tab" aria-selected="false" aria-label="Slide 2"></button>
+                <button type="button" class="adv-slider-dot" role="tab" aria-selected="false" aria-label="Slide 3"></button>
             </div>
         </div>
     </section>

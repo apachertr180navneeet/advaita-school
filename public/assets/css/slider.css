@@ -125,6 +125,7 @@
     position: absolute;
     top: 50%;
     left: clamp(24px, 4.8cqi, 55px);
+    margin-left: 25%;
     transform: translateY(-50%);
     width: min(530px, 48cqi);
     z-index: 5;
