@@ -57,6 +57,13 @@ class PageContentController extends Controller
                 'about_cta_eyebrow' => ['label' => 'Admission CTA Eyebrow', 'type' => 'text', 'default' => 'BE A PART OF ADVAITA'],
                 'about_cta_headline' => ['label' => 'Admission CTA Headline', 'type' => 'text', 'default' => "Together, let's build brighter tomorrows."],
                 'about_cta_subtext' => ['label' => 'Admission CTA Subtext', 'type' => 'textarea', 'default' => 'Admissions are open for CBSE, NEET/IIT Foundation & Competitive Exam Programmes.'],
+
+                // Section Imagery
+                'about_hero_image' => ['label' => 'Hero Campus Building Image', 'type' => 'image', 'default' => 'assets/images/about-hero-building.jpg'],
+                'about_story_image' => ['label' => 'Student Photo (Built on Values)', 'type' => 'image', 'default' => 'assets/images/about-philosophy-student.jpg'],
+                'about_philosophy_image' => ['label' => 'Classroom Learning Photo (Education for Life)', 'type' => 'image', 'default' => 'assets/images/about-story-student.jpg'],
+                'about_campus_image' => ['label' => 'Campus Courtyard Photo (Campus Showcase)', 'type' => 'image', 'default' => 'assets/images/about-campus-courtyard.jpg'],
+                'about_cta_image' => ['label' => 'Admissions Banner Students Image', 'type' => 'image', 'default' => 'assets/images/about-cta-students-trio.png'],
             ],
         ],
         'vision' => [
@@ -85,6 +92,7 @@ class PageContentController extends Controller
                 'chairman_welcome' => ['label' => 'Message Heading', 'type' => 'text', 'default' => 'A Message of Hope and Ambition'],
                 'chairman_message_p1' => ['label' => 'Message Paragraph 1', 'type' => 'textarea', 'default' => 'Advaita School of Excellence was born from a deep conviction that children in Parbhani deserve the finest educational opportunities — matching the best in the nation while staying rooted in our timeless cultural values.'],
                 'chairman_message_p2' => ['label' => 'Message Paragraph 2', 'type' => 'textarea', 'default' => 'Over the years, our campus has flourished into a vibrant sanctuary of learning, discovery, and sportsmanship. We invest continuously in modern labs, world-class teachers, and a secure environment so parents can entrust us with their children with utmost confidence.'],
+                'chairman_image' => ['label' => 'Chairman Portrait Photo', 'type' => 'image', 'default' => 'assets/images/chairman-real.png'],
             ],
         ],
         'principal' => [
@@ -100,6 +108,7 @@ class PageContentController extends Controller
                 'principal_welcome' => ['label' => 'Welcome Heading', 'type' => 'text', 'default' => 'Welcoming You to Our Family'],
                 'principal_message_p1' => ['label' => 'Message Paragraph 1', 'type' => 'textarea', 'default' => 'It is with immense joy that I welcome you to Advaita School of Excellence. As educators, our primary purpose is to provide a joyful, safe, and academically rigorous space where children are excited to come every single morning.'],
                 'principal_message_p2' => ['label' => 'Message Paragraph 2', 'type' => 'textarea', 'default' => 'With the integration of CBSE modern learning guidelines, robotics, and co-curricular programs, our students excel not only in exams but also in teamwork, public speaking, and problem solving.'],
+                'principal_image' => ['label' => 'Principal Portrait Photo', 'type' => 'image', 'default' => 'assets/images/principal-desk.jpg'],
             ],
         ],
         'academics' => [
@@ -208,8 +217,26 @@ class PageContentController extends Controller
         }
 
         $fields = $this->sectionsMap[$sectionKey]['fields'];
+        $uploadDir = public_path('assets/images/uploads');
+        if (! file_exists($uploadDir)) {
+            mkdir($uploadDir, 0755, true);
+        }
+
         foreach ($fields as $fieldKey => $fConfig) {
-            if ($request->has($fieldKey)) {
+            $fileInputKey = $fieldKey.'_file';
+            if ($request->hasFile($fileInputKey)) {
+                $file = $request->file($fileInputKey);
+                $ext = $file->getClientOriginalExtension() ?: 'jpg';
+                $cleanName = 'page_'.$sectionKey.'_'.str_replace($sectionKey.'_', '', $fieldKey).'_'.time().'.'.$ext;
+                $file->move($uploadDir, $cleanName);
+                Setting::set($fieldKey, 'assets/images/uploads/'.$cleanName);
+            } elseif ($request->hasFile($fieldKey)) {
+                $file = $request->file($fieldKey);
+                $ext = $file->getClientOriginalExtension() ?: 'jpg';
+                $cleanName = 'page_'.$sectionKey.'_'.str_replace($sectionKey.'_', '', $fieldKey).'_'.time().'.'.$ext;
+                $file->move($uploadDir, $cleanName);
+                Setting::set($fieldKey, 'assets/images/uploads/'.$cleanName);
+            } elseif ($request->filled($fieldKey)) {
                 Setting::set($fieldKey, trim((string) $request->input($fieldKey)));
             }
         }

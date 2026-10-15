@@ -96,6 +96,13 @@ class PageController extends Controller
             'cta_eyebrow' => Setting::get('about_cta_eyebrow', 'BE A PART OF ADVAITA'),
             'cta_headline' => Setting::get('about_cta_headline', "Together, let's build brighter tomorrows."),
             'cta_subtext' => Setting::get('about_cta_subtext', 'Admissions are open for CBSE, NEET/IIT Foundation & Competitive Exam Programmes.'),
+
+            // Section Images
+            'hero_image' => Setting::get('about_hero_image', 'assets/images/about-hero-building.jpg'),
+            'story_image' => Setting::get('about_story_image', 'assets/images/about-philosophy-student.jpg'),
+            'philosophy_image' => Setting::get('about_philosophy_image', 'assets/images/about-story-student.jpg'),
+            'campus_image' => Setting::get('about_campus_image', 'assets/images/about-campus-courtyard.jpg'),
+            'cta_image' => Setting::get('about_cta_image', 'assets/images/about-cta-students-trio.png'),
         ];
 
         return view('pages.about-us', compact('seo', 'content'));
@@ -136,6 +143,7 @@ class PageController extends Controller
             'chairman_welcome' => Setting::get('chairman_welcome', 'A Message of Hope and Ambition'),
             'chairman_message_p1' => Setting::get('chairman_message_p1', 'Advaita School of Excellence was born from a deep conviction that children in Parbhani deserve the finest educational opportunities — matching the best in the nation while staying rooted in our timeless cultural values.'),
             'chairman_message_p2' => Setting::get('chairman_message_p2', 'Over the years, our campus has flourished into a vibrant sanctuary of learning, discovery, and sportsmanship. We invest continuously in modern labs, world-class teachers, and a secure environment so parents can entrust us with their children with utmost confidence.'),
+            'chairman_image' => Setting::get('chairman_image', 'assets/images/chairman-real.png'),
         ];
 
         return view('pages.chairmans-desk', compact('seo', 'content'));
@@ -157,6 +165,7 @@ class PageController extends Controller
             'principal_welcome' => Setting::get('principal_welcome', 'Welcoming You to Our Family'),
             'principal_message_p1' => Setting::get('principal_message_p1', 'It is with immense joy that I welcome you to Advaita School of Excellence. As educators, our primary purpose is to provide a joyful, safe, and academically rigorous space where children are excited to come every single morning.'),
             'principal_message_p2' => Setting::get('principal_message_p2', 'With the integration of CBSE modern learning guidelines, robotics, and co-curricular programs, our students excel not only in exams but also in teamwork, public speaking, and problem solving.'),
+            'principal_image' => Setting::get('principal_image', 'assets/images/principal-desk.jpg'),
         ];
 
         return view('pages.principals-desk', compact('seo', 'content'));

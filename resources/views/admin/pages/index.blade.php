@@ -96,20 +96,23 @@
             </div>
         </div>
 
-        <form action="{{ route('admin.pages.update') }}" method="POST" id="pageContentForm">
+        <form action="{{ route('admin.pages.update') }}" method="POST" id="pageContentForm" enctype="multipart/form-data">
             @csrf
             @method('PATCH')
             <input type="hidden" name="section_key" value="{{ $selectedKey }}">
 
             @php
                 // Categorize fields into Hero, Stats, Profile/Quote, and General
+                $imageFields = [];
                 $heroFields = [];
                 $statFields = [];
                 $quoteFields = [];
                 $generalFields = [];
 
                 foreach ($currentSection['fields'] as $fKey => $fConfig) {
-                    if (str_contains($fKey, '_stat_') || str_starts_with($fKey, 'stat_')) {
+                    if (($fConfig['type'] ?? '') === 'image' || str_contains($fKey, '_image')) {
+                        $imageFields[$fKey] = $fConfig;
+                    } elseif (str_contains($fKey, '_stat_') || str_starts_with($fKey, 'stat_')) {
                         $statFields[$fKey] = $fConfig;
                     } elseif (str_contains($fKey, '_hero_') || str_contains($fKey, 'badge') || str_contains($fKey, 'vision_') || str_contains($fKey, 'mission_')) {
                         $heroFields[$fKey] = $fConfig;
@@ -122,6 +125,73 @@
             @endphp
 
             <div class="d-flex flex-column gap-20">
+
+                <!-- 1. Section Imagery & Visual Media Uploads -->
+                @if(count($imageFields) > 0)
+                <div class="field-group-card" id="media-section">
+                    <div class="fgc-header">
+                        <div class="fgc-header-left">
+                            <div class="fgc-icon icon-badge-orange">
+                                <i class="fa-solid fa-camera-retro"></i>
+                            </div>
+                            <div>
+                                <h3 class="fgc-title">Page Photography &amp; Visual Media Uploads</h3>
+                                <span class="fgc-subtitle">Upload new photos, replace active visuals, or adjust image paths with instant live previews</span>
+                            </div>
+                        </div>
+                        <span class="sections-card-badge">{{ count($imageFields) }} Active Images</span>
+                    </div>
+
+                    <div class="d-flex flex-column gap-18">
+                        @foreach($imageFields as $fKey => $fConfig)
+                        <div class="image-uploader-card mb-0">
+                            <div class="current-img-box">
+                                <img src="{{ asset($fConfig['value']) }}" 
+                                     alt="{{ $fConfig['label'] }}" 
+                                     id="preview_{{ $fKey }}"
+                                     onerror="this.onerror=null;this.src='{{ asset('assets/images/logo.png') }}';">
+                            </div>
+
+                            <div>
+                                <div class="d-flex align-items-center justify-content-between mb-6">
+                                    <label for="{{ $fKey }}" class="text-navy fs-13 font-bold mb-0">
+                                        {{ $fConfig['label'] }}
+                                    </label>
+                                    <span class="badge-blue-pill">Live on {{ $currentSection['name'] }}</span>
+                                </div>
+                                <div class="text-muted fs-11 mb-10">
+                                    Active Source: <code class="text-navy font-semibold">{{ $fConfig['value'] }}</code>
+                                </div>
+
+                                <div class="upload-dropzone">
+                                    <input type="file" 
+                                           name="{{ $fKey }}_file" 
+                                           id="{{ $fKey }}_file" 
+                                           accept="image/*"
+                                           onchange="if(this.files[0]){const r=new FileReader();r.onload=(e)=>{document.getElementById('preview_{{ $fKey }}').src=e.target.result;};r.readAsDataURL(this.files[0]);}">
+                                    <i class="fa-solid fa-cloud-arrow-up fs-24 text-orange mb-6"></i>
+                                    <div class="text-navy fs-13 font-bold">
+                                        Click or drag new image here to upload
+                                    </div>
+                                    <div class="text-muted fs-11">
+                                        JPG, PNG, WEBP supported. File is saved and activated upon clicking Save below.
+                                    </div>
+                                </div>
+
+                                <div class="mt-8">
+                                    <input type="text" 
+                                           name="{{ $fKey }}" 
+                                           id="{{ $fKey }}" 
+                                           value="{{ old($fKey, $fConfig['value']) }}" 
+                                           class="form-control-clean fs-12 text-muted" 
+                                           placeholder="Path override (e.g. assets/images/filename.jpg)">
+                                </div>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+                @endif
 
                 <!-- Hero & Heading Group -->
                 @if(count($heroFields) > 0)

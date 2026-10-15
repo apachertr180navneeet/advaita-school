@@ -153,7 +153,7 @@
 
                         <div class="chairman-profile-card">
                             <div class="chairman-profile-photo-wrap">
-                                <img src="{{ asset('assets/images/chairman-real.png') }}" alt="Shri. Vishal Vishal Wattamwar - Chairman" class="chairman-profile-photo" loading="lazy">
+                                <img src="{{ asset($content['chairman_image'] ?? 'assets/images/chairman-real.png') }}" alt="Shri. Vishal Vishal Wattamwar - Chairman" class="chairman-profile-photo" loading="lazy">
                             </div>
                             <div class="chairman-profile-info">
                                 <h3 class="chairman-name">{{ $content['chairman_name'] ?? 'Shri. Vishal Wattamwar' }}</h3>

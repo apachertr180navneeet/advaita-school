@@ -12,7 +12,7 @@
         <div class="about-hero-canvas">
             <!-- Background Image & Sky on the Right -->
             <div class="about-hero-bg-visual">
-                <img src="{{ asset('assets/images/about-hero-building.jpg') }}" alt="Advaita School of Excellence Campus" class="about-hero-bg-img" loading="eager">
+                <img src="{{ asset($content['hero_image'] ?? 'assets/images/about-hero-building.jpg') }}" alt="Advaita School of Excellence Campus" class="about-hero-bg-img" loading="eager">
                 <!-- Floating Script Badge in Sky -->
                 <div class="about-hero-script-tag">
                     <span class="script-title">More<br>Than A School</span>
@@ -136,7 +136,7 @@
                 <!-- Left: Student Visual with Floating Badge -->
                 <div class="about-story-visual-wrap">
                     <div class="about-story-frame">
-                        <img src="{{ asset('assets/images/about-philosophy-student.jpg') }}" alt="Student of Advaita School of Excellence" class="about-story-img" loading="lazy">
+                        <img src="{{ asset($content['story_image'] ?? 'assets/images/about-philosophy-student.jpg') }}" alt="Student of Advaita School of Excellence" class="about-story-img" loading="lazy">
                         <!-- Floating Bottom Badge -->
                         <div class="about-story-floating-badge">
                             <div class="story-badge-trophy">
@@ -259,7 +259,7 @@
     <section class="about-philosophy-section">
         <div class="about-section-container">
             <div class="about-philosophy-grid">
-                <!-- Left: Content -->
+                <!-- Left: Content & Interactive Feature Pills -->
                 <div class="about-philosophy-content">
                     <span class="about-eyebrow">— {{ $content['philosophy_eyebrow'] ?? 'PREPARING FOR A BRIGHTER TOMORROW' }} —</span>
                     <h2 class="about-philosophy-title">
@@ -269,17 +269,9 @@
                     <p class="about-philosophy-desc">
                         {{ $content['philosophy_desc'] ?? 'We integrate CBSE academics with a focused NEET/IIT foundation and training for various competitive exams. Our student-centric approach ensures conceptual clarity, critical thinking, and real-world application — helping students achieve success in academics and beyond.' }}
                     </p>
-                    <div class="about-philosophy-action">
-                        <a href="{{ route('home') }}#academics" class="about-btn-orange">
-                            <span>Our Academics</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
 
-                <!-- Right: 6 Feature Pills Stack -->
-                <div class="about-philosophy-pills-col">
-                    <div class="about-philosophy-pills-stack">
+                    <!-- 6 Feature Pills in Clean 2-Column Grid -->
+                    <div class="about-philosophy-pills-grid">
                         <div class="philosophy-pill-item">
                             <span class="pill-badge-icon badge-blue"><i class="fa-solid fa-check"></i></span>
                             <span class="pill-item-text">NEET Foundation</span>
@@ -303,6 +295,31 @@
                         <div class="philosophy-pill-item">
                             <span class="pill-badge-icon badge-orange"><i class="fa-solid fa-circle-dot"></i></span>
                             <span class="pill-item-text">Future-Ready Skills</span>
+                        </div>
+                    </div>
+
+                    <div class="about-philosophy-action">
+                        <a href="{{ route('home') }}#academics" class="about-btn-orange">
+                            <span>Our Academics</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Classroom Learning Visual with Accent Frame & Floating Badge -->
+                <div class="about-philosophy-visual-wrap">
+                    <div class="about-philosophy-accent-border"></div>
+                    <div class="about-philosophy-frame">
+                        <img src="{{ asset($content['philosophy_image'] ?? 'assets/images/about-story-student.jpg') }}" alt="Students in classroom engaged in interactive learning at Advaita School of Excellence" class="about-philosophy-img" loading="lazy">
+                    </div>
+                    <!-- Floating Classroom Badge -->
+                    <div class="about-philosophy-floating-badge">
+                        <div class="about-philosophy-badge-icon">
+                            <i class="fa-solid fa-lightbulb"></i>
+                        </div>
+                        <div class="about-philosophy-badge-text">
+                            <span class="about-philosophy-badge-title">Interactive Learning</span>
+                            <span class="about-philosophy-badge-sub">Conceptual Clarity &amp; Beyond Textbooks</span>
                         </div>
                     </div>
                 </div>
@@ -409,11 +426,11 @@
                 <div class="about-campus-visual-wrap">
                     <div class="about-campus-accent-border"></div>
                     <div class="about-campus-frame">
-                        <img src="{{ asset('assets/images/about-campus-courtyard.jpg') }}" alt="Advaita School Modern Campus Courtyard" class="about-campus-img" loading="lazy">
+                        <img src="{{ asset($content['campus_image'] ?? 'assets/images/about-campus-courtyard.jpg') }}" alt="Advaita School Modern Campus Courtyard" class="about-campus-img" loading="lazy">
                     </div>
                     <!-- Floating Campus Badge -->
                     <div class="about-floating-campus-card">
-                        <img src="{{ asset('assets/images/about-campus-courtyard.jpg') }}" alt="Modern Campus" class="campus-thumb">
+                        <img src="{{ asset($content['campus_image'] ?? 'assets/images/about-campus-courtyard.jpg') }}" alt="Modern Campus" class="campus-thumb">
                         <div class="campus-thumb-text">
                             <strong>Modern Campus</strong>
                             <span>for Holistic Growth</span>
@@ -476,7 +493,7 @@
 
         <!-- Students Image -->
         <div class="students">
-            <img src="{{ asset('assets/images/about-cta-students-trio.png') }}" alt="Advaita Students" loading="lazy">
+            <img src="{{ asset($content['cta_image'] ?? 'assets/images/about-cta-students-trio.png') }}" alt="Advaita Students" loading="lazy">
         </div>
     </section>
 

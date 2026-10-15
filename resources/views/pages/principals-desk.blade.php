@@ -98,7 +98,7 @@
                                 <span class="vf-bracket vf-bracket-br" aria-hidden="true"></span>
                                 
                                 <div class="principal-avatar-wrap">
-                                    <img src="{{ asset('assets/images/principal-desk.jpg') }}" alt="Divine Mam - Principal, Advaita School of Excellence" class="principal-avatar-img" loading="eager">
+                                    <img src="{{ asset($content['principal_image'] ?? 'assets/images/principal-desk.jpg') }}" alt="Divine Mam - Principal, Advaita School of Excellence" class="principal-avatar-img" loading="eager">
                                 </div>
                             </div>
 
