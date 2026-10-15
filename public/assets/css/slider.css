@@ -13,9 +13,8 @@
 .adv-hero-slider-section {
     position: relative;
     width: 100%;
-    aspect-ratio: 1024 / 460;
+    aspect-ratio: 1024 / 373;
     height: auto;
-    min-height: 440px;
     max-height: 720px;
     background-color: #051633;
     overflow: hidden;
@@ -69,14 +68,26 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, 
-        rgba(5, 22, 51, 0.85) 0%, 
-        rgba(5, 22, 51, 0.72) min(38%, 680px), 
-        rgba(5, 22, 51, 0.35) 55%, 
-        transparent 70%
-    );
+    background: linear-gradient(90deg,
+            rgba(5, 22, 51, 0.85) 0%,
+            rgba(5, 22, 51, 0.72) min(38%, 680px),
+            rgba(5, 22, 51, 0.35) 55%,
+            transparent 70%);
     z-index: 2;
     pointer-events: none;
+}
+
+.adv-slide-banner-wrap.no-vignette::before,
+.adv-slide.slide-pure-banner .adv-slide-banner-wrap::before {
+    display: none !important;
+}
+
+.adv-slide-banner-wrap.no-vignette,
+.adv-slide.slide-pure-banner .adv-slide-banner-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #051633;
 }
 
 /* Dot Grid Matrix Patterns (Top Left & Bottom Right) */
@@ -106,8 +117,17 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: right center;
+    object-position: center center;
     display: block;
+}
+
+/* Standalone graphic banners fit 100% without cropping */
+.adv-slide-banner-wrap.no-vignette .adv-slide-banner-img,
+.adv-slide.slide-pure-banner .adv-slide-banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain !important;
+    object-position: center center !important;
 }
 
 .adv-slide-link {
@@ -293,7 +313,7 @@ p.adv-hero-lead-desc {
     line-height: 1.05;
     text-align: center;
     white-space: nowrap;
-    text-shadow: 
+    text-shadow:
         0 2px 10px rgba(255, 255, 255, 0.95),
         0 1px 3px rgba(0, 39, 92, 0.25);
 }
@@ -484,10 +504,13 @@ p.adv-hero-lead-desc {
 }
 
 @keyframes advPulse {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
         opacity: 1;
     }
+
     50% {
         transform: scale(1.35);
         opacity: 0.7;
@@ -688,16 +711,14 @@ p.adv-hero-lead-desc {
     width: 70px;
     height: 22px;
     background-color: rgba(234, 222, 194, 0.88);
-    background-image: linear-gradient(
-        45deg,
-        rgba(255, 255, 255, 0.2) 25%,
-        transparent 25%,
-        transparent 50%,
-        rgba(255, 255, 255, 0.2) 50%,
-        rgba(255, 255, 255, 0.2) 75%,
-        transparent 75%,
-        transparent
-    );
+    background-image: linear-gradient(45deg,
+            rgba(255, 255, 255, 0.2) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.2) 50%,
+            rgba(255, 255, 255, 0.2) 75%,
+            transparent 75%,
+            transparent);
     background-size: 10px 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18);
     border-left: 2px dashed rgba(180, 160, 130, 0.4);
@@ -739,6 +760,7 @@ p.adv-hero-lead-desc {
     0% {
         transform: rotate(-5deg) translateY(0px);
     }
+
     100% {
         transform: rotate(-3.5deg) translateY(-8px);
     }
@@ -748,6 +770,7 @@ p.adv-hero-lead-desc {
     0% {
         transform: rotate(5.5deg) translateY(0px);
     }
+
     100% {
         transform: rotate(4deg) translateY(-8px);
     }
@@ -954,7 +977,7 @@ p.adv-hero-lead-desc {
         min-height: 520px;
         max-height: unset;
     }
-    
+
     .adv-slide-banner-wrap {
         min-height: 520px;
     }
@@ -970,14 +993,24 @@ p.adv-hero-lead-desc {
 
     .adv-slide-banner-wrap::before {
         display: block !important;
-        background: linear-gradient(90deg, 
-            rgba(8, 26, 56, 0.96) 0%, 
-            rgba(8, 26, 56, 0.92) 50%, 
-            rgba(8, 26, 56, 0.65) 75%, 
-            rgba(8, 26, 56, 0) 100%
-        );
+        background: linear-gradient(90deg,
+                rgba(8, 26, 56, 0.96) 0%,
+                rgba(8, 26, 56, 0.92) 50%,
+                rgba(8, 26, 56, 0.65) 75%,
+                rgba(8, 26, 56, 0) 100%);
     }
-    
+
+    .adv-slide-banner-wrap.no-vignette::before,
+    .adv-slide.slide-pure-banner .adv-slide-banner-wrap::before {
+        display: none !important;
+    }
+
+    .adv-slide-banner-wrap.no-vignette .adv-slide-banner-img,
+    .adv-slide.slide-pure-banner .adv-slide-banner-img {
+        object-fit: contain !important;
+        object-position: center center !important;
+    }
+
     .adv-hero-text-overlay {
         width: min(520px, calc(100% - 48px));
         left: 24px;
@@ -989,25 +1022,25 @@ p.adv-hero-lead-desc {
     .adv-hero-dots-decor.top-left {
         left: 24px;
     }
-    
+
     .adv-mobile-hero-cta-bar {
         display: none !important;
     }
-    
+
     .adv-slider-arrow {
         width: 38px;
         height: 38px;
         font-size: 0.9rem;
     }
-    
+
     .adv-slider-arrow.prev-arrow {
         left: 10px;
     }
-    
+
     .adv-slider-arrow.next-arrow {
         right: 10px;
     }
-    
+
     .adv-slider-dots {
         bottom: 12px;
     }
@@ -1028,11 +1061,21 @@ p.adv-hero-lead-desc {
 
     .adv-slide-banner-wrap::before {
         display: block !important;
-        background: linear-gradient(180deg, 
-            rgba(8, 26, 56, 0.95) 0%, 
-            rgba(8, 26, 56, 0.90) 65%, 
-            rgba(8, 26, 56, 0.70) 100%
-        );
+        background: linear-gradient(180deg,
+                rgba(8, 26, 56, 0.95) 0%,
+                rgba(8, 26, 56, 0.90) 65%,
+                rgba(8, 26, 56, 0.70) 100%);
+    }
+
+    .adv-slide-banner-wrap.no-vignette::before,
+    .adv-slide.slide-pure-banner .adv-slide-banner-wrap::before {
+        display: none !important;
+    }
+
+    .adv-slide-banner-wrap.no-vignette .adv-slide-banner-img,
+    .adv-slide.slide-pure-banner .adv-slide-banner-img {
+        object-fit: contain !important;
+        object-position: center center !important;
     }
 
     .adv-hero-text-overlay {
@@ -1081,11 +1124,11 @@ p.adv-hero-lead-desc {
     .adv-hero-sky-badge {
         display: none !important;
     }
-    
+
     .adv-mobile-hero-cta-bar {
         display: none !important;
     }
-    
+
     .adv-mobile-hero-btn {
         display: inline-flex;
         align-items: center;
@@ -1098,32 +1141,32 @@ p.adv-hero-lead-desc {
         text-decoration: none;
         transition: all 0.25s ease;
     }
-    
+
     .adv-slider-arrow {
         width: 32px;
         height: 32px;
         font-size: 0.75rem;
         background: rgba(3, 28, 61, 0.55);
     }
-    
+
     .adv-slider-arrow.prev-arrow {
         left: 6px;
     }
-    
+
     .adv-slider-arrow.next-arrow {
         right: 6px;
     }
-    
+
     .adv-slider-dots {
         bottom: 8px;
         gap: 6px;
     }
-    
+
     .adv-slider-dot {
         width: 7px;
         height: 7px;
     }
-    
+
     .adv-slider-dot.active {
         width: 20px;
     }
@@ -1154,4 +1197,3 @@ p.adv-hero-lead-desc {
         font-size: 0.875rem;
     }
 }
-

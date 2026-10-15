@@ -13,9 +13,8 @@
 .adv-hero-slider-section {
     position: relative;
     width: 100%;
-    aspect-ratio: 1024 / 460;
+    aspect-ratio: 1024 / 373;
     height: auto;
-    min-height: 440px;
     max-height: 720px;
     background-color: #051633;
     overflow: hidden;
@@ -78,6 +77,19 @@
     pointer-events: none;
 }
 
+.adv-slide-banner-wrap.no-vignette::before,
+.adv-slide.slide-pure-banner .adv-slide-banner-wrap::before {
+    display: none !important;
+}
+
+.adv-slide-banner-wrap.no-vignette,
+.adv-slide.slide-pure-banner .adv-slide-banner-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #051633;
+}
+
 /* Dot Grid Matrix Patterns (Top Left & Bottom Right) */
 .adv-hero-dots-decor {
     position: absolute;
@@ -105,8 +117,17 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: right center;
+    object-position: center center;
     display: block;
+}
+
+/* Standalone graphic banners fit 100% without cropping */
+.adv-slide-banner-wrap.no-vignette .adv-slide-banner-img,
+.adv-slide.slide-pure-banner .adv-slide-banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain !important;
+    object-position: center center !important;
 }
 
 .adv-slide-link {
@@ -979,6 +1000,17 @@ p.adv-hero-lead-desc {
                 rgba(8, 26, 56, 0) 100%);
     }
 
+    .adv-slide-banner-wrap.no-vignette::before,
+    .adv-slide.slide-pure-banner .adv-slide-banner-wrap::before {
+        display: none !important;
+    }
+
+    .adv-slide-banner-wrap.no-vignette .adv-slide-banner-img,
+    .adv-slide.slide-pure-banner .adv-slide-banner-img {
+        object-fit: contain !important;
+        object-position: center center !important;
+    }
+
     .adv-hero-text-overlay {
         width: min(520px, calc(100% - 48px));
         left: 24px;
@@ -1033,6 +1065,17 @@ p.adv-hero-lead-desc {
                 rgba(8, 26, 56, 0.95) 0%,
                 rgba(8, 26, 56, 0.90) 65%,
                 rgba(8, 26, 56, 0.70) 100%);
+    }
+
+    .adv-slide-banner-wrap.no-vignette::before,
+    .adv-slide.slide-pure-banner .adv-slide-banner-wrap::before {
+        display: none !important;
+    }
+
+    .adv-slide-banner-wrap.no-vignette .adv-slide-banner-img,
+    .adv-slide.slide-pure-banner .adv-slide-banner-img {
+        object-fit: contain !important;
+        object-position: center center !important;
     }
 
     .adv-hero-text-overlay {

@@ -72,6 +72,17 @@ require_once __DIR__.'/includes/header.php';
                     </div>
                 </div>
 
+                <!-- ----------------------------------------------------
+                     SLIDE 2: Board Results Banner (Class 10th Board Results Above 90%)
+                     ---------------------------------------------------- -->
+                <div class="adv-slide slide-pure-banner" data-slide-index="1">
+                    <div class="adv-slide-banner-wrap no-vignette">
+                        <a href="results.php" class="adv-slide-link" title="Advaita School of Excellence - Class 10th CBSE Board Results Above 90%">
+                            <img src="assets/images/hero-slider-excellence-banner.png" alt="Advaita School of Excellence - Class 10th CBSE Board Results Above 90% - Om Dhoot 98.40% District Topper" class="adv-slide-banner-img" loading="lazy">
+                        </a>
+                    </div>
+                </div>
+
             </div>
 
             <!-- Slider Arrows -->
@@ -86,7 +97,6 @@ require_once __DIR__.'/includes/header.php';
             <div class="adv-slider-dots" role="tablist" aria-label="Slide Selection">
                 <button type="button" class="adv-slider-dot active" role="tab" aria-selected="true" aria-label="Slide 1"></button>
                 <button type="button" class="adv-slider-dot" role="tab" aria-selected="false" aria-label="Slide 2"></button>
-                <button type="button" class="adv-slider-dot" role="tab" aria-selected="false" aria-label="Slide 3"></button>
             </div>
         </div>
     </section>
