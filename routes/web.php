@@ -141,3 +141,17 @@ Route::get('/gallery.php', fn () => redirect()->route('gallery', [], 301));
 Route::get('/blog.php', fn () => redirect()->route('blog', [], 301));
 Route::get('/contact.php', fn () => redirect()->route('contact', [], 301));
 Route::get('/mandatory-disclosure.php', fn () => redirect()->route('mandatory-disclosure', [], 301));
+
+// Legacy /projectphp folder redirects
+Route::get('/projectphp', fn () => redirect()->route('home', [], 301));
+Route::get('/projectphp/{page}', function (string $page) {
+    $slug = preg_replace('/\.php$/', '', $page);
+    if ($slug === 'index' || $slug === 'home' || empty($slug)) {
+        return redirect()->route('home', [], 301);
+    }
+    if (Route::has($slug)) {
+        return redirect()->route($slug, [], 301);
+    }
+
+    return redirect()->route('home', [], 301);
+});

@@ -66,7 +66,7 @@ class GalleryItemSeeder extends Seeder
                 'category' => 'Creative Arts & Expression',
                 'icon' => 'fa-solid fa-palette',
                 'caption' => 'Young Student Showing Joyful Painted Hands on Lawn',
-                'custom_class' => null,
+                'custom_class' => 'position-center-painted-hands',
                 'order' => 7,
             ],
             [

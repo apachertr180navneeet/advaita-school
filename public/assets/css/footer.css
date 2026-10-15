@@ -28,13 +28,19 @@
     padding: 36px 0 28px 0;
 }
 
+.adv-footer-wrapper .adv-container {
+    max-width: 100%;
+    width: 100%;
+}
+
 .adv-footer-container {
-    max-width: 1360px;
-    margin: 0 auto;
-    padding: 0 24px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 clamp(20px, 3.5vw, 60px);
     display: grid;
     grid-template-columns: 1.4fr 0.85fr 0.95fr 1.35fr 1.05fr;
-    gap: 32px;
+    gap: clamp(24px, 2.5vw, 44px);
     align-items: start;
 }
 
@@ -44,6 +50,8 @@
 .adv-footer-brand-col {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .adv-footer-logo-link {
@@ -61,9 +69,9 @@
 }
 
 .adv-footer-logo-img {
-    max-height: 105px;
+    max-height: 86px;
     width: 100%;
-    max-width: 310px;
+    max-width: 270px;
     object-fit: contain;
     display: block;
     margin: 0 auto;
@@ -73,14 +81,15 @@
     color: #94A3B8;
     font-size: 0.9375rem;
     line-height: 1.65;
-    margin: 0 0 22px 0;
+    margin: 0 auto 22px auto;
     max-width: 340px;
-    text-align: left;
+    text-align: center;
 }
 
 .adv-footer-socials {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 12px;
 }
 
@@ -284,9 +293,10 @@ a.touch-link:hover {
 }
 
 .adv-footer-bottom-container {
-    max-width: 1360px;
-    margin: 0 auto;
-    padding: 0 24px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 clamp(20px, 3.5vw, 60px);
     display: flex;
     align-items: center;
     justify-content: space-between;

@@ -36,6 +36,15 @@ class SchoolPagesAndFormsTest extends TestCase
         }
     }
 
+    public function test_legacy_projectphp_urls_redirect_to_laravel_routes(): void
+    {
+        $this->get('/projectphp')->assertRedirect('/');
+        $this->get('/projectphp/index.php')->assertRedirect('/');
+        $this->get('/projectphp/about-us.php')->assertRedirect('/about-us');
+        $this->get('/projectphp/academics.php')->assertRedirect('/academics');
+        $this->get('/projectphp/contact.php')->assertRedirect('/contact');
+    }
+
     public function test_contact_form_submits_and_saves_to_database(): void
     {
         $payload = [
