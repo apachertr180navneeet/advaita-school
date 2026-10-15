@@ -38,7 +38,6 @@
                 <i class="fa-solid fa-layer-group text-navy"></i>
                 <span>Pages &amp; Sections</span>
             </h3>
-            <span class="sections-card-badge">{{ count($sections) }} Pages</span>
         </div>
         <div class="sections-list">
             @php

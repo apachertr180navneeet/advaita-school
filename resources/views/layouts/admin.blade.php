@@ -46,24 +46,12 @@
                     <a href="{{ route('admin.registrations.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.registrations.*') ? 'active' : '' }}">
                         <i class="fa-solid fa-user-graduate"></i>
                         <span>Admissions</span>
-                        @php
-                            $subCount = \App\Models\OnlineRegistration::where('status', 'submitted')->count();
-                        @endphp
-                        @if($subCount > 0)
-                            <span class="nav-badge">{{ $subCount }}</span>
-                        @endif
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('admin.inquiries.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.inquiries.*') ? 'active' : '' }}">
                         <i class="fa-solid fa-envelope-open-text"></i>
                         <span>Contact Inquiries</span>
-                        @php
-                            $inqCount = \App\Models\ContactInquiry::where('status', 'new')->count();
-                        @endphp
-                        @if($inqCount > 0)
-                            <span class="nav-badge">{{ $inqCount }}</span>
-                        @endif
                     </a>
                 </li>
             </ul>
@@ -74,12 +62,6 @@
                     <a href="{{ route('admin.sliders.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.sliders.*') ? 'active' : '' }}">
                         <i class="fa-solid fa-images"></i>
                         <span>Hero Sliders</span>
-                        @php
-                            $sliderNavCount = \App\Models\Slider::count();
-                        @endphp
-                        @if($sliderNavCount > 0)
-                            <span class="nav-badge">{{ $sliderNavCount }}</span>
-                        @endif
                     </a>
                 </li>
                 <li>
@@ -126,7 +108,6 @@
                     <a href="{{ route('admin.pages.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.pages.*') ? 'active' : '' }}">
                         <i class="fa-solid fa-pen-to-square"></i>
                         <span>Pages Content Manager</span>
-                        <span class="nav-badge nav-badge-sky">9 Pages</span>
                     </a>
                 </li>
             </ul>
@@ -137,7 +118,6 @@
                     <a href="{{ route('admin.seo.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.seo.*') ? 'active' : '' }}">
                         <i class="fa-solid fa-magnifying-glass-chart"></i>
                         <span>All-Pages SEO</span>
-                        <span class="nav-badge nav-badge-emerald">16 Pages</span>
                     </a>
                 </li>
                 <li>

@@ -23,7 +23,7 @@
         <div class="seo-sidebar-header">
             <h3 class="seo-sidebar-title">
                 <i class="fa-solid fa-list-check text-navy mr-6"></i>
-                Select Page ({{ count($pages) }})
+                Select Page
             </h3>
         </div>
         <div class="seo-page-nav-list">
