@@ -29,11 +29,10 @@
                 <div class="about-hero-dots-decor" aria-hidden="true"></div>
 
                 <div class="about-hero-content-inner">
-                    <span class="about-eyebrow">— WELCOME TO —</span>
+                    <span class="about-eyebrow">— {{ $content['hero_badge'] ?? 'WELCOME TO' }} —</span>
                     <h1 class="about-hero-title">
-                        A Premier<br>
-                        CBSE School with a<br>
-                        <span class="about-text-orange">Stronger Purpose.</span>
+                        {{ $content['hero_title'] ?? 'A Premier CBSE School with a' }}<br>
+                        <span class="about-text-orange">{{ $content['hero_highlight'] ?? 'Stronger Purpose.' }}</span>
                     </h1>
                     
                     <div class="about-hero-highlights">
@@ -50,7 +49,7 @@
                     </div>
 
                     <p class="about-hero-desc">
-                        At Advaita School of Excellence, we go beyond textbooks to create a learning environment where curiosity is encouraged, confidence is built, and every child is empowered to achieve their true potential.
+                        {{ $content['hero_subtitle'] ?? 'At Advaita School of Excellence, we go beyond textbooks to create a learning environment where curiosity is encouraged, confidence is built, and every child is empowered to achieve their true potential.' }}
                     </p>
 
                     <div class="about-hero-actions">
@@ -178,7 +177,7 @@
                                 <i class="fa-solid fa-graduation-cap"></i>
                             </div>
                             <div class="stat-meta">
-                                <span class="stat-num">5000+</span>
+                                <span class="stat-num">{{ $content['stat_students'] ?? '5000+' }}</span>
                                 <span class="stat-lbl">Happy Students</span>
                             </div>
                         </div>
@@ -188,7 +187,7 @@
                                 <span class="stat-badge-inner">25+</span>
                             </div>
                             <div class="stat-meta">
-                                <span class="stat-num">25+</span>
+                                <span class="stat-num">{{ $content['stat_years'] ?? '25+' }}</span>
                                 <span class="stat-lbl">Years of Academic Legacy</span>
                             </div>
                         </div>

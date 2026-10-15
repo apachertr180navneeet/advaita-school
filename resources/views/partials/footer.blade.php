@@ -18,16 +18,16 @@
                 </p>
                 
                 <div class="adv-footer-socials" aria-label="Social media channels">
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="adv-footer-social-btn instagram" title="Instagram" aria-label="Instagram">
+                    <a href="{{ \App\Models\Setting::get('site_instagram_url', 'https://instagram.com') }}" target="_blank" rel="noopener noreferrer" class="adv-footer-social-btn instagram" title="Instagram" aria-label="Instagram">
                         <i class="fa-brands fa-instagram"></i>
                     </a>
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="adv-footer-social-btn facebook" title="Facebook" aria-label="Facebook">
+                    <a href="{{ \App\Models\Setting::get('site_facebook_url', 'https://facebook.com') }}" target="_blank" rel="noopener noreferrer" class="adv-footer-social-btn facebook" title="Facebook" aria-label="Facebook">
                         <i class="fa-brands fa-facebook-f"></i>
                     </a>
-                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="adv-footer-social-btn youtube" title="YouTube" aria-label="YouTube">
+                    <a href="{{ \App\Models\Setting::get('site_youtube_url', 'https://youtube.com') }}" target="_blank" rel="noopener noreferrer" class="adv-footer-social-btn youtube" title="YouTube" aria-label="YouTube">
                         <i class="fa-brands fa-youtube"></i>
                     </a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="adv-footer-social-btn linkedin" title="LinkedIn" aria-label="LinkedIn">
+                    <a href="{{ \App\Models\Setting::get('site_linkedin_url', 'https://linkedin.com') }}" target="_blank" rel="noopener noreferrer" class="adv-footer-social-btn linkedin" title="LinkedIn" aria-label="LinkedIn">
                         <i class="fa-brands fa-linkedin-in"></i>
                     </a>
                 </div>
@@ -77,7 +77,7 @@
                         <div class="adv-footer-touch-content">
                             <span class="touch-label">Campus</span>
                             <span class="touch-text">
-                                Sanmati Campus, Near Highway Ring Road, Parbhani, Maharashtra – 431401
+                                {{ \App\Models\Setting::get('site_address', 'Near Sanmati Campus, Jintur Road, Parbhani, Maharashtra – 431401') }}
                             </span>
                         </div>
                     </div>
@@ -88,7 +88,9 @@
                         </div>
                         <div class="adv-footer-touch-content">
                             <span class="touch-label">Phone</span>
-                            <a href="tel:+919876543210" class="touch-link">+91 98765 43210 / 02452-224455</a>
+                            <a href="tel:{{ \App\Models\Setting::get('site_phone_primary', '094130 62851') }}" class="touch-link">
+                                {{ \App\Models\Setting::get('site_phone_primary', '094130 62851') }} / {{ \App\Models\Setting::get('site_landline', '02452-224455') }}
+                            </a>
                         </div>
                     </div>
 
@@ -98,7 +100,9 @@
                         </div>
                         <div class="adv-footer-touch-content">
                             <span class="touch-label">Email</span>
-                            <a href="mailto:info@advaitaschool.edu.in" class="touch-link">info@advaitaschool.edu.in</a>
+                            <a href="mailto:{{ \App\Models\Setting::get('site_email_primary', 'info@advaitaschool.edu.in') }}" class="touch-link">
+                                {{ \App\Models\Setting::get('site_email_primary', 'info@advaitaschool.edu.in') }}
+                            </a>
                         </div>
                     </div>
 
@@ -108,7 +112,7 @@
                         </div>
                         <div class="adv-footer-touch-content">
                             <span class="touch-label">School Hours</span>
-                            <span class="touch-text">Mon – Sat &nbsp;|&nbsp; 8:00 AM – 3:00 PM</span>
+                            <span class="touch-text">{{ \App\Models\Setting::get('site_school_hours', 'Mon – Sat | 8:00 AM – 3:00 PM') }}</span>
                         </div>
                     </div>
                 </div>
@@ -119,7 +123,7 @@
                 <div class="adv-footer-map-card">
                     <div class="adv-footer-map-iframe-wrap">
                         <iframe 
-                            src="https://maps.google.com/maps?q=Advaita+School+of+Excellence,+Parbhani&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                            src="{{ \App\Models\Setting::get('site_google_map_embed', 'https://maps.google.com/maps?q=Advaita+School+of+Excellence,+Parbhani&t=&z=15&ie=UTF8&iwloc=&output=embed') }}" 
                             width="100%" 
                             height="100%" 
                             style="border:0;" 
@@ -129,7 +133,7 @@
                             title="Advaita School of Excellence Parbhani on Google Maps">
                         </iframe>
                     </div>
-                    <a href="https://www.google.com/maps/place/Advaita+School+of+Excellence/@19.2634,76.7749,17z/" target="_blank" rel="noopener noreferrer" class="adv-footer-map-btn">
+                    <a href="{{ \App\Models\Setting::get('site_google_map_link', 'https://www.google.com/maps/place/Advaita+School+of+Excellence/@19.2634,76.7749,17z/') }}" target="_blank" rel="noopener noreferrer" class="adv-footer-map-btn">
                         <span>View on Google Maps</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>

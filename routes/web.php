@@ -6,9 +6,11 @@ use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\Admin\FaqController as AdminFaqController;
 use App\Http\Controllers\Admin\GalleryController as AdminGalleryController;
 use App\Http\Controllers\Admin\InquiryController as AdminInquiryController;
+use App\Http\Controllers\Admin\PageContentController as AdminPageContentController;
 use App\Http\Controllers\Admin\PillarController as AdminPillarController;
 use App\Http\Controllers\Admin\RegistrationController as AdminRegistrationController;
 use App\Http\Controllers\Admin\SeoController as AdminSeoController;
+use App\Http\Controllers\Admin\SiteSettingController as AdminSiteSettingController;
 use App\Http\Controllers\Admin\SliderController as AdminSliderController;
 use App\Http\Controllers\Admin\TestimonialController as AdminTestimonialController;
 use App\Http\Controllers\Admin\WhyChooseController as AdminWhyChooseController;
@@ -91,9 +93,17 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::patch('/pillars/{id}/toggle-status', [AdminPillarController::class, 'toggleStatus'])->name('pillars.toggle-status');
         Route::resource('pillars', AdminPillarController::class)->except(['show']);
 
-        // Homepage SEO Management
+        // All-Pages SEO Management
         Route::get('/seo', [AdminSeoController::class, 'index'])->name('seo.index');
         Route::patch('/seo', [AdminSeoController::class, 'update'])->name('seo.update');
+
+        // School Pages Content Management
+        Route::get('/pages-content', [AdminPageContentController::class, 'index'])->name('pages.index');
+        Route::patch('/pages-content', [AdminPageContentController::class, 'update'])->name('pages.update');
+
+        // Global Site & Contact Settings Management
+        Route::get('/site-settings', [AdminSiteSettingController::class, 'index'])->name('site-settings.index');
+        Route::patch('/site-settings', [AdminSiteSettingController::class, 'update'])->name('site-settings.update');
 
         // Why Choose Advaita Section & Cards Management
         Route::patch('/why-choose/section-header', [AdminWhyChooseController::class, 'updateSectionHeader'])->name('why-choose.section-header');

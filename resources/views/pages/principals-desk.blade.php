@@ -104,7 +104,7 @@
 
                             <!-- Identity Info -->
                             <div class="principal-profile-info">
-                                <h3 class="principal-name">Divine Mam</h3>
+                                <h3 class="principal-name">{{ $content['principal_name'] ?? 'Mrs. Sunita S. Deshmukh' }}</h3>
                                 <div class="principal-role">Principal</div>
                                 <div class="principal-role-divider" aria-hidden="true"></div>
                                 <p class="principal-org">
@@ -157,7 +157,7 @@
                     <div class="principal-quote-box">
                         <div class="principal-quote-icon" aria-hidden="true"><i class="fa-solid fa-quote-left"></i></div>
                         <p class="principal-quote-text">
-                            With the support of dedicated teachers, modern teaching methodologies and a student-centric approach, we strive to make learning meaningful and enjoyable.
+                            {{ $content['principal_quote'] ?? 'With the support of dedicated teachers, modern teaching methodologies and a student-centric approach, we strive to make learning meaningful and enjoyable.' }}
                         </p>
                     </div>
 

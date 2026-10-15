@@ -197,7 +197,7 @@
     <button type="button" class="adv-scroll-top-btn" id="advScrollTopBtn" aria-label="Scroll to top" title="Scroll to Top">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
-    <a href="https://wa.me/919413062851" target="_blank" rel="noopener noreferrer" class="adv-floating-whatsapp-btn" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
+    <a href="https://wa.me/{{ \App\Models\Setting::get('site_whatsapp_number', '919413062851') }}" target="_blank" rel="noopener noreferrer" class="adv-floating-whatsapp-btn" aria-label="Chat on WhatsApp" title="Chat on WhatsApp">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 

@@ -6,17 +6,16 @@
             <!-- Left Side Tagline / Affiliation -->
             <div class="adv-topbar-left">
                 <i class="fa-solid fa-location-dot adv-topbar-pin"></i>
-                <span>Advaita School of Excellence, Parbhani · CBSE Affiliated (No. 1130920)</span>
+                <span>{{ \App\Models\Setting::get('site_school_name', 'Advaita School of Excellence') }}, Parbhani · CBSE Affiliated (No. {{ \App\Models\Setting::get('site_affiliation_no', '1130920') }})</span>
             </div>
 
             <!-- Right Side Links & Socials -->
             <div class="adv-topbar-right">
                 <div class="adv-topbar-socials">
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" title="Twitter / X" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="{{ \App\Models\Setting::get('site_facebook_url', 'https://facebook.com') }}" target="_blank" rel="noopener noreferrer" title="Facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="{{ \App\Models\Setting::get('site_youtube_url', 'https://youtube.com') }}" target="_blank" rel="noopener noreferrer" title="YouTube" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="{{ \App\Models\Setting::get('site_instagram_url', 'https://instagram.com') }}" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="{{ \App\Models\Setting::get('site_linkedin_url', 'https://linkedin.com') }}" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
                 <a href="{{ route('admin.dashboard') }}" style="color: #ffffff; font-size: 11.5px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; background: rgba(255,255,255,0.15); padding: 3px 10px; border-radius: 20px; margin-left: 12px;" title="Admin Portal">
                     <i class="fa-solid fa-lock" style="font-size: 10px; color: #F37021;"></i>

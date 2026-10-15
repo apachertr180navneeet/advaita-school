@@ -75,7 +75,7 @@
                     </div>
                     <div>
                         <h2 class="fee-card-main-title">Class-wise Fee Structure</h2>
-                        <p class="fee-card-main-sub">Academic Session 2026 – 27 &nbsp;|&nbsp; Nursery to Class 10</p>
+                        <p class="fee-card-main-sub">Academic Session {{ $content['academic_year'] ?? '2026 – 27' }} &nbsp;|&nbsp; Nursery to Class 10</p>
                     </div>
                 </div>
 
@@ -605,7 +605,7 @@
             </div>
 
             <div class="fee-cta-actions">
-                <a href="tel:+919876543210" class="fee-btn-call">
+                <a href="tel:{{ $globalSite['phone_primary'] ?? '094130 62851' }}" class="fee-btn-call">
                     <i class="fa-solid fa-phone"></i>
                     <span>Call the Admissions Team</span>
                 </a>

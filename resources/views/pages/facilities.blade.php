@@ -23,13 +23,12 @@
 
                 <!-- Centered Main Title -->
                 <h1 class="facilities-hero-title">
-                    More than Classrooms,<br>
-                    A Place to <span class="highlight-serif">Grow.</span>
+                    {{ $content['hero_title'] ?? 'More than Classrooms, A Place to Grow.' }}
                 </h1>
 
                 <!-- Centered Description -->
                 <p class="facilities-hero-desc">
-                    Our campus is thoughtfully designed to provide a safe, modern and inspiring environment where every child can learn, explore and excel.
+                    {{ $content['hero_desc'] ?? 'Our campus is thoughtfully designed to provide a safe, modern and inspiring environment where every child can learn, explore and excel.' }}
                 </p>
 
                 <!-- 4 Feature Pills Badges Under Centered Hero -->

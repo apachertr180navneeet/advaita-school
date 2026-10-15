@@ -49,12 +49,12 @@
 
                     <!-- Main Headline -->
                     <h1 class="admission-hero-title">
-                        A Strong Foundation for a Brighter <span class="highlight-orange">Tomorrow.</span>
+                        {{ $content['hero_title'] ?? 'A Strong Foundation for a Brighter Tomorrow.' }}
                     </h1>
 
                     <!-- Description -->
                     <p class="admission-hero-desc">
-                        A thoughtfully designed curriculum that nurtures curiosity, builds strong concepts and prepares students for lifelong success.
+                        {{ $content['hero_desc'] ?? 'A thoughtfully designed curriculum that nurtures curiosity, builds strong concepts and prepares students for lifelong success.' }}
                     </p>
                 </div>
             </div>

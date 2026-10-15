@@ -104,12 +104,12 @@
 
                         <!-- Main Heading -->
                         <h2 class="vision-card-heading">
-                            To nurture confident, creative and responsible global citizens.
+                            {{ $content['vision_title'] ?? 'To nurture confident, creative and responsible global citizens.' }}
                         </h2>
 
                         <!-- Paragraph -->
                         <p class="vision-card-text">
-                            We envision a progressive learning community where every child discovers their unique potential, builds a strong character and contributes positively to a brighter and better world.
+                            {{ $content['vision_text'] ?? 'We envision a progressive learning community where every child discovers their unique potential, builds a strong character and contributes positively to a brighter and better world.' }}
                         </p>
                     </div>
                 </div>
@@ -134,12 +134,12 @@
 
                         <!-- Main Heading -->
                         <h2 class="vision-card-heading">
-                            To provide a holistic, value-based education with strong academic foundations.
+                            {{ $content['mission_title'] ?? 'To provide a holistic, value-based education with strong academic foundations.' }}
                         </h2>
 
                         <!-- Paragraph -->
                         <p class="vision-card-text">
-                            Our mission is to integrate modern teaching methodologies with a student-centric approach, encourage curiosity and critical thinking, and prepare students for competitive exams and life beyond the classroom.
+                            {{ $content['mission_text'] ?? 'Through innovative teaching, individual attention, world-class infrastructure and strong NEET/IIT foundation programmes, we empower students to achieve excellence in competitive exams and life.' }}
                         </p>
                     </div>
                 </div>

@@ -492,7 +492,7 @@
 
         <!-- Sidebar Navigation Menu -->
         <nav class="sidebar-menu">
-            <div class="menu-category-title">Core Management</div>
+            <div class="menu-category-title">Core &amp; Admissions</div>
             <ul class="sidebar-nav-list">
                 <li>
                     <a href="{{ route('admin.dashboard') }}" class="sidebar-nav-link {{ request()->routeIs('admin.dashboard') ? 'active' : '' }}">
@@ -524,6 +524,10 @@
                         @endif
                     </a>
                 </li>
+            </ul>
+
+            <div class="menu-category-title">Homepage Dynamic Sections</div>
+            <ul class="sidebar-nav-list">
                 <li>
                     <a href="{{ route('admin.sliders.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.sliders.*') ? 'active' : '' }}">
                         <i class="fa-solid fa-images"></i>
@@ -540,24 +544,12 @@
                     <a href="{{ route('admin.pillars.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.pillars.*') ? 'active' : '' }}">
                         <i class="fa-solid fa-shapes"></i>
                         <span>Three Pillars</span>
-                        @php
-                            $pillarNavCount = \App\Models\Pillar::count();
-                        @endphp
-                        @if($pillarNavCount > 0)
-                            <span class="nav-badge">{{ $pillarNavCount }}</span>
-                        @endif
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('admin.why-choose.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.why-choose.*') ? 'active' : '' }}">
                         <i class="fa-solid fa-award"></i>
                         <span>Why Choose Advaita</span>
-                        @php
-                            $whyChooseNavCount = \App\Models\WhyChooseCard::count();
-                        @endphp
-                        @if($whyChooseNavCount > 0)
-                            <span class="nav-badge">{{ $whyChooseNavCount }}</span>
-                        @endif
                     </a>
                 </li>
                 <li>
@@ -570,42 +562,46 @@
                     <a href="{{ route('admin.gallery.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.gallery.*') ? 'active' : '' }}">
                         <i class="fa-solid fa-camera-retro"></i>
                         <span>Campus Gallery</span>
-                        @php
-                            $galleryNavCount = \App\Models\GalleryItem::count();
-                        @endphp
-                        @if($galleryNavCount > 0)
-                            <span class="nav-badge">{{ $galleryNavCount }}</span>
-                        @endif
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('admin.testimonials.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.testimonials.*') ? 'active' : '' }}">
                         <i class="fa-solid fa-comment-dots"></i>
-                        <span>Testimonials</span>
-                        @php
-                            $testiNavCount = \App\Models\Testimonial::count();
-                        @endphp
-                        @if($testiNavCount > 0)
-                            <span class="nav-badge">{{ $testiNavCount }}</span>
-                        @endif
+                        <span>Parent Testimonials</span>
                     </a>
                 </li>
                 <li>
                     <a href="{{ route('admin.faqs.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.faqs.*') ? 'active' : '' }}">
                         <i class="fa-solid fa-circle-question"></i>
                         <span>FAQs</span>
-                        @php
-                            $faqNavCount = \App\Models\Faq::count();
-                        @endphp
-                        @if($faqNavCount > 0)
-                            <span class="nav-badge">{{ $faqNavCount }}</span>
-                        @endif
                     </a>
                 </li>
+            </ul>
+
+            <div class="menu-category-title">School Pages Content</div>
+            <ul class="sidebar-nav-list">
+                <li>
+                    <a href="{{ route('admin.pages.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.pages.*') ? 'active' : '' }}">
+                        <i class="fa-solid fa-pen-to-square"></i>
+                        <span>Pages Content Manager</span>
+                        <span class="nav-badge" style="background: rgba(2, 132, 199, 0.2); color: #38BDF8; border-color: rgba(2, 132, 199, 0.4);">9 Pages</span>
+                    </a>
+                </li>
+            </ul>
+
+            <div class="menu-category-title">SEO &amp; Site Configuration</div>
+            <ul class="sidebar-nav-list">
                 <li>
                     <a href="{{ route('admin.seo.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.seo.*') ? 'active' : '' }}">
                         <i class="fa-solid fa-magnifying-glass-chart"></i>
-                        <span>SEO Management</span>
+                        <span>All-Pages SEO</span>
+                        <span class="nav-badge" style="background: rgba(16, 185, 129, 0.2); color: #34D399; border-color: rgba(16, 185, 129, 0.4);">16 Pages</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.site-settings.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.site-settings.*') ? 'active' : '' }}">
+                        <i class="fa-solid fa-sliders"></i>
+                        <span>Global Site &amp; Contact</span>
                     </a>
                 </li>
             </ul>

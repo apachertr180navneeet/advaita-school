@@ -104,12 +104,12 @@
                                     <tr>
                                         <td class="td-sr">1</td>
                                         <td class="td-info">NAME OF THE SCHOOL</td>
-                                        <td class="td-details">ADVAITA SCHOOL OF EXCELLENCE</td>
+                                        <td class="td-details">{{ $globalSite['school_name'] ?? 'ADVAITA SCHOOL OF EXCELLENCE' }}</td>
                                     </tr>
                                     <tr>
                                         <td class="td-sr">2</td>
                                         <td class="td-info">AFFILIATION NO (IF APPLICABLE)</td>
-                                        <td class="td-details">1130920</td>
+                                        <td class="td-details">{{ $globalSite['affiliation_no'] ?? '1130920' }}</td>
                                     </tr>
                                     <tr>
                                         <td class="td-sr">3</td>
@@ -124,7 +124,7 @@
                                     <tr>
                                         <td class="td-sr">5</td>
                                         <td class="td-info">PRINCIPAL NAME &amp; QUALIFICATION</td>
-                                        <td class="td-details">MS. IVY BROWN (M.A. B.Ed)</td>
+                                        <td class="td-details">{{ $content['principal_qualification'] ?? 'MS. IVY BROWN (M.A. B.Ed)' }}</td>
                                     </tr>
                                     <tr>
                                         <td class="td-sr">6</td>
@@ -420,7 +420,7 @@
                                     <tr>
                                         <td class="td-sr">1</td>
                                         <td class="td-info">PRINCIPAL</td>
-                                        <td class="td-details">MS. IVY BROWN (M.A. B.Ed)</td>
+                                        <td class="td-details">{{ $content['principal_qualification'] ?? 'MS. IVY BROWN (M.A. B.Ed)' }}</td>
                                     </tr>
                                     <tr>
                                         <td class="td-sr">2</td>

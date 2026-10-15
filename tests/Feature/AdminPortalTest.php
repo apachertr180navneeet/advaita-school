@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use App\Models\ContactInquiry;
 use App\Models\OnlineRegistration;
+use App\Models\Setting;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Hash;
@@ -121,6 +122,41 @@ class AdminPortalTest extends TestCase
             'id' => $inquiry->id,
             'status' => 'resolved',
         ]);
+    }
+
+    public function test_authenticated_admin_can_view_and_update_pages_content(): void
+    {
+        $response = $this->actingAs($this->admin)->get('/admin/pages-content');
+        $response->assertStatus(200);
+        $response->assertSee('School Pages Content Manager');
+        $response->assertSee('About Us Page');
+
+        $updateResponse = $this->actingAs($this->admin)->patch('/admin/pages-content', [
+            'section_key' => 'about',
+            'about_hero_title' => 'Empowering Minds For Tomorrow',
+        ]);
+
+        $updateResponse->assertRedirect('/admin/pages-content?section=about');
+        $updateResponse->assertSessionHas('success');
+        $this->assertEquals('Empowering Minds For Tomorrow', Setting::get('about_hero_title'));
+    }
+
+    public function test_authenticated_admin_can_view_and_update_site_settings(): void
+    {
+        $response = $this->actingAs($this->admin)->get('/admin/site-settings');
+        $response->assertStatus(200);
+        $response->assertSee('Global Site Settings');
+
+        $updateResponse = $this->actingAs($this->admin)->patch('/admin/site-settings', [
+            'site_school_name' => 'Advaita School of Excellence Parbhani',
+            'site_phone_primary' => '+91 94130 62851',
+            'site_email_primary' => 'info@advaitaschool.edu.in',
+            'site_address' => 'Near Sanmati Campus, Jintur Road, Parbhani',
+        ]);
+
+        $updateResponse->assertRedirect('/admin/site-settings');
+        $updateResponse->assertSessionHas('success');
+        $this->assertEquals('Advaita School of Excellence Parbhani', Setting::get('site_school_name'));
     }
 
     public function test_admin_can_logout(): void

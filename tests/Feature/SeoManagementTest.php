@@ -36,11 +36,10 @@ class SeoManagementTest extends TestCase
         $response = $this->actingAs($this->admin)->get(route('admin.seo.index'));
 
         $response->assertStatus(200);
-        $response->assertSee('Search Engine Optimization (SEO)');
-        $response->assertSee('Homepage SEO Title');
+        $response->assertSee('SEO &amp; Meta Management', false);
         $response->assertSee('Meta Description');
-        $response->assertSee('Meta Keywords');
-        $response->assertSee('Advaita School of Excellence, Parbhani');
+        $response->assertSee('Focus Keywords');
+        $response->assertSee('Advaita School of Excellence');
     }
 
     public function test_admin_can_update_seo_settings(): void
@@ -53,12 +52,30 @@ class SeoManagementTest extends TestCase
 
         $response = $this->actingAs($this->admin)->patch(route('admin.seo.update'), $payload);
 
-        $response->assertRedirect(route('admin.seo.index'));
+        $response->assertRedirect(route('admin.seo.index', ['page' => 'home']));
         $response->assertSessionHas('success', 'Homepage SEO settings updated successfully!');
 
         $this->assertEquals($payload['home_seo_title'], Setting::get('home_seo_title'));
         $this->assertEquals($payload['home_seo_description'], Setting::get('home_seo_description'));
         $this->assertEquals($payload['home_seo_keywords'], Setting::get('home_seo_keywords'));
+    }
+
+    public function test_admin_can_update_inner_page_seo(): void
+    {
+        $payload = [
+            'page_key' => 'about_us',
+            'title' => 'Custom About Us Page SEO Title',
+            'description' => 'Custom description for About Us page meta tags.',
+            'keywords' => 'about us, school history, parbhani cbse',
+        ];
+
+        $response = $this->actingAs($this->admin)->patch(route('admin.seo.update'), $payload);
+
+        $response->assertRedirect(route('admin.seo.index', ['page' => 'about_us']));
+        $response->assertSessionHas('success');
+
+        $this->assertEquals('Custom About Us Page SEO Title', Setting::get('seo_about_us_title'));
+        $this->assertEquals('Custom description for About Us page meta tags.', Setting::get('seo_about_us_description'));
     }
 
     public function test_seo_update_validation_requires_title_and_description(): void

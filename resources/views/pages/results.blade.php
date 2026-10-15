@@ -26,14 +26,14 @@
                     <!-- Eyebrow -->
                     <div class="results-eyebrow">
                         <span class="results-eyebrow-line"></span>
-                        <span>OUR PERFORMANCE</span>
+                        <span>{{ $content['badge'] ?? 'OUR PERFORMANCE' }}</span>
                         <span class="results-eyebrow-line"></span>
                     </div>
 
                     <!-- Main Title matching mockup exactly -->
                     <h1 class="results-hero-title">
-                        Results that
-                        <span class="results-title-orange">speak for themselves.</span>
+                        {{ $content['title'] ?? 'Results that' }}
+                        <span class="results-title-orange">{{ $content['subtitle'] ?? 'speak for themselves.' }}</span>
                     </h1>
 
                     <!-- Subtitle -->
@@ -64,7 +64,7 @@
                 </div>
                 <div class="results-stat-info">
                     <span class="results-stat-kicker">Back-to-back</span>
-                    <strong class="results-stat-val">100% Result</strong>
+                    <strong class="results-stat-val">{{ $content['pass_rate'] ?? '100%' }} Result</strong>
                     <span class="results-stat-sub">in Grade 10</span>
                 </div>
             </div>
@@ -75,7 +75,7 @@
                     <i class="fa-solid fa-chart-column"></i>
                 </div>
                 <div class="results-stat-info">
-                    <strong class="results-stat-val">35%</strong>
+                    <strong class="results-stat-val">{{ $content['stat_90_plus'] ?? '35%' }}</strong>
                     <span class="results-stat-kicker">Students scored</span>
                     <span class="results-stat-sub">90% and above</span>
                 </div>
@@ -87,7 +87,7 @@
                     <i class="fa-solid fa-star"></i>
                 </div>
                 <div class="results-stat-info">
-                    <strong class="results-stat-val">~33%</strong>
+                    <strong class="results-stat-val">{{ $content['stat_80_plus'] ?? '~33%' }}</strong>
                     <span class="results-stat-kicker">Students scored</span>
                     <span class="results-stat-sub">80% – 90%</span>
                 </div>

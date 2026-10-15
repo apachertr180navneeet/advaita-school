@@ -138,7 +138,7 @@
                     <div class="chairman-quote-box">
                         <div class="chairman-quote-icon" aria-hidden="true"><i class="fa-solid fa-quote-left"></i></div>
                         <p class="chairman-quote-text">
-                            With a strong foundation in education, ethics and innovation, we aim to develop responsible individuals who contribute positively to society.
+                            {{ $content['chairman_quote'] ?? 'With a strong foundation in education, ethics and innovation, we aim to develop responsible individuals who contribute positively to society.' }}
                         </p>
                     </div>
                 </div>
@@ -156,9 +156,9 @@
                                 <img src="{{ asset('assets/images/chairman-real.png') }}" alt="Shri. Vishal Vishal Wattamwar - Chairman" class="chairman-profile-photo" loading="lazy">
                             </div>
                             <div class="chairman-profile-info">
-                                <h3 class="chairman-name">Shri. Vishal Vishal Wattamwar</h3>
+                                <h3 class="chairman-name">{{ $content['chairman_name'] ?? 'Shri. Vishal Wattamwar' }}</h3>
                                 <div class="chairman-role">Chairman,</div>
-                                <p class="chairman-org">Sanmati Sevabhavi Sansthan, Parbhani</p>
+                                <p class="chairman-org">{{ $content['chairman_designation'] ?? 'Sanmati Sevabhavi Sansthan, Parbhani' }}</p>
                             </div>
                         </div>
                     </div>

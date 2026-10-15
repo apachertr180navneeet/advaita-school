@@ -3,13 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Models\OnlineRegistration;
+use App\Models\Setting;
 use Illuminate\Http\Request;
 
 class RegistrationController extends Controller
 {
     public function create()
     {
-        return view('pages.online-registration');
+        $seo = [
+            'title' => Setting::get('seo_online_registration_title', 'Online Student Registration (2026-27) - Advaita School of Excellence'),
+            'description' => Setting::get('seo_online_registration_description', 'Apply online for student admission at Advaita School of Excellence, Parbhani. Fast, secure, and hassle-free registration form for academic year 2026-27.'),
+            'keywords' => Setting::get('seo_online_registration_keywords', 'Online school admission form, student registration Parbhani, Advaita online admission'),
+        ];
+
+        return view('pages.online-registration', compact('seo'));
     }
 
     public function store(Request $request)

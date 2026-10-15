@@ -251,7 +251,7 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
-        // 4. Seed Sliders, Pillars, Why Choose, Gallery, Testimonials & FAQs
+        // 4. Seed Sliders, Pillars, Why Choose, Gallery, Testimonials, FAQs, All Page SEO, Global Site Settings & Page Content
         $this->call([
             SliderSeeder::class,
             PillarSeeder::class,
@@ -259,6 +259,9 @@ class DatabaseSeeder extends Seeder
             GalleryItemSeeder::class,
             TestimonialSeeder::class,
             FaqSeeder::class,
+            AllPageSeoSeeder::class,
+            SiteSettingSeeder::class,
+            PageContentSeeder::class,
         ]);
     }
 }
