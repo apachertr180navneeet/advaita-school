@@ -118,10 +118,23 @@ class PageController extends Controller
         );
 
         $content = [
-            'vision_title' => Setting::get('vision_title', 'Our Guiding Vision'),
-            'vision_text' => Setting::get('vision_text', 'To be a benchmark in quality education where every child discovers their intellectual, emotional, and social brilliance to lead with humility, integrity, and global wisdom.'),
-            'mission_title' => Setting::get('mission_title', 'Our Core Mission'),
-            'mission_text' => Setting::get('mission_text', 'To cultivate a stimulating, inclusive, and technologically advanced learning ecosystem that empowers students with critical thinking, ethical values, and holistic life skills.'),
+            'hero_badge' => Setting::get('vision_hero_badge', 'OUR VISION & MISSION'),
+            'hero_title' => Setting::get('vision_hero_title', 'Guiding Young Minds Towards a'),
+            'hero_highlight' => Setting::get('vision_hero_highlight', 'Brighter Tomorrow.'),
+            'hero_desc' => Setting::get('vision_hero_desc', 'At Advaita School of Excellence, our vision and mission reflect our unwavering commitment to academic excellence, strong values and the all-round development of every child.'),
+            'vision_title' => Setting::get('vision_title', 'To nurture confident, creative and responsible global citizens.'),
+            'vision_text' => Setting::get('vision_text', 'We envision a progressive learning community where every child discovers their unique potential, builds a strong character and contributes positively to a brighter and better world.'),
+            'mission_title' => Setting::get('mission_title', 'To provide a holistic, value-based education with strong academic foundations.'),
+            'mission_text' => Setting::get('mission_text', 'Through innovative teaching, individual attention, world-class infrastructure and strong NEET/IIT foundation programmes, we empower students to achieve excellence in competitive exams and life.'),
+            'cta_eyebrow' => Setting::get('vision_cta_eyebrow', 'TOGETHER TOWARDS A BRIGHTER TOMORROW'),
+            'cta_headline' => Setting::get('vision_cta_headline', 'Be a Part of the Advaita Journey'),
+            'cta_subtext' => Setting::get('vision_cta_subtext', 'Give your child the right start with strong academics, values and endless opportunities.'),
+
+            // Imagery
+            'hero_image' => Setting::get('vision_hero_image', 'assets/images/about-hero-building.jpg'),
+            'vision_card_image' => Setting::get('vision_card_image', 'assets/images/vision-mountain-peak.jpg'),
+            'mission_card_image' => Setting::get('mission_card_image', 'assets/images/mission-student-inspirational.jpg'),
+            'cta_image' => Setting::get('vision_cta_image', 'assets/images/about-cta-students-trio.png'),
         ];
 
         return view('pages.vision-mission', compact('seo', 'content'));
@@ -137,13 +150,19 @@ class PageController extends Controller
         );
 
         $content = [
+            'hero_eyebrow' => Setting::get('chairman_hero_eyebrow', 'FROM THE CHAIRMAN'),
+            'hero_title' => Setting::get('chairman_hero_title', 'Building Stronger Foundations for'),
+            'hero_highlight' => Setting::get('chairman_hero_highlight', 'Brighter Tomorrows.'),
             'chairman_name' => Setting::get('chairman_name', 'Dr. Sureshji Jain'),
             'chairman_designation' => Setting::get('chairman_designation', 'Chairman, Sanmati Sevabhavi Sanstha'),
             'chairman_quote' => Setting::get('chairman_quote', 'True education is not mere accumulation of facts; it is the ignition of the human spirit to serve society and seek excellence in every endeavor.'),
             'chairman_welcome' => Setting::get('chairman_welcome', 'A Message of Hope and Ambition'),
             'chairman_message_p1' => Setting::get('chairman_message_p1', 'Advaita School of Excellence was born from a deep conviction that children in Parbhani deserve the finest educational opportunities — matching the best in the nation while staying rooted in our timeless cultural values.'),
             'chairman_message_p2' => Setting::get('chairman_message_p2', 'Over the years, our campus has flourished into a vibrant sanctuary of learning, discovery, and sportsmanship. We invest continuously in modern labs, world-class teachers, and a secure environment so parents can entrust us with their children with utmost confidence.'),
+
+            // Imagery
             'chairman_image' => Setting::get('chairman_image', 'assets/images/chairman-real.png'),
+            'hero_image' => Setting::get('chairman_hero_image', 'assets/images/about-hero-building.jpg'),
         ];
 
         return view('pages.chairmans-desk', compact('seo', 'content'));
@@ -159,13 +178,19 @@ class PageController extends Controller
         );
 
         $content = [
+            'hero_eyebrow' => Setting::get('principal_hero_eyebrow', 'FROM THE PRINCIPAL'),
+            'hero_title' => Setting::get('principal_hero_title', 'Nurturing Potential for a'),
+            'hero_highlight' => Setting::get('principal_hero_highlight', 'Brighter Tomorrow.'),
             'principal_name' => Setting::get('principal_name', 'Mrs. Sunita S. Deshmukh'),
             'principal_designation' => Setting::get('principal_designation', 'Principal, Advaita School of Excellence'),
             'principal_quote' => Setting::get('principal_quote', 'Every child enters our gates with unique curiosity. Our privilege and sacred duty is to nurture that spark into an unshakeable flame of confidence.'),
             'principal_welcome' => Setting::get('principal_welcome', 'Welcoming You to Our Family'),
             'principal_message_p1' => Setting::get('principal_message_p1', 'It is with immense joy that I welcome you to Advaita School of Excellence. As educators, our primary purpose is to provide a joyful, safe, and academically rigorous space where children are excited to come every single morning.'),
             'principal_message_p2' => Setting::get('principal_message_p2', 'With the integration of CBSE modern learning guidelines, robotics, and co-curricular programs, our students excel not only in exams but also in teamwork, public speaking, and problem solving.'),
+
+            // Imagery
             'principal_image' => Setting::get('principal_image', 'assets/images/principal-desk.jpg'),
+            'hero_image' => Setting::get('principal_hero_image', 'assets/images/about-hero-building.jpg'),
         ];
 
         return view('pages.principals-desk', compact('seo', 'content'));
@@ -193,9 +218,17 @@ class PageController extends Controller
         );
 
         $content = [
-            'hero_title' => Setting::get('academics_hero_title', 'Academic Rigor Meets Creative Expression'),
-            'hero_desc' => Setting::get('academics_hero_desc', 'Our curriculum is meticulously planned from Foundation Years (Nursery to UKG) to Senior Secondary stages, fostering experiential learning and conceptual mastery.'),
+            'hero_badge' => Setting::get('academics_hero_badge', 'OUR ACADEMICS'),
+            'hero_title' => Setting::get('academics_hero_title', 'A Strong Foundation for a Brighter Tomorrow.'),
+            'hero_desc' => Setting::get('academics_hero_desc', 'A thoughtfully designed curriculum that nurtures curiosity, builds strong concepts and prepares students for lifelong success.'),
             'affiliation_line' => Setting::get('academics_curriculum_affiliation', 'Affiliated with the Central Board of Secondary Education (CBSE), New Delhi. Affiliation No: 1130920.'),
+            'cta_headline' => Setting::get('academics_cta_headline', 'Give Your Child the Advaita Advantage.'),
+            'cta_subtext' => Setting::get('academics_cta_subtext', 'A strong academic foundation today, for a brighter and bolder tomorrow.'),
+
+            // Imagery
+            'hero_image' => Setting::get('academics_hero_image', 'assets/images/about-cta-students-clean.png'),
+            'stream_image' => Setting::get('academics_stream_image', 'assets/images/about-philosophy-student.jpg'),
+            'activity_image' => Setting::get('academics_activity_image', 'assets/images/about-story-student.jpg'),
         ];
 
         return view('pages.academics', compact('seo', 'content'));
@@ -211,13 +244,22 @@ class PageController extends Controller
         );
 
         $content = [
-            'badge' => Setting::get('results_hero_badge', 'PROUD MOMENTS'),
-            'title' => Setting::get('results_hero_title', 'Consistent Academic Triumph'),
-            'subtitle' => Setting::get('results_hero_subtitle', 'Celebrating the dedication of our students, mentorship of our faculty, and trust of our parents.'),
+            'badge' => Setting::get('results_hero_badge', 'OUR PERFORMANCE'),
+            'title' => Setting::get('results_hero_title', 'Results that'),
+            'subtitle' => Setting::get('results_hero_subtitle', 'speak for themselves.'),
+            'hero_desc' => Setting::get('results_hero_desc', 'Year after year, our students continue to excel, making us proud with outstanding academic results.'),
             'pass_rate' => Setting::get('results_stat_pass_rate', '100%'),
-            'stat_90_plus' => Setting::get('results_stat_90_plus', '15+'),
-            'stat_80_plus' => Setting::get('results_stat_80_plus', '8+'),
-            'top_score' => Setting::get('results_stat_top_percentage', '97.8%'),
+            'stat_90_plus' => Setting::get('results_stat_90_plus', '35%'),
+            'stat_80_plus' => Setting::get('results_stat_80_plus', '~33%'),
+            'top_score' => Setting::get('results_stat_top_percentage', '98.40%'),
+            'excellence_title' => Setting::get('results_excellence_title', 'Consistent Academic Excellence'),
+            'excellence_desc' => Setting::get('results_excellence_desc', 'Our results reflect the hard work of our students, the guidance of our teachers and the trust of our parents. Together, we continue to set higher benchmarks.'),
+
+            // Imagery
+            'hero_image' => Setting::get('results_hero_image', 'assets/images/results-hero-campus-right.jpg'),
+            'poster_toppers' => Setting::get('results_poster_toppers', 'assets/images/results-poster-toppers.jpg'),
+            'poster_achievers' => Setting::get('results_poster_achievers', 'assets/images/results-poster-achievers.jpg'),
+            'poster_full' => Setting::get('results_poster_full', 'assets/images/results-posters-full.jpg'),
         ];
 
         return view('pages.results', compact('seo', 'content'));
@@ -245,9 +287,16 @@ class PageController extends Controller
         );
 
         $content = [
+            'hero_badge' => Setting::get('fee_hero_badge', 'ADMISSIONS 2026–27'),
+            'hero_title' => Setting::get('fee_hero_title', 'Fees, paid in simple terms.'),
+            'hero_desc' => Setting::get('fee_hero_desc', 'A clear, transparent fee structure designed to make quality education accessible for every child.'),
             'academic_year' => Setting::get('fee_academic_year', '2026–27'),
             'installments_note' => Setting::get('fee_installments_note', 'Fees can be conveniently paid in three term-wise installments or an annual one-time payment with special benefits.'),
             'transparency_note' => Setting::get('fee_transparency_note', 'No hidden charges or mandatory surprise fees. Detailed receipts are issued for all transactions.'),
+
+            // Imagery
+            'hero_image' => Setting::get('fee_hero_image', 'assets/images/about-cta-students-clean.png'),
+            'cta_image' => Setting::get('fee_cta_image', 'assets/images/about-story-student.jpg'),
         ];
 
         return view('pages.fee-structure', compact('seo', 'content'));
@@ -263,8 +312,18 @@ class PageController extends Controller
         );
 
         $content = [
-            'hero_title' => Setting::get('facilities_hero_title', 'An Inspiring 5-Acre Smart Campus'),
-            'hero_desc' => Setting::get('facilities_hero_desc', 'Designed with student well-being at its center — featuring spacious, airy classrooms, green sports lawns, robotics tech labs, and robust safety measures.'),
+            'hero_badge' => Setting::get('facilities_hero_badge', 'OUR CAMPUS'),
+            'hero_title' => Setting::get('facilities_hero_title', 'More than Classrooms, A Place to Grow.'),
+            'hero_desc' => Setting::get('facilities_hero_desc', 'Our campus is thoughtfully designed to provide a safe, modern and inspiring environment where every child can learn, explore and excel.'),
+            'cta_headline' => Setting::get('facilities_cta_headline', 'Take a Campus Tour.'),
+            'cta_desc' => Setting::get('facilities_cta_desc', 'Visit our campus and explore the facilities that make learning at Advaita a truly enriching experience.'),
+
+            // Imagery
+            'hero_image' => Setting::get('facilities_hero_image', 'assets/images/about-campus-courtyard.jpg'),
+            'card1_image' => Setting::get('facilities_card1_image', 'assets/images/fac-smart-class.jpg'),
+            'card2_image' => Setting::get('facilities_card2_image', 'assets/images/fac-science-lab.jpg'),
+            'card3_image' => Setting::get('facilities_card3_image', 'assets/images/fac-computer.jpg'),
+            'card4_image' => Setting::get('facilities_card4_image', 'assets/images/fac-library.jpg'),
         ];
 
         return view('pages.facilities', compact('seo', 'content'));
@@ -304,10 +363,16 @@ class PageController extends Controller
         );
 
         $content = [
+            'hero_badge' => Setting::get('disclosure_hero_badge', 'OUR COMMITMENT'),
+            'hero_title' => Setting::get('disclosure_hero_title', 'Mandatory Public Disclosure'),
+            'hero_desc' => Setting::get('disclosure_hero_desc', 'In compliance with CBSE guidelines, we provide the following mandatory information to ensure transparency and accuracy.'),
             'affiliation_period' => Setting::get('disclosure_affiliation_period', '2023 to 2028'),
             'society_name' => Setting::get('disclosure_society_name', 'Sanmati Sevabhavi Sanstha, Parbhani'),
             'trust_reg_no' => Setting::get('disclosure_trust_reg_no', 'F-3420 (Parbhani)'),
             'principal_qualification' => Setting::get('disclosure_principal_qualification', 'M.Sc., M.Ed., Ph.D.'),
+
+            // Imagery
+            'hero_image' => Setting::get('disclosure_hero_image', 'assets/images/about-hero-building.jpg'),
         ];
 
         return view('pages.mandatory-disclosure', compact('seo', 'content'));

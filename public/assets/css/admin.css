@@ -8343,3 +8343,70 @@
 .pic-file-input {
     display: none;
 }
+
+/* ==========================================================================
+   SweetAlert2 Custom Advaita Theme
+   ========================================================================== */
+.adv-swal-popup {
+    border-radius: 20px !important;
+    padding: 24px 20px !important;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+    box-shadow: 0 20px 45px -10px rgba(8, 59, 122, 0.22), 0 0 0 1px rgba(8, 59, 122, 0.06) !important;
+}
+
+.adv-swal-title {
+    font-size: 20px !important;
+    font-weight: 800 !important;
+    color: #083B7A !important;
+    margin-bottom: 8px !important;
+    letter-spacing: -0.01em !important;
+}
+
+.adv-swal-text {
+    font-size: 14px !important;
+    color: #475569 !important;
+    line-height: 1.6 !important;
+}
+
+.adv-swal-danger-note {
+    display: inline-block;
+    color: #DC2626;
+    font-weight: 600;
+    margin-top: 6px;
+}
+
+.adv-swal-confirm-btn {
+    border-radius: 10px !important;
+    padding: 10px 22px !important;
+    font-weight: 700 !important;
+    font-size: 13.5px !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12) !important;
+    transition: all 0.2s ease !important;
+}
+
+.adv-swal-confirm-btn:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18) !important;
+}
+
+.adv-swal-cancel-btn {
+    border-radius: 10px !important;
+    padding: 10px 20px !important;
+    font-weight: 600 !important;
+    font-size: 13.5px !important;
+    background-color: #f1f5f9 !important;
+    color: #475569 !important;
+    transition: all 0.2s ease !important;
+}
+
+.adv-swal-cancel-btn:hover {
+    background-color: #e2e8f0 !important;
+    color: #0f172a !important;
+}
+
+.adv-swal-toast-popup {
+    border-radius: 12px !important;
+    box-shadow: 0 10px 30px rgba(8, 59, 122, 0.15) !important;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
+}
+

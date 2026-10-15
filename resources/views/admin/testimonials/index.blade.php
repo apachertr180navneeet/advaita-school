@@ -147,7 +147,7 @@
                     <a href="{{ route('admin.testimonials.edit', $testi->id) }}" class="btn-action btn-action-edit" title="Edit Testimonial">
                         <i class="fa-solid fa-pen-to-square"></i>
                     </a>
-                    <form action="{{ route('admin.testimonials.destroy', $testi->id) }}" method="POST" onsubmit="return confirm('Delete this testimonial?');" class="d-inline">
+                    <form action="{{ route('admin.testimonials.destroy', $testi->id) }}" method="POST" data-confirm="Delete testimonial from '{{ addslashes($testi->parent_name) }}'?" data-confirm-title="Delete Testimonial" class="d-inline">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn-action btn-action-delete" title="Delete Testimonial">

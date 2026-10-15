@@ -134,7 +134,7 @@
                         <a href="{{ route('admin.faqs.edit', $faq->id) }}" class="btn-action btn-action-edit" title="Edit Question">
                             <i class="fa-solid fa-pen-to-square"></i>
                         </a>
-                        <form action="{{ route('admin.faqs.destroy', $faq->id) }}" method="POST" onsubmit="return confirm('Delete this FAQ question?');" class="d-inline">
+                        <form action="{{ route('admin.faqs.destroy', $faq->id) }}" method="POST" data-confirm="Delete this FAQ question?" data-confirm-title="Delete FAQ" class="d-inline">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn-action btn-action-delete" title="Delete Question">

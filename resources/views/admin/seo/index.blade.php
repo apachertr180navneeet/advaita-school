@@ -213,12 +213,19 @@ function updateSerpPreview() {
 }
 
 function resetToDefault(defTitle, defDesc, defKeywords) {
-    if (confirm('Restore default recommended SEO title, description, and keywords for this page?')) {
-        document.getElementById('seoTitleInput').value = defTitle;
-        document.getElementById('seoDescInput').value = defDesc;
-        document.getElementById('seoKeywordsInput').value = defKeywords;
-        updateSerpPreview();
-    }
+    AppSwal.confirm(
+        'Restore Recommended SEO?',
+        'This will populate the recommended default meta title, description, and keywords for this page.',
+        'Yes, Restore Defaults',
+        function() {
+            document.getElementById('seoTitleInput').value = defTitle;
+            document.getElementById('seoDescInput').value = defDesc;
+            document.getElementById('seoKeywordsInput').value = defKeywords;
+            updateSerpPreview();
+            AppSwal.toast('success', 'Default SEO values restored!');
+        },
+        'question'
+    );
 }
 
 document.addEventListener('DOMContentLoaded', updateSerpPreview);

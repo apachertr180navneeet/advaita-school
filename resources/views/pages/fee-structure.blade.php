@@ -12,7 +12,7 @@
         <div class="admission-hero-canvas">
             <!-- Hero Students Visual -->
             <div class="admission-hero-bg-visual" aria-hidden="true">
-                <img src="{{ asset('assets/images/about-cta-students-clean.png') }}" alt="Advaita Students" class="admission-hero-bg-img" width="1024" height="682">
+                <img src="{{ asset($content['hero_image'] ?? 'assets/images/about-cta-students-clean.png') }}" alt="Advaita Students" class="admission-hero-bg-img" width="1024" height="682">
             </div>
 
             <!-- SVG Wave Overlay for Smooth Translucent Backdrop -->
@@ -45,16 +45,16 @@
                     </nav>
 
                     <!-- Eyebrow -->
-                    <div class="admission-eyebrow">ADMISSIONS 2026–27</div>
+                    <div class="admission-eyebrow">{{ $content['hero_badge'] ?? 'ADMISSIONS 2026–27' }}</div>
 
                     <!-- Main Headline -->
                     <h1 class="admission-hero-title">
-                        Fees, paid in <span class="highlight-orange">simple terms.</span>
+                        {{ $content['hero_title'] ?? 'Fees, paid in simple terms.' }}
                     </h1>
 
                     <!-- Description -->
                     <p class="admission-hero-desc">
-                        A clear, transparent fee structure designed to make quality education accessible for every child.
+                        {{ $content['hero_desc'] ?? 'A clear, transparent fee structure designed to make quality education accessible for every child.' }}
                     </p>
                 </div>
             </div>
@@ -616,7 +616,7 @@
             </div>
 
             <div class="fee-cta-avatar" aria-hidden="true">
-                <img src="{{ asset('assets/images/about-story-student.jpg') }}" alt="Advaita Student">
+                <img src="{{ asset($content['cta_image'] ?? 'assets/images/about-story-student.jpg') }}" alt="Advaita Student">
             </div>
         </div>
 

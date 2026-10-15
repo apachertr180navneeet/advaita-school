@@ -67,7 +67,9 @@
 
     <!-- Flash Notifications Container -->
     @if(session('success') || session('error') || $errors->any())
-    <div class="adv-flash-alert-container" id="advFlashContainer">
+    <div class="adv-flash-alert-container" id="advFlashContainer"
+         @if(session('success')) data-swal-success="{{ session('success') }}" @endif
+         @if(session('error')) data-swal-error="{{ session('error') }}" @endif>
         @if(session('success'))
         <div class="adv-flash-alert adv-flash-success" role="alert">
             <i class="fa-solid fa-circle-check adv-flash-icon"></i>
@@ -124,6 +126,10 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
+    <!-- SweetAlert2 Core & Brand Helper -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{{ asset('assets/js/swal-helpers.js') }}?v={{ file_exists(public_path('assets/js/swal-helpers.js')) ? filemtime(public_path('assets/js/swal-helpers.js')) : '1.0' }}"></script>
+
     <!-- Scripts -->
     <script src="{{ asset('assets/js/header.js') }}"></script>
     <script src="{{ asset('assets/js/slider.js') }}"></script>
@@ -133,8 +139,7 @@
         setTimeout(function() {
             var flash = document.getElementById('advFlashContainer');
             if (flash) {
-                flash.style.transition = 'opacity 0.6s ease';
-                flash.style.opacity = '0';
+                flash.classList.add('opacity-0');
                 setTimeout(function() { flash.remove(); }, 600);
             }
         }, 8000);

@@ -12,7 +12,7 @@
         <div class="chairman-hero-canvas">
             <!-- Background Image & Sky on the Right -->
             <div class="chairman-hero-bg-visual" aria-hidden="true">
-                <img src="{{ asset('assets/images/about-hero-building.jpg') }}" alt="Advaita School of Excellence Campus" class="chairman-hero-bg-img" loading="eager">
+                <img src="{{ asset($content['hero_image'] ?? 'assets/images/about-hero-building.jpg') }}" alt="Advaita School of Excellence Campus" class="chairman-hero-bg-img" loading="eager">
                 <!-- Floating Script Badge in Sky -->
                 <div class="chairman-hero-script-tag">
                     <span class="script-title">More<br>Than A School</span>
@@ -59,11 +59,10 @@
                         <span class="active">Chairman's Desk</span>
                     </div>
 
-                    <span class="chairman-eyebrow">FROM THE CHAIRMAN</span>
+                    <span class="chairman-eyebrow">{{ $content['hero_eyebrow'] ?? 'FROM THE CHAIRMAN' }}</span>
                     <h1 class="chairman-hero-title">
-                        Building Stronger<br>
-                        Foundations for<br>
-                        <span class="text-orange">Brighter Tomorrows.</span>
+                        {{ $content['hero_title'] ?? 'Building Stronger Foundations for' }}<br>
+                        <span class="text-orange">{{ $content['hero_highlight'] ?? 'Brighter Tomorrows.' }}</span>
                     </h1>
 
                     <!-- Pipeline Sub-list -->

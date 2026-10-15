@@ -113,7 +113,7 @@
                             <a href="{{ route('admin.sliders.edit', $slide->id) }}" class="btn-act btn-act-edit" title="Edit Slide">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
-                            <form action="{{ route('admin.sliders.destroy', $slide->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this slide?');" class="d-inline">
+                            <form action="{{ route('admin.sliders.destroy', $slide->id) }}" method="POST" data-confirm="Are you sure you want to delete this slide?" data-confirm-title="Delete Hero Slide" class="d-inline">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn-act btn-act-del" title="Delete Slide">

@@ -74,7 +74,7 @@
             @endif
         </div>
 
-        <form action="{{ route('admin.inquiries.destroy', $inquiry->id) }}" method="POST" onsubmit="return confirm('Delete this inquiry permanently?');" class="m-0">
+        <form action="{{ route('admin.inquiries.destroy', $inquiry->id) }}" method="POST" data-confirm="Delete this inquiry permanently?" data-confirm-title="Delete Inquiry" class="m-0">
             @csrf
             @method('DELETE')
             <button type="submit" class="btn-delete btn-pad-lg">

@@ -202,7 +202,7 @@
                                     <span>View</span>
                                 </a>
 
-                                <form action="{{ route('admin.inquiries.destroy', $inq->id) }}" method="POST" onsubmit="return confirm('Delete inquiry from {{ addslashes($inq->name) }}?');" class="m-0">
+                                <form action="{{ route('admin.inquiries.destroy', $inq->id) }}" method="POST" data-confirm="Delete inquiry from {{ addslashes($inq->name) }}?" data-confirm-title="Delete Inquiry" class="m-0">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn-action-delete" title="Delete record">

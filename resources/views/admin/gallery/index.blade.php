@@ -277,7 +277,7 @@
                                     <span>Edit</span>
                                 </a>
 
-                                <form action="{{ route('admin.gallery.destroy', $item->id) }}" method="POST" class="m-0" onsubmit="return confirm('Delete this gallery photo?');">
+                                <form action="{{ route('admin.gallery.destroy', $item->id) }}" method="POST" class="m-0" data-confirm="Delete this gallery photo?" data-confirm-title="Delete Photo">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn-action-delete" title="Delete Photo">
@@ -327,7 +327,7 @@
                             <a href="{{ route('admin.gallery.edit', $item->id) }}" class="btn-action-view btn-pad-sm">
                                 <i class="fa-solid fa-pen"></i>
                             </a>
-                            <form action="{{ route('admin.gallery.destroy', $item->id) }}" method="POST" class="m-0" onsubmit="return confirm('Delete this photo?');">
+                            <form action="{{ route('admin.gallery.destroy', $item->id) }}" method="POST" class="m-0" data-confirm="Delete this photo?" data-confirm-title="Delete Photo">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn-action-delete btn-pad-xs">

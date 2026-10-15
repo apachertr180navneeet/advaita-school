@@ -12,7 +12,7 @@
         <div class="vision-hero-canvas">
             <!-- Background Image & Sky on the Right -->
             <div class="vision-hero-bg-visual" aria-hidden="true">
-                <img src="{{ asset('assets/images/about-hero-building.jpg') }}" alt="Advaita School of Excellence Campus" class="vision-hero-bg-img" loading="eager">
+                <img src="{{ asset($content['hero_image'] ?? 'assets/images/about-hero-building.jpg') }}" alt="Advaita School of Excellence Campus" class="vision-hero-bg-img" loading="eager">
                 <!-- Floating Script Badge in Sky -->
                 <div class="vision-hero-script-tag">
                     <span class="script-title">More<br>Than A School</span>
@@ -59,14 +59,14 @@
                         <span class="active">Vision &amp; Mission</span>
                     </div>
 
-                    <span class="vision-eyebrow">OUR VISION &amp; MISSION</span>
+                    <span class="vision-eyebrow">{{ $content['hero_badge'] ?? 'OUR VISION & MISSION' }}</span>
                     <h1 class="vision-hero-title">
-                        Guiding Young Minds<br>
-                        Towards a <span class="text-orange">Brighter<br>Tomorrow.</span>
+                        {{ $content['hero_title'] ?? 'Guiding Young Minds Towards a' }}<br>
+                        <span class="text-orange">{{ $content['hero_highlight'] ?? 'Brighter Tomorrow.' }}</span>
                     </h1>
 
                     <p class="vision-hero-desc">
-                        At Advaita School of Excellence, our vision and mission reflect our unwavering commitment to academic excellence, strong values and the all-round development of every child.
+                        {{ $content['hero_desc'] ?? 'At Advaita School of Excellence, our vision and mission reflect our unwavering commitment to academic excellence, strong values and the all-round development of every child.' }}
                     </p>
                 </div>
             </div>
@@ -87,7 +87,7 @@
                 <!-- Card 1: OUR VISION -->
                 <div class="vision-featured-card vision-card-left">
                     <div class="vision-card-bg-visual">
-                        <img src="{{ asset('assets/images/vision-mountain-peak.jpg') }}" alt="Majestic Mountain Summit - Vision" class="vision-mountain-img" loading="lazy">
+                        <img src="{{ asset($content['vision_card_image'] ?? 'assets/images/vision-mountain-peak.jpg') }}" alt="Majestic Mountain Summit - Vision" class="vision-mountain-img" loading="lazy">
                         <div class="vision-mountain-overlay"></div>
                     </div>
                     
@@ -117,7 +117,7 @@
                 <!-- Card 2: OUR MISSION -->
                 <div class="vision-featured-card mission-card-right">
                     <div class="mission-card-bg-visual">
-                        <img src="{{ asset('assets/images/mission-student-inspirational.jpg') }}" alt="Inspiring Student - Mission" class="mission-student-img" loading="lazy">
+                        <img src="{{ asset($content['mission_card_image'] ?? 'assets/images/mission-student-inspirational.jpg') }}" alt="Inspiring Student - Mission" class="mission-student-img" loading="lazy">
                         <div class="mission-student-overlay"></div>
                     </div>
 
@@ -328,12 +328,12 @@
         <!-- Center Content -->
         <div class="banner-content-center">
             <div class="copy-center">
-                <div class="eyebrow">— TOGETHER TOWARDS A BRIGHTER TOMORROW —</div>
+                <div class="eyebrow">{{ $content['cta_eyebrow'] ?? '— TOGETHER TOWARDS A BRIGHTER TOMORROW —' }}</div>
                 <h2 class="headline">
-                    Be a Part of the <span class="text-orange">Advaita Journey</span>
+                    {{ $content['cta_headline'] ?? 'Be a Part of the Advaita Journey' }}
                 </h2>
                 <p class="subtext">
-                    Give your child the right start with strong academics, values and endless opportunities.
+                    {{ $content['cta_subtext'] ?? 'Give your child the right start with strong academics, values and endless opportunities.' }}
                 </p>
                 <div class="buttons">
                     <a href="{{ route('home') }}#admissions" class="staff-btn-orange">
@@ -353,7 +353,7 @@
 
         <!-- Students Image on Right -->
         <div class="students">
-            <img src="{{ asset('assets/images/about-cta-students-trio.png') }}" alt="Advaita Students" loading="lazy">
+            <img src="{{ asset($content['cta_image'] ?? 'assets/images/about-cta-students-trio.png') }}" alt="Advaita Students" loading="lazy">
         </div>
     </section>
 

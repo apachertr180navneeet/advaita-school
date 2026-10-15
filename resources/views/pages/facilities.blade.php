@@ -19,7 +19,7 @@
                 </nav>
 
                 <!-- Centered Eyebrow -->
-                <div class="facilities-eyebrow">— OUR CAMPUS —</div>
+                <div class="facilities-eyebrow">{{ $content['hero_badge'] ?? '— OUR CAMPUS —' }}</div>
 
                 <!-- Centered Main Title -->
                 <h1 class="facilities-hero-title">
@@ -88,7 +88,7 @@
                 <!-- Card 1: Smart Classrooms -->
                 <div class="facility-card">
                     <div class="facility-thumb-wrap">
-                        <img src="{{ asset('assets/images/fac-smart-class.jpg') }}" alt="Smart Classrooms at Advaita" class="facility-thumb-img" loading="lazy">
+                        <img src="{{ asset($content['card1_image'] ?? 'assets/images/fac-smart-class.jpg') }}" alt="Smart Classrooms at Advaita" class="facility-thumb-img" loading="lazy">
                         <div class="facility-float-badge badge-orange" aria-hidden="true">
                             <i class="fa-solid fa-book-open"></i>
                         </div>
@@ -108,7 +108,7 @@
                 <!-- Card 2: Science Laboratories -->
                 <div class="facility-card">
                     <div class="facility-thumb-wrap">
-                        <img src="{{ asset('assets/images/fac-science-lab.jpg') }}" alt="Science Laboratories at Advaita" class="facility-thumb-img" loading="lazy">
+                        <img src="{{ asset($content['card2_image'] ?? 'assets/images/fac-science-lab.jpg') }}" alt="Science Laboratories at Advaita" class="facility-thumb-img" loading="lazy">
                         <div class="facility-float-badge badge-blue" aria-hidden="true">
                             <i class="fa-solid fa-flask"></i>
                         </div>
@@ -128,7 +128,7 @@
                 <!-- Card 3: Computer Lab -->
                 <div class="facility-card">
                     <div class="facility-thumb-wrap">
-                        <img src="{{ asset('assets/images/fac-computer.jpg') }}" alt="Modern Computer Lab at Advaita" class="facility-thumb-img" loading="lazy">
+                        <img src="{{ asset($content['card3_image'] ?? 'assets/images/fac-computer.jpg') }}" alt="Modern Computer Lab at Advaita" class="facility-thumb-img" loading="lazy">
                         <div class="facility-float-badge badge-purple" aria-hidden="true">
                             <i class="fa-solid fa-laptop"></i>
                         </div>
@@ -148,7 +148,7 @@
                 <!-- Card 4: Library -->
                 <div class="facility-card">
                     <div class="facility-thumb-wrap">
-                        <img src="{{ asset('assets/images/fac-library.jpg') }}" alt="School Library at Advaita" class="facility-thumb-img" loading="lazy">
+                        <img src="{{ asset($content['card4_image'] ?? 'assets/images/fac-library.jpg') }}" alt="School Library at Advaita" class="facility-thumb-img" loading="lazy">
                         <div class="facility-float-badge badge-violet" aria-hidden="true">
                             <i class="fa-solid fa-book-bookmark"></i>
                         </div>
@@ -367,10 +367,10 @@
                 <div class="facilities-cta-left">
                     <span class="facilities-cta-pill">EXPERIENCE IT YOURSELF</span>
                     <h2 class="facilities-cta-headline">
-                        Take a Campus <span class="highlight-serif">Tour.</span>
+                        {{ $content['cta_headline'] ?? 'Take a Campus Tour.' }}
                     </h2>
                     <p class="facilities-cta-desc">
-                        Visit our campus and explore the facilities that make learning at Advaita a truly enriching experience.
+                        {{ $content['cta_desc'] ?? 'Visit our campus and explore the facilities that make learning at Advaita a truly enriching experience.' }}
                     </p>
                 </div>
 

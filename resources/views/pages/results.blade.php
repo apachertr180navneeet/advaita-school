@@ -44,7 +44,7 @@
 
                 <!-- Right Campus Image with Swoop Border & "More Than A School" -->
                 <div class="results-hero-visual">
-                    <img src="{{ asset('assets/images/results-hero-campus-right.jpg') }}" alt="Advaita School of Excellence - More Than A School" class="results-hero-campus-img">
+                    <img src="{{ asset($content['hero_image'] ?? 'assets/images/results-hero-campus-right.jpg') }}" alt="Advaita School of Excellence - More Than A School" class="results-hero-campus-img">
                 </div>
             </div>
         </div>
@@ -190,8 +190,8 @@
                 <div class="results-posters-container">
                     <div class="results-posters-pair" id="postersGrid">
                         <!-- Left Poster: Toppers Om Dhoot 98.40% -->
-                        <div class="results-poster-frame" onclick="openResultsModal('assets/images/results-poster-toppers.jpg', 'CBSE Class 10th District Toppers 2025-26 - Om Dhoot 98.40%')">
-                            <img src="{{ asset('assets/images/results-poster-toppers.jpg') }}" alt="Advaita School CBSE Results 2025-26 - District Toppers Om Dhoot 98.40%">
+                        <div class="results-poster-frame" onclick="openResultsModal('{{ asset($content['poster_toppers'] ?? 'assets/images/results-poster-toppers.jpg') }}', 'CBSE Class 10th District Toppers 2025-26 - Om Dhoot 98.40%')">
+                            <img src="{{ asset($content['poster_toppers'] ?? 'assets/images/results-poster-toppers.jpg') }}" alt="Advaita School CBSE Results 2025-26 - District Toppers Om Dhoot 98.40%">
                             <div class="poster-overlay-hint">
                                 <i class="fa-solid fa-magnifying-glass-plus"></i>
                                 <span>Click to view full</span>
@@ -199,8 +199,8 @@
                         </div>
 
                         <!-- Right Poster: Class 10th Board Result Above 90% -->
-                        <div class="results-poster-frame" onclick="openResultsModal('assets/images/results-poster-achievers.jpg', 'CBSE Class 10th Board Result Above 90% Achievers')">
-                            <img src="{{ asset('assets/images/results-poster-achievers.jpg') }}" alt="Advaita School CBSE Results 2025-26 - Class 10th Board Result Above 90%">
+                        <div class="results-poster-frame" onclick="openResultsModal('{{ asset($content['poster_achievers'] ?? 'assets/images/results-poster-achievers.jpg') }}', 'CBSE Class 10th Board Result Above 90% Achievers')">
+                            <img src="{{ asset($content['poster_achievers'] ?? 'assets/images/results-poster-achievers.jpg') }}" alt="Advaita School CBSE Results 2025-26 - Class 10th Board Result Above 90%">
                             <div class="poster-overlay-hint">
                                 <i class="fa-solid fa-magnifying-glass-plus"></i>
                                 <span>Click to view full</span>
@@ -233,12 +233,12 @@
                     <i class="fa-solid fa-award"></i>
                 </div>
                 <div class="excellence-copy">
-                    <h3 class="excellence-title">Consistent Academic Excellence</h3>
-                    <p class="excellence-desc">Our results reflect the hard work of our students, the guidance of our teachers and the trust of our parents. Together, we continue to set higher benchmarks.</p>
+                    <h3 class="excellence-title">{{ $content['excellence_title'] ?? 'Consistent Academic Excellence' }}</h3>
+                    <p class="excellence-desc">{{ $content['excellence_desc'] ?? 'Our results reflect the hard work of our students, the guidance of our teachers and the trust of our parents. Together, we continue to set higher benchmarks.' }}</p>
                 </div>
             </div>
 
-            <a href="{{ asset('assets/images/results-posters-full.jpg') }}" download="Advaita-CBSE-Class-10-Results-2025-26.jpg" class="btn-excellence-download" target="_blank">
+            <a href="{{ asset($content['poster_full'] ?? 'assets/images/results-posters-full.jpg') }}" download="Advaita-CBSE-Class-10-Results-2025-26.jpg" class="btn-excellence-download" target="_blank">
                 <i class="fa-solid fa-download"></i>
                 <span>Download Full Result PDF</span>
             </a>

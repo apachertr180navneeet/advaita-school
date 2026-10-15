@@ -307,7 +307,7 @@
 
                     <!-- Step 1 Actions Bar -->
                     <div class="reg-actions-bar">
-                        <button type="button" class="reg-btn-draft" onclick="alert('Draft saved temporarily.')">
+                        <button type="button" class="reg-btn-draft" onclick="AppSwal.toast('info', 'Draft saved temporarily in your current session.')">
                             Save as Draft
                         </button>
                         <button type="button" class="reg-btn-continue" onclick="switchRegStep(2)">

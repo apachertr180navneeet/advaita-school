@@ -271,7 +271,7 @@
                                     <span>Edit</span>
                                 </a>
 
-                                <form action="{{ route('admin.why-choose.destroy', $card) }}" method="POST" class="m-0" onsubmit="return confirm('Delete advantage card \'{{ addslashes($card->title) }}\'?');">
+                                <form action="{{ route('admin.why-choose.destroy', $card) }}" method="POST" class="m-0" data-confirm="Delete advantage card '{{ addslashes($card->title) }}'?" data-confirm-title="Delete Advantage Card">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn-action-delete" title="Delete card">
@@ -322,7 +322,7 @@
                             <a href="{{ route('admin.why-choose.edit', $card) }}" class="btn-action-view btn-pad-sm">
                                 <i class="fa-solid fa-pen"></i>
                             </a>
-                            <form action="{{ route('admin.why-choose.destroy', $card) }}" method="POST" class="m-0" onsubmit="return confirm('Delete this card?');">
+                            <form action="{{ route('admin.why-choose.destroy', $card) }}" method="POST" class="m-0" data-confirm="Delete this advantage card?" data-confirm-title="Delete Advantage Card">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn-action-delete btn-pad-xs">

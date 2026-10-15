@@ -218,7 +218,7 @@
                                     <span>Details</span>
                                 </a>
 
-                                <form action="{{ route('admin.registrations.destroy', $reg->id) }}" method="POST" onsubmit="return confirm('Delete registration #{{ $reg->application_no }}? This action cannot be undone.');" class="m-0">
+                                <form action="{{ route('admin.registrations.destroy', $reg->id) }}" method="POST" data-confirm="Delete registration #{{ $reg->application_no }}? This action cannot be undone." data-confirm-title="Delete Registration" class="m-0">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn-action-delete" title="Delete record">

@@ -193,7 +193,7 @@
                             <a href="{{ route('admin.pillars.edit', $pillar->id) }}" class="btn-act btn-act-edit" title="Edit Pillar">
                                 <i class="fa-solid fa-pen-to-square"></i>
                             </a>
-                            <form action="{{ route('admin.pillars.destroy', $pillar->id) }}" method="POST" onsubmit="return confirm('Are you sure you want to delete this pillar card?');" class="d-inline">
+                            <form action="{{ route('admin.pillars.destroy', $pillar->id) }}" method="POST" data-confirm="Are you sure you want to delete this pillar card?" data-confirm-title="Delete Pillar Card" class="d-inline">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn-act btn-act-del" title="Delete Pillar">

@@ -12,7 +12,7 @@
         <div class="contact-hero-canvas">
             <!-- Background Image & Sky on the Right -->
             <div class="contact-hero-bg-visual" aria-hidden="true">
-                <img src="{{ asset('assets/images/about-hero-building.jpg') }}" alt="Advaita School of Excellence Campus" class="contact-hero-bg-img" loading="eager">
+                <img src="{{ asset($content['hero_image'] ?? 'assets/images/about-hero-building.jpg') }}" alt="Advaita School of Excellence Campus" class="contact-hero-bg-img" loading="eager">
                 
                 <!-- Floating Script Badge in Sky -->
                 <div class="contact-hero-script-tag">
@@ -54,15 +54,14 @@
                         <span class="active">Mandatory Public Disclosure</span>
                     </nav>
 
-                    <div class="contact-eyebrow">— OUR COMMITMENT —</div>
+                    <div class="contact-eyebrow">{{ $content['hero_badge'] ?? '— OUR COMMITMENT —' }}</div>
 
                     <h1 class="contact-hero-title">
-                        Mandatory<br>
-                        <span class="contact-highlight-serif text-adv-orange">Public Disclosure</span>
+                        {{ $content['hero_title'] ?? 'Mandatory Public Disclosure' }}
                     </h1>
 
                     <p class="contact-hero-desc">
-                        In compliance with CBSE guidelines, we provide the following mandatory information to ensure transparency and accuracy.
+                        {{ $content['hero_desc'] ?? 'In compliance with CBSE guidelines, we provide the following mandatory information to ensure transparency and accuracy.' }}
                     </p>
                 </div>
             </div>

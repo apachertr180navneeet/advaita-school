@@ -12,7 +12,7 @@
         <div class="admission-hero-canvas">
             <!-- Hero Students Visual -->
             <div class="admission-hero-bg-visual" aria-hidden="true">
-                <img src="{{ asset('assets/images/about-cta-students-clean.png') }}" alt="Advaita Students" class="admission-hero-bg-img" width="1024" height="682">
+                <img src="{{ asset($content['hero_image'] ?? 'assets/images/about-cta-students-clean.png') }}" alt="Advaita Students" class="admission-hero-bg-img" width="1024" height="682">
             </div>
 
             <!-- SVG Wave Overlay for Smooth Translucent Backdrop -->
@@ -45,7 +45,7 @@
                     </nav>
 
                     <!-- Eyebrow -->
-                    <div class="admission-eyebrow">— OUR ACADEMICS —</div>
+                    <div class="admission-eyebrow">{{ $content['hero_badge'] ?? '— OUR ACADEMICS —' }}</div>
 
                     <!-- Main Headline -->
                     <h1 class="admission-hero-title">
@@ -193,7 +193,7 @@
                 <div class="acad-streams-visual">
                     <div class="acad-streams-aura" aria-hidden="true"></div>
                     <div class="acad-streams-img-box">
-                        <img src="{{ asset('assets/images/about-philosophy-student.jpg') }}" alt="Student studying at Advaita School of Excellence">
+                        <img src="{{ asset($content['stream_image'] ?? 'assets/images/about-philosophy-student.jpg') }}" alt="Student studying at Advaita School of Excellence">
                     </div>
                 </div>
 
@@ -381,7 +381,7 @@
                 <div class="acad-beyond-visual">
                     <div class="acad-beyond-aura" aria-hidden="true"></div>
                     <div class="acad-beyond-img-box">
-                        <img src="{{ asset('assets/images/about-story-student.jpg') }}" alt="Student participating in co-curricular arts and activities at Advaita School">
+                        <img src="{{ asset($content['activity_image'] ?? 'assets/images/about-story-student.jpg') }}" alt="Student participating in co-curricular arts and activities at Advaita School">
                     </div>
                 </div>
             </div>
@@ -394,9 +394,9 @@
             <div class="acad-cta-left">
                 <span class="acad-cta-eyebrow">— ADMISSIONS OPEN —</span>
                 <h3 class="acad-cta-title">
-                    Give Your Child the <span class="highlight-orange">Advaita Advantage.</span>
+                    {{ $content['cta_headline'] ?? 'Give Your Child the Advaita Advantage.' }}
                 </h3>
-                <p class="acad-cta-desc">A strong academic foundation today, for a brighter and bolder tomorrow.</p>
+                <p class="acad-cta-desc">{{ $content['cta_subtext'] ?? 'A strong academic foundation today, for a brighter and bolder tomorrow.' }}</p>
             </div>
 
             <div class="acad-cta-actions">

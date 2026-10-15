@@ -12,7 +12,7 @@
         <div class="principal-hero-canvas">
             <!-- Background Image & Sky on the Right -->
             <div class="principal-hero-bg-visual" aria-hidden="true">
-                <img src="{{ asset('assets/images/about-hero-building.jpg') }}" alt="Advaita School of Excellence Campus" class="principal-hero-bg-img" loading="eager">
+                <img src="{{ asset($content['hero_image'] ?? 'assets/images/about-hero-building.jpg') }}" alt="Advaita School of Excellence Campus" class="principal-hero-bg-img" loading="eager">
                 <!-- Floating Script Badge in Sky -->
                 <div class="principal-hero-script-tag">
                     <span class="script-title">More<br>Than A School</span>
@@ -59,10 +59,10 @@
                         <span class="active">Principal's Desk</span>
                     </div>
 
-                    <span class="principal-eyebrow">FROM THE PRINCIPAL</span>
+                    <span class="principal-eyebrow">{{ $content['hero_eyebrow'] ?? 'FROM THE PRINCIPAL' }}</span>
                     <h1 class="principal-hero-title">
-                        Nurturing Potential<br>
-                        Towards a <span class="text-orange">Brighter<br>Tomorrow.</span>
+                        {{ $content['hero_title'] ?? 'Nurturing Potential for a' }}<br>
+                        <span class="text-orange">{{ $content['hero_highlight'] ?? 'Brighter Tomorrow.' }}</span>
                     </h1>
 
                     <p class="principal-hero-desc">
@@ -253,7 +253,7 @@
 
             <!-- Background Image & Sky on the Right -->
             <div class="principal-cta-bg-visual" aria-hidden="true">
-                <img src="{{ asset('assets/images/about-hero-building.jpg') }}" alt="Advaita School of Excellence Campus" class="principal-cta-bg-img" loading="lazy">
+                <img src="{{ asset($content['hero_image'] ?? 'assets/images/about-hero-building.jpg') }}" alt="Advaita School of Excellence Campus" class="principal-cta-bg-img" loading="lazy">
             </div>
 
             <!-- Full Width Wave Mask Overlay with ambient blue contour -->

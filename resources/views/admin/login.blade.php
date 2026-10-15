@@ -141,6 +141,10 @@
         </div>
     </div>
 
+    <!-- SweetAlert2 Core & Brand Helper -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{{ asset('assets/js/swal-helpers.js') }}?v={{ file_exists(public_path('assets/js/swal-helpers.js')) ? filemtime(public_path('assets/js/swal-helpers.js')) : '1.0' }}"></script>
+
     <script>
         // Password toggle
         const toggleBtn = document.getElementById('togglePasswordBtn');

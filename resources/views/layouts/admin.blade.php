@@ -213,7 +213,7 @@
         <!-- Page Body Content -->
         <main class="admin-content-body">
             @if(session('success'))
-            <div class="flash-alert-wrap">
+            <div class="flash-alert-wrap" data-swal-success="{{ session('success') }}">
                 <div class="flash-toast success">
                     <i class="fa-solid fa-circle-check flash-toast-icon"></i>
                     <div>{{ session('success') }}</div>
@@ -222,7 +222,7 @@
             @endif
 
             @if(session('error'))
-            <div class="flash-alert-wrap">
+            <div class="flash-alert-wrap" data-swal-error="{{ session('error') }}">
                 <div class="flash-toast error">
                     <i class="fa-solid fa-circle-exclamation flash-toast-icon"></i>
                     <div>{{ session('error') }}</div>
@@ -233,6 +233,10 @@
             @yield('content')
         </main>
     </div>
+
+    <!-- SweetAlert2 Core & Brand Helper -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="{{ asset('assets/js/swal-helpers.js') }}?v={{ file_exists(public_path('assets/js/swal-helpers.js')) ? filemtime(public_path('assets/js/swal-helpers.js')) : '1.0' }}"></script>
 
     <script>
         // Mobile Sidebar Toggle
