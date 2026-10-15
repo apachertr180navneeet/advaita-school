@@ -40,84 +40,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/inner-pages.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/footer.css') }}?v={{ file_exists(public_path('assets/css/footer.css')) ? filemtime(public_path('assets/css/footer.css')) : '1.0' }}">
-    
-    <style>
-        .adv-flash-alert-container {
-            position: fixed;
-            top: 24px;
-            right: 24px;
-            z-index: 99999;
-            max-width: 440px;
-            width: calc(100% - 48px);
-            pointer-events: none;
-        }
-        .adv-flash-alert {
-            pointer-events: auto;
-            display: flex;
-            align-items: flex-start;
-            gap: 14px;
-            padding: 16px 20px;
-            border-radius: 12px;
-            box-shadow: 0 14px 35px rgba(8, 59, 122, 0.18), 0 4px 10px rgba(0, 0, 0, 0.08);
-            backdrop-filter: blur(10px);
-            animation: slideDownFade 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            margin-bottom: 12px;
-        }
-        .adv-flash-success {
-            background: linear-gradient(135deg, #059669 0%, #10B981 100%);
-            color: #ffffff;
-            border-left: 5px solid #34D399;
-        }
-        .adv-flash-error {
-            background: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);
-            color: #ffffff;
-            border-left: 5px solid #F87171;
-        }
-        .adv-flash-icon {
-            font-size: 20px;
-            line-height: 1;
-            margin-top: 2px;
-            flex-shrink: 0;
-        }
-        .adv-flash-content {
-            flex: 1;
-        }
-        .adv-flash-title {
-            font-weight: 700;
-            font-size: 15px;
-            margin-bottom: 4px;
-        }
-        .adv-flash-message {
-            font-size: 13.5px;
-            opacity: 0.95;
-            line-height: 1.45;
-        }
-        .adv-flash-close {
-            background: transparent;
-            border: none;
-            color: #ffffff;
-            opacity: 0.75;
-            cursor: pointer;
-            font-size: 16px;
-            padding: 0;
-            transition: opacity 0.2s;
-        }
-        .adv-flash-close:hover {
-            opacity: 1;
-        }
-        @keyframes slideDownFade {
-            from {
-                opacity: 0;
-                transform: translateY(-20px) scale(0.96);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
-            }
-        }
-    </style>
-    @yield('styles')
+@yield('styles')
 </head>
 <body>
     <!-- =========================================================================
@@ -172,7 +95,7 @@
             <i class="fa-solid fa-triangle-exclamation adv-flash-icon"></i>
             <div class="adv-flash-content">
                 <div class="adv-flash-title">Please check form errors:</div>
-                <ul class="adv-flash-message" style="margin: 0; padding-left: 18px;">
+                <ul class="adv-flash-message adv-alert-error-list">
                     @foreach($errors->all() as $error)
                         <li>{{ $error }}</li>
                     @endforeach

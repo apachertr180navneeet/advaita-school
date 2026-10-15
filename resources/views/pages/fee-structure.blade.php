@@ -95,11 +95,11 @@
                 <table class="fee-classwise-table">
                     <thead>
                         <tr>
-                            <th scope="col" style="width: 22%;">Class</th>
-                            <th scope="col" class="text-right" style="width: 20%;">Tuition Fee<br><span style="font-size: 0.72rem; font-weight: 500; color: #64748b;">(Annual)</span></th>
-                            <th scope="col" class="text-right" style="width: 20%;">Development Fee<br><span style="font-size: 0.72rem; font-weight: 500; color: #64748b;">(Annual)</span></th>
-                            <th scope="col" class="text-right" style="width: 18%;">Examination Fee<br><span style="font-size: 0.72rem; font-weight: 500; color: #64748b;">(Annual)</span></th>
-                            <th scope="col" class="text-right" style="width: 20%;">Total Annual Fee</th>
+                            <th scope="col" class="fee-th-class">Class</th>
+                            <th scope="col" class="text-right fee-th-col20">Tuition Fee<br><span class="fee-th-subtext">(Annual)</span></th>
+                            <th scope="col" class="text-right fee-th-col20">Development Fee<br><span class="fee-th-subtext">(Annual)</span></th>
+                            <th scope="col" class="text-right fee-th-col18">Examination Fee<br><span class="fee-th-subtext">(Annual)</span></th>
+                            <th scope="col" class="text-right fee-th-col20">Total Annual Fee</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -199,14 +199,14 @@
             </div>
 
             <!-- Table 2: Term-wise Fee Breakdown (Hidden until toggled) -->
-            <div class="fee-table-responsive" id="feeTableTerm" style="display: none;">
+            <div class="fee-table-responsive fee-table-hidden" id="feeTableTerm">
                 <table class="fee-classwise-table">
                     <thead>
                         <tr>
-                            <th scope="col" style="width: 25%;">Class</th>
-                            <th scope="col" class="text-right" style="width: 25%;">Term 1 Fee<br><span style="font-size: 0.72rem; font-weight: 500; color: #64748b;">(April – Due at Admission)</span></th>
-                            <th scope="col" class="text-right" style="width: 25%;">Term 2 Fee<br><span style="font-size: 0.72rem; font-weight: 500; color: #64748b;">(October – Mid Session)</span></th>
-                            <th scope="col" class="text-right" style="width: 25%;">Total Annual Fee</th>
+                            <th scope="col" class="fee-th-col25">Class</th>
+                            <th scope="col" class="text-right fee-th-col25">Term 1 Fee<br><span class="fee-th-subtext">(April – Due at Admission)</span></th>
+                            <th scope="col" class="text-right fee-th-col25">Term 2 Fee<br><span class="fee-th-subtext">(October – Mid Session)</span></th>
+                            <th scope="col" class="text-right fee-th-col25">Total Annual Fee</th>
                         </tr>
                     </thead>
                     <tbody>

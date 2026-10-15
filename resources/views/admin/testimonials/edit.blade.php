@@ -3,149 +3,11 @@
 @section('title', 'Edit Parent Testimonial')
 @section('page_title', 'Edit Parent Testimonial')
 
-@section('styles')
-<style>
-    .form-card {
-        background: #ffffff;
-        border: 1px solid var(--admin-border);
-        border-radius: 18px;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
-        overflow: hidden;
-        max-width: 860px;
-        margin: 0 auto;
-    }
 
-    .form-header-bar {
-        padding: 18px 24px;
-        background: #FAFBFD;
-        border-bottom: 1px solid var(--admin-border);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .form-header-bar h4 {
-        font-size: 15px;
-        font-weight: 800;
-        color: var(--admin-navy);
-        margin: 0;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .form-body-content {
-        padding: 26px;
-    }
-
-    .form-grid-2 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-        margin-bottom: 20px;
-    }
-
-    .form-group-item {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-    }
-
-    .form-label-item {
-        font-size: 13px;
-        font-weight: 700;
-        color: var(--admin-navy);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .form-input-item {
-        padding: 10px 14px;
-        border: 1px solid var(--admin-border);
-        border-radius: 10px;
-        font-size: 13.5px;
-        outline: none;
-        transition: border-color 0.2s;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .form-input-item:focus {
-        border-color: var(--admin-orange);
-    }
-
-    .current-avatar-box {
-        display: flex;
-        gap: 14px;
-        align-items: center;
-        padding: 12px;
-        background: #F8FAFC;
-        border: 1px solid var(--admin-border);
-        border-radius: 12px;
-        margin-bottom: 14px;
-    }
-
-    .current-avatar-img {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 2px solid var(--admin-border);
-    }
-
-    /* Dropzone */
-    .upload-dropzone {
-        border: 2px dashed #CBD5E1;
-        border-radius: 14px;
-        padding: 20px;
-        text-align: center;
-        background: #F8FAFC;
-        cursor: pointer;
-        transition: all 0.2s;
-        position: relative;
-    }
-
-    .upload-dropzone:hover {
-        border-color: var(--admin-orange);
-        background: #FFFBF7;
-    }
-
-    .upload-dropzone input[type="file"] {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        cursor: pointer;
-    }
-
-    .avatar-preview {
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin: 10px auto 0 auto;
-        border: 2px solid var(--admin-orange);
-        display: none;
-    }
-
-    .form-actions-footer {
-        padding: 18px 26px;
-        background: #FAFBFD;
-        border-top: 1px solid var(--admin-border);
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        gap: 12px;
-    }
-</style>
-@endsection
 
 @section('content')
-<div style="padding-bottom: 30px;">
-    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+<div class="pb-30">
+    <div class="d-flex align-items-center justify-content-between mb-20">
         <a href="{{ route('admin.testimonials.index') }}" class="btn-admin btn-secondary">
             <i class="fa-solid fa-arrow-left"></i>
             <span>Back to Testimonials</span>
@@ -155,10 +17,10 @@
     <div class="form-card">
         <div class="form-header-bar">
             <h4>
-                <i class="fa-solid fa-pen-to-square" style="color: var(--admin-orange);"></i>
+                <i class="fa-solid fa-pen-to-square text-orange"></i>
                 <span>Edit Testimonial #{{ $testimonial->id }} &mdash; {{ $testimonial->parent_name }}</span>
             </h4>
-            <span style="font-size: 12px; color: #64748B;">Updates instantly on homepage</span>
+            <span class="text-muted fs-12">Updates instantly on homepage</span>
         </div>
 
         <form action="{{ route('admin.testimonials.update', $testimonial->id) }}" method="POST" enctype="multipart/form-data">
@@ -170,11 +32,11 @@
                     <div class="form-group-item">
                         <label class="form-label-item">
                             <span>Parent Name</span>
-                            <span style="color: #EF4444;">*</span>
+                            <span class="text-danger">*</span>
                         </label>
                         <input type="text" name="parent_name" class="form-input-item" value="{{ old('parent_name', $testimonial->parent_name) }}" required placeholder="e.g. Priya Sharma" maxlength="255">
                         @error('parent_name')
-                            <span style="font-size: 11.5px; color: #EF4444;">{{ $message }}</span>
+                            <span class="form-error-msg">{{ $message }}</span>
                         @enderror
                     </div>
 
@@ -186,14 +48,14 @@
                     </div>
                 </div>
 
-                <div class="form-group-item" style="margin-bottom: 20px;">
+                <div class="form-group-item mb-20">
                     <label class="form-label-item">
                         <span>Parent Testimonial Message</span>
-                        <span style="color: #EF4444;">*</span>
+                        <span class="text-danger">*</span>
                     </label>
                     <textarea name="content" rows="4" class="form-input-item" required placeholder="What the parent says about Advaita School...">{{ old('content', $testimonial->content) }}</textarea>
                     @error('content')
-                        <span style="font-size: 11.5px; color: #EF4444;">{{ $message }}</span>
+                        <span class="form-error-msg">{{ $message }}</span>
                     @enderror
                 </div>
 
@@ -201,7 +63,7 @@
                     <div class="form-group-item">
                         <label class="form-label-item">
                             <span>Card Theme Accent</span>
-                            <span style="color: #EF4444;">*</span>
+                            <span class="text-danger">*</span>
                         </label>
                         <select name="theme_color" class="form-input-item" required>
                             <option value="orange" {{ old('theme_color', $testimonial->theme_color) === 'orange' ? 'selected' : '' }}>Warm Orange</option>
@@ -212,7 +74,7 @@
                     <div class="form-group-item">
                         <label class="form-label-item">
                             <span>Star Rating (1 to 5)</span>
-                            <span style="color: #EF4444;">*</span>
+                            <span class="text-danger">*</span>
                         </label>
                         <select name="rating" class="form-input-item" required>
                             <option value="5" {{ old('rating', $testimonial->rating) == 5 ? 'selected' : '' }}>★★★★★ (5 Stars)</option>
@@ -226,24 +88,24 @@
                 <div class="current-avatar-box">
                     <img src="{{ $testimonial->avatar_url }}" alt="{{ $testimonial->parent_name }}" class="current-avatar-img">
                     <div>
-                        <div style="font-size: 13px; font-weight: 700; color: var(--admin-navy);">Current Avatar</div>
-                        <div style="font-size: 11.5px; color: #64748B;">Size: {{ $testimonial->avatar_size ?? 'Default' }}</div>
+                        <div class="text-navy fs-13 font-bold">Current Avatar</div>
+                        <div class="td-sub-muted">Size: {{ $testimonial->avatar_size ?? 'Default' }}</div>
                     </div>
                 </div>
 
-                <div class="form-group-item" style="margin-bottom: 22px;">
+                <div class="form-group-item mb-22">
                     <label class="form-label-item">
                         <span>Replace Avatar Photo (Optional)</span>
                     </label>
                     <div class="upload-dropzone">
                         <input type="file" name="avatar" id="avatarInput" accept="image/*">
-                        <i class="fa-solid fa-user-circle" style="font-size: 24px; color: var(--admin-orange); margin-bottom: 4px;"></i>
-                        <h5 style="font-size: 13px; font-weight: 700; color: var(--admin-navy); margin: 0 0 2px 0;">Click or drop image to replace avatar</h5>
-                        <p style="font-size: 11.5px; color: #64748B; margin: 0;">Leave empty to keep existing photo</p>
+                        <i class="fa-solid fa-user-circle fs-24 text-orange mb-4"></i>
+                        <h5 class="text-navy fs-13 font-bold mb-2">Click or drop image to replace avatar</h5>
+                        <p class="text-muted fs-11 m-0">Leave empty to keep existing photo</p>
                         <img id="avatarPreview" class="avatar-preview" alt="Avatar Preview">
                     </div>
                     @error('avatar')
-                        <span style="font-size: 11.5px; color: #EF4444; margin-top: 4px;">{{ $message }}</span>
+                        <span class="form-error-msg">{{ $message }}</span>
                     @enderror
                 </div>
 
@@ -251,18 +113,18 @@
                     <div class="form-group-item">
                         <label class="form-label-item">
                             <span>Display Sort Order</span>
-                            <span style="color: #EF4444;">*</span>
+                            <span class="text-danger">*</span>
                         </label>
                         <input type="number" name="order" class="form-input-item" value="{{ old('order', $testimonial->order) }}" min="0" required>
                     </div>
 
-                    <div class="form-group-item" style="justify-content: center;">
+                    <div class="form-group-item justify-content-center">
                         <label class="form-label-item">
                             <span>Active Visibility Status</span>
                         </label>
-                        <div style="display: flex; align-items: center; gap: 10px; margin-top: 6px;">
-                            <input type="checkbox" name="is_active" value="1" id="isActiveCheck" {{ old('is_active', $testimonial->is_active) ? 'checked' : '' }} style="width: 18px; height: 18px; accent-color: var(--admin-orange);">
-                            <label for="isActiveCheck" style="font-size: 13.5px; font-weight: 600; color: var(--admin-navy); cursor: pointer;">
+                        <div class="d-flex align-items-center gap-10 mt-6">
+                            <input type="checkbox" name="is_active" value="1" id="isActiveCheck" {{ old('is_active', $testimonial->is_active) ? 'checked' : '' }} class="checkbox-orange">
+                            <label for="isActiveCheck" class="text-navy font-semibold cursor-pointer fs-13">
                                 Visible on public homepage
                             </label>
                         </div>

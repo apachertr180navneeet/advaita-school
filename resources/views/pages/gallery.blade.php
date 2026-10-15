@@ -195,7 +195,7 @@
                     </div>
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
-                            <div class="adv-gal-card-icon" style="background: #fee2e2; color: #ef4444;">
+                            <div class="adv-gal-card-icon gal-theme-red">
                                 <i class="fa-solid fa-flask-vial"></i>
                             </div>
                             <div class="adv-gal-card-text">
@@ -203,7 +203,7 @@
                                 <span class="adv-gal-card-count">38 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" style="background: #ef4444;" aria-label="View Mathematics & Practical Labs">
+                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-red" aria-label="View Mathematics & Practical Labs">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
@@ -219,7 +219,7 @@
                     </div>
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
-                            <div class="adv-gal-card-icon" style="background: #ffedd5; color: #f97316;">
+                            <div class="adv-gal-card-icon gal-theme-orange">
                                 <i class="fa-solid fa-drum"></i>
                             </div>
                             <div class="adv-gal-card-text">
@@ -227,7 +227,7 @@
                                 <span class="adv-gal-card-count">45 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" style="background: #f97316;" aria-label="View School Band & Assembly Events">
+                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-orange" aria-label="View School Band & Assembly Events">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
@@ -243,7 +243,7 @@
                     </div>
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
-                            <div class="adv-gal-card-icon" style="background: #dcfce7; color: #22c55e;">
+                            <div class="adv-gal-card-icon gal-theme-green">
                                 <i class="fa-solid fa-futbol"></i>
                             </div>
                             <div class="adv-gal-card-text">
@@ -251,7 +251,7 @@
                                 <span class="adv-gal-card-count">34 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" style="background: #22c55e;" aria-label="View Football League & Athletic Action">
+                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-green" aria-label="View Football League & Athletic Action">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
@@ -267,7 +267,7 @@
                     </div>
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
-                            <div class="adv-gal-card-icon" style="background: #f3e8ff; color: #8b5cf6;">
+                            <div class="adv-gal-card-icon gal-theme-purple">
                                 <i class="fa-solid fa-paper-plane"></i>
                             </div>
                             <div class="adv-gal-card-text">
@@ -275,7 +275,7 @@
                                 <span class="adv-gal-card-count">42 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" style="background: #8b5cf6;" aria-label="View Art Studio & Origami Craft">
+                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-purple" aria-label="View Art Studio & Origami Craft">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
@@ -291,7 +291,7 @@
                     </div>
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
-                            <div class="adv-gal-card-icon" style="background: #fce7f3; color: #ec4899;">
+                            <div class="adv-gal-card-icon gal-theme-pink">
                                 <i class="fa-solid fa-users"></i>
                             </div>
                             <div class="adv-gal-card-text">
@@ -299,7 +299,7 @@
                                 <span class="adv-gal-card-count">36 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" style="background: #ec4899;" aria-label="View Student Life & Teamwork">
+                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-pink" aria-label="View Student Life & Teamwork">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
@@ -315,7 +315,7 @@
                     </div>
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
-                            <div class="adv-gal-card-icon" style="background: #e0f2fe; color: #0284c7;">
+                            <div class="adv-gal-card-icon gal-theme-sky">
                                 <i class="fa-solid fa-water-ladder"></i>
                             </div>
                             <div class="adv-gal-card-text">
@@ -323,7 +323,7 @@
                                 <span class="adv-gal-card-count">28 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" style="background: #0284c7;" aria-label="View Splash Pool & Kids Water Arena">
+                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-sky" aria-label="View Splash Pool & Kids Water Arena">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
@@ -339,7 +339,7 @@
                     </div>
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
-                            <div class="adv-gal-card-icon" style="background: #ccfbf1; color: #0d9488;">
+                            <div class="adv-gal-card-icon gal-theme-teal">
                                 <i class="fa-solid fa-person-running"></i>
                             </div>
                             <div class="adv-gal-card-text">
@@ -347,7 +347,7 @@
                                 <span class="adv-gal-card-count">26 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" style="background: #0d9488;" aria-label="View Early Years Agility & Ring Obstacles">
+                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-teal" aria-label="View Early Years Agility & Ring Obstacles">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
@@ -363,7 +363,7 @@
                     </div>
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
-                            <div class="adv-gal-card-icon" style="background: #ffe4e6; color: #e11d48;">
+                            <div class="adv-gal-card-icon gal-theme-rose">
                                 <i class="fa-solid fa-shapes"></i>
                             </div>
                             <div class="adv-gal-card-text">
@@ -371,7 +371,7 @@
                                 <span class="adv-gal-card-count">19 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" style="background: #e11d48;" aria-label="View Kindergarten Caterpillar Tunnel">
+                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-rose" aria-label="View Kindergarten Caterpillar Tunnel">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
@@ -387,7 +387,7 @@
                     </div>
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
-                            <div class="adv-gal-card-icon" style="background: #fef3c7; color: #f59e0b;">
+                            <div class="adv-gal-card-icon gal-theme-amber">
                                 <i class="fa-solid fa-person-walking-dashed-line-arrow-right"></i>
                             </div>
                             <div class="adv-gal-card-text">
@@ -395,7 +395,7 @@
                                 <span class="adv-gal-card-count">40 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" style="background: #f59e0b;" aria-label="View Gymnastics & Tumbling">
+                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-amber" aria-label="View Gymnastics & Tumbling">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
@@ -411,7 +411,7 @@
                     </div>
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
-                            <div class="adv-gal-card-icon" style="background: #bbf7d0; color: #16a34a;">
+                            <div class="adv-gal-card-icon gal-theme-emerald">
                                 <i class="fa-solid fa-medal"></i>
                             </div>
                             <div class="adv-gal-card-text">
@@ -419,7 +419,7 @@
                                 <span class="adv-gal-card-count">30 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" style="background: #16a34a;" aria-label="View Football Freestyle & Ball Control">
+                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-emerald" aria-label="View Football Freestyle & Ball Control">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
@@ -435,7 +435,7 @@
                     </div>
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
-                            <div class="adv-gal-card-icon" style="background: #fbcfe8; color: #db2777;">
+                            <div class="adv-gal-card-icon gal-theme-fuchsia">
                                 <i class="fa-solid fa-palette"></i>
                             </div>
                             <div class="adv-gal-card-text">
@@ -443,7 +443,7 @@
                                 <span class="adv-gal-card-count">24 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" style="background: #db2777;" aria-label="View Colors & Hand Art Studio">
+                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-fuchsia" aria-label="View Colors & Hand Art Studio">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
@@ -459,7 +459,7 @@
                     </div>
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
-                            <div class="adv-gal-card-icon" style="background: #cffafe; color: #06b6d4;">
+                            <div class="adv-gal-card-icon gal-theme-cyan">
                                 <i class="fa-solid fa-paintbrush"></i>
                             </div>
                             <div class="adv-gal-card-text">
@@ -467,7 +467,7 @@
                                 <span class="adv-gal-card-count">27 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" style="background: #06b6d4;" aria-label="View Collaborative Art Circle">
+                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-cyan" aria-label="View Collaborative Art Circle">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
@@ -483,7 +483,7 @@
                     </div>
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
-                            <div class="adv-gal-card-icon" style="background: #ffedd5; color: #ea580c;">
+                            <div class="adv-gal-card-icon gal-theme-orange-dark">
                                 <i class="fa-solid fa-chalkboard-user"></i>
                             </div>
                             <div class="adv-gal-card-text">
@@ -491,7 +491,7 @@
                                 <span class="adv-gal-card-count">32 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" style="background: #ea580c;" aria-label="View Smart Classroom Learning">
+                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-orange-dark" aria-label="View Smart Classroom Learning">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
@@ -507,7 +507,7 @@
                     </div>
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
-                            <div class="adv-gal-card-icon" style="background: #ede9fe; color: #7c3aed;">
+                            <div class="adv-gal-card-icon gal-theme-violet">
                                 <i class="fa-solid fa-graduation-cap"></i>
                             </div>
                             <div class="adv-gal-card-text">
@@ -515,7 +515,7 @@
                                 <span class="adv-gal-card-count">22 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" style="background: #7c3aed;" aria-label="View IIT-JEE & NEET Foundation Batch">
+                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-violet" aria-label="View IIT-JEE & NEET Foundation Batch">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
@@ -531,7 +531,7 @@
                     </div>
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
-                            <div class="adv-gal-card-icon" style="background: #dbeafe; color: #2563eb;">
+                            <div class="adv-gal-card-icon gal-theme-blue">
                                 <i class="fa-solid fa-sun"></i>
                             </div>
                             <div class="adv-gal-card-text">
@@ -539,7 +539,7 @@
                                 <span class="adv-gal-card-count">31 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" style="background: #2563eb;" aria-label="View Rainbow Parachute Lawn Activities">
+                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-blue" aria-label="View Rainbow Parachute Lawn Activities">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
@@ -555,7 +555,7 @@
                     </div>
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
-                            <div class="adv-gal-card-icon" style="background: #dcfce7; color: #15803d;">
+                            <div class="adv-gal-card-icon gal-theme-forest">
                                 <i class="fa-solid fa-trophy"></i>
                             </div>
                             <div class="adv-gal-card-text">
@@ -563,7 +563,7 @@
                                 <span class="adv-gal-card-count">35 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" style="background: #15803d;" aria-label="View Campus Sports Ground & Agility">
+                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-forest" aria-label="View Campus Sports Ground & Agility">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>

@@ -3,227 +3,22 @@
 @section('title', 'Edit Advantage Card')
 @section('page_title', 'Edit Advantage Card')
 
-@section('styles')
-<style>
-    .form-container-card {
-        background: #ffffff;
-        border: 1px solid var(--admin-border);
-        border-radius: 16px;
-        padding: 30px;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
-        margin-bottom: 30px;
-    }
 
-    .form-grid-2 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
-    }
-
-    @media (max-width: 768px) {
-        .form-grid-2 {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    .form-group {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        margin-bottom: 20px;
-    }
-
-    .form-group.full-width {
-        grid-column: 1 / -1;
-    }
-
-    .form-label {
-        font-size: 13.5px;
-        font-weight: 700;
-        color: var(--admin-text-main);
-        display: flex;
-        align-items: center;
-        gap: 6px;
-    }
-
-    .form-label .required {
-        color: #EF4444;
-    }
-
-    .form-label .helper-hint {
-        font-size: 12px;
-        font-weight: 500;
-        color: var(--admin-text-muted);
-    }
-
-    .form-control {
-        background: #F8FAFC;
-        border: 1px solid var(--admin-border);
-        border-radius: 10px;
-        padding: 11px 14px;
-        font-size: 14px;
-        font-family: inherit;
-        color: var(--admin-text-main);
-        transition: all 0.2s ease;
-    }
-
-    .form-control:focus {
-        outline: none;
-        border-color: var(--admin-navy);
-        background: #ffffff;
-        box-shadow: 0 0 0 3px rgba(8, 59, 122, 0.1);
-    }
-
-    /* Color Selection Grid */
-    .theme-color-options-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-        gap: 12px;
-    }
-
-    .theme-color-option-label {
-        border: 2px solid var(--admin-border);
-        border-radius: 12px;
-        padding: 10px 12px;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        transition: all 0.2s ease;
-        background: #ffffff;
-        user-select: none;
-    }
-
-    .theme-color-option-label:hover {
-        border-color: #94A3B8;
-        transform: translateY(-1px);
-    }
-
-    .theme-color-option-label input[type="radio"] {
-        display: none;
-    }
-
-    .theme-color-option-label.selected {
-        border-color: var(--admin-navy);
-        background: #EFF6FF;
-        box-shadow: 0 4px 12px rgba(8, 59, 122, 0.12);
-    }
-
-    .color-swatch-circle {
-        width: 22px;
-        height: 22px;
-        border-radius: 50%;
-        flex-shrink: 0;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    }
-
-    .color-name-text {
-        font-size: 12.5px;
-        font-weight: 700;
-        color: var(--admin-navy);
-    }
-
-    /* Current Image Box */
-    .current-image-preview-card {
-        display: flex;
-        align-items: center;
-        gap: 16px;
-        background: #F8FAFC;
-        border: 1px solid var(--admin-border);
-        border-radius: 12px;
-        padding: 12px 16px;
-        margin-bottom: 12px;
-    }
-
-    .current-image-preview-thumb {
-        width: 100px;
-        height: 70px;
-        border-radius: 8px;
-        object-fit: cover;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Upload Box & Preview */
-    .image-upload-wrapper {
-        border: 2px dashed #CBD5E1;
-        border-radius: 14px;
-        padding: 24px;
-        text-align: center;
-        background: #F8FAFC;
-        cursor: pointer;
-        transition: all 0.2s;
-        position: relative;
-    }
-
-    .image-upload-wrapper:hover {
-        border-color: var(--admin-orange);
-        background: #FFFBF7;
-    }
-
-    .image-upload-input {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0;
-        cursor: pointer;
-    }
-
-    .upload-icon-circle {
-        width: 48px;
-        height: 48px;
-        border-radius: 50%;
-        background: #E2E8F0;
-        color: var(--admin-navy);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 20px;
-        margin: 0 auto 10px auto;
-    }
-
-    .preview-box {
-        margin-top: 14px;
-        display: none;
-        background: #ffffff;
-        border: 1px solid var(--admin-border);
-        border-radius: 12px;
-        padding: 12px;
-        align-items: center;
-        gap: 16px;
-    }
-
-    .preview-thumb {
-        width: 100px;
-        height: 70px;
-        border-radius: 8px;
-        object-fit: cover;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .preview-info {
-        font-size: 12.5px;
-        color: #475569;
-        line-height: 1.4;
-    }
-</style>
-@endsection
 
 @section('content')
-<div class="edit-card-wrapper" style="max-width: 900px;">
+<div class="edit-card-wrapper form-card-max900">
 
     <!-- Top Action Link -->
-    <div style="margin-bottom: 20px;">
-        <a href="{{ route('admin.why-choose.index') }}" class="btn-admin btn-secondary" style="display: inline-flex;">
+    <div class="mb-20">
+        <a href="{{ route('admin.why-choose.index') }}" class="btn-admin btn-secondary d-inline-flex">
             <i class="fa-solid fa-arrow-left"></i>
             <span>Back to Advantage Cards</span>
         </a>
     </div>
 
     <div class="form-container-card">
-        <h3 style="font-size: 18px; font-weight: 800; color: var(--admin-navy); margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
-            <i class="fa-solid fa-pen-to-square" style="color: var(--admin-orange);"></i>
+        <h3 class="form-section-title">
+            <i class="fa-solid fa-pen-to-square text-orange"></i>
             <span>Edit Advantage Card #{{ $card->badge_label }}</span>
         </h3>
 
@@ -241,7 +36,7 @@
                     <input type="text" id="title" name="title" class="form-control @error('title') is-invalid @enderror"
                            value="{{ old('title', $card->title) }}" required placeholder="e.g. Safe & Secure Campus" maxlength="255">
                     @error('title')
-                        <span style="font-size: 12px; color: #EF4444; font-weight: 600;">{{ $message }}</span>
+                        <span class="form-error-msg">{{ $message }}</span>
                     @enderror
                 </div>
 
@@ -254,7 +49,7 @@
                     <textarea id="description" name="description" rows="3" class="form-control @error('description') is-invalid @enderror"
                               required placeholder="Highlight the benefits and key details for students and parents...">{{ old('description', $card->description) }}</textarea>
                     @error('description')
-                        <span style="font-size: 12px; color: #EF4444; font-weight: 600;">{{ $message }}</span>
+                        <span class="form-error-msg">{{ $message }}</span>
                     @enderror
                 </div>
 
@@ -267,7 +62,7 @@
                     <input type="text" id="badge_number" name="badge_number" class="form-control @error('badge_number') is-invalid @enderror"
                            value="{{ old('badge_number', $card->badge_number) }}" placeholder="e.g. 04" maxlength="10">
                     @error('badge_number')
-                        <span style="font-size: 12px; color: #EF4444; font-weight: 600;">{{ $message }}</span>
+                        <span class="form-error-msg">{{ $message }}</span>
                     @enderror
                 </div>
 
@@ -280,7 +75,7 @@
                     <input type="number" id="order" name="order" class="form-control @error('order') is-invalid @enderror"
                            value="{{ old('order', $card->order) }}" min="1">
                     @error('order')
-                        <span style="font-size: 12px; color: #EF4444; font-weight: 600;">{{ $message }}</span>
+                        <span class="form-error-msg">{{ $message }}</span>
                     @enderror
                 </div>
 
@@ -295,13 +90,13 @@
                         @foreach($themeColors as $colorKey => $colorConfig)
                             <label class="theme-color-option-label {{ old('theme_color', $card->theme_color) === $colorKey ? 'selected' : '' }}" data-color="{{ $colorKey }}">
                                 <input type="radio" name="theme_color" value="{{ $colorKey }}" {{ old('theme_color', $card->theme_color) === $colorKey ? 'checked' : '' }} required>
-                                <span class="color-swatch-circle" style="background: {{ $colorConfig['gradient'] }};"></span>
+                                <span class="color-swatch-circle theme-gradient-{{ $colorKey }}"></span>
                                 <span class="color-name-text">{{ $colorConfig['label'] }}</span>
                             </label>
                         @endforeach
                     </div>
                     @error('theme_color')
-                        <span style="font-size: 12px; color: #EF4444; font-weight: 600;">{{ $message }}</span>
+                        <span class="form-error-msg">{{ $message }}</span>
                     @enderror
                 </div>
 
@@ -316,8 +111,8 @@
                     <div class="current-image-preview-card">
                         <img src="{{ $card->image_url }}" alt="{{ $card->title }}" class="current-image-preview-thumb">
                         <div>
-                            <strong style="color: var(--admin-navy); font-size: 13.5px;">Current Active Image</strong><br>
-                            <span style="font-size: 12px; color: #64748B;">
+                            <strong class="text-navy fs-13">Current Active Image</strong><br>
+                            <span class="text-muted fs-12">
                                 Dimensions: {{ $card->image_dimensions ?? 'Standard' }} &bull; Size: {{ $card->image_size ?? 'Optimized' }}
                             </span>
                         </div>
@@ -329,38 +124,38 @@
                         <div class="upload-icon-circle">
                             <i class="fa-solid fa-cloud-arrow-up"></i>
                         </div>
-                        <h4 style="font-size: 14px; font-weight: 700; color: var(--admin-navy); margin-bottom: 4px;">
+                        <h4 class="form-switch-label mb-4">
                             Click or drag to replace image
                         </h4>
-                        <p style="font-size: 12px; color: #64748B; margin: 0;">Recommended: 600 × 400 px (3:2 ratio) up to 4MB</p>
+                        <p class="text-muted fs-12 m-0">Recommended: 600 × 400 px (3:2 ratio) up to 4MB</p>
                     </div>
 
                     <!-- Live Image Preview Box -->
                     <div class="preview-box" id="previewBox">
                         <img src="" alt="Selected Preview" class="preview-thumb" id="previewThumb">
                         <div class="preview-info">
-                            <strong id="previewFileName" style="color: var(--admin-navy);">image.jpg</strong><br>
+                            <strong id="previewFileName" class="text-navy">image.jpg</strong><br>
                             <span id="previewFileSize">0 KB</span> &bull; <span id="previewFileDims">Calculating dimensions...</span>
                         </div>
                     </div>
 
                     @error('image')
-                        <span style="font-size: 12px; color: #EF4444; font-weight: 600;">{{ $message }}</span>
+                        <span class="form-error-msg">{{ $message }}</span>
                     @enderror
                 </div>
 
                 <!-- Active Toggle -->
-                <div class="form-group full-width" style="margin-top: 10px;">
-                    <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; user-select: none;">
-                        <input type="checkbox" name="is_active" value="1" {{ old('is_active', $card->is_active) ? 'checked' : '' }} style="width: 18px; height: 18px; accent-color: var(--admin-orange);">
-                        <span style="font-size: 14px; font-weight: 700; color: var(--admin-navy);">
+                <div class="form-group full-width mt-10">
+                    <label class="form-switch-wrap">
+                        <input type="checkbox" name="is_active" value="1" {{ old('is_active', $card->is_active) ? 'checked' : '' }} class="checkbox-orange">
+                        <span class="form-switch-label">
                             Card is active and displayed on public homepage slider
                         </span>
                     </label>
                 </div>
             </div>
 
-            <div style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--admin-border);">
+            <div class="form-action-footer">
                 <a href="{{ route('admin.why-choose.index') }}" class="btn-admin btn-secondary">Cancel</a>
                 <button type="submit" class="btn-admin btn-primary">
                     <i class="fa-solid fa-cloud-arrow-up"></i>

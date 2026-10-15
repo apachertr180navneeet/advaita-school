@@ -3,470 +3,7 @@
 @section('title', 'Campus Gallery Management')
 @section('page_title', 'Campus Gallery (A Day at Advaita, in Pictures)')
 
-@section('styles')
-<style>
-    .gallery-mgmt-wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-        width: 100%;
-    }
 
-    /* Top Bar */
-    .gallery-top-bar {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-    }
-
-    .gallery-top-title h3 {
-        font-size: 20px;
-        font-weight: 800;
-        color: var(--admin-navy);
-        margin: 0 0 4px 0;
-    }
-
-    .gallery-top-title p {
-        font-size: 13.5px;
-        color: #64748B;
-        margin: 0;
-    }
-
-    /* Metrics Grid */
-    .gallery-metrics-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 16px;
-    }
-
-    .gallery-metric-card {
-        background: #ffffff;
-        border: 1px solid var(--admin-border);
-        border-radius: 14px;
-        padding: 16px 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
-    }
-
-    .gallery-metric-info h4 {
-        font-size: 22px;
-        font-weight: 800;
-        color: var(--admin-navy);
-        margin: 0 0 3px 0;
-        line-height: 1;
-    }
-
-    .gallery-metric-info span {
-        font-size: 11.5px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        color: #64748B;
-    }
-
-    .gallery-metric-icon {
-        width: 42px;
-        height: 42px;
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 18px;
-        flex-shrink: 0;
-    }
-
-    .metric-icon-total { background: #EFF6FF; color: #2563EB; }
-    .metric-icon-active { background: #DCFCE7; color: #16A34A; }
-    .metric-icon-ratio { background: #FFF7ED; color: #EA580C; }
-    .metric-icon-anchor { background: #F3E8FF; color: #7C3AED; }
-
-    /* Section Settings Card */
-    .section-settings-card {
-        background: #ffffff;
-        border: 1px solid var(--admin-border);
-        border-radius: 18px;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
-        overflow: hidden;
-    }
-
-    .section-settings-head {
-        padding: 18px 24px;
-        background: #FAFBFD;
-        border-bottom: 1px solid var(--admin-border);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .section-settings-head h4 {
-        font-size: 15px;
-        font-weight: 800;
-        color: var(--admin-navy);
-        margin: 0;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-
-    .section-settings-body {
-        padding: 24px;
-    }
-
-    /* Live Header Preview Box */
-    .header-live-preview-box {
-        background: #F8FAFC;
-        border: 1px dashed #CBD5E1;
-        border-radius: 14px;
-        padding: 22px 24px;
-        margin-bottom: 22px;
-        text-align: center;
-    }
-
-    .preview-eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        font-size: 11px;
-        font-weight: 800;
-        color: var(--admin-orange);
-        background: rgba(243, 112, 33, 0.1);
-        border: 1px solid rgba(243, 112, 33, 0.25);
-        padding: 4px 14px;
-        border-radius: 20px;
-        letter-spacing: 0.8px;
-        text-transform: uppercase;
-        margin-bottom: 10px;
-    }
-
-    .preview-title {
-        font-size: 22px;
-        font-weight: 800;
-        margin-bottom: 8px;
-        line-height: 1.25;
-    }
-
-    .preview-title .part-dark { color: #083B7A; }
-    .preview-title .part-orange { color: #F37021; }
-
-    .preview-subtitle {
-        font-size: 13.5px;
-        color: #64748B;
-        max-width: 680px;
-        margin: 0 auto 14px auto;
-        line-height: 1.55;
-    }
-
-    .preview-buttons-wrap {
-        display: inline-flex;
-        align-items: center;
-        gap: 12px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .preview-btn-main {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        font-size: 12.5px;
-        font-weight: 700;
-        background: #F37021;
-        color: #ffffff;
-        padding: 7px 16px;
-        border-radius: 20px;
-        box-shadow: 0 2px 8px rgba(243, 112, 33, 0.25);
-    }
-
-    .preview-btn-video {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        font-size: 12.5px;
-        font-weight: 700;
-        background: #083B7A;
-        color: #ffffff;
-        padding: 7px 16px;
-        border-radius: 20px;
-    }
-
-    /* Form Fields */
-    .form-grid-3 {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 16px;
-        margin-bottom: 16px;
-    }
-
-    .form-grid-2 {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 16px;
-        margin-bottom: 16px;
-    }
-
-    .form-group-custom {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-    }
-
-    .form-label-custom {
-        font-size: 13px;
-        font-weight: 700;
-        color: #334155;
-        display: flex;
-        align-items: center;
-        gap: 4px;
-    }
-
-    .form-input-custom {
-        background: #F8FAFC;
-        border: 1px solid var(--admin-border);
-        border-radius: 10px;
-        padding: 10px 14px;
-        font-size: 13.5px;
-        font-family: inherit;
-        color: var(--admin-text-main);
-        outline: none;
-        transition: all 0.2s;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .form-input-custom:focus {
-        border-color: var(--admin-navy);
-        background: #ffffff;
-        box-shadow: 0 0 0 3px rgba(8, 59, 122, 0.08);
-    }
-
-    /* Table & Grid Card */
-    .gallery-table-card {
-        background: #ffffff;
-        border: 1px solid var(--admin-border);
-        border-radius: 18px;
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
-        overflow: hidden;
-    }
-
-    .table-top-actions-bar {
-        padding: 18px 24px;
-        background: #FAFBFD;
-        border-bottom: 1px solid var(--admin-border);
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        gap: 14px;
-    }
-
-    .table-view-tabs {
-        display: flex;
-        align-items: center;
-        gap: 6px;
-        background: #F1F5F9;
-        padding: 4px;
-        border-radius: 10px;
-        border: 1px solid #E2E8F0;
-    }
-
-    .view-tab-btn {
-        background: transparent;
-        border: none;
-        padding: 6px 14px;
-        border-radius: 8px;
-        font-size: 12.5px;
-        font-weight: 700;
-        color: #64748B;
-        cursor: pointer;
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        transition: all 0.2s;
-    }
-
-    .view-tab-btn.active {
-        background: #ffffff;
-        color: var(--admin-navy);
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    }
-
-    /* Thumbnail Box in Table */
-    .photo-thumb-wrap {
-        display: flex;
-        flex-direction: column;
-        gap: 6px;
-        width: 130px;
-    }
-
-    .photo-thumb-box {
-        position: relative;
-        width: 130px;
-        height: 82px;
-        border-radius: 10px;
-        overflow: hidden;
-        background: #0B192C;
-        border: 1px solid #CBD5E1;
-        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
-    }
-
-    .photo-thumb-box img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.3s ease;
-    }
-
-    .photo-thumb-box:hover img {
-        transform: scale(1.08);
-    }
-
-    .badge-icon-chip {
-        position: absolute;
-        top: 0;
-        left: 0;
-        font-size: 11px;
-        font-weight: 800;
-        color: #ffffff;
-        background: rgba(15, 23, 42, 0.85);
-        padding: 3px 8px;
-        border-bottom-right-radius: 10px;
-        backdrop-filter: blur(4px);
-    }
-
-    .spec-pill {
-        font-size: 10.5px;
-        font-weight: 700;
-        padding: 2px 6px;
-        border-radius: 4px;
-        background: #F1F5F9;
-        color: #475569;
-        border: 1px solid #E2E8F0;
-        display: inline-flex;
-        align-items: center;
-        gap: 3px;
-    }
-
-    .category-chip {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        padding: 5px 12px;
-        border-radius: 20px;
-        font-size: 12px;
-        font-weight: 700;
-        background: #EFF6FF;
-        color: #1E40AF;
-        border: 1px solid #DBEAFE;
-    }
-
-    .category-chip i {
-        color: var(--admin-orange);
-    }
-
-    /* Grid Preview View */
-    .gallery-visual-grid {
-        display: none;
-        padding: 24px;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        gap: 22px;
-    }
-
-    .visual-gallery-card {
-        background: #ffffff;
-        border: 1px solid var(--admin-border);
-        border-radius: 16px;
-        overflow: hidden;
-        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
-        display: flex;
-        flex-direction: column;
-        transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .visual-gallery-card:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 10px 25px rgba(8, 59, 122, 0.09);
-    }
-
-    .visual-gallery-media {
-        position: relative;
-        height: 190px;
-        overflow: hidden;
-        background: #0f172a;
-    }
-
-    .visual-gallery-media img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.3s;
-    }
-
-    .visual-gallery-card:hover .visual-gallery-media img {
-        transform: scale(1.05);
-    }
-
-    .visual-badge-pill {
-        position: absolute;
-        top: 12px;
-        left: 12px;
-        background: rgba(15, 23, 42, 0.85);
-        backdrop-filter: blur(8px);
-        color: #ffffff;
-        padding: 5px 12px;
-        border-radius: 20px;
-        font-size: 11.5px;
-        font-weight: 700;
-        display: flex;
-        align-items: center;
-        gap: 6px;
-    }
-
-    .visual-badge-pill i {
-        color: var(--admin-orange);
-    }
-
-    .visual-order-tag {
-        position: absolute;
-        top: 12px;
-        right: 12px;
-        background: var(--admin-orange);
-        color: #ffffff;
-        font-size: 11px;
-        font-weight: 800;
-        padding: 3px 8px;
-        border-radius: 6px;
-    }
-
-    .visual-card-body {
-        padding: 16px 18px;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .visual-caption {
-        font-size: 13px;
-        color: #334155;
-        line-height: 1.45;
-        margin: 0 0 12px 0;
-        min-height: 38px;
-    }
-
-    .visual-footer-bar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-top: 1px solid var(--admin-border);
-        padding-top: 12px;
-        margin-top: 8px;
-    }
-</style>
-@endsection
 
 @section('content')
 <div class="gallery-mgmt-wrapper">
@@ -477,7 +14,7 @@
             <h3>Campus Gallery Photos</h3>
             <p>Manage the homepage carousel photo slides, categories, and section header text shown to visitors.</p>
         </div>
-        <div style="display: flex; gap: 10px; align-items: center;">
+        <div class="d-flex align-items-center gap-10">
             <a href="{{ route('home') }}#gallery" target="_blank" class="btn-admin btn-secondary" title="View live on homepage">
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 <span>Preview Homepage</span>
@@ -536,10 +73,10 @@
     <div class="section-settings-card">
         <div class="section-settings-head">
             <h4>
-                <i class="fa-solid fa-heading" style="color: var(--admin-orange);"></i>
+                <i class="fa-solid fa-heading text-orange"></i>
                 <span>Section Heading &amp; Action Buttons Configuration</span>
             </h4>
-            <span style="font-size: 12px; color: #64748B;">Appears above the photo carousel on the public website</span>
+            <span class="text-muted fs-12">Appears above the photo carousel on the public website</span>
         </div>
 
         <div class="section-settings-body">
@@ -577,7 +114,7 @@
                     <div class="form-group-custom">
                         <label class="form-label-custom">
                             <span>Eyebrow Tag</span>
-                            <span style="color: #EF4444;">*</span>
+                            <span class="text-danger">*</span>
                         </label>
                         <input type="text" id="inputEyebrow" name="eyebrow" class="form-input-custom" value="{{ old('eyebrow', $sectionSettings['eyebrow']) }}" required maxlength="150" placeholder="e.g. CAMPUS GALLERY">
                     </div>
@@ -585,7 +122,7 @@
                     <div class="form-group-custom">
                         <label class="form-label-custom">
                             <span>Title Part 1 (Navy Dark)</span>
-                            <span style="color: #EF4444;">*</span>
+                            <span class="text-danger">*</span>
                         </label>
                         <input type="text" id="inputTitle1" name="title_1" class="form-input-custom" value="{{ old('title_1', $sectionSettings['title_1']) }}" required maxlength="255" placeholder="e.g. A day at Advaita,">
                     </div>
@@ -598,21 +135,21 @@
                     </div>
                 </div>
 
-                <div class="form-group-custom" style="margin-bottom: 16px;">
+                <div class="form-group-custom mb-16">
                     <label class="form-label-custom">
                         <span>Section Subtitle Description</span>
                     </label>
                     <textarea id="inputSubtitle" name="subtitle" rows="2" class="form-input-custom" placeholder="Brief summary describing the campus activities...">{{ old('subtitle', $sectionSettings['subtitle']) }}</textarea>
                 </div>
 
-                <div class="form-grid-2" style="margin-bottom: 20px;">
+                <div class="form-grid-2 mb-20">
                     <div class="form-group-custom">
                         <label class="form-label-custom">
                             <span>Primary Button (Explore Gallery) Text &amp; URL</span>
                         </label>
-                        <div style="display: flex; gap: 8px;">
-                            <input type="text" id="inputBtn1" name="btn_1_text" class="form-input-custom" style="flex: 1;" value="{{ old('btn_1_text', $sectionSettings['btn_1_text']) }}" placeholder="Button text">
-                            <input type="text" name="btn_1_url" class="form-input-custom" style="flex: 2;" value="{{ old('btn_1_url', $sectionSettings['btn_1_url']) }}" placeholder="URL (e.g. /gallery)">
+                        <div class="d-flex gap-8">
+                            <input type="text" id="inputBtn1" name="btn_1_text" class="form-input-custom flex-1" value="{{ old('btn_1_text', $sectionSettings['btn_1_text']) }}" placeholder="Button text">
+                            <input type="text" name="btn_1_url" class="form-input-custom flex-2" value="{{ old('btn_1_url', $sectionSettings['btn_1_url']) }}" placeholder="URL (e.g. /gallery)">
                         </div>
                     </div>
 
@@ -620,14 +157,14 @@
                         <label class="form-label-custom">
                             <span>Secondary Video Button Text &amp; URL</span>
                         </label>
-                        <div style="display: flex; gap: 8px;">
-                            <input type="text" id="inputBtn2" name="btn_2_text" class="form-input-custom" style="flex: 1;" value="{{ old('btn_2_text', $sectionSettings['btn_2_text']) }}" placeholder="Button text">
-                            <input type="text" name="btn_2_url" class="form-input-custom" style="flex: 2;" value="{{ old('btn_2_url', $sectionSettings['btn_2_url']) }}" placeholder="URL (e.g. #hero)">
+                        <div class="d-flex gap-8">
+                            <input type="text" id="inputBtn2" name="btn_2_text" class="form-input-custom flex-1" value="{{ old('btn_2_text', $sectionSettings['btn_2_text']) }}" placeholder="Button text">
+                            <input type="text" name="btn_2_url" class="form-input-custom flex-2" value="{{ old('btn_2_url', $sectionSettings['btn_2_url']) }}" placeholder="URL (e.g. #hero)">
                         </div>
                     </div>
                 </div>
 
-                <div style="display: flex; justify-content: flex-end;">
+                <div class="d-flex justify-content-end">
                     <button type="submit" class="btn-admin btn-primary">
                         <i class="fa-solid fa-cloud-arrow-up"></i>
                         <span>Save Section Heading</span>
@@ -640,17 +177,17 @@
     <!-- 4. Photos Registry (Table & Visual Switcher) -->
     <div class="gallery-table-card">
         <div class="table-top-actions-bar">
-            <div style="display: flex; align-items: center; gap: 12px;">
-                <h3 style="font-size: 16px; font-weight: 800; color: var(--admin-navy); margin: 0; display: flex; align-items: center; gap: 8px;">
-                    <i class="fa-solid fa-images" style="color: var(--admin-orange);"></i>
+            <div class="d-flex align-items-center gap-12">
+                <h3 class="text-navy fs-16 font-extrabold d-flex align-items-center gap-8 m-0">
+                    <i class="fa-solid fa-images text-orange"></i>
                     <span>Gallery Photos ({{ $items->count() }})</span>
                 </h3>
-                <span class="table-count-badge" style="background: #EFF6FF; color: #2563EB; border: 1px solid #BFDBFE; font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 12px;">
+                <span class="table-count-badge badge-blue-pill">
                     {{ $items->where('is_active', true)->count() }} Active
                 </span>
             </div>
 
-            <div style="display: flex; align-items: center; gap: 12px;">
+            <div class="d-flex align-items-center gap-12">
                 <!-- View Toggle Buttons -->
                 <div class="table-view-tabs">
                     <button type="button" class="view-tab-btn active" id="btnTableView" onclick="setGalleryView('table')">
@@ -670,12 +207,12 @@
             <table class="admin-table">
                 <thead>
                     <tr>
-                        <th style="width: 80px;">Order</th>
-                        <th style="width: 150px;">Photo Preview</th>
-                        <th style="width: 220px;">Category &amp; Icon</th>
+                        <th class="col-w80">Order</th>
+                        <th class="col-w150">Photo Preview</th>
+                        <th class="col-w220">Category &amp; Icon</th>
                         <th>Caption / Description</th>
-                        <th style="width: 130px;">Status</th>
-                        <th style="width: 120px; text-align: right;">Actions</th>
+                        <th class="col-w130">Status</th>
+                        <th class="col-w120 text-right">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -683,9 +220,9 @@
                     <tr>
                         <!-- Order & Position -->
                         <td>
-                            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 2px;">
-                                <strong style="font-size: 14px; color: var(--admin-navy);">#{{ $item->order }}</strong>
-                                <span style="font-size: 10.5px; color: #64748B; font-weight: 600;">Slide {{ $loop->iteration }}</span>
+                            <div class="d-flex flex-column align-items-start gap-2">
+                                <strong class="text-navy fs-14">#{{ $item->order }}</strong>
+                                <span class="text-muted fs-10 font-semibold">Slide {{ $loop->iteration }}</span>
                             </div>
                         </td>
 
@@ -698,7 +235,7 @@
                                         <i class="{{ $item->icon ?: 'fa-solid fa-camera' }}"></i>
                                     </div>
                                 </div>
-                                <div style="display: flex; gap: 4px; flex-wrap: wrap;">
+                                <div class="d-flex gap-4 flex-wrap">
                                     <span class="spec-pill"><i class="fa-solid fa-expand"></i> {{ $item->image_dimensions ?? 'Standard' }}</span>
                                     <span class="spec-pill"><i class="fa-solid fa-hard-drive"></i> {{ $item->image_size ?? 'Optimized' }}</span>
                                 </div>
@@ -715,17 +252,17 @@
 
                         <!-- Caption -->
                         <td>
-                            <div style="font-size: 13.5px; color: #334155; line-height: 1.5; max-width: 540px;">
+                            <div class="text-slate fs-13 line-clamp-desc-lg">
                                 {{ $item->caption ?: 'No caption specified.' }}
                             </div>
                         </td>
 
                         <!-- Status Toggle -->
                         <td>
-                            <form action="{{ route('admin.gallery.toggle-status', $item->id) }}" method="POST" style="margin: 0;">
+                            <form action="{{ route('admin.gallery.toggle-status', $item->id) }}" method="POST" class="m-0">
                                 @csrf
                                 @method('PATCH')
-                                <button type="submit" class="btn-action-view" style="background: {{ $item->is_active ? '#DCFCE7' : '#F1F5F9' }}; color: {{ $item->is_active ? '#15803D' : '#64748B' }}; border-color: {{ $item->is_active ? '#86EFAC' : '#E2E8F0' }}; border-radius: 20px; padding: 5px 12px; font-size: 12px;" title="Click to {{ $item->is_active ? 'deactivate' : 'activate' }}">
+                                <button type="submit" class="btn-action-view btn-status-toggle {{ $item->is_active ? 'is-active' : 'is-inactive' }}" title="Click to {{ $item->is_active ? 'deactivate' : 'activate' }}">
                                     <i class="fa-solid fa-circle-{{ $item->is_active ? 'check' : 'xmark' }}"></i>
                                     <span>{{ $item->is_active ? 'Active' : 'Hidden' }}</span>
                                 </button>
@@ -733,14 +270,14 @@
                         </td>
 
                         <!-- Actions -->
-                        <td style="text-align: right;">
-                            <div style="display: inline-flex; align-items: center; gap: 6px;">
+                        <td class="text-right">
+                            <div class="d-inline-flex align-items-center gap-6">
                                 <a href="{{ route('admin.gallery.edit', $item->id) }}" class="btn-action-view" title="Edit Photo">
                                     <i class="fa-solid fa-pen"></i>
                                     <span>Edit</span>
                                 </a>
 
-                                <form action="{{ route('admin.gallery.destroy', $item->id) }}" method="POST" style="margin: 0;" onsubmit="return confirm('Delete this gallery photo?');">
+                                <form action="{{ route('admin.gallery.destroy', $item->id) }}" method="POST" class="m-0" onsubmit="return confirm('Delete this gallery photo?');">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn-action-delete" title="Delete Photo">
@@ -752,7 +289,7 @@
                     </tr>
                     @empty
                     <tr>
-                        <td colspan="6" style="text-align: center; padding: 50px 20px; color: #94A3B8;">
+                        <td colspan="6" class="table-empty-pad">
                             No gallery photos found. Click "Add Gallery Photo" to get started.
                         </td>
                     </tr>
@@ -777,23 +314,23 @@
                     <p class="visual-caption">
                         {{ $item->caption ?: 'No caption specified.' }}
                     </p>
-                    <div style="display: flex; gap: 6px; margin-bottom: 8px;">
+                    <div class="d-flex gap-6 mb-8">
                         <span class="spec-pill"><i class="fa-solid fa-expand"></i> {{ $item->image_dimensions ?? 'Standard' }}</span>
                         <span class="spec-pill"><i class="fa-solid fa-hard-drive"></i> {{ $item->image_size ?? 'Optimized' }}</span>
                     </div>
                     <div class="visual-footer-bar">
-                        <span style="font-size: 12px; font-weight: 700; color: {{ $item->is_active ? '#15803D' : '#64748B' }};">
+                        <span class="fs-12 font-bold {{ $item->is_active ? 'text-success' : 'text-muted' }}">
                             <i class="fa-solid fa-circle-{{ $item->is_active ? 'check' : 'xmark' }}"></i>
                             {{ $item->is_active ? 'Active' : 'Hidden' }}
                         </span>
-                        <div style="display: flex; gap: 6px;">
-                            <a href="{{ route('admin.gallery.edit', $item->id) }}" class="btn-action-view" style="padding: 5px 10px; font-size: 12px;">
+                        <div class="d-flex gap-6">
+                            <a href="{{ route('admin.gallery.edit', $item->id) }}" class="btn-action-view btn-pad-sm">
                                 <i class="fa-solid fa-pen"></i>
                             </a>
-                            <form action="{{ route('admin.gallery.destroy', $item->id) }}" method="POST" style="margin: 0;" onsubmit="return confirm('Delete this photo?');">
+                            <form action="{{ route('admin.gallery.destroy', $item->id) }}" method="POST" class="m-0" onsubmit="return confirm('Delete this photo?');">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn-action-delete" style="padding: 5px 8px;">
+                                <button type="submit" class="btn-action-delete btn-pad-xs">
                                     <i class="fa-solid fa-trash-can"></i>
                                 </button>
                             </form>

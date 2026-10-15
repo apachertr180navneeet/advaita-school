@@ -58,14 +58,44 @@ class PageController extends Controller
         );
 
         $content = [
-            'hero_badge' => Setting::get('about_hero_badge', 'ABOUT OUR SCHOOL'),
-            'hero_title' => Setting::get('about_hero_title', 'Nurturing Potential.'),
-            'hero_highlight' => Setting::get('about_hero_highlight', 'Building Character.'),
-            'hero_subtitle' => Setting::get('about_hero_subtitle', 'At Advaita School of Excellence, Parbhani, we believe education extends far beyond classrooms. We build individuals of curiosity, empathy, and resilience.'),
-            'stat_years' => Setting::get('about_stat_years', '12+'),
-            'stat_students' => Setting::get('about_stat_students', '1,500+'),
-            'stat_faculty' => Setting::get('about_stat_faculty', '75+'),
-            'stat_acres' => Setting::get('about_stat_acres', '5+'),
+            'hero_badge' => Setting::get('about_hero_badge', 'WELCOME TO'),
+            'hero_title' => Setting::get('about_hero_title', 'A Premier CBSE School with a'),
+            'hero_highlight' => Setting::get('about_hero_highlight', 'Stronger Purpose.'),
+            'hero_subtitle' => Setting::get('about_hero_subtitle', 'At Advaita School of Excellence, we go beyond textbooks to create a learning environment where curiosity is encouraged, confidence is built, and every child is empowered to achieve their true potential.'),
+
+            // Story Section
+            'story_eyebrow' => Setting::get('about_story_eyebrow', 'BUILT ON A STRONG FOUNDATION'),
+            'story_title' => Setting::get('about_story_title', 'Built on Values.'),
+            'story_highlight' => Setting::get('about_story_highlight', 'Academic Excellence.'),
+            'story_p1' => Setting::get('about_story_p1', 'At Advaita School of Excellence, we blend academic rigor, character development, and future-focused learning to help every child grow into a confident, compassionate, and capable individual.'),
+            'story_p2' => Setting::get('about_story_p2', "Our focus on NEET/IIT foundation and various competitive exams, along with a strong CBSE curriculum, ensures that students are well-prepared for higher education and life's opportunities."),
+            'stat_students' => Setting::get('about_stat_students', '5000+'),
+            'stat_years' => Setting::get('about_stat_years', '25+'),
+            'stat_satisfaction' => Setting::get('about_stat_satisfaction', '95%'),
+            'story_badge_title' => Setting::get('about_story_badge_title', 'Best CBSE'),
+            'story_badge_sub' => Setting::get('about_story_badge_sub', 'Result Producer'),
+            'story_badge_tag' => Setting::get('about_story_badge_tag', 'Year after Year'),
+
+            // Vision, Mission, Values
+            'vision_text' => Setting::get('about_vmv_vision', 'To nurture confident, curious and responsible global citizens equipped to excel in academics and life.'),
+            'mission_text' => Setting::get('about_vmv_mission', 'To provide a safe, value-based learning environment with academic excellence, modern facilities and holistic growth opportunities.'),
+
+            // Philosophy Section
+            'philosophy_eyebrow' => Setting::get('about_philosophy_eyebrow', 'PREPARING FOR A BRIGHTER TOMORROW'),
+            'philosophy_title' => Setting::get('about_philosophy_title', 'Education for Life,'),
+            'philosophy_highlight' => Setting::get('about_philosophy_highlight', 'Not Just Exams.'),
+            'philosophy_desc' => Setting::get('about_philosophy_desc', 'We integrate CBSE academics with a focused NEET/IIT foundation and training for various competitive exams. Our student-centric approach ensures conceptual clarity, critical thinking, and real-world application — helping students achieve success in academics and beyond.'),
+
+            // Campus Showcase
+            'campus_eyebrow' => Setting::get('about_campus_eyebrow', 'A SPACE TO GROW'),
+            'campus_title' => Setting::get('about_campus_title', 'A Space to Learn,'),
+            'campus_highlight' => Setting::get('about_campus_highlight', 'Explore and Excel.'),
+            'campus_desc' => Setting::get('about_campus_desc', 'Our modern campus is designed to inspire curiosity, encourage collaboration, and provide the best learning experience. From spacious classrooms to advanced labs and vibrant activity spaces, every corner of Advaita nurtures growth and opportunity.'),
+
+            // CTA Banner
+            'cta_eyebrow' => Setting::get('about_cta_eyebrow', 'BE A PART OF ADVAITA'),
+            'cta_headline' => Setting::get('about_cta_headline', "Together, let's build brighter tomorrows."),
+            'cta_subtext' => Setting::get('about_cta_subtext', 'Admissions are open for CBSE, NEET/IIT Foundation & Competitive Exam Programmes.'),
         ];
 
         return view('pages.about-us', compact('seo', 'content'));

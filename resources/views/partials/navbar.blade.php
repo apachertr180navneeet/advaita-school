@@ -17,8 +17,8 @@
                     <a href="{{ \App\Models\Setting::get('site_instagram_url', 'https://instagram.com') }}" target="_blank" rel="noopener noreferrer" title="Instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                     <a href="{{ \App\Models\Setting::get('site_linkedin_url', 'https://linkedin.com') }}" target="_blank" rel="noopener noreferrer" title="LinkedIn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
                 </div>
-                <a href="{{ route('admin.dashboard') }}" style="color: #ffffff; font-size: 11.5px; font-weight: 700; text-decoration: none; display: inline-flex; align-items: center; gap: 5px; background: rgba(255,255,255,0.15); padding: 3px 10px; border-radius: 20px; margin-left: 12px;" title="Admin Portal">
-                    <i class="fa-solid fa-lock" style="font-size: 10px; color: #F37021;"></i>
+                <a href="{{ route('admin.dashboard') }}" class="adv-topbar-admin-badge" title="Admin Portal">
+                    <i class="fa-solid fa-lock adv-topbar-admin-icon"></i>
                     <span>Admin</span>
                 </a>
             </div>

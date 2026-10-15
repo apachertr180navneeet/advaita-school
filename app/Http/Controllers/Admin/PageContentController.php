@@ -23,14 +23,40 @@ class PageContentController extends Controller
             'icon' => 'fa-solid fa-school',
             'category' => 'Leadership & Story',
             'fields' => [
-                'about_hero_badge' => ['label' => 'Hero Badge Text', 'type' => 'text', 'default' => 'ABOUT OUR SCHOOL'],
-                'about_hero_title' => ['label' => 'Hero Main Title', 'type' => 'text', 'default' => 'Nurturing Potential.'],
-                'about_hero_highlight' => ['label' => 'Hero Highlight Title', 'type' => 'text', 'default' => 'Building Character.'],
+                'about_hero_badge' => ['label' => 'Hero Badge Text', 'type' => 'text', 'default' => 'WELCOME TO'],
+                'about_hero_title' => ['label' => 'Hero Main Title', 'type' => 'text', 'default' => 'A Premier CBSE School with a'],
+                'about_hero_highlight' => ['label' => 'Hero Highlight Title', 'type' => 'text', 'default' => 'Stronger Purpose.'],
                 'about_hero_subtitle' => ['label' => 'Hero Subtitle Paragraph', 'type' => 'textarea', 'default' => 'At Advaita School of Excellence, Parbhani, we believe education extends far beyond classrooms. We build individuals of curiosity, empathy, and resilience.'],
-                'about_stat_years' => ['label' => 'Statistic: Years of Excellence', 'type' => 'text', 'default' => '12+'],
-                'about_stat_students' => ['label' => 'Statistic: Happy Students', 'type' => 'text', 'default' => '1,500+'],
-                'about_stat_faculty' => ['label' => 'Statistic: Expert Teachers', 'type' => 'text', 'default' => '75+'],
-                'about_stat_acres' => ['label' => 'Statistic: Campus Acres', 'type' => 'text', 'default' => '5+'],
+
+                // Story Section ("Built on Values")
+                'about_story_eyebrow' => ['label' => 'Story Eyebrow', 'type' => 'text', 'default' => 'BUILT ON A STRONG FOUNDATION'],
+                'about_story_title' => ['label' => 'Story Title', 'type' => 'text', 'default' => 'Built on Values.'],
+                'about_story_highlight' => ['label' => 'Story Highlight Title', 'type' => 'text', 'default' => 'Academic Excellence.'],
+                'about_story_p1' => ['label' => 'Story Description Paragraph 1', 'type' => 'textarea', 'default' => 'At Advaita School of Excellence, we blend academic rigor, character development, and future-focused learning to help every child grow into a confident, compassionate, and capable individual.'],
+                'about_story_p2' => ['label' => 'Story Description Paragraph 2', 'type' => 'textarea', 'default' => "Our focus on NEET/IIT foundation and various competitive exams, along with a strong CBSE curriculum, ensures that students are well-prepared for higher education and life's opportunities."],
+                'about_stat_students' => ['label' => 'Statistic: Happy Students', 'type' => 'text', 'default' => '5,000+'],
+                'about_stat_years' => ['label' => 'Statistic: Years of Legacy', 'type' => 'text', 'default' => '25+'],
+                'about_stat_satisfaction' => ['label' => 'Statistic: Parent Satisfaction', 'type' => 'text', 'default' => '95%'],
+                'about_story_badge_title' => ['label' => 'Student Photo Badge Line 1', 'type' => 'text', 'default' => 'Best CBSE'],
+                'about_story_badge_sub' => ['label' => 'Student Photo Badge Line 2', 'type' => 'text', 'default' => 'Result Producer'],
+                'about_story_badge_tag' => ['label' => 'Student Photo Badge Tag', 'type' => 'text', 'default' => 'Year after Year'],
+
+                // Core Philosophy
+                'about_philosophy_eyebrow' => ['label' => 'Philosophy Eyebrow', 'type' => 'text', 'default' => 'PREPARING FOR A BRIGHTER TOMORROW'],
+                'about_philosophy_title' => ['label' => 'Philosophy Heading Line 1', 'type' => 'text', 'default' => 'Education for Life,'],
+                'about_philosophy_highlight' => ['label' => 'Philosophy Heading Line 2', 'type' => 'text', 'default' => 'Not Just Exams.'],
+                'about_philosophy_desc' => ['label' => 'Philosophy Paragraph', 'type' => 'textarea', 'default' => 'We integrate CBSE academics with a focused NEET/IIT foundation and training for various competitive exams. Our student-centric approach ensures conceptual clarity, critical thinking, and real-world application — helping students achieve success in academics and beyond.'],
+
+                // Campus Showcase
+                'about_campus_eyebrow' => ['label' => 'Campus Showcase Eyebrow', 'type' => 'text', 'default' => 'A SPACE TO GROW'],
+                'about_campus_title' => ['label' => 'Campus Showcase Title', 'type' => 'text', 'default' => 'A Space to Learn,'],
+                'about_campus_highlight' => ['label' => 'Campus Showcase Highlight', 'type' => 'text', 'default' => 'Explore and Excel.'],
+                'about_campus_desc' => ['label' => 'Campus Showcase Description', 'type' => 'textarea', 'default' => 'Our modern campus is designed to inspire curiosity, encourage collaboration, and provide the best learning experience. From spacious classrooms to advanced labs and vibrant activity spaces, every corner of Advaita nurtures growth and opportunity.'],
+
+                // Admission CTA Banner
+                'about_cta_eyebrow' => ['label' => 'Admission CTA Eyebrow', 'type' => 'text', 'default' => 'BE A PART OF ADVAITA'],
+                'about_cta_headline' => ['label' => 'Admission CTA Headline', 'type' => 'text', 'default' => "Together, let's build brighter tomorrows."],
+                'about_cta_subtext' => ['label' => 'Admission CTA Subtext', 'type' => 'textarea', 'default' => 'Admissions are open for CBSE, NEET/IIT Foundation & Competitive Exam Programmes.'],
             ],
         ],
         'vision' => [

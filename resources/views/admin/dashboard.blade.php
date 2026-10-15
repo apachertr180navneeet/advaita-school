@@ -3,513 +3,7 @@
 @section('title', 'Admin Dashboard · Registrations & Enquiries')
 @section('page_title', 'Dashboard Overview')
 
-@section('styles')
-<style>
-    /* Welcome Header */
-    .dashboard-welcome-banner {
-        background: linear-gradient(135deg, #061A38 0%, #0B2B5C 100%);
-        border-radius: 20px;
-        padding: 28px 32px;
-        color: #ffffff;
-        margin-bottom: 26px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        box-shadow: 0 10px 30px rgba(6, 26, 56, 0.12);
-        position: relative;
-        overflow: hidden;
-    }
 
-    .dashboard-welcome-banner::after {
-        content: '';
-        position: absolute;
-        top: -40px;
-        right: -40px;
-        width: 220px;
-        height: 220px;
-        border-radius: 50%;
-        background: radial-gradient(circle, rgba(243, 112, 33, 0.3) 0%, transparent 70%);
-        pointer-events: none;
-    }
-
-    .welcome-text h1 {
-        font-size: 22px;
-        font-weight: 800;
-        margin-bottom: 6px;
-    }
-
-    .welcome-text p {
-        font-size: 14px;
-        color: #94A3B8;
-    }
-
-    .welcome-quick-pills {
-        display: flex;
-        gap: 12px;
-    }
-
-    .welcome-pill {
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        padding: 10px 16px;
-        border-radius: 12px;
-        text-align: right;
-    }
-
-    .welcome-pill-val {
-        font-size: 18px;
-        font-weight: 800;
-        color: #F37021;
-    }
-
-    .welcome-pill-lbl {
-        font-size: 11px;
-        color: #CBD5E1;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-
-    /* Metric Stat Grid */
-    .stats-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-        gap: 20px;
-        margin-bottom: 28px;
-    }
-
-    .stat-card {
-        background: #ffffff;
-        border: 1px solid var(--admin-border);
-        border-radius: 16px;
-        padding: 22px 24px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
-        transition: transform 0.2s, box-shadow 0.2s;
-        position: relative;
-    }
-
-    .stat-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-    }
-
-    .stat-card-head {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        margin-bottom: 12px;
-    }
-
-    .stat-icon-circle {
-        width: 46px;
-        height: 46px;
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 19px;
-    }
-
-    .stat-icon-blue { background: #E0F2FE; color: #0284C7; }
-    .stat-icon-orange { background: #FFF7ED; color: #F37021; }
-    .stat-icon-green { background: #ECFDF5; color: #10B981; }
-    .stat-icon-purple { background: #F3E8FF; color: #9333EA; }
-
-    .stat-title {
-        font-size: 12.5px;
-        font-weight: 700;
-        color: var(--admin-text-muted);
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-    }
-
-    .stat-value {
-        font-size: 30px;
-        font-weight: 800;
-        color: var(--admin-navy-deep);
-        line-height: 1.1;
-        margin-bottom: 6px;
-    }
-
-    .stat-subtext {
-        font-size: 12px;
-        font-weight: 600;
-        display: flex;
-        align-items: center;
-        gap: 6px;
-    }
-
-    .sub-badge {
-        padding: 2px 7px;
-        border-radius: 6px;
-        font-size: 11px;
-        font-weight: 700;
-    }
-
-    .sub-badge.orange { background: #FFEDD5; color: #C2410C; }
-    .sub-badge.green { background: #DCFCE7; color: #15803D; }
-
-    /* Main Tabbed Card */
-    .master-list-card {
-        background: #ffffff;
-        border: 1px solid var(--admin-border);
-        border-radius: 20px;
-        padding: 24px 28px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
-    }
-
-    /* Tab Controls & Filter Bar */
-    .tabs-header-wrap {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-        gap: 16px;
-        margin-bottom: 22px;
-        padding-bottom: 18px;
-        border-bottom: 1px solid var(--admin-border);
-    }
-
-    .tab-pills-list {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        background: #F1F5F9;
-        padding: 5px;
-        border-radius: 14px;
-    }
-
-    .tab-pill-btn {
-        background: transparent;
-        border: none;
-        padding: 9px 18px;
-        border-radius: 10px;
-        font-size: 13.5px;
-        font-weight: 700;
-        font-family: inherit;
-        color: #64748B;
-        cursor: pointer;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        transition: all 0.2s ease;
-    }
-
-    .tab-pill-btn:hover {
-        color: var(--admin-navy-deep);
-    }
-
-    .tab-pill-btn.active {
-        background: #ffffff;
-        color: var(--admin-navy-deep);
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    }
-
-    .tab-badge {
-        background: #E2E8F0;
-        color: #475569;
-        font-size: 11px;
-        padding: 2px 7px;
-        border-radius: 12px;
-        font-weight: 800;
-    }
-
-    .tab-pill-btn.active .tab-badge {
-        background: rgba(243, 112, 33, 0.15);
-        color: #D9560A;
-    }
-
-    /* Live Search & Filter Controls */
-    .table-tools-wrap {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .search-input-box {
-        position: relative;
-        display: flex;
-        align-items: center;
-    }
-
-    .search-input-box i {
-        position: absolute;
-        left: 12px;
-        color: #94A3B8;
-        font-size: 13px;
-    }
-
-    .search-input-box input {
-        background: #F8FAFC;
-        border: 1px solid var(--admin-border);
-        border-radius: 10px;
-        padding: 8px 12px 8px 34px;
-        font-size: 13px;
-        font-family: inherit;
-        outline: none;
-        width: 240px;
-        transition: all 0.2s;
-    }
-
-    .search-input-box input:focus {
-        width: 280px;
-        border-color: var(--admin-navy);
-        background: #ffffff;
-    }
-
-    /* Table Typography & Elements */
-    .table-responsive {
-        overflow-x: auto;
-    }
-
-    .admin-table {
-        width: 100%;
-        border-collapse: collapse;
-        font-size: 13px;
-    }
-
-    .admin-table th {
-        text-align: left;
-        padding: 12px 14px;
-        font-size: 11.5px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.6px;
-        color: var(--admin-text-muted);
-        background: #F8FAFC;
-        border-bottom: 1px solid var(--admin-border);
-    }
-
-    .admin-table td {
-        padding: 14px 14px;
-        border-bottom: 1px solid #F1F5F9;
-        vertical-align: middle;
-    }
-
-    .admin-table tr:hover td {
-        background: #F8FAFC;
-    }
-
-    /* Badges */
-    .type-pill {
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-        padding: 4px 10px;
-        border-radius: 8px;
-        font-size: 11.5px;
-        font-weight: 700;
-        letter-spacing: 0.3px;
-    }
-
-    .type-registration {
-        background: #EFF6FF;
-        color: #1D4ED8;
-        border: 1px solid #BFDBFE;
-    }
-
-    .type-inquiry {
-        background: #FFF7ED;
-        color: #C2410C;
-        border: 1px solid #FED7AA;
-    }
-
-    .class-pill {
-        display: inline-block;
-        background: #F1F5F9;
-        color: #334155;
-        padding: 3px 8px;
-        border-radius: 6px;
-        font-size: 11.5px;
-        font-weight: 700;
-    }
-
-    .status-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-        padding: 4px 10px;
-        border-radius: 20px;
-        font-size: 11.5px;
-        font-weight: 700;
-    }
-
-    .status-submitted, .status-new {
-        background: #FEF3C7;
-        color: #92400E;
-    }
-
-    .status-under_review, .status-in_progress {
-        background: #E0F2FE;
-        color: #0369A1;
-    }
-
-    .status-approved, .status-resolved {
-        background: #DCFCE7;
-        color: #15803D;
-    }
-
-    .status-rejected {
-        background: #FEE2E2;
-        color: #B91C1C;
-    }
-
-    .btn-action-view {
-        background: rgba(8, 59, 122, 0.08);
-        border: 1px solid rgba(8, 59, 122, 0.16);
-        color: var(--admin-navy);
-        border-radius: 8px;
-        padding: 6px 11px;
-        font-size: 12px;
-        font-weight: 700;
-        cursor: pointer;
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-        text-decoration: none;
-        transition: all 0.2s;
-    }
-
-    .btn-action-view:hover {
-        background: var(--admin-navy);
-        color: #ffffff;
-    }
-
-    .btn-quick-preview {
-        background: #F1F5F9;
-        border: 1px solid #CBD5E1;
-        color: #334155;
-        border-radius: 8px;
-        padding: 6px 11px;
-        font-size: 12px;
-        font-weight: 700;
-        cursor: pointer;
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-        transition: all 0.2s;
-    }
-
-    .btn-quick-preview:hover {
-        background: #E2E8F0;
-        color: #0F172A;
-    }
-
-    /* Interactive Modal */
-    .modal-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(15, 23, 42, 0.65);
-        backdrop-filter: blur(5px);
-        display: none;
-        align-items: center;
-        justify-content: center;
-        z-index: 9999;
-        padding: 20px;
-    }
-
-    .modal-overlay.show {
-        display: flex;
-    }
-
-    .modal-box {
-        background: #ffffff;
-        border-radius: 20px;
-        width: 100%;
-        max-width: 680px;
-        max-height: 90vh;
-        overflow-y: auto;
-        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
-        animation: popModal 0.25s ease;
-    }
-
-    @keyframes popModal {
-        from { transform: scale(0.95); opacity: 0; }
-        to { transform: scale(1); opacity: 1; }
-    }
-
-    .modal-head {
-        padding: 20px 24px;
-        border-bottom: 1px solid var(--admin-border);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .modal-head-title {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 17px;
-        font-weight: 800;
-        color: var(--admin-navy-deep);
-    }
-
-    .modal-close-x {
-        background: transparent;
-        border: none;
-        font-size: 20px;
-        color: #94A3B8;
-        cursor: pointer;
-        padding: 4px;
-    }
-
-    .modal-close-x:hover {
-        color: #0F172A;
-    }
-
-    .modal-body {
-        padding: 24px;
-    }
-
-    .modal-meta-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 16px;
-        margin-bottom: 20px;
-        background: #F8FAFC;
-        padding: 16px;
-        border-radius: 12px;
-        border: 1px solid var(--admin-border);
-    }
-
-    .modal-meta-item .lbl {
-        font-size: 11px;
-        font-weight: 700;
-        text-transform: uppercase;
-        color: #64748B;
-        margin-bottom: 2px;
-    }
-
-    .modal-meta-item .val {
-        font-size: 14px;
-        font-weight: 600;
-        color: #0F172A;
-    }
-
-    .modal-content-area {
-        background: #FAFAFA;
-        border: 1px solid #E2E8F0;
-        border-radius: 12px;
-        padding: 18px;
-        font-size: 14px;
-        line-height: 1.6;
-        color: #1E293B;
-        white-space: pre-line;
-        margin-bottom: 24px;
-    }
-
-    .modal-actions-bar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border-top: 1px solid var(--admin-border);
-        padding-top: 18px;
-    }
-</style>
-@endsection
 
 @section('content')
 
@@ -597,7 +91,7 @@
     </div>
 
     <!-- Stat 5: Hero Sliders Management -->
-    <a href="{{ route('admin.sliders.index') }}" class="stat-card" style="text-decoration: none; color: inherit;">
+    <a href="{{ route('admin.sliders.index') }}" class="stat-card text-inherit-link">
         <div class="stat-card-head">
             <span class="stat-title">Hero Sliders</span>
             <div class="stat-icon-circle stat-icon-orange">
@@ -612,7 +106,7 @@
     </a>
 
     <!-- Stat 6: Three Pillars Management -->
-    <a href="{{ route('admin.pillars.index') }}" class="stat-card" style="text-decoration: none; color: inherit;">
+    <a href="{{ route('admin.pillars.index') }}" class="stat-card text-inherit-link">
         <div class="stat-card-head">
             <span class="stat-title">Three Pillars</span>
             <div class="stat-icon-circle stat-icon-blue">
@@ -627,7 +121,7 @@
     </a>
 
     <!-- Stat 7: Why Choose Advaita Cards Management -->
-    <a href="{{ route('admin.why-choose.index') }}" class="stat-card" style="text-decoration: none; color: inherit;">
+    <a href="{{ route('admin.why-choose.index') }}" class="stat-card text-inherit-link">
         <div class="stat-card-head">
             <span class="stat-title">Why Choose Cards</span>
             <div class="stat-icon-circle stat-icon-purple">
@@ -713,26 +207,26 @@
                             @endif
                         </td>
                         <td>
-                            <strong style="font-family: monospace; color: var(--admin-navy);">{{ $item['identifier'] }}</strong>
+                            <strong class="td-code">{{ $item['identifier'] }}</strong>
                         </td>
                         <td>
-                            <div style="font-weight: 700; color: #0F172A; font-size: 13.5px;">{{ $item['name'] }}</div>
-                            <div style="font-size: 11.5px; color: #64748B;">{{ $item['subtext'] }}</div>
+                            <div class="td-main-bold">{{ $item['name'] }}</div>
+                            <div class="td-sub-muted">{{ $item['subtext'] }}</div>
                         </td>
                         <td>
-                            <div style="font-weight: 600; color: #334155;">{{ $item['phone'] ?? 'No phone' }}</div>
-                            <div style="font-size: 11.5px; color: #64748B;">{{ $item['email'] ?? 'No email' }}</div>
+                            <div class="td-semi-bold">{{ $item['phone'] ?? 'No phone' }}</div>
+                            <div class="td-sub-muted">{{ $item['email'] ?? 'No email' }}</div>
                         </td>
                         <td>
-                            <div style="font-size: 12.5px; color: #334155;">{{ $item['created_at']->format('d M Y') }}</div>
-                            <div style="font-size: 11px; color: #94A3B8;">{{ $item['created_at']->diffForHumans() }}</div>
+                            <div class="td-body-slate">{{ $item['created_at']->format('d M Y') }}</div>
+                            <div class="td-date-muted">{{ $item['created_at']->diffForHumans() }}</div>
                         </td>
                         <td>
                             <!-- Inline Status Form -->
-                            <form action="{{ $item['status_route'] }}" method="POST" style="margin: 0; display: inline-block;">
+                            <form action="{{ $item['status_route'] }}" method="POST" class="d-inline-block m-0">
                                 @csrf
                                 @method('PATCH')
-                                <select name="status" class="filter-input" style="padding: 4px 8px; font-size: 11.5px; font-weight: 600; border-radius: 6px;" onchange="this.form.submit()">
+                                <select name="status" class="filter-input table-badge-select" onchange="this.form.submit()">
                                     @if($item['type'] === 'registration')
                                         <option value="submitted" {{ $item['status'] == 'submitted' ? 'selected' : '' }}>Submitted</option>
                                         <option value="under_review" {{ $item['status'] == 'under_review' ? 'selected' : '' }}>Under Review</option>
@@ -747,21 +241,21 @@
                             </form>
                         </td>
                         <td>
-                            <div style="display: flex; gap: 6px;">
+                            <div class="d-flex gap-6">
                                 <button type="button" class="btn-quick-preview" onclick='openQuickView(@json($item))' title="Quick View Modal">
                                     <i class="fa-regular fa-eye"></i>
                                     <span>Preview</span>
                                 </button>
                                 <a href="{{ $item['show_route'] }}" class="btn-action-view" title="Open Full Details Page">
                                     <span>Details</span>
-                                    <i class="fa-solid fa-arrow-right" style="font-size: 10px;"></i>
+                                    <i class="fa-solid fa-arrow-right fs-10"></i>
                                 </a>
                             </div>
                         </td>
                     </tr>
                     @empty
                     <tr>
-                        <td colspan="7" style="text-align: center; color: #94A3B8; padding: 40px;">
+                        <td colspan="7" class="table-empty-row">
                             No online registrations or enquiries found.
                         </td>
                     </tr>
@@ -774,7 +268,7 @@
     <!-- =========================================================================
          PANEL 2: ONLINE REGISTRATIONS ONLY
          ========================================================================= -->
-    <div class="submission-panel" id="panelRegistrations" style="display: none;">
+    <div class="submission-panel" id="panelRegistrations" class="d-none">
         <div class="table-responsive">
             <table class="admin-table" id="tableRegistrations">
                 <thead>
@@ -792,27 +286,27 @@
                     @forelse($registrations as $reg)
                     <tr class="searchable-row" data-search="{{ strtolower($reg->full_name . ' ' . $reg->application_no . ' ' . $reg->phone . ' ' . $reg->applying_class . ' ' . $reg->email) }}">
                         <td>
-                            <strong style="font-family: monospace; color: var(--admin-navy);">{{ $reg->application_no }}</strong>
+                            <strong class="td-code">{{ $reg->application_no }}</strong>
                         </td>
                         <td>
-                            <div style="font-weight: 700; color: #0F172A;">{{ $reg->full_name }}</div>
-                            <div style="font-size: 11.5px; color: #64748B;">{{ $reg->gender }} &middot; DOB: {{ $reg->dob ? date('d M Y', strtotime($reg->dob)) : 'N/A' }}</div>
+                            <div class="td-main-bold">{{ $reg->full_name }}</div>
+                            <div class="td-sub-muted">{{ $reg->gender }} &middot; DOB: {{ $reg->dob ? date('d M Y', strtotime($reg->dob)) : 'N/A' }}</div>
                         </td>
                         <td>
                             <span class="class-pill">{{ $reg->applying_class ?? 'N/A' }}</span>
                         </td>
                         <td>
-                            <div style="font-weight: 600; color: #334155;">{{ $reg->father_name ?? $reg->mother_name ?? 'Parent' }}</div>
-                            <div style="font-size: 11.5px; color: #64748B;">{{ $reg->phone }}</div>
+                            <div class="td-semi-bold">{{ $reg->father_name ?? $reg->mother_name ?? 'Parent' }}</div>
+                            <div class="td-sub-muted">{{ $reg->phone }}</div>
                         </td>
                         <td>
-                            <span style="font-size: 12.5px; font-weight: 600;">{{ $reg->academic_year ?? '2026-2027' }}</span>
+                            <span class="td-semi-bold">{{ $reg->academic_year ?? '2026-2027' }}</span>
                         </td>
                         <td>
-                            <form action="{{ route('admin.registrations.status', $reg->id) }}" method="POST" style="margin: 0;">
+                            <form action="{{ route('admin.registrations.status', $reg->id) }}" method="POST" class="m-0">
                                 @csrf
                                 @method('PATCH')
-                                <select name="status" class="filter-input" style="padding: 4px 8px; font-size: 11.5px; font-weight: 600; border-radius: 6px;" onchange="this.form.submit()">
+                                <select name="status" class="filter-input table-badge-select" onchange="this.form.submit()">
                                     <option value="submitted" {{ $reg->status == 'submitted' ? 'selected' : '' }}>Submitted</option>
                                     <option value="under_review" {{ $reg->status == 'under_review' ? 'selected' : '' }}>Under Review</option>
                                     <option value="approved" {{ $reg->status == 'approved' ? 'selected' : '' }}>Approved</option>
@@ -821,7 +315,7 @@
                             </form>
                         </td>
                         <td>
-                            <div style="display: flex; gap: 6px;">
+                            <div class="d-flex gap-6">
                                 <a href="{{ route('admin.registrations.show', $reg->id) }}" class="btn-action-view">
                                     <i class="fa-regular fa-eye"></i>
                                     <span>Full Details</span>
@@ -831,7 +325,7 @@
                     </tr>
                     @empty
                     <tr>
-                        <td colspan="7" style="text-align: center; color: #94A3B8; padding: 40px;">
+                        <td colspan="7" class="table-empty-row">
                             No online registrations found.
                         </td>
                     </tr>
@@ -844,7 +338,7 @@
     <!-- =========================================================================
          PANEL 3: CONTACT ENQUIRIES ONLY
          ========================================================================= -->
-    <div class="submission-panel" id="panelEnquiries" style="display: none;">
+    <div class="submission-panel" id="panelEnquiries" class="d-none">
         <div class="table-responsive">
             <table class="admin-table" id="tableEnquiries">
                 <thead>
@@ -862,29 +356,29 @@
                     @forelse($inquiries as $inq)
                     <tr class="searchable-row" data-search="{{ strtolower($inq->name . ' ' . $inq->subject . ' ' . $inq->phone . ' ' . $inq->email . ' ' . $inq->message) }}">
                         <td>
-                            <strong style="font-family: monospace; color: var(--admin-navy);">#{{ str_pad($inq->id, 4, '0', STR_PAD_LEFT) }}</strong>
+                            <strong class="td-code">#{{ str_pad($inq->id, 4, '0', STR_PAD_LEFT) }}</strong>
                         </td>
                         <td>
-                            <div style="font-weight: 700; color: #0F172A;">{{ $inq->name }}</div>
-                            <div style="font-size: 11.5px; color: #94A3B8;">{{ $inq->created_at->format('d M Y') }}</div>
+                            <div class="td-main-bold">{{ $inq->name }}</div>
+                            <div class="td-date-muted">{{ $inq->created_at->format('d M Y') }}</div>
                         </td>
                         <td>
-                            <span style="font-weight: 700; color: #334155;">{{ $inq->subject ?? 'General Enquiry' }}</span>
+                            <span class="td-main-bold">{{ $inq->subject ?? 'General Enquiry' }}</span>
                         </td>
                         <td>
-                            <div style="font-weight: 600; color: #334155;">{{ $inq->phone ?? 'No phone' }}</div>
-                            <div style="font-size: 11.5px; color: #64748B;">{{ $inq->email }}</div>
+                            <div class="td-semi-bold">{{ $inq->phone ?? 'No phone' }}</div>
+                            <div class="td-sub-muted">{{ $inq->email }}</div>
                         </td>
                         <td>
-                            <div style="max-width: 260px; font-size: 12px; color: #64748B; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+                            <div class="td-ellipsis-260">
                                 {{ $inq->message }}
                             </div>
                         </td>
                         <td>
-                            <form action="{{ route('admin.inquiries.status', $inq->id) }}" method="POST" style="margin: 0;">
+                            <form action="{{ route('admin.inquiries.status', $inq->id) }}" method="POST" class="m-0">
                                 @csrf
                                 @method('PATCH')
-                                <select name="status" class="filter-input" style="padding: 4px 8px; font-size: 11.5px; font-weight: 600; border-radius: 6px;" onchange="this.form.submit()">
+                                <select name="status" class="filter-input table-badge-select" onchange="this.form.submit()">
                                     <option value="new" {{ $inq->status == 'new' ? 'selected' : '' }}>New</option>
                                     <option value="in_progress" {{ $inq->status == 'in_progress' ? 'selected' : '' }}>In Progress</option>
                                     <option value="resolved" {{ $inq->status == 'resolved' ? 'selected' : '' }}>Resolved</option>
@@ -892,7 +386,7 @@
                             </form>
                         </td>
                         <td>
-                            <div style="display: flex; gap: 6px;">
+                            <div class="d-flex gap-6">
                                 <a href="{{ route('admin.inquiries.show', $inq->id) }}" class="btn-action-view">
                                     <i class="fa-regular fa-envelope-open"></i>
                                     <span>Read Message</span>
@@ -902,7 +396,7 @@
                     </tr>
                     @empty
                     <tr>
-                        <td colspan="7" style="text-align: center; color: #94A3B8; padding: 40px;">
+                        <td colspan="7" class="table-empty-row">
                             No contact enquiries found.
                         </td>
                     </tr>
@@ -955,12 +449,12 @@
                 </div>
             </div>
 
-            <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; color: #64748B; margin-bottom: 6px;">Details / Message:</div>
+            <div class="meta-pill-label">Details / Message:</div>
             <div class="modal-content-area" id="modalDetails"></div>
 
             <div class="modal-actions-bar">
-                <div style="display: flex; gap: 8px;">
-                    <a href="#" id="modalCallBtn" class="btn-action-view" style="background: #E0F2FE; color: #0369A1; border-color: #BAE6FD;">
+                <div class="d-flex gap-8">
+                    <a href="#" id="modalCallBtn" class="btn-action-view badge-sky-solid">
                         <i class="fa-solid fa-phone"></i>
                         <span>Call</span>
                     </a>
@@ -970,7 +464,7 @@
                     </a>
                 </div>
 
-                <a href="#" id="modalFullLink" class="btn-action-view" style="background: var(--admin-navy); color: #ffffff;">
+                <a href="#" id="modalFullLink" class="btn-action-view btn-navy-solid">
                     <span>View Complete Record</span>
                     <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 </a>
@@ -1039,10 +533,10 @@
         document.getElementById('modalDetails').textContent = item.details || 'No details provided.';
 
         if (item.type === 'registration') {
-            document.getElementById('modalTypeIcon').innerHTML = '<i class="fa-solid fa-user-graduate" style="color: #0284C7;"></i>';
+            document.getElementById('modalTypeIcon').innerHTML = '<i class="fa-solid fa-user-graduate text-info"></i>';
             document.getElementById('modalTitle').textContent = 'Online Admission Registration';
         } else {
-            document.getElementById('modalTypeIcon').innerHTML = '<i class="fa-solid fa-envelope-open-text" style="color: #F37021;"></i>';
+            document.getElementById('modalTypeIcon').innerHTML = '<i class="fa-solid fa-envelope-open-text text-orange"></i>';
             document.getElementById('modalTitle').textContent = 'Contact Enquiry';
         }
 

@@ -143,9 +143,9 @@
                                 <i class="fa-solid fa-trophy"></i>
                             </div>
                             <div class="story-badge-text">
-                                <span class="story-badge-bold">Best CBSE</span>
-                                <span class="story-badge-bold">Result Producer</span>
-                                <span class="story-badge-sub">Year after Year</span>
+                                <span class="story-badge-bold">{{ $content['story_badge_title'] ?? 'Best CBSE' }}</span>
+                                <span class="story-badge-bold">{{ $content['story_badge_sub'] ?? 'Result Producer' }}</span>
+                                <span class="story-badge-sub">{{ $content['story_badge_tag'] ?? 'Year after Year' }}</span>
                             </div>
                             <div class="story-badge-arrow">
                                 <i class="fa-solid fa-chevron-right"></i>
@@ -156,18 +156,18 @@
 
                 <!-- Right: Story Content & Stats -->
                 <div class="about-story-content">
-                    <span class="about-eyebrow">— BUILT ON A STRONG FOUNDATION —</span>
+                    <span class="about-eyebrow">— {{ $content['story_eyebrow'] ?? 'BUILT ON A STRONG FOUNDATION' }} —</span>
                     <h2 class="about-story-title">
-                        Built on Values.<br>
-                        Driven by <span class="about-text-orange">Academic Excellence.</span>
+                        {{ $content['story_title'] ?? 'Built on Values.' }}<br>
+                        Driven by <span class="about-text-orange">{{ $content['story_highlight'] ?? 'Academic Excellence.' }}</span>
                     </h2>
                     
                     <p class="about-story-desc">
-                        At Advaita School of Excellence, we blend academic rigor, character development, and future-focused learning to help every child grow into a confident, compassionate, and capable individual.
+                        {{ $content['story_p1'] ?? 'At Advaita School of Excellence, we blend academic rigor, character development, and future-focused learning to help every child grow into a confident, compassionate, and capable individual.' }}
                     </p>
                     
                     <p class="about-story-desc">
-                        Our focus on NEET/IIT foundation and various competitive exams, along with a strong CBSE curriculum, ensures that students are well-prepared for higher education and life's opportunities.
+                        {{ $content['story_p2'] ?? "Our focus on NEET/IIT foundation and various competitive exams, along with a strong CBSE curriculum, ensures that students are well-prepared for higher education and life's opportunities." }}
                     </p>
 
                     <!-- Stats Row -->
@@ -184,7 +184,7 @@
 
                         <div class="about-stat-item">
                             <div class="stat-icon-square stat-icon-badge">
-                                <span class="stat-badge-inner">25+</span>
+                                <span class="stat-badge-inner">{{ $content['stat_years'] ?? '25+' }}</span>
                             </div>
                             <div class="stat-meta">
                                 <span class="stat-num">{{ $content['stat_years'] ?? '25+' }}</span>
@@ -197,7 +197,7 @@
                                 <i class="fa-regular fa-face-smile"></i>
                             </div>
                             <div class="stat-meta">
-                                <span class="stat-num">95%</span>
+                                <span class="stat-num">{{ $content['stat_satisfaction'] ?? '95%' }}</span>
                                 <span class="stat-lbl">Parent Satisfaction</span>
                             </div>
                         </div>
@@ -220,7 +220,7 @@
                     </div>
                     <div class="about-vmv-body">
                         <h3 class="about-vmv-title">Our Vision</h3>
-                        <p class="about-vmv-desc">To nurture confident, curious and responsible global citizens equipped to excel in academics and life.</p>
+                        <p class="about-vmv-desc">{{ $content['vision_text'] ?? 'To nurture confident, curious and responsible global citizens equipped to excel in academics and life.' }}</p>
                     </div>
                 </div>
 
@@ -231,7 +231,7 @@
                     </div>
                     <div class="about-vmv-body">
                         <h3 class="about-vmv-title">Our Mission</h3>
-                        <p class="about-vmv-desc">To provide a safe, value-based learning environment with academic excellence, modern facilities and holistic growth opportunities.</p>
+                        <p class="about-vmv-desc">{{ $content['mission_text'] ?? 'To provide a safe, value-based learning environment with academic excellence, modern facilities and holistic growth opportunities.' }}</p>
                     </div>
                 </div>
 
@@ -261,13 +261,13 @@
             <div class="about-philosophy-grid">
                 <!-- Left: Content -->
                 <div class="about-philosophy-content">
-                    <span class="about-eyebrow">— PREPARING FOR A BRIGHTER TOMORROW —</span>
+                    <span class="about-eyebrow">— {{ $content['philosophy_eyebrow'] ?? 'PREPARING FOR A BRIGHTER TOMORROW' }} —</span>
                     <h2 class="about-philosophy-title">
-                        Education for<br>
-                        Life, <span class="about-text-orange">Not Just Exams.</span>
+                        {{ $content['philosophy_title'] ?? 'Education for' }}<br>
+                        Life, <span class="about-text-orange">{{ $content['philosophy_highlight'] ?? 'Not Just Exams.' }}</span>
                     </h2>
                     <p class="about-philosophy-desc">
-                        We integrate CBSE academics with a focused NEET/IIT foundation and training for various competitive exams. Our student-centric approach ensures conceptual clarity, critical thinking, and real-world application — helping students achieve success in academics and beyond.
+                        {{ $content['philosophy_desc'] ?? 'We integrate CBSE academics with a focused NEET/IIT foundation and training for various competitive exams. Our student-centric approach ensures conceptual clarity, critical thinking, and real-world application — helping students achieve success in academics and beyond.' }}
                     </p>
                     <div class="about-philosophy-action">
                         <a href="{{ route('home') }}#academics" class="about-btn-orange">
@@ -391,13 +391,13 @@
             <div class="about-campus-grid">
                 <!-- Left: Content -->
                 <div class="about-campus-content">
-                    <span class="about-campus-eyebrow">— A SPACE TO GROW —</span>
+                    <span class="about-campus-eyebrow">— {{ $content['campus_eyebrow'] ?? 'A SPACE TO GROW' }} —</span>
                     <h2 class="about-campus-title">
-                        A Space to Learn,<br>
-                        <span class="about-text-orange">Explore and Excel.</span>
+                        {{ $content['campus_title'] ?? 'A Space to Learn,' }}<br>
+                        <span class="about-text-orange">{{ $content['campus_highlight'] ?? 'Explore and Excel.' }}</span>
                     </h2>
                     <p class="about-campus-desc">
-                        Our modern campus is designed to inspire curiosity, encourage collaboration, and provide the best learning experience. From spacious classrooms to advanced labs and vibrant activity spaces, every corner of Advaita nurtures growth and opportunity.
+                        {{ $content['campus_desc'] ?? 'Our modern campus is designed to inspire curiosity, encourage collaboration, and provide the best learning experience. From spacious classrooms to advanced labs and vibrant activity spaces, every corner of Advaita nurtures growth and opportunity.' }}
                     </p>
                     <a href="{{ route('home') }}#facilities" class="about-btn-orange">
                         <span>Explore Our Campus</span>
@@ -444,17 +444,17 @@
             <div class="copy">
                 <!-- Eyebrow -->
                 <div class="eyebrow">
-                    BE A PART OF ADVAITA
+                    {{ $content['cta_eyebrow'] ?? 'BE A PART OF ADVAITA' }}
                 </div>
 
                 <!-- Heading -->
                 <h2 class="headline">
-                    Together, let's build brighter tomorrows.
+                    {{ $content['cta_headline'] ?? "Together, let's build brighter tomorrows." }}
                 </h2>
 
                 <!-- Description -->
                 <p class="subtext">
-                    Admissions are open for CBSE, NEET/IIT Foundation &amp; Competitive Exam Programmes.
+                    {{ $content['cta_subtext'] ?? 'Admissions are open for CBSE, NEET/IIT Foundation & Competitive Exam Programmes.' }}
                 </p>
 
                 <!-- Buttons -->

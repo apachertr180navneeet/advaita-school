@@ -341,7 +341,7 @@
                             </div>
 
                             <!-- Animated Success Toast Alert -->
-                            <div class="contact-form-success-banner" id="contactFormSuccess" style="display: none;" role="alert">
+                            <div class="contact-form-success-banner fee-table-hidden" id="contactFormSuccess" role="alert">
                                 <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
                                 <div class="success-info">
                                     <strong>Message Sent Successfully!</strong>
@@ -376,7 +376,6 @@
                     src="https://maps.google.com/maps?q=Advaita+School+of+Excellence,+Parbhani&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                     width="100%" 
                     height="100%" 
-                    style="border:0;" 
                     allowfullscreen="" 
                     loading="lazy" 
                     referrerpolicy="no-referrer-when-downgrade"

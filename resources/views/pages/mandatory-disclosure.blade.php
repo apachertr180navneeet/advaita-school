@@ -58,7 +58,7 @@
 
                     <h1 class="contact-hero-title">
                         Mandatory<br>
-                        <span class="contact-highlight-serif" style="color: #F37021;">Public Disclosure</span>
+                        <span class="contact-highlight-serif text-adv-orange">Public Disclosure</span>
                     </h1>
 
                     <p class="contact-hero-desc">

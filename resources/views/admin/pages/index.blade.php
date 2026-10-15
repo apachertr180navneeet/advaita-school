@@ -2,31 +2,45 @@
 
 @section('title', 'School Pages Content Management')
 
+
+
 @section('content')
-<div class="admin-page-header">
-    <div class="header-left">
-        <h1 class="page-title">School Pages Content Manager</h1>
-        <p class="page-subtitle">Manage dynamic text, stats, quotes, leadership messages, and highlights across inner school pages.</p>
+
+<!-- Top Header Action Bar -->
+<div class="content-page-header">
+    <div class="cph-title-wrap">
+        <div class="cph-icon-box">
+            <i class="fa-solid fa-file-lines"></i>
+        </div>
+        <div>
+            <h1 class="cph-title">School Pages Content Manager</h1>
+            <p class="cph-subtitle">Manage headlines, stats, quotes, leadership messages, and policy highlights for all school pages.</p>
+        </div>
     </div>
-    <div class="header-right">
-        <a href="{{ url($currentSection['url']) }}" target="_blank" class="btn-action-view" style="padding: 10px 18px;">
+    <div class="cph-actions">
+        <a href="{{ url($currentSection['url']) }}" target="_blank" class="btn-preview-link">
             <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            <span>Preview {{ $currentSection['name'] }}</span>
+            <span>View Live Page</span>
+        </a>
+        <a href="{{ route('admin.seo.index', ['page' => $currentSection['seo_key'] ?? 'home']) }}" class="btn-seo-link">
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+            <span>Edit SEO &amp; Meta</span>
         </a>
     </div>
 </div>
 
-<div class="content-mgr-grid" style="display: grid; grid-template-columns: 310px 1fr; gap: 24px; align-items: start;">
+<div class="content-mgr-grid">
 
-    <!-- Left Sidebar: Section Selectors -->
-    <div class="sections-card" style="background: #ffffff; border: 1px solid var(--admin-border); border-radius: 14px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
-        <div style="padding: 16px 20px; border-bottom: 1px solid var(--admin-border); background: #F8FAFC;">
-            <h3 style="font-size: 13.5px; font-weight: 700; color: #334155; text-transform: uppercase; letter-spacing: 0.8px; margin: 0;">
-                <i class="fa-solid fa-layer-group" style="color: var(--admin-navy); margin-right: 6px;"></i>
-                Pages &amp; Sections ({{ count($sections) }})
+    <!-- Left Navigation Sidebar -->
+    <div class="sections-card">
+        <div class="sections-card-header">
+            <h3>
+                <i class="fa-solid fa-layer-group text-navy"></i>
+                <span>Pages &amp; Sections</span>
             </h3>
+            <span class="sections-card-badge">{{ count($sections) }} Pages</span>
         </div>
-        <div class="sections-list" style="max-height: calc(100vh - 280px); overflow-y: auto; padding: 8px;">
+        <div class="sections-list">
             @php
                 $grouped = [];
                 foreach ($sections as $k => $s) {
@@ -35,81 +49,291 @@
             @endphp
 
             @foreach($grouped as $category => $items)
-            <div style="font-size: 11px; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; color: #94A3B8; padding: 10px 12px 4px 12px;">
-                {{ $category }}
+            <div class="section-cat-label">
+                <i class="fa-solid fa-circle dot-icon text-orange"></i>
+                <span>{{ $category }}</span>
             </div>
             @foreach($items as $k => $item)
             <a href="{{ route('admin.pages.index', ['section' => $k]) }}" 
-               class="section-item {{ $selectedKey === $k ? 'active' : '' }}" 
-               style="display: flex; align-items: center; justify-content: space-between; padding: 11px 14px; border-radius: 10px; text-decoration: none; margin-bottom: 3px; transition: all 0.2s; {{ $selectedKey === $k ? 'background: rgba(8, 59, 122, 0.08); border-left: 4px solid var(--admin-navy); font-weight: 700; color: var(--admin-navy);' : 'color: #475569;' }}">
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <i class="{{ $item['icon'] }}" style="width: 18px; text-align: center; color: {{ $selectedKey === $k ? 'var(--admin-navy)' : '#94A3B8' }};"></i>
-                    <span style="font-size: 13.5px;">{{ $item['name'] }}</span>
+               class="section-item-link {{ $selectedKey === $k ? 'active' : '' }}">
+                <div class="d-flex align-items-center gap-10">
+                    <span class="icon-box">
+                        <i class="{{ $item['icon'] }}"></i>
+                    </span>
+                    <span>{{ $item['name'] }}</span>
                 </div>
-                <i class="fa-solid fa-chevron-right" style="font-size: 10px; opacity: {{ $selectedKey === $k ? '1' : '0.4' }};"></i>
+                <i class="fa-solid fa-chevron-right page-nav-arrow {{ $selectedKey === $k ? 'opacity-100' : 'opacity-30' }}"></i>
             </a>
             @endforeach
             @endforeach
         </div>
     </div>
 
-    <!-- Right Column: Active Section Editor -->
-    <div class="section-editor-card" style="background: #ffffff; border: 1px solid var(--admin-border); border-radius: 14px; padding: 26px; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
-        <div style="border-bottom: 1px solid var(--admin-border); padding-bottom: 16px; margin-bottom: 22px; display: flex; align-items: center; justify-content: space-between;">
-            <div>
-                <h2 style="font-size: 19px; font-weight: 800; color: var(--admin-text-main); margin-bottom: 4px;">
-                    Editing: <span style="color: var(--admin-navy);">{{ $currentSection['name'] }}</span>
-                </h2>
-                <p style="font-size: 13px; color: var(--admin-text-muted);">
-                    Live Page URL: <a href="{{ url($currentSection['url']) }}" target="_blank" style="color: var(--admin-orange); text-decoration: none; font-weight: 600;">{{ url($currentSection['url']) }} <i class="fa-solid fa-external-link" style="font-size: 10px;"></i></a>
-                </p>
+    <!-- Right Main Editor Column -->
+    <div class="editor-column">
+
+        <!-- Active Section Banner -->
+        <div class="section-hero-banner">
+            <div class="shb-left">
+                <div class="shb-icon-badge">
+                    <i class="{{ $currentSection['icon'] }}"></i>
+                </div>
+                <div>
+                    <span class="shb-tag">NOW EDITING</span>
+                    <h2 class="shb-title">{{ $currentSection['name'] }}</h2>
+                    <a href="{{ url($currentSection['url']) }}" target="_blank" class="shb-url">
+                        <i class="fa-solid fa-link"></i>
+                        <span>{{ url($currentSection['url']) }}</span>
+                        <i class="fa-solid fa-external-link icon-sm-offset"></i>
+                    </a>
+                </div>
             </div>
-            <a href="{{ route('admin.seo.index', ['page' => $currentSection['seo_key'] ?? 'home']) }}" class="btn-action-view" style="font-size: 12px; padding: 8px 14px; background: rgba(243, 112, 33, 0.1); color: var(--admin-orange); border-color: rgba(243, 112, 33, 0.25);">
-                <i class="fa-solid fa-magnifying-glass-chart"></i>
-                <span>Edit This Page's SEO</span>
-            </a>
+            <div class="text-right">
+                <span class="shb-badge-label">CATEGORY</span>
+                <span class="shb-badge-pill">
+                    {{ $currentSection['category'] }}
+                </span>
+            </div>
         </div>
 
-        <form action="{{ route('admin.pages.update') }}" method="POST">
+        <form action="{{ route('admin.pages.update') }}" method="POST" id="pageContentForm">
             @csrf
             @method('PATCH')
             <input type="hidden" name="section_key" value="{{ $selectedKey }}">
 
-            <div style="display: flex; flex-direction: column; gap: 20px;">
-                @foreach($currentSection['fields'] as $fKey => $fConfig)
-                <div style="background: #F8FAFC; border: 1px solid var(--admin-border); border-radius: 10px; padding: 18px 20px;">
-                    <label for="{{ $fKey }}" style="display: block; font-size: 13.5px; font-weight: 700; color: #1E293B; margin-bottom: 8px;">
-                        {{ $fConfig['label'] }}
-                    </label>
+            @php
+                // Categorize fields into Hero, Stats, Profile/Quote, and General
+                $heroFields = [];
+                $statFields = [];
+                $quoteFields = [];
+                $generalFields = [];
 
-                    @if($fConfig['type'] === 'textarea')
+                foreach ($currentSection['fields'] as $fKey => $fConfig) {
+                    if (str_contains($fKey, '_stat_') || str_starts_with($fKey, 'stat_')) {
+                        $statFields[$fKey] = $fConfig;
+                    } elseif (str_contains($fKey, '_hero_') || str_contains($fKey, 'badge') || str_contains($fKey, 'vision_') || str_contains($fKey, 'mission_')) {
+                        $heroFields[$fKey] = $fConfig;
+                    } elseif (str_contains($fKey, 'quote')) {
+                        $quoteFields[$fKey] = $fConfig;
+                    } else {
+                        $generalFields[$fKey] = $fConfig;
+                    }
+                }
+            @endphp
+
+            <div class="d-flex flex-column gap-20">
+
+                <!-- Hero & Heading Group -->
+                @if(count($heroFields) > 0)
+                <div class="field-group-card">
+                    <div class="fgc-header">
+                        <div class="fgc-header-left">
+                            <div class="fgc-icon">
+                                <i class="fa-solid fa-heading"></i>
+                            </div>
+                            <div>
+                                <h3 class="fgc-title">Hero Banner &amp; Headings</h3>
+                                <span class="fgc-subtitle">Main headings, badge kicker, and introductory text displayed at the top of the page</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    @php
+                        // Separate single line and textareas
+                        $heroSingles = [];
+                        $heroTexts = [];
+                        foreach ($heroFields as $k => $c) {
+                            if ($c['type'] === 'textarea') {
+                                $heroTexts[$k] = $c;
+                            } else {
+                                $heroSingles[$k] = $c;
+                            }
+                        }
+                    @endphp
+
+                    @if(count($heroSingles) > 0)
+                    <div class="card-subgrid-2col mb-18">
+                        @foreach($heroSingles as $fKey => $fConfig)
+                        <div class="form-group-clean mb-0">
+                            <label for="{{ $fKey }}" class="fg-label-clean">
+                                <span>{{ $fConfig['label'] }}</span>
+                            </label>
+                            <input type="text" 
+                                   name="{{ $fKey }}" 
+                                   id="{{ $fKey }}" 
+                                   value="{{ old($fKey, $fConfig['value']) }}" 
+                                   class="form-control-clean">
+                        </div>
+                        @endforeach
+                    </div>
+                    @endif
+
+                    @foreach($heroTexts as $fKey => $fConfig)
+                    <div class="form-group-clean">
+                        <label for="{{ $fKey }}" class="fg-label-clean">
+                            <span>{{ $fConfig['label'] }}</span>
+                            <span class="fg-label-tag">Introductory Paragraph</span>
+                        </label>
+                        <textarea name="{{ $fKey }}" 
+                                  id="{{ $fKey }}" 
+                                  rows="3" 
+                                  class="form-control-clean">{{ old($fKey, $fConfig['value']) }}</textarea>
+                    </div>
+                    @endforeach
+                </div>
+                @endif
+
+                <!-- Key Statistics Grid -->
+                @if(count($statFields) > 0)
+                <div class="field-group-card">
+                    <div class="fgc-header">
+                        <div class="fgc-header-left">
+                            <div class="fgc-icon icon-badge-orange">
+                                <i class="fa-solid fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <h3 class="fgc-title">Key Statistics &amp; Performance Highlights</h3>
+                                <span class="fgc-subtitle">Interactive numerical milestones displayed prominently across the section</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stats-form-grid">
+                        @php
+                            $statIcons = ['fa-graduation-cap', 'fa-users', 'fa-award', 'fa-compass-drafting', 'fa-star', 'fa-trophy', 'fa-user-tie', 'fa-calendar-check'];
+                            $iconIdx = 0;
+                        @endphp
+                        @foreach($statFields as $fKey => $fConfig)
+                        <div class="stat-input-card">
+                            <div class="stat-card-icon">
+                                <i class="fa-solid {{ $statIcons[$iconIdx % count($statIcons)] }}"></i>
+                            </div>
+                            <label for="{{ $fKey }}" class="stat-card-label">{{ $fConfig['label'] }}</label>
+                            <input type="text" 
+                                   name="{{ $fKey }}" 
+                                   id="{{ $fKey }}" 
+                                   value="{{ old($fKey, $fConfig['value']) }}" 
+                                   class="stat-card-input">
+                        </div>
+                        @php $iconIdx++; @endphp
+                        @endforeach
+                    </div>
+                </div>
+                @endif
+
+                <!-- Leadership Quotes -->
+                @if(count($quoteFields) > 0)
+                <div class="field-group-card panel-card-accent-orange">
+                    <div class="fgc-header">
+                        <div class="fgc-header-left">
+                            <div class="fgc-icon icon-badge-orange">
+                                <i class="fa-solid fa-quote-left"></i>
+                            </div>
+                            <div>
+                                <h3 class="fgc-title">Featured Inspiration Quote</h3>
+                                <span class="fgc-subtitle">Callout quote displayed inside the decorative quote box</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    @foreach($quoteFields as $fKey => $fConfig)
+                    <div class="form-group-clean">
+                        <label for="{{ $fKey }}" class="fg-label-clean">
+                            <span>{{ $fConfig['label'] }}</span>
+                        </label>
+                        <textarea name="{{ $fKey }}" 
+                                  id="{{ $fKey }}" 
+                                  rows="3" 
+                                  class="form-control-clean input-quote-style">{{ old($fKey, $fConfig['value']) }}</textarea>
+                    </div>
+                    @endforeach
+                </div>
+                @endif
+
+                <!-- General / Detailed Information -->
+                @if(count($generalFields) > 0)
+                <div class="field-group-card">
+                    <div class="fgc-header">
+                        <div class="fgc-header-left">
+                            <div class="fgc-icon">
+                                <i class="fa-solid fa-sliders"></i>
+                            </div>
+                            <div>
+                                <h3 class="fgc-title">Detailed Content &amp; Policy Notes</h3>
+                                <span class="fgc-subtitle">Body copy, paragraphs, credentials, and regulatory text</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    @php
+                        $genSingles = [];
+                        $genTexts = [];
+                        foreach ($generalFields as $k => $c) {
+                            if ($c['type'] === 'textarea') {
+                                $genTexts[$k] = $c;
+                            } else {
+                                $genSingles[$k] = $c;
+                            }
+                        }
+                    @endphp
+
+                    @if(count($genSingles) > 0)
+                    <div class="card-subgrid-2col mb-18">
+                        @foreach($genSingles as $fKey => $fConfig)
+                        <div class="form-group-clean mb-0">
+                            <label for="{{ $fKey }}" class="fg-label-clean">
+                                <span>{{ $fConfig['label'] }}</span>
+                            </label>
+                            <input type="text" 
+                                   name="{{ $fKey }}" 
+                                   id="{{ $fKey }}" 
+                                   value="{{ old($fKey, $fConfig['value']) }}" 
+                                   class="form-control-clean">
+                        </div>
+                        @endforeach
+                    </div>
+                    @endif
+
+                    @foreach($genTexts as $fKey => $fConfig)
+                    <div class="form-group-clean">
+                        <label for="{{ $fKey }}" class="fg-label-clean">
+                            <span>{{ $fConfig['label'] }}</span>
+                        </label>
                         <textarea name="{{ $fKey }}" 
                                   id="{{ $fKey }}" 
                                   rows="4" 
-                                  style="width: 100%; padding: 12px 14px; border: 1px solid #CBD5E1; border-radius: 8px; font-size: 14px; font-family: inherit; line-height: 1.5; resize: vertical; background: #ffffff;">{{ old($fKey, $fConfig['value']) }}</textarea>
-                    @else
-                        <input type="text" 
-                               name="{{ $fKey }}" 
-                               id="{{ $fKey }}" 
-                               value="{{ old($fKey, $fConfig['value']) }}" 
-                               style="width: 100%; padding: 11px 14px; border: 1px solid #CBD5E1; border-radius: 8px; font-size: 14px; font-family: inherit; background: #ffffff;">
-                    @endif
+                                  class="form-control-clean">{{ old($fKey, $fConfig['value']) }}</textarea>
+                    </div>
+                    @endforeach
                 </div>
-                @endforeach
+                @endif
+
             </div>
 
-            <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--admin-border); padding-top: 22px; margin-top: 24px;">
-                <span style="font-size: 12.5px; color: var(--admin-text-muted);">
-                    <i class="fa-solid fa-circle-check" style="color: var(--admin-success); margin-right: 4px;"></i>
-                    Saved text will reflect immediately on the user-facing page.
-                </span>
-                <button type="submit" class="btn-action-view" style="background: var(--admin-navy); color: #fff; padding: 12px 28px; font-size: 14px; border: none; cursor: pointer; border-radius: 10px;">
-                    <i class="fa-solid fa-cloud-arrow-up"></i>
-                    <span>Save {{ $currentSection['name'] }} Content</span>
-                </button>
+            <!-- Sticky Bottom Action Save Bar -->
+            <div class="sticky-save-bar mt-24">
+                <div class="d-flex align-items-center gap-8">
+                    <span class="status-pulse-dot"></span>
+                    <span class="save-status-text">
+                        Saved changes reflect immediately on the public website.
+                    </span>
+                </div>
+                <div class="d-flex align-items-center gap-10">
+                    <button type="button" class="btn-reset-clean" onclick="location.reload();">
+                        <i class="fa-solid fa-arrow-rotate-left"></i>
+                        <span>Cancel</span>
+                    </button>
+                    <button type="submit" class="btn-save-clean">
+                        <i class="fa-solid fa-cloud-arrow-up"></i>
+                        <span>Save {{ $currentSection['name'] }} Content</span>
+                    </button>
+                </div>
             </div>
+
         </form>
+
     </div>
 
 </div>
+
 @endsection

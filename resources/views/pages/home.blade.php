@@ -525,7 +525,7 @@
                                 </div>
                             </div>
                         @empty
-                            <p class="text-center" style="grid-column: 1 / -1; color: #64748B; padding: 40px 0;">No advantage cards available at the moment.</p>
+                            <p class="text-center adv-empty-grid-msg">No advantage cards available at the moment.</p>
                         @endforelse
                     </div>
                 </div>
@@ -943,7 +943,7 @@
                                 <i class="fa-solid {{ $loop->first ? 'fa-minus' : 'fa-plus' }}"></i>
                             </span>
                         </button>
-                        <div class="adv-faq-answer" id="faq-ans-{{ $faq->id }}" style="{{ $loop->first ? 'display: block;' : '' }}">
+                        <div class="adv-faq-answer {{ $loop->first ? 'active' : '' }}" id="faq-ans-{{ $faq->id }}">
                             <div class="adv-faq-answer-inner">
                                 <p>
                                     {{ $faq->answer }}

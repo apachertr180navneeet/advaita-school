@@ -298,7 +298,7 @@
                             <div class="reg-field-group">
                                 <label for="regSchoolAddress" class="reg-field-label">School Address <span class="req">*</span></label>
                                 <div class="reg-input-wrap">
-                                    <i class="fa-solid fa-location-dot reg-input-icon" style="top: 16px;" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-location-dot reg-input-icon reg-input-icon-textarea" aria-hidden="true"></i>
                                     <textarea id="regSchoolAddress" name="prev_school_address" class="reg-input-control" placeholder="Enter school address" rows="2"></textarea>
                                 </div>
                             </div>
@@ -868,7 +868,7 @@
                             <div class="reg-field-group">
                                 <label for="regPresentAddress" class="reg-field-label">Present Address <span class="req">*</span></label>
                                 <div class="reg-input-wrap">
-                                    <i class="fa-solid fa-house reg-input-icon" style="top: 16px;" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-house reg-input-icon reg-input-icon-textarea" aria-hidden="true"></i>
                                     <textarea id="regPresentAddress" name="present_address" class="reg-input-control" placeholder="Enter complete present address" rows="2"></textarea>
                                 </div>
                             </div>
@@ -876,7 +876,7 @@
                             <div class="reg-field-group">
                                 <label for="regPermAddress" class="reg-field-label">Permanent Address</label>
                                 <div class="reg-input-wrap">
-                                    <i class="fa-solid fa-house reg-input-icon" style="top: 16px;" aria-hidden="true"></i>
+                                    <i class="fa-solid fa-house reg-input-icon reg-input-icon-textarea" aria-hidden="true"></i>
                                     <textarea id="regPermAddress" name="permanent_address" class="reg-input-control" placeholder="Enter complete permanent address (if different from present address)" rows="2"></textarea>
                                 </div>
                             </div>
@@ -1021,7 +1021,7 @@
                                                 <label class="btn-choose-file">
                                                     <i class="fa-solid fa-cloud-arrow-up"></i>
                                                     <span>Choose File</span>
-                                                    <input type="file" name="doc_marksheet" style="display:none;" onchange="handleFileSelect(this, 'marksheet_status', 'marksheet_preview')">
+                                                    <input type="file" name="doc_marksheet" class="reg-file-input-hidden" onchange="handleFileSelect(this, 'marksheet_status', 'marksheet_preview')">
                                                 </label>
                                                 <span class="file-status-text" id="marksheet_status">No file chosen</span>
                                             </div>
@@ -1054,7 +1054,7 @@
                                                 <label class="btn-choose-file">
                                                     <i class="fa-solid fa-cloud-arrow-up"></i>
                                                     <span>Choose File</span>
-                                                    <input type="file" name="doc_tc" style="display:none;" onchange="handleFileSelect(this, 'tc_status', 'tc_preview')">
+                                                    <input type="file" name="doc_tc" class="reg-file-input-hidden" onchange="handleFileSelect(this, 'tc_status', 'tc_preview')">
                                                 </label>
                                                 <span class="file-status-text" id="tc_status">No file chosen</span>
                                             </div>
@@ -1088,7 +1088,7 @@
                                                 <label class="btn-choose-file">
                                                     <i class="fa-solid fa-cloud-arrow-up"></i>
                                                     <span>Choose File</span>
-                                                    <input type="file" name="doc_photo" accept="image/*" style="display:none;" onchange="handleFileSelect(this, 'photo_status', 'photo_preview')">
+                                                    <input type="file" name="doc_photo" accept="image/*" class="reg-file-input-hidden" onchange="handleFileSelect(this, 'photo_status', 'photo_preview')">
                                                 </label>
                                                 <span class="file-status-text" id="photo_status">No file chosen</span>
                                             </div>
@@ -1122,7 +1122,7 @@
                                                 <label class="btn-choose-file">
                                                     <i class="fa-solid fa-cloud-arrow-up"></i>
                                                     <span>Choose File</span>
-                                                    <input type="file" name="doc_eligibility" style="display:none;" onchange="handleFileSelect(this, 'eligibility_status', 'eligibility_preview')">
+                                                    <input type="file" name="doc_eligibility" class="reg-file-input-hidden" onchange="handleFileSelect(this, 'eligibility_status', 'eligibility_preview')">
                                                 </label>
                                                 <span class="file-status-text" id="eligibility_status">No file chosen</span>
                                             </div>
@@ -1281,7 +1281,7 @@ function handleFileSelect(input, statusId, previewId) {
             statusEl.style.fontWeight = '600';
         }
         if (previewEl) {
-            previewEl.innerHTML = '<i class="fa-solid fa-file-circle-check" style="color: #059669;"></i> <span style="color: #059669; font-weight: 600;">' + fileName + '</span>';
+            previewEl.innerHTML = '<i class="fa-solid fa-file-circle-check reg-upload-success-icon"></i> <span class="reg-upload-success-text">' + fileName + '</span>';
         }
     }
 }

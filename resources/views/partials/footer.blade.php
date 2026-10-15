@@ -122,11 +122,10 @@
             <div class="adv-footer-map-col">
                 <div class="adv-footer-map-card">
                     <div class="adv-footer-map-iframe-wrap">
-                        <iframe 
+                        <iframe class="adv-footer-map-iframe" 
                             src="{{ \App\Models\Setting::get('site_google_map_embed', 'https://maps.google.com/maps?q=Advaita+School+of+Excellence,+Parbhani&t=&z=15&ie=UTF8&iwloc=&output=embed') }}" 
                             width="100%" 
                             height="100%" 
-                            style="border:0;" 
                             allowfullscreen="" 
                             loading="lazy" 
                             referrerpolicy="no-referrer-when-downgrade"
