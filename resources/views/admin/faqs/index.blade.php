@@ -19,6 +19,10 @@
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 <span>View on Homepage</span>
             </a>
+            <a href="{{ route('admin.faqs.section-header') }}" class="btn-admin btn-secondary" title="Edit section header on a separate page">
+                <i class="fa-solid fa-sliders"></i>
+                <span>Edit Section Header</span>
+            </a>
             <a href="{{ route('admin.faqs.create') }}" class="btn-admin btn-primary">
                 <i class="fa-solid fa-plus"></i>
                 <span>Add Question</span>
@@ -57,51 +61,7 @@
         </div>
     </div>
 
-    <!-- Section Heading Editor Accordion Card -->
-    <div class="section-settings-card">
-        <div class="section-settings-head" onclick="document.getElementById('settingsBody').classList.toggle('d-none')">
-            <h4>
-                <i class="fa-solid fa-heading text-orange"></i>
-                <span>FAQ Section Header Settings</span>
-            </h4>
-            <span class="text-muted fs-12">Click to edit header texts <i class="fa-solid fa-chevron-down ms-1"></i></span>
-        </div>
-        <div class="settings-body" id="settingsBody">
-            <form action="{{ route('admin.faqs.section-header') }}" method="POST">
-                @csrf
-                @method('PATCH')
 
-                <div class="form-grid-2">
-                    <div class="form-group-item">
-                        <label class="form-label-item">Eyebrow Tag</label>
-                        <input type="text" name="eyebrow" class="form-input-item" value="{{ old('eyebrow', $sectionSettings['eyebrow']) }}" required maxlength="150">
-                    </div>
-                    <div class="form-group-item">
-                        <label class="form-label-item">Title Part 1 (Navy Dark)</label>
-                        <input type="text" name="title_1" class="form-input-item" value="{{ old('title_1', $sectionSettings['title_1']) }}" required maxlength="255">
-                    </div>
-                </div>
-
-                <div class="form-grid-2">
-                    <div class="form-group-item">
-                        <label class="form-label-item">Title Part 2 (Orange Highlight)</label>
-                        <input type="text" name="title_2" class="form-input-item" value="{{ old('title_2', $sectionSettings['title_2']) }}" placeholder="e.g. Questions" maxlength="255">
-                    </div>
-                    <div class="form-group-item">
-                        <label class="form-label-item">Subtitle Description</label>
-                        <input type="text" name="subtitle" class="form-input-item" value="{{ old('subtitle', $sectionSettings['subtitle']) }}" placeholder="Section description...">
-                    </div>
-                </div>
-
-                <div class="d-flex justify-content-end mt-10">
-                    <button type="submit" class="btn-admin btn-primary">
-                        <i class="fa-solid fa-floppy-disk"></i>
-                        <span>Save Section Header</span>
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
 
     <!-- FAQ Accordion Items List -->
     <div class="faq-list-container">

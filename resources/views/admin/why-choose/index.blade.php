@@ -19,6 +19,10 @@
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 <span>Preview Homepage</span>
             </a>
+            <a href="{{ route('admin.why-choose.section-header') }}" class="btn-admin btn-secondary" title="Edit section heading, subtitle, and CTA on a separate page">
+                <i class="fa-solid fa-sliders"></i>
+                <span>Edit Section Header</span>
+            </a>
             <a href="{{ route('admin.why-choose.create') }}" class="btn-admin btn-primary">
                 <i class="fa-solid fa-plus"></i>
                 <span>Add Advantage Card</span>
@@ -69,98 +73,7 @@
         </div>
     </div>
 
-    <!-- 3. Section Header & Heading Settings Card -->
-    <div class="section-settings-card">
-        <div class="section-settings-head">
-            <h4>
-                <i class="fa-solid fa-heading text-orange"></i>
-                <span>Section Heading &amp; Subtitle Configuration</span>
-            </h4>
-            <span class="text-muted fs-12">Appears above the slider cards on the public homepage</span>
-        </div>
 
-        <div class="section-settings-body">
-            <!-- Live Preview of Section Header -->
-            <div class="header-live-preview-box">
-                <div class="preview-eyebrow">
-                    <i class="fa-solid fa-graduation-cap"></i>
-                    <span id="previewEyebrow">{{ $sectionSettings['eyebrow'] }}</span>
-                </div>
-                <div class="preview-title">
-                    <span class="part-dark" id="previewTitle1">{{ $sectionSettings['title_1'] }}</span>
-                    <span class="part-orange" id="previewTitle2">{{ $sectionSettings['title_2'] }}</span>
-                </div>
-                <p class="preview-subtitle" id="previewSubtitle">
-                    {{ $sectionSettings['subtitle'] }}
-                </p>
-                <div class="preview-cta-btn">
-                    <span id="previewCta">{{ $sectionSettings['cta_text'] }}</span>
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-            </div>
-
-            <!-- Form -->
-            <form action="{{ route('admin.why-choose.section-header') }}" method="POST">
-                @csrf
-                @method('PATCH')
-
-                <div class="form-grid-3">
-                    <div class="form-group-custom">
-                        <label class="form-label-custom">
-                            <span>Eyebrow Badge Text</span>
-                            <span class="text-danger">*</span>
-                        </label>
-                        <input type="text" id="inputEyebrow" name="eyebrow" class="form-input-custom" value="{{ old('eyebrow', $sectionSettings['eyebrow']) }}" required maxlength="150" placeholder="e.g. WHY CHOOSE ADVAITA?">
-                    </div>
-
-                    <div class="form-group-custom">
-                        <label class="form-label-custom">
-                            <span>Title Part 1 (Navy Dark)</span>
-                            <span class="text-danger">*</span>
-                        </label>
-                        <input type="text" id="inputTitle1" name="title_1" class="form-input-custom" value="{{ old('title_1', $sectionSettings['title_1']) }}" required maxlength="255" placeholder="e.g. Why Choose">
-                    </div>
-
-                    <div class="form-group-custom">
-                        <label class="form-label-custom">
-                            <span>Title Part 2 (Orange Accent)</span>
-                        </label>
-                        <input type="text" id="inputTitle2" name="title_2" class="form-input-custom" value="{{ old('title_2', $sectionSettings['title_2']) }}" maxlength="255" placeholder="e.g. Advaita?">
-                    </div>
-                </div>
-
-                <div class="form-group-custom mb-16">
-                    <label class="form-label-custom">
-                        <span>Section Subtitle Description</span>
-                    </label>
-                    <textarea id="inputSubtitle" name="subtitle" rows="2" class="form-input-custom" placeholder="Brief summary of the school advantages...">{{ old('subtitle', $sectionSettings['subtitle']) }}</textarea>
-                </div>
-
-                <div class="card-grid-260">
-                    <div class="form-group-custom">
-                        <label class="form-label-custom">
-                            <span>Bottom CTA Button Text</span>
-                        </label>
-                        <input type="text" id="inputCta" name="cta_text" class="form-input-custom" value="{{ old('cta_text', $sectionSettings['cta_text']) }}" maxlength="100" placeholder="e.g. Discover the Advaita Difference">
-                    </div>
-
-                    <div class="form-group-custom">
-                        <label class="form-label-custom">
-                            <span>Bottom CTA Button URL</span>
-                        </label>
-                        <input type="text" name="cta_url" class="form-input-custom" value="{{ old('cta_url', $sectionSettings['cta_url']) }}" maxlength="255" placeholder="e.g. #admissions or /admission-info">
-                    </div>
-                </div>
-
-                <div class="d-flex justify-content-end">
-                    <button type="submit" class="btn-admin btn-primary">
-                        <i class="fa-solid fa-cloud-arrow-up"></i>
-                        <span>Save Section Heading</span>
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
 
     <!-- 4. Advantage Cards Registry (Table & Visual Switcher) -->
     <div class="cards-table-card">
@@ -342,28 +255,7 @@
 
 @section('scripts')
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-    // Interactive live preview updates
-    const inputEyebrow = document.getElementById('inputEyebrow');
-    const inputTitle1 = document.getElementById('inputTitle1');
-    const inputTitle2 = document.getElementById('inputTitle2');
-    const inputSubtitle = document.getElementById('inputSubtitle');
-    const inputCta = document.getElementById('inputCta');
 
-    const previewEyebrow = document.getElementById('previewEyebrow');
-    const previewTitle1 = document.getElementById('previewTitle1');
-    const previewTitle2 = document.getElementById('previewTitle2');
-    const previewSubtitle = document.getElementById('previewSubtitle');
-    const previewCta = document.getElementById('previewCta');
-
-    if (inputEyebrow) {
-        inputEyebrow.addEventListener('input', () => { previewEyebrow.textContent = inputEyebrow.value || 'WHY CHOOSE ADVAITA?'; });
-        inputTitle1.addEventListener('input', () => { previewTitle1.textContent = inputTitle1.value || 'Why Choose'; });
-        inputTitle2.addEventListener('input', () => { previewTitle2.textContent = inputTitle2.value || ''; });
-        inputSubtitle.addEventListener('input', () => { previewSubtitle.textContent = inputSubtitle.value || ''; });
-        inputCta.addEventListener('input', () => { previewCta.textContent = inputCta.value || 'Discover the Advaita Difference'; });
-    }
-});
 
 function setCardsView(mode) {
     const tableContainer = document.getElementById('cardsTableContainer');

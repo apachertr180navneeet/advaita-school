@@ -34,6 +34,23 @@ class WhyChooseController extends Controller
     }
 
     /**
+     * Show the dedicated form for editing the Why Choose section heading & settings.
+     */
+    public function editSectionHeader(): View
+    {
+        $sectionSettings = [
+            'eyebrow' => Setting::get('why_choose_eyebrow', 'WHY CHOOSE ADVAITA?'),
+            'title_1' => Setting::get('why_choose_title_1', 'Why Choose'),
+            'title_2' => Setting::get('why_choose_title_2', 'Advaita?'),
+            'subtitle' => Setting::get('why_choose_subtitle', 'A nurturing and future-focused ecosystem designed to ignite curiosity, instill integrity, and inspire every child to excel.'),
+            'cta_text' => Setting::get('why_choose_cta_text', 'Discover the Advaita Difference'),
+            'cta_url' => Setting::get('why_choose_cta_url', '#admissions'),
+        ];
+
+        return view('admin.why-choose.header', compact('sectionSettings'));
+    }
+
+    /**
      * Update the section heading, subtitle, and CTA button text.
      */
     public function updateSectionHeader(Request $request): RedirectResponse

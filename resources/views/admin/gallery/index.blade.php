@@ -19,6 +19,10 @@
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 <span>Preview Homepage</span>
             </a>
+            <a href="{{ route('admin.gallery.section-header') }}" class="btn-admin btn-secondary" title="Edit section heading, subtitle, and action buttons on a separate page">
+                <i class="fa-solid fa-sliders"></i>
+                <span>Edit Section Header</span>
+            </a>
             <a href="{{ route('admin.gallery.create') }}" class="btn-admin btn-primary">
                 <i class="fa-solid fa-plus"></i>
                 <span>Add Gallery Photo</span>
@@ -69,110 +73,7 @@
         </div>
     </div>
 
-    <!-- 3. Section Header & Heading Configuration Card -->
-    <div class="section-settings-card">
-        <div class="section-settings-head">
-            <h4>
-                <i class="fa-solid fa-heading text-orange"></i>
-                <span>Section Heading &amp; Action Buttons Configuration</span>
-            </h4>
-            <span class="text-muted fs-12">Appears above the photo carousel on the public website</span>
-        </div>
 
-        <div class="section-settings-body">
-            <!-- Live Preview of Section Header -->
-            <div class="header-live-preview-box">
-                <div class="preview-eyebrow">
-                    <i class="fa-solid fa-camera"></i>
-                    <span id="previewEyebrow">{{ $sectionSettings['eyebrow'] }}</span>
-                </div>
-                <div class="preview-title">
-                    <span class="part-dark" id="previewTitle1">{{ $sectionSettings['title_1'] }}</span>
-                    <span class="part-orange" id="previewTitle2">{{ $sectionSettings['title_2'] }}</span>
-                </div>
-                <p class="preview-subtitle" id="previewSubtitle">
-                    {{ $sectionSettings['subtitle'] }}
-                </p>
-                <div class="preview-buttons-wrap">
-                    <div class="preview-btn-main">
-                        <span id="previewBtn1">{{ $sectionSettings['btn_1_text'] }}</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </div>
-                    <div class="preview-btn-video">
-                        <i class="fa-solid fa-play"></i>
-                        <span id="previewBtn2">{{ $sectionSettings['btn_2_text'] }}</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Header Form -->
-            <form action="{{ route('admin.gallery.section-header') }}" method="POST">
-                @csrf
-                @method('PATCH')
-
-                <div class="form-grid-3">
-                    <div class="form-group-custom">
-                        <label class="form-label-custom">
-                            <span>Eyebrow Tag</span>
-                            <span class="text-danger">*</span>
-                        </label>
-                        <input type="text" id="inputEyebrow" name="eyebrow" class="form-input-custom" value="{{ old('eyebrow', $sectionSettings['eyebrow']) }}" required maxlength="150" placeholder="e.g. CAMPUS GALLERY">
-                    </div>
-
-                    <div class="form-group-custom">
-                        <label class="form-label-custom">
-                            <span>Title Part 1 (Navy Dark)</span>
-                            <span class="text-danger">*</span>
-                        </label>
-                        <input type="text" id="inputTitle1" name="title_1" class="form-input-custom" value="{{ old('title_1', $sectionSettings['title_1']) }}" required maxlength="255" placeholder="e.g. A day at Advaita,">
-                    </div>
-
-                    <div class="form-group-custom">
-                        <label class="form-label-custom">
-                            <span>Title Part 2 (Orange Italic Accent)</span>
-                        </label>
-                        <input type="text" id="inputTitle2" name="title_2" class="form-input-custom" value="{{ old('title_2', $sectionSettings['title_2']) }}" maxlength="255" placeholder="e.g. in pictures.">
-                    </div>
-                </div>
-
-                <div class="form-group-custom mb-16">
-                    <label class="form-label-custom">
-                        <span>Section Subtitle Description</span>
-                    </label>
-                    <textarea id="inputSubtitle" name="subtitle" rows="2" class="form-input-custom" placeholder="Brief summary describing the campus activities...">{{ old('subtitle', $sectionSettings['subtitle']) }}</textarea>
-                </div>
-
-                <div class="form-grid-2 mb-20">
-                    <div class="form-group-custom">
-                        <label class="form-label-custom">
-                            <span>Primary Button (Explore Gallery) Text &amp; URL</span>
-                        </label>
-                        <div class="d-flex gap-8">
-                            <input type="text" id="inputBtn1" name="btn_1_text" class="form-input-custom flex-1" value="{{ old('btn_1_text', $sectionSettings['btn_1_text']) }}" placeholder="Button text">
-                            <input type="text" name="btn_1_url" class="form-input-custom flex-2" value="{{ old('btn_1_url', $sectionSettings['btn_1_url']) }}" placeholder="URL (e.g. /gallery)">
-                        </div>
-                    </div>
-
-                    <div class="form-group-custom">
-                        <label class="form-label-custom">
-                            <span>Secondary Video Button Text &amp; URL</span>
-                        </label>
-                        <div class="d-flex gap-8">
-                            <input type="text" id="inputBtn2" name="btn_2_text" class="form-input-custom flex-1" value="{{ old('btn_2_text', $sectionSettings['btn_2_text']) }}" placeholder="Button text">
-                            <input type="text" name="btn_2_url" class="form-input-custom flex-2" value="{{ old('btn_2_url', $sectionSettings['btn_2_url']) }}" placeholder="URL (e.g. #hero)">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="d-flex justify-content-end">
-                    <button type="submit" class="btn-admin btn-primary">
-                        <i class="fa-solid fa-cloud-arrow-up"></i>
-                        <span>Save Section Heading</span>
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
 
     <!-- 4. Photos Registry (Table & Visual Switcher) -->
     <div class="gallery-table-card">
@@ -347,41 +248,7 @@
 
 @section('scripts')
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-    // Real-Time Header Preview Updates
-    const inputEyebrow = document.getElementById('inputEyebrow');
-    const inputTitle1 = document.getElementById('inputTitle1');
-    const inputTitle2 = document.getElementById('inputTitle2');
-    const inputSubtitle = document.getElementById('inputSubtitle');
-    const inputBtn1 = document.getElementById('inputBtn1');
-    const inputBtn2 = document.getElementById('inputBtn2');
 
-    const previewEyebrow = document.getElementById('previewEyebrow');
-    const previewTitle1 = document.getElementById('previewTitle1');
-    const previewTitle2 = document.getElementById('previewTitle2');
-    const previewSubtitle = document.getElementById('previewSubtitle');
-    const previewBtn1 = document.getElementById('previewBtn1');
-    const previewBtn2 = document.getElementById('previewBtn2');
-
-    if (inputEyebrow && previewEyebrow) {
-        inputEyebrow.addEventListener('input', () => { previewEyebrow.textContent = inputEyebrow.value || 'CAMPUS GALLERY'; });
-    }
-    if (inputTitle1 && previewTitle1) {
-        inputTitle1.addEventListener('input', () => { previewTitle1.textContent = inputTitle1.value || 'A day at Advaita,'; });
-    }
-    if (inputTitle2 && previewTitle2) {
-        inputTitle2.addEventListener('input', () => { previewTitle2.textContent = inputTitle2.value || 'in pictures.'; });
-    }
-    if (inputSubtitle && previewSubtitle) {
-        inputSubtitle.addEventListener('input', () => { previewSubtitle.textContent = inputSubtitle.value || ''; });
-    }
-    if (inputBtn1 && previewBtn1) {
-        inputBtn1.addEventListener('input', () => { previewBtn1.textContent = inputBtn1.value || 'Explore Photo Gallery'; });
-    }
-    if (inputBtn2 && previewBtn2) {
-        inputBtn2.addEventListener('input', () => { previewBtn2.textContent = inputBtn2.value || 'Watch Campus Highlights'; });
-    }
-});
 
 // Switch Between Table View & Grid View
 function setGalleryView(mode) {

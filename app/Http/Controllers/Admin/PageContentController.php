@@ -243,11 +243,55 @@ class PageContentController extends Controller
     ];
 
     /**
-     * Display the page content editor.
+     * Display a listing of all school pages managed by the content system.
      */
     public function index(Request $request): View
     {
-        $selectedKey = $request->query('section', 'about');
+        // If a specific section is requested via query param, serve the dedicated edit page
+        if ($request->has('section')) {
+            return $this->edit((string) $request->query('section'));
+        }
+
+        $sections = [];
+        $totalFields = 0;
+        $totalImages = 0;
+
+        foreach ($this->sectionsMap as $key => $sec) {
+            $fieldCount = count($sec['fields']);
+            $imageCount = 0;
+            $fieldsWithValues = [];
+
+            foreach ($sec['fields'] as $fKey => $fData) {
+                if (($fData['type'] ?? '') === 'image') {
+                    $imageCount++;
+                }
+                $fieldsWithValues[$fKey] = array_merge($fData, [
+                    'value' => Setting::get($fKey, $fData['default']),
+                ]);
+            }
+
+            $totalFields += $fieldCount;
+            $totalImages += $imageCount;
+
+            $sections[$key] = array_merge($sec, [
+                'key' => $key,
+                'fields' => $fieldsWithValues,
+                'field_count' => $fieldCount,
+                'image_count' => $imageCount,
+            ]);
+        }
+
+        $totalPages = count($sections);
+
+        return view('admin.pages.index', compact('sections', 'totalPages', 'totalFields', 'totalImages'));
+    }
+
+    /**
+     * Display the dedicated content editor for a specific school page.
+     */
+    public function edit(string $section): View
+    {
+        $selectedKey = $section;
         if (! array_key_exists($selectedKey, $this->sectionsMap)) {
             $selectedKey = 'about';
         }
@@ -268,15 +312,15 @@ class PageContentController extends Controller
 
         $currentSection = $sections[$selectedKey];
 
-        return view('admin.pages.index', compact('sections', 'selectedKey', 'currentSection'));
+        return view('admin.pages.edit', compact('sections', 'selectedKey', 'currentSection'));
     }
 
     /**
      * Update page content settings.
      */
-    public function update(Request $request): RedirectResponse
+    public function update(Request $request, ?string $section = null): RedirectResponse
     {
-        $sectionKey = $request->input('section_key');
+        $sectionKey = $section ?: $request->input('section_key');
         if (! array_key_exists($sectionKey, $this->sectionsMap)) {
             return redirect()->route('admin.pages.index')->with('error', 'Invalid section specified.');
         }
@@ -306,8 +350,7 @@ class PageContentController extends Controller
             }
         }
 
-        return redirect()
-            ->route('admin.pages.index', ['section' => $sectionKey])
+        return redirect('/admin/pages-content?section='.$sectionKey)
             ->with('success', "Content for '{$this->sectionsMap[$sectionKey]['name']}' updated successfully!");
     }
 }

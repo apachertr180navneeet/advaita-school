@@ -36,6 +36,25 @@ class GalleryController extends Controller
     }
 
     /**
+     * Show dedicated form for editing campus gallery section header.
+     */
+    public function editSectionHeader(): View
+    {
+        $sectionSettings = [
+            'eyebrow' => Setting::get('gallery_eyebrow', 'CAMPUS GALLERY'),
+            'title_1' => Setting::get('gallery_title_1', 'A day at Advaita,'),
+            'title_2' => Setting::get('gallery_title_2', 'in pictures.'),
+            'subtitle' => Setting::get('gallery_subtitle', 'Glimpses from morning assembly, classrooms, labs, sports, celebrations and everything in between — the rhythm of life at our campus.'),
+            'btn_1_text' => Setting::get('gallery_btn_1_text', 'Explore Photo Gallery'),
+            'btn_1_url' => Setting::get('gallery_btn_1_url', route('gallery')),
+            'btn_2_text' => Setting::get('gallery_btn_2_text', 'Watch Campus Highlights'),
+            'btn_2_url' => Setting::get('gallery_btn_2_url', '#hero'),
+        ];
+
+        return view('admin.gallery.header', compact('sectionSettings'));
+    }
+
+    /**
      * Update section header settings.
      */
     public function updateSectionHeader(Request $request): RedirectResponse

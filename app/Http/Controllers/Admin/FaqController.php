@@ -31,6 +31,21 @@ class FaqController extends Controller
     }
 
     /**
+     * Show dedicated form for editing FAQ section header.
+     */
+    public function editSectionHeader(): View
+    {
+        $sectionSettings = [
+            'eyebrow' => Setting::get('faq_eyebrow', 'FAQ'),
+            'title_1' => Setting::get('faq_title_1', 'Frequently Asked'),
+            'title_2' => Setting::get('faq_title_2', 'Questions'),
+            'subtitle' => Setting::get('faq_subtitle', "Find quick answers to common questions about admissions, academics,\ncampus life, and more at Advaita."),
+        ];
+
+        return view('admin.faqs.header', compact('sectionSettings'));
+    }
+
+    /**
      * Update section header settings.
      */
     public function updateSectionHeader(Request $request): RedirectResponse

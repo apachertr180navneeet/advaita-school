@@ -89,7 +89,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::resource('sliders', AdminSliderController::class)->except(['show']);
 
         // Three Pillars (What Makes Advaita Special) Management
-        Route::patch('/pillars/section-header', [AdminPillarController::class, 'updateSectionHeader'])->name('pillars.section-header');
+        Route::get('/pillars/section-header', [AdminPillarController::class, 'editSectionHeader'])->name('pillars.section-header');
+        Route::patch('/pillars/section-header', [AdminPillarController::class, 'updateSectionHeader'])->name('pillars.section-header.update');
         Route::patch('/pillars/{id}/toggle-status', [AdminPillarController::class, 'toggleStatus'])->name('pillars.toggle-status');
         Route::resource('pillars', AdminPillarController::class)->except(['show']);
 
@@ -99,14 +100,16 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
         // School Pages Content Management
         Route::get('/pages-content', [AdminPageContentController::class, 'index'])->name('pages.index');
-        Route::patch('/pages-content', [AdminPageContentController::class, 'update'])->name('pages.update');
+        Route::get('/pages-content/{section}/edit', [AdminPageContentController::class, 'edit'])->name('pages.edit');
+        Route::patch('/pages-content/{section?}', [AdminPageContentController::class, 'update'])->name('pages.update');
 
         // Global Site & Contact Settings Management
         Route::get('/site-settings', [AdminSiteSettingController::class, 'index'])->name('site-settings.index');
         Route::patch('/site-settings', [AdminSiteSettingController::class, 'update'])->name('site-settings.update');
 
         // Why Choose Advaita Section & Cards Management
-        Route::patch('/why-choose/section-header', [AdminWhyChooseController::class, 'updateSectionHeader'])->name('why-choose.section-header');
+        Route::get('/why-choose/section-header', [AdminWhyChooseController::class, 'editSectionHeader'])->name('why-choose.section-header');
+        Route::patch('/why-choose/section-header', [AdminWhyChooseController::class, 'updateSectionHeader'])->name('why-choose.section-header.update');
         Route::patch('/why-choose/{whyChooseCard}/toggle-status', [AdminWhyChooseController::class, 'toggleStatus'])->name('why-choose.toggle-status');
         Route::resource('why-choose', AdminWhyChooseController::class)->except(['show'])->parameters(['why-choose' => 'whyChooseCard']);
 
@@ -115,17 +118,20 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::patch('/campus-visit', [AdminCampusVisitController::class, 'update'])->name('campus-visit.update');
 
         // Campus Gallery Management
-        Route::patch('/gallery/section-header', [AdminGalleryController::class, 'updateSectionHeader'])->name('gallery.section-header');
+        Route::get('/gallery/section-header', [AdminGalleryController::class, 'editSectionHeader'])->name('gallery.section-header');
+        Route::patch('/gallery/section-header', [AdminGalleryController::class, 'updateSectionHeader'])->name('gallery.section-header.update');
         Route::patch('/gallery/{gallery}/toggle-status', [AdminGalleryController::class, 'toggle'])->name('gallery.toggle-status');
         Route::resource('gallery', AdminGalleryController::class)->except(['show']);
 
         // Parent Testimonials Management
-        Route::patch('/testimonials/section-header', [AdminTestimonialController::class, 'updateSectionHeader'])->name('testimonials.section-header');
+        Route::get('/testimonials/section-header', [AdminTestimonialController::class, 'editSectionHeader'])->name('testimonials.section-header');
+        Route::patch('/testimonials/section-header', [AdminTestimonialController::class, 'updateSectionHeader'])->name('testimonials.section-header.update');
         Route::patch('/testimonials/{testimonial}/toggle-status', [AdminTestimonialController::class, 'toggle'])->name('testimonials.toggle-status');
         Route::resource('testimonials', AdminTestimonialController::class)->except(['show']);
 
         // Frequently Asked Questions (FAQ) Management
-        Route::patch('/faqs/section-header', [AdminFaqController::class, 'updateSectionHeader'])->name('faqs.section-header');
+        Route::get('/faqs/section-header', [AdminFaqController::class, 'editSectionHeader'])->name('faqs.section-header');
+        Route::patch('/faqs/section-header', [AdminFaqController::class, 'updateSectionHeader'])->name('faqs.section-header.update');
         Route::patch('/faqs/{faq}/toggle-status', [AdminFaqController::class, 'toggle'])->name('faqs.toggle-status');
         Route::resource('faqs', AdminFaqController::class)->except(['show']);
     });

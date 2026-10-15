@@ -19,54 +19,15 @@
                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
                 <span>View On Homepage</span>
             </a>
+            <a href="{{ route('admin.pillars.section-header') }}" class="btn-admin btn-secondary" title="Configure section heading and subtitle on a separate page">
+                <i class="fa-solid fa-sliders"></i>
+                <span>Edit Section Header</span>
+            </a>
             <a href="{{ route('admin.pillars.create') }}" class="btn-add-pillar">
                 <i class="fa-solid fa-plus"></i>
                 <span>Add New Pillar</span>
             </a>
         </div>
-    </div>
-
-    <!-- Section Header Settings Card -->
-    <div class="pillar-section-settings-card">
-        <div class="pillar-settings-title">
-            <i class="fa-solid fa-sliders text-orange"></i>
-            <span>Section Header &amp; Subtitle Content</span>
-        </div>
-        <form action="{{ route('admin.pillars.section-header') }}" method="POST">
-            @csrf
-            @method('PATCH')
-            <div class="card-subgrid-2col mb-16">
-                <div>
-                    <label class="form-label-bold">Eyebrow Badge Text</label>
-                    <input type="text" name="eyebrow" class="form-control" value="{{ old('eyebrow', $sectionSettings['eyebrow']) }}" required class="form-input-clean">
-                </div>
-                <div>
-                    <label class="form-label-bold">Title 1 (Dark Heading)</label>
-                    <input type="text" name="title_1" class="form-control" value="{{ old('title_1', $sectionSettings['title_1']) }}" required class="form-input-clean">
-                </div>
-                <div>
-                    <label class="form-label-orange">Title 2 (Orange Tagline)</label>
-                    <input type="text" name="title_2" class="form-control" value="{{ old('title_2', $sectionSettings['title_2']) }}" class="form-input-clean">
-                </div>
-            </div>
-            <div class="mb-16">
-                <label class="form-label-bold">Section Subtitle / Description</label>
-                <textarea name="subtitle" rows="2" class="form-textarea-clean">{{ old('subtitle', $sectionSettings['subtitle']) }}</textarea>
-            </div>
-            <div class="filter-bar-wrap">
-                <div class="filter-bar-inputs">
-                    <div class="flex-1">
-                        <input type="text" name="cta_text" placeholder="CTA Button Text" value="{{ old('cta_text', $sectionSettings['cta_text']) }}" class="form-input-clean">
-                    </div>
-                    <div class="flex-1">
-                        <input type="text" name="cta_url" placeholder="CTA Link (e.g. #why-choose)" value="{{ old('cta_url', $sectionSettings['cta_url']) }}" class="form-input-clean">
-                    </div>
-                </div>
-                <button type="submit" class="btn-filter-submit">
-                    <i class="fa-solid fa-floppy-disk"></i> Save Section Heading
-                </button>
-            </div>
-        </form>
     </div>
 
     <!-- Image Size Guidelines Notice Box -->

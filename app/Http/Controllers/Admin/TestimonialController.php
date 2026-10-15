@@ -32,6 +32,21 @@ class TestimonialController extends Controller
     }
 
     /**
+     * Show dedicated form for editing testimonials section header.
+     */
+    public function editSectionHeader(): View
+    {
+        $sectionSettings = [
+            'eyebrow' => Setting::get('testimonials_eyebrow', 'TESTIMONIALS'),
+            'title_1' => Setting::get('testimonials_title_1', 'Voices That'),
+            'title_2' => Setting::get('testimonials_title_2', 'Inspire Us'),
+            'subtitle' => Setting::get('testimonials_subtitle', 'Here’s what our parents have to say about their journey with Advaita.'),
+        ];
+
+        return view('admin.testimonials.header', compact('sectionSettings'));
+    }
+
+    /**
      * Update section header settings.
      */
     public function updateSectionHeader(Request $request): RedirectResponse

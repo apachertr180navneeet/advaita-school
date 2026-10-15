@@ -5,15 +5,17 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Pillar;
 use App\Models\Setting;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\View\View;
 
 class PillarController extends Controller
 {
     /**
      * Display a listing of the pillars and section settings.
      */
-    public function index()
+    public function index(): View
     {
         $pillars = Pillar::orderBy('order', 'asc')
             ->orderBy('id', 'asc')
@@ -32,9 +34,26 @@ class PillarController extends Controller
     }
 
     /**
+     * Show the dedicated form for editing the Three Pillars section heading.
+     */
+    public function editSectionHeader(): View
+    {
+        $sectionSettings = [
+            'eyebrow' => Setting::get('pillar_section_eyebrow', 'WHAT MAKES ADVAITA SPECIAL'),
+            'title_1' => Setting::get('pillar_section_title_1', 'Three pillars that shape'),
+            'title_2' => Setting::get('pillar_section_title_2', 'brighter futures.'),
+            'subtitle' => Setting::get('pillar_section_subtitle', 'At Advaita, everything we do is driven by a clear purpose — to create an environment where children learn, grow, and discover their unique potential.'),
+            'cta_text' => Setting::get('pillar_section_cta_text', 'Discover the Advaita Difference'),
+            'cta_url' => Setting::get('pillar_section_cta_url', '#why-choose'),
+        ];
+
+        return view('admin.pillars.header', compact('sectionSettings'));
+    }
+
+    /**
      * Update the section heading & subtitle text.
      */
-    public function updateSectionHeader(Request $request)
+    public function updateSectionHeader(Request $request): RedirectResponse
     {
         $validated = $request->validate([
             'eyebrow' => ['required', 'string', 'max:150'],
