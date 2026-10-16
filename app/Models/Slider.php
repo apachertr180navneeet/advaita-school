@@ -66,7 +66,12 @@ class Slider extends Model
             return asset($this->image);
         }
 
-        return asset('storage/'.ltrim($this->image, '/'));
+        $cleanPath = ltrim($this->image, '/');
+        if (str_starts_with($cleanPath, 'storage/')) {
+            $cleanPath = substr($cleanPath, 8);
+        }
+
+        return asset('storage/'.$cleanPath);
     }
 
     /**
@@ -84,11 +89,16 @@ class Slider extends Model
             return file_exists($path) ? $path : null;
         }
 
-        if (Storage::disk('public')->exists($this->image)) {
-            return Storage::disk('public')->path($this->image);
+        $cleanPath = ltrim($this->image, '/');
+        if (str_starts_with($cleanPath, 'storage/')) {
+            $cleanPath = substr($cleanPath, 8);
         }
 
-        $directPath = public_path('storage/'.ltrim($this->image, '/'));
+        if (Storage::disk('public')->exists($cleanPath)) {
+            return Storage::disk('public')->path($cleanPath);
+        }
+
+        $directPath = public_path('storage/'.$cleanPath);
 
         return file_exists($directPath) ? $directPath : null;
     }

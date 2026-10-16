@@ -414,4 +414,129 @@ document.addEventListener('DOMContentLoaded', () => {
         // Initial state
         updateGallerySlider();
     }
+
+    // --------------------------------------------------------------------------
+    // 8. Testimonials - Single Line Card Slider
+    // --------------------------------------------------------------------------
+    const testiSliderWrap = document.querySelector('.adv-testimonials-slider-wrap');
+    const testiGrid = document.querySelector('.adv-testimonials-grid');
+    const testiCards = document.querySelectorAll('.adv-testi-card');
+    const testiPrevBtn = document.querySelector('.adv-testi-arrow.prev');
+    const testiNextBtn = document.querySelector('.adv-testi-arrow.next');
+    const testiDots = document.querySelectorAll('.adv-testi-dot');
+
+    if (testiGrid && testiCards.length > 0) {
+        let testiCurrentIndex = 0;
+        const testiTotalCards = testiCards.length;
+
+        function getTestiVisibleCards() {
+            if (window.innerWidth <= 576) return 1;
+            if (window.innerWidth <= 991) return 2;
+            return 3;
+        }
+
+        function getTestiMaxIndex() {
+            const visible = getTestiVisibleCards();
+            return Math.max(0, testiTotalCards - visible);
+        }
+
+        function updateTestiSlider() {
+            const maxIndex = getTestiMaxIndex();
+            if (testiCurrentIndex > maxIndex) {
+                testiCurrentIndex = maxIndex;
+            }
+
+            // Calculate card step distance accurately
+            let cardStep = 0;
+            if (testiCards.length > 1) {
+                cardStep = testiCards[1].offsetLeft - testiCards[0].offsetLeft;
+            }
+            if (cardStep <= 0) {
+                const gap = window.innerWidth <= 576 ? 16 : (window.innerWidth <= 991 ? 20 : 28);
+                cardStep = testiCards[0].offsetWidth + gap;
+            }
+
+            const offset = testiCurrentIndex * cardStep;
+            testiGrid.style.transform = `translateX(-${offset}px)`;
+
+            // Update dots
+            testiDots.forEach((dot, i) => {
+                const isActive = i === testiCurrentIndex || (i >= maxIndex && testiCurrentIndex === maxIndex && i === maxIndex);
+                dot.classList.toggle('active', i === testiCurrentIndex);
+                dot.setAttribute('aria-selected', i === testiCurrentIndex ? 'true' : 'false');
+            });
+
+            // Toggle arrows visibility if all cards fit on screen
+            if (testiPrevBtn && testiNextBtn) {
+                const hasOverflow = maxIndex > 0;
+                testiPrevBtn.style.opacity = hasOverflow ? '1' : '0.4';
+                testiPrevBtn.style.pointerEvents = hasOverflow ? 'auto' : 'none';
+                testiNextBtn.style.opacity = hasOverflow ? '1' : '0.4';
+                testiNextBtn.style.pointerEvents = hasOverflow ? 'auto' : 'none';
+            }
+        }
+
+        function testiSlideNext() {
+            const maxIndex = getTestiMaxIndex();
+            testiCurrentIndex = testiCurrentIndex >= maxIndex ? 0 : testiCurrentIndex + 1;
+            updateTestiSlider();
+        }
+
+        function testiSlidePrev() {
+            const maxIndex = getTestiMaxIndex();
+            testiCurrentIndex = testiCurrentIndex <= 0 ? maxIndex : testiCurrentIndex - 1;
+            updateTestiSlider();
+        }
+
+        if (testiNextBtn) testiNextBtn.addEventListener('click', () => { testiSlideNext(); resetTestiAutoplay(); });
+        if (testiPrevBtn) testiPrevBtn.addEventListener('click', () => { testiSlidePrev(); resetTestiAutoplay(); });
+
+        testiDots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                const maxIndex = getTestiMaxIndex();
+                testiCurrentIndex = Math.min(i, maxIndex);
+                updateTestiSlider();
+                resetTestiAutoplay();
+            });
+        });
+
+        // Pause autoplay on mouse hover
+        if (testiSliderWrap) {
+            testiSliderWrap.addEventListener('mouseenter', () => clearInterval(testiAutoplayTimer));
+            testiSliderWrap.addEventListener('mouseleave', () => resetTestiAutoplay());
+        }
+
+        // Mobile touch swipe support
+        let tTouchStartX = 0;
+        let tTouchEndX = 0;
+        testiGrid.addEventListener('touchstart', (e) => {
+            tTouchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        testiGrid.addEventListener('touchend', (e) => {
+            tTouchEndX = e.changedTouches[0].screenX;
+            if (tTouchStartX - tTouchEndX > 45) {
+                testiSlideNext();
+                resetTestiAutoplay();
+            } else if (tTouchEndX - tTouchStartX > 45) {
+                testiSlidePrev();
+                resetTestiAutoplay();
+            }
+        }, { passive: true });
+
+        // Update on window resize
+        window.addEventListener('resize', () => {
+            updateTestiSlider();
+        });
+
+        // Auto-play every 6 seconds
+        let testiAutoplayTimer = setInterval(testiSlideNext, 6000);
+
+        function resetTestiAutoplay() {
+            clearInterval(testiAutoplayTimer);
+            testiAutoplayTimer = setInterval(testiSlideNext, 6000);
+        }
+
+        // Initial state
+        updateTestiSlider();
+    }
 });

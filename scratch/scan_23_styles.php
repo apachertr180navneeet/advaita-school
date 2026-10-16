@@ -37,19 +37,20 @@ foreach ($files as $f) {
         }
         if (str_contains($l, '</style>')) {
             $inStyleTag = false;
+
             continue;
         }
-        if (!$inStyleTag && preg_match_all('/\bstyle\s*=\s*["\']([^"\']+)["\']/i', $l, $m)) {
+        if (! $inStyleTag && preg_match_all('/\bstyle\s*=\s*["\']([^"\']+)["\']/i', $l, $m)) {
             foreach ($m[1] as $s) {
                 $trimmed = trim($s);
-                $allInlineStyles[$trimmed][] = basename($f) . ':' . ($i + 1);
+                $allInlineStyles[$trimmed][] = basename($f).':'.($i + 1);
             }
         }
     }
 }
 
-echo "Total unique inline styles outside of <style> blocks in 23 files: " . count($allInlineStyles) . "\n\n";
+echo 'Total unique inline styles outside of <style> blocks in 23 files: '.count($allInlineStyles)."\n\n";
 arsort($allInlineStyles);
 foreach ($allInlineStyles as $s => $locs) {
-    echo "(" . count($locs) . ") [$s] e.g. " . $locs[0] . "\n";
+    echo '('.count($locs).") [$s] e.g. ".$locs[0]."\n";
 }

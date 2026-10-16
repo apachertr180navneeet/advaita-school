@@ -3,7 +3,7 @@
 $stylePath = 'public/assets/css/style.css';
 $css = file_get_contents($stylePath);
 
-$addition = <<<CSS
+$addition = <<<'CSS'
 
 
 /* ==========================================================================
@@ -215,8 +215,8 @@ $addition = <<<CSS
 
 CSS;
 
-if (!str_contains($css, 'NO-INLINE-CSS REFACTOR')) {
-    file_put_contents($stylePath, $css . $addition);
+if (! str_contains($css, 'NO-INLINE-CSS REFACTOR')) {
+    file_put_contents($stylePath, $css.$addition);
     echo "Appended frontend CSS successfully to $stylePath\n";
 } else {
     echo "Already contains frontend CSS additions\n";

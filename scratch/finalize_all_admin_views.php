@@ -3,7 +3,7 @@
 // 1. Add supporting CSS to public/assets/css/admin.css
 $css = file_get_contents('public/assets/css/admin.css');
 
-$extraCss = <<<CSS
+$extraCss = <<<'CSS'
 
 
 /* ==========================================================================
@@ -53,8 +53,8 @@ $extraCss = <<<CSS
 
 CSS;
 
-if (!str_contains($css, 'FINAL PASS REUSABLE CLASSES')) {
-    file_put_contents('public/assets/css/admin.css', $css . $extraCss);
+if (! str_contains($css, 'FINAL PASS REUSABLE CLASSES')) {
+    file_put_contents('public/assets/css/admin.css', $css.$extraCss);
 }
 
 // 2. Perform replacements on all 23 files
@@ -186,7 +186,7 @@ $replacements = [
 ];
 
 foreach ($files as $filePath) {
-    if (!file_exists($filePath)) {
+    if (! file_exists($filePath)) {
         continue;
     }
     $c = file_get_contents($filePath);

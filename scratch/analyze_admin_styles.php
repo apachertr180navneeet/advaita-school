@@ -26,7 +26,7 @@ if (preg_match_all('/\bstyle\s*=\s*["\']([^"\']+)["\']/i', $content, $m)) {
 }
 
 arsort($styles);
-echo "TOTAL DISTINCT INLINE STYLES IN ADMIN: " . count($styles) . "\n\n";
+echo 'TOTAL DISTINCT INLINE STYLES IN ADMIN: '.count($styles)."\n\n";
 foreach ($styles as $s => $count) {
     echo "($count) $s\n";
 }

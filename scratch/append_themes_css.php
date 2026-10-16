@@ -2,7 +2,7 @@
 
 $css = file_get_contents('public/assets/css/admin.css');
 
-$themesAndForms = <<<CSS
+$themesAndForms = <<<'CSS'
 
 
 /* ==========================================================================
@@ -82,8 +82,8 @@ $themesAndForms = <<<CSS
 
 CSS;
 
-if (!str_contains($css, 'MODULE THEMES, FORM UTILITIES')) {
-    file_put_contents('public/assets/css/admin.css', $css . $themesAndForms);
+if (! str_contains($css, 'MODULE THEMES, FORM UTILITIES')) {
+    file_put_contents('public/assets/css/admin.css', $css.$themesAndForms);
     echo "Appended module themes and form utilities to admin.css\n";
 } else {
     echo "Already contains module themes\n";

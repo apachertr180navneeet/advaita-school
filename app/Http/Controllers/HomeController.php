@@ -136,6 +136,7 @@ class HomeController extends Controller
         $faqs = Faq::where('is_active', true)
             ->orderBy('order', 'asc')
             ->orderBy('id', 'asc')
+            ->take(5)
             ->get();
 
         $faqSettings = [

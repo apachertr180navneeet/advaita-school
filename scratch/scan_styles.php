@@ -24,7 +24,7 @@ foreach ($iterator as $file) {
             }
         }
 
-        if (!empty($styleTagMatches) || !empty($styleAttrMatches)) {
+        if (! empty($styleTagMatches) || ! empty($styleAttrMatches)) {
             $record = [
                 'file' => $path,
                 'tags' => $styleTagMatches,
@@ -39,24 +39,24 @@ foreach ($iterator as $file) {
     }
 }
 
-echo "=== FRONTEND FILES (" . count($frontendFiles) . ") ===\n";
+echo '=== FRONTEND FILES ('.count($frontendFiles).") ===\n";
 foreach ($frontendFiles as $f) {
     echo "\nFile: {$f['file']}\n";
-    if (!empty($f['tags'])) {
+    if (! empty($f['tags'])) {
         echo "  <style> tags:\n";
         foreach ($f['tags'] as $t) {
             echo "    L{$t['line']}: {$t['content']}\n";
         }
     }
-    if (!empty($f['attrs'])) {
-        echo "  style= attributes (" . count($f['attrs']) . "):\n";
+    if (! empty($f['attrs'])) {
+        echo '  style= attributes ('.count($f['attrs'])."):\n";
         foreach ($f['attrs'] as $a) {
             echo "    L{$a['line']}: {$a['match']}\n";
         }
     }
 }
 
-echo "\n\n=== ADMIN FILES SUMMARY (" . count($adminFiles) . ") ===\n";
+echo "\n\n=== ADMIN FILES SUMMARY (".count($adminFiles).") ===\n";
 foreach ($adminFiles as $f) {
-    echo "{$f['file']}: " . count($f['tags']) . " style tags, " . count($f['attrs']) . " style attrs\n";
+    echo "{$f['file']}: ".count($f['tags']).' style tags, '.count($f['attrs'])." style attrs\n";
 }

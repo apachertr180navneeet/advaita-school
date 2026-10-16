@@ -22,12 +22,12 @@ foreach ($iterator as $file) {
 }
 
 echo "TOTAL BLADE FILES SCANNED: $totalFiles\n";
-echo "FILES WITH <style> TAGS: " . count($styleTagMatches) . "\n";
-echo "FILES WITH style= ATTRIBUTES: " . count($styleAttrMatches) . "\n";
+echo 'FILES WITH <style> TAGS: '.count($styleTagMatches)."\n";
+echo 'FILES WITH style= ATTRIBUTES: '.count($styleAttrMatches)."\n";
 
-if (!empty($styleTagMatches)) {
+if (! empty($styleTagMatches)) {
     print_r($styleTagMatches);
 }
-if (!empty($styleAttrMatches)) {
+if (! empty($styleAttrMatches)) {
     print_r($styleAttrMatches);
 }

@@ -206,4 +206,27 @@ class GalleryTestimonialsFaqManagementTest extends TestCase
         $home->assertSee('What are the school lab facilities?');
         $home->assertSee('Robotics, STEAM, Computer');
     }
+
+    public function test_homepage_limits_faqs_to_five(): void
+    {
+        for ($i = 1; $i <= 8; $i++) {
+            Faq::create([
+                'question' => "FAQ Question {$i}?",
+                'answer' => "FAQ Answer {$i}.",
+                'order' => $i,
+                'is_active' => true,
+            ]);
+        }
+
+        $response = $this->get(route('home'));
+        $response->assertStatus(200);
+
+        for ($i = 1; $i <= 5; $i++) {
+            $response->assertSee("FAQ Question {$i}?");
+        }
+
+        $response->assertDontSee('FAQ Question 6?');
+        $response->assertDontSee('FAQ Question 7?');
+        $response->assertDontSee('FAQ Question 8?');
+    }
 }

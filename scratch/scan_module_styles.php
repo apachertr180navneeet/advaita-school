@@ -11,13 +11,13 @@ foreach ($files as $f) {
     foreach ($lines as $i => $l) {
         if (preg_match_all('/\bstyle\s*=\s*["\']([^"\']+)["\']/i', $l, $m)) {
             foreach ($m[1] as $val) {
-                $distinctStyles[trim($val)][] = basename(dirname($f)) . '/' . basename($f) . ':' . ($i + 1);
+                $distinctStyles[trim($val)][] = basename(dirname($f)).'/'.basename($f).':'.($i + 1);
             }
         }
     }
 }
 
-echo "Total distinct inline styles in modules: " . count($distinctStyles) . "\n\n";
+echo 'Total distinct inline styles in modules: '.count($distinctStyles)."\n\n";
 foreach ($distinctStyles as $style => $locs) {
-    echo "[$style] (" . count($locs) . " times) e.g. " . $locs[0] . "\n";
+    echo "[$style] (".count($locs).' times) e.g. '.$locs[0]."\n";
 }

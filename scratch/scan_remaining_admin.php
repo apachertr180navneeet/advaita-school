@@ -10,14 +10,14 @@ foreach ($iterator as $file) {
         if (preg_match_all('/\bstyle\s*=\s*["\']([^"\']+)["\']/i', $content, $m)) {
             foreach ($m[1] as $s) {
                 $trimmed = trim($s);
-                $styles[$trimmed][] = basename(dirname($file->getPathname())) . '/' . basename($file->getPathname());
+                $styles[$trimmed][] = basename(dirname($file->getPathname())).'/'.basename($file->getPathname());
             }
         }
     }
 }
 
 arsort($styles);
-echo "REMAINING INLINE STYLES: " . count($styles) . " unique\n\n";
+echo 'REMAINING INLINE STYLES: '.count($styles)." unique\n\n";
 foreach ($styles as $s => $files) {
-    echo "(" . count($files) . ") [$s] in " . $files[0] . "\n";
+    echo '('.count($files).") [$s] in ".$files[0]."\n";
 }

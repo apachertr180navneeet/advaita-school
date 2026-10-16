@@ -2,7 +2,7 @@
 
 $css = file_get_contents('public/assets/css/admin.css');
 
-$extra = <<<CSS
+$extra = <<<'CSS'
 
 
 /* ==========================================================================
@@ -50,8 +50,8 @@ $extra = <<<CSS
 
 CSS;
 
-if (!str_contains($css, 'EXTRA UTILITIES FOR PAGES')) {
-    file_put_contents('public/assets/css/admin.css', $css . $extra);
+if (! str_contains($css, 'EXTRA UTILITIES FOR PAGES')) {
+    file_put_contents('public/assets/css/admin.css', $css.$extra);
     echo "Appended extra admin utilities\n";
 } else {
     echo "Already appended\n";

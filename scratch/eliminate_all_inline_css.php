@@ -2,7 +2,7 @@
 
 // 1. Append needed CSS classes to admin.css
 $css = file_get_contents('public/assets/css/admin.css');
-$additions = <<<CSS
+$additions = <<<'CSS'
 
 
 /* Final Phase Cleanups */
@@ -18,8 +18,8 @@ $additions = <<<CSS
 
 CSS;
 
-if (!str_contains($css, 'Final Phase Cleanups')) {
-    file_put_contents('public/assets/css/admin.css', $css . $additions);
+if (! str_contains($css, 'Final Phase Cleanups')) {
+    file_put_contents('public/assets/css/admin.css', $css.$additions);
 }
 
 // 2. Scan and clean all admin blade files

@@ -3,9 +3,9 @@
 // 1. Build public/assets/css/admin-login.css
 $loginContent = file_get_contents('resources/views/admin/login.blade.php');
 if (preg_match('/<style\b[^>]*>(.*?)<\/style>/is', $loginContent, $m)) {
-    $loginCss = trim($m[1]) . "\n\n/* Login Utilities */\n.login-alert-icon {\n    margin-top: 2px;\n}\n";
+    $loginCss = trim($m[1])."\n\n/* Login Utilities */\n.login-alert-icon {\n    margin-top: 2px;\n}\n";
     file_put_contents('public/assets/css/admin-login.css', $loginCss);
-    echo "Created public/assets/css/admin-login.css (" . strlen($loginCss) . " bytes)\n";
+    echo 'Created public/assets/css/admin-login.css ('.strlen($loginCss)." bytes)\n";
 }
 
 // 2. Build public/assets/css/admin.css
@@ -49,13 +49,13 @@ foreach ($viewFiles as $vf) {
     if (file_exists($vf)) {
         $c = file_get_contents($vf);
         if (preg_match('/<style\b[^>]*>(.*?)<\/style>/is', $c, $matches)) {
-            $viewCssBlocks[] = "/* --- Component Styles from " . basename($vf) . " in " . dirname($vf) . " --- */\n" . trim($matches[1]);
+            $viewCssBlocks[] = '/* --- Component Styles from '.basename($vf).' in '.dirname($vf)." --- */\n".trim($matches[1]);
         }
     }
 }
 
 // Additional Admin Utilities for replacing all inline style attributes
-$utilitiesCss = <<<CSS
+$utilitiesCss = <<<'CSS'
 
 /* ==========================================================================
    ADMIN GLOBAL UTILITIES & REUSABLE CLASSES (NO-INLINE-CSS REFACTOR)
@@ -574,12 +574,12 @@ $utilitiesCss = <<<CSS
 CSS;
 
 $fullAdminCss = "/* ==========================================================================\n"
-    . "   ADVAITA ADMIN MASTER STYLESHEET (COMPILED - NO INLINE CSS)\n"
-    . "   ========================================================================== */\n\n"
-    . "/* --- Core Layout & Global Variables --- */\n"
-    . $coreCss . "\n\n"
-    . $utilitiesCss . "\n\n"
-    . implode("\n\n", $viewCssBlocks) . "\n";
+    ."   ADVAITA ADMIN MASTER STYLESHEET (COMPILED - NO INLINE CSS)\n"
+    ."   ========================================================================== */\n\n"
+    ."/* --- Core Layout & Global Variables --- */\n"
+    .$coreCss."\n\n"
+    .$utilitiesCss."\n\n"
+    .implode("\n\n", $viewCssBlocks)."\n";
 
 file_put_contents('public/assets/css/admin.css', $fullAdminCss);
-echo "Created public/assets/css/admin.css (" . strlen($fullAdminCss) . " bytes)\n";
+echo 'Created public/assets/css/admin.css ('.strlen($fullAdminCss)." bytes)\n";

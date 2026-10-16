@@ -159,4 +159,32 @@ class SliderManagementTest extends TestCase
         $response->assertSee('Dynamic Confident Futures');
         $response->assertSee('Dynamic school description for tests.');
     }
+
+    public function test_storage_fallback_serves_uploaded_slide_image(): void
+    {
+        Storage::fake('public');
+        $uploaded = UploadedFile::fake()->image('test-hero.jpg', 1920, 800);
+        $path = $uploaded->store('sliders', 'public');
+
+        // Verify storage file exists on the public disk
+        Storage::disk('public')->assertExists($path);
+
+        $response = $this->get('/storage/'.$path);
+
+        $response->assertStatus(200);
+    }
+
+    public function test_storage_fallback_blocks_directory_traversal_and_missing_files(): void
+    {
+        $this->get('/storage/../.env')->assertStatus(404);
+        $this->get('/storage/non-existent-slider-image.jpg')->assertStatus(404);
+    }
+
+    public function test_storage_link_route_can_be_executed_from_web(): void
+    {
+        $response = $this->get('/storage-link');
+
+        $response->assertStatus(200);
+        $response->assertSee('Server Storage Link');
+    }
 }

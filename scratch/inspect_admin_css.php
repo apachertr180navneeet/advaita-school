@@ -15,7 +15,7 @@ foreach ($iterator as $file) {
     }
 }
 
-echo "Found " . count($sections) . " admin views with <style> blocks:\n";
+echo 'Found '.count($sections)." admin views with <style> blocks:\n";
 foreach ($sections as $p => $css) {
-    echo "$p: " . strlen($css) . " bytes\n";
+    echo "$p: ".strlen($css)." bytes\n";
 }

@@ -32,8 +32,8 @@ echo "Updated partials/navbar.blade.php\n";
 $path = 'resources/views/partials/footer.blade.php';
 $content = file_get_contents($path);
 $content = str_replace(
-    '<iframe' . "\n" . '                            src="{{ \App\Models\Setting::get(\'site_google_map_embed\', \'https://maps.google.com/maps?q=Advaita+School+of+Excellence,+Parbhani&t=&z=15&ie=UTF8&iwloc=&output=embed\') }}"' . "\n" . '                            width="100%"' . "\n" . '                            height="100%"' . "\n" . '                            style="border:0;"',
-    '<iframe class="adv-footer-map-iframe"' . "\n" . '                            src="{{ \App\Models\Setting::get(\'site_google_map_embed\', \'https://maps.google.com/maps?q=Advaita+School+of+Excellence,+Parbhani&t=&z=15&ie=UTF8&iwloc=&output=embed\') }}"' . "\n" . '                            width="100%"' . "\n" . '                            height="100%"',
+    '<iframe'."\n".'                            src="{{ \App\Models\Setting::get(\'site_google_map_embed\', \'https://maps.google.com/maps?q=Advaita+School+of+Excellence,+Parbhani&t=&z=15&ie=UTF8&iwloc=&output=embed\') }}"'."\n".'                            width="100%"'."\n".'                            height="100%"'."\n".'                            style="border:0;"',
+    '<iframe class="adv-footer-map-iframe"'."\n".'                            src="{{ \App\Models\Setting::get(\'site_google_map_embed\', \'https://maps.google.com/maps?q=Advaita+School+of+Excellence,+Parbhani&t=&z=15&ie=UTF8&iwloc=&output=embed\') }}"'."\n".'                            width="100%"'."\n".'                            height="100%"',
     $content
 );
 // Also fallback in case of single line
@@ -165,14 +165,14 @@ $map = [
 foreach ($map as $styleVal => $cls) {
     // Check if replacing div
     $content = str_replace(
-        '<div class="adv-gal-card-icon" style="background: ' . $styleVal . '">',
-        '<div class="adv-gal-card-icon ' . $cls . '">',
+        '<div class="adv-gal-card-icon" style="background: '.$styleVal.'">',
+        '<div class="adv-gal-card-icon '.$cls.'">',
         $content
     );
     // Check if replacing button
     $content = str_replace(
-        'style="background: ' . $styleVal . '"',
-        'class="adv-gal-card-btn ' . $cls . '"',
+        'style="background: '.$styleVal.'"',
+        'class="adv-gal-card-btn '.$cls.'"',
         $content
     );
 }

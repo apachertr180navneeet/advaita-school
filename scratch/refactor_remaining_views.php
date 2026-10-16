@@ -119,7 +119,7 @@ $commonMap = [
 ];
 
 foreach ($files as $filePath) {
-    if (!file_exists($filePath)) {
+    if (! file_exists($filePath)) {
         continue;
     }
     $content = file_get_contents($filePath);
@@ -178,5 +178,5 @@ foreach ($files as $filePath) {
     }
 
     file_put_contents($filePath, $content);
-    echo "Processed " . basename(dirname($filePath)) . '/' . basename($filePath) . "\n";
+    echo 'Processed '.basename(dirname($filePath)).'/'.basename($filePath)."\n";
 }

@@ -851,42 +851,59 @@
             @endphp
 
             @if($activeTestimonials->isNotEmpty())
-            <!-- Testimonial Cards Grid -->
-            <div class="adv-testimonials-grid">
-                @foreach($activeTestimonials as $testi)
-                    <!-- Card: {{ $testi->parent_name }} -->
-                    <div class="adv-testi-card {{ $testi->theme_color === 'blue' ? 'theme-blue' : 'theme-orange' }}">
-                        <div class="adv-testi-top-bar">
-                            <span class="adv-testi-quote-mark {{ $testi->theme_color === 'blue' ? 'blue' : 'orange' }}">&ldquo;</span>
-                            <div class="adv-testi-stars">
-                                @for($i = 1; $i <= ($testi->rating ?: 5); $i++)
-                                    <i class="fa-solid fa-star"></i>
-                                @endfor
+            <!-- Testimonial Cards Single-Line Carousel Slider -->
+            <div class="adv-testimonials-slider-wrap">
+
+                <!-- Left Nav Arrow -->
+                <button type="button" class="adv-testi-arrow prev" aria-label="Previous testimonial">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                <!-- Slider Viewport (Strictly 1 Row) -->
+                <div class="adv-testimonials-viewport">
+                    <div class="adv-testimonials-grid">
+                        @foreach($activeTestimonials as $testi)
+                            <!-- Card: {{ $testi->parent_name }} -->
+                            <div class="adv-testi-card {{ $testi->theme_color === 'blue' ? 'theme-blue' : 'theme-orange' }}">
+                                <div class="adv-testi-top-bar">
+                                    <span class="adv-testi-quote-mark {{ $testi->theme_color === 'blue' ? 'blue' : 'orange' }}">&ldquo;</span>
+                                    <div class="adv-testi-stars">
+                                        @for($i = 1; $i <= ($testi->rating ?: 5); $i++)
+                                            <i class="fa-solid fa-star"></i>
+                                        @endfor
+                                    </div>
+                                </div>
+                                <p class="adv-testi-text">
+                                    {{ $testi->content }}
+                                </p>
+                                <div class="adv-testi-footer">
+                                    <div class="adv-testi-avatar-box">
+                                        <img src="{{ $testi->avatar_url }}" alt="{{ $testi->parent_name }} - Parent at Advaita" class="adv-testi-avatar" loading="lazy">
+                                    </div>
+                                    <div class="adv-testi-author-info">
+                                        <h3 class="adv-testi-name">{{ $testi->parent_name }}</h3>
+                                        @if(!empty($testi->child_info))
+                                            <span class="adv-testi-role">{!! nl2br(e($testi->child_info)) !!}</span>
+                                        @endif
+                                    </div>
+                                    <span class="adv-testi-close-quote {{ $testi->theme_color === 'blue' ? 'blue' : 'orange' }}">&rdquo;</span>
+                                </div>
                             </div>
-                        </div>
-                        <p class="adv-testi-text">
-                            {{ $testi->content }}
-                        </p>
-                        <div class="adv-testi-footer">
-                            <div class="adv-testi-avatar-box">
-                                <img src="{{ $testi->avatar_url }}" alt="{{ $testi->parent_name }} - Parent at Advaita" class="adv-testi-avatar" loading="lazy">
-                            </div>
-                            <div class="adv-testi-author-info">
-                                <h3 class="adv-testi-name">{{ $testi->parent_name }}</h3>
-                                @if(!empty($testi->child_info))
-                                    <span class="adv-testi-role">{!! nl2br(e($testi->child_info)) !!}</span>
-                                @endif
-                            </div>
-                            <span class="adv-testi-close-quote {{ $testi->theme_color === 'blue' ? 'blue' : 'orange' }}">&rdquo;</span>
-                        </div>
+                        @endforeach
                     </div>
-                @endforeach
+                </div>
+
+                <!-- Right Nav Arrow -->
+                <button type="button" class="adv-testi-arrow next" aria-label="Next testimonial">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
             </div>
 
             <!-- Carousel Pagination Dots -->
             <div class="adv-testimonials-dots" role="tablist" aria-label="Testimonials pagination">
                 @foreach($activeTestimonials as $testi)
-                    <span class="adv-testi-dot {{ $loop->iteration === 2 ? 'active' : '' }}" role="tab" aria-selected="{{ $loop->iteration === 2 ? 'true' : 'false' }}"></span>
+                    <button type="button" class="adv-testi-dot {{ $loop->first ? 'active' : '' }}" role="tab" aria-selected="{{ $loop->first ? 'true' : 'false' }}" aria-label="Testimonial {{ $loop->iteration }}"></button>
                 @endforeach
             </div>
             @endif
@@ -927,7 +944,7 @@
             </div>
 
             @php
-                $activeFaqs = isset($faqs) && $faqs->count() > 0 ? $faqs : collect();
+                $activeFaqs = isset($faqs) && $faqs->count() > 0 ? $faqs->take(5) : collect();
             @endphp
 
             @if($activeFaqs->isNotEmpty())
