@@ -79,34 +79,36 @@
                 <div class="form-group">
                     <label class="form-label">
                         Button 1 Label
-                        <span class="helper-hint">(Primary Orange Pill Button)</span>
+                        <span class="helper-hint">(Primary Orange Pill Button - leave blank to hide)</span>
                     </label>
-                    <input type="text" name="btn_1_text" class="form-control" value="{{ old('btn_1_text', 'Apply for Admission') }}" placeholder="Apply for Admission">
+                    <input type="text" name="btn_1_text" class="form-control" value="{{ old('btn_1_text') }}" placeholder="e.g. Apply for Admission">
                 </div>
 
                 <!-- Button 1 URL -->
                 <div class="form-group">
                     <label class="form-label">
                         Button 1 URL / Anchor Link
+                        <span class="helper-hint">(Required if Button 1 Label is provided)</span>
                     </label>
-                    <input type="text" name="btn_1_url" class="form-control" value="{{ old('btn_1_url', '#admissions') }}" placeholder="#admissions">
+                    <input type="text" name="btn_1_url" class="form-control" value="{{ old('btn_1_url') }}" placeholder="e.g. #admissions or /admission-info">
                 </div>
 
                 <!-- Button 2 Text -->
                 <div class="form-group">
                     <label class="form-label">
                         Button 2 Label
-                        <span class="helper-hint">(Secondary Frosted Pill Button)</span>
+                        <span class="helper-hint">(Secondary Frosted Pill Button - leave blank to hide)</span>
                     </label>
-                    <input type="text" name="btn_2_text" class="form-control" value="{{ old('btn_2_text', 'Explore Our School') }}" placeholder="Explore Our School">
+                    <input type="text" name="btn_2_text" class="form-control" value="{{ old('btn_2_text') }}" placeholder="e.g. Explore Our School">
                 </div>
 
                 <!-- Button 2 URL -->
                 <div class="form-group">
                     <label class="form-label">
                         Button 2 URL / Anchor Link
+                        <span class="helper-hint">(Required if Button 2 Label is provided)</span>
                     </label>
-                    <input type="text" name="btn_2_url" class="form-control" value="{{ old('btn_2_url', '#about') }}" placeholder="#about">
+                    <input type="text" name="btn_2_url" class="form-control" value="{{ old('btn_2_url') }}" placeholder="e.g. #about or /about-us">
                 </div>
             </div>
         </div>

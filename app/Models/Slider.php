@@ -18,35 +18,51 @@ class Slider extends Model
     ];
 
     /**
-     * Primary action button label (default: 'Apply for Admission').
+     * Primary action button label.
      */
-    public function getButton1TextAttribute(): string
+    public function getButton1TextAttribute(): ?string
     {
-        return ! empty($this->btn_1_text) ? $this->btn_1_text : 'Apply for Admission';
+        return ! empty($this->btn_1_text) ? $this->btn_1_text : null;
     }
 
     /**
-     * Primary action button link (default: '#admissions').
+     * Primary action button link.
      */
-    public function getButton1UrlAttribute(): string
+    public function getButton1UrlAttribute(): ?string
     {
-        return ! empty($this->btn_1_url) ? $this->btn_1_url : '#admissions';
+        return ! empty($this->btn_1_url) ? $this->btn_1_url : null;
     }
 
     /**
-     * Secondary action button label (default: 'Explore Our School').
+     * Secondary action button label.
      */
-    public function getButton2TextAttribute(): string
+    public function getButton2TextAttribute(): ?string
     {
-        return ! empty($this->btn_2_text) ? $this->btn_2_text : 'Explore Our School';
+        return ! empty($this->btn_2_text) ? $this->btn_2_text : null;
     }
 
     /**
-     * Secondary action button link (default: '#about').
+     * Secondary action button link.
      */
-    public function getButton2UrlAttribute(): string
+    public function getButton2UrlAttribute(): ?string
     {
-        return ! empty($this->btn_2_url) ? $this->btn_2_url : '#about';
+        return ! empty($this->btn_2_url) ? $this->btn_2_url : null;
+    }
+
+    /**
+     * Determine if button 1 should be displayed.
+     */
+    public function hasButton1(): bool
+    {
+        return ! empty($this->btn_1_text) && ! empty($this->btn_1_url);
+    }
+
+    /**
+     * Determine if button 2 should be displayed.
+     */
+    public function hasButton2(): bool
+    {
+        return ! empty($this->btn_2_text) && ! empty($this->btn_2_url);
     }
 
     /**

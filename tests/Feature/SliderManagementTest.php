@@ -204,6 +204,48 @@ class SliderManagementTest extends TestCase
         $response->assertSee('Dynamic school description for tests.');
     }
 
+    public function test_homepage_does_not_render_buttons_when_data_or_url_missing(): void
+    {
+        Slider::create([
+            'title_1' => 'Slide Without Buttons',
+            'image' => 'assets/images/hero-slider-campus.png',
+            'btn_1_text' => null,
+            'btn_1_url' => null,
+            'btn_2_text' => null,
+            'btn_2_url' => null,
+            'order' => 1,
+            'is_active' => true,
+        ]);
+
+        $response = $this->get(route('home'));
+
+        $response->assertStatus(200);
+        $response->assertSee('Slide Without Buttons');
+        $response->assertDontSee('adv-hero-btn-apply');
+        $response->assertDontSee('adv-hero-btn-explore');
+    }
+
+    public function test_homepage_renders_only_button_with_valid_text_and_url(): void
+    {
+        Slider::create([
+            'title_1' => 'Slide With Only Button 1',
+            'image' => 'assets/images/hero-slider-campus.png',
+            'btn_1_text' => 'Custom Apply Now',
+            'btn_1_url' => '/admission-info',
+            'btn_2_text' => 'Missing URL Button', // text present but no URL
+            'btn_2_url' => null,
+            'order' => 1,
+            'is_active' => true,
+        ]);
+
+        $response = $this->get(route('home'));
+
+        $response->assertStatus(200);
+        $response->assertSee('Custom Apply Now');
+        $response->assertSee('/admission-info');
+        $response->assertDontSee('Missing URL Button');
+    }
+
     public function test_storage_fallback_serves_uploaded_slide_image(): void
     {
         Storage::fake('public');

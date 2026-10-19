@@ -51,18 +51,28 @@
                             @endif
 
                             <!-- Interactive CTA Action Buttons -->
-                            <div class="adv-hero-actions-group">
-                                <a href="{{ $slide->button_1_url }}" class="adv-hero-real-btn adv-hero-btn-apply" title="{{ $slide->button_1_text }}">
-                                    <span>{{ $slide->button_1_text }}</span>
-                                    <i class="fa-solid fa-arrow-right"></i>
-                                </a>
-                                <a href="{{ $slide->button_2_url }}" class="adv-hero-real-btn adv-hero-btn-explore" title="{{ $slide->button_2_text }}">
-                                    <span class="adv-hero-play-circle" aria-hidden="true">
-                                        <i class="fa-solid fa-play"></i>
-                                    </span>
-                                    <span>{{ $slide->button_2_text }}</span>
-                                </a>
-                            </div>
+                            @php
+                                $hasBtn1 = ! empty($slide->btn_1_text) && ! empty($slide->btn_1_url);
+                                $hasBtn2 = ! empty($slide->btn_2_text) && ! empty($slide->btn_2_url);
+                            @endphp
+                            @if($hasBtn1 || $hasBtn2)
+                                <div class="adv-hero-actions-group">
+                                    @if($hasBtn1)
+                                        <a href="{{ $slide->btn_1_url }}" class="adv-hero-real-btn adv-hero-btn-apply" title="{{ $slide->btn_1_text }}">
+                                            <span>{{ $slide->btn_1_text }}</span>
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    @endif
+                                    @if($hasBtn2)
+                                        <a href="{{ $slide->btn_2_url }}" class="adv-hero-real-btn adv-hero-btn-explore" title="{{ $slide->btn_2_text }}">
+                                            <span class="adv-hero-play-circle" aria-hidden="true">
+                                                <i class="fa-solid fa-play"></i>
+                                            </span>
+                                            <span>{{ $slide->btn_2_text }}</span>
+                                        </a>
+                                    @endif
+                                </div>
+                            @endif
                         </div>
 
                         <!-- Right Sky Script Tag Accent -->
