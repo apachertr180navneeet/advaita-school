@@ -30,15 +30,18 @@
                         <!-- Premium Hero Content Overlay (Text Rendered on Banner Image) -->
                         <div class="adv-hero-text-overlay">
                             <!-- Taglines: Title 1 and Title 2 -->
-                            <h1 class="adv-hero-taglines">
-                                <span class="tagline-white">{{ $slide->title_1 }}</span>
-                                @if($slide->title_2)
-                                    <span class="tagline-orange">{{ $slide->title_2 }}</span>
-                                @endif
-                            </h1>
-
-                            <!-- Orange Underline Accent Bar -->
-                            <div class="adv-hero-title-bar" aria-hidden="true"></div>
+                            @if($slide->title_1 || $slide->title_2)
+                                <h1 class="adv-hero-taglines">
+                                    @if($slide->title_1)
+                                        <span class="tagline-white">{{ $slide->title_1 }}</span>
+                                    @endif
+                                    @if($slide->title_2)
+                                        <span class="tagline-orange">{{ $slide->title_2 }}</span>
+                                    @endif
+                                </h1>
+                                <!-- Orange Underline Accent Bar -->
+                                <div class="adv-hero-title-bar" aria-hidden="true"></div>
+                            @endif
 
                             <!-- Descriptive Paragraph -->
                             @if($slide->description)

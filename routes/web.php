@@ -271,6 +271,80 @@ Route::get('/storage-link', function () {
 </html>");
 })->name('storage.link');
 
+// Server route: Run database migrations via browser
+Route::get('/run-migrations', function () {
+    $exitCode = null;
+    $artisanOutput = '';
+    $errorMessage = null;
+
+    try {
+        $exitCode = Artisan::call('migrate', ['--force' => true]);
+        $artisanOutput = trim(Artisan::output());
+    } catch (Throwable $e) {
+        $errorMessage = $e->getMessage();
+    }
+
+    $isSuccess = ($exitCode === 0 && ! $errorMessage);
+    $statusClass = $isSuccess ? 'success' : 'error';
+    $statusTitle = $isSuccess ? 'Success! Database Migrated' : 'Error: Migration Failed';
+    $statusDesc = $isSuccess
+        ? 'All pending database migrations have been successfully executed.'
+        : 'An error occurred while executing database migrations.';
+
+    $adminUrl = route('admin.dashboard');
+    $homeUrl = route('home');
+    $retryUrl = url('/run-migrations');
+
+    $logOutput = htmlspecialchars($artisanOutput ?: ($errorMessage ?: 'Nothing to migrate. Database is already up to date.'));
+
+    return response("<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Database Migrations - Advaita School</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0A192F; color: #E2E8F0; margin: 0; padding: 40px 20px; display: flex; justify-content: center; align-items: center; min-height: 100vh; box-sizing: border-box; }
+        .card { background: #112240; border-radius: 18px; border: 1px solid #233554; padding: 36px 32px; max-width: 680px; width: 100%; box-shadow: 0 20px 50px rgba(0,0,0,0.4); }
+        .badge { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 6px 14px; border-radius: 999px; margin-bottom: 18px; }
+        .badge.success { background: rgba(16, 185, 129, 0.15); color: #34D399; border: 1px solid rgba(16, 185, 129, 0.4); }
+        .badge.error { background: rgba(239, 68, 68, 0.15); color: #F87171; border: 1px solid rgba(239, 68, 68, 0.4); }
+        h1 { margin: 0 0 10px 0; font-size: 24px; color: #FFFFFF; font-weight: 800; }
+        p { color: #94A3B8; font-size: 14.5px; line-height: 1.6; margin: 0 0 20px 0; }
+        code, pre { font-family: Consolas, 'Fira Code', monospace; }
+        .log-box { background: #0B1329; border: 1px solid #1E293B; border-radius: 12px; padding: 18px 20px; margin-bottom: 24px; max-height: 320px; overflow-y: auto; }
+        .log-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #64748B; margin-bottom: 10px; }
+        pre { margin: 0; color: #38BDF8; font-size: 13px; line-height: 1.5; white-space: pre-wrap; word-break: break-all; }
+        .btn-group { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 11px 22px; border-radius: 10px; font-size: 14px; font-weight: 600; text-decoration: none; transition: all 0.2s ease; }
+        .btn-primary { background: #F37021; color: #FFFFFF; }
+        .btn-primary:hover { background: #e05e10; }
+        .btn-secondary { background: #1E293B; color: #E2E8F0; border: 1px solid #334155; }
+        .btn-secondary:hover { background: #334155; color: #FFFFFF; }
+    </style>
+</head>
+<body>
+    <div class='card'>
+        <div class='badge {$statusClass}'>● {$statusTitle}</div>
+        <h1>Database Migration Runner</h1>
+        <p>{$statusDesc}</p>
+        <div class='log-box'>
+            <div class='log-title'>Artisan Execution Output</div>
+            <pre>{$logOutput}</pre>
+        </div>
+        <div class='btn-group'>
+            <a href='{$adminUrl}' class='btn btn-primary'>&larr; Admin Dashboard</a>
+            <a href='{$homeUrl}' class='btn btn-secondary' target='_blank'>Open Homepage &rarr;</a>
+            <a href='{$retryUrl}' class='btn btn-secondary'>Run Again</a>
+        </div>
+    </div>
+</body>
+</html>");
+})->name('migrations.run');
+
+Route::get('/migrate', fn () => redirect()->route('migrations.run'));
+Route::get('/run-migration', fn () => redirect()->route('migrations.run'));
+
 // Server fallback: Serve public storage files when symlink is missing, broken, or unsupported
 Route::get('/storage/{path}', function (string $path) {
     if (str_contains($path, '..') || str_contains($path, '\\')) {

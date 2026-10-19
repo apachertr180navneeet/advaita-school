@@ -43,10 +43,10 @@
                 <!-- Title 1 -->
                 <div class="form-group">
                     <label class="form-label">
-                        Title 1 (Primary Headline) <span class="required">*</span>
+                        Title 1 (Primary Headline)
                         <span class="helper-hint">(Displayed in crisp white text)</span>
                     </label>
-                    <input type="text" name="title_1" class="form-control" value="{{ old('title_1', $slider->title_1) }}" required>
+                    <input type="text" name="title_1" class="form-control" value="{{ old('title_1', $slider->title_1) }}">
                 </div>
 
                 <!-- Title 2 -->

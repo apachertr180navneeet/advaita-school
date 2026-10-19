@@ -37,7 +37,7 @@ class SliderController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'title_1' => ['required', 'string', 'max:255'],
+            'title_1' => ['nullable', 'string', 'max:255'],
             'title_2' => ['nullable', 'string', 'max:255'],
             'description' => ['nullable', 'string'],
             'btn_1_text' => ['nullable', 'string', 'max:100'],
@@ -50,7 +50,7 @@ class SliderController extends Controller
         ]);
 
         $data = [
-            'title_1' => $validated['title_1'],
+            'title_1' => $validated['title_1'] ?? null,
             'title_2' => $validated['title_2'] ?? null,
             'description' => $validated['description'] ?? null,
             'btn_1_text' => $validated['btn_1_text'] ?? null,
@@ -91,7 +91,7 @@ class SliderController extends Controller
         $slider = Slider::findOrFail($id);
 
         $validated = $request->validate([
-            'title_1' => ['required', 'string', 'max:255'],
+            'title_1' => ['nullable', 'string', 'max:255'],
             'title_2' => ['nullable', 'string', 'max:255'],
             'description' => ['nullable', 'string'],
             'btn_1_text' => ['nullable', 'string', 'max:100'],
@@ -103,7 +103,7 @@ class SliderController extends Controller
             'is_active' => ['nullable', 'boolean'],
         ]);
 
-        $slider->title_1 = $validated['title_1'];
+        $slider->title_1 = $validated['title_1'] ?? null;
         $slider->title_2 = $validated['title_2'] ?? null;
         $slider->description = $validated['description'] ?? null;
         $slider->btn_1_text = $validated['btn_1_text'] ?? null;

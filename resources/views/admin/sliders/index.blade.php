@@ -67,7 +67,7 @@
                     <td>
                         <div class="thumb-wrapper">
                             <a href="{{ $slide->image_url }}" target="_blank" class="slide-thumb-img-box" title="View Full Image">
-                                <img src="{{ $slide->image_url }}" alt="{{ $slide->title_1 }}">
+                                <img src="{{ $slide->image_url }}" alt="{{ $slide->title_1 ?? 'Hero Slide' }}">
                             </a>
                             <div class="d-flex flex-wrap gap-4">
                                 @if($slide->image_dimensions)
@@ -86,9 +86,14 @@
 
                     <!-- Titles & Description -->
                     <td>
-                        <div class="slide-title-primary">{{ $slide->title_1 }}</div>
+                        @if($slide->title_1)
+                            <div class="slide-title-primary">{{ $slide->title_1 }}</div>
+                        @endif
                         @if($slide->title_2)
                             <div class="slide-title-secondary">{{ $slide->title_2 }}</div>
+                        @endif
+                        @if(!$slide->title_1 && !$slide->title_2)
+                            <span class="text-muted fs-13 fst-italic">(No title)</span>
                         @endif
                         @if($slide->description)
                             <div class="slide-desc-snippet">{{ $slide->description }}</div>

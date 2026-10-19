@@ -85,6 +85,26 @@ class SliderManagementTest extends TestCase
         ]);
     }
 
+    public function test_admin_can_create_slider_without_title_1(): void
+    {
+        $mainImage = UploadedFile::fake()->image('banner_no_title.jpg', 1920, 800);
+
+        $response = $this->actingAs($this->admin)->post(route('admin.sliders.store'), [
+            'title_1' => null,
+            'title_2' => 'Standalone Highlight',
+            'description' => 'A slide without primary title 1.',
+            'image' => $mainImage,
+            'order' => 1,
+            'is_active' => '1',
+        ]);
+
+        $response->assertRedirect(route('admin.sliders.index'));
+        $this->assertDatabaseHas('sliders', [
+            'title_1' => null,
+            'title_2' => 'Standalone Highlight',
+        ]);
+    }
+
     public function test_admin_can_update_existing_slider(): void
     {
         $slider = Slider::create([
@@ -108,6 +128,30 @@ class SliderManagementTest extends TestCase
             'title_1' => 'Updated Headline Title',
             'title_2' => 'Updated Subtitle',
             'order' => 2,
+        ]);
+    }
+
+    public function test_admin_can_update_slider_with_null_title_1(): void
+    {
+        $slider = Slider::create([
+            'title_1' => 'Has Title 1',
+            'image' => 'assets/images/hero-slider-campus.png',
+            'order' => 1,
+            'is_active' => true,
+        ]);
+
+        $response = $this->actingAs($this->admin)->put(route('admin.sliders.update', $slider->id), [
+            'title_1' => '',
+            'title_2' => 'Only Title 2',
+            'order' => 1,
+            'is_active' => '1',
+        ]);
+
+        $response->assertRedirect(route('admin.sliders.index'));
+        $this->assertDatabaseHas('sliders', [
+            'id' => $slider->id,
+            'title_1' => null,
+            'title_2' => 'Only Title 2',
         ]);
     }
 
@@ -186,5 +230,16 @@ class SliderManagementTest extends TestCase
 
         $response->assertStatus(200);
         $response->assertSee('Server Storage Link');
+    }
+
+    public function test_run_migrations_route_can_be_executed_from_web(): void
+    {
+        $response = $this->get('/run-migrations');
+
+        $response->assertStatus(200);
+        $response->assertSee('Database Migration Runner');
+
+        $redirect = $this->get('/migrate');
+        $redirect->assertRedirect(route('migrations.run'));
     }
 }
