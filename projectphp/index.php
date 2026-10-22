@@ -47,11 +47,11 @@ require_once __DIR__.'/includes/header.php';
 
                             <!-- 4. Interactive CTA Action Buttons -->
                             <div class="adv-hero-actions-group">
-                                <a href="#admissions" class="adv-hero-real-btn adv-hero-btn-apply" title="Apply for Admission">
+                                <a href="online-registration.php" class="adv-hero-real-btn adv-hero-btn-apply" title="Apply for Admission">
                                     <span>Apply for Admission</span>
                                     <i class="fa-solid fa-arrow-right"></i>
                                 </a>
-                                <a href="#about" class="adv-hero-real-btn adv-hero-btn-explore" title="Explore Our School">
+                                <a href="about-us.php" class="adv-hero-real-btn adv-hero-btn-explore" title="Explore Our School">
                                     <span class="adv-hero-play-circle" aria-hidden="true">
                                         <i class="fa-solid fa-play"></i>
                                     </span>
@@ -103,11 +103,11 @@ require_once __DIR__.'/includes/header.php';
 
     <!-- Mobile Quick Action CTA Bar (Visible on Mobile & Tablet) -->
     <div class="adv-mobile-hero-cta-bar">
-        <a href="#admissions" class="adv-mobile-hero-btn primary">
+        <a href="online-registration.php" class="adv-mobile-hero-btn primary">
             <i class="fa-solid fa-paper-plane"></i>
             <span>Apply for Admission</span>
         </a>
-        <a href="#about" class="adv-mobile-hero-btn secondary">
+        <a href="about-us.php" class="adv-mobile-hero-btn secondary">
             <i class="fa-solid fa-compass"></i>
             <span>Explore Our School</span>
         </a>

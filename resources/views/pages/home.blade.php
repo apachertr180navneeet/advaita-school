@@ -52,19 +52,27 @@
 
                             <!-- Interactive CTA Action Buttons -->
                             @php
-                                $hasBtn1 = ! empty($slide->btn_1_text) && ! empty($slide->btn_1_url);
-                                $hasBtn2 = ! empty($slide->btn_2_text) && ! empty($slide->btn_2_url);
+                                $hasBtn1 = ! empty($slide->btn_1_text);
+                                $hasBtn2 = ! empty($slide->btn_2_text);
+                                $btn1Url = $slide->btn_1_url;
+                                if (empty($btn1Url) || $btn1Url === '#admissions' || $btn1Url === '#') {
+                                    $btn1Url = route('online-registration');
+                                }
+                                $btn2Url = $slide->btn_2_url;
+                                if (empty($btn2Url) || $btn2Url === '#about' || $btn2Url === '#') {
+                                    $btn2Url = route('about-us');
+                                }
                             @endphp
                             @if($hasBtn1 || $hasBtn2)
                                 <div class="adv-hero-actions-group">
                                     @if($hasBtn1)
-                                        <a href="{{ $slide->btn_1_url }}" class="adv-hero-real-btn adv-hero-btn-apply" title="{{ $slide->btn_1_text }}">
+                                        <a href="{{ $btn1Url }}" class="adv-hero-real-btn adv-hero-btn-apply" title="{{ $slide->btn_1_text }}">
                                             <span>{{ $slide->btn_1_text }}</span>
                                             <i class="fa-solid fa-arrow-right"></i>
                                         </a>
                                     @endif
                                     @if($hasBtn2)
-                                        <a href="{{ $slide->btn_2_url }}" class="adv-hero-real-btn adv-hero-btn-explore" title="{{ $slide->btn_2_text }}">
+                                        <a href="{{ $btn2Url }}" class="adv-hero-real-btn adv-hero-btn-explore" title="{{ $slide->btn_2_text }}">
                                             <span class="adv-hero-play-circle" aria-hidden="true">
                                                 <i class="fa-solid fa-play"></i>
                                             </span>
@@ -105,11 +113,11 @@
                                 Where knowledge meets values, creativity meets opportunity, and every child is encouraged to discover their true potential.
                             </p>
                             <div class="adv-hero-actions-group">
-                                <a href="#admissions" class="adv-hero-real-btn adv-hero-btn-apply" title="Apply for Admission">
+                                <a href="{{ route('online-registration') }}" class="adv-hero-real-btn adv-hero-btn-apply" title="Apply for Admission">
                                     <span>Apply for Admission</span>
                                     <i class="fa-solid fa-arrow-right"></i>
                                 </a>
-                                <a href="#about" class="adv-hero-real-btn adv-hero-btn-explore" title="Explore Our School">
+                                <a href="{{ route('about-us') }}" class="adv-hero-real-btn adv-hero-btn-explore" title="Explore Our School">
                                     <span class="adv-hero-play-circle" aria-hidden="true">
                                         <i class="fa-solid fa-play"></i>
                                     </span>
@@ -154,11 +162,11 @@
 
     <!-- Mobile Quick Action CTA Bar (Visible on Mobile & Tablet) -->
     <div class="adv-mobile-hero-cta-bar">
-        <a href="#admissions" class="adv-mobile-hero-btn primary">
+        <a href="{{ route('online-registration') }}" class="adv-mobile-hero-btn primary">
             <i class="fa-solid fa-paper-plane"></i>
             <span>Apply for Admission</span>
         </a>
-        <a href="#about" class="adv-mobile-hero-btn secondary">
+        <a href="{{ route('about-us') }}" class="adv-mobile-hero-btn secondary">
             <i class="fa-solid fa-compass"></i>
             <span>Explore Our School</span>
         </a>
