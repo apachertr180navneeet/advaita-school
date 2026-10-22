@@ -468,13 +468,13 @@ require_once __DIR__.'/includes/header.php';
                 <!-- Buttons -->
                 <div class="buttons">
                     <!-- Enrol Button -->
-                    <a href="index.php#admissions" class="btn-enrol">
+                    <a href="contact.php" class="btn-enrol">
                         <span>Enquire Now</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
 
                     <!-- School Visit -->
-                    <a href="index.php#contact" class="btn-visit">
+                    <a href="contact.php" class="btn-visit">
                         <i class="fa-regular fa-calendar-days"></i>
                         <span>Schedule a Campus Visit</span>
                     </a>

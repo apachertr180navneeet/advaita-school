@@ -734,6 +734,186 @@ body.adv-drawer-open {
 }
 
 /* --------------------------------------------------------------------------
+   Mega Dropdown for Programmes
+   -------------------------------------------------------------------------- */
+.adv-dropdown-programmes {
+    min-width: 620px;
+    padding: 16px 18px;
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+}
+
+.adv-nav-item:hover .adv-dropdown-programmes,
+.adv-nav-item.is-open .adv-dropdown-programmes {
+    transform: translateX(-50%) translateY(0);
+}
+
+.adv-dropdown-programmes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1px 1.25fr;
+    gap: 16px;
+    align-items: stretch;
+}
+
+.adv-prog-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.adv-prog-group-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4px 10px 4px;
+    border-bottom: 2px solid #f1f5f9;
+    margin-bottom: 8px;
+}
+
+.adv-prog-group-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8125rem;
+    font-weight: 800;
+    color: #083b7a;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.adv-prog-group-title:hover {
+    color: var(--adv-accent-orange);
+}
+
+.adv-prog-group-title i {
+    font-size: 0.95rem;
+    color: var(--adv-accent-orange);
+}
+
+.adv-prog-group-viewall {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #f37021;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.adv-prog-group-viewall:hover {
+    transform: translateX(2px);
+    text-decoration: underline;
+}
+
+.adv-prog-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.adv-prog-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.adv-prog-item:hover,
+.adv-prog-item:focus {
+    background-color: #f0f6ff;
+    transform: translateX(3px);
+}
+
+.adv-prog-item.active {
+    background-color: #fff7ed;
+    border-left: 3px solid #f37021;
+}
+
+.adv-prog-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.adv-prog-item:hover .adv-prog-icon {
+    transform: scale(1.08);
+}
+
+.adv-prog-icon.icon-peach { background: #ffe4e6; color: #e11d48; }
+.adv-prog-icon.icon-blue { background: #e0f2fe; color: #0284c7; }
+.adv-prog-icon.icon-purple { background: #f3e8ff; color: #9333ea; }
+.adv-prog-icon.icon-gold { background: #fef3c7; color: #d97706; }
+.adv-prog-icon.icon-green { background: #dcfce7; color: #16a34a; }
+.adv-prog-icon.icon-orange { background: #ffedd5; color: #ea580c; }
+.adv-prog-icon.icon-teal { background: #ccfbf1; color: #0d9488; }
+
+.adv-prog-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.adv-prog-name {
+    font-size: 0.84375rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.25;
+}
+
+.adv-prog-item:hover .adv-prog-name {
+    color: #083b7a;
+}
+
+.adv-prog-meta {
+    font-size: 0.71875rem;
+    color: #64748b;
+    line-height: 1.2;
+}
+
+.adv-prog-divider {
+    background-color: #e2e8f0;
+    width: 1px;
+    margin: 4px 0;
+}
+
+/* Mobile sub-headers in drawer */
+.adv-mobile-subgroup-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px 4px 14px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #083b7a;
+    background: transparent;
+}
+
+.adv-mobile-viewall-link {
+    font-weight: 700 !important;
+    color: #ea580c !important;
+    border-top: 1px dashed #e2e8f0;
+    margin-top: 4px;
+    padding-top: 8px !important;
+}
+
+.mt-12 {
+    margin-top: 12px !important;
+}
+
+/* --------------------------------------------------------------------------
    Tablet & Mobile Controls (Navbar Right on Tablet/Mobile)
    -------------------------------------------------------------------------- */
 .adv-mobile-actions {
@@ -1014,7 +1194,7 @@ body.adv-drawer-open {
 }
 
 .adv-mobile-submenu.is-expanded {
-    max-height: 500px;
+    max-height: 900px;
     transition: max-height 0.4s ease-in;
 }
 

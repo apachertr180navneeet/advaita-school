@@ -477,13 +477,13 @@
                 <!-- Buttons -->
                 <div class="buttons">
                     <!-- Enrol Button -->
-                    <a href="{{ route('home') }}#admissions" class="btn-enrol">
+                    <a href="{{ route('contact') }}" class="btn-enrol">
                         <span>Enquire Now</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
 
                     <!-- School Visit -->
-                    <a href="{{ route('home') }}#contact" class="btn-visit">
+                    <a href="{{ route('contact') }}" class="btn-visit">
                         <i class="fa-regular fa-calendar-days"></i>
                         <span>Schedule a Campus Visit</span>
                     </a>

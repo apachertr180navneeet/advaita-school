@@ -192,16 +192,20 @@ body.adv-drawer-open {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
 }
 
 @keyframes preloaderAuraPulse {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(0.94);
         opacity: 0.45;
     }
+
     50% {
         transform: scale(1.1);
         opacity: 0.85;
@@ -209,9 +213,12 @@ body.adv-drawer-open {
 }
 
 @keyframes preloaderEmblemBreathe {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
     }
+
     50% {
         transform: scale(1.03);
     }
@@ -222,10 +229,12 @@ body.adv-drawer-open {
         left: -40%;
         width: 30%;
     }
+
     50% {
         left: 35%;
         width: 50%;
     }
+
     100% {
         left: 100%;
         width: 30%;
@@ -993,13 +1002,13 @@ body.adv-drawer-open {
     color: var(--adv-primary);
 }
 
-.adv-mobile-item.active > .adv-mobile-link {
+.adv-mobile-item.active>.adv-mobile-link {
     color: var(--adv-accent-orange);
     background-color: #fff7ed;
     font-weight: 700;
 }
 
-.adv-mobile-item.active > .adv-mobile-link .adv-mobile-link-text i {
+.adv-mobile-item.active>.adv-mobile-link .adv-mobile-link-text i {
     color: var(--adv-accent-orange);
 }
 
