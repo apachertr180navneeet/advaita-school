@@ -53,14 +53,14 @@
                     </p>
 
                     <div class="about-hero-actions">
-                        <a href="{{ route('home') }}#admissions" class="about-btn-orange">
+                        <a href="{{ route('online-registration') }}" class="about-btn-orange">
                             <span>Book a Campus Visit</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
-                        <a href="#vision-mission" class="about-btn-vision">
+                        <!-- <a href="{{ route('vision-mission') }}" class="about-btn-vision">
                             <span class="vision-play-circle"><i class="fa-solid fa-play"></i></span>
                             <span>Our Vision</span>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
 

@@ -61,11 +61,11 @@ require_once __DIR__.'/includes/header.php';
                     </p>
 
                     <div class="about-hero-actions">
-                        <a href="index.php#admissions" class="about-btn-orange">
+                        <a href="online-registration.php" class="about-btn-orange">
                             <span>Book a Campus Visit</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
-                        <a href="#vision-mission" class="about-btn-vision">
+                        <a href="vision-mission.php" class="about-btn-vision">
                             <span class="vision-play-circle"><i class="fa-solid fa-play"></i></span>
                             <span>Our Vision</span>
                         </a>
