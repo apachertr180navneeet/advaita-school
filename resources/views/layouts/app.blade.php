@@ -35,7 +35,7 @@
     
     <!-- Core Stylesheets -->
     <link rel="stylesheet" href="{{ asset('assets/css/header.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/slider.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/slider.css') }}?v={{ file_exists(public_path('assets/css/slider.css')) ? filemtime(public_path('assets/css/slider.css')) : '1.0' }}">
     <link rel="stylesheet" href="{{ asset('assets/css/homepage.css') }}?v={{ file_exists(public_path('assets/css/homepage.css')) ? filemtime(public_path('assets/css/homepage.css')) : '1.0' }}">
     <link rel="stylesheet" href="{{ asset('assets/css/inner-pages.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
