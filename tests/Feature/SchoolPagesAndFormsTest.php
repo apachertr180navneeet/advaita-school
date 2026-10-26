@@ -24,6 +24,7 @@ class SchoolPagesAndFormsTest extends TestCase
             '/academics/secondary',
             '/results',
             '/admission-info',
+            '/admission-guidelines',
             '/fee-structure',
             '/online-registration',
             '/facilities',

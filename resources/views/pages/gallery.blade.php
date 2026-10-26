@@ -71,8 +71,7 @@
 
     <!-- =========================================================================
          2. CATEGORY FILTER ROW: 9 Rounded Pill Cards
-         ========================================================================= -->
-    <section class="adv-gal-categories-section">
+         ========================================================================= --    <section class="adv-gal-categories-section">
         <div class="adv-gal-container">
             <div class="adv-gal-filters-scroll" role="tablist" aria-label="Gallery category filter">
                 <!-- 1. All Photos -->
@@ -83,68 +82,76 @@
                     <span class="cat-name">All Photos</span>
                 </button>
 
-                <!-- 2. Academic Activities -->
-                <button type="button" class="adv-gal-cat-btn" data-category="academic" role="tab" aria-selected="false">
+                <!-- 2. Life at Advaita -->
+                <button type="button" class="adv-gal-cat-btn" data-category="life-at-advaita" role="tab" aria-selected="false">
                     <div class="cat-icon-badge">
-                        <i class="fa-solid fa-graduation-cap"></i>
+                        <i class="fa-solid fa-school-flag"></i>
                     </div>
-                    <span class="cat-name">Academic<br>Activities</span>
+                    <span class="cat-name">Life at<br>Advaita</span>
                 </button>
 
                 <!-- 3. Events & Celebrations -->
-                <button type="button" class="adv-gal-cat-btn" data-category="events" role="tab" aria-selected="false">
+                <button type="button" class="adv-gal-cat-btn" data-category="events-celebrations" role="tab" aria-selected="false">
                     <div class="cat-icon-badge">
-                        <i class="fa-solid fa-trophy"></i>
+                        <i class="fa-solid fa-cake-candles"></i>
                     </div>
                     <span class="cat-name">Events &amp;<br>Celebrations</span>
                 </button>
 
-                <!-- 4. Sports & Games -->
-                <button type="button" class="adv-gal-cat-btn" data-category="sports" role="tab" aria-selected="false">
+                <!-- 4. Academics and Science Activities -->
+                <button type="button" class="adv-gal-cat-btn" data-category="academics-science" role="tab" aria-selected="false">
                     <div class="cat-icon-badge">
-                        <i class="fa-solid fa-volleyball"></i>
+                        <i class="fa-solid fa-flask-vial"></i>
                     </div>
-                    <span class="cat-name">Sports &amp;<br>Games</span>
+                    <span class="cat-name">Academics &amp;<br>Science</span>
                 </button>
 
-                <!-- 5. Arts & Culture -->
-                <button type="button" class="adv-gal-cat-btn" data-category="arts" role="tab" aria-selected="false">
+                <!-- 5. Educational Tours & Excursions -->
+                <button type="button" class="adv-gal-cat-btn" data-category="educational-tours" role="tab" aria-selected="false">
                     <div class="cat-icon-badge">
-                        <i class="fa-solid fa-masks-theater"></i>
+                        <i class="fa-solid fa-bus-simple"></i>
                     </div>
-                    <span class="cat-name">Arts &amp;<br>Culture</span>
+                    <span class="cat-name">Tours &amp;<br>Excursions</span>
                 </button>
 
-                <!-- 6. Student Life -->
-                <button type="button" class="adv-gal-cat-btn" data-category="student-life" role="tab" aria-selected="false">
+                <!-- 6. Sports & Competitions -->
+                <button type="button" class="adv-gal-cat-btn" data-category="sports-competitions" role="tab" aria-selected="false">
                     <div class="cat-icon-badge">
-                        <i class="fa-solid fa-users"></i>
+                        <i class="fa-solid fa-trophy"></i>
                     </div>
-                    <span class="cat-name">Student<br>Life</span>
+                    <span class="cat-name">Sports &amp;<br>Competitions</span>
                 </button>
 
-                <!-- 7. Campus Infrastructure -->
-                <button type="button" class="adv-gal-cat-btn" data-category="infrastructure" role="tab" aria-selected="false">
+                <!-- 7. Student Leadership & Achievements -->
+                <button type="button" class="adv-gal-cat-btn" data-category="student-leadership" role="tab" aria-selected="false">
                     <div class="cat-icon-badge">
-                        <i class="fa-solid fa-school"></i>
+                        <i class="fa-solid fa-award"></i>
                     </div>
-                    <span class="cat-name">Campus<br>Infrastructure</span>
+                    <span class="cat-name">Leadership &amp;<br>Achievements</span>
                 </button>
 
-                <!-- 8. Workshops & Competitions -->
-                <button type="button" class="adv-gal-cat-btn" data-category="workshops" role="tab" aria-selected="false">
+                <!-- 8. Art, Culture & Creativity -->
+                <button type="button" class="adv-gal-cat-btn" data-category="art-culture" role="tab" aria-selected="false">
                     <div class="cat-icon-badge">
-                        <i class="fa-solid fa-flask"></i>
+                        <i class="fa-solid fa-palette"></i>
                     </div>
-                    <span class="cat-name">Workshops &amp;<br>Competitions</span>
+                    <span class="cat-name">Art, Culture<br>&amp; Creativity</span>
                 </button>
 
-                <!-- 9. Community Outreach -->
-                <button type="button" class="adv-gal-cat-btn" data-category="outreach" role="tab" aria-selected="false">
+                <!-- 9. Advaita Kids -->
+                <button type="button" class="adv-gal-cat-btn" data-category="advaita-kids" role="tab" aria-selected="false">
                     <div class="cat-icon-badge">
-                        <i class="fa-solid fa-hand-holding-heart"></i>
+                        <i class="fa-solid fa-child-reaching"></i>
                     </div>
-                    <span class="cat-name">Community<br>Outreach</span>
+                    <span class="cat-name">Advaita<br>Kids</span>
+                </button>
+
+                <!-- 10. Campus & Facilities -->
+                <button type="button" class="adv-gal-cat-btn" data-category="campus-facilities" role="tab" aria-selected="false">
+                    <div class="cat-icon-badge">
+                        <i class="fa-solid fa-landmark"></i>
+                    </div>
+                    <span class="cat-name">Campus &amp;<br>Facilities</span>
                 </button>
             </div>
         </div>
@@ -179,40 +186,90 @@
     </section>
 
     <!-- =========================================================================
-         4. GALLERY GRID: 12 ALBUM CARDS (4 COLUMNS)
+         4. GALLERY GRID: 27 CURATED ALBUM CARDS ACROSS 9 CATEGORIES
          ========================================================================= -->
     <section class="adv-gal-grid-section" id="advGalleryGridSection">
         <div class="adv-gal-container">
             <div class="adv-gal-grid" id="advGalleryGrid">
 
-                <!-- Card 1: Academic Activities (Math Lab) -->
-                <article class="adv-gal-card" data-category="academic" data-title="Mathematics & Practical Labs" data-count="38" data-index="1">
+                <!-- ================= LIFE AT ADVAITA ================= -->
+                <!-- Card 1: Life at Advaita (Assembly) -->
+                <article class="adv-gal-card" data-category="life-at-advaita" data-title="Morning Assembly & Daily Rhythm" data-count="36" data-index="1">
                     <div class="adv-gal-card-thumb">
-                        <img src="{{ asset('assets/images/gallery/gallery-math-science-lab.jpg') }}" alt="Mathematics & Practical Labs" loading="lazy">
+                        <img src="{{ asset('assets/images/gallery-assembly.jpg') }}" alt="Morning Assembly & Daily Rhythm" loading="lazy">
                         <div class="adv-gal-card-overlay">
                             <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
                         </div>
                     </div>
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
-                            <div class="adv-gal-card-icon gal-theme-red">
-                                <i class="fa-solid fa-flask-vial"></i>
+                            <div class="adv-gal-card-icon gal-theme-blue">
+                                <i class="fa-solid fa-school-flag"></i>
                             </div>
                             <div class="adv-gal-card-text">
-                                <h3 class="adv-gal-card-title">Math &amp; Practical Labs</h3>
-                                <span class="adv-gal-card-count">38 Photos</span>
+                                <h3 class="adv-gal-card-title">Morning Assembly &amp; Life</h3>
+                                <span class="adv-gal-card-count">36 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-red" aria-label="View Mathematics & Practical Labs">
+                        <button type="button" class="adv-gal-card-btn gal-theme-blue" aria-label="View Morning Assembly & Daily Rhythm">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
                 </article>
 
-                <!-- Card 2: Events & Celebrations (Band) -->
-                <article class="adv-gal-card" data-category="events" data-title="School Band & Assembly Events" data-count="45" data-index="2">
+                <!-- Card 2: Life at Advaita (Campus Lawn Parachute) -->
+                <article class="adv-gal-card" data-category="life-at-advaita" data-title="Lawn Harmony & Campus Bonding" data-count="28" data-index="2">
                     <div class="adv-gal-card-thumb">
-                        <img src="{{ asset('assets/images/gallery/gallery-school-band.jpg') }}" alt="School Band & Assembly Events" loading="lazy">
+                        <img src="{{ asset('assets/images/gallery/gallery-parachute-lawn-building.jpg') }}" alt="Lawn Harmony & Campus Bonding" loading="lazy">
+                        <div class="adv-gal-card-overlay">
+                            <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
+                        </div>
+                    </div>
+                    <div class="adv-gal-card-info">
+                        <div class="adv-gal-card-meta">
+                            <div class="adv-gal-card-icon gal-theme-indigo">
+                                <i class="fa-solid fa-users"></i>
+                            </div>
+                            <div class="adv-gal-card-text">
+                                <h3 class="adv-gal-card-title">Campus Lawn Community</h3>
+                                <span class="adv-gal-card-count">28 Photos</span>
+                            </div>
+                        </div>
+                        <button type="button" class="adv-gal-card-btn gal-theme-indigo" aria-label="View Lawn Harmony & Campus Bonding">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 3: Life at Advaita (Day One) -->
+                <article class="adv-gal-card" data-category="life-at-advaita" data-title="Day One & Welcome Celebrations" data-count="24" data-index="3">
+                    <div class="adv-gal-card-thumb">
+                        <img src="{{ asset('assets/images/gallery-day-1.jpg') }}" alt="Day One & Welcome Celebrations" loading="lazy">
+                        <div class="adv-gal-card-overlay">
+                            <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
+                        </div>
+                    </div>
+                    <div class="adv-gal-card-info">
+                        <div class="adv-gal-card-meta">
+                            <div class="adv-gal-card-icon gal-theme-amber">
+                                <i class="fa-solid fa-sun"></i>
+                            </div>
+                            <div class="adv-gal-card-text">
+                                <h3 class="adv-gal-card-title">Day One Celebrations</h3>
+                                <span class="adv-gal-card-count">24 Photos</span>
+                            </div>
+                        </div>
+                        <button type="button" class="adv-gal-card-btn gal-theme-amber" aria-label="View Day One & Welcome Celebrations">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- ================= EVENTS & CELEBRATIONS ================= -->
+                <!-- Card 4: Events & Celebrations (Band) -->
+                <article class="adv-gal-card" data-category="events-celebrations" data-title="School Marching Band & Ceremonies" data-count="45" data-index="4">
+                    <div class="adv-gal-card-thumb">
+                        <img src="{{ asset('assets/images/gallery/gallery-school-band.jpg') }}" alt="School Marching Band & Ceremonies" loading="lazy">
                         <div class="adv-gal-card-overlay">
                             <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
                         </div>
@@ -223,20 +280,191 @@
                                 <i class="fa-solid fa-drum"></i>
                             </div>
                             <div class="adv-gal-card-text">
-                                <h3 class="adv-gal-card-title">School Band &amp; Events</h3>
+                                <h3 class="adv-gal-card-title">School Marching Band</h3>
                                 <span class="adv-gal-card-count">45 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-orange" aria-label="View School Band & Assembly Events">
+                        <button type="button" class="adv-gal-card-btn gal-theme-orange" aria-label="View School Marching Band & Ceremonies">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
                 </article>
 
-                <!-- Card 3: Sports & Games (Football Match) -->
-                <article class="adv-gal-card" data-category="sports" data-title="Football League & Athletic Action" data-count="34" data-index="3">
+                <!-- Card 5: Events & Celebrations (Cultural Fest) -->
+                <article class="adv-gal-card" data-category="events-celebrations" data-title="Annual Cultural Fest & Drama" data-count="52" data-index="5">
                     <div class="adv-gal-card-thumb">
-                        <img src="{{ asset('assets/images/gallery/gallery-football-match-sprint.jpg') }}" alt="Football League & Athletic Action" loading="lazy">
+                        <img src="{{ asset('assets/images/gallery/cultural.jpg') }}" alt="Annual Cultural Fest & Drama" loading="lazy">
+                        <div class="adv-gal-card-overlay">
+                            <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
+                        </div>
+                    </div>
+                    <div class="adv-gal-card-info">
+                        <div class="adv-gal-card-meta">
+                            <div class="adv-gal-card-icon gal-theme-pink">
+                                <i class="fa-solid fa-cake-candles"></i>
+                            </div>
+                            <div class="adv-gal-card-text">
+                                <h3 class="adv-gal-card-title">Annual Cultural Fest</h3>
+                                <span class="adv-gal-card-count">52 Photos</span>
+                            </div>
+                        </div>
+                        <button type="button" class="adv-gal-card-btn gal-theme-pink" aria-label="View Annual Cultural Fest & Drama">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 6: Events & Celebrations (Folk Dance) -->
+                <article class="adv-gal-card" data-category="events-celebrations" data-title="Classical & Folk Dance Fest" data-count="38" data-index="6">
+                    <div class="adv-gal-card-thumb">
+                        <img src="{{ asset('assets/images/gallery/dance.jpg') }}" alt="Classical & Folk Dance Fest" loading="lazy">
+                        <div class="adv-gal-card-overlay">
+                            <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
+                        </div>
+                    </div>
+                    <div class="adv-gal-card-info">
+                        <div class="adv-gal-card-meta">
+                            <div class="adv-gal-card-icon gal-theme-purple">
+                                <i class="fa-solid fa-masks-theater"></i>
+                            </div>
+                            <div class="adv-gal-card-text">
+                                <h3 class="adv-gal-card-title">Classical &amp; Folk Dance</h3>
+                                <span class="adv-gal-card-count">38 Photos</span>
+                            </div>
+                        </div>
+                        <button type="button" class="adv-gal-card-btn gal-theme-purple" aria-label="View Classical & Folk Dance Fest">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- ================= ACADEMICS AND SCIENCE ACTIVITIES ================= -->
+                <!-- Card 7: Academics and Science (Math & Science Lab) -->
+                <article class="adv-gal-card" data-category="academics-science" data-title="Science & Mathematics Practical Labs" data-count="42" data-index="7">
+                    <div class="adv-gal-card-thumb">
+                        <img src="{{ asset('assets/images/gallery/gallery-math-science-lab.jpg') }}" alt="Science & Mathematics Practical Labs" loading="lazy">
+                        <div class="adv-gal-card-overlay">
+                            <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
+                        </div>
+                    </div>
+                    <div class="adv-gal-card-info">
+                        <div class="adv-gal-card-meta">
+                            <div class="adv-gal-card-icon gal-theme-red">
+                                <i class="fa-solid fa-flask-vial"></i>
+                            </div>
+                            <div class="adv-gal-card-text">
+                                <h3 class="adv-gal-card-title">Science &amp; Practical Labs</h3>
+                                <span class="adv-gal-card-count">42 Photos</span>
+                            </div>
+                        </div>
+                        <button type="button" class="adv-gal-card-btn gal-theme-red" aria-label="View Science & Mathematics Practical Labs">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 8: Academics and Science (Smart Classroom) -->
+                <article class="adv-gal-card" data-category="academics-science" data-title="Interactive Smart Classroom Learning" data-count="34" data-index="8">
+                    <div class="adv-gal-card-thumb">
+                        <img src="{{ asset('assets/images/gallery/gallery-classroom-learning.jpg') }}" alt="Interactive Smart Classroom Learning" loading="lazy">
+                        <div class="adv-gal-card-overlay">
+                            <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
+                        </div>
+                    </div>
+                    <div class="adv-gal-card-info">
+                        <div class="adv-gal-card-meta">
+                            <div class="adv-gal-card-icon gal-theme-orange-dark">
+                                <i class="fa-solid fa-chalkboard-user"></i>
+                            </div>
+                            <div class="adv-gal-card-text">
+                                <h3 class="adv-gal-card-title">Interactive Smart Class</h3>
+                                <span class="adv-gal-card-count">34 Photos</span>
+                            </div>
+                        </div>
+                        <button type="button" class="adv-gal-card-btn gal-theme-orange-dark" aria-label="View Interactive Smart Classroom Learning">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 9: Academics and Science (Robotics Lab) -->
+                <article class="adv-gal-card" data-category="academics-science" data-title="Robotics & STEAM Innovation Lab" data-count="30" data-index="9">
+                    <div class="adv-gal-card-thumb">
+                        <img src="{{ asset('assets/images/gallery/robotics-lab.png') }}" alt="Robotics & STEAM Innovation Lab" loading="lazy">
+                        <div class="adv-gal-card-overlay">
+                            <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
+                        </div>
+                    </div>
+                    <div class="adv-gal-card-info">
+                        <div class="adv-gal-card-meta">
+                            <div class="adv-gal-card-icon gal-theme-sky">
+                                <i class="fa-solid fa-microchip"></i>
+                            </div>
+                            <div class="adv-gal-card-text">
+                                <h3 class="adv-gal-card-title">Robotics &amp; STEAM Lab</h3>
+                                <span class="adv-gal-card-count">30 Photos</span>
+                            </div>
+                        </div>
+                        <button type="button" class="adv-gal-card-btn gal-theme-sky" aria-label="View Robotics & STEAM Innovation Lab">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- ================= EDUCATIONAL TOURS & EXCURSIONS ================= -->
+                <!-- Card 10: Educational Tours (Historical Field Trip) -->
+                <article class="adv-gal-card" data-category="educational-tours" data-title="Heritage & Science Museum Excursions" data-count="33" data-index="10">
+                    <div class="adv-gal-card-thumb">
+                        <img src="{{ asset('assets/images/gallery/educational-tour.jpg') }}" alt="Heritage & Science Museum Excursions" loading="lazy">
+                        <div class="adv-gal-card-overlay">
+                            <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
+                        </div>
+                    </div>
+                    <div class="adv-gal-card-info">
+                        <div class="adv-gal-card-meta">
+                            <div class="adv-gal-card-icon gal-theme-teal">
+                                <i class="fa-solid fa-bus-simple"></i>
+                            </div>
+                            <div class="adv-gal-card-text">
+                                <h3 class="adv-gal-card-title">Heritage Study Excursions</h3>
+                                <span class="adv-gal-card-count">33 Photos</span>
+                            </div>
+                        </div>
+                        <button type="button" class="adv-gal-card-btn gal-theme-teal" aria-label="View Heritage & Science Museum Excursions">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 11: Educational Tours (Nature & Ecology Outings) -->
+                <article class="adv-gal-card" data-category="educational-tours" data-title="Environmental Field Study & Outings" data-count="25" data-index="11">
+                    <div class="adv-gal-card-thumb">
+                        <img src="{{ asset('assets/images/gallery/student-life.jpg') }}" alt="Environmental Field Study & Outings" loading="lazy">
+                        <div class="adv-gal-card-overlay">
+                            <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
+                        </div>
+                    </div>
+                    <div class="adv-gal-card-info">
+                        <div class="adv-gal-card-meta">
+                            <div class="adv-gal-card-icon gal-theme-emerald">
+                                <i class="fa-solid fa-compass"></i>
+                            </div>
+                            <div class="adv-gal-card-text">
+                                <h3 class="adv-gal-card-title">Environmental Field Study</h3>
+                                <span class="adv-gal-card-count">25 Photos</span>
+                            </div>
+                        </div>
+                        <button type="button" class="adv-gal-card-btn gal-theme-emerald" aria-label="View Environmental Field Study & Outings">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- ================= SPORTS & COMPETITIONS ================= -->
+                <!-- Card 12: Sports & Competitions (Football Championship) -->
+                <article class="adv-gal-card" data-category="sports-competitions" data-title="Football Championship & Turf Sprint" data-count="40" data-index="12">
+                    <div class="adv-gal-card-thumb">
+                        <img src="{{ asset('assets/images/gallery/gallery-football-match-sprint.jpg') }}" alt="Football Championship & Turf Sprint" loading="lazy">
                         <div class="adv-gal-card-overlay">
                             <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
                         </div>
@@ -247,20 +475,142 @@
                                 <i class="fa-solid fa-futbol"></i>
                             </div>
                             <div class="adv-gal-card-text">
-                                <h3 class="adv-gal-card-title">Football Turf Action</h3>
-                                <span class="adv-gal-card-count">34 Photos</span>
+                                <h3 class="adv-gal-card-title">Football Championship Turf</h3>
+                                <span class="adv-gal-card-count">40 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-green" aria-label="View Football League & Athletic Action">
+                        <button type="button" class="adv-gal-card-btn gal-theme-green" aria-label="View Football Championship & Turf Sprint">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
                 </article>
 
-                <!-- Card 4: Arts & Culture (Art Studio Origami Planes) -->
-                <article class="adv-gal-card" data-category="arts" data-title="Art Studio & Origami Craft" data-count="42" data-index="4">
+                <!-- Card 13: Sports & Competitions (Sports Field) -->
+                <article class="adv-gal-card" data-category="sports-competitions" data-title="Campus Sports Ground & Athletics" data-count="35" data-index="13">
                     <div class="adv-gal-card-thumb">
-                        <img src="{{ asset('assets/images/gallery/gallery-art-studio-origami-planes.jpg') }}" alt="Art Studio & Origami Craft" loading="lazy">
+                        <img src="{{ asset('assets/images/gallery/gallery-sports-field-agility.jpg') }}" alt="Campus Sports Ground & Athletics" loading="lazy">
+                        <div class="adv-gal-card-overlay">
+                            <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
+                        </div>
+                    </div>
+                    <div class="adv-gal-card-info">
+                        <div class="adv-gal-card-meta">
+                            <div class="adv-gal-card-icon gal-theme-forest">
+                                <i class="fa-solid fa-trophy"></i>
+                            </div>
+                            <div class="adv-gal-card-text">
+                                <h3 class="adv-gal-card-title">Sports Arena &amp; Athletics</h3>
+                                <span class="adv-gal-card-count">35 Photos</span>
+                            </div>
+                        </div>
+                        <button type="button" class="adv-gal-card-btn gal-theme-forest" aria-label="View Campus Sports Ground & Athletics">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 14: Sports & Competitions (Gymnastics) -->
+                <article class="adv-gal-card" data-category="sports-competitions" data-title="Gymnastics, Cartwheels & Tumbling" data-count="29" data-index="14">
+                    <div class="adv-gal-card-thumb">
+                        <img src="{{ asset('assets/images/gallery/gallery-gymnastics-cartwheel.jpg') }}" alt="Gymnastics, Cartwheels & Tumbling" loading="lazy">
+                        <div class="adv-gal-card-overlay">
+                            <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
+                        </div>
+                    </div>
+                    <div class="adv-gal-card-info">
+                        <div class="adv-gal-card-meta">
+                            <div class="adv-gal-card-icon gal-theme-amber">
+                                <i class="fa-solid fa-person-running"></i>
+                            </div>
+                            <div class="adv-gal-card-text">
+                                <h3 class="adv-gal-card-title">Gymnastics &amp; Tumbling</h3>
+                                <span class="adv-gal-card-count">29 Photos</span>
+                            </div>
+                        </div>
+                        <button type="button" class="adv-gal-card-btn gal-theme-amber" aria-label="View Gymnastics, Cartwheels & Tumbling">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 15: Sports & Competitions (Freestyle Skills) -->
+                <article class="adv-gal-card" data-category="sports-competitions" data-title="Football Freestyle & Ball Handling" data-count="31" data-index="15">
+                    <div class="adv-gal-card-thumb">
+                        <img src="{{ asset('assets/images/gallery/gallery-football-juggling-boy.jpg') }}" alt="Football Freestyle & Ball Handling" loading="lazy">
+                        <div class="adv-gal-card-overlay">
+                            <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
+                        </div>
+                    </div>
+                    <div class="adv-gal-card-info">
+                        <div class="adv-gal-card-meta">
+                            <div class="adv-gal-card-icon gal-theme-emerald">
+                                <i class="fa-solid fa-medal"></i>
+                            </div>
+                            <div class="adv-gal-card-text">
+                                <h3 class="adv-gal-card-title">Ball Skills &amp; Freestyle</h3>
+                                <span class="adv-gal-card-count">31 Photos</span>
+                            </div>
+                        </div>
+                        <button type="button" class="adv-gal-card-btn gal-theme-emerald" aria-label="View Football Freestyle & Ball Handling">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- ================= STUDENT LEADERSHIP & ACHIEVEMENTS ================= -->
+                <!-- Card 16: Student Leadership (Foundation Achievers) -->
+                <article class="adv-gal-card" data-category="student-leadership" data-title="Foundation Batch & Academic Scholars" data-count="26" data-index="16">
+                    <div class="adv-gal-card-thumb">
+                        <img src="{{ asset('assets/images/gallery/gallery-foundation-achievers.jpg') }}" alt="Foundation Batch & Academic Scholars" loading="lazy">
+                        <div class="adv-gal-card-overlay">
+                            <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
+                        </div>
+                    </div>
+                    <div class="adv-gal-card-info">
+                        <div class="adv-gal-card-meta">
+                            <div class="adv-gal-card-icon gal-theme-violet">
+                                <i class="fa-solid fa-award"></i>
+                            </div>
+                            <div class="adv-gal-card-text">
+                                <h3 class="adv-gal-card-title">IIT-JEE &amp; NEET Achievers</h3>
+                                <span class="adv-gal-card-count">26 Photos</span>
+                            </div>
+                        </div>
+                        <button type="button" class="adv-gal-card-btn gal-theme-violet" aria-label="View Foundation Batch & Academic Scholars">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 17: Student Leadership (Student Council) -->
+                <article class="adv-gal-card" data-category="student-leadership" data-title="Student Council & Leadership Badges" data-count="22" data-index="17">
+                    <div class="adv-gal-card-thumb">
+                        <img src="{{ asset('assets/images/gallery/achievements.jpg') }}" alt="Student Council & Leadership Badges" loading="lazy">
+                        <div class="adv-gal-card-overlay">
+                            <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
+                        </div>
+                    </div>
+                    <div class="adv-gal-card-info">
+                        <div class="adv-gal-card-meta">
+                            <div class="adv-gal-card-icon gal-theme-blue">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <div class="adv-gal-card-text">
+                                <h3 class="adv-gal-card-title">Student Leadership Council</h3>
+                                <span class="adv-gal-card-count">22 Photos</span>
+                            </div>
+                        </div>
+                        <button type="button" class="adv-gal-card-btn gal-theme-blue" aria-label="View Student Council & Leadership Badges">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- ================= ART, CULTURE & CREATIVITY ================= -->
+                <!-- Card 18: Art, Culture & Creativity (Origami) -->
+                <article class="adv-gal-card" data-category="art-culture" data-title="Art Studio & Origami Paper Craft" data-count="42" data-index="18">
+                    <div class="adv-gal-card-thumb">
+                        <img src="{{ asset('assets/images/gallery/gallery-art-studio-origami-planes.jpg') }}" alt="Art Studio & Origami Paper Craft" loading="lazy">
                         <div class="adv-gal-card-overlay">
                             <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
                         </div>
@@ -275,160 +625,16 @@
                                 <span class="adv-gal-card-count">42 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-purple" aria-label="View Art Studio & Origami Craft">
+                        <button type="button" class="adv-gal-card-btn gal-theme-purple" aria-label="View Art Studio & Origami Paper Craft">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
                 </article>
 
-                <!-- Card 5: Student Life (Parachute Building Lawn) -->
-                <article class="adv-gal-card" data-category="student-life" data-title="Student Life & Teamwork" data-count="36" data-index="5">
+                <!-- Card 19: Art, Culture & Creativity (Hand Painting) -->
+                <article class="adv-gal-card" data-category="art-culture" data-title="Joyful Hand Painting & Color Studio" data-count="27" data-index="19">
                     <div class="adv-gal-card-thumb">
-                        <img src="{{ asset('assets/images/gallery/gallery-parachute-lawn-building.jpg') }}" alt="Student Life & Teamwork" loading="lazy">
-                        <div class="adv-gal-card-overlay">
-                            <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
-                        </div>
-                    </div>
-                    <div class="adv-gal-card-info">
-                        <div class="adv-gal-card-meta">
-                            <div class="adv-gal-card-icon gal-theme-pink">
-                                <i class="fa-solid fa-users"></i>
-                            </div>
-                            <div class="adv-gal-card-text">
-                                <h3 class="adv-gal-card-title">Student Life &amp; Teamwork</h3>
-                                <span class="adv-gal-card-count">36 Photos</span>
-                            </div>
-                        </div>
-                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-pink" aria-label="View Student Life & Teamwork">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </article>
-
-                <!-- Card 6: Infrastructure (Splash Pool Kids Play) -->
-                <article class="adv-gal-card" data-category="infrastructure" data-title="Splash Pool & Kids Water Arena" data-count="28" data-index="6">
-                    <div class="adv-gal-card-thumb">
-                        <img src="{{ asset('assets/images/gallery/gallery-splash-pool-kids-play.jpg') }}" alt="Splash Pool & Kids Water Arena" loading="lazy">
-                        <div class="adv-gal-card-overlay">
-                            <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
-                        </div>
-                    </div>
-                    <div class="adv-gal-card-info">
-                        <div class="adv-gal-card-meta">
-                            <div class="adv-gal-card-icon gal-theme-sky">
-                                <i class="fa-solid fa-water-ladder"></i>
-                            </div>
-                            <div class="adv-gal-card-text">
-                                <h3 class="adv-gal-card-title">Splash Pool &amp; Play Arena</h3>
-                                <span class="adv-gal-card-count">28 Photos</span>
-                            </div>
-                        </div>
-                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-sky" aria-label="View Splash Pool & Kids Water Arena">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </article>
-
-                <!-- Card 7: Sports (Early Years Agility) -->
-                <article class="adv-gal-card" data-category="sports" data-title="Early Years Agility & Ring Obstacles" data-count="26" data-index="7">
-                    <div class="adv-gal-card-thumb">
-                        <img src="{{ asset('assets/images/gallery/gallery-hula-hoop-kid.jpg') }}" alt="Early Years Agility & Ring Obstacles" loading="lazy">
-                        <div class="adv-gal-card-overlay">
-                            <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
-                        </div>
-                    </div>
-                    <div class="adv-gal-card-info">
-                        <div class="adv-gal-card-meta">
-                            <div class="adv-gal-card-icon gal-theme-teal">
-                                <i class="fa-solid fa-person-running"></i>
-                            </div>
-                            <div class="adv-gal-card-text">
-                                <h3 class="adv-gal-card-title">Early Years Agility &amp; Play</h3>
-                                <span class="adv-gal-card-count">26 Photos</span>
-                            </div>
-                        </div>
-                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-teal" aria-label="View Early Years Agility & Ring Obstacles">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </article>
-
-                <!-- Card 8: Student Life (Tunnel Fun) -->
-                <article class="adv-gal-card" data-category="student-life" data-title="Kindergarten Caterpillar Tunnel" data-count="19" data-index="8">
-                    <div class="adv-gal-card-thumb">
-                        <img src="{{ asset('assets/images/gallery/gallery-crawl-tunnel-kids.jpg') }}" alt="Kindergarten Caterpillar Tunnel" loading="lazy">
-                        <div class="adv-gal-card-overlay">
-                            <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
-                        </div>
-                    </div>
-                    <div class="adv-gal-card-info">
-                        <div class="adv-gal-card-meta">
-                            <div class="adv-gal-card-icon gal-theme-rose">
-                                <i class="fa-solid fa-shapes"></i>
-                            </div>
-                            <div class="adv-gal-card-text">
-                                <h3 class="adv-gal-card-title">Tunnel Play &amp; Activities</h3>
-                                <span class="adv-gal-card-count">19 Photos</span>
-                            </div>
-                        </div>
-                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-rose" aria-label="View Kindergarten Caterpillar Tunnel">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </article>
-
-                <!-- Card 9: Sports (Gymnastics) -->
-                <article class="adv-gal-card" data-category="sports" data-title="Gymnastics & Tumbling" data-count="40" data-index="9">
-                    <div class="adv-gal-card-thumb">
-                        <img src="{{ asset('assets/images/gallery/gallery-gymnastics-cartwheel.jpg') }}" alt="Gymnastics & Tumbling" loading="lazy">
-                        <div class="adv-gal-card-overlay">
-                            <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
-                        </div>
-                    </div>
-                    <div class="adv-gal-card-info">
-                        <div class="adv-gal-card-meta">
-                            <div class="adv-gal-card-icon gal-theme-amber">
-                                <i class="fa-solid fa-person-walking-dashed-line-arrow-right"></i>
-                            </div>
-                            <div class="adv-gal-card-text">
-                                <h3 class="adv-gal-card-title">Gymnastics &amp; Tumbling</h3>
-                                <span class="adv-gal-card-count">40 Photos</span>
-                            </div>
-                        </div>
-                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-amber" aria-label="View Gymnastics & Tumbling">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </article>
-
-                <!-- Card 10: Sports (Football Skills & Juggling) -->
-                <article class="adv-gal-card" data-category="sports" data-title="Football Freestyle & Ball Control" data-count="30" data-index="10">
-                    <div class="adv-gal-card-thumb">
-                        <img src="{{ asset('assets/images/gallery/gallery-football-juggling-boy.jpg') }}" alt="Football Freestyle & Ball Control" loading="lazy">
-                        <div class="adv-gal-card-overlay">
-                            <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
-                        </div>
-                    </div>
-                    <div class="adv-gal-card-info">
-                        <div class="adv-gal-card-meta">
-                            <div class="adv-gal-card-icon gal-theme-emerald">
-                                <i class="fa-solid fa-medal"></i>
-                            </div>
-                            <div class="adv-gal-card-text">
-                                <h3 class="adv-gal-card-title">Freestyle &amp; Ball Skills</h3>
-                                <span class="adv-gal-card-count">30 Photos</span>
-                            </div>
-                        </div>
-                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-emerald" aria-label="View Football Freestyle & Ball Control">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </article>
-
-                <!-- Card 11: Arts (Painted Hands Girl) -->
-                <article class="adv-gal-card" data-category="arts" data-title="Colors & Hand Art Studio" data-count="24" data-index="11">
-                    <div class="adv-gal-card-thumb">
-                        <img src="{{ asset('assets/images/gallery/gallery-painted-hands-girl.jpg') }}" alt="Colors & Hand Art Studio" loading="lazy">
+                        <img src="{{ asset('assets/images/gallery/gallery-painted-hands-girl.jpg') }}" alt="Joyful Hand Painting & Color Studio" loading="lazy">
                         <div class="adv-gal-card-overlay">
                             <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
                         </div>
@@ -440,19 +646,19 @@
                             </div>
                             <div class="adv-gal-card-text">
                                 <h3 class="adv-gal-card-title">Colors &amp; Hand Art</h3>
-                                <span class="adv-gal-card-count">24 Photos</span>
+                                <span class="adv-gal-card-count">27 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-fuchsia" aria-label="View Colors & Hand Art Studio">
+                        <button type="button" class="adv-gal-card-btn gal-theme-fuchsia" aria-label="View Joyful Hand Painting & Color Studio">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
                 </article>
 
-                <!-- Card 12: Arts (Art Circle Kids) -->
-                <article class="adv-gal-card" data-category="arts" data-title="Collaborative Art Circle" data-count="27" data-index="12">
+                <!-- Card 20: Art, Culture & Creativity (Art Circle) -->
+                <article class="adv-gal-card" data-category="art-culture" data-title="Collaborative Art & Canvas Studio" data-count="30" data-index="20">
                     <div class="adv-gal-card-thumb">
-                        <img src="{{ asset('assets/images/gallery/gallery-art-circle-kids.jpg') }}" alt="Collaborative Art Circle" loading="lazy">
+                        <img src="{{ asset('assets/images/gallery/gallery-art-circle-kids.jpg') }}" alt="Collaborative Art & Canvas Studio" loading="lazy">
                         <div class="adv-gal-card-overlay">
                             <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
                         </div>
@@ -464,67 +670,117 @@
                             </div>
                             <div class="adv-gal-card-text">
                                 <h3 class="adv-gal-card-title">Art Collaboration Circle</h3>
-                                <span class="adv-gal-card-count">27 Photos</span>
+                                <span class="adv-gal-card-count">30 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-cyan" aria-label="View Collaborative Art Circle">
+                        <button type="button" class="adv-gal-card-btn gal-theme-cyan" aria-label="View Collaborative Art & Canvas Studio">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
                 </article>
 
-                <!-- Card 13: Academic (Smart Classroom Learning) -->
-                <article class="adv-gal-card" data-category="academic" data-title="Smart Classroom Learning" data-count="32" data-index="13">
+                <!-- ================= ADVAITA KIDS ================= -->
+                <!-- Card 21: Advaita Kids (Splash Pool) -->
+                <article class="adv-gal-card" data-category="advaita-kids" data-title="Splash Pool & Aquatic Water Arena" data-count="28" data-index="21">
                     <div class="adv-gal-card-thumb">
-                        <img src="{{ asset('assets/images/gallery/gallery-classroom-learning.jpg') }}" alt="Smart Classroom Learning" loading="lazy">
+                        <img src="{{ asset('assets/images/gallery/gallery-splash-pool-kids-play.jpg') }}" alt="Splash Pool & Aquatic Water Arena" loading="lazy">
                         <div class="adv-gal-card-overlay">
                             <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
                         </div>
                     </div>
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
-                            <div class="adv-gal-card-icon gal-theme-orange-dark">
-                                <i class="fa-solid fa-chalkboard-user"></i>
+                            <div class="adv-gal-card-icon gal-theme-sky">
+                                <i class="fa-solid fa-water-ladder"></i>
                             </div>
                             <div class="adv-gal-card-text">
-                                <h3 class="adv-gal-card-title">Smart Classrooms</h3>
+                                <h3 class="adv-gal-card-title">Splash Pool &amp; Water Play</h3>
+                                <span class="adv-gal-card-count">28 Photos</span>
+                            </div>
+                        </div>
+                        <button type="button" class="adv-gal-card-btn gal-theme-sky" aria-label="View Splash Pool & Aquatic Water Arena">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 22: Advaita Kids (Caterpillar Tunnel) -->
+                <article class="adv-gal-card" data-category="advaita-kids" data-title="Caterpillar Tunnel & Motor Exploration" data-count="21" data-index="22">
+                    <div class="adv-gal-card-thumb">
+                        <img src="{{ asset('assets/images/gallery/gallery-crawl-tunnel-kids.jpg') }}" alt="Caterpillar Tunnel & Motor Exploration" loading="lazy">
+                        <div class="adv-gal-card-overlay">
+                            <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
+                        </div>
+                    </div>
+                    <div class="adv-gal-card-info">
+                        <div class="adv-gal-card-meta">
+                            <div class="adv-gal-card-icon gal-theme-rose">
+                                <i class="fa-solid fa-shapes"></i>
+                            </div>
+                            <div class="adv-gal-card-text">
+                                <h3 class="adv-gal-card-title">Caterpillar Tunnel Play</h3>
+                                <span class="adv-gal-card-count">21 Photos</span>
+                            </div>
+                        </div>
+                        <button type="button" class="adv-gal-card-btn gal-theme-rose" aria-label="View Caterpillar Tunnel & Motor Exploration">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 23: Advaita Kids (Hula-Hoop & Agility) -->
+                <article class="adv-gal-card" data-category="advaita-kids" data-title="Ring Stepping & Motor Agility" data-count="25" data-index="23">
+                    <div class="adv-gal-card-thumb">
+                        <img src="{{ asset('assets/images/gallery/gallery-hula-hoop-kid.jpg') }}" alt="Ring Stepping & Motor Agility" loading="lazy">
+                        <div class="adv-gal-card-overlay">
+                            <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
+                        </div>
+                    </div>
+                    <div class="adv-gal-card-info">
+                        <div class="adv-gal-card-meta">
+                            <div class="adv-gal-card-icon gal-theme-teal">
+                                <i class="fa-solid fa-child-reaching"></i>
+                            </div>
+                            <div class="adv-gal-card-text">
+                                <h3 class="adv-gal-card-title">Ring Agility &amp; Fun</h3>
+                                <span class="adv-gal-card-count">25 Photos</span>
+                            </div>
+                        </div>
+                        <button type="button" class="adv-gal-card-btn gal-theme-teal" aria-label="View Ring Stepping & Motor Agility">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 24: Advaita Kids (Rainbow Parachute) -->
+                <article class="adv-gal-card" data-category="advaita-kids" data-title="Rainbow Parachute Cooperative Play" data-count="32" data-index="24">
+                    <div class="adv-gal-card-thumb">
+                        <img src="{{ asset('assets/images/gallery/gallery-parachute-activity.jpg') }}" alt="Rainbow Parachute Cooperative Play" loading="lazy">
+                        <div class="adv-gal-card-overlay">
+                            <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
+                        </div>
+                    </div>
+                    <div class="adv-gal-card-info">
+                        <div class="adv-gal-card-meta">
+                            <div class="adv-gal-card-icon gal-theme-pink">
+                                <i class="fa-solid fa-cloud-sun"></i>
+                            </div>
+                            <div class="adv-gal-card-text">
+                                <h3 class="adv-gal-card-title">Rainbow Parachute Play</h3>
                                 <span class="adv-gal-card-count">32 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-orange-dark" aria-label="View Smart Classroom Learning">
+                        <button type="button" class="adv-gal-card-btn gal-theme-pink" aria-label="View Rainbow Parachute Cooperative Play">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
                 </article>
 
-                <!-- Card 14: Academic (Foundation Achievers) -->
-                <article class="adv-gal-card" data-category="academic" data-title="IIT-JEE & NEET Foundation Batch" data-count="22" data-index="14">
+                <!-- ================= CAMPUS & FACILITIES ================= -->
+                <!-- Card 25: Campus & Facilities (Architecture) -->
+                <article class="adv-gal-card" data-category="campus-facilities" data-title="Campus Architecture & Smart Wings" data-count="36" data-index="25">
                     <div class="adv-gal-card-thumb">
-                        <img src="{{ asset('assets/images/gallery/gallery-foundation-achievers.jpg') }}" alt="IIT-JEE & NEET Foundation Batch" loading="lazy">
-                        <div class="adv-gal-card-overlay">
-                            <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
-                        </div>
-                    </div>
-                    <div class="adv-gal-card-info">
-                        <div class="adv-gal-card-meta">
-                            <div class="adv-gal-card-icon gal-theme-violet">
-                                <i class="fa-solid fa-graduation-cap"></i>
-                            </div>
-                            <div class="adv-gal-card-text">
-                                <h3 class="adv-gal-card-title">IIT-JEE Foundation</h3>
-                                <span class="adv-gal-card-count">22 Photos</span>
-                            </div>
-                        </div>
-                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-violet" aria-label="View IIT-JEE & NEET Foundation Batch">
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </article>
-
-                <!-- Card 15: Student Life (Rainbow Parachute Activity) -->
-                <article class="adv-gal-card" data-category="student-life" data-title="Rainbow Parachute Lawn Activities" data-count="31" data-index="15">
-                    <div class="adv-gal-card-thumb">
-                        <img src="{{ asset('assets/images/gallery/gallery-parachute-activity.jpg') }}" alt="Rainbow Parachute Lawn Activities" loading="lazy">
+                        <img src="{{ asset('assets/images/gallery/campus-building.png') }}" alt="Campus Architecture & Smart Wings" loading="lazy">
                         <div class="adv-gal-card-overlay">
                             <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
                         </div>
@@ -532,23 +788,23 @@
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
                             <div class="adv-gal-card-icon gal-theme-blue">
-                                <i class="fa-solid fa-sun"></i>
+                                <i class="fa-solid fa-landmark"></i>
                             </div>
                             <div class="adv-gal-card-text">
-                                <h3 class="adv-gal-card-title">Rainbow Parachute Play</h3>
-                                <span class="adv-gal-card-count">31 Photos</span>
+                                <h3 class="adv-gal-card-title">Campus Architecture</h3>
+                                <span class="adv-gal-card-count">36 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-blue" aria-label="View Rainbow Parachute Lawn Activities">
+                        <button type="button" class="adv-gal-card-btn gal-theme-blue" aria-label="View Campus Architecture & Smart Wings">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
                 </article>
 
-                <!-- Card 16: Sports (Sports Arena Field) -->
-                <article class="adv-gal-card" data-category="sports" data-title="Campus Sports Ground & Agility" data-count="35" data-index="16">
+                <!-- Card 26: Campus & Facilities (Green Courtyard) -->
+                <article class="adv-gal-card" data-category="campus-facilities" data-title="Green Courtyard & Campus Grounds" data-count="29" data-index="26">
                     <div class="adv-gal-card-thumb">
-                        <img src="{{ asset('assets/images/gallery/gallery-sports-field-agility.jpg') }}" alt="Campus Sports Ground & Agility" loading="lazy">
+                        <img src="{{ asset('assets/images/about-campus-courtyard.jpg') }}" alt="Green Courtyard & Campus Grounds" loading="lazy">
                         <div class="adv-gal-card-overlay">
                             <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
                         </div>
@@ -556,14 +812,38 @@
                     <div class="adv-gal-card-info">
                         <div class="adv-gal-card-meta">
                             <div class="adv-gal-card-icon gal-theme-forest">
-                                <i class="fa-solid fa-trophy"></i>
+                                <i class="fa-solid fa-tree"></i>
                             </div>
                             <div class="adv-gal-card-text">
-                                <h3 class="adv-gal-card-title">Sports Ground &amp; Arena</h3>
-                                <span class="adv-gal-card-count">35 Photos</span>
+                                <h3 class="adv-gal-card-title">Green Central Courtyard</h3>
+                                <span class="adv-gal-card-count">29 Photos</span>
                             </div>
                         </div>
-                        <button type="button" class="adv-gal-card-btn" class="adv-gal-card-btn gal-theme-forest" aria-label="View Campus Sports Ground & Agility">
+                        <button type="button" class="adv-gal-card-btn gal-theme-forest" aria-label="View Green Courtyard & Campus Grounds">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <!-- Card 27: Campus & Facilities (Library) -->
+                <article class="adv-gal-card" data-category="campus-facilities" data-title="Central Knowledge Library & Reading Bay" data-count="24" data-index="27">
+                    <div class="adv-gal-card-thumb">
+                        <img src="{{ asset('assets/images/fac-library.jpg') }}" alt="Central Knowledge Library & Reading Bay" loading="lazy">
+                        <div class="adv-gal-card-overlay">
+                            <span class="adv-gal-overlay-view"><i class="fa-solid fa-expand"></i> View Album</span>
+                        </div>
+                    </div>
+                    <div class="adv-gal-card-info">
+                        <div class="adv-gal-card-meta">
+                            <div class="adv-gal-card-icon gal-theme-indigo">
+                                <i class="fa-solid fa-book-open-reader"></i>
+                            </div>
+                            <div class="adv-gal-card-text">
+                                <h3 class="adv-gal-card-title">Central Library</h3>
+                                <span class="adv-gal-card-count">24 Photos</span>
+                            </div>
+                        </div>
+                        <button type="button" class="adv-gal-card-btn gal-theme-indigo" aria-label="View Central Knowledge Library & Reading Bay">
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>

@@ -301,16 +301,26 @@ class PageContentController extends Controller
             'fields' => [
                 'facilities_hero_badge' => ['label' => 'Hero Eyebrow Badge', 'type' => 'text', 'default' => 'OUR CAMPUS'],
                 'facilities_hero_title' => ['label' => 'Hero Heading', 'type' => 'text', 'default' => 'More than Classrooms, A Place to Grow.'],
-                'facilities_hero_desc' => ['label' => 'Hero Description', 'type' => 'textarea', 'default' => 'Our campus is thoughtfully designed to provide a safe, modern and inspiring environment where every child can learn, explore and excel.'],
+                'facilities_hero_desc' => ['label' => 'Hero Description', 'type' => 'textarea', 'default' => 'Our campus is thoughtfully designed to provide a safe, modern and inspiring environment where every child can learn, explore and excel across 10,000 sq. mtrs. of dedicated infrastructure.'],
+                'facilities_campus_area' => ['label' => 'Verified Campus Area', 'type' => 'text', 'default' => '10,000 Sq. Mtrs. (~2.47 Acres)'],
+                'facilities_classrooms_count' => ['label' => 'Verified Classrooms Count', 'type' => 'text', 'default' => '25 Smart Classrooms'],
                 'facilities_cta_headline' => ['label' => 'Campus Tour CTA Headline', 'type' => 'text', 'default' => 'Take a Campus Tour.'],
                 'facilities_cta_desc' => ['label' => 'Campus Tour CTA Description', 'type' => 'textarea', 'default' => 'Visit our campus and explore the facilities that make learning at Advaita a truly enriching experience.'],
 
-                // Imagery
+                // Imagery for all verified facilities
                 'facilities_hero_image' => ['label' => 'Campus Showcase Feature Photo', 'type' => 'image', 'default' => 'assets/images/about-campus-courtyard.jpg'],
                 'facilities_card1_image' => ['label' => 'Smart Classrooms Photo', 'type' => 'image', 'default' => 'assets/images/fac-smart-class.jpg'],
-                'facilities_card2_image' => ['label' => 'Science Laboratories Photo', 'type' => 'image', 'default' => 'assets/images/fac-science-lab.jpg'],
-                'facilities_card3_image' => ['label' => 'Computer Lab Photo', 'type' => 'image', 'default' => 'assets/images/fac-computer.jpg'],
-                'facilities_card4_image' => ['label' => 'Library Photo', 'type' => 'image', 'default' => 'assets/images/fac-library.jpg'],
+                'facilities_card2_image' => ['label' => 'Science & Math Laboratories Photo', 'type' => 'image', 'default' => 'assets/images/gallery/science-lab.png'],
+                'facilities_card3_image' => ['label' => 'Robotics & Technology Lab Photo', 'type' => 'image', 'default' => 'assets/images/gallery/robotics-lab.png'],
+                'facilities_card4_image' => ['label' => 'Library & Resource Center Photo', 'type' => 'image', 'default' => 'assets/images/fac-library.jpg'],
+                'facilities_card5_image' => ['label' => 'Green Sports Lawns & Playgrounds Photo', 'type' => 'image', 'default' => 'assets/images/gallery/gallery-parachute-lawn-building.jpg'],
+                'facilities_card6_image' => ['label' => 'Multi-Purpose Assembly Hall Photo', 'type' => 'image', 'default' => 'assets/images/gallery-assembly.jpg'],
+                'facilities_card7_image' => ['label' => 'Safe Transport Fleet Photo', 'type' => 'image', 'default' => 'assets/images/fac-transport.jpg'],
+                'facilities_card8_image' => ['label' => 'Safety & 24/7 CCTV Security Photo', 'type' => 'image', 'default' => 'assets/images/fac-security.jpg'],
+                'facilities_card9_image' => ['label' => 'Hygienic Dining Space Photo', 'type' => 'image', 'default' => 'assets/images/gallery-day-1.jpg'],
+                'facilities_card10_image' => ['label' => 'Medical Infirmary Photo', 'type' => 'image', 'default' => 'assets/images/prog-early-years.jpg'],
+                'facilities_card11_image' => ['label' => 'Lush Green Campus Photo', 'type' => 'image', 'default' => 'assets/images/gallery/campus-building.png'],
+                'facilities_card12_image' => ['label' => 'Arts & Creative Activity Studios Photo', 'type' => 'image', 'default' => 'assets/images/gallery/gallery-art-circle-kids.jpg'],
             ],
         ],
         'disclosure' => [

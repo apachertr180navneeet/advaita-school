@@ -29,135 +29,196 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentAlbumCards = [];
     let currentLightboxIndex = 0;
 
-    // Per-card photo collections for a rich, specific lightbox experience
+    // Per-card photo collections for a rich, specific lightbox experience (Cards 1 to 27)
     const cardGalleries = {
         '1': [
-            { src: 'assets/images/gallery/gallery-math-science-lab.jpg', caption: 'Interactive Mathematics & Practical Lab Experiments' },
-            { src: 'assets/images/gallery/gallery-classroom-learning.jpg', caption: 'Interactive Classroom Learning & Smart Classrooms' },
-            { src: 'assets/images/gallery/gallery-foundation-achievers.jpg', caption: 'Focused Academic Guidance & Student Mentorship' }
+            { src: 'assets/images/gallery-assembly.jpg', caption: 'Advaita School Morning Assembly & Community Prayer' },
+            { src: 'assets/images/gallery/gallery-parachute-lawn-building.jpg', caption: 'Lush Green Campus Lawns & School Community Life' },
+            { src: 'assets/images/gallery-day-1.jpg', caption: 'Joyful Day One Welcome & Orientation at Advaita' }
         ],
         '2': [
-            { src: 'assets/images/gallery/gallery-school-band.jpg', caption: 'School Marching Band & Assembly Celebrations' },
-            { src: 'assets/images/gallery/cultural.jpg', caption: 'Vibrant Cultural & Annual Day Celebrations' },
-            { src: 'assets/images/gallery/dance.jpg', caption: 'Classical Folk Dance Performances' }
+            { src: 'assets/images/gallery/gallery-parachute-lawn-building.jpg', caption: 'Campus Lawn Games, Parachute Play & Team Spirit' },
+            { src: 'assets/images/gallery-assembly.jpg', caption: 'Morning Gatherings on the Expansive Green Lawn' },
+            { src: 'assets/images/about-campus-courtyard.jpg', caption: 'Vibrant Central Courtyard & Student Gathering Space' }
         ],
         '3': [
-            { src: 'assets/images/gallery/gallery-football-match-sprint.jpg', caption: 'Inter-House Football Championship & Turf Sprint' },
-            { src: 'assets/images/gallery/gallery-football-juggling-boy.jpg', caption: 'Football Freestyle & Precision Ball Control' },
-            { src: 'assets/images/gallery/gallery-sports-field-agility.jpg', caption: 'Expansive Campus Sports Field & Obstacle Courses' }
+            { src: 'assets/images/gallery-day-1.jpg', caption: 'First Day of School: Warm Smiles & Welcoming Mentors' },
+            { src: 'assets/images/gallery-assembly.jpg', caption: 'Whole-School Morning Address & Values Session' },
+            { src: 'assets/images/gallery/gallery-parachute-lawn-building.jpg', caption: 'Team Building on Campus Lawn' }
         ],
         '4': [
+            { src: 'assets/images/gallery/gallery-school-band.jpg', caption: 'School Marching Band & Ceremonial Drum Troupe' },
+            { src: 'assets/images/gallery/cultural.jpg', caption: 'Annual Cultural Festival: Theatrical Drama & Costumes' },
+            { src: 'assets/images/gallery/dance.jpg', caption: 'Classical Folk Dance Performances by Advaita Students' }
+        ],
+        '5': [
+            { src: 'assets/images/gallery/cultural.jpg', caption: 'Annual Day Celebrations & Student Stage Performances' },
+            { src: 'assets/images/gallery/dance.jpg', caption: 'Traditional Folk Dance & Group Choreography' },
+            { src: 'assets/images/gallery/gallery-school-band.jpg', caption: 'Ceremonial Band Parade & Musical Salutes' }
+        ],
+        '6': [
+            { src: 'assets/images/gallery/dance.jpg', caption: 'Classical Folk Dance & Rhythmic Performances' },
+            { src: 'assets/images/gallery/cultural.jpg', caption: 'Spectacular Annual Gathering Stage Show' },
+            { src: 'assets/images/gallery/gallery-school-band.jpg', caption: 'School Brass and Percussion Band' }
+        ],
+        '7': [
+            { src: 'assets/images/gallery/gallery-math-science-lab.jpg', caption: 'Interactive Mathematics & Composite Science Lab Experiments' },
+            { src: 'assets/images/gallery/science-lab.png', caption: 'CBSE Compliant 56 Sq. Mtr. Composite Science Laboratory' },
+            { src: 'assets/images/gallery/gallery-classroom-learning.jpg', caption: 'Smart Classroom Conceptual Demonstrations' }
+        ],
+        '8': [
+            { src: 'assets/images/gallery/gallery-classroom-learning.jpg', caption: 'Interactive Smart Classroom with Digital Displays' },
+            { src: 'assets/images/fac-smart-class.jpg', caption: 'Digitally Enabled Smart Board & Modern Ergonomic Seating' },
+            { src: 'assets/images/gallery/gallery-math-science-lab.jpg', caption: 'Experiential Hands-On Learning Models' }
+        ],
+        '9': [
+            { src: 'assets/images/gallery/robotics-lab.png', caption: 'Robotics, STEAM & Computer Innovation Lab (56 Sq. Mtr.)' },
+            { src: 'assets/images/gallery/computer-lab.png', caption: 'Computer Science & AI Coding Terminal Arena' },
+            { src: 'assets/images/gallery/gallery-math-science-lab.jpg', caption: 'Physics, Chemistry & Biology Demonstration Tables' }
+        ],
+        '10': [
+            { src: 'assets/images/gallery/educational-tour.jpg', caption: 'Heritage & Science Museum Educational Study Tour' },
+            { src: 'assets/images/gallery/student-life.jpg', caption: 'Outbound Excursions, Field Notes & Outdoor Discovery' },
+            { src: 'assets/images/gallery/outreach.jpg', caption: 'Community Interaction & Regional Study Trips' }
+        ],
+        '11': [
+            { src: 'assets/images/gallery/student-life.jpg', caption: 'Nature Trails, Environmental Study & Eco-Clubs' },
+            { src: 'assets/images/gallery/educational-tour.jpg', caption: 'Historical Monuments & Cultural Heritage Field Study' },
+            { src: 'assets/images/gallery/outreach.jpg', caption: 'Educational Field Visits & Exploration' }
+        ],
+        '12': [
+            { src: 'assets/images/gallery/gallery-football-match-sprint.jpg', caption: 'Inter-House Football Championship & Sprint on Green Turf' },
+            { src: 'assets/images/gallery/gallery-football-juggling-boy.jpg', caption: 'Freestyle Precision Ball Control & Soccer Drills' },
+            { src: 'assets/images/gallery/gallery-sports-field-agility.jpg', caption: 'Full-Sized Campus Sports Field & Athletics Arena' }
+        ],
+        '13': [
+            { src: 'assets/images/gallery/gallery-sports-field-agility.jpg', caption: 'Multi-Sport Campus Ground & 200m Track Training' },
+            { src: 'assets/images/gallery/gallery-football-match-sprint.jpg', caption: 'Competitive House Matches & Track Athletics' },
+            { src: 'assets/images/gallery/gallery-gymnastics-cartwheel.jpg', caption: 'Outdoor Physical Education & Fitness Agility' }
+        ],
+        '14': [
+            { src: 'assets/images/gallery/gallery-gymnastics-cartwheel.jpg', caption: 'Gymnastics Cartwheels, Tumbling & Floor Flexibility' },
+            { src: 'assets/images/gallery/gallery-sports-field-agility.jpg', caption: 'Speed Drills, Obstacle Hurdles & Athletic Training' },
+            { src: 'assets/images/gallery/gallery-hula-hoop-kid.jpg', caption: 'Motor Balance & Ring Coordination Drills' }
+        ],
+        '15': [
+            { src: 'assets/images/gallery/gallery-football-juggling-boy.jpg', caption: 'Football Freestyle Skills & Dedicated Technique Practice' },
+            { src: 'assets/images/gallery/gallery-football-match-sprint.jpg', caption: 'Football League Matches on Campus Turf' },
+            { src: 'assets/images/gallery/gallery-sports-field-agility.jpg', caption: 'Agility & Physical Stamina Conditioning' }
+        ],
+        '16': [
+            { src: 'assets/images/gallery/gallery-foundation-achievers.jpg', caption: 'IIT-JEE & NEET Integrated Foundation Batch Achievers' },
+            { src: 'assets/images/gallery/achievements.jpg', caption: 'Merit Scholars, Olympiad Winners & Board Exam Honors' },
+            { src: 'assets/images/results/topper-om-dhoot.jpg', caption: 'Academic Excellence: Board Examination Top Performers' }
+        ],
+        '17': [
+            { src: 'assets/images/gallery/achievements.jpg', caption: 'Student Council Investiture Ceremony & Badging' },
+            { src: 'assets/images/gallery/gallery-foundation-achievers.jpg', caption: 'House Captains, Head Boy, Head Girl & School Prefects' },
+            { src: 'assets/images/gallery-assembly.jpg', caption: 'Leadership Oath & Morning Council Assembly' }
+        ],
+        '18': [
             { src: 'assets/images/gallery/gallery-art-studio-origami-planes.jpg', caption: 'Art Studio: Creative Origami Paper Planes with Mentors' },
             { src: 'assets/images/gallery/gallery-painted-hands-girl.jpg', caption: 'Joyful Hand Painting & Artistic Self Expression' },
             { src: 'assets/images/gallery/gallery-art-circle-kids.jpg', caption: 'Collaborative Creative Arts & Color Day' }
         ],
-        '5': [
-            { src: 'assets/images/gallery/gallery-parachute-lawn-building.jpg', caption: 'Teamwork & Parachute Fun on Lush Campus Greens' },
-            { src: 'assets/images/gallery/gallery-parachute-activity.jpg', caption: 'Outdoor Cooperative Play & High-Energy Activities' },
-            { src: 'assets/images/gallery/gallery-crawl-tunnel-kids.jpg', caption: 'Active Kindergarten Team Exercises' }
-        ],
-        '6': [
-            { src: 'assets/images/gallery/gallery-splash-pool-kids-play.jpg', caption: 'Early Years Aquatic Splash Pool & Water Play Arena' },
-            { src: 'assets/images/gallery/gallery-splash-pool-fun.jpg', caption: 'Supervised Splash Pool Fun & Activities' },
-            { src: 'assets/images/gallery/campus-building.png', caption: 'Modern Architecture & Green Campus Infrastructure' }
-        ],
-        '7': [
-            { src: 'assets/images/gallery/gallery-hula-hoop-kid.jpg', caption: 'Agility Obstacle Course & Ring Stepping Activity' },
-            { src: 'assets/images/gallery/gallery-crawl-tunnel-kids.jpg', caption: 'Caterpillar Tunnel Crawl & Motor Agility' },
-            { src: 'assets/images/gallery/gallery-sports-field-agility.jpg', caption: 'Outdoor Physical Agility Training' }
-        ],
-        '8': [
-            { src: 'assets/images/gallery/gallery-crawl-tunnel-kids.jpg', caption: 'Caterpillar Tunnel Crawl & Motor Agility' },
-            { src: 'assets/images/gallery/gallery-hula-hoop-kid.jpg', caption: 'Obstacle Coordination & Balance' },
-            { src: 'assets/images/gallery/gallery-parachute-lawn-building.jpg', caption: 'Fun-Filled Outdoor Games & Exploration' }
-        ],
-        '9': [
-            { src: 'assets/images/gallery/gallery-gymnastics-cartwheel.jpg', caption: 'Lawn Gymnastics, Cartwheels & Body Conditioning' },
-            { src: 'assets/images/gallery/gallery-sports-field-agility.jpg', caption: 'Athletics & Multi-Sport Arena' },
-            { src: 'assets/images/gallery/gallery-football-match-sprint.jpg', caption: 'Speed Drills & Agility Training' }
-        ],
-        '10': [
-            { src: 'assets/images/gallery/gallery-football-juggling-boy.jpg', caption: 'Freestyle Ball Control & Soccer Drills on Field' },
-            { src: 'assets/images/gallery/gallery-football-match-sprint.jpg', caption: 'Competitive Football Matches & Athletics' },
-            { src: 'assets/images/gallery/gallery-sports-field-agility.jpg', caption: 'Campus Sports Arena & Conditioning' }
-        ],
-        '11': [
-            { src: 'assets/images/gallery/gallery-painted-hands-girl.jpg', caption: 'Joyful Hand Painting & Artistic Self Expression' },
-            { src: 'assets/images/gallery/gallery-art-circle-kids.jpg', caption: 'Collaborative Creative Arts & Color Day' },
-            { src: 'assets/images/gallery/gallery-art-studio-origami-planes.jpg', caption: 'Art Studio & Origami Creations' }
-        ],
-        '12': [
+        '19': [
+            { src: 'assets/images/gallery/gallery-painted-hands-girl.jpg', caption: 'Expressive Colors: Joyful Hand Painting on Lawn' },
             { src: 'assets/images/gallery/gallery-art-circle-kids.jpg', caption: 'Celebration of Colors: Circular Painted Hands Activity' },
-            { src: 'assets/images/gallery/gallery-painted-hands-girl.jpg', caption: 'Creative Smiles & Expressive Art' },
-            { src: 'assets/images/gallery/gallery-art-studio-origami-planes.jpg', caption: 'Art Studio Workshop with Students' }
+            { src: 'assets/images/gallery/gallery-art-studio-origami-planes.jpg', caption: 'Art Studio Origami & Craft Explorations' }
         ],
-        '13': [
-            { src: 'assets/images/gallery/gallery-classroom-learning.jpg', caption: 'Interactive Classroom Learning & Smart Classrooms' },
-            { src: 'assets/images/gallery/gallery-math-science-lab.jpg', caption: 'Modern Experiential Learning Environment' },
-            { src: 'assets/images/gallery/academic-learning.png', caption: 'Focused Academic Guidance & Study Environment' }
+        '20': [
+            { src: 'assets/images/gallery/gallery-art-circle-kids.jpg', caption: 'Collaborative Art Circle: Colors of Friendship & Joy' },
+            { src: 'assets/images/gallery/gallery-painted-hands-girl.jpg', caption: 'Creative Hand Art & Freeform Expression' },
+            { src: 'assets/images/gallery/arts.jpg', caption: 'Canvas Painting, Fine Arts & Sketching Studio' }
         ],
-        '14': [
-            { src: 'assets/images/gallery/gallery-foundation-achievers.jpg', caption: 'IIT-JEE & NEET Integrated Foundation Achievers' },
-            { src: 'assets/images/gallery/gallery-math-science-lab.jpg', caption: 'Hands-on Science & Practical Lab Workshops' },
-            { src: 'assets/images/gallery/gallery-classroom-learning.jpg', caption: 'Rigorous Academic Coaching & Mentoring' }
+        '21': [
+            { src: 'assets/images/gallery/gallery-splash-pool-kids-play.jpg', caption: 'Early Years Aquatic Splash Pool with Rainbow Slide' },
+            { src: 'assets/images/gallery/gallery-splash-pool-fun.jpg', caption: 'Supervised Water Play Arena & Joyful Splashing' },
+            { src: 'assets/images/prog-early-years.jpg', caption: 'Play-Based Early Childhood Care & Education' }
         ],
-        '15': [
-            { src: 'assets/images/gallery/gallery-parachute-activity.jpg', caption: 'Multi-Color Parachute Coordination & Team Synergy' },
-            { src: 'assets/images/gallery/gallery-parachute-lawn-building.jpg', caption: 'Campus Lawn Games & Outdoor Merriment' },
+        '22': [
+            { src: 'assets/images/gallery/gallery-crawl-tunnel-kids.jpg', caption: 'Kindergarten Caterpillar Crawl Tunnel & Motor Play' },
+            { src: 'assets/images/gallery/gallery-hula-hoop-kid.jpg', caption: 'Obstacle Course Stepping & Balance Activities' },
+            { src: 'assets/images/gallery/gallery-parachute-activity.jpg', caption: 'Rainbow Parachute Fun on Open Lawns' }
+        ],
+        '23': [
+            { src: 'assets/images/gallery/gallery-hula-hoop-kid.jpg', caption: 'Ring Stepping Coordination & Gross Motor Agility' },
+            { src: 'assets/images/gallery/gallery-crawl-tunnel-kids.jpg', caption: 'Caterpillar Tunnel Crawl & Kindergarten Obstacles' },
+            { src: 'assets/images/gallery/gallery-splash-pool-kids-play.jpg', caption: 'Kids Active Play & Outdoor Fun' }
+        ],
+        '24': [
+            { src: 'assets/images/gallery/gallery-parachute-activity.jpg', caption: 'Multi-Color Rainbow Parachute Cooperative Play' },
+            { src: 'assets/images/gallery/gallery-parachute-lawn-building.jpg', caption: 'Expansive Campus Greens & Team Games' },
             { src: 'assets/images/gallery/gallery-crawl-tunnel-kids.jpg', caption: 'Early Years Active Group Play' }
         ],
-        '16': [
-            { src: 'assets/images/gallery/gallery-sports-field-agility.jpg', caption: 'Expansive Campus Sports Field & Athletics' },
-            { src: 'assets/images/gallery/gallery-football-match-sprint.jpg', caption: 'Football Matches on Green Turf' },
-            { src: 'assets/images/gallery/gallery-gymnastics-cartwheel.jpg', caption: 'Lawn Gymnastics & Physical Education' }
+        '25': [
+            { src: 'assets/images/gallery/campus-building.png', caption: '10,000 Sq. Mtrs. Modern Campus Architecture & Smart Wings' },
+            { src: 'assets/images/about-campus-courtyard.jpg', caption: 'Lush Central Courtyard & Architectural Facade' },
+            { src: 'assets/images/about-hero-building.jpg', caption: 'Advaita School of Excellence Campus Panorama' }
+        ],
+        '26': [
+            { src: 'assets/images/about-campus-courtyard.jpg', caption: 'Green Central Courtyard & Landscaped Assembly Grounds' },
+            { src: 'assets/images/gallery/campus-building.png', caption: 'Eco-Friendly Campus & Architectural Landscaping' },
+            { src: 'assets/images/gallery/gallery-sports-field-agility.jpg', caption: 'Expansive Outdoor Sports Turf & Campus Lawns' }
+        ],
+        '27': [
+            { src: 'assets/images/fac-library.jpg', caption: 'Resource-Rich Central Knowledge Library & Reading Bay' },
+            { src: 'assets/images/gallery/gallery-classroom-learning.jpg', caption: 'Quiet Learning Spaces & Reference Collection' },
+            { src: 'assets/images/fac-smart-class.jpg', caption: 'Digitally Integrated Reading & Learning Environments' }
         ]
     };
 
-    // Fallback category photo collections
+    // Fallback category photo collections for all 9 official categories
     const albumGalleries = {
-        'academic': [
-            { src: 'assets/images/gallery/gallery-math-science-lab.jpg', caption: 'Mathematics & Practical Science Labs' },
-            { src: 'assets/images/gallery/gallery-classroom-learning.jpg', caption: 'Interactive Classroom Learning & Smart Classrooms' },
-            { src: 'assets/images/gallery/gallery-foundation-achievers.jpg', caption: 'IIT-JEE & NEET Foundation Scholars' }
+        'life-at-advaita': [
+            { src: 'assets/images/gallery-assembly.jpg', caption: 'Advaita School Morning Assembly & Community Life' },
+            { src: 'assets/images/gallery/gallery-parachute-lawn-building.jpg', caption: 'Campus Lawn Games & Cooperative Teamwork' },
+            { src: 'assets/images/gallery-day-1.jpg', caption: 'Day One Celebrations & Warm Student Orientation' }
         ],
-        'events': [
-            { src: 'assets/images/gallery/gallery-school-band.jpg', caption: 'School Marching Band & Assembly Celebrations' },
-            { src: 'assets/images/gallery/cultural.jpg', caption: 'Vibrant Cultural Celebrations' },
+        'events-celebrations': [
+            { src: 'assets/images/gallery/gallery-school-band.jpg', caption: 'Advaita School Marching Band & Drum Troupe' },
+            { src: 'assets/images/gallery/cultural.jpg', caption: 'Annual Cultural Day Drama & Celebrations' },
             { src: 'assets/images/gallery/dance.jpg', caption: 'Classical Folk Dance at Annual Fest' }
         ],
-        'sports': [
-            { src: 'assets/images/gallery/gallery-football-match-sprint.jpg', caption: 'Inter-House Football Tournament & Turf Sprint' },
-            { src: 'assets/images/gallery/gallery-football-juggling-boy.jpg', caption: 'Football Freestyle Skills & Agility' },
-            { src: 'assets/images/gallery/gallery-gymnastics-cartwheel.jpg', caption: 'Gymnastics & Tumbling on Lawn' },
-            { src: 'assets/images/gallery/gallery-sports-field-agility.jpg', caption: 'Sports Arena & Athletic Field' },
-            { src: 'assets/images/gallery/gallery-hula-hoop-kid.jpg', caption: 'Obstacle Course & Agility Drills' }
+        'academics-science': [
+            { src: 'assets/images/gallery/gallery-math-science-lab.jpg', caption: 'Interactive Mathematics & Practical Lab Experiments' },
+            { src: 'assets/images/gallery/gallery-classroom-learning.jpg', caption: 'Smart Classroom Digital Displays & Teaching' },
+            { src: 'assets/images/gallery/robotics-lab.png', caption: 'STEAM Robotics & AI Innovation Lab' },
+            { src: 'assets/images/gallery/science-lab.png', caption: 'Composite Science Laboratory' }
         ],
-        'arts': [
-            { src: 'assets/images/gallery/gallery-art-studio-origami-planes.jpg', caption: 'Art Studio Origami & Craft Workshops' },
-            { src: 'assets/images/gallery/gallery-painted-hands-girl.jpg', caption: 'Creative Hand Painting & Self Expression' },
-            { src: 'assets/images/gallery/gallery-art-circle-kids.jpg', caption: 'Joyful Colors & Art Collaboration Circle' },
-            { src: 'assets/images/gallery/arts.jpg', caption: 'Fine Arts Studio & Canvas Work' }
+        'educational-tours': [
+            { src: 'assets/images/gallery/educational-tour.jpg', caption: 'Heritage & Science Museum Educational Study Tours' },
+            { src: 'assets/images/gallery/student-life.jpg', caption: 'Environmental Nature Walks & Outbound Trips' },
+            { src: 'assets/images/gallery/outreach.jpg', caption: 'Community Learning & Regional Study Expeditions' }
         ],
-        'student-life': [
-            { src: 'assets/images/gallery/gallery-parachute-lawn-building.jpg', caption: 'Lawn Parachute Activities & Team Building' },
-            { src: 'assets/images/gallery/gallery-crawl-tunnel-kids.jpg', caption: 'Kindergarten Caterpillar Tunnel Fun' },
-            { src: 'assets/images/gallery/gallery-parachute-activity.jpg', caption: 'Rainbow Parachute Active Play' }
+        'sports-competitions': [
+            { src: 'assets/images/gallery/gallery-football-match-sprint.jpg', caption: 'Inter-House Football Championship & Turf Sprint' },
+            { src: 'assets/images/gallery/gallery-sports-field-agility.jpg', caption: 'Sports Arena & Athletic Running Track' },
+            { src: 'assets/images/gallery/gallery-gymnastics-cartwheel.jpg', caption: 'Gymnastics Cartwheels & Flexibility Training' },
+            { src: 'assets/images/gallery/gallery-football-juggling-boy.jpg', caption: 'Freestyle Ball Control & Soccer Precision' }
         ],
-        'infrastructure': [
+        'student-leadership': [
+            { src: 'assets/images/gallery/gallery-foundation-achievers.jpg', caption: 'IIT-JEE & NEET Foundation Scholars' },
+            { src: 'assets/images/gallery/achievements.jpg', caption: 'Student Council Investiture Ceremony & Badging' },
+            { src: 'assets/images/results/topper-om-dhoot.jpg', caption: 'Academic Board Examination Toppers' }
+        ],
+        'art-culture': [
+            { src: 'assets/images/gallery/gallery-art-studio-origami-planes.jpg', caption: 'Art Studio Origami & Paper Sculpture Workshops' },
+            { src: 'assets/images/gallery/gallery-painted-hands-girl.jpg', caption: 'Joyful Hand Painting & Artistic Self Expression' },
+            { src: 'assets/images/gallery/gallery-art-circle-kids.jpg', caption: 'Collaborative Creative Arts & Color Day' },
+            { src: 'assets/images/gallery/arts.jpg', caption: 'Canvas Painting & Visual Arts Studio' }
+        ],
+        'advaita-kids': [
             { src: 'assets/images/gallery/gallery-splash-pool-kids-play.jpg', caption: 'Splash Pool & Kids Aquatic Play Park' },
-            { src: 'assets/images/gallery/gallery-splash-pool-fun.jpg', caption: 'Early Childhood Splash Pool Facility' },
-            { src: 'assets/images/gallery/campus-building.png', caption: 'Advaita School Modern Academic Wings' },
-            { src: 'assets/images/fac-library.jpg', caption: 'Resource-rich Central Library' }
+            { src: 'assets/images/gallery/gallery-crawl-tunnel-kids.jpg', caption: 'Kindergarten Caterpillar Tunnel Crawl' },
+            { src: 'assets/images/gallery/gallery-hula-hoop-kid.jpg', caption: 'Ring Agility Stepping & Motor Coordination' },
+            { src: 'assets/images/gallery/gallery-parachute-activity.jpg', caption: 'Rainbow Parachute Active Cooperative Play' }
         ],
-        'workshops': [
-            { src: 'assets/images/gallery/gallery-math-science-lab.jpg', caption: 'Math & Geometry Hands-On Workshop' },
-            { src: 'assets/images/gallery/gallery-art-studio-origami-planes.jpg', caption: 'Art Studio Origami Workshop' },
-            { src: 'assets/images/gallery/robotics-lab.png', caption: 'Robotics & AI Innovation Lab' },
-            { src: 'assets/images/gallery/science-lab.png', caption: 'Modern Practical Science Labs' }
-        ],
-        'outreach': [
-            { src: 'assets/images/gallery/outreach.jpg', caption: 'Community Outreach & Social Service Drives' },
-            { src: 'assets/images/gallery/educational-tour.jpg', caption: 'Field Trips & Community Learning' }
+        'campus-facilities': [
+            { src: 'assets/images/gallery/campus-building.png', caption: '10,000 Sq. Mtrs. Modern Academic Campus Architecture' },
+            { src: 'assets/images/about-campus-courtyard.jpg', caption: 'Central Landscaped Green Courtyard & Lawns' },
+            { src: 'assets/images/fac-library.jpg', caption: 'Resource-Rich Central Knowledge Library' },
+            { src: 'assets/images/fac-smart-class.jpg', caption: 'Smart Technologically Enabled Classrooms' }
         ]
     };
 

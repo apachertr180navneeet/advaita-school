@@ -491,8 +491,8 @@
 
 .adv-gal-filters-scroll {
     display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    gap: 12px;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
     width: 100%;
     padding: 8px 0 16px 0;
 }
@@ -504,12 +504,12 @@
     background: #ffffff;
     border: 1px solid #eef2f6;
     border-radius: 16px;
-    padding: 14px 6px;
+    padding: 12px 4px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
     cursor: pointer;
     transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
     box-shadow: 0 3px 10px rgba(15, 23, 42, 0.03);
@@ -523,8 +523,8 @@
 }
 
 .adv-gal-cat-btn .cat-icon-badge {
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -538,13 +538,14 @@
 }
 
 .adv-gal-cat-btn .cat-name {
-    font-size: 0.78rem;
+    font-size: 0.74rem;
     font-weight: 600;
     color: #334155;
     text-align: center;
-    line-height: 1.25;
+    line-height: 1.2;
     max-width: 100%;
     transition: color 0.2s ease;
+    word-break: normal;
 }
 
 /* Active Category State (matches the blue active 'All Photos' in mockup) */
@@ -570,44 +571,49 @@
     color: #0084ff;
 }
 
-.adv-gal-cat-btn[data-category="academic"] .cat-icon-badge {
+.adv-gal-cat-btn[data-category="life-at-advaita"] .cat-icon-badge {
+    background: #e0e7ff;
+    color: #4338ca;
+}
+
+.adv-gal-cat-btn[data-category="events-celebrations"] .cat-icon-badge {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.adv-gal-cat-btn[data-category="academics-science"] .cat-icon-badge {
     background: #fee2e2;
     color: #ef4444;
 }
 
-.adv-gal-cat-btn[data-category="events"] .cat-icon-badge {
-    background: #dcfce7;
-    color: #16a34a;
+.adv-gal-cat-btn[data-category="educational-tours"] .cat-icon-badge {
+    background: #ccfbf1;
+    color: #0f766e;
 }
 
-.adv-gal-cat-btn[data-category="sports"] .cat-icon-badge {
+.adv-gal-cat-btn[data-category="sports-competitions"] .cat-icon-badge {
     background: #ffedd5;
     color: #ea580c;
 }
 
-.adv-gal-cat-btn[data-category="arts"] .cat-icon-badge {
+.adv-gal-cat-btn[data-category="student-leadership"] .cat-icon-badge {
+    background: #fef9c3;
+    color: #854d0e;
+}
+
+.adv-gal-cat-btn[data-category="art-culture"] .cat-icon-badge {
     background: #f3e8ff;
     color: #9333ea;
 }
 
-.adv-gal-cat-btn[data-category="student-life"] .cat-icon-badge {
+.adv-gal-cat-btn[data-category="advaita-kids"] .cat-icon-badge {
     background: #fce7f3;
     color: #db2777;
 }
 
-.adv-gal-cat-btn[data-category="infrastructure"] .cat-icon-badge {
+.adv-gal-cat-btn[data-category="campus-facilities"] .cat-icon-badge {
     background: #e0f2fe;
     color: #0284c7;
-}
-
-.adv-gal-cat-btn[data-category="workshops"] .cat-icon-badge {
-    background: #ccfbf1;
-    color: #0d9488;
-}
-
-.adv-gal-cat-btn[data-category="outreach"] .cat-icon-badge {
-    background: #ffe4e6;
-    color: #e11d48;
 }
 
 /* ==========================================================================
@@ -1332,7 +1338,7 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1260px) {
     .adv-gal-filters-scroll {
         display: flex;
         overflow-x: auto;

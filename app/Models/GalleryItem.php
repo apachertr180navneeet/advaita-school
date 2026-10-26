@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class GalleryItem extends Model
 {
@@ -16,6 +17,86 @@ class GalleryItem extends Model
         'is_active' => 'boolean',
         'order' => 'integer',
     ];
+
+    /**
+     * The 9 official gallery categories with metadata.
+     *
+     * @var array<string, array{slug: string, icon: string}>
+     */
+    public const CATEGORIES = [
+        'Life at Advaita' => [
+            'slug' => 'life-at-advaita',
+            'icon' => 'fa-solid fa-school-flag',
+        ],
+        'Events & Celebrations' => [
+            'slug' => 'events-celebrations',
+            'icon' => 'fa-solid fa-cake-candles',
+        ],
+        'Academics and Science Activities' => [
+            'slug' => 'academics-science',
+            'icon' => 'fa-solid fa-flask-vial',
+        ],
+        'Educational Tours & Excursions' => [
+            'slug' => 'educational-tours',
+            'icon' => 'fa-solid fa-bus-simple',
+        ],
+        'Sports & Competitions' => [
+            'slug' => 'sports-competitions',
+            'icon' => 'fa-solid fa-trophy',
+        ],
+        'Student Leadership & Achievements' => [
+            'slug' => 'student-leadership',
+            'icon' => 'fa-solid fa-award',
+        ],
+        'Art, Culture & Creativity' => [
+            'slug' => 'art-culture',
+            'icon' => 'fa-solid fa-palette',
+        ],
+        'Advaita Kids' => [
+            'slug' => 'advaita-kids',
+            'icon' => 'fa-solid fa-child-reaching',
+        ],
+        'Campus & Facilities' => [
+            'slug' => 'campus-facilities',
+            'icon' => 'fa-solid fa-landmark',
+        ],
+    ];
+
+    /**
+     * Resolve slug for a category name.
+     */
+    public static function getCategorySlug(?string $category): string
+    {
+        if (empty($category)) {
+            return 'life-at-advaita';
+        }
+
+        foreach (self::CATEGORIES as $name => $data) {
+            if (strcasecmp($name, $category) === 0) {
+                return $data['slug'];
+            }
+        }
+
+        return Str::slug($category);
+    }
+
+    /**
+     * Resolve default icon for a category name.
+     */
+    public static function getCategoryIcon(?string $category): string
+    {
+        if (empty($category)) {
+            return 'fa-solid fa-camera';
+        }
+
+        foreach (self::CATEGORIES as $name => $data) {
+            if (strcasecmp($name, $category) === 0) {
+                return $data['icon'];
+            }
+        }
+
+        return 'fa-solid fa-camera';
+    }
 
     /**
      * Get the full URL for the gallery image.

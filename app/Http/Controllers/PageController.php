@@ -878,24 +878,35 @@ class PageController extends Controller
     {
         $seo = $this->getPageSeo(
             'facilities',
-            'Campus Facilities & Infrastructure - Advaita School of Excellence',
-            'Tour our state-of-the-art campus featuring digital smart classrooms, modern robotics & science labs, sports turf, library, splash pool, and CCTV security.',
-            'School facilities Parbhani, robotics lab, smart classes, sports ground, library, campus infrastructure'
+            'Campus Facilities & Infrastructure - Advaita School of Excellence, Parbhani',
+            'Explore verified facilities across our 10,000 sq. mtr. campus featuring smart classrooms, robotics and science laboratories, sports lawn, library, and 24x7 security.',
+            'School facilities Parbhani, robotics lab, smart classes, sports ground, library, campus infrastructure, 10000 sq mtr campus'
         );
 
         $content = [
             'hero_badge' => Setting::get('facilities_hero_badge', 'OUR CAMPUS'),
             'hero_title' => Setting::get('facilities_hero_title', 'More than Classrooms, A Place to Grow.'),
-            'hero_desc' => Setting::get('facilities_hero_desc', 'Our campus is thoughtfully designed to provide a safe, modern and inspiring environment where every child can learn, explore and excel.'),
+            'hero_desc' => Setting::get('facilities_hero_desc', 'Our campus is thoughtfully designed to provide a safe, modern and inspiring environment where every child can learn, explore and excel across 10,000 sq. mtrs. of dedicated infrastructure.'),
+            'campus_area' => Setting::get('facilities_campus_area', '10,000 Sq. Mtrs. (~2.47 Acres)'),
+            'classrooms_count' => Setting::get('facilities_classrooms_count', '25 Smart Classrooms'),
+            'labs_count' => Setting::get('facilities_labs_count', '3 Dedicated Labs'),
             'cta_headline' => Setting::get('facilities_cta_headline', 'Take a Campus Tour.'),
             'cta_desc' => Setting::get('facilities_cta_desc', 'Visit our campus and explore the facilities that make learning at Advaita a truly enriching experience.'),
 
-            // Imagery
+            // Verified Imagery
             'hero_image' => Setting::get('facilities_hero_image', 'assets/images/about-campus-courtyard.jpg'),
             'card1_image' => Setting::get('facilities_card1_image', 'assets/images/fac-smart-class.jpg'),
-            'card2_image' => Setting::get('facilities_card2_image', 'assets/images/fac-science-lab.jpg'),
-            'card3_image' => Setting::get('facilities_card3_image', 'assets/images/fac-computer.jpg'),
+            'card2_image' => Setting::get('facilities_card2_image', 'assets/images/gallery/science-lab.png'),
+            'card3_image' => Setting::get('facilities_card3_image', 'assets/images/gallery/robotics-lab.png'),
             'card4_image' => Setting::get('facilities_card4_image', 'assets/images/fac-library.jpg'),
+            'card5_image' => Setting::get('facilities_card5_image', 'assets/images/gallery/gallery-parachute-lawn-building.jpg'),
+            'card6_image' => Setting::get('facilities_card6_image', 'assets/images/gallery-assembly.jpg'),
+            'card7_image' => Setting::get('facilities_card7_image', 'assets/images/fac-transport.jpg'),
+            'card8_image' => Setting::get('facilities_card8_image', 'assets/images/fac-security.jpg'),
+            'card9_image' => Setting::get('facilities_card9_image', 'assets/images/gallery-day-1.jpg'),
+            'card10_image' => Setting::get('facilities_card10_image', 'assets/images/prog-early-years.jpg'),
+            'card11_image' => Setting::get('facilities_card11_image', 'assets/images/gallery/campus-building.png'),
+            'card12_image' => Setting::get('facilities_card12_image', 'assets/images/gallery/gallery-art-circle-kids.jpg'),
         ];
 
         return view('pages.facilities', compact('seo', 'content'));
