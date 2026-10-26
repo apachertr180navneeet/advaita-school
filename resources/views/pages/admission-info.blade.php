@@ -2,6 +2,10 @@
 
 @section('title', "Admission Info 2026-27 - Advaita School of Excellence, Parbhani | Process, Eligibility & Guidelines")
 
+@section('styles')
+<link rel="stylesheet" href="{{ asset('assets/css/admissions.css') }}?v={{ file_exists(public_path('assets/css/admissions.css')) ? filemtime(public_path('assets/css/admissions.css')) : '1.0' }}">
+@endsection
+
 @section('content')
 <main id="main" class="main-content-wrapper admission-page-wrapper">
 
@@ -261,24 +265,25 @@
                     </div>
                 </div>
 
-                <!-- 7. WhatsApp Enquiry -->
-                <div class="qa-card" style="border-color: #86efac; background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%);">
-                    <div>
-                        <div class="qa-card-header">
-                            <div class="qa-icon-wrap whatsapp" aria-hidden="true">
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </div>
-                            <span class="qa-badge whatsapp">Instant Chat</span>
+                <!-- 7. WhatsApp Enquiry Banner (Full Width Feature) -->
+                <div class="qa-card qa-card-banner">
+                    <div class="qa-banner-content">
+                        <div class="qa-icon-wrap whatsapp" aria-hidden="true">
+                            <i class="fa-brands fa-whatsapp"></i>
                         </div>
-                        <div class="qa-card-body">
-                            <h3 class="qa-card-title">7. WhatsApp Enquiry</h3>
-                            <p class="qa-card-desc">Send an instant WhatsApp message to <strong>{{ $whatsappNumber }}</strong> to receive details on admission, eligibility, documents, and fees.</p>
+                        <div class="qa-banner-text">
+                            <div class="d-flex align-items-center gap-10 flex-wrap mb-6">
+                                <h3 class="qa-card-title m-0">7. Instant WhatsApp Enquiry Desk</h3>
+                                <span class="qa-badge whatsapp"><i class="fa-solid fa-bolt me-1"></i> Quick Response</span>
+                            </div>
+                            <p class="qa-card-desc m-0">Prefer instant messaging? Connect directly with our admissions counsellor on WhatsApp (<strong>{{ $whatsappNumber }}</strong>) to ask quick questions, receive fee schedules, or request the admission prospectus.</p>
                         </div>
                     </div>
-                    <div class="qa-card-footer">
+                    <div class="qa-banner-action">
                         <a href="{{ $whatsappUrl }}" target="_blank" rel="noopener noreferrer" class="btn-qa-action whatsapp">
-                            <i class="fa-brands fa-whatsapp me-1" aria-hidden="true"></i>
-                            <span>WhatsApp Enquiry ({{ $whatsappNumber }})</span>
+                            <i class="fa-brands fa-whatsapp me-2" aria-hidden="true"></i>
+                            <span>Chat on WhatsApp ({{ $whatsappNumber }})</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square ms-2 fs-12" aria-hidden="true"></i>
                         </a>
                     </div>
                 </div>
@@ -741,10 +746,10 @@
     <section class="admission-quick-enquiry-section" id="quick-enquiry">
         <div class="admission-section-container">
             <div class="quick-enquiry-wrapper">
-                <div class="row align-items-center">
+                <div class="quick-enquiry-layout">
                     
                     <!-- Left Pitch Column -->
-                    <div class="col-lg-5 mb-30 mb-lg-0">
+                    <div class="qe-pitch-col">
                         <div class="qe-pitch-box">
                             <span class="badge-featured-pill mb-12 d-inline-block">EXPRESS ADMISSION INTEREST</span>
                             <h2 class="qe-headline">
@@ -807,7 +812,7 @@
                     </div>
 
                     <!-- Right Form Column -->
-                    <div class="col-lg-7">
+                    <div class="qe-form-col">
                         <div class="qe-form-card">
                             <div class="qe-form-header">
                                 <h3 class="qe-form-title">

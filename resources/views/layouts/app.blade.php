@@ -37,7 +37,8 @@
     <link rel="stylesheet" href="{{ asset('assets/css/header.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/slider.css') }}?v={{ file_exists(public_path('assets/css/slider.css')) ? filemtime(public_path('assets/css/slider.css')) : '1.0' }}">
     <link rel="stylesheet" href="{{ asset('assets/css/homepage.css') }}?v={{ file_exists(public_path('assets/css/homepage.css')) ? filemtime(public_path('assets/css/homepage.css')) : '1.0' }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/inner-pages.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/inner-pages.css') }}?v={{ file_exists(public_path('assets/css/inner-pages.css')) ? filemtime(public_path('assets/css/inner-pages.css')) : '1.0' }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/admissions.css') }}?v={{ file_exists(public_path('assets/css/admissions.css')) ? filemtime(public_path('assets/css/admissions.css')) : '1.0' }}">
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/footer.css') }}?v={{ file_exists(public_path('assets/css/footer.css')) ? filemtime(public_path('assets/css/footer.css')) : '1.0' }}">
 @yield('styles')
