@@ -56,6 +56,22 @@
                 </li>
             </ul>
 
+            <div class="menu-category-title">Programmes &amp; Academics</div>
+            <ul class="sidebar-nav-list">
+                <li>
+                    <a href="{{ route('admin.academic-programmes.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.academic-programmes.*') ? 'active' : '' }}">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                        <span>Academic Programmes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.results.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.results.*') ? 'active' : '' }}">
+                        <i class="fa-solid fa-trophy"></i>
+                        <span>Results &amp; Achievements</span>
+                    </a>
+                </li>
+            </ul>
+
             <div class="menu-category-title">Homepage Dynamic Sections</div>
             <ul class="sidebar-nav-list">
                 <li>

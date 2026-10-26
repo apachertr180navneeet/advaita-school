@@ -742,6 +742,122 @@ body.adv-drawer-open {
     transform: translateX(2px);
 }
 
+.adv-dropdown-link.active {
+    background-color: #f0f6ff;
+    color: var(--adv-primary);
+    font-weight: 700;
+}
+
+.adv-dropdown-link.active i {
+    color: var(--adv-accent-orange);
+    opacity: 1;
+}
+
+/* Split / Categorized Dropdown for Programmes */
+.adv-dropdown.adv-dropdown-split {
+    min-width: 520px;
+    padding: 12px 14px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.adv-dropdown-col {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.adv-dropdown-col:first-child {
+    border-right: 1px solid rgba(8, 59, 122, 0.08);
+    padding-right: 10px;
+}
+
+.adv-dropdown-col-title {
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--adv-primary);
+    padding: 6px 10px 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-bottom: 2px solid rgba(243, 112, 33, 0.25);
+    margin-bottom: 4px;
+}
+
+.adv-dropdown-col-title i {
+    color: var(--adv-accent-orange);
+    font-size: 0.8rem;
+}
+
+.adv-dropdown-link-badge {
+    font-size: 0.625rem;
+    font-weight: 700;
+    padding: 2px 7px;
+    border-radius: 999px;
+    background: rgba(243, 112, 33, 0.12);
+    color: var(--adv-accent-orange);
+    margin-left: auto;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+}
+
+.adv-dropdown-subtext {
+    display: block;
+    font-size: 0.7rem;
+    color: #64748b;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-top: 1px;
+}
+
+.adv-dropdown-link-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-width: 0;
+}
+
+/* Mobile Category Divider */
+.adv-mobile-group-header {
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--adv-primary);
+    padding: 10px 12px 4px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border-top: 1px dashed #e2e8f0;
+    margin-top: 4px;
+}
+
+.adv-mobile-group-header:first-child {
+    border-top: none;
+    margin-top: 0;
+}
+
+.adv-mobile-group-header i {
+    color: var(--adv-accent-orange);
+    font-size: 0.75rem;
+}
+
+.adv-mobile-badge {
+    font-size: 0.625rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 999px;
+    background: #ffedd5;
+    color: #c2410c;
+    margin-left: auto;
+}
+
 /* --------------------------------------------------------------------------
    Tablet & Mobile Controls (Navbar Right on Tablet/Mobile)
    -------------------------------------------------------------------------- */
@@ -1023,7 +1139,7 @@ body.adv-drawer-open {
 }
 
 .adv-mobile-submenu.is-expanded {
-    max-height: 500px;
+    max-height: 900px;
     transition: max-height 0.4s ease-in;
 }
 

@@ -52,10 +52,21 @@
                         {{ $content['hero_title'] ?? 'A Strong Foundation for a Brighter Tomorrow.' }}
                     </h1>
 
-                    <!-- Description -->
-                    <p class="admission-hero-desc">
-                        {{ $content['hero_desc'] ?? 'A thoughtfully designed curriculum that nurtures curiosity, builds strong concepts and prepares students for lifelong success.' }}
-                    </p>
+                    <!-- Quick Links to Academic Wings -->
+                    <div class="d-flex align-items-center gap-10 mt-20 flex-wrap">
+                        <a href="{{ route('academics.pre-primary') }}" class="btn-primary-pill">
+                            <i class="fa-solid fa-shapes"></i>
+                            <span>Pre-Primary Wing</span>
+                        </a>
+                        <a href="{{ route('academics.primary') }}" class="btn-outline-pill">
+                            <i class="fa-solid fa-calculator"></i>
+                            <span>Primary (Classes 1–5)</span>
+                        </a>
+                        <a href="{{ route('academics.secondary') }}" class="btn-outline-pill">
+                            <i class="fa-solid fa-atom"></i>
+                            <span>Secondary &amp; IIT Foundation</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -118,7 +129,7 @@
         </section>
 
         <!-- =========================================================================
-             4. ACADEMIC STAGES SECTION (4 Stages)
+             4. ACADEMIC STAGES SECTION (Linked to Sub-Wings)
              ========================================================================= -->
         <section class="acad-section" id="academic-stages">
             <div class="acad-section-header">
@@ -127,50 +138,66 @@
                     A Well-Structured Journey from <span class="highlight-orange">Foundation to Future.</span>
                 </h2>
                 <p class="acad-section-desc">
-                    Our academic programme is designed for students from Nursery to Class 10, with age-appropriate pedagogy and progressive learning goals.
+                    Explore our dedicated wings from Nursery to Class 10 with age-appropriate pedagogy, specialized tracks, and state-of-the-art facilities.
                 </p>
             </div>
 
             <div class="acad-stages-grid">
-                <!-- Stage 1 -->
-                <div class="acad-stage-card">
+                <!-- Stage 1: Pre-Primary -->
+                <a href="{{ route('academics.pre-primary') }}" class="acad-stage-card clickable-stage-card">
                     <div class="acad-stage-icon orange" aria-hidden="true">
                         <i class="fa-solid fa-shapes"></i>
                     </div>
                     <h3 class="acad-stage-title">Foundational Stage</h3>
                     <span class="acad-stage-classes">Nursery – LKG – UKG</span>
-                    <p class="acad-stage-desc">Play-based and activity-based learning to build early skills and confidence.</p>
-                </div>
+                    <p class="acad-stage-desc">Play-based early learning, sensory discovery, and our upcoming state-of-the-art new school building.</p>
+                    <div class="stage-card-footer-link text-orange">
+                        <span>Explore Pre-Primary Wing &amp; Building</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
 
-                <!-- Stage 2 -->
-                <div class="acad-stage-card">
+                <!-- Stage 2: Preparatory Stage (Class 1-2) -->
+                <a href="{{ route('academics.primary') }}" class="acad-stage-card clickable-stage-card">
                     <div class="acad-stage-icon blue" aria-hidden="true">
                         <i class="fa-solid fa-pencil"></i>
                     </div>
                     <h3 class="acad-stage-title">Preparatory Stage</h3>
                     <span class="acad-stage-classes">Class 1 – 2</span>
-                    <p class="acad-stage-desc">Building strong literacy, numeracy and problem-solving skills.</p>
-                </div>
-
-                <!-- Stage 3 -->
-                <div class="acad-stage-card">
-                    <div class="acad-stage-icon teal" aria-hidden="true">
-                        <i class="fa-solid fa-flask"></i>
+                    <p class="acad-stage-desc">Building strong literacy, numeracy, mental arithmetic with Abacus, and early Olympiad training.</p>
+                    <div class="stage-card-footer-link text-blue">
+                        <span>Explore Primary School Wing</span>
+                        <i class="fa-solid fa-arrow-right"></i>
                     </div>
-                    <h3 class="acad-stage-title">Middle Stage</h3>
-                    <span class="acad-stage-classes">Class 3 – 5</span>
-                    <p class="acad-stage-desc">Expanding knowledge with subject depth and experiential learning.</p>
-                </div>
+                </a>
 
-                <!-- Stage 4 -->
-                <div class="acad-stage-card">
+                <!-- Stage 3: Middle Stage (Class 3-5) -->
+                <a href="{{ route('academics.primary') }}#abacus-section" class="acad-stage-card clickable-stage-card">
+                    <div class="acad-stage-icon teal" aria-hidden="true">
+                        <i class="fa-solid fa-calculator"></i>
+                    </div>
+                    <h3 class="acad-stage-title">Middle Primary Stage</h3>
+                    <span class="acad-stage-classes">Class 3 – 5</span>
+                    <p class="acad-stage-desc">Subject depth, advanced Abacus calculations, and national SOF Olympiad competitive exam mastery.</p>
+                    <div class="stage-card-footer-link text-teal">
+                        <span>Explore Abacus &amp; Olympiads</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
+
+                <!-- Stage 4: Secondary Stage (Class 6-10) -->
+                <a href="{{ route('academics.secondary') }}" class="acad-stage-card clickable-stage-card">
                     <div class="acad-stage-icon purple" aria-hidden="true">
-                        <i class="fa-solid fa-award"></i>
+                        <i class="fa-solid fa-atom"></i>
                     </div>
                     <h3 class="acad-stage-title">Secondary Stage</h3>
                     <span class="acad-stage-classes">Class 6 – 10</span>
-                    <p class="acad-stage-desc">Focused academic learning with critical thinking, application and future readiness.</p>
-                </div>
+                    <p class="acad-stage-desc">CBSE Board excellence (100% pass record) paired with integrated NEET/IIT Foundation coaching.</p>
+                    <div class="stage-card-footer-link text-purple">
+                        <span>Explore Secondary &amp; IIT Foundation</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </div>
+                </a>
             </div>
         </section>
 

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\AcademicProgrammeController as AdminAcademicProgrammeController;
+use App\Http\Controllers\Admin\AcademicResultController as AdminAcademicResultController;
 use App\Http\Controllers\Admin\AuthController as AdminAuthController;
 use App\Http\Controllers\Admin\CampusVisitController as AdminCampusVisitController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
@@ -41,6 +43,12 @@ Route::get('/our-staff', [PageController::class, 'ourStaff'])->name('our-staff')
 
 // Academics & Results
 Route::get('/academics', [PageController::class, 'academics'])->name('academics');
+Route::get('/academics/pre-primary', [PageController::class, 'prePrimary'])->name('academics.pre-primary');
+Route::get('/pre-primary', fn () => redirect()->route('academics.pre-primary'));
+Route::get('/academics/primary', [PageController::class, 'primary'])->name('academics.primary');
+Route::get('/primary', fn () => redirect()->route('academics.primary'));
+Route::get('/academics/secondary', [PageController::class, 'secondary'])->name('academics.secondary');
+Route::get('/secondary', fn () => redirect()->route('academics.secondary'));
 Route::get('/results', [PageController::class, 'results'])->name('results');
 
 // Admissions & Registration
@@ -138,6 +146,14 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::patch('/faqs/{faq}/toggle-status', [AdminFaqController::class, 'toggle'])->name('faqs.toggle-status');
         Route::resource('faqs', AdminFaqController::class)->except(['show']);
 
+        // Academic Programmes Management
+        Route::patch('/academic-programmes/{academicProgramme}/toggle-status', [AdminAcademicProgrammeController::class, 'toggle'])->name('academic-programmes.toggle-status');
+        Route::resource('academic-programmes', AdminAcademicProgrammeController::class)->except(['show'])->parameters(['academic-programmes' => 'academicProgramme']);
+
+        // Centralized Results & Achievements Management
+        Route::patch('/results/{result}/toggle-status', [AdminAcademicResultController::class, 'toggle'])->name('results.toggle-status');
+        Route::resource('results', AdminAcademicResultController::class)->except(['show']);
+
         // Storage Symlink Helper
         Route::get('/storage-link', fn () => redirect()->route('storage.link'));
     });
@@ -154,6 +170,9 @@ Route::get('/chairmans-desk.php', fn () => redirect()->route('chairmans-desk', [
 Route::get('/principals-desk.php', fn () => redirect()->route('principals-desk', [], 301));
 Route::get('/our-staff.php', fn () => redirect()->route('our-staff', [], 301));
 Route::get('/academics.php', fn () => redirect()->route('academics', [], 301));
+Route::get('/pre-primary.php', fn () => redirect()->route('academics.pre-primary', [], 301));
+Route::get('/primary.php', fn () => redirect()->route('academics.primary', [], 301));
+Route::get('/secondary.php', fn () => redirect()->route('academics.secondary', [], 301));
 Route::get('/results.php', fn () => redirect()->route('results', [], 301));
 Route::get('/admission-info.php', fn () => redirect()->route('admission-info', [], 301));
 Route::get('/fee-structure.php', fn () => redirect()->route('fee-structure', [], 301));

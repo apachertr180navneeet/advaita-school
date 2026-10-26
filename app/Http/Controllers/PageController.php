@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AcademicProgramme;
+use App\Models\AcademicResult;
 use App\Models\Setting;
+use Illuminate\Http\Request;
 use Illuminate\View\View;
 
 class PageController extends Controller
@@ -231,10 +234,111 @@ class PageController extends Controller
             'activity_image' => Setting::get('academics_activity_image', 'assets/images/about-story-student.jpg'),
         ];
 
-        return view('pages.academics', compact('seo', 'content'));
+        $prePrimaryProgrammes = AcademicProgramme::active()->byStage('pre_primary')->get();
+        $primaryProgrammes = AcademicProgramme::active()->byStage('primary')->get();
+        $secondaryProgrammes = AcademicProgramme::active()->byStage('secondary')->get();
+
+        return view('pages.academics', compact('seo', 'content', 'prePrimaryProgrammes', 'primaryProgrammes', 'secondaryProgrammes'));
     }
 
-    public function results(): View
+    public function prePrimary(): View
+    {
+        $seo = $this->getPageSeo(
+            'pre_primary',
+            'Pre-Primary Wing (Nursery, LKG, UKG) - Advaita School of Excellence, Parbhani',
+            'Dedicated Pre-Primary landing page showcasing our play-based early learning curriculum, child-friendly facilities, and upcoming state-of-the-art new school building.',
+            'Pre-Primary school Parbhani, Nursery admission Parbhani, Kindergarten CBSE, play school, early childhood education'
+        );
+
+        $content = [
+            'hero_badge' => Setting::get('pre_hero_badge', 'PRE-PRIMARY WING (NURSERY · LKG · UKG)'),
+            'hero_title' => Setting::get('pre_hero_title', 'Nurturing Curiosity in their'),
+            'hero_highlight' => Setting::get('pre_hero_highlight', 'Most Wonder-Filled Years.'),
+            'hero_subtitle' => Setting::get('pre_hero_subtitle', 'A joyful, play-based early childhood environment blending Montessori methods, sensory learning, and creative discovery.'),
+
+            // Upcoming New Building & Facilities
+            'new_building_badge' => Setting::get('pre_new_building_badge', 'COMING SOON · SESSION 2026'),
+            'new_building_title' => Setting::get('pre_new_building_title', 'Our State-of-the-Art New Pre-Primary Wing'),
+            'new_building_desc' => Setting::get('pre_new_building_desc', 'Designed specifically for early learners with air-conditioned thematic classrooms, splash pool, indoor sensory play stations, and child-safe infrastructure.'),
+            'new_building_status' => Setting::get('pre_new_building_status', 'Under Construction · Opening for Next Academic Session'),
+            'play_facilities_desc' => Setting::get('pre_play_facilities_desc', 'Spacious outdoor lawn playgrounds, splash pool, ball pool, crawl tunnels, and soft play areas engineered for safe motor skill development.'),
+            'safety_hygiene_desc' => Setting::get('pre_safety_hygiene_desc', 'Round-the-clock CCTV surveillance, child-safe rounded furniture, sanitized play equipment, and dedicated female caretakers for compassionate supervision.'),
+            'cta_headline' => Setting::get('pre_cta_headline', 'Give Your Child the Best Start in Life.'),
+            'cta_subtext' => Setting::get('pre_cta_subtext', 'Admissions are now open for Nursery, LKG, and UKG for the upcoming session.'),
+
+            // Imagery
+            'hero_image' => Setting::get('pre_hero_image', 'assets/images/gallery/gallery-painted-hands-girl.jpg'),
+            'building_image' => Setting::get('pre_building_image', 'assets/images/gallery/campus-building.png'),
+            'play_image' => Setting::get('pre_play_image', 'assets/images/gallery/gallery-splash-pool-kids-play.jpg'),
+            'classroom_image' => Setting::get('pre_classroom_image', 'assets/images/gallery/gallery-art-circle-kids.jpg'),
+        ];
+
+        $programmes = AcademicProgramme::active()->byStage('pre_primary')->get();
+
+        return view('pages.academics.pre-primary', compact('seo', 'content', 'programmes'));
+    }
+
+    public function primary(): View
+    {
+        $seo = $this->getPageSeo(
+            'primary',
+            'Primary School (Classes 1 to 5) - Advaita School of Excellence, Parbhani',
+            'Explore our primary curriculum (Classes 1-5) featuring foundational CBSE academics, integrated Abacus & mental arithmetic, Olympiad mentorship, and experiential activities.',
+            'Primary school Parbhani, CBSE Class 1 to 5, Abacus school Parbhani, Olympiad coaching school, primary academics'
+        );
+
+        $content = [
+            'hero_badge' => Setting::get('primary_hero_badge', 'PRIMARY WING (CLASSES 1 TO 5)'),
+            'hero_title' => Setting::get('primary_hero_title', 'Building Strong Fundamentals in'),
+            'hero_highlight' => Setting::get('primary_hero_highlight', 'Young Inquiring Minds.'),
+            'hero_desc' => Setting::get('primary_hero_desc', 'Empowering primary students with deep conceptual clarity, linguistic confidence, and competitive exam readiness through joyful learning.'),
+            'abacus_title' => Setting::get('primary_abacus_title', 'Abacus & Mental Arithmetic Programme'),
+            'abacus_desc' => Setting::get('primary_abacus_desc', 'Integrated into the weekly curriculum to stimulate both brain hemispheres, enhance concentration, and build lightning-fast numerical calculation skills.'),
+            'olympiad_title' => Setting::get('primary_olympiad_title', 'National & International Olympiad Mentorship'),
+            'olympiad_desc' => Setting::get('primary_olympiad_desc', 'Structured training for SOF NSO, IMO, NCO, and IEO competitions with regular mock tests, concept worksheets, and state/national awards.'),
+
+            // Imagery
+            'hero_image' => Setting::get('primary_hero_image', 'assets/images/gallery/gallery-classroom-learning.jpg'),
+            'abacus_image' => Setting::get('primary_abacus_image', 'assets/images/gallery/gallery-math-science-lab.jpg'),
+            'activity_image' => Setting::get('primary_activity_image', 'assets/images/gallery/gallery-foundation-achievers.jpg'),
+        ];
+
+        $programmes = AcademicProgramme::active()->byStage('primary')->get();
+
+        return view('pages.academics.primary', compact('seo', 'content', 'programmes'));
+    }
+
+    public function secondary(): View
+    {
+        $seo = $this->getPageSeo(
+            'secondary',
+            'Secondary School (Classes 6 to 10) - Advaita School of Excellence, Parbhani',
+            'Secondary CBSE education (Classes 6-10) with integrated NEET/IIT Foundation, advanced science laboratories, 100% board exam passing record, and competitive mentoring.',
+            'Secondary school CBSE Parbhani, Class 6 to 10, IIT foundation school Parbhani, NEET foundation, CBSE board exam toppers'
+        );
+
+        $content = [
+            'hero_badge' => Setting::get('secondary_hero_badge', 'SECONDARY WING (CLASSES 6 TO 10)'),
+            'hero_title' => Setting::get('secondary_hero_title', 'CBSE Excellence & NEET / IIT'),
+            'hero_highlight' => Setting::get('secondary_hero_highlight', 'Foundation Pathways.'),
+            'hero_desc' => Setting::get('secondary_hero_desc', 'A rigorous secondary programme designed to build top board scores and instill early competitive mastery for India\'s premier entrance examinations.'),
+            'iit_title' => Setting::get('secondary_iit_title', 'Dedicated NEET / IIT Foundation Programme'),
+            'iit_desc' => Setting::get('secondary_iit_desc', 'Integrated coaching with CBSE academics, focusing on advanced conceptual problem solving, higher-order thinking skills (HOTS), and diagnostic testing.'),
+            'board_title' => Setting::get('secondary_board_title', '100% Board Pass Record with District Toppers'),
+            'board_desc' => Setting::get('secondary_board_desc', 'Class 10 CBSE Board Examinations delivered with 100% pass rates, over 35% students scoring above 90%, and district first rank triumphs.'),
+
+            // Imagery
+            'hero_image' => Setting::get('secondary_hero_image', 'assets/images/fac-science-lab.jpg'),
+            'iit_image' => Setting::get('secondary_iit_image', 'assets/images/gallery/academic-learning.png'),
+            'lab_image' => Setting::get('secondary_lab_image', 'assets/images/gallery/robotics-lab.png'),
+        ];
+
+        $programmes = AcademicProgramme::active()->byStage('secondary')->get();
+
+        return view('pages.academics.secondary', compact('seo', 'content', 'programmes'));
+    }
+
+    public function results(Request $request): View
     {
         $seo = $this->getPageSeo(
             'results',
@@ -262,7 +366,47 @@ class PageController extends Controller
             'poster_full' => Setting::get('results_poster_full', 'assets/images/results-posters-full.jpg'),
         ];
 
-        return view('pages.results', compact('seo', 'content'));
+        $selectedCategory = $request->query('category', 'all');
+        $selectedYear = $request->query('year', 'all');
+
+        $query = AcademicResult::active();
+
+        if ($selectedCategory !== 'all' && array_key_exists($selectedCategory, AcademicResult::CATEGORIES)) {
+            $query->where('category', $selectedCategory);
+        }
+
+        if ($selectedYear !== 'all') {
+            $query->where('academic_year', $selectedYear);
+        }
+
+        $results = $query->get();
+        $categories = AcademicResult::CATEGORIES;
+        $academicYears = AcademicResult::distinct()->pluck('academic_year')->sortDesc()->values()->all();
+        if (empty($academicYears)) {
+            $academicYears = ['2025-26', '2024-25'];
+        }
+
+        // Category counts for badges
+        $categoryCounts = [
+            'all' => AcademicResult::where('is_active', true)->count(),
+        ];
+        foreach (array_keys($categories) as $cat) {
+            $categoryCounts[$cat] = AcademicResult::where('is_active', true)->where('category', $cat)->count();
+        }
+
+        $featuredResults = AcademicResult::active()->featured()->take(3)->get();
+
+        return view('pages.results', compact(
+            'seo',
+            'content',
+            'results',
+            'categories',
+            'academicYears',
+            'selectedCategory',
+            'selectedYear',
+            'categoryCounts',
+            'featuredResults'
+        ));
     }
 
     public function admissionInfo(): View

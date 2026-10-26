@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
-@section('title', "Board Results - Advaita School of Excellence, Parbhani | 100% CBSE Results")
+@section('title', "Board Results & Achievements - Advaita School of Excellence, Parbhani | 100% CBSE Results")
 
 @section('content')
 <!-- Dedicated Results Page Stylesheet -->
-<link rel="stylesheet" href="{{ asset('assets/css/results.css?v=<?php echo file_exists(__DIR__ . ') }}"/assets/css/results.css') ? filemtime(__DIR__ . '/assets/css/results.css') : '1.0'; ?>">
+<link rel="stylesheet" href="{{ asset('assets/css/results.css?v=' . (file_exists(public_path('assets/css/results.css')) ? filemtime(public_path('assets/css/results.css')) : '1.0')) }}">
 
 <main id="main" class="main-content-wrapper results-page-wrapper">
 
@@ -19,6 +19,8 @@
                     <!-- Breadcrumbs -->
                     <nav class="results-breadcrumb" aria-label="Breadcrumb">
                         <a href="{{ route('home') }}">Home</a>
+                        <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
+                        <a href="{{ route('academics') }}">Programmes</a>
                         <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
                         <span class="active">Results</span>
                     </nav>
@@ -38,8 +40,24 @@
 
                     <!-- Subtitle -->
                     <p class="results-hero-desc">
-                        Year after year, our students continue to excel, making us proud with outstanding academic results.
+                        {{ $content['hero_desc'] ?? 'Year after year, our students continue to excel, making us proud with outstanding academic and competitive examination results.' }}
                     </p>
+
+                    <!-- Jump Filter Buttons -->
+                    <div class="d-flex align-items-center gap-10 mt-20 flex-wrap">
+                        <a href="#results-hub" class="btn-primary-pill" onclick="filterCategory('board')">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <span>Board Results</span>
+                        </a>
+                        <a href="#results-hub" class="btn-outline-pill" onclick="filterCategory('olympiad')">
+                            <i class="fa-solid fa-medal"></i>
+                            <span>Olympiad Podiums</span>
+                        </a>
+                        <a href="#results-hub" class="btn-outline-pill" onclick="filterCategory('abacus')">
+                            <i class="fa-solid fa-calculator"></i>
+                            <span>Abacus Champions</span>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Right Campus Image with Swoop Border & "More Than A School" -->
@@ -65,7 +83,7 @@
                 <div class="results-stat-info">
                     <span class="results-stat-kicker">Back-to-back</span>
                     <strong class="results-stat-val">{{ $content['pass_rate'] ?? '100%' }} Result</strong>
-                    <span class="results-stat-sub">in Grade 10</span>
+                    <span class="results-stat-sub">in CBSE Grade 10</span>
                 </div>
             </div>
 
@@ -96,50 +114,241 @@
             <!-- Card 4 -->
             <div class="results-stat-card">
                 <div class="results-stat-icon" aria-hidden="true">
-                    <i class="fa-solid fa-users"></i>
+                    <i class="fa-solid fa-trophy"></i>
                 </div>
                 <div class="results-stat-info">
-                    <span class="results-stat-kicker">Consistent</span>
-                    <strong class="results-stat-val">Excellence</strong>
-                    <span class="results-stat-sub">Every Year</span>
+                    <span class="results-stat-kicker">District 1st Rank</span>
+                    <strong class="results-stat-val">{{ $content['top_score'] ?? '98.40%' }}</strong>
+                    <span class="results-stat-sub">Highest Score in Parbhani</span>
                 </div>
             </div>
         </div>
 
         <!-- =========================================================================
-             3. YEAR SELECTOR TABS WITH RADIANT SUNBURSTS
+             3. DISTRICT TOPPER SPOTLIGHT CARD
              ========================================================================= -->
-        <div class="results-year-switcher-area">
-            <div class="results-rays-left" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M18 20L8 14M20 12L7 12M18 4L8 10" stroke="#F37021" stroke-width="2.5" stroke-linecap="round"/>
-                </svg>
+        <div class="results-spotlight-card">
+            <div class="spotlight-badge">
+                <i class="fa-solid fa-crown text-amber"></i>
+                <span>DISTRICT TOPPER SPOTLIGHT · CBSE CLASS X</span>
             </div>
-
-            <div class="results-year-pills" role="tablist" aria-label="Academic Sessions">
-                <button type="button" class="results-year-btn active" id="tabYear2026" role="tab" aria-selected="true">
-                    <span class="y-main">2025 – 26</span>
-                    <span class="y-sub">(Class 10)</span>
-                </button>
-                <button type="button" class="results-year-btn" id="tabYear2025" role="tab" aria-selected="false">
-                    <span class="y-main">2024 – 25</span>
-                    <span class="y-sub">(Class 10)</span>
-                </button>
-                <button type="button" class="results-year-btn" id="tabPastYears" role="tab" aria-selected="false">
-                    <i class="fa-regular fa-calendar-days"></i>
-                    <span class="y-main">Past Years</span>
-                </button>
-            </div>
-
-            <div class="results-rays-right" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M6 20L16 14M4 12L17 12M6 4L16 10" stroke="#F37021" stroke-width="2.5" stroke-linecap="round"/>
-                </svg>
+            <div class="spotlight-grid">
+                <div class="spotlight-visual">
+                    <div class="spotlight-photo-frame">
+                        <img src="{{ asset('assets/images/om-dhoot-clean.jpg') }}" alt="Om Dhoot - CBSE Class 10th District 1st Rank Topper">
+                        <div class="spotlight-score-tag">98.40%</div>
+                    </div>
+                </div>
+                <div class="spotlight-content">
+                    <div class="spotlight-laurel-wrap">
+                        <span class="laurel-title">PARBHANI DISTRICT 1ST RANK</span>
+                    </div>
+                    <h2 class="spotlight-student-name">Master Om Dhoot</h2>
+                    <p class="spotlight-exam-title">CBSE Class X Board Examination · Session 2025–26</p>
+                    <p class="spotlight-quote">
+                        "Secured the overall 1st position across the entire district with an exceptional aggregate score of 98.40%. Exemplifying Advaita's culture of dedicated faculty mentorship, conceptual mastery, and disciplined excellence."
+                    </p>
+                    <div class="spotlight-actions">
+                        <button type="button" class="btn-spotlight-preview" onclick="openResultsModal('{{ asset('assets/images/results-poster-toppers.jpg') }}', 'Om Dhoot - CBSE Class 10 District 1st Topper 98.40%')">
+                            <i class="fa-solid fa-award"></i>
+                            <span>View Official Topper Poster</span>
+                        </button>
+                        <a href="{{ route('online-registration') }}" class="btn-spotlight-enquire">
+                            <span>Join the League of Achievers</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
 
         <!-- =========================================================================
-             4. MAIN RESULTS SHOWCASE CARD
+             4. CENTRALIZED RESULTS HUB WITH INTERACTIVE CATEGORY & YEAR FILTERS
+             ========================================================================= -->
+        <div class="results-hub-section" id="results-hub">
+            <div class="results-hub-header">
+                <div>
+                    <span class="acad-eyebrow">— EXAMINATION ACHIEVEMENTS &amp; PODIUMS —</span>
+                    <h2 class="results-hub-title">
+                        Centralized <span class="highlight-orange">Results &amp; Honors.</span>
+                    </h2>
+                    <p class="results-hub-desc">
+                        Explore verified school examination results, national Olympiad medalists, Abacus champions, and NEET/IIT Foundation achievements.
+                    </p>
+                </div>
+
+                <!-- Academic Session Year Filter Selector -->
+                <div class="results-year-filter-box">
+                    <label for="resultsYearSelect" class="year-label"><i class="fa-regular fa-calendar-days"></i> Academic Session:</label>
+                    <select id="resultsYearSelect" class="results-year-select" onchange="filterYear(this.value)">
+                        <option value="all" {{ ($selectedYear ?? 'all') === 'all' ? 'selected' : '' }}>All Academic Sessions</option>
+                        @foreach($academicYears as $year)
+                            <option value="{{ $year }}" {{ ($selectedYear ?? '') === $year ? 'selected' : '' }}>Session {{ $year }}</option>
+                        @endforeach
+                    </select>
+                </div>
+            </div>
+
+            <!-- Category Filter Tabs Bar -->
+            <div class="results-filter-bar" role="tablist" aria-label="Result Categories">
+                <button type="button" class="results-filter-pill {{ ($selectedCategory ?? 'all') === 'all' ? 'active' : '' }}" data-cat="all" onclick="filterCategory('all')">
+                    <i class="fa-solid fa-border-all"></i>
+                    <span>All Achievements</span>
+                    <span class="pill-count">{{ $categoryCounts['all'] ?? count($results) }}</span>
+                </button>
+
+                <button type="button" class="results-filter-pill {{ ($selectedCategory ?? '') === 'board' ? 'active' : '' }}" data-cat="board" onclick="filterCategory('board')">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Board Exam</span>
+                    <span class="pill-count">{{ $categoryCounts['board'] ?? 0 }}</span>
+                </button>
+
+                <button type="button" class="results-filter-pill {{ ($selectedCategory ?? '') === 'olympiad' ? 'active' : '' }}" data-cat="olympiad" onclick="filterCategory('olympiad')">
+                    <i class="fa-solid fa-medal"></i>
+                    <span>Olympiad Results</span>
+                    <span class="pill-count">{{ $categoryCounts['olympiad'] ?? 0 }}</span>
+                </button>
+
+                <button type="button" class="results-filter-pill {{ ($selectedCategory ?? '') === 'abacus' ? 'active' : '' }}" data-cat="abacus" onclick="filterCategory('abacus')">
+                    <i class="fa-solid fa-calculator"></i>
+                    <span>Abacus Competitions</span>
+                    <span class="pill-count">{{ $categoryCounts['abacus'] ?? 0 }}</span>
+                </button>
+
+                <button type="button" class="results-filter-pill {{ ($selectedCategory ?? '') === 'iit_foundation' ? 'active' : '' }}" data-cat="iit_foundation" onclick="filterCategory('iit_foundation')">
+                    <i class="fa-solid fa-atom"></i>
+                    <span>IIT / NEET Foundation</span>
+                    <span class="pill-count">{{ $categoryCounts['iit_foundation'] ?? 0 }}</span>
+                </button>
+
+                <button type="button" class="results-filter-pill {{ ($selectedCategory ?? '') === 'competitive' ? 'active' : '' }}" data-cat="competitive" onclick="filterCategory('competitive')">
+                    <i class="fa-solid fa-award"></i>
+                    <span>Competitive Exams</span>
+                    <span class="pill-count">{{ $categoryCounts['competitive'] ?? 0 }}</span>
+                </button>
+            </div>
+
+            <!-- Dynamic Achievements Grid -->
+            <div class="results-achievements-grid" id="achievementsGrid">
+                @forelse($results as $res)
+                    <div class="result-item-card" data-category="{{ $res->category }}" data-year="{{ $res->academic_year }}">
+                        <!-- Card Header -->
+                        <div class="result-card-top">
+                            <span class="result-category-badge cat-{{ $res->category }}">
+                                @switch($res->category)
+                                    @case('board')
+                                        <i class="fa-solid fa-graduation-cap"></i> Board Result
+                                        @break
+                                    @case('olympiad')
+                                        <i class="fa-solid fa-medal"></i> Olympiad Podiums
+                                        @break
+                                    @case('abacus')
+                                        <i class="fa-solid fa-calculator"></i> Abacus Championship
+                                        @break
+                                    @case('iit_foundation')
+                                        <i class="fa-solid fa-atom"></i> IIT Foundation
+                                        @break
+                                    @case('competitive')
+                                        <i class="fa-solid fa-award"></i> Competitive Exam
+                                        @break
+                                    @default
+                                        <i class="fa-solid fa-star"></i> Achievement
+                                @endswitch
+                            </span>
+                            <span class="result-year-badge">Session {{ $res->academic_year }}</span>
+                        </div>
+
+                        <!-- Student Visual & Details -->
+                        <div class="result-student-row">
+                            <div class="result-avatar-box">
+                                @if($res->photo)
+                                    <img src="{{ $res->photo_url }}" alt="{{ $res->student_name }}" class="result-avatar-img" onclick="openResultsModal('{{ $res->photo_url }}', '{{ $res->student_name }} - {{ $res->title }}')">
+                                @else
+                                    <div class="result-avatar-placeholder">
+                                        <i class="fa-solid fa-user-graduate"></i>
+                                    </div>
+                                @endif
+                            </div>
+                            <div class="result-student-info">
+                                <h3 class="result-student-name">{{ $res->student_name }}</h3>
+                                @if($res->class_grade)
+                                    <span class="result-student-grade"><i class="fa-solid fa-school text-orange"></i> {{ $res->class_grade }}</span>
+                                @endif
+                                <h4 class="result-exam-title">{{ $res->title }}</h4>
+                            </div>
+                        </div>
+
+                        <!-- Exam & Scores Bar -->
+                        <div class="result-exam-subtext">
+                            <i class="fa-regular fa-id-badge text-navy"></i>
+                            <span>{{ $res->exam_name }}</span>
+                        </div>
+
+                        <div class="result-scores-row">
+                            @if($res->score)
+                                <div class="result-score-tag">
+                                    <span class="score-label">Score / Marks</span>
+                                    <strong class="score-value">{{ $res->score }}</strong>
+                                </div>
+                            @endif
+
+                            @if($res->rank)
+                                <div class="result-rank-tag">
+                                    <span class="rank-label">Rank / Medal</span>
+                                    <strong class="rank-value">{{ $res->rank }}</strong>
+                                </div>
+                            @endif
+                        </div>
+
+                        <!-- Description -->
+                        @if($res->description)
+                            <p class="result-card-desc">{{ $res->description }}</p>
+                        @endif
+
+                        <!-- Card Footer -->
+                        <div class="result-card-footer">
+                            @if($res->certificate)
+                                <button type="button" class="btn-view-cert" onclick="openResultsModal('{{ $res->certificate_url }}', '{{ $res->student_name }} - {{ $res->title }} Certificate')">
+                                    <i class="fa-solid fa-file-certificate"></i>
+                                    <span>View Certificate</span>
+                                </button>
+                            @elseif($res->photo)
+                                <button type="button" class="btn-view-cert" onclick="openResultsModal('{{ $res->photo_url }}', '{{ $res->student_name }} - {{ $res->title }}')">
+                                    <i class="fa-solid fa-magnifying-glass-plus"></i>
+                                    <span>Zoom Photograph</span>
+                                </button>
+                            @else
+                                <span class="verified-result-badge">
+                                    <i class="fa-solid fa-circle-check text-green"></i> Verified School Record
+                                </span>
+                            @endif
+                        </div>
+                    </div>
+                @empty
+                    <div class="results-empty-state">
+                        <i class="fa-solid fa-folder-open empty-icon"></i>
+                        <h3>No achievements found</h3>
+                        <p>No result entries currently recorded for the selected category or session.</p>
+                        <button type="button" class="btn-primary-pill" onclick="filterCategory('all'); filterYear('all');">
+                            <span>Reset Filters</span>
+                        </button>
+                    </div>
+                @endforelse
+            </div>
+
+            <!-- Client-Side Empty State Placeholder (when filtered JS hides everything) -->
+            <div id="noResultsFilterMessage" class="results-empty-state" style="display: none;">
+                <i class="fa-solid fa-filter empty-icon"></i>
+                <h3>No achievements match your filters</h3>
+                <p>Try switching to another category or academic session above.</p>
+                <button type="button" class="btn-primary-pill" onclick="resetFilters()">
+                    <span>View All Achievements</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- =========================================================================
+             5. MAIN RESULTS SHOWCASE CARD (OFFICIAL POSTERS CAROUSEL)
              ========================================================================= -->
         <div class="results-main-showcase-card" id="resultsShowcaseSection">
             <div class="results-showcase-header">
@@ -149,7 +358,7 @@
                     </div>
                     <div class="results-showcase-heading-wrap">
                         <h2 class="results-showcase-title">
-                            CBSE Results <span class="highlight-orange">2025 – 26</span>
+                            CBSE Class 10 Board <span class="highlight-orange">Official Posters</span>
                         </h2>
                         <p class="results-showcase-tagline">Another year of hard work, dedication and excellence!</p>
                         <p class="results-showcase-desc">Our students have once again made us proud with an outstanding performance in the CBSE Class 10 Board Examinations.</p>
@@ -225,7 +434,7 @@
         </div>
 
         <!-- =========================================================================
-             5. CONSISTENT ACADEMIC EXCELLENCE & DOWNLOAD PDF BANNER
+             6. CONSISTENT ACADEMIC EXCELLENCE & DOWNLOAD PDF BANNER
              ========================================================================= -->
         <div class="results-excellence-banner">
             <div class="excellence-left">
@@ -245,13 +454,13 @@
         </div>
 
         <!-- =========================================================================
-             6. PRE-FOOTER CTA BOX (Have Questions?)
+             7. PRE-FOOTER CTA BOX (Have Questions?)
              ========================================================================= -->
         <div class="results-bottom-cta">
             <div class="cta-left">
                 <span class="cta-pill-tag">HAVE QUESTIONS?</span>
                 <h3 class="cta-heading">Want to know more about <span class="highlight-orange">our results?</span></h3>
-                <p class="cta-sub">Our admissions team will be happy to share detailed results and help you with any queries.</p>
+                <p class="cta-sub">Our admissions and academic teams will be happy to share detailed results and guide you with your child's education journey.</p>
             </div>
 
             <div class="cta-buttons">
@@ -270,7 +479,7 @@
 
 </main>
 
-<!-- Lightbox Modal for Full View -->
+<!-- Lightbox Modal for Full View & Certificates -->
 <div class="results-modal-backdrop" id="resultsModal" onclick="closeResultsModal(event)">
     <div class="results-modal-content">
         <button type="button" class="results-modal-close" onclick="closeResultsModal(event)" aria-label="Close Preview">
@@ -280,8 +489,11 @@
     </div>
 </div>
 
-<!-- Interactive Modal & Tabs Scripts -->
+<!-- Interactive Modal & Instant Filtering Scripts -->
 <script>
+var activeCategory = '{{ $selectedCategory ?? "all" }}';
+var activeYear = '{{ $selectedYear ?? "all" }}';
+
 function openResultsModal(imgSrc, title) {
     var modal = document.getElementById('resultsModal');
     var modalImg = document.getElementById('modalResultImg');
@@ -303,20 +515,64 @@ function closeResultsModal(e) {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Year Tabs Interactive Switcher
-    var tab2026 = document.getElementById('tabYear2026');
-    var tab2025 = document.getElementById('tabYear2025');
-    var tabPast = document.getElementById('tabPastYears');
-    var yearButtons = [tab2026, tab2025, tabPast];
-
-    yearButtons.forEach(function(btn) {
-        if (!btn) return;
-        btn.addEventListener('click', function() {
-            yearButtons.forEach(function(b) { if (b) b.classList.remove('active'); });
-            btn.classList.add('active');
-        });
+function filterCategory(cat) {
+    activeCategory = cat;
+    document.querySelectorAll('.results-filter-pill').forEach(function(pill) {
+        if (pill.getAttribute('data-cat') === cat) {
+            pill.classList.add('active');
+        } else {
+            pill.classList.remove('active');
+        }
     });
+    applyFilters();
+}
+
+function filterYear(yr) {
+    activeYear = yr;
+    var select = document.getElementById('resultsYearSelect');
+    if (select) select.value = yr;
+    applyFilters();
+}
+
+function resetFilters() {
+    filterCategory('all');
+    filterYear('all');
+}
+
+function applyFilters() {
+    var cards = document.querySelectorAll('.result-item-card');
+    var visibleCount = 0;
+
+    cards.forEach(function(card) {
+        var cardCat = card.getAttribute('data-category');
+        var cardYr = card.getAttribute('data-year');
+
+        var matchCat = (activeCategory === 'all' || cardCat === activeCategory);
+        var matchYr = (activeYear === 'all' || cardYr === activeYear);
+
+        if (matchCat && matchYr) {
+            card.style.display = '';
+            visibleCount++;
+        } else {
+            card.style.display = 'none';
+        }
+    });
+
+    var emptyMsg = document.getElementById('noResultsFilterMessage');
+    if (emptyMsg) {
+        if (visibleCount === 0 && cards.length > 0) {
+            emptyMsg.style.display = 'block';
+        } else {
+            emptyMsg.style.display = 'none';
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Initial Filter Apply if category is set in URL
+    if (activeCategory !== 'all' || activeYear !== 'all') {
+        applyFilters();
+    }
 
     // Slider arrows toggle effect & pagination dots
     var prevBtn = document.getElementById('sliderPrevBtn');

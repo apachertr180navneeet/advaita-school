@@ -19,6 +19,9 @@ class SchoolPagesAndFormsTest extends TestCase
             '/principals-desk',
             '/our-staff',
             '/academics',
+            '/academics/pre-primary',
+            '/academics/primary',
+            '/academics/secondary',
             '/results',
             '/admission-info',
             '/fee-structure',
@@ -43,6 +46,9 @@ class SchoolPagesAndFormsTest extends TestCase
         $this->get('/projectphp/about-us.php')->assertRedirect('/about-us');
         $this->get('/projectphp/academics.php')->assertRedirect('/academics');
         $this->get('/projectphp/contact.php')->assertRedirect('/contact');
+        $this->get('/pre-primary')->assertRedirect('/academics/pre-primary');
+        $this->get('/primary')->assertRedirect('/academics/primary');
+        $this->get('/secondary')->assertRedirect('/academics/secondary');
     }
 
     public function test_contact_form_submits_and_saves_to_database(): void

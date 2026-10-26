@@ -86,25 +86,110 @@
                     </li>
 
                     <!-- Programmes Dropdown Menu -->
-                    <li class="adv-nav-item has-dropdown {{ request()->routeIs('academics', 'results') ? 'active' : '' }}">
+                    <li class="adv-nav-item has-dropdown {{ request()->routeIs('academics*', 'results*') ? 'active' : '' }}">
                         <a href="{{ route('academics') }}" class="adv-nav-link" aria-haspopup="true" aria-expanded="false">
                             <span>Programmes</span>
                             <i class="fa-solid fa-chevron-down chevron-icon"></i>
                         </a>
-                        <ul class="adv-dropdown">
-                            <li class="adv-dropdown-item">
-                                <a href="{{ route('academics') }}" class="adv-dropdown-link {{ request()->routeIs('academics') ? 'active' : '' }}">
+                        <div class="adv-dropdown adv-dropdown-split" role="menu">
+                            <!-- Column 1: Academics -->
+                            <div class="adv-dropdown-col">
+                                <div class="adv-dropdown-col-title">
                                     <i class="fa-solid fa-graduation-cap"></i>
                                     <span>Academics</span>
-                                </a>
-                            </li>
-                            <li class="adv-dropdown-item">
-                                <a href="{{ route('results') }}" class="adv-dropdown-link {{ request()->routeIs('results') ? 'active' : '' }}">
-                                    <i class="fa-solid fa-square-poll-vertical"></i>
-                                    <span>Results</span>
-                                </a>
-                            </li>
-                        </ul>
+                                </div>
+                                <div class="adv-dropdown-item">
+                                    <a href="{{ route('academics.pre-primary') }}" class="adv-dropdown-link {{ request()->routeIs('academics.pre-primary') ? 'active' : '' }}">
+                                        <i class="fa-solid fa-shapes"></i>
+                                        <div class="adv-dropdown-link-content">
+                                            <span>Pre-Primary</span>
+                                            <span class="adv-dropdown-subtext">Nursery · LKG · UKG</span>
+                                        </div>
+                                        <span class="adv-dropdown-link-badge">New Wing</span>
+                                    </a>
+                                </div>
+                                <div class="adv-dropdown-item">
+                                    <a href="{{ route('academics.primary') }}" class="adv-dropdown-link {{ request()->routeIs('academics.primary') ? 'active' : '' }}">
+                                        <i class="fa-solid fa-book-open-reader"></i>
+                                        <div class="adv-dropdown-link-content">
+                                            <span>Primary (Classes 1–5)</span>
+                                            <span class="adv-dropdown-subtext">Abacus &amp; Olympiads</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="adv-dropdown-item">
+                                    <a href="{{ route('academics.secondary') }}" class="adv-dropdown-link {{ request()->routeIs('academics.secondary') ? 'active' : '' }}">
+                                        <i class="fa-solid fa-atom"></i>
+                                        <div class="adv-dropdown-link-content">
+                                            <span>Secondary (Classes 6–10)</span>
+                                            <span class="adv-dropdown-subtext">IIT Foundation &amp; CBSE</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="adv-dropdown-item" style="border-top: 1px dashed rgba(8, 59, 122, 0.1); margin-top: 4px; padding-top: 4px;">
+                                    <a href="{{ route('academics') }}" class="adv-dropdown-link {{ request()->routeIs('academics') && !request()->routeIs('academics.*') ? 'active' : '' }}">
+                                        <i class="fa-solid fa-book-open"></i>
+                                        <div class="adv-dropdown-link-content">
+                                            <span>All Academics Overview</span>
+                                            <span class="adv-dropdown-subtext">Curriculum &amp; Pedagogy</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Column 2: Results & Achievements -->
+                            <div class="adv-dropdown-col">
+                                <div class="adv-dropdown-col-title">
+                                    <i class="fa-solid fa-trophy"></i>
+                                    <span>Results &amp; Achievements</span>
+                                </div>
+                                <div class="adv-dropdown-item">
+                                    <a href="{{ route('results', ['category' => 'board']) }}" class="adv-dropdown-link {{ request()->routeIs('results') && request('category') === 'board' ? 'active' : '' }}">
+                                        <i class="fa-solid fa-award"></i>
+                                        <div class="adv-dropdown-link-content">
+                                            <span>Board Exam Results</span>
+                                            <span class="adv-dropdown-subtext">100% Pass · District 1st Rank</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="adv-dropdown-item">
+                                    <a href="{{ route('results', ['category' => 'olympiad']) }}" class="adv-dropdown-link {{ request()->routeIs('results') && request('category') === 'olympiad' ? 'active' : '' }}">
+                                        <i class="fa-solid fa-medal"></i>
+                                        <div class="adv-dropdown-link-content">
+                                            <span>Olympiad Results</span>
+                                            <span class="adv-dropdown-subtext">National &amp; International</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="adv-dropdown-item">
+                                    <a href="{{ route('results', ['category' => 'abacus']) }}" class="adv-dropdown-link {{ request()->routeIs('results') && request('category') === 'abacus' ? 'active' : '' }}">
+                                        <i class="fa-solid fa-calculator"></i>
+                                        <div class="adv-dropdown-link-content">
+                                            <span>Abacus Competitions</span>
+                                            <span class="adv-dropdown-subtext">Speed Arithmetic Awards</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="adv-dropdown-item">
+                                    <a href="{{ route('results', ['category' => 'iit_foundation']) }}" class="adv-dropdown-link {{ request()->routeIs('results') && request('category') === 'iit_foundation' ? 'active' : '' }}">
+                                        <i class="fa-solid fa-flask-vial"></i>
+                                        <div class="adv-dropdown-link-content">
+                                            <span>IIT Foundation Results</span>
+                                            <span class="adv-dropdown-subtext">Competitive Exam Milestones</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="adv-dropdown-item" style="border-top: 1px dashed rgba(8, 59, 122, 0.1); margin-top: 4px; padding-top: 4px;">
+                                    <a href="{{ route('results') }}" class="adv-dropdown-link {{ request()->routeIs('results') && (!request()->has('category') || request('category') === 'all') ? 'active' : '' }}">
+                                        <i class="fa-solid fa-square-poll-vertical"></i>
+                                        <div class="adv-dropdown-link-content">
+                                            <span>Centralized Results Hub</span>
+                                            <span class="adv-dropdown-subtext">All Student Achievements</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </li>
 
                     <!-- Admissions Dropdown Menu -->
@@ -282,25 +367,77 @@
             </ul>
         </li>
 
-        <li class="adv-mobile-item has-children {{ request()->routeIs('academics', 'results') ? 'is-active' : '' }}">
-            <a href="#" class="adv-mobile-link" role="button" aria-expanded="false">
+        <li class="adv-mobile-item has-children {{ request()->routeIs('academics*', 'results*') ? 'is-active' : '' }}">
+            <a href="#" class="adv-mobile-link" role="button" aria-expanded="{{ request()->routeIs('academics*', 'results*') ? 'true' : 'false' }}">
                 <span class="adv-mobile-link-text">
                     <i class="fa-solid fa-book-open-reader"></i>
                     <span>Programmes</span>
                 </span>
                 <i class="fa-solid fa-chevron-down adv-mobile-chevron"></i>
             </a>
-            <ul class="adv-mobile-submenu">
+            <ul class="adv-mobile-submenu {{ request()->routeIs('academics*', 'results*') ? 'is-expanded' : '' }}">
+                <li class="adv-mobile-group-header">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Academics</span>
+                </li>
                 <li>
-                    <a href="{{ route('academics') }}" class="adv-mobile-submenu-link {{ request()->routeIs('academics') ? 'active' : '' }}">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span>Academics</span>
+                    <a href="{{ route('academics.pre-primary') }}" class="adv-mobile-submenu-link {{ request()->routeIs('academics.pre-primary') ? 'active' : '' }}">
+                        <i class="fa-solid fa-shapes"></i>
+                        <span>Pre-Primary (Nursery–UKG)</span>
+                        <span class="adv-mobile-badge">New Wing</span>
                     </a>
                 </li>
                 <li>
-                    <a href="{{ route('results') }}" class="adv-mobile-submenu-link {{ request()->routeIs('results') ? 'active' : '' }}">
+                    <a href="{{ route('academics.primary') }}" class="adv-mobile-submenu-link {{ request()->routeIs('academics.primary') ? 'active' : '' }}">
+                        <i class="fa-solid fa-book-open-reader"></i>
+                        <span>Primary (Classes 1–5) · Abacus &amp; Olympiads</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('academics.secondary') }}" class="adv-mobile-submenu-link {{ request()->routeIs('academics.secondary') ? 'active' : '' }}">
+                        <i class="fa-solid fa-atom"></i>
+                        <span>Secondary (Classes 6–10) · IIT Foundation</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('academics') }}" class="adv-mobile-submenu-link {{ request()->routeIs('academics') && !request()->routeIs('academics.*') ? 'active' : '' }}">
+                        <i class="fa-solid fa-book-open"></i>
+                        <span>Academics Overview</span>
+                    </a>
+                </li>
+
+                <li class="adv-mobile-group-header">
+                    <i class="fa-solid fa-trophy"></i>
+                    <span>Results &amp; Achievements</span>
+                </li>
+                <li>
+                    <a href="{{ route('results', ['category' => 'board']) }}" class="adv-mobile-submenu-link {{ request()->routeIs('results') && request('category') === 'board' ? 'active' : '' }}">
+                        <i class="fa-solid fa-award"></i>
+                        <span>Board Examination Results (100% Pass)</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('results', ['category' => 'olympiad']) }}" class="adv-mobile-submenu-link {{ request()->routeIs('results') && request('category') === 'olympiad' ? 'active' : '' }}">
+                        <i class="fa-solid fa-medal"></i>
+                        <span>Olympiad Results</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('results', ['category' => 'abacus']) }}" class="adv-mobile-submenu-link {{ request()->routeIs('results') && request('category') === 'abacus' ? 'active' : '' }}">
+                        <i class="fa-solid fa-calculator"></i>
+                        <span>Abacus Competition Results</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('results', ['category' => 'iit_foundation']) }}" class="adv-mobile-submenu-link {{ request()->routeIs('results') && request('category') === 'iit_foundation' ? 'active' : '' }}">
+                        <i class="fa-solid fa-flask-vial"></i>
+                        <span>IIT Foundation Achievements</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('results') }}" class="adv-mobile-submenu-link {{ request()->routeIs('results') && (!request()->has('category') || request('category') === 'all') ? 'active' : '' }}">
                         <i class="fa-solid fa-square-poll-vertical"></i>
-                        <span>Results</span>
+                        <span>All Results &amp; Achievements</span>
                     </a>
                 </li>
             </ul>
