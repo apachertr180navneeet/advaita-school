@@ -512,16 +512,17 @@
 
             <!-- Official Requirements Notice Box -->
             <div class="docs-submission-alert mt-24">
-                <div class="d-flex align-items-center gap-14 flex-wrap">
-                    <div class="dsa-icon"><i class="fa-solid fa-clipboard-check"></i></div>
-                    <div class="flex-grow-1">
+                <div class="docs-submission-alert-inner">
+                    <div class="dsa-icon" aria-hidden="true"><i class="fa-solid fa-clipboard-check"></i></div>
+                    <div class="docs-submission-alert-content">
                         <h4 class="m-0 fs-14 font-extrabold text-navy">Important Admission Document Notice</h4>
                         <p class="m-0 fs-12 text-muted mt-2">
                             <strong>Note:</strong> Please verify the school's current document requirements before submitting the application. All original documents will be inspected by the verification desk and returned immediately.
                         </p>
                     </div>
-                    <a href="{{ route('online-registration') }}" class="btn-adv-primary" style="padding: 8px 16px; font-size: 12.5px;">
-                        Proceed to Registration <i class="fa-solid fa-arrow-right ms-1"></i>
+                    <a href="{{ route('online-registration') }}" class="btn-adv-primary">
+                        <span>Proceed to Registration</span>
+                        <i class="fa-solid fa-arrow-right ms-1"></i>
                     </a>
                 </div>
             </div>
@@ -987,4 +988,45 @@
     </section>
 
 </main>
+@endsection
+
+@section('scripts')
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const subnavLinks = document.querySelectorAll('.subnav-link');
+    const sections = Array.from(subnavLinks).map(link => {
+        const id = link.getAttribute('href');
+        if (id && id.startsWith('#')) {
+            return document.querySelector(id);
+        }
+        return null;
+    }).filter(Boolean);
+
+    function updateActiveSubnav() {
+        const scrollPosition = window.scrollY + 130;
+        let currentSectionId = '';
+
+        sections.forEach(section => {
+            const top = section.offsetTop;
+            const height = section.offsetHeight;
+            if (scrollPosition >= top && scrollPosition < top + height) {
+                currentSectionId = '#' + section.getAttribute('id');
+            }
+        });
+
+        if (currentSectionId) {
+            subnavLinks.forEach(link => {
+                if (link.getAttribute('href') === currentSectionId) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        }
+    }
+
+    window.addEventListener('scroll', updateActiveSubnav, { passive: true });
+    updateActiveSubnav();
+});
+</script>
 @endsection
