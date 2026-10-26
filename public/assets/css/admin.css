@@ -9232,5 +9232,433 @@
     margin-top: 3px;
 }
 
+/* ==========================================================================
+   Global Admin Utility Classes & Results Module Styles
+   ========================================================================== */
+
+/* Color Utilities */
+.text-navy { color: #083B7A !important; }
+.text-orange { color: #F37021 !important; }
+.text-blue { color: #2563EB !important; }
+.text-muted { color: #64748B !important; }
+.text-dark { color: #1E293B !important; }
+
+/* Typography Utilities */
+.font-semibold { font-weight: 600 !important; }
+.font-bold { font-weight: 700 !important; }
+.font-extrabold { font-weight: 800 !important; }
+.fs-11 { font-size: 11px !important; }
+.fs-12 { font-size: 12px !important; }
+.fs-13 { font-size: 13px !important; }
+.fs-14 { font-size: 14px !important; }
+.fs-15 { font-size: 15px !important; }
+.fs-16 { font-size: 16px !important; }
+.fs-18 { font-size: 18px !important; }
+.fs-20 { font-size: 20px !important; }
+.fs-24 { font-size: 24px !important; }
+.fs-36 { font-size: 36px !important; }
+
+/* Flex & Spacing Utilities */
+.gap-4 { gap: 4px !important; }
+.gap-6 { gap: 6px !important; }
+.gap-8 { gap: 8px !important; }
+.gap-10 { gap: 10px !important; }
+.gap-12 { gap: 12px !important; }
+.gap-14 { gap: 14px !important; }
+.gap-16 { gap: 16px !important; }
+.p-18 { padding: 18px !important; }
+.p-24 { padding: 24px !important; }
+.p-30 { padding: 30px !important; }
+.py-40 { padding-top: 40px !important; padding-bottom: 40px !important; }
+.mt-2 { margin-top: 2px !important; }
+.mt-4 { margin-top: 4px !important; }
+.mt-6 { margin-top: 6px !important; }
+.mt-8 { margin-top: 8px !important; }
+.mt-12 { margin-top: 12px !important; }
+.mt-16 { margin-top: 16px !important; }
+.mt-20 { margin-top: 20px !important; }
+.mt-24 { margin-top: 24px !important; }
+.mb-0 { margin-bottom: 0 !important; }
+.mb-2 { margin-bottom: 2px !important; }
+.mb-4 { margin-bottom: 4px !important; }
+.mb-6 { margin-bottom: 6px !important; }
+.mb-8 { margin-bottom: 8px !important; }
+.mb-12 { margin-bottom: 12px !important; }
+.mb-14 { margin-bottom: 14px !important; }
+.mb-16 { margin-bottom: 16px !important; }
+.mb-20 { margin-bottom: 20px !important; }
+.mb-24 { margin-bottom: 24px !important; }
+.border-top { border-top: 1px solid #E2E8F0 !important; }
+.pt-12 { padding-top: 12px !important; }
+.cursor-pointer { cursor: pointer; }
+
+/* Results Filter Bar */
+.results-filter-card {
+    background: #ffffff;
+    border: 1px solid var(--admin-border, #E2E8F0);
+    border-radius: 16px;
+    padding: 14px 20px;
+    box-shadow: 0 4px 14px rgba(8, 59, 122, 0.03);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.results-session-filter-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #F8FAFC;
+    padding: 8px 14px;
+    border-radius: 10px;
+    border: 1.5px solid #E2E8F0;
+}
+
+.session-filter-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #083B7A;
+    margin: 0;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.session-filter-select {
+    border: 1.5px solid #CBD5E1;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #0F172A;
+    background: #ffffff;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.session-filter-select:focus {
+    border-color: #083B7A;
+    box-shadow: 0 0 0 3px rgba(8, 59, 122, 0.1);
+}
+
+.btn-clear-filter {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #DC2626;
+    background: #FEF2F2;
+    border: 1px solid #FEE2E2;
+    padding: 6px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-clear-filter:hover {
+    background: #DC2626;
+    color: #ffffff;
+    border-color: #DC2626;
+    transform: translateY(-1px);
+}
+
+/* Student Avatar in Table */
+.student-avatar-box {
+    position: relative;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: linear-gradient(135deg, #083B7A 0%, #062A57 100%);
+    border: 2px solid #E2E8F0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+.student-avatar-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.25s ease;
+    display: block;
+}
+
+.student-avatar-box:hover img {
+    transform: scale(1.12);
+}
+
+.avatar-crown-badge {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #F37021;
+    color: #ffffff;
+    font-size: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.student-name-text {
+    font-size: 14.5px;
+    font-weight: 800;
+    color: #083B7A;
+    line-height: 1.25;
+}
+
+.achievement-title-text {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #F37021;
+    margin-top: 2px;
+    line-height: 1.35;
+}
+
+.achievement-desc-preview {
+    font-size: 11.5px;
+    color: #64748B;
+    margin-top: 2px;
+    line-height: 1.3;
+}
+
+.badge-featured-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 100%);
+    color: #C2410C;
+    border: 1px solid #FED7AA;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 10.5px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+/* Category Pill Badges */
+.badge-cat-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-bottom: 4px;
+}
+
+.badge-cat-pill.board {
+    background: #FEF3C7;
+    color: #92400E;
+    border: 1px solid #FDE68A;
+}
+
+.badge-cat-pill.olympiad {
+    background: #EFF6FF;
+    color: #1D4ED8;
+    border: 1px solid #DBEAFE;
+}
+
+.badge-cat-pill.abacus {
+    background: #ECFDF5;
+    color: #047857;
+    border: 1px solid #A7F3D0;
+}
+
+.badge-cat-pill.iit_foundation {
+    background: #FAF5FF;
+    color: #7E22CE;
+    border: 1px solid #F3E8FF;
+}
+
+.badge-cat-pill.competitive {
+    background: #EEF2FF;
+    color: #4338CA;
+    border: 1px solid #E0E7FF;
+}
+
+.badge-cat-pill.sports {
+    background: #FFF7ED;
+    color: #C2410C;
+    border: 1px solid #FFEDD5;
+}
+
+.exam-name-text {
+    font-size: 12px;
+    color: #64748B;
+    line-height: 1.35;
+}
+
+.score-badge {
+    display: inline-flex;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 800;
+    color: #083B7A;
+    background: #F1F5F9;
+    padding: 3px 8px;
+    border-radius: 6px;
+    border: 1px solid #E2E8F0;
+}
+
+.rank-badge {
+    display: inline-flex;
+    align-items: center;
+    font-size: 11.5px;
+    font-weight: 800;
+    color: #C2410C;
+    background: #FFF7ED;
+    padding: 3px 8px;
+    border-radius: 6px;
+    border: 1px solid #FFEDD5;
+}
+
+.certificate-link-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #2563EB;
+    text-decoration: none;
+    background: #EFF6FF;
+    border: 1px solid #BFDBFE;
+    padding: 3px 8px;
+    border-radius: 6px;
+    margin-top: 4px;
+    transition: all 0.2s;
+}
+
+.certificate-link-pill:hover {
+    background: #2563EB;
+    color: #ffffff;
+    border-color: #2563EB;
+}
+
+/* Visual Cards Grid Customization for Results */
+.student-result-card {
+    overflow: hidden;
+    transition: all 0.25s ease;
+}
+
+.student-result-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(8, 59, 122, 0.1);
+}
+
+.student-card-media {
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #083B7A 0%, #05244C 100%);
+}
+
+.student-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+    transition: transform 0.3s ease;
+}
+
+.student-result-card:hover .student-card-media img {
+    transform: scale(1.06);
+}
+
+.card-floating-cat {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 2;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.card-floating-crown {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    z-index: 2;
+    background: linear-gradient(135deg, #F37021 0%, #EA580C 100%);
+    color: #ffffff;
+    font-size: 10.5px;
+    font-weight: 800;
+    padding: 4px 9px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(243, 112, 33, 0.35);
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.student-card-name {
+    font-size: 16px;
+    font-weight: 800;
+    color: #083B7A;
+    margin: 0 0 3px 0;
+    line-height: 1.25;
+}
+
+.student-card-title {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #F37021;
+    margin: 0 0 10px 0;
+    line-height: 1.35;
+}
+
+/* Form Toggle & Action Styles */
+.toggle-switch-card {
+    background: #F8FAFC;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 14px 18px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.toggle-switch-card:hover {
+    border-color: #CBD5E1;
+    background: #ffffff;
+}
+
+.toggle-card-title {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #083B7A;
+}
+
+.toggle-card-desc {
+    font-size: 11.5px;
+    color: #64748B;
+    margin-top: 1px;
+}
+
+.form-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 20px;
+    border-top: 1.5px solid #F1F5F9;
+    margin-top: 24px;
+}
+
+
 
 

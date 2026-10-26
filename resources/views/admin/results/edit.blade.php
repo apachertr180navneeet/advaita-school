@@ -184,17 +184,29 @@
 
                 <!-- Featured Topper Checkbox -->
                 <div class="form-group">
-                    <label class="d-flex align-items-center gap-10 cursor-pointer">
-                        <input type="checkbox" name="is_featured" value="1" {{ old('is_featured', $result->is_featured) ? 'checked' : '' }} style="width: 18px; height: 18px;">
-                        <span class="font-bold text-navy">Highlight as Featured Topper (Top of Results Page)</span>
+                    <label class="toggle-switch-card" for="is_featured">
+                        <input type="checkbox" id="is_featured" name="is_featured" value="1" {{ old('is_featured', $result->is_featured) ? 'checked' : '' }} style="width: 18px; height: 18px; accent-color: #F37021;">
+                        <div>
+                            <div class="toggle-card-title d-flex align-items-center gap-6">
+                                <i class="fa-solid fa-crown text-orange"></i>
+                                <span>Featured District Topper Spotlight</span>
+                            </div>
+                            <div class="toggle-card-desc">Showcase prominently in the hero spotlight card on the Results page.</div>
+                        </div>
                     </label>
                 </div>
 
                 <!-- Active Toggle -->
                 <div class="form-group">
-                    <label class="d-flex align-items-center gap-10 cursor-pointer">
-                        <input type="checkbox" name="is_active" value="1" {{ old('is_active', $result->is_active) ? 'checked' : '' }} style="width: 18px; height: 18px;">
-                        <span class="font-bold text-navy">Publish achievement on public website</span>
+                    <label class="toggle-switch-card" for="is_active">
+                        <input type="checkbox" id="is_active" name="is_active" value="1" {{ old('is_active', $result->is_active) ? 'checked' : '' }} style="width: 18px; height: 18px; accent-color: #083B7A;">
+                        <div>
+                            <div class="toggle-card-title d-flex align-items-center gap-6">
+                                <i class="fa-solid fa-globe text-blue"></i>
+                                <span>Publish on Public Website</span>
+                            </div>
+                            <div class="toggle-card-desc">Enable visibility on the frontend Results &amp; Achievements directory.</div>
+                        </div>
                     </label>
                 </div>
             </div>

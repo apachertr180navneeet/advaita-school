@@ -72,40 +72,44 @@
         </div>
     </div>
 
-    <!-- 3. Filters Bar Card -->
-    <div class="cards-table-card p-18">
-        <form method="GET" action="{{ route('admin.results.index') }}" class="d-flex align-items-center gap-16 flex-wrap m-0">
-            <div class="d-flex align-items-center gap-8">
-                <label class="fs-13 font-bold text-navy m-0"><i class="fa-solid fa-filter text-orange me-1"></i> Category:</label>
-                <select name="category" class="form-control" style="width: auto; padding: 7px 14px; font-size: 13px;" onchange="this.form.submit()">
-                    <option value="">All Categories ({{ \App\Models\AcademicResult::count() }})</option>
-                    @foreach($categories as $catKey => $cat)
-                    <option value="{{ $catKey }}" {{ $selectedCategory === $catKey ? 'selected' : '' }}>
-                        {{ $cat['label'] }}
-                    </option>
-                    @endforeach
-                </select>
-            </div>
+    <!-- 3. Category Filter Pills Bar & Session Filter Row -->
+    <div class="d-flex align-items-center justify-content-between gap-16 flex-wrap mb-16">
+        <div class="stage-filter-pills-bar m-0 flex-grow-1">
+            <a href="{{ route('admin.results.index', array_filter(['year' => $selectedYear])) }}" class="btn-stage-pill {{ empty($selectedCategory) ? 'active' : '' }}">
+                <i class="fa-solid fa-trophy"></i>
+                <span>All Achievements</span>
+                <span class="pill-badge">{{ \App\Models\AcademicResult::when($selectedYear, fn($q) => $q->where('academic_year', $selectedYear))->count() }}</span>
+            </a>
+            @foreach($categories as $catKey => $cat)
+            <a href="{{ route('admin.results.index', array_filter(['category' => $catKey, 'year' => $selectedYear])) }}" class="btn-stage-pill {{ $selectedCategory === $catKey ? 'active' : '' }}">
+                <i class="{{ $cat['icon'] }}"></i>
+                <span>{{ $cat['label'] }}</span>
+                <span class="pill-badge">{{ \App\Models\AcademicResult::where('category', $catKey)->when($selectedYear, fn($q) => $q->where('academic_year', $selectedYear))->count() }}</span>
+            </a>
+            @endforeach
+        </div>
 
-            <div class="d-flex align-items-center gap-8">
-                <label class="fs-13 font-bold text-navy m-0"><i class="fa-regular fa-calendar-days text-navy me-1"></i> Session:</label>
-                <select name="year" class="form-control" style="width: auto; padding: 7px 14px; font-size: 13px;" onchange="this.form.submit()">
-                    <option value="">All Academic Sessions</option>
-                    @foreach($academicYears as $yr)
-                    <option value="{{ $yr }}" {{ $selectedYear === $yr ? 'selected' : '' }}>
-                        Session {{ $yr }}
-                    </option>
-                    @endforeach
-                </select>
-            </div>
-
+        <!-- Academic Session Filter -->
+        <div class="results-session-filter-wrap">
+            <label class="session-filter-label" for="resultsSessionSelect">
+                <i class="fa-regular fa-calendar-days text-orange"></i>
+                <span>Session:</span>
+            </label>
+            <select id="resultsSessionSelect" class="session-filter-select" onchange="location.href=this.value">
+                <option value="{{ route('admin.results.index', array_filter(['category' => $selectedCategory])) }}">All Academic Sessions</option>
+                @foreach($academicYears as $yr)
+                <option value="{{ route('admin.results.index', array_filter(['category' => $selectedCategory, 'year' => $yr])) }}" {{ $selectedYear === $yr ? 'selected' : '' }}>
+                    Session {{ $yr }}
+                </option>
+                @endforeach
+            </select>
             @if(!empty($selectedCategory) || !empty($selectedYear))
-            <a href="{{ route('admin.results.index') }}" class="btn-admin btn-secondary" style="padding: 7px 14px; font-size: 12px;">
+            <a href="{{ route('admin.results.index') }}" class="btn-clear-filter" title="Clear all active filters">
                 <i class="fa-solid fa-xmark"></i>
-                <span>Clear Filters</span>
+                <span>Clear</span>
             </a>
             @endif
-        </form>
+        </div>
     </div>
 
     <!-- 4. Table & Cards Switcher Card -->
@@ -139,14 +143,13 @@
             <table class="admin-table">
                 <thead>
                     <tr>
-                        <th style="width: 70px; text-align: center;">Order</th>
-                        <th style="width: 80px;">Student</th>
-                        <th>Student &amp; Achievement Title</th>
+                        <th style="width: 65px; text-align: center;">Order</th>
+                        <th>Student &amp; Achievement</th>
                         <th style="width: 220px;">Category &amp; Exam</th>
-                        <th style="width: 160px;">Score &amp; Rank</th>
-                        <th style="width: 120px;">Academic Year</th>
+                        <th style="width: 170px;">Score &amp; Honors</th>
+                        <th style="width: 130px; text-align: center;">Session</th>
                         <th style="width: 110px; text-align: center;">Status</th>
-                        <th style="width: 110px; text-align: right;">Actions</th>
+                        <th style="width: 100px; text-align: right;">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -157,57 +160,66 @@
                             <span class="badge-neutral font-bold">#{{ $result->order }}</span>
                         </td>
 
-                        <!-- Student Photo -->
+                        <!-- Student & Achievement Info -->
                         <td>
-                            <div class="user-avatar-circle" style="width: 52px; height: 52px; overflow: hidden; border-radius: 12px; border: 2px solid #E2E8F0; background: #083B7A;">
-                                <img src="{{ $result->photo_url }}" alt="{{ $result->student_name }}" style="width: 100%; height: 100%; object-fit: cover;">
-                            </div>
-                        </td>
-
-                        <!-- Title & Student -->
-                        <td>
-                            <div class="font-extrabold text-navy fs-14">{{ $result->student_name }}</div>
-                            <div class="text-orange font-bold fs-12 mt-2">{{ $result->title }}</div>
-                            <div class="d-flex align-items-center gap-6 mt-4 flex-wrap">
-                                @if($result->class_grade)
-                                <span class="badge-blue-pill">
-                                    {{ $result->class_grade }}
-                                </span>
-                                @endif
-                                @if($result->is_featured)
-                                <span class="badge-orange-pill">
-                                    <i class="fa-solid fa-crown"></i> District Topper
-                                </span>
-                                @endif
+                            <div class="d-flex align-items-center gap-14">
+                                <div class="student-avatar-box">
+                                    <img src="{{ $result->photo_url }}" alt="{{ $result->student_name }}" loading="lazy">
+                                    @if($result->is_featured)
+                                    <span class="avatar-crown-badge" title="District Topper Spotlight">
+                                        <i class="fa-solid fa-crown"></i>
+                                    </span>
+                                    @endif
+                                </div>
+                                <div class="flex-grow-1">
+                                    <div class="d-flex align-items-center gap-8 flex-wrap">
+                                        <span class="student-name-text">{{ $result->student_name }}</span>
+                                        @if($result->class_grade)
+                                        <span class="badge-blue-pill">{{ $result->class_grade }}</span>
+                                        @endif
+                                        @if($result->is_featured)
+                                        <span class="badge-featured-pill">
+                                            <i class="fa-solid fa-crown"></i> District Topper
+                                        </span>
+                                        @endif
+                                    </div>
+                                    <div class="achievement-title-text">{{ $result->title }}</div>
+                                    @if($result->description)
+                                    <div class="achievement-desc-preview">{{ Str::limit($result->description, 80) }}</div>
+                                    @endif
+                                </div>
                             </div>
                         </td>
 
                         <!-- Category & Exam -->
                         <td>
-                            <span class="badge-stage {{ $result->category === 'board' ? 'secondary' : ($result->category === 'olympiad' ? 'primary' : 'pre_primary') }} mb-4 d-inline-block">
+                            <div class="badge-cat-pill {{ $result->category }}">
                                 <i class="{{ $result->category_icon }}"></i>
-                                {{ $result->category_label }}
-                            </span>
-                            <div class="text-muted fs-12">{{ $result->exam_name }}</div>
+                                <span>{{ $result->category_label }}</span>
+                            </div>
+                            <div class="exam-name-text">{{ $result->exam_name }}</div>
                         </td>
 
-                        <!-- Score & Rank -->
+                        <!-- Score & Honors -->
                         <td>
-                            @if($result->score)
-                            <div class="font-extrabold text-navy fs-15">{{ $result->score }}</div>
-                            @endif
-                            @if($result->rank)
-                            <div class="text-orange font-bold fs-12 mt-2">{{ $result->rank }}</div>
-                            @endif
+                            <div class="d-flex align-items-center gap-6 flex-wrap">
+                                @if($result->score)
+                                <span class="score-badge">{{ $result->score }}</span>
+                                @endif
+                                @if($result->rank)
+                                <span class="rank-badge">{{ $result->rank }}</span>
+                                @endif
+                            </div>
                             @if($result->certificate_url)
-                            <a href="{{ $result->certificate_url }}" target="_blank" class="text-blue fs-11 font-bold d-inline-flex align-items-center gap-4 mt-2" title="View Certificate/Poster">
-                                <i class="fa-solid fa-file-image"></i> View Certificate
+                            <a href="{{ $result->certificate_url }}" target="_blank" class="certificate-link-pill" title="View Official Certificate/Poster">
+                                <i class="fa-solid fa-file-image"></i>
+                                <span>Certificate</span>
                             </a>
                             @endif
                         </td>
 
                         <!-- Session -->
-                        <td>
+                        <td style="text-align: center;">
                             <span class="badge-neutral font-bold">Session {{ $result->academic_year }}</span>
                         </td>
 
@@ -241,7 +253,7 @@
                     </tr>
                     @empty
                     <tr>
-                        <td colspan="8" class="text-center py-40">
+                        <td colspan="7" class="text-center py-40">
                             <div class="empty-state-box p-30">
                                 <i class="fa-solid fa-trophy fs-36 text-muted mb-12"></i>
                                 <h4 class="text-navy font-bold fs-16 mb-6">No student achievements found</h4>
@@ -261,31 +273,41 @@
         <!-- 4B. Visual Cards Grid (Toggled Mode) -->
         <div class="cards-visual-grid" id="resultsGridContainer">
             @foreach($results as $res)
-            <div class="visual-card-item">
-                <div class="visual-card-media" style="height: 190px;">
+            <div class="visual-card-item student-result-card">
+                <div class="visual-card-media student-card-media">
                     <img src="{{ $res->photo_url }}" alt="{{ $res->student_name }}" loading="lazy">
-                    <div class="visual-card-badge badge-orange-pill" style="top: 10px; left: 10px; border-radius: 20px;">
+                    <div class="badge-cat-pill {{ $res->category }} card-floating-cat">
                         <i class="{{ $res->category_icon }}"></i>
-                        {{ $res->category_label }}
+                        <span>{{ $res->category_label }}</span>
                     </div>
+                    @if($res->is_featured)
+                    <div class="card-floating-crown">
+                        <i class="fa-solid fa-crown"></i> District Topper
+                    </div>
+                    @endif
                     <div class="live-visual-order">#{{ $res->order }}</div>
                 </div>
 
                 <div class="visual-card-body">
                     <div class="d-flex align-items-center justify-content-between gap-6 mb-8">
-                        <span class="fs-12 font-bold text-dark"><i class="fa-solid fa-school text-muted me-1"></i>{{ $res->class_grade ?? 'CBSE' }}</span>
+                        <span class="fs-12 font-bold text-dark"><i class="fa-solid fa-school text-muted me-1"></i>{{ $res->class_grade ?? 'CBSE Wing' }}</span>
                         <span class="badge-neutral font-bold">Session {{ $res->academic_year }}</span>
                     </div>
 
-                    <h4 class="text-navy fs-16 font-extrabold mb-4">{{ $res->student_name }}</h4>
-                    <p class="text-orange fs-13 font-bold mb-8">{{ $res->title }}</p>
+                    <h4 class="student-card-name">{{ $res->student_name }}</h4>
+                    <p class="student-card-title">{{ $res->title }}</p>
 
-                    <div class="d-flex align-items-center gap-8 mb-14 flex-wrap">
+                    <div class="d-flex align-items-center gap-6 mb-12 flex-wrap">
                         @if($res->score)
-                        <div class="badge-blue-pill fs-12 font-extrabold">{{ $res->score }}</div>
+                        <span class="score-badge">{{ $res->score }}</span>
                         @endif
                         @if($res->rank)
-                        <div class="badge-orange-pill fs-12 font-extrabold">{{ $res->rank }}</div>
+                        <span class="rank-badge">{{ $res->rank }}</span>
+                        @endif
+                        @if($res->certificate_url)
+                        <a href="{{ $res->certificate_url }}" target="_blank" class="certificate-link-pill">
+                            <i class="fa-solid fa-file-image"></i> Certificate
+                        </a>
                         @endif
                     </div>
 
