@@ -200,14 +200,88 @@ html {
     text-align: right;
 }
 
-/* Eligibility Matrix Table */
+/* ==========================================================================
+   ELIGIBILITY MATRIX TABLE (PREMIUM DESIGN)
+   ========================================================================== */
 .eligibility-table-card {
     background: #ffffff;
-    border: 1px solid #e2e8f0;
+    border: 1.5px solid #e2e8f0;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 8px 25px rgba(8, 59, 122, 0.05);
+    box-shadow: 0 10px 30px rgba(8, 59, 122, 0.07);
     margin-top: 24px;
+}
+
+.table-card-topbar {
+    background: #f8fafc;
+    border-bottom: 2px solid #e2e8f0;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.table-topbar-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #083B7A 0%, #05264f 100%);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    box-shadow: 0 4px 12px rgba(8, 59, 122, 0.25);
+    flex-shrink: 0;
+}
+
+.table-topbar-title {
+    font-size: 16.5px;
+    font-weight: 800;
+    color: #083B7A;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.table-topbar-sub {
+    font-size: 12.5px;
+    color: #64748b;
+    margin: 2px 0 0 0;
+}
+
+.table-cutoff-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: #fff7ed;
+    color: #c2410c;
+    border: 1px solid #fed7aa;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.btn-table-topbar {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: #083B7A;
+    color: #ffffff !important;
+    padding: 7px 15px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-table-topbar:hover {
+    background: #F37021;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(243, 112, 33, 0.25);
 }
 
 .eligibility-table {
@@ -215,31 +289,265 @@ html {
     border-collapse: collapse;
 }
 
-.eligibility-table th {
-    background: #f1f5f9;
-    color: #083B7A;
+.eligibility-table thead th {
+    background: #083B7A;
+    color: #ffffff;
     font-weight: 800;
-    font-size: 12.5px;
+    font-size: 12px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 16px 20px;
-    border-bottom: 2px solid #cbd5e1;
-}
-
-.eligibility-table td {
-    padding: 16px 20px;
-    border-bottom: 1px solid #f1f5f9;
-    font-size: 13.5px;
-    color: #334155;
-    vertical-align: middle;
+    letter-spacing: 0.6px;
+    padding: 16px 22px;
+    border: none;
+    white-space: nowrap;
 }
 
 .eligibility-table tbody tr {
-    transition: background-color 0.15s ease;
+    transition: background-color 0.15s ease, box-shadow 0.15s ease;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.eligibility-table tbody tr:nth-child(even) {
+    background: #fafcff;
 }
 
 .eligibility-table tbody tr:hover {
+    background: #eff6ff;
+    box-shadow: inset 4px 0 0 #F37021;
+}
+
+.eligibility-table td {
+    padding: 18px 22px;
+    vertical-align: middle;
+}
+
+/* Class Grade Column */
+.class-grade-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.class-grade-name {
+    font-size: 16px;
+    font-weight: 800;
+    color: #083B7A;
+    line-height: 1.2;
+}
+
+.wing-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 6px;
+    line-height: 1.3;
+}
+
+.wing-tag.preprimary {
+    background: #fff7ed;
+    color: #c2410c;
+    border: 1px solid #fed7aa;
+}
+
+.wing-tag.primary {
+    background: #eff6ff;
+    color: #1d4ed8;
+    border: 1px solid #bfdbfe;
+}
+
+.wing-tag.secondary {
+    background: #f5f3ff;
+    color: #6d28d9;
+    border: 1px solid #ddd6fe;
+}
+
+/* Age Badge Column */
+.age-badge-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.age-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    font-weight: 800;
+    padding: 5px 12px;
+    border-radius: 9999px;
+    line-height: 1.2;
+}
+
+.age-pill.preprimary {
+    background: #fff7ed;
+    color: #c2410c;
+    border: 1.5px solid #fed7aa;
+}
+
+.age-pill.primary {
+    background: #eff6ff;
+    color: #1d4ed8;
+    border: 1.5px solid #bfdbfe;
+}
+
+.age-pill.secondary {
+    background: #f5f3ff;
+    color: #6d28d9;
+    border: 1.5px solid #ddd6fe;
+}
+
+.age-subtext {
+    font-size: 11px;
+    color: #64748b;
+    font-weight: 600;
+    padding-left: 4px;
+}
+
+/* Criterion Column */
+.criterion-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.criterion-text {
+    font-size: 13.5px;
+    color: #1e293b;
+    line-height: 1.5;
+    font-weight: 500;
+}
+
+.criterion-req-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: #f1f5f9;
+    color: #334155;
+    border: 1px solid #e2e8f0;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 6px;
+}
+
+.criterion-req-tag i {
+    color: #ea580c;
+}
+
+/* Entry Mode & Action Column */
+.entry-mode-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.status-live-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 800;
+    color: #15803d;
+    background: #dcfce7;
+    border: 1px solid #bbf7d0;
+    padding: 3px 9px;
+    border-radius: 9999px;
+    white-space: nowrap;
+}
+
+.status-live-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #16a34a;
+    display: inline-block;
+}
+
+.btn-table-apply-row {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    background: #083B7A;
+    color: #ffffff !important;
+    font-size: 11.5px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.btn-table-apply-row:hover {
+    background: #F37021;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(243, 112, 33, 0.25);
+}
+
+/* Table Footer Callout */
+.eligibility-table-footer {
     background: #f8fafc;
+    border-top: 2px solid #e2e8f0;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.etf-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #e0f2fe;
+    color: #0284c7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.etf-content {
+    flex: 1;
+    font-size: 12.5px;
+    color: #475569;
+    line-height: 1.5;
+}
+
+.etf-content strong {
+    color: #083B7A;
+}
+
+.btn-etf-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #083B7A !important;
+    font-size: 12.5px;
+    font-weight: 800;
+    text-decoration: underline;
+    white-space: nowrap;
+}
+
+.btn-etf-link:hover {
+    color: #F37021 !important;
+}
+
+@media (max-width: 768px) {
+    .eligibility-table-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
 }
 
 /* Documents Checklist Grid */

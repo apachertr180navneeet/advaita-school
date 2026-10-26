@@ -413,33 +413,89 @@
             </div>
 
             <div class="eligibility-table-card">
+                <!-- Table Card Top Header Bar -->
+                <div class="table-card-topbar">
+                    <div class="d-flex align-items-center gap-12 flex-wrap">
+                        <div class="table-topbar-icon" aria-hidden="true">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <h3 class="table-topbar-title">Class-wise Age &amp; Admission Norms Matrix</h3>
+                            <p class="table-topbar-sub">Academic Session {{ $academicYear ?? '2026–27' }} &middot; Structured in accordance with NEP 2020 &amp; CBSE admission bylaws</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center gap-10 flex-wrap">
+                        <span class="table-cutoff-pill">
+                            <i class="fa-solid fa-calendar-check text-orange"></i>
+                            <span>Cut-Off Date: <strong>31st December</strong></span>
+                        </span>
+                        <a href="{{ route('admission-guidelines.download') }}" class="btn-table-topbar" title="Download Guidelines PDF">
+                            <i class="fa-solid fa-file-arrow-down"></i>
+                            <span>Download PDF</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Table Content -->
                 <div class="table-responsive">
                     <table class="eligibility-table">
                         <thead>
                             <tr>
-                                <th style="width: 170px;">Class / Grade</th>
-                                <th style="width: 190px;">Minimum Age Limit</th>
-                                <th>Eligibility Criteria &amp; Academic Requirements</th>
-                                <th style="width: 140px; text-align: center;">Entry Mode</th>
+                                <th style="width: 20%;">Class / Grade</th>
+                                <th style="width: 25%;">Minimum Age Criteria</th>
+                                <th style="width: 40%;">Eligibility &amp; Document Requirements</th>
+                                <th style="width: 15%; text-align: center;">Status &amp; Action</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach($eligibilityList as $el)
                             <tr>
                                 <td>
-                                    <div class="font-extrabold text-navy fs-15">{{ $el['grade'] }}</div>
-                                    <span class="text-muted fs-11">Advaita Wing</span>
+                                    <div class="class-grade-wrap">
+                                        <div class="class-grade-name">{{ $el['grade'] }}</div>
+                                        <span class="wing-tag {{ $el['wing_type'] ?? 'primary' }}">
+                                            @if(($el['wing_type'] ?? '') === 'preprimary')
+                                            <i class="fa-solid fa-shapes"></i>
+                                            @elseif(($el['wing_type'] ?? '') === 'secondary')
+                                            <i class="fa-solid fa-graduation-cap"></i>
+                                            @else
+                                            <i class="fa-solid fa-book-open"></i>
+                                            @endif
+                                            <span>{{ $el['wing'] ?? 'Advaita Wing' }}</span>
+                                        </span>
+                                    </div>
                                 </td>
                                 <td>
-                                    <span class="badge-blue-pill font-extrabold fs-12">
-                                        <i class="fa-regular fa-clock me-1"></i> {{ $el['age'] }}
-                                    </span>
+                                    <div class="age-badge-group">
+                                        <span class="age-pill {{ $el['wing_type'] ?? 'primary' }}">
+                                            <i class="fa-regular fa-clock"></i>
+                                            <strong>{{ $el['age_badge'] ?? $el['age'] }}</strong>
+                                        </span>
+                                        <span class="age-subtext">{{ $el['age_note'] ?? 'As on 31st Dec 2026' }}</span>
+                                    </div>
                                 </td>
                                 <td>
-                                    <div class="text-dark fs-13 line-height-15">{{ $el['criterion'] }}</div>
+                                    <div class="criterion-content">
+                                        <div class="criterion-text">{{ $el['criterion'] }}</div>
+                                        @if(!empty($el['doc_req']))
+                                        <div class="criterion-req-tag">
+                                            <i class="fa-solid fa-file-circle-check"></i>
+                                            <span>{{ $el['doc_req'] }}</span>
+                                        </div>
+                                        @endif
+                                    </div>
                                 </td>
                                 <td style="text-align: center;">
-                                    <span class="badge-neutral font-bold fs-11">Direct / Merit</span>
+                                    <div class="entry-mode-cell">
+                                        <span class="status-live-chip">
+                                            <span class="status-live-dot"></span>
+                                            <span>Admissions Open</span>
+                                        </span>
+                                        <a href="#quick-enquiry" class="btn-table-apply-row">
+                                            <span>Enquire</span>
+                                            <i class="fa-solid fa-arrow-right"></i>
+                                        </a>
+                                    </div>
                                 </td>
                             </tr>
                             @endforeach
@@ -447,10 +503,19 @@
                     </table>
                 </div>
 
-                <div class="p-16 border-top" style="background: #F8FAFC;">
-                    <div class="d-flex align-items-center gap-8 fs-12 text-muted">
-                        <i class="fa-solid fa-circle-info text-navy"></i>
-                        <span><strong>Verification Rule:</strong> Proof of date of birth must be established through a verified birth certificate issued by Municipal Authorities or Village Panchayat.</span>
+                <!-- Table Card Bottom Callout -->
+                <div class="eligibility-table-footer">
+                    <div class="etf-icon" aria-hidden="true">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <div class="etf-content">
+                        <strong>Statutory Age Verification Rule:</strong> Proof of date of birth must be established through a verified birth certificate issued by Municipal Corporation, Nagar Palika, or Gram Panchayat. For Class 2 onwards, an original counter-signed Transfer Certificate (TC) is strictly mandatory before admission confirmation.
+                    </div>
+                    <div class="etf-action">
+                        <a href="{{ route('admission-guidelines') }}" class="btn-etf-link">
+                            <span>Full Guidelines</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
                     </div>
                 </div>
             </div>
