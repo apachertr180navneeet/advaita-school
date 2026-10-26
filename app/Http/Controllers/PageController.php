@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Models\AcademicProgramme;
 use App\Models\AcademicResult;
+use App\Models\FeeStructure;
 use App\Models\Setting;
+use App\Services\AdmissionGuidelinesPdfService;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 use Illuminate\View\View;
 
 class PageController extends Controller
@@ -414,11 +417,417 @@ class PageController extends Controller
         $seo = $this->getPageSeo(
             'admission_info',
             'Admission Information (2026-27) - Advaita School of Excellence',
-            'Comprehensive admission guidelines, eligibility criteria, document requirements, admission process, and campus visits for Nursery to Class 10.',
-            'School admissions Parbhani, CBSE admission 2026-27, Nursery admission, Class 1 to 10 school admission'
+            'Comprehensive admission guidelines, eligibility criteria, document requirements, admission process, transport facilities, uniform guidelines, and quick enquiry for Nursery to Class 10.',
+            'School admissions Parbhani, CBSE admission 2026-27, Nursery admission, Class 1 to 10 school admission, school transport Parbhani'
         );
 
-        return view('pages.admission-info', compact('seo'));
+        $academicYear = Setting::get('admission_academic_year', '2026–27');
+        $counsellorName = Setting::get('admission_counsellor_name', 'Ms. Vaishnavi');
+        $counsellorPhone = Setting::get('admission_counsellor_phone', '9689898973');
+        $schoolPhone1 = Setting::get('admission_school_phone1', '9689898973');
+        $schoolPhone2 = Setting::get('admission_school_phone2', '9146066216');
+        $contactPhone = $counsellorPhone;
+        $contactEmail = Setting::get('contact_email', 'admissions@advaita.edu.in');
+        $campusAddress = Setting::get('school_official_address', 'Near Sanmati Campus, Jintur Road, Parbhani, Maharashtra – 431401');
+        $whatsappNumber = Setting::get('admission_whatsapp_number', '9689898973');
+        $whatsappMessage = Setting::get(
+            'admission_whatsapp_message',
+            'Hello, I would like to enquire about school admission. Please share the admission process, eligibility criteria, required documents, and fee structure.'
+        );
+        $whatsappUrl = 'https://wa.me/91'.preg_replace('/[^0-9]/', '', $whatsappNumber).'?text='.rawurlencode($whatsappMessage);
+        $directionsUrl = Setting::get(
+            'school_maps_directions_url',
+            'https://www.google.com/maps/dir/?api=1&destination=Advaita+School+of+Excellence,+Jintur+Road,+Parbhani,+Maharashtra+431401'
+        );
+
+        $eligibilityList = [
+            ['grade' => 'Nursery', 'age' => '3 Years +', 'criterion' => 'Child must have completed 3 years of age as of 31st December 2026.'],
+            ['grade' => 'LKG', 'age' => '4 Years +', 'criterion' => 'Child must have completed 4 years of age as of 31st December 2026.'],
+            ['grade' => 'UKG', 'age' => '5 Years +', 'criterion' => 'Child must have completed 5 years of age as of 31st December 2026.'],
+            ['grade' => 'Class 1', 'age' => '6 Years +', 'criterion' => 'Child must have completed 6 years as per NEP guidelines. Original Birth Certificate required.'],
+            ['grade' => 'Classes 2 to 5', 'age' => 'Grade Appropriate', 'criterion' => 'Promoted from previous recognized school. Original Transfer Certificate (TC) & previous mark sheet required.'],
+            ['grade' => 'Classes 6 to 10', 'age' => 'Grade Appropriate', 'criterion' => 'Transfer Certificate counter-signed by competent authority. Document verification & counseling interaction.'],
+        ];
+
+        $documentsList = [
+            [
+                'number' => 1,
+                'title' => "Photocopy of the Student's Birth Certificate",
+                'desc' => 'Official birth certificate issued by Municipal Corporation, Gram Panchayat, or Registrar of Births. (Original to be shown during verification).',
+                'icon' => 'fa-solid fa-cake-candles',
+                'mandatory' => true,
+                'badge' => 'Photocopy',
+            ],
+            [
+                'number' => 2,
+                'title' => "Photocopy of the Student's Aadhaar Card",
+                'desc' => "Clear, legible copy of the student's 12-digit UIDAI Aadhaar Card.",
+                'icon' => 'fa-solid fa-id-card',
+                'mandatory' => true,
+                'badge' => 'Photocopy',
+            ],
+            [
+                'number' => 3,
+                'title' => "Student's Aadhaar Card Number",
+                'desc' => 'Valid 12-digit Aadhaar UID number recorded on application form for official student portal enrollment.',
+                'icon' => 'fa-solid fa-fingerprint',
+                'mandatory' => true,
+                'badge' => 'UID Number',
+            ],
+            [
+                'number' => 4,
+                'title' => 'Original School Leaving Certificate (SLC)',
+                'desc' => 'Original School Leaving Certificate (SLC) / Transfer Certificate (TC) counter-signed by the competent education officer for Class 2 and above.',
+                'icon' => 'fa-solid fa-file-signature',
+                'mandatory' => true,
+                'badge' => 'Original Document',
+            ],
+            [
+                'number' => 5,
+                'title' => 'Photocopy of Any One Address Proof',
+                'desc' => 'Photocopy of any one valid residential proof: Ration Card, Electricity Bill, Passport, or Aadhaar Card.',
+                'icon' => 'fa-solid fa-house-chimney',
+                'mandatory' => true,
+                'badge' => 'Photocopy (Any 1)',
+                'options' => ['Ration Card', 'Electricity Bill', 'Passport', 'Aadhaar Card'],
+            ],
+            [
+                'number' => 6,
+                'title' => 'Photocopy of Aadhaar Card of Either Parent / Guardian',
+                'desc' => 'Photocopy of the Aadhaar card of either father, mother, or legal guardian.',
+                'icon' => 'fa-solid fa-user-shield',
+                'mandatory' => true,
+                'badge' => 'Photocopy',
+            ],
+            [
+                'number' => 7,
+                'title' => 'Photocopy of PAN Card of Either Parent / Guardian',
+                'desc' => 'Photocopy of the Permanent Account Number (PAN) card of either parent or legal guardian.',
+                'icon' => 'fa-solid fa-credit-card',
+                'mandatory' => true,
+                'badge' => 'Photocopy',
+            ],
+            [
+                'number' => 8,
+                'title' => 'Three Passport-size Photographs of the Student',
+                'desc' => '3 recent identical, colored passport-size photographs of the student in formal appearance.',
+                'icon' => 'fa-solid fa-camera',
+                'mandatory' => true,
+                'badge' => '3 Photographs',
+            ],
+            [
+                'number' => 9,
+                'title' => 'Caste Certificate (If Applicable)',
+                'desc' => 'Competent authority caste certificate for candidates belonging to SC, ST, VJNT, NT, or OBC categories.',
+                'icon' => 'fa-solid fa-certificate',
+                'mandatory' => false,
+                'badge' => 'If Applicable',
+            ],
+            [
+                'number' => 10,
+                'title' => 'UDISE Number of the Previous / Current School',
+                'desc' => '11-digit Unified District Information System for Education (UDISE) code of the previous or currently enrolled school.',
+                'icon' => 'fa-solid fa-hashtag',
+                'mandatory' => true,
+                'badge' => 'UDISE Code',
+            ],
+        ];
+
+        $transportRoutes = [
+            [
+                'route' => 'Route 1: Station & Shivaji Chowk Corridor',
+                'coverage' => 'Railway Station · Shivaji Chowk · Old Pedgaon Road · Bus Stand · Gangakhed Road',
+                'icon' => 'fa-solid fa-route',
+            ],
+            [
+                'route' => 'Route 2: Stadium & Jintur Road Corridor',
+                'coverage' => 'District Stadium · Subhash Road · Gandhi Park · Zilla Parishad · Jintur Road',
+                'icon' => 'fa-solid fa-road',
+            ],
+            [
+                'route' => 'Route 3: Collector Office & Vasmat Corridor',
+                'coverage' => 'Vasmat Road · Collector Office · Gyaneshwar Nagar · Dnyanopasak Campus · School Gate',
+                'icon' => 'fa-solid fa-map-location-dot',
+            ],
+            [
+                'route' => 'Route 4: Sambhaji Nagar & Dhar Corridor',
+                'coverage' => 'Dhar Road · Sambhaji Nagar · Shaniwar Bazar · Karegaon Naka · School Campus',
+                'icon' => 'fa-solid fa-location-crosshairs',
+            ],
+        ];
+
+        return view('pages.admission-info', compact(
+            'seo',
+            'academicYear',
+            'counsellorName',
+            'counsellorPhone',
+            'schoolPhone1',
+            'schoolPhone2',
+            'whatsappNumber',
+            'whatsappMessage',
+            'whatsappUrl',
+            'directionsUrl',
+            'contactPhone',
+            'contactEmail',
+            'campusAddress',
+            'eligibilityList',
+            'documentsList',
+            'transportRoutes'
+        ));
+    }
+
+    /**
+     * Display the official Admission Guidelines & Eligibility page.
+     */
+    public function admissionGuidelines(): View
+    {
+        $seo = $this->getPageSeo(
+            'admission_guidelines',
+            'Admission Guidelines (Pre-Primary to Grade X) - Advaita School of Excellence, Parbhani',
+            'Official admission guidelines, age criteria, phased implementation schedule, document checklists, 5-step admission procedure, and CBSE eligibility requirements for Pre-Primary to Grade X at Advaita School of Excellence, Parbhani.',
+            'Advaita school admission guidelines, age criteria 30 June, CBSE admission rules Grade 9 10, Parbhani school admission process, required documents'
+        );
+
+        $academicYear = Setting::get('admission_academic_year', '2026–27');
+        $cutoffDate = Setting::get('admission_age_cutoff', '30 June');
+        $counsellorName = Setting::get('admission_counsellor_name', 'Ms. Vaishnavi');
+        $counsellorPhone = Setting::get('admission_counsellor_phone', '9689898973');
+        $schoolPhone1 = Setting::get('admission_school_phone1', '9689898973');
+        $schoolPhone2 = Setting::get('admission_school_phone2', '9146066216');
+        $campusAddress = Setting::get('school_official_address', 'Near Sanmati Campus, Jintur Road, Parbhani, Maharashtra – 431401');
+        $whatsappNumber = Setting::get('admission_whatsapp_number', '9689898973');
+        $whatsappMessage = Setting::get(
+            'admission_whatsapp_message',
+            'Hello, I would like to enquire about school admission. Please share the admission process, eligibility criteria, required documents, and fee structure.'
+        );
+        $whatsappUrl = 'https://wa.me/91'.preg_replace('/[^0-9]/', '', $whatsappNumber).'?text='.rawurlencode($whatsappMessage);
+        $directionsUrl = Setting::get(
+            'school_maps_directions_url',
+            'https://www.google.com/maps/dir/?api=1&destination=Advaita+School+of+Excellence,+Jintur+Road,+Parbhani,+Maharashtra+431401'
+        );
+
+        // Section A: Age Criteria Table
+        $ageCriteria = [
+            [
+                'class' => 'Nursery',
+                'eligibility' => 'Minimum 3 years',
+                'phased_year' => 'Academic Year 2027–28',
+                'notes' => 'Child must have completed minimum 3 years of age as on 30 June of the admission academic year.',
+            ],
+            [
+                'class' => 'Junior KG',
+                'eligibility' => 'Minimum 4 years',
+                'phased_year' => 'Academic Year 2028–29',
+                'notes' => 'Child must have completed minimum 4 years of age as on 30 June of the admission academic year.',
+            ],
+            [
+                'class' => 'Senior KG',
+                'eligibility' => 'Minimum 5 years',
+                'phased_year' => 'Academic Year 2029–30',
+                'notes' => 'Child must have completed minimum 5 years of age as on 30 June of the admission academic year.',
+            ],
+            [
+                'class' => 'Grade I',
+                'eligibility' => 'Minimum 6 years',
+                'phased_year' => 'Academic Year 2030–31',
+                'notes' => 'Child must have completed minimum 6 years of age as on 30 June as per NEP 2020 & state guidelines.',
+            ],
+            [
+                'class' => 'Grades II–VIII',
+                'eligibility' => 'As per applicable Maharashtra Government rules and previous class completion',
+                'phased_year' => 'Currently Open for Enrollment',
+                'notes' => 'Promoted from previous recognized school with certified transfer certificate and annual mark sheet.',
+            ],
+            [
+                'class' => 'Grades IX–X',
+                'eligibility' => 'As per applicable CBSE admission rules and eligibility requirements',
+                'phased_year' => 'Currently Open for Enrollment',
+                'notes' => 'Grade IX requires Class VIII pass from recognized board. Grade X strictly restricted to specific CBSE transfer exemptions.',
+            ],
+        ];
+
+        // Phased Implementation Schedule Highlights
+        $phasedSchedule = [
+            ['grade' => 'Nursery', 'year' => 'Academic Year 2027–28', 'status' => 'Upcoming Phase'],
+            ['grade' => 'Junior KG', 'year' => 'Academic Year 2028–29', 'status' => 'Upcoming Phase'],
+            ['grade' => 'Senior KG', 'year' => 'Academic Year 2029–30', 'status' => 'Upcoming Phase'],
+            ['grade' => 'Grade I', 'year' => 'Academic Year 2030–31', 'status' => 'Upcoming Phase'],
+        ];
+
+        // Section B: 7 Required Document Categories
+        $requiredDocuments = [
+            [
+                'number' => 1,
+                'name' => 'Birth Certificate',
+                'description' => 'Original birth certificate issued by Municipal Corporation or Gram Panchayat (shown for verification) along with self-attested photocopy.',
+                'icon' => 'fa-solid fa-cake-candles',
+                'badge' => 'Mandatory for All',
+            ],
+            [
+                'number' => 2,
+                'name' => "Student's Passport-Size Photographs",
+                'description' => '3 to 5 recent identical passport-size color photographs of the student in formal clothing against a plain background.',
+                'icon' => 'fa-solid fa-camera',
+                'badge' => '3-5 Color Photos',
+            ],
+            [
+                'number' => 3,
+                'name' => 'Aadhaar Details, Where Applicable',
+                'description' => 'Clear photocopy of the student’s 12-digit Aadhaar Card along with UID recording on the official application form.',
+                'icon' => 'fa-solid fa-id-card',
+                'badge' => 'UIDAI Verified',
+            ],
+            [
+                'number' => 4,
+                'name' => 'Previous Class Report Card',
+                'description' => 'Comprehensive progress card / annual mark sheet demonstrating successful completion of the preceding academic class from a recognised school.',
+                'icon' => 'fa-solid fa-file-lines',
+                'badge' => 'Class 2 and Above',
+            ],
+            [
+                'number' => 5,
+                'name' => 'Transfer Certificate (TC), Where Applicable',
+                'description' => 'Original School Leaving Certificate (SLC) / Transfer Certificate countersigned by the competent Education Officer / CBSE authority.',
+                'icon' => 'fa-solid fa-file-signature',
+                'badge' => 'Original Document',
+            ],
+            [
+                'number' => 6,
+                'name' => "Parent's Identity and Address Proof, Where Required",
+                'description' => 'Photocopy of identity and residential proof (Aadhaar Card, Passport, Electricity Bill, or Ration Card) of either parent/legal guardian.',
+                'icon' => 'fa-solid fa-house-chimney-user',
+                'badge' => 'Either Parent / Guardian',
+            ],
+            [
+                'number' => 7,
+                'name' => 'Additional Documents, If Prescribed by the Authorities',
+                'description' => 'Caste Certificate (for SC/ST/VJNT/OBC categories), UDISE student number from previous school, or certified medical/disability records if applicable.',
+                'icon' => 'fa-solid fa-folder-open',
+                'badge' => 'As Applicable',
+            ],
+        ];
+
+        // Section C: Admission Procedure (5-Step Sequence)
+        $procedureSteps = [
+            [
+                'step' => 1,
+                'title' => 'Submit Online Enquiry or Registration Form',
+                'desc' => 'Begin by submitting either our Quick Admission Enquiry or the comprehensive Online Registration Form with applicant and academic details.',
+                'icon' => 'fa-solid fa-laptop-file',
+            ],
+            [
+                'step' => 2,
+                'title' => 'Submit the Required Documents',
+                'desc' => 'Submit copies of the prescribed documents (Birth Certificate, Photographs, Aadhaar, previous report cards) for administrative verification.',
+                'icon' => 'fa-solid fa-clipboard-check',
+            ],
+            [
+                'step' => 3,
+                'title' => 'Attend an Interaction or Assessment, If Applicable',
+                'desc' => 'Parents and applicant attend a friendly, supportive interaction with teachers/counsellors or grade-appropriate assessment of learning readiness.',
+                'icon' => 'fa-solid fa-comments',
+            ],
+            [
+                'step' => 4,
+                'title' => 'Complete Prescribed Admission Formalities and Fee Payment',
+                'desc' => 'Upon document verification and eligibility confirmation, complete admission formalities and fee installment payment via school fee counter/portal.',
+                'icon' => 'fa-solid fa-receipt',
+            ],
+            [
+                'step' => 5,
+                'title' => 'Receive Admission Confirmation',
+                'desc' => 'Receive formal admission confirmation letter, unique Student Enrollment ID, class & section allotment, and school commencement timetable.',
+                'icon' => 'fa-solid fa-circle-check',
+            ],
+        ];
+
+        // Section D: Class Eligibility Rules
+        $classEligibility = [
+            [
+                'classes' => 'Grades II–VIII',
+                'rule' => 'Successful completion of the previous class, subject to applicable rules.',
+                'detail' => 'Candidates must have successfully cleared the preceding grade from a recognised school and present valid marksheets along with counter-signed Transfer Certificate.',
+                'icon' => 'fa-solid fa-graduation-cap',
+            ],
+            [
+                'classes' => 'Grade IX',
+                'rule' => 'Successful completion of Grade VIII from a recognised school.',
+                'detail' => 'Must have passed Class 8 from a CBSE or state-recognised school with fundamental proficiency in Mathematics, Science, and Languages.',
+                'icon' => 'fa-solid fa-award',
+            ],
+            [
+                'classes' => 'Grade X',
+                'rule' => 'Direct admission is not permitted except under specific exceptions prescribed by CBSE.',
+                'detail' => 'As per standard CBSE Examination Bye-Laws, direct admission in Class X is strictly prohibited except under verified transfer of parents in defence/government service, interstate relocation, or board-approved exceptional circumstances.',
+                'icon' => 'fa-solid fa-shield-halved',
+            ],
+        ];
+
+        // Section E: Important Instructions
+        $importantInstructions = [
+            'All information and documents must be accurate and authentic.',
+            'Registration does not guarantee admission.',
+            'Admissions are subject to seat availability and applicable rules.',
+            'Admission to Grades IX and X is subject to applicable CBSE requirements.',
+            'Parents must complete all formalities within the stipulated time.',
+        ];
+
+        return view('pages.admission-guidelines', compact(
+            'seo',
+            'academicYear',
+            'cutoffDate',
+            'counsellorName',
+            'counsellorPhone',
+            'schoolPhone1',
+            'schoolPhone2',
+            'campusAddress',
+            'whatsappUrl',
+            'directionsUrl',
+            'ageCriteria',
+            'phasedSchedule',
+            'requiredDocuments',
+            'procedureSteps',
+            'classEligibility',
+            'importantInstructions'
+        ));
+    }
+
+    /**
+     * Download the official Admission Guidelines PDF document.
+     */
+    public function downloadAdmissionGuidelinesPdf(AdmissionGuidelinesPdfService $pdfService): Response
+    {
+        $pdfContent = $pdfService->generate();
+
+        return response($pdfContent, 200, [
+            'Content-Type' => 'application/pdf',
+            'Content-Disposition' => 'attachment; filename="Admission_Guidelines_Advaita_School_Parbhani.pdf"',
+            'Cache-Control' => 'no-cache, must-revalidate',
+        ]);
+    }
+
+    /**
+     * Display the print-optimized view of the Admission Guidelines.
+     */
+    public function printAdmissionGuidelines(): View
+    {
+        $academicYear = Setting::get('admission_academic_year', '2026–27');
+        $cutoffDate = Setting::get('admission_age_cutoff', '30 June');
+        $counsellorName = Setting::get('admission_counsellor_name', 'Ms. Vaishnavi');
+        $counsellorPhone = Setting::get('admission_counsellor_phone', '9689898973');
+        $schoolPhone1 = Setting::get('admission_school_phone1', '9689898973');
+        $schoolPhone2 = Setting::get('admission_school_phone2', '9146066216');
+        $campusAddress = Setting::get('school_official_address', 'Near Sanmati Campus, Jintur Road, Parbhani, Maharashtra – 431401');
+
+        return view('pages.admission-guidelines-print', compact(
+            'academicYear',
+            'cutoffDate',
+            'counsellorName',
+            'counsellorPhone',
+            'schoolPhone1',
+            'schoolPhone2',
+            'campusAddress'
+        ));
     }
 
     public function feeStructure(): View
@@ -426,24 +835,43 @@ class PageController extends Controller
         $seo = $this->getPageSeo(
             'fee_structure',
             'Fee Structure (2026-27) - Advaita School of Excellence, Parbhani',
-            'Transparent and affordable fee structure for Pre-Primary, Primary, Middle, and Secondary classes at Advaita School of Excellence with flexible payment terms.',
-            'Advaita school fee structure, Parbhani school fees, CBSE school tuition fees, installment plans'
+            'Official fee structure and installment guidelines for Pre-Primary, Primary, and Secondary classes at Advaita School of Excellence, Parbhani.',
+            'Advaita school fee structure, Parbhani school fees, CBSE school tuition fees, installment plans, CBSE fee schedule'
         );
+
+        $isPublished = (bool) Setting::get('fee_structure_published', false);
+        $academicYear = Setting::get('fee_academic_year', '2026–27');
+        $lastUpdated = Setting::get('fee_last_updated', date('F Y'));
+        $pendingNotice = Setting::get('fee_pending_notice', 'The class-wise fee structure for Academic Session 2026–27 is currently under final review and will be published shortly upon approval by school management. For provisional fee estimates or immediate admission counseling, please contact our admissions office or submit a Quick Enquiry.');
+
+        $prePrimaryFees = FeeStructure::where('wing', 'pre_primary')->orderBy('order')->get();
+        $primaryFees = FeeStructure::where('wing', 'primary')->orderBy('order')->get();
+        $secondaryFees = FeeStructure::where('wing', 'secondary')->orderBy('order')->get();
+        $allFees = FeeStructure::orderBy('order')->get();
 
         $content = [
             'hero_badge' => Setting::get('fee_hero_badge', 'ADMISSIONS 2026–27'),
             'hero_title' => Setting::get('fee_hero_title', 'Fees, paid in simple terms.'),
             'hero_desc' => Setting::get('fee_hero_desc', 'A clear, transparent fee structure designed to make quality education accessible for every child.'),
-            'academic_year' => Setting::get('fee_academic_year', '2026–27'),
+            'academic_year' => $academicYear,
             'installments_note' => Setting::get('fee_installments_note', 'Fees can be conveniently paid in three term-wise installments or an annual one-time payment with special benefits.'),
             'transparency_note' => Setting::get('fee_transparency_note', 'No hidden charges or mandatory surprise fees. Detailed receipts are issued for all transactions.'),
-
-            // Imagery
             'hero_image' => Setting::get('fee_hero_image', 'assets/images/about-cta-students-clean.png'),
             'cta_image' => Setting::get('fee_cta_image', 'assets/images/about-story-student.jpg'),
         ];
 
-        return view('pages.fee-structure', compact('seo', 'content'));
+        return view('pages.fee-structure', compact(
+            'seo',
+            'content',
+            'isPublished',
+            'academicYear',
+            'lastUpdated',
+            'pendingNotice',
+            'prePrimaryFees',
+            'primaryFees',
+            'secondaryFees',
+            'allFees'
+        ));
     }
 
     public function facilities(): View

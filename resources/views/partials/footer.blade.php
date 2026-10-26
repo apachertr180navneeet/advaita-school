@@ -57,6 +57,7 @@
                 <h3 class="adv-footer-col-title">Quick Links</h3>
                 <ul class="adv-footer-links-list">
                     <li><a href="{{ route('admission-info') }}" class="adv-footer-link">Admission Info</a></li>
+                    <li><a href="{{ route('admission-guidelines') }}" class="adv-footer-link">Admission Guidelines</a></li>
                     <li><a href="{{ route('online-registration') }}" class="adv-footer-link">Online Registration</a></li>
                     <li><a href="{{ route('fee-structure') }}" class="adv-footer-link">Fee Structure</a></li>
                     <li><a href="{{ route('mandatory-disclosure') }}" class="adv-footer-link">School Policies</a></li>

@@ -2,10 +2,12 @@
 
 use App\Http\Controllers\Admin\AcademicProgrammeController as AdminAcademicProgrammeController;
 use App\Http\Controllers\Admin\AcademicResultController as AdminAcademicResultController;
+use App\Http\Controllers\Admin\AdmissionEnquiryController as AdminAdmissionEnquiryController;
 use App\Http\Controllers\Admin\AuthController as AdminAuthController;
 use App\Http\Controllers\Admin\CampusVisitController as AdminCampusVisitController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 use App\Http\Controllers\Admin\FaqController as AdminFaqController;
+use App\Http\Controllers\Admin\FeeStructureController as AdminFeeStructureController;
 use App\Http\Controllers\Admin\GalleryController as AdminGalleryController;
 use App\Http\Controllers\Admin\InquiryController as AdminInquiryController;
 use App\Http\Controllers\Admin\PageContentController as AdminPageContentController;
@@ -16,6 +18,7 @@ use App\Http\Controllers\Admin\SiteSettingController as AdminSiteSettingControll
 use App\Http\Controllers\Admin\SliderController as AdminSliderController;
 use App\Http\Controllers\Admin\TestimonialController as AdminTestimonialController;
 use App\Http\Controllers\Admin\WhyChooseController as AdminWhyChooseController;
+use App\Http\Controllers\AdmissionEnquiryController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
@@ -51,11 +54,16 @@ Route::get('/academics/secondary', [PageController::class, 'secondary'])->name('
 Route::get('/secondary', fn () => redirect()->route('academics.secondary'));
 Route::get('/results', [PageController::class, 'results'])->name('results');
 
-// Admissions & Registration
+// Admissions, Enquiries & Registration
 Route::get('/admission-info', [PageController::class, 'admissionInfo'])->name('admission-info');
+Route::get('/admission-guidelines', [PageController::class, 'admissionGuidelines'])->name('admission-guidelines');
+Route::get('/admission-guidelines/download', [PageController::class, 'downloadAdmissionGuidelinesPdf'])->name('admission-guidelines.download');
+Route::get('/admission-guidelines/print', [PageController::class, 'printAdmissionGuidelines'])->name('admission-guidelines.print');
+Route::post('/admission-enquiry', [AdmissionEnquiryController::class, 'store'])->name('admission-enquiry.store');
 Route::get('/fee-structure', [PageController::class, 'feeStructure'])->name('fee-structure');
 Route::get('/online-registration', [RegistrationController::class, 'create'])->name('online-registration');
 Route::post('/online-registration', [RegistrationController::class, 'store'])->name('online-registration.store');
+Route::get('/online-registration/success/{application_no}', [RegistrationController::class, 'success'])->name('online-registration.success');
 
 // Facilities, Gallery, Blog, Compliance
 Route::get('/facilities', [PageController::class, 'facilities'])->name('facilities');
@@ -83,11 +91,21 @@ Route::prefix('admin')->name('admin.')->group(function () {
         Route::get('/', fn () => redirect()->route('admin.dashboard'));
         Route::get('/dashboard', [AdminDashboardController::class, 'index'])->name('dashboard');
 
-        // Student Registrations Management
+        // Online Admission Applications Management
         Route::get('/registrations', [AdminRegistrationController::class, 'index'])->name('registrations.index');
         Route::get('/registrations/{id}', [AdminRegistrationController::class, 'show'])->name('registrations.show');
         Route::patch('/registrations/{id}/status', [AdminRegistrationController::class, 'updateStatus'])->name('registrations.status');
         Route::delete('/registrations/{id}', [AdminRegistrationController::class, 'destroy'])->name('registrations.destroy');
+
+        // Quick Admission Enquiries Management
+        Route::get('/admission-enquiries', [AdminAdmissionEnquiryController::class, 'index'])->name('admission-enquiries.index');
+        Route::patch('/admission-enquiries/{id}/status', [AdminAdmissionEnquiryController::class, 'updateStatus'])->name('admission-enquiries.status');
+        Route::delete('/admission-enquiries/{id}', [AdminAdmissionEnquiryController::class, 'destroy'])->name('admission-enquiries.destroy');
+
+        // Class-wise Fee Structure Management
+        Route::patch('/fee-structures/toggle-publish', [AdminFeeStructureController::class, 'togglePublish'])->name('fee-structures.toggle-publish');
+        Route::post('/fee-structures/global-settings', [AdminFeeStructureController::class, 'updateGlobalSettings'])->name('fee-structures.global-settings');
+        Route::resource('fee-structures', AdminFeeStructureController::class)->except(['show']);
 
         // Contact Inquiries Management
         Route::get('/inquiries', [AdminInquiryController::class, 'index'])->name('inquiries.index');

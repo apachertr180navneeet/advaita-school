@@ -10473,10 +10473,10 @@ textarea.reg-input-control {
 }
 
 /* ==========================================================================
-   RESULTS PAGE STYLES (Programmes > Results)
-   Modularized in assets/css/results.css for 1:1 fidelity with mockup
+   RESULTS & ADMISSIONS MODULAR STYLES
    ========================================================================== */
 @import url('results.css');
+@import url('admissions.css');
 
 
 

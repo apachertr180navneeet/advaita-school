@@ -1141,15 +1141,25 @@
                         <!-- Important Guidelines Box -->
                         <div class="docs-guidelines-box">
                             <div class="docs-guide-icon" aria-hidden="true">
-                                <i class="fa-solid fa-circle-info"></i>
+                                <i class="fa-solid fa-clipboard-check"></i>
                             </div>
                             <div class="docs-guide-content">
-                                <div class="docs-guide-title">Important Guidelines:</div>
-                                <ul class="docs-guide-list">
-                                    <li>Please upload clear, legible and original documents.</li>
-                                    <li>Accepted file formats: PDF, JPG, PNG (Max size: 5 MB each).</li>
-                                    <li>Documents will be verified by our admissions team. You may be contacted if any additional documents are required.</li>
-                                </ul>
+                                <div class="docs-guide-title">Documents Required for School Admission:</div>
+                                <ol class="docs-guide-list" style="margin: 6px 0 10px 0; padding-left: 18px; line-height: 1.6; font-size: 12.5px;">
+                                    <li>Photocopy of the student's Birth Certificate.</li>
+                                    <li>Photocopy of the student's Aadhaar Card.</li>
+                                    <li>Student's Aadhaar Card number.</li>
+                                    <li>Original School Leaving Certificate (SLC).</li>
+                                    <li>Photocopy of any one address proof (Ration Card, Electricity Bill, Passport, Aadhaar Card).</li>
+                                    <li>Photocopy of Aadhaar Card of either parent/guardian.</li>
+                                    <li>Photocopy of PAN Card of either parent/guardian.</li>
+                                    <li>Three passport-size photographs of the student.</li>
+                                    <li>Caste Certificate (if applicable).</li>
+                                    <li>UDISE Number of the previous/current school.</li>
+                                </ol>
+                                <div class="fs-12 text-muted pt-2 border-top">
+                                    <strong>Note:</strong> Please verify the school's current document requirements before submitting the application. (Max file size: 5 MB each in PDF, JPG, or PNG format).
+                                </div>
                             </div>
                         </div>
                     </div>

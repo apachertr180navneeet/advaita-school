@@ -94,10 +94,30 @@ class RegistrationController extends Controller
                 'success' => true,
                 'application_no' => $applicationNo,
                 'message' => "Application submitted successfully! Your Application ID is {$applicationNo}. Our admissions team will contact you shortly.",
+                'redirect_url' => route('online-registration.success', $applicationNo),
                 'registration' => $registration,
             ]);
         }
 
-        return redirect()->back()->with('success', "Application submitted successfully! Your Application ID is {$applicationNo}. Our admissions counselor will contact you shortly.");
+        return redirect()->route('online-registration.success', $applicationNo)->with(
+            'success',
+            "Application submitted successfully! Your Application ID is {$applicationNo}."
+        );
+    }
+
+    /**
+     * Display the application success & printable acknowledgement receipt page.
+     */
+    public function success(string $applicationNo)
+    {
+        $registration = OnlineRegistration::where('application_no', $applicationNo)->firstOrFail();
+
+        $seo = [
+            'title' => "Application Submitted ({$applicationNo}) - Advaita School of Excellence",
+            'description' => "Your admission registration has been submitted successfully with Application ID {$applicationNo}.",
+            'keywords' => 'Admission confirmation, application receipt, Advaita School of Excellence',
+        ];
+
+        return view('pages.registration-success', compact('registration', 'seo'));
     }
 }

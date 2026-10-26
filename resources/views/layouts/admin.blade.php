@@ -45,7 +45,19 @@
                 <li>
                     <a href="{{ route('admin.registrations.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.registrations.*') ? 'active' : '' }}">
                         <i class="fa-solid fa-user-graduate"></i>
-                        <span>Admissions</span>
+                        <span>Online Applications</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.admission-enquiries.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.admission-enquiries.*') ? 'active' : '' }}">
+                        <i class="fa-solid fa-clipboard-question"></i>
+                        <span>Quick Enquiries</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.fee-structures.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.fee-structures.*') ? 'active' : '' }}">
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+                        <span>Fee Structure CMS</span>
                     </a>
                 </li>
                 <li>

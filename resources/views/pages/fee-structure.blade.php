@@ -67,6 +67,7 @@
         <!-- =========================================================================
              2. CLASS-WISE FEE STRUCTURE CARD (With Annual / Term-wise Toggle)
              ========================================================================= -->
+        @if($isPublished && $allFees->isNotEmpty())
         <div class="fee-main-card" id="fee-tables">
             <div class="fee-main-card-head">
                 <div class="fee-card-head-left">
@@ -75,7 +76,7 @@
                     </div>
                     <div>
                         <h2 class="fee-card-main-title">Class-wise Fee Structure</h2>
-                        <p class="fee-card-main-sub">Academic Session {{ $content['academic_year'] ?? '2026 – 27' }} &nbsp;|&nbsp; Nursery to Class 10</p>
+                        <p class="fee-card-main-sub">Academic Session {{ $academicYear }} &nbsp;|&nbsp; Nursery to Class 10 &nbsp;|&nbsp; <span class="text-muted">Updated: {{ $lastUpdated }}</span></p>
                     </div>
                 </div>
 
@@ -95,105 +96,26 @@
                 <table class="fee-classwise-table">
                     <thead>
                         <tr>
-                            <th scope="col" class="fee-th-class">Class</th>
+                            <th scope="col" class="fee-th-class">Class / Grade</th>
                             <th scope="col" class="text-right fee-th-col20">Tuition Fee<br><span class="fee-th-subtext">(Annual)</span></th>
                             <th scope="col" class="text-right fee-th-col20">Development Fee<br><span class="fee-th-subtext">(Annual)</span></th>
-                            <th scope="col" class="text-right fee-th-col18">Examination Fee<br><span class="fee-th-subtext">(Annual)</span></th>
+                            <th scope="col" class="text-right fee-th-col18">Exam Fee<br><span class="fee-th-subtext">(Annual)</span></th>
                             <th scope="col" class="text-right fee-th-col20">Total Annual Fee</th>
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach($allFees as $fee)
                         <tr>
-                            <td class="td-class">Nursery</td>
-                            <td class="td-amount">₹ 48,000</td>
-                            <td class="td-amount">₹ 8,000</td>
-                            <td class="td-amount">₹ 2,000</td>
-                            <td class="td-total">₹ 58,000</td>
+                            <td class="td-class">
+                                <strong>{{ $fee->class_name }}</strong>
+                                <span class="d-block small text-muted">{{ \App\Models\FeeStructure::WINGS[$fee->wing]['label'] ?? '' }}</span>
+                            </td>
+                            <td class="td-amount">₹ {{ number_format((float) $fee->tuition_fee, 0) }}</td>
+                            <td class="td-amount">₹ {{ number_format((float) $fee->development_fee, 0) }}</td>
+                            <td class="td-amount">₹ {{ number_format((float) $fee->exam_fee, 0) }}</td>
+                            <td class="td-total">{{ $fee->formatted_annual_total }}</td>
                         </tr>
-                        <tr>
-                            <td class="td-class">LKG</td>
-                            <td class="td-amount">₹ 52,000</td>
-                            <td class="td-amount">₹ 8,000</td>
-                            <td class="td-amount">₹ 2,000</td>
-                            <td class="td-total">₹ 62,000</td>
-                        </tr>
-                        <tr>
-                            <td class="td-class">UKG</td>
-                            <td class="td-amount">₹ 54,000</td>
-                            <td class="td-amount">₹ 8,000</td>
-                            <td class="td-amount">₹ 2,000</td>
-                            <td class="td-total">₹ 64,000</td>
-                        </tr>
-                        <tr>
-                            <td class="td-class">Class 1</td>
-                            <td class="td-amount">₹ 60,000</td>
-                            <td class="td-amount">₹ 10,000</td>
-                            <td class="td-amount">₹ 2,500</td>
-                            <td class="td-total">₹ 72,500</td>
-                        </tr>
-                        <tr>
-                            <td class="td-class">Class 2</td>
-                            <td class="td-amount">₹ 62,000</td>
-                            <td class="td-amount">₹ 10,000</td>
-                            <td class="td-amount">₹ 2,500</td>
-                            <td class="td-total">₹ 74,500</td>
-                        </tr>
-                        <tr>
-                            <td class="td-class">Class 3</td>
-                            <td class="td-amount">₹ 64,000</td>
-                            <td class="td-amount">₹ 10,000</td>
-                            <td class="td-amount">₹ 2,500</td>
-                            <td class="td-total">₹ 76,500</td>
-                        </tr>
-                        <tr>
-                            <td class="td-class">Class 4</td>
-                            <td class="td-amount">₹ 68,000</td>
-                            <td class="td-amount">₹ 12,000</td>
-                            <td class="td-amount">₹ 3,000</td>
-                            <td class="td-total">₹ 83,000</td>
-                        </tr>
-                        <tr>
-                            <td class="td-class">Class 5</td>
-                            <td class="td-amount">₹ 70,000</td>
-                            <td class="td-amount">₹ 12,000</td>
-                            <td class="td-amount">₹ 3,000</td>
-                            <td class="td-total">₹ 85,000</td>
-                        </tr>
-                        <tr>
-                            <td class="td-class">Class 6</td>
-                            <td class="td-amount">₹ 72,000</td>
-                            <td class="td-amount">₹ 12,000</td>
-                            <td class="td-amount">₹ 3,000</td>
-                            <td class="td-total">₹ 87,000</td>
-                        </tr>
-                        <tr>
-                            <td class="td-class">Class 7</td>
-                            <td class="td-amount">₹ 74,000</td>
-                            <td class="td-amount">₹ 14,000</td>
-                            <td class="td-amount">₹ 3,000</td>
-                            <td class="td-total">₹ 91,000</td>
-                        </tr>
-                        <tr>
-                            <td class="td-class">Class 8</td>
-                            <td class="td-amount">₹ 76,000</td>
-                            <td class="td-amount">₹ 14,000</td>
-                            <td class="td-amount">₹ 3,500</td>
-                            <td class="td-total">₹ 93,500</td>
-                        </tr>
-                        <tr>
-                            <td class="td-class">Class 9</td>
-                            <td class="td-amount">₹ 78,000</td>
-                            <td class="td-amount">₹ 15,000</td>
-                            <td class="td-amount">₹ 3,500</td>
-                            <td class="td-total">₹ 96,500</td>
-                        </tr>
-                        <tr>
-                            <td class="td-class">Class 10</td>
-                            <td class="td-amount">₹ 80,000</td>
-                            <td class="td-amount">₹ 15,000</td>
-                            <td class="td-amount">₹ 3,500</td>
-                            <td class="td-total">₹ 98,500</td>
-                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
@@ -203,91 +125,25 @@
                 <table class="fee-classwise-table">
                     <thead>
                         <tr>
-                            <th scope="col" class="fee-th-col25">Class</th>
-                            <th scope="col" class="text-right fee-th-col25">Term 1 Fee<br><span class="fee-th-subtext">(April – Due at Admission)</span></th>
-                            <th scope="col" class="text-right fee-th-col25">Term 2 Fee<br><span class="fee-th-subtext">(October – Mid Session)</span></th>
-                            <th scope="col" class="text-right fee-th-col25">Total Annual Fee</th>
+                            <th scope="col" class="fee-th-col25">Class / Grade</th>
+                            <th scope="col" class="text-right fee-th-col25">Term 1<br><span class="fee-th-subtext">(Due at Admission)</span></th>
+                            <th scope="col" class="text-right fee-th-col25">Term 2<br><span class="fee-th-subtext">(Due Sept/Oct)</span></th>
+                            <th scope="col" class="text-right fee-th-col25">Term 3<br><span class="fee-th-subtext">(Due Dec/Jan)</span></th>
+                            <th scope="col" class="text-right fee-th-col25">Total Payable</th>
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach($allFees as $fee)
                         <tr>
-                            <td class="td-class">Nursery</td>
-                            <td class="td-amount">₹ 29,000</td>
-                            <td class="td-amount">₹ 29,000</td>
-                            <td class="td-total">₹ 58,000</td>
+                            <td class="td-class">
+                                <strong>{{ $fee->class_name }}</strong>
+                            </td>
+                            <td class="td-amount">₹ {{ number_format((float) ($fee->term1_fee ?: ($fee->annual_total / 3)), 0) }}</td>
+                            <td class="td-amount">₹ {{ number_format((float) ($fee->term2_fee ?: ($fee->annual_total / 3)), 0) }}</td>
+                            <td class="td-amount">₹ {{ number_format((float) ($fee->term3_fee ?: ($fee->annual_total / 3)), 0) }}</td>
+                            <td class="td-total">{{ $fee->formatted_annual_total }}</td>
                         </tr>
-                        <tr>
-                            <td class="td-class">LKG</td>
-                            <td class="td-amount">₹ 31,000</td>
-                            <td class="td-amount">₹ 31,000</td>
-                            <td class="td-total">₹ 62,000</td>
-                        </tr>
-                        <tr>
-                            <td class="td-class">UKG</td>
-                            <td class="td-amount">₹ 32,000</td>
-                            <td class="td-amount">₹ 32,000</td>
-                            <td class="td-total">₹ 64,000</td>
-                        </tr>
-                        <tr>
-                            <td class="td-class">Class 1</td>
-                            <td class="td-amount">₹ 36,250</td>
-                            <td class="td-amount">₹ 36,250</td>
-                            <td class="td-total">₹ 72,500</td>
-                        </tr>
-                        <tr>
-                            <td class="td-class">Class 2</td>
-                            <td class="td-amount">₹ 37,250</td>
-                            <td class="td-amount">₹ 37,250</td>
-                            <td class="td-total">₹ 74,500</td>
-                        </tr>
-                        <tr>
-                            <td class="td-class">Class 3</td>
-                            <td class="td-amount">₹ 38,250</td>
-                            <td class="td-amount">₹ 38,250</td>
-                            <td class="td-total">₹ 76,500</td>
-                        </tr>
-                        <tr>
-                            <td class="td-class">Class 4</td>
-                            <td class="td-amount">₹ 41,500</td>
-                            <td class="td-amount">₹ 41,500</td>
-                            <td class="td-total">₹ 83,000</td>
-                        </tr>
-                        <tr>
-                            <td class="td-class">Class 5</td>
-                            <td class="td-amount">₹ 42,500</td>
-                            <td class="td-amount">₹ 42,500</td>
-                            <td class="td-total">₹ 85,000</td>
-                        </tr>
-                        <tr>
-                            <td class="td-class">Class 6</td>
-                            <td class="td-amount">₹ 43,500</td>
-                            <td class="td-amount">₹ 43,500</td>
-                            <td class="td-total">₹ 87,000</td>
-                        </tr>
-                        <tr>
-                            <td class="td-class">Class 7</td>
-                            <td class="td-amount">₹ 45,500</td>
-                            <td class="td-amount">₹ 45,500</td>
-                            <td class="td-total">₹ 91,000</td>
-                        </tr>
-                        <tr>
-                            <td class="td-class">Class 8</td>
-                            <td class="td-amount">₹ 46,750</td>
-                            <td class="td-amount">₹ 46,750</td>
-                            <td class="td-total">₹ 93,500</td>
-                        </tr>
-                        <tr>
-                            <td class="td-class">Class 9</td>
-                            <td class="td-amount">₹ 48,250</td>
-                            <td class="td-amount">₹ 48,250</td>
-                            <td class="td-total">₹ 96,500</td>
-                        </tr>
-                        <tr>
-                            <td class="td-class">Class 10</td>
-                            <td class="td-amount">₹ 49,250</td>
-                            <td class="td-amount">₹ 49,250</td>
-                            <td class="td-total">₹ 98,500</td>
-                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
@@ -295,9 +151,97 @@
             <!-- Table Note -->
             <div class="fee-table-note">
                 <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
-                <span><strong>Note:</strong> The above fees are for the academic session 2026–27. The fee structure is subject to change as per school policy.</span>
+                <span><strong>Note:</strong> The above fee structure is for Academic Session {{ $academicYear }}. One-time admission fee applies for fresh enrollments only. Transport charges are computed separately by route corridor.</span>
             </div>
         </div>
+        @else
+        <!-- Official Management Review / Under Finalization Notice -->
+        <div class="fee-pending-review-card" id="fee-tables">
+            <div class="pending-badge-row">
+                <span class="badge-pending-status">
+                    <i class="fa-solid fa-hourglass-half me-1"></i> Under Final Management Review
+                </span>
+                <span class="pending-session-tag">Academic Session {{ $academicYear }}</span>
+            </div>
+
+            <div class="pending-content-grid">
+                <div class="pending-text-col">
+                    <h2 class="pending-title">Class-wise Fee Structure ({{ $academicYear }})</h2>
+                    <p class="pending-lead">
+                        {{ $pendingNotice }}
+                    </p>
+
+                    <div class="fee-policy-highlights">
+                        <div class="policy-item">
+                            <i class="fa-solid fa-shield-halved policy-icon text-primary"></i>
+                            <div>
+                                <strong>Strict CBSE Transparency</strong>
+                                <p class="mb-0 text-muted small">No capitation fees, no hidden building funds, and no unapproved recurring levies.</p>
+                            </div>
+                        </div>
+                        <div class="policy-item">
+                            <i class="fa-solid fa-calendar-days policy-icon text-success"></i>
+                            <div>
+                                <strong>Term-wise Installments</strong>
+                                <p class="mb-0 text-muted small">School fees are split into 3 convenient term installments payable across the academic calendar.</p>
+                            </div>
+                        </div>
+                        <div class="policy-item">
+                            <i class="fa-solid fa-bus-simple policy-icon text-warning"></i>
+                            <div>
+                                <strong>Route-Based Transport</strong>
+                                <p class="mb-0 text-muted small">Transport charges vary strictly according to the designated pickup/drop corridor within Parbhani.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pending-action-group">
+                        <a href="{{ route('admission-info') }}#quick-enquiry" class="btn-adv-primary">
+                            <i class="fa-solid fa-paper-plane me-2"></i> Submit Quick Enquiry for Fees
+                        </a>
+                        <a href="{{ route('online-registration') }}" class="btn-adv-secondary">
+                            <i class="fa-solid fa-file-pen me-2"></i> Register Online
+                        </a>
+                        <a href="tel:+919422175522" class="btn-adv-outline">
+                            <i class="fa-solid fa-phone me-2"></i> Call: +91 94221 75522
+                        </a>
+                    </div>
+                </div>
+
+                <div class="pending-summary-box">
+                    <div class="summary-box-header">
+                        <i class="fa-solid fa-clipboard-list text-primary"></i>
+                        <h5>Fee Components Overview</h5>
+                    </div>
+                    <ul class="summary-points-list">
+                        <li>
+                            <span class="point-label">Admission Fee:</span>
+                            <span class="point-val">One-time (New Admissions Only)</span>
+                        </li>
+                        <li>
+                            <span class="point-label">Tuition Fee:</span>
+                            <span class="point-val">Term-wise / Annual Schedule</span>
+                        </li>
+                        <li>
+                            <span class="point-label">Exam &amp; Activities:</span>
+                            <span class="point-val">Inclusive of Term Assessments</span>
+                        </li>
+                        <li>
+                            <span class="point-label">Books &amp; Uniforms:</span>
+                            <span class="point-val">Authorized Vendor at MRP</span>
+                        </li>
+                        <li>
+                            <span class="point-label">Transport Service:</span>
+                            <span class="point-val">Optional, Corridor-based</span>
+                        </li>
+                    </ul>
+                    <div class="summary-box-footer">
+                        <small class="text-muted"><i class="fa-solid fa-circle-check text-success me-1"></i> Authorized by Sanmati Sevabhavi Sanstha</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @endif
 
         <!-- =========================================================================
              3. ADDITIONAL CHARGES (One-time / Applicable when required)
@@ -318,8 +262,14 @@
                     </div>
                     <div class="fee-addon-info">
                         <div class="fee-addon-title">Admission Fee</div>
-                        <div class="fee-addon-sub">(One-time, non-refundable)</div>
-                        <div class="fee-addon-amount">₹ 5,000</div>
+                        <div class="fee-addon-sub">(One-time, fresh admissions)</div>
+                        <div class="fee-addon-amount">
+                            @if($isPublished)
+                                ₹ 5,000
+                            @else
+                                <span class="fee-status-badge text-warning small">As Approved by Board</span>
+                            @endif
+                        </div>
                     </div>
                 </div>
 
@@ -329,9 +279,15 @@
                         <i class="fa-solid fa-bus"></i>
                     </div>
                     <div class="fee-addon-info">
-                        <div class="fee-addon-title">Transport Fee</div>
-                        <div class="fee-addon-sub">(Annual, optional)</div>
-                        <div class="fee-addon-amount">₹ 18,000</div>
+                        <div class="fee-addon-title">Transport Facility</div>
+                        <div class="fee-addon-sub">(Optional, GPS/CCTV fleet)</div>
+                        <div class="fee-addon-amount">
+                            @if($isPublished)
+                                Route-Based
+                            @else
+                                <span class="fee-status-badge text-info small">Route-wise Distance</span>
+                            @endif
+                        </div>
                     </div>
                 </div>
 
@@ -341,9 +297,11 @@
                         <i class="fa-solid fa-shirt"></i>
                     </div>
                     <div class="fee-addon-info">
-                        <div class="fee-addon-title">Uniform Set</div>
-                        <div class="fee-addon-sub">(Approximate, optional)</div>
-                        <div class="fee-addon-amount">₹ 6,000</div>
+                        <div class="fee-addon-title">Prescribed Uniform</div>
+                        <div class="fee-addon-sub">(Regular + Sports + Shoes)</div>
+                        <div class="fee-addon-amount">
+                            <span class="fee-status-badge text-secondary small">Authorized Counter</span>
+                        </div>
                     </div>
                 </div>
 
@@ -353,9 +311,11 @@
                         <i class="fa-solid fa-book-open"></i>
                     </div>
                     <div class="fee-addon-info">
-                        <div class="fee-addon-title">Books &amp; Stationery</div>
-                        <div class="fee-addon-sub">(Approximate, optional)</div>
-                        <div class="fee-addon-amount">₹ 8,000</div>
+                        <div class="fee-addon-title">Books &amp; Notebooks</div>
+                        <div class="fee-addon-sub">(NCERT / CBSE Curated)</div>
+                        <div class="fee-addon-amount">
+                            <span class="fee-status-badge text-secondary small">Publisher Price (MRP)</span>
+                        </div>
                     </div>
                 </div>
             </div>

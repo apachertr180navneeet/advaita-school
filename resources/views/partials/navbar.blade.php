@@ -193,7 +193,7 @@
                     </li>
 
                     <!-- Admissions Dropdown Menu -->
-                    <li class="adv-nav-item has-dropdown {{ request()->routeIs('admission-info', 'online-registration', 'fee-structure') ? 'active' : '' }}">
+                    <li class="adv-nav-item has-dropdown {{ request()->routeIs('admission-info', 'admission-guidelines', 'online-registration', 'fee-structure') ? 'active' : '' }}">
                         <a href="{{ route('admission-info') }}" class="adv-nav-link" aria-haspopup="true" aria-expanded="false">
                             <span>Admissions</span>
                             <i class="fa-solid fa-chevron-down chevron-icon"></i>
@@ -203,6 +203,12 @@
                                 <a href="{{ route('admission-info') }}" class="adv-dropdown-link {{ request()->routeIs('admission-info') ? 'active' : '' }}">
                                     <i class="fa-solid fa-circle-info"></i>
                                     <span>Admission Info</span>
+                                </a>
+                            </li>
+                            <li class="adv-dropdown-item">
+                                <a href="{{ route('admission-guidelines') }}" class="adv-dropdown-link {{ request()->routeIs('admission-guidelines') ? 'active' : '' }}">
+                                    <i class="fa-solid fa-book-bookmark"></i>
+                                    <span>Admission Guidelines</span>
                                 </a>
                             </li>
                             <li class="adv-dropdown-item">
@@ -443,7 +449,7 @@
             </ul>
         </li>
 
-        <li class="adv-mobile-item has-children {{ request()->routeIs('admission-info', 'online-registration', 'fee-structure') ? 'is-active' : '' }}">
+        <li class="adv-mobile-item has-children {{ request()->routeIs('admission-info', 'admission-guidelines', 'online-registration', 'fee-structure') ? 'is-active' : '' }}">
             <a href="#" class="adv-mobile-link" role="button" aria-expanded="false">
                 <span class="adv-mobile-link-text">
                     <i class="fa-solid fa-graduation-cap"></i>
@@ -456,6 +462,12 @@
                     <a href="{{ route('admission-info') }}" class="adv-mobile-submenu-link {{ request()->routeIs('admission-info') ? 'active' : '' }}">
                         <i class="fa-solid fa-circle-info"></i>
                         <span>Admission Info</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('admission-guidelines') }}" class="adv-mobile-submenu-link {{ request()->routeIs('admission-guidelines') ? 'active' : '' }}">
+                        <i class="fa-solid fa-book-bookmark"></i>
+                        <span>Admission Guidelines</span>
                     </a>
                 </li>
                 <li>
