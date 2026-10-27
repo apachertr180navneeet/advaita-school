@@ -5,16 +5,31 @@
 @section('meta_keywords', $seo['keywords'] ?? 'Advaita School admission guidelines, age criteria 30 June, CBSE admission rules Grade 9 10, Parbhani school admission process, required documents')
 
 @section('content')
-<div class="admission-page-wrapper">
+<main id="main" class="main-content-wrapper admission-page-wrapper">
 
-    <!-- Hero Section -->
+    <!-- =========================================================================
+         1. HERO SECTION: Students Visual + Wave Canvas + Official Guidelines Badges
+         ========================================================================= -->
     <section class="admission-hero-section">
-        <div class="admission-hero-bg-accent"></div>
-        <div class="adv-container position-relative">
-            <!-- Decorative SVG Waves -->
-            <div class="admission-hero-doodles" aria-hidden="true">
-                <svg width="120" height="40" viewBox="0 0 120 40" fill="none" class="doodle-wave">
-                    <path d="M4 20C38 8 84 9 116 22" stroke="#F37021" stroke-width="3" stroke-linecap="round"/>
+        <div class="admission-hero-canvas">
+            <!-- Hero Students Visual -->
+            <div class="admission-hero-bg-visual" aria-hidden="true">
+                <img src="{{ asset('assets/images/about-cta-students-clean.png') }}" alt="Advaita Students" class="admission-hero-bg-img" width="1024" height="682">
+            </div>
+
+            <!-- SVG Wave Overlay for Smooth Translucent Backdrop -->
+            <div class="admission-hero-wave-overlay" aria-hidden="true">
+                <svg viewBox="0 0 1200 440" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0H540C570 120 520 280 620 440H0V0Z" fill="#EEF6FC" fill-opacity="0.96"/>
+                    <path d="M520 0C550 140 500 280 600 440H580C480 280 530 140 500 0H520Z" fill="#F37021" fill-opacity="0.25"/>
+                </svg>
+            </div>
+
+            <!-- Floating Handwritten Script Tag at Top Right -->
+            <div class="admission-hero-script-tag" aria-hidden="true">
+                <span class="script-title">Official<br>Guidelines</span>
+                <svg class="script-underline" viewBox="0 0 120 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 12C38 3 84 4 116 14" stroke="#083B7A" stroke-width="3" stroke-linecap="round"/>
                 </svg>
             </div>
 
@@ -63,10 +78,12 @@
         </div>
     </section>
 
-    <!-- Quick Navigation Sub-bar -->
+    <!-- =========================================================================
+         2. STICKY SUB-BAR (Jump navigation)
+         ========================================================================= -->
     <div class="admission-subnav-bar">
         <div class="adv-container">
-            <nav class="admission-subnav-links" aria-label="Guidelines Section Navigation">
+            <nav class="subnav-links-wrap" aria-label="Guidelines Section Navigation">
                 <a href="#quick-actions" class="subnav-link">
                     <i class="fa-solid fa-bolt text-orange"></i>
                     <span>Quick Actions</span>
@@ -91,15 +108,17 @@
                     <i class="fa-solid fa-circle-exclamation text-orange"></i>
                     <span>E. Important Instructions</span>
                 </a>
-                <a href="#counsellor-helpline" class="subnav-link">
-                    <i class="fa-solid fa-headset text-teal"></i>
+                <a href="#counsellor-helpline" class="subnav-link highlight">
+                    <i class="fa-solid fa-headset"></i>
                     <span>Helpline Desk</span>
                 </a>
             </nav>
         </div>
     </div>
 
-    <!-- Quick Actions Section -->
+    <!-- =========================================================================
+         3. QUICK ACTIONS GRID: 6 Cards in 3-Col Grid + 7th Full-Width WhatsApp Banner
+         ========================================================================= -->
     <section class="admission-quick-actions-section" id="quick-actions">
         <div class="adv-container">
             <div class="section-header-pill">
@@ -108,7 +127,7 @@
                 <p class="pill-subtitle">Direct, verified access to download documents, connect with counsellors, navigate to our campus, and start registration.</p>
             </div>
 
-            <div class="qa-grid-container">
+            <div class="quick-actions-grid">
                 <!-- 1. View Fee Structure -->
                 <div class="qa-card">
                     <div>
@@ -120,7 +139,7 @@
                         </div>
                         <div class="qa-card-body">
                             <h3 class="qa-card-title">1. View Fee Structure</h3>
-                            <p class="qa-card-desc">Review transparent class-wise tuition fees, term installment schedules, and policy guidelines.</p>
+                            <p class="qa-card-desc">Review transparent class-wise tuition fees, term installment schedules, and refund policy guidelines.</p>
                         </div>
                     </div>
                     <div class="qa-card-footer">
@@ -142,7 +161,7 @@
                         </div>
                         <div class="qa-card-body">
                             <h3 class="qa-card-title">2. Download Admission Guidelines</h3>
-                            <p class="qa-card-desc">Official PDF document containing full age tables, document checklists, and CBSE regulations.</p>
+                            <p class="qa-card-desc">Official PDF document containing complete age tables, document checklists, and CBSE regulations.</p>
                         </div>
                     </div>
                     <div class="qa-card-footer">
@@ -168,7 +187,7 @@
                         </div>
                         <div class="qa-card-body">
                             <h3 class="qa-card-title">3. Check Required Documents</h3>
-                            <p class="qa-card-desc">Comprehensive 7-point checklist required for student registration and confirmation.</p>
+                            <p class="qa-card-desc">Comprehensive 7-point checklist required for student registration and admission confirmation.</p>
                         </div>
                     </div>
                     <div class="qa-card-footer">
@@ -200,7 +219,7 @@
                     <div class="qa-card-footer">
                         <a href="tel:{{ $counsellorPhone }}" class="btn-qa-action orange">
                             <i class="fa-solid fa-phone me-1" aria-hidden="true"></i>
-                            <span>Talk to an Admission Counsellor</span>
+                            <span>Talk to Counsellor</span>
                         </a>
                     </div>
                 </div>
@@ -259,24 +278,24 @@
                     </div>
                 </div>
 
-                <!-- 7. WhatsApp Enquiry -->
-                <div class="qa-card" style="border-color: #86efac; background: linear-gradient(180deg, #f0fdf4 0%, #ffffff 100%);">
-                    <div>
-                        <div class="qa-card-header">
-                            <div class="qa-icon-wrap whatsapp" aria-hidden="true">
-                                <i class="fa-brands fa-whatsapp"></i>
-                            </div>
-                            <span class="qa-badge green">Instant Chat</span>
+                <!-- 7. WhatsApp Enquiry Banner (Full Width Feature) -->
+                <div class="qa-card qa-card-banner">
+                    <div class="qa-banner-content">
+                        <div class="qa-icon-wrap whatsapp" aria-hidden="true">
+                            <i class="fa-brands fa-whatsapp"></i>
                         </div>
-                        <div class="qa-card-body">
-                            <h3 class="qa-card-title" style="color: #166534;">7. WhatsApp Enquiry</h3>
-                            <p class="qa-card-desc">Chat directly with the admissions team. Pre-filled enquiry is ready for your questions.</p>
+                        <div class="qa-banner-text">
+                            <div class="d-flex align-items-center gap-10 flex-wrap">
+                                <h3 class="qa-card-title mb-0" style="color: #166534;">7. Instant WhatsApp Enquiry Support</h3>
+                                <span class="qa-badge green">Online Now</span>
+                            </div>
+                            <p class="qa-card-desc mb-0 mt-4">Connect directly with our admissions desk on WhatsApp for instant guidance regarding age criteria, documents, and admission slots.</p>
                         </div>
                     </div>
-                    <div class="qa-card-footer">
+                    <div class="qa-banner-action">
                         <a href="{{ $whatsappUrl }}" target="_blank" rel="noopener noreferrer" class="btn-qa-action whatsapp">
-                            <i class="fa-brands fa-whatsapp me-1" aria-hidden="true"></i>
-                            <span>WhatsApp Enquiry</span>
+                            <i class="fa-brands fa-whatsapp me-2" aria-hidden="true"></i>
+                            <span>Chat on WhatsApp ({{ $counsellorPhone }})</span>
                         </a>
                     </div>
                 </div>
@@ -284,7 +303,9 @@
         </div>
     </section>
 
-    <!-- SECTION A: AGE CRITERIA & PHASED IMPLEMENTATION -->
+    <!-- =========================================================================
+         SECTION A: AGE CRITERIA & PHASED IMPLEMENTATION
+         ========================================================================= -->
     <section class="admission-section-wrapper" id="age-criteria">
         <div class="adv-container">
             <div class="section-header-pill">
@@ -296,7 +317,7 @@
             <!-- Cut-off Highlight Banner -->
             <div class="guidelines-cutoff-banner">
                 <div class="cutoff-icon-wrap">
-                    <i class="fa-solid fa-calendar-star"></i>
+                    <i class="fa-solid fa-calendar-check"></i>
                 </div>
                 <div class="cutoff-content">
                     <div class="cutoff-title">Prescribed Age Cut-Off Date: <strong>{{ $cutoffDate ?? '30 June' }}</strong></div>
@@ -341,8 +362,8 @@
                                 </td>
                                 <td>
                                     <span class="age-eligibility-highlight">
-                                        <i class="fa-solid fa-circle-check text-green me-1"></i>
-                                        {{ $item['eligibility'] }}
+                                        <i class="fa-solid fa-circle-check text-green me-2"></i>
+                                        <strong>{{ $item['eligibility'] }}</strong>
                                     </span>
                                 </td>
                                 <td>
@@ -371,7 +392,7 @@
                 <div class="phased-cards-grid">
                     @foreach($phasedSchedule as $phase)
                     <div class="phased-step-card">
-                        <div class="phase-number">{{ $loop->iteration }}</div>
+                        <div class="phase-number">0{{ $loop->iteration }}</div>
                         <div class="phase-grade">{{ $phase['grade'] }}</div>
                         <div class="phase-year">{{ $phase['year'] }}</div>
                         <div class="phase-status"><i class="fa-regular fa-calendar-check me-1"></i>{{ $phase['status'] }}</div>
@@ -391,7 +412,9 @@
         </div>
     </section>
 
-    <!-- SECTION B: DOCUMENTS REQUIRED -->
+    <!-- =========================================================================
+         SECTION B: DOCUMENTS REQUIRED
+         ========================================================================= -->
     <section class="admission-section-wrapper bg-light-alt" id="documents-required">
         <div class="adv-container">
             <div class="section-header-pill">
@@ -403,7 +426,9 @@
             <div class="docs-checklist-container">
                 <div class="docs-header-bar">
                     <div class="docs-header-left">
-                        <i class="fa-solid fa-folder-closed text-orange fs-4"></i>
+                        <div class="docs-header-icon-wrap" style="width: 44px; height: 44px; border-radius: 12px; background: #fff7ed; color: #ea580c; display: flex; align-items: center; justify-content: center; font-size: 20px;">
+                            <i class="fa-solid fa-folder-closed"></i>
+                        </div>
                         <div>
                             <h3 class="docs-header-title">7-Category Verification Checklist</h3>
                             <p class="docs-header-sub">Submit copies along with originals for spot verification at the school office.</p>
@@ -424,7 +449,7 @@
                 <div class="docs-list-grid">
                     @foreach($requiredDocuments as $doc)
                     <div class="doc-item-card">
-                        <div class="doc-item-number">{{ $doc['number'] }}</div>
+                        <div class="doc-item-number">0{{ $doc['number'] }}</div>
                         <div class="doc-item-icon">
                             <i class="{{ $doc['icon'] }}"></i>
                         </div>
@@ -447,7 +472,9 @@
         </div>
     </section>
 
-    <!-- SECTION C: ADMISSION PROCEDURE -->
+    <!-- =========================================================================
+         SECTION C: ADMISSION PROCEDURE (5-Step Sequence)
+         ========================================================================= -->
     <section class="admission-section-wrapper" id="admission-procedure">
         <div class="adv-container">
             <div class="section-header-pill">
@@ -512,7 +539,9 @@
         </div>
     </section>
 
-    <!-- SECTION D: CLASS ELIGIBILITY -->
+    <!-- =========================================================================
+         SECTION D: CLASS ELIGIBILITY & CBSE REGULATIONS
+         ========================================================================= -->
     <section class="admission-section-wrapper bg-light-alt" id="class-eligibility">
         <div class="adv-container">
             <div class="section-header-pill">
@@ -544,7 +573,7 @@
                         </div>
                         @else
                         <div class="cbse-ok-tag">
-                            <i class="fa-solid fa-circle-check me-1"></i>
+                            <i class="fa-solid fa-circle-check text-green me-1"></i>
                             <span>Subject to Valid Transfer Certificate</span>
                         </div>
                         @endif
@@ -555,7 +584,9 @@
         </div>
     </section>
 
-    <!-- SECTION E: IMPORTANT INSTRUCTIONS -->
+    <!-- =========================================================================
+         SECTION E: IMPORTANT INSTRUCTIONS
+         ========================================================================= -->
     <section class="admission-section-wrapper" id="important-instructions">
         <div class="adv-container">
             <div class="section-header-pill">
@@ -566,18 +597,33 @@
 
             <div class="important-instructions-card">
                 <div class="instructions-header">
-                    <i class="fa-solid fa-shield-halved text-orange fs-3"></i>
+                    <div style="width: 48px; height: 48px; border-radius: 12px; background: #fff7ed; color: #ea580c; display: flex; align-items: center; justify-content: center; font-size: 22px;">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
                     <div>
                         <h3 class="instructions-title">Institutional Terms &amp; Compliance Requirements</h3>
-                        <p class="instructions-subtitle">Applicable for Academic Session {{ $academicYear }}</p>
+                        <p class="instructions-subtitle">Applicable for Academic Session {{ $academicYear }} &middot; Advaita School of Excellence</p>
                     </div>
                 </div>
 
+                @php
+                    $instructionIcons = [
+                        ['icon' => 'fa-solid fa-file-circle-check', 'color' => '#16a34a', 'bg' => '#f0fdf4'],
+                        ['icon' => 'fa-solid fa-hand-holding-hand', 'color' => '#ea580c', 'bg' => '#fff7ed'],
+                        ['icon' => 'fa-solid fa-chair', 'color' => '#7c3aed', 'bg' => '#f5f3ff'],
+                        ['icon' => 'fa-solid fa-graduation-cap', 'color' => '#0284c7', 'bg' => '#f0f9ff'],
+                        ['icon' => 'fa-solid fa-hourglass-half', 'color' => '#083B7A', 'bg' => '#eff6ff'],
+                    ];
+                @endphp
+
                 <div class="instructions-list">
-                    @foreach($importantInstructions as $ins)
+                    @foreach($importantInstructions as $index => $ins)
+                    @php
+                        $iconData = $instructionIcons[$index % count($instructionIcons)];
+                    @endphp
                     <div class="instruction-item">
-                        <div class="instruction-icon">
-                            <i class="fa-solid fa-check"></i>
+                        <div class="instruction-icon" style="background: {{ $iconData['bg'] }}; color: {{ $iconData['color'] }}; width: 32px; height: 32px; border-radius: 10px; font-size: 14px;">
+                            <i class="{{ $iconData['icon'] }}"></i>
                         </div>
                         <div class="instruction-text">
                             {{ $ins }}
@@ -594,7 +640,9 @@
         </div>
     </section>
 
-    <!-- Counsellor & Quick Contact Helpline -->
+    <!-- =========================================================================
+         COUNSELLOR & QUICK CONTACT HELPLINE
+         ========================================================================= -->
     <section class="admission-helpline-section" id="counsellor-helpline">
         <div class="adv-container">
             <div class="helpline-card">
@@ -644,5 +692,6 @@
         </div>
     </section>
 
-</div>
+</main>
 @endsection
+

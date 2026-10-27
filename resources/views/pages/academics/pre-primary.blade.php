@@ -50,10 +50,10 @@
                         {{ $content['hero_badge'] ?? 'PRE-PRIMARY WING (NURSERY · LKG · UKG)' }}
                     </div>
 
-                    <!-- Main Headline -->
+                    <!-- Main Headline with Fraunces Serif Highlight -->
                     <h1 class="admission-hero-title">
                         {{ $content['hero_title'] ?? 'Nurturing Curiosity in their' }}
-                        <span class="highlight-orange">{{ $content['hero_highlight'] ?? 'Most Wonder-Filled Years.' }}</span>
+                        <span class="highlight-serif">Wonder-Filled Years.</span>
                     </h1>
 
                     <!-- Description -->
@@ -61,14 +61,19 @@
                         {{ $content['hero_subtitle'] ?? 'A joyful, play-based early childhood environment blending Montessori methods, sensory learning, and creative discovery.' }}
                     </p>
 
+                    <!-- Quick Action Buttons -->
                     <div class="d-flex align-items-center gap-12 mt-20 flex-wrap">
-                        <a href="{{ route('online-registration') }}" class="btn-primary-pill">
+                        <a href="{{ route('online-registration') }}" class="admission-btn-primary" title="Apply for Pre-Primary Admissions">
+                            <i class="fa-solid fa-file-pen"></i>
                             <span>Enquire for Pre-Primary</span>
-                            <i class="fa-solid fa-arrow-right"></i>
                         </a>
-                        <a href="#new-building" class="btn-outline-pill">
+                        <a href="#new-building" class="admission-btn-visit" style="background: rgba(8, 59, 122, 0.08); border-color: rgba(8, 59, 122, 0.2); color: #083B7A;" title="Upcoming New Building">
                             <i class="fa-solid fa-building-flag"></i>
                             <span>Upcoming New Building</span>
+                        </a>
+                        <a href="#pedagogy" class="admission-btn-visit" title="Play-Way Curriculum">
+                            <i class="fa-solid fa-shapes"></i>
+                            <span>Play-Way Pedagogy</span>
                         </a>
                     </div>
                 </div>
@@ -78,6 +83,34 @@
 
     <!-- Main Container -->
     <div class="acad-container">
+
+        <!-- =========================================================================
+             SUB-MENU PILL NAVIGATION BAR (Programmes Ecosystem Switcher)
+             ========================================================================= -->
+        <div class="acad-pills-bar-wrap">
+            <nav class="acad-pills-bar" aria-label="Academics Navigation">
+                <a href="{{ route('academics') }}" class="acad-pill-btn">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Overview</span>
+                </a>
+                <a href="{{ route('academics.pre-primary') }}" class="acad-pill-btn active">
+                    <i class="fa-solid fa-shapes"></i>
+                    <span>Pre-Primary (Nursery–UKG)</span>
+                </a>
+                <a href="{{ route('academics.primary') }}" class="acad-pill-btn">
+                    <i class="fa-solid fa-book-open-reader"></i>
+                    <span>Primary Wing (1–5)</span>
+                </a>
+                <a href="{{ route('academics.secondary') }}" class="acad-pill-btn">
+                    <i class="fa-solid fa-atom"></i>
+                    <span>Secondary (6–10)</span>
+                </a>
+                <a href="{{ route('results') }}" class="acad-pill-btn">
+                    <i class="fa-solid fa-award"></i>
+                    <span>CBSE Results</span>
+                </a>
+            </nav>
+        </div>
 
         <!-- =========================================================================
              2. HIGHLIGHT BANNER: UPCOMING NEW SCHOOL BUILDING (PRIORITY FEATURE)
@@ -90,7 +123,7 @@
                             <img src="{{ asset($content['building_image'] ?? 'assets/images/gallery/campus-building.png') }}" alt="Upcoming New Pre-Primary Building - Advaita School of Excellence">
                             <div class="building-status-badge">
                                 <span class="status-pulse"></span>
-                                <span>{{ $content['new_building_status'] ?? 'Under Construction · Opening Next Session' }}</span>
+                                <span>{{ $content['new_building_status'] ?? 'Under Construction · Opening for Next Academic Session' }}</span>
                             </div>
                         </div>
                     </div>
@@ -151,12 +184,10 @@
              3. EARLY YEARS CURRICULUM & METHODOLOGY (4 Pillared Cards)
              ========================================================================= -->
         <section class="acad-section" id="pedagogy">
-            <div class="acad-section-header">
-                <span class="acad-eyebrow">— PLAY-WAY PEDAGOGY —</span>
-                <h2 class="acad-section-title">
-                    Learning That Feels Like <span class="highlight-orange">Pure Play.</span>
-                </h2>
-                <p class="acad-section-desc">
+            <div class="section-header-pill text-center mx-auto" style="max-width: 800px;">
+                <span class="pill-badge"><i class="fa-solid fa-shapes"></i> Play-Way Pedagogy</span>
+                <h2 class="pill-title">Learning That Feels Like <span class="pill-title-highlight">Pure Play</span></h2>
+                <p class="pill-subtitle mx-auto">
                     Children learn best when they are active participants. Our pre-primary curriculum builds foundational literacy, numeracy, and emotional intelligence through joyful sensory exploration.
                 </p>
             </div>
@@ -204,12 +235,10 @@
              4. CLASSROOMS & PLAY FACILITIES SHOWCASE (Photo Gallery with Lightbox)
              ========================================================================= -->
         <section class="acad-section" id="facilities-gallery">
-            <div class="acad-section-header">
-                <span class="acad-eyebrow">— INFRASTRUCTURE SHOWCASE —</span>
-                <h2 class="acad-section-title">
-                    Classrooms, Play Lawns &amp; <span class="highlight-orange">Activity Spaces.</span>
-                </h2>
-                <p class="acad-section-desc">
+            <div class="section-header-pill text-center mx-auto" style="max-width: 800px;">
+                <span class="pill-badge"><i class="fa-solid fa-camera"></i> Infrastructure Showcase</span>
+                <h2 class="pill-title">Classrooms, Play Lawns &amp; <span class="pill-title-highlight">Activity Spaces</span></h2>
+                <p class="pill-subtitle mx-auto">
                     Every square foot is thoughtfully child-proofed, colorfully curated, and equipped with safe learning instruments to inspire creativity.
                 </p>
             </div>
@@ -223,7 +252,7 @@
                             <span class="pre-tag">Recreation</span>
                             <h4>Splash Pool &amp; Water Play</h4>
                             <p>Safe, shallow splash pool for summer sensory fun under certified supervision.</p>
-                            <i class="fa-solid fa-magnifying-glass-plus zoom-icon"></i>
+                            <i class="fa-solid fa-magnifying-glass-plus zoom-icon" aria-hidden="true"></i>
                         </div>
                     </div>
                 </div>
@@ -236,7 +265,7 @@
                             <span class="pre-tag">Motor Skills</span>
                             <h4>Crawl Tunnels &amp; Soft Gym</h4>
                             <p>Padded obstacles and colorful crawl tunnels for coordination and agility.</p>
-                            <i class="fa-solid fa-magnifying-glass-plus zoom-icon"></i>
+                            <i class="fa-solid fa-magnifying-glass-plus zoom-icon" aria-hidden="true"></i>
                         </div>
                     </div>
                 </div>
@@ -249,7 +278,7 @@
                             <span class="pre-tag">Creativity</span>
                             <h4>Art, Craft &amp; Finger Painting</h4>
                             <p>Non-toxic finger colors, origami, and collage activities to unleash imagination.</p>
-                            <i class="fa-solid fa-magnifying-glass-plus zoom-icon"></i>
+                            <i class="fa-solid fa-magnifying-glass-plus zoom-icon" aria-hidden="true"></i>
                         </div>
                     </div>
                 </div>
@@ -262,7 +291,7 @@
                             <span class="pre-tag">Outdoor Lawn</span>
                             <h4>Parachute Play &amp; Lawn Games</h4>
                             <p>Sunlit green lawns for parachute drills, ring games, and joyful physical games.</p>
-                            <i class="fa-solid fa-magnifying-glass-plus zoom-icon"></i>
+                            <i class="fa-solid fa-magnifying-glass-plus zoom-icon" aria-hidden="true"></i>
                         </div>
                     </div>
                 </div>
@@ -275,7 +304,7 @@
                             <span class="pre-tag">Smart Class</span>
                             <h4>Interactive Phonics Classrooms</h4>
                             <p>Spacious, naturally ventilated rooms with smart boards and low-height desks.</p>
-                            <i class="fa-solid fa-magnifying-glass-plus zoom-icon"></i>
+                            <i class="fa-solid fa-magnifying-glass-plus zoom-icon" aria-hidden="true"></i>
                         </div>
                     </div>
                 </div>
@@ -288,7 +317,7 @@
                             <span class="pre-tag">Agility</span>
                             <h4>Hula Hoop &amp; Gymnastics</h4>
                             <p>Guided movement drills to develop body balance, rhythm, and confidence.</p>
-                            <i class="fa-solid fa-magnifying-glass-plus zoom-icon"></i>
+                            <i class="fa-solid fa-magnifying-glass-plus zoom-icon" aria-hidden="true"></i>
                         </div>
                     </div>
                 </div>
@@ -299,39 +328,37 @@
              5. LEARNING INSTRUMENTS & ACTIVITY AREAS
              ========================================================================= -->
         <section class="acad-section" id="learning-instruments">
-            <div class="acad-section-header">
-                <span class="acad-eyebrow">— HANDS-ON INSTRUMENTS —</span>
-                <h2 class="acad-section-title">
-                    Educational Toys &amp; <span class="highlight-orange">Activity Instruments.</span>
-                </h2>
-                <p class="acad-section-desc">
-                    We replace passive screen time with real-world tangible learning tools that stimulate cognitive curiosity and motor control.
+            <div class="section-header-pill text-center mx-auto" style="max-width: 800px;">
+                <span class="pill-badge"><i class="fa-solid fa-puzzle-piece"></i> Hands-On Instruments</span>
+                <h2 class="pill-title">Educational Toys &amp; <span class="pill-title-highlight">Activity Instruments</span></h2>
+                <p class="pill-subtitle mx-auto">
+                    We replace passive screen time with real-world tangible learning tools that stimulate cognitive curiosity, spatial reasoning, and fine motor control.
                 </p>
             </div>
 
             <div class="instruments-grid">
                 <div class="instrument-item">
-                    <div class="ins-icon"><i class="fa-solid fa-puzzle-piece"></i></div>
+                    <div class="ins-icon" aria-hidden="true"><i class="fa-solid fa-puzzle-piece"></i></div>
                     <h4>Montessori Tactile Blocks</h4>
-                    <p>Wooden geometry blocks, sorting cylinders, and sensory touch boards.</p>
+                    <p>Wooden geometry blocks, sorting cylinders, and sensory touch boards to develop spatial intelligence.</p>
                 </div>
 
                 <div class="instrument-item">
-                    <div class="ins-icon"><i class="fa-solid fa-drum"></i></div>
+                    <div class="ins-icon" aria-hidden="true"><i class="fa-solid fa-drum"></i></div>
                     <h4>Orff Musical Instruments</h4>
-                    <p>Xylophones, rhythm shakers, and hand cymbals to develop auditory discrimination.</p>
+                    <p>Xylophones, rhythm shakers, and hand cymbals to develop auditory discrimination and musical sense.</p>
                 </div>
 
                 <div class="instrument-item">
-                    <div class="ins-icon"><i class="fa-solid fa-seedling"></i></div>
+                    <div class="ins-icon" aria-hidden="true"><i class="fa-solid fa-seedling"></i></div>
                     <h4>Nature &amp; Sensory Sand Pit</h4>
-                    <p>Safe fine-grain kinetic sand tables and botany discovery garden boxes.</p>
+                    <p>Safe fine-grain kinetic sand tables and botany discovery garden boxes for hands-on sensory exploration.</p>
                 </div>
 
                 <div class="instrument-item">
-                    <div class="ins-icon"><i class="fa-solid fa-book-sparkles"></i></div>
+                    <div class="ins-icon" aria-hidden="true"><i class="fa-solid fa-book-sparkles"></i></div>
                     <h4>Storybooks &amp; Puppet Theatre</h4>
-                    <p>Hand puppets and bilingual storybooks for vocabulary development.</p>
+                    <p>Hand puppets and bilingual storybooks for expressive storytelling, empathy, and vocabulary expansion.</p>
                 </div>
             </div>
         </section>
@@ -342,69 +369,83 @@
         <section class="pre-safety-section">
             <div class="pre-safety-card">
                 <div class="pre-safety-header">
-                    <span class="safety-badge"><i class="fa-solid fa-shield-heart"></i> SAFETY FIRST</span>
+                    <span class="safety-badge"><i class="fa-solid fa-shield-heart"></i> SAFETY FIRST PROTOCOL</span>
                     <h2>Uncompromising Child Safety &amp; Hygiene</h2>
-                    <p>We treat every child in our care with the gentleness and vigilance of a second home.</p>
+                    <p>We treat every child in our care with the gentleness, compassion, and vigilance of a second home.</p>
                 </div>
 
                 <div class="safety-pillars-grid">
                     <div class="safety-pillar">
-                        <div class="safety-icon-wrap"><i class="fa-solid fa-video"></i></div>
+                        <div class="safety-icon-wrap" aria-hidden="true"><i class="fa-solid fa-video"></i></div>
                         <h4>24×7 CCTV Surveillance</h4>
-                        <p>Complete campus and corridor video coverage accessible to administrators.</p>
+                        <p>Complete campus, corridor, and play area video coverage accessible to administrators at all times.</p>
                     </div>
 
                     <div class="safety-pillar">
-                        <div class="safety-icon-wrap"><i class="fa-solid fa-person-breastfeeding"></i></div>
-                        <h4>Female Nannies &amp; Caretakers</h4>
-                        <p>Warm, trained female attendants present at all times for bathroom and meal assistance.</p>
+                        <div class="safety-icon-wrap" aria-hidden="true"><i class="fa-solid fa-person-dress"></i></div>
+                        <h4>Female Attendants &amp; Nannies</h4>
+                        <p>Warm, trained female attendants present at all times for bathroom assistance, meals, and gentle comfort.</p>
                     </div>
 
                     <div class="safety-pillar">
-                        <div class="safety-icon-wrap"><i class="fa-solid fa-pump-soap"></i></div>
-                        <h4>Daily Medical-Grade Sanitization</h4>
-                        <p>Toys, play mats, and learning tools are thoroughly sanitized after every session.</p>
+                        <div class="safety-icon-wrap" aria-hidden="true"><i class="fa-solid fa-pump-soap"></i></div>
+                        <h4>Medical-Grade Sanitization</h4>
+                        <p>All toys, activity mats, splash gear, and dining tables are sanitized daily with child-safe organic disinfectants.</p>
                     </div>
 
                     <div class="safety-pillar">
-                        <div class="safety-icon-wrap"><i class="fa-solid fa-couch"></i></div>
+                        <div class="safety-icon-wrap" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></div>
                         <h4>Rounded Ergonomic Furniture</h4>
-                        <p>No sharp corners. All desks, chairs, and play zones meet international infant safety norms.</p>
+                        <p>No sharp corners. All desks, chairs, and play obstacles meet international infant and toddler safety norms.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- =========================================================================
-             7. ADMISSION ENQUIRY CTA BANNER
+             7. ADMISSION ENQUIRY CTA HELPLINE BANNER
              ========================================================================= -->
-        <section class="acad-cta-banner">
-            <div class="acad-cta-card">
-                <div class="acad-cta-content">
-                    <span class="acad-cta-eyebrow">ADMISSIONS OPEN FOR SESSION 2026–27</span>
-                    <h2 class="acad-cta-heading">
-                        {{ $content['cta_headline'] ?? 'Give Your Child the Best Start in Life.' }}
-                    </h2>
-                    <p class="acad-cta-subtext">
-                        {{ $content['cta_subtext'] ?? 'Admissions are now open for Nursery, LKG, and UKG for the upcoming session.' }}
-                    </p>
-                    <div class="acad-cta-btn-group">
-                        <a href="{{ route('online-registration') }}" class="btn-acad-cta-primary">
-                            <span>Register Online Now</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                        <a href="tel:09413062851" class="btn-acad-cta-call">
-                            <i class="fa-solid fa-phone"></i>
-                            <span>Call: 094130 62851</span>
-                        </a>
-                        <a href="https://wa.me/919413062851?text=Hello%20Advaita%20School,%20I%20am%20inquiring%20about%20Pre-Primary%20Admissions." target="_blank" rel="noopener noreferrer" class="btn-acad-cta-wa">
-                            <i class="fa-brands fa-whatsapp"></i>
-                            <span>WhatsApp Enquiry</span>
-                        </a>
+        <div class="pre-helpline-card">
+            <div class="pre-helpline-left">
+                <span class="pre-helpline-eyebrow">ADMISSIONS OPEN FOR SESSION 2026–27</span>
+                <h2 class="pre-helpline-title">
+                    Give Your Child the <span class="highlight-orange">Best Start in Life.</span>
+                </h2>
+                <p class="pre-helpline-desc">
+                    Admissions are now open for Nursery, LKG, and UKG for the upcoming academic session. Limited seats per batch to preserve our 1:15 educator ratio.
+                </p>
+
+                <div class="pre-helpline-meta-list">
+                    <div class="pre-meta-row">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <span>Pre-Primary Counsellor: <strong>Ms. Vaishnavi (+91 94221 75522)</strong></span>
+                    </div>
+                    <div class="pre-meta-row">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Campus Helpline: <strong>094130 62851 &bull; 02452 297298</strong></span>
+                    </div>
+                    <div class="pre-meta-row">
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Campus Visiting Hours: <strong>Monday – Saturday (9:00 AM – 4:00 PM)</strong></span>
                     </div>
                 </div>
             </div>
-        </section>
+
+            <div class="pre-helpline-right">
+                <a href="{{ route('online-registration') }}" class="btn-pre-cta-primary" title="Register Online Now">
+                    <i class="fa-solid fa-file-pen"></i>
+                    <span>Register Online Now</span>
+                </a>
+                <a href="https://wa.me/919413062851?text=Hello%20Advaita%20School,%20I%20am%20inquiring%20about%20Pre-Primary%20Admissions%202026-27." target="_blank" rel="noopener noreferrer" class="btn-pre-cta-wa" title="WhatsApp Enquiry">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>Chat on WhatsApp</span>
+                </a>
+                <a href="tel:09413062851" class="btn-pre-cta-call" title="Call the School">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Call: 094130 62851</span>
+                </a>
+            </div>
+        </div>
 
     </div><!-- /.acad-container -->
 

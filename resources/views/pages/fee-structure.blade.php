@@ -23,12 +23,11 @@
                 </svg>
             </div>
 
-
             <!-- Floating Handwritten Script Tag at Top Right -->
             <div class="admission-hero-script-tag" aria-hidden="true">
-                <span class="script-title">More<br>Than A School</span>
+                <span class="script-title">Transparent<br>Education Fees</span>
                 <svg class="script-underline" viewBox="0 0 120 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 12C38 3 84 4 116 14" stroke="#083B7A" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M4 12C38 3 84 4 116 14" stroke="#F37021" stroke-width="3" stroke-linecap="round"/>
                 </svg>
             </div>
 
@@ -44,18 +43,36 @@
                         <span class="active">Fee Structure</span>
                     </nav>
 
-                    <!-- Eyebrow -->
-                    <div class="admission-eyebrow">{{ $content['hero_badge'] ?? 'ADMISSIONS 2026–27' }}</div>
+                    <!-- Eyebrow Pill -->
+                    <div class="admission-eyebrow">
+                        <i class="fa-solid fa-graduation-cap me-1"></i> {{ $content['hero_badge'] ?? 'ADMISSIONS 2026–27' }}
+                    </div>
 
                     <!-- Main Headline -->
                     <h1 class="admission-hero-title">
-                        {{ $content['hero_title'] ?? 'Fees, paid in simple terms.' }}
+                        Fees, Paid in <span class="highlight-serif">Simple Terms.</span>
                     </h1>
 
                     <!-- Description -->
                     <p class="admission-hero-desc">
-                        {{ $content['hero_desc'] ?? 'A clear, transparent fee structure designed to make quality education accessible for every child.' }}
+                        {{ $content['hero_desc'] ?? 'A clear, transparent fee structure designed to make quality education accessible for every child with zero hidden levies.' }}
                     </p>
+
+                    <!-- Quick Navigation CTA Group -->
+                    <div class="d-flex align-items-center gap-12 flex-wrap mt-20">
+                        <a href="#fee-tables" class="admission-btn-primary" title="View Fee Schedule">
+                            <i class="fa-solid fa-table-list"></i>
+                            <span>View Class Fee Table</span>
+                        </a>
+                        <a href="{{ route('online-registration') }}" class="admission-btn-visit" style="background: rgba(8, 59, 122, 0.08); border-color: rgba(8, 59, 122, 0.2); color: #083B7A;" title="Online Registration">
+                            <i class="fa-solid fa-file-pen"></i>
+                            <span>Register Online</span>
+                        </a>
+                        <a href="{{ route('admission-guidelines') }}" class="admission-btn-visit" title="Admission Guidelines">
+                            <i class="fa-solid fa-book-open-reader"></i>
+                            <span>Admission Guidelines</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -72,21 +89,25 @@
             <div class="fee-main-card-head">
                 <div class="fee-card-head-left">
                     <div class="fee-card-icon-box" aria-hidden="true">
-                        <i class="fa-solid fa-user-group"></i>
+                        <i class="fa-solid fa-table-cells"></i>
                     </div>
                     <div>
                         <h2 class="fee-card-main-title">Class-wise Fee Structure</h2>
-                        <p class="fee-card-main-sub">Academic Session {{ $academicYear }} &nbsp;|&nbsp; Nursery to Class 10 &nbsp;|&nbsp; <span class="text-muted">Updated: {{ $lastUpdated }}</span></p>
+                        <p class="fee-card-main-sub">
+                            <span class="badge-sub-session"><i class="fa-solid fa-graduation-cap me-1"></i> Academic Session {{ $academicYear }}</span>
+                            <span>&bull; Nursery to Class 10 &bull;</span>
+                            <span class="text-muted"><i class="fa-solid fa-clock-rotate-left me-1"></i> Updated: {{ $lastUpdated }}</span>
+                        </p>
                     </div>
                 </div>
 
                 <!-- Annual vs Term-wise Fee Toggle -->
                 <div class="fee-toggle-pill-group" role="tablist" aria-label="Fee View Mode">
                     <button type="button" class="btn-fee-toggle active" id="btnToggleAnnual" role="tab" aria-selected="true" aria-controls="feeTableAnnual">
-                        Annual Fee (Recommended)
+                        <i class="fa-solid fa-calendar-check me-2"></i> Annual Fee (Recommended)
                     </button>
                     <button type="button" class="btn-fee-toggle" id="btnToggleTerm" role="tab" aria-selected="false" aria-controls="feeTableTerm">
-                        Term-wise Fee
+                        <i class="fa-solid fa-calendar-days me-2"></i> Term-wise Fee
                     </button>
                 </div>
             </div>
@@ -107,13 +128,20 @@
                         @foreach($allFees as $fee)
                         <tr>
                             <td class="td-class">
-                                <strong>{{ $fee->class_name }}</strong>
-                                <span class="d-block small text-muted">{{ \App\Models\FeeStructure::WINGS[$fee->wing]['label'] ?? '' }}</span>
+                                <div class="fee-grade-wrap">
+                                    <span class="fee-grade-title">{{ $fee->class_name }}</span>
+                                    @php
+                                        $wingMeta = \App\Models\FeeStructure::WINGS[$fee->wing] ?? null;
+                                    @endphp
+                                    @if($wingMeta)
+                                        <span class="fee-wing-badge fee-wing-{{ $fee->wing }}">{{ $wingMeta['label'] }}</span>
+                                    @endif
+                                </div>
                             </td>
-                            <td class="td-amount">₹ {{ number_format((float) $fee->tuition_fee, 0) }}</td>
-                            <td class="td-amount">₹ {{ number_format((float) $fee->development_fee, 0) }}</td>
-                            <td class="td-amount">₹ {{ number_format((float) $fee->exam_fee, 0) }}</td>
-                            <td class="td-total">{{ $fee->formatted_annual_total }}</td>
+                            <td class="td-amount"><span class="currency-symbol">₹</span> {{ number_format((float) $fee->tuition_fee, 0) }}</td>
+                            <td class="td-amount"><span class="currency-symbol">₹</span> {{ number_format((float) $fee->development_fee, 0) }}</td>
+                            <td class="td-amount"><span class="currency-symbol">₹</span> {{ number_format((float) $fee->exam_fee, 0) }}</td>
+                            <td class="td-total"><span class="fee-total-highlight">{{ $fee->formatted_annual_total }}</span></td>
                         </tr>
                         @endforeach
                     </tbody>
@@ -136,12 +164,20 @@
                         @foreach($allFees as $fee)
                         <tr>
                             <td class="td-class">
-                                <strong>{{ $fee->class_name }}</strong>
+                                <div class="fee-grade-wrap">
+                                    <span class="fee-grade-title">{{ $fee->class_name }}</span>
+                                    @php
+                                        $wingMeta = \App\Models\FeeStructure::WINGS[$fee->wing] ?? null;
+                                    @endphp
+                                    @if($wingMeta)
+                                        <span class="fee-wing-badge fee-wing-{{ $fee->wing }}">{{ $wingMeta['label'] }}</span>
+                                    @endif
+                                </div>
                             </td>
-                            <td class="td-amount">₹ {{ number_format((float) ($fee->term1_fee ?: ($fee->annual_total / 3)), 0) }}</td>
-                            <td class="td-amount">₹ {{ number_format((float) ($fee->term2_fee ?: ($fee->annual_total / 3)), 0) }}</td>
-                            <td class="td-amount">₹ {{ number_format((float) ($fee->term3_fee ?: ($fee->annual_total / 3)), 0) }}</td>
-                            <td class="td-total">{{ $fee->formatted_annual_total }}</td>
+                            <td class="td-amount"><span class="currency-symbol">₹</span> {{ number_format((float) ($fee->term1_fee ?: ($fee->annual_total / 3)), 0) }}</td>
+                            <td class="td-amount"><span class="currency-symbol">₹</span> {{ number_format((float) ($fee->term2_fee ?: ($fee->annual_total / 3)), 0) }}</td>
+                            <td class="td-amount"><span class="currency-symbol">₹</span> {{ number_format((float) ($fee->term3_fee ?: ($fee->annual_total / 3)), 0) }}</td>
+                            <td class="td-total"><span class="fee-total-highlight">{{ $fee->formatted_annual_total }}</span></td>
                         </tr>
                         @endforeach
                     </tbody>
@@ -150,8 +186,10 @@
 
             <!-- Table Note -->
             <div class="fee-table-note">
-                <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
-                <span><strong>Note:</strong> The above fee structure is for Academic Session {{ $academicYear }}. One-time admission fee applies for fresh enrollments only. Transport charges are computed separately by route corridor.</span>
+                <div class="fee-note-icon"><i class="fa-solid fa-circle-info"></i></div>
+                <div class="fee-note-text">
+                    <strong>Transparent Fee Policy:</strong> The above fee structure is officially applicable for Academic Session {{ $academicYear }}. One-time admission fee applies for fresh enrollments only. Transport charges are computed separately according to designated pickup corridors across Parbhani.
+                </div>
             </div>
         </div>
         @else
@@ -161,7 +199,7 @@
                 <span class="badge-pending-status">
                     <i class="fa-solid fa-hourglass-half me-1"></i> Under Final Management Review
                 </span>
-                <span class="pending-session-tag">Academic Session {{ $academicYear }}</span>
+                <span class="pending-session-tag"><i class="fa-solid fa-calendar me-1 text-orange"></i> Academic Session {{ $academicYear }}</span>
             </div>
 
             <div class="pending-content-grid">
@@ -247,25 +285,28 @@
              3. ADDITIONAL CHARGES (One-time / Applicable when required)
              ========================================================================= -->
         <section class="fee-section-block">
-            <div class="fee-section-title-wrap">
-                <div class="fee-accent-bar" aria-hidden="true"></div>
-                <div>
-                    <h2>Additional Charges <span class="fee-sub-inline">(One-time / Applicable when required)</span></h2>
-                </div>
+            <div class="section-header-pill">
+                <span class="pill-badge"><i class="fa-solid fa-tags"></i> Transparent Breakdown</span>
+                <h2 class="pill-title">Additional Charges <span class="pill-title-highlight">(One-time &amp; Add-ons)</span></h2>
+                <p class="pill-subtitle">Clear breakdown of optional campus amenities, one-time enrollment charges, and student learning resources.</p>
             </div>
 
             <div class="fee-additional-grid">
                 <!-- Admission Fee -->
                 <div class="fee-addon-card">
-                    <div class="fee-addon-icon orange" aria-hidden="true">
-                        <i class="fa-solid fa-id-card"></i>
+                    <div class="fee-addon-top">
+                        <div class="fee-addon-icon orange" aria-hidden="true">
+                            <i class="fa-solid fa-id-card-clip"></i>
+                        </div>
+                        <span class="fee-addon-tag">One-time</span>
                     </div>
-                    <div class="fee-addon-info">
-                        <div class="fee-addon-title">Admission Fee</div>
-                        <div class="fee-addon-sub">(One-time, fresh admissions)</div>
-                        <div class="fee-addon-amount">
+                    <div class="fee-addon-body">
+                        <h3 class="fee-addon-title">Admission Fee</h3>
+                        <p class="fee-addon-sub">One-time charge for fresh enrollment into Advaita.</p>
+                        <div class="fee-addon-price-badge">
                             @if($isPublished)
-                                ₹ 5,000
+                                <span>₹ 5,000</span>
+                                <span class="fee-status-badge text-muted small">At Enrollment</span>
                             @else
                                 <span class="fee-status-badge text-warning small">As Approved by Board</span>
                             @endif
@@ -275,15 +316,19 @@
 
                 <!-- Transport Fee -->
                 <div class="fee-addon-card">
-                    <div class="fee-addon-icon blue" aria-hidden="true">
-                        <i class="fa-solid fa-bus"></i>
+                    <div class="fee-addon-top">
+                        <div class="fee-addon-icon blue" aria-hidden="true">
+                            <i class="fa-solid fa-van-shuttle"></i>
+                        </div>
+                        <span class="fee-addon-tag">Optional</span>
                     </div>
-                    <div class="fee-addon-info">
-                        <div class="fee-addon-title">Transport Facility</div>
-                        <div class="fee-addon-sub">(Optional, GPS/CCTV fleet)</div>
-                        <div class="fee-addon-amount">
+                    <div class="fee-addon-body">
+                        <h3 class="fee-addon-title">Transport Facility</h3>
+                        <p class="fee-addon-sub">GPS tracked &amp; CCTV secured school bus corridors.</p>
+                        <div class="fee-addon-price-badge">
                             @if($isPublished)
-                                Route-Based
+                                <span>Route-Based</span>
+                                <span class="fee-status-badge text-info small">Corridor Matrix</span>
                             @else
                                 <span class="fee-status-badge text-info small">Route-wise Distance</span>
                             @endif
@@ -293,28 +338,36 @@
 
                 <!-- Uniform Set -->
                 <div class="fee-addon-card">
-                    <div class="fee-addon-icon purple" aria-hidden="true">
-                        <i class="fa-solid fa-shirt"></i>
+                    <div class="fee-addon-top">
+                        <div class="fee-addon-icon purple" aria-hidden="true">
+                            <i class="fa-solid fa-shirt"></i>
+                        </div>
+                        <span class="fee-addon-tag">Mandatory</span>
                     </div>
-                    <div class="fee-addon-info">
-                        <div class="fee-addon-title">Prescribed Uniform</div>
-                        <div class="fee-addon-sub">(Regular + Sports + Shoes)</div>
-                        <div class="fee-addon-amount">
-                            <span class="fee-status-badge text-secondary small">Authorized Counter</span>
+                    <div class="fee-addon-body">
+                        <h3 class="fee-addon-title">Prescribed Uniform</h3>
+                        <p class="fee-addon-sub">Regular + Sports uniforms, belt, and footwear.</p>
+                        <div class="fee-addon-price-badge">
+                            <span>Direct Vendor</span>
+                            <span class="fee-status-badge text-secondary small">Authorized MRP</span>
                         </div>
                     </div>
                 </div>
 
                 <!-- Books & Stationery -->
                 <div class="fee-addon-card">
-                    <div class="fee-addon-icon mint" aria-hidden="true">
-                        <i class="fa-solid fa-book-open"></i>
+                    <div class="fee-addon-top">
+                        <div class="fee-addon-icon mint" aria-hidden="true">
+                            <i class="fa-solid fa-book-bookmark"></i>
+                        </div>
+                        <span class="fee-addon-tag">Curated</span>
                     </div>
-                    <div class="fee-addon-info">
-                        <div class="fee-addon-title">Books &amp; Notebooks</div>
-                        <div class="fee-addon-sub">(NCERT / CBSE Curated)</div>
-                        <div class="fee-addon-amount">
-                            <span class="fee-status-badge text-secondary small">Publisher Price (MRP)</span>
+                    <div class="fee-addon-body">
+                        <h3 class="fee-addon-title">Books &amp; Notebooks</h3>
+                        <p class="fee-addon-sub">NCERT / CBSE standard curriculum course material.</p>
+                        <div class="fee-addon-price-badge">
+                            <span>Publisher MRP</span>
+                            <span class="fee-status-badge text-secondary small">Direct Purchase</span>
                         </div>
                     </div>
                 </div>
@@ -325,12 +378,10 @@
              4. THE FEE COVERS ALL OF THIS
              ========================================================================= -->
         <section class="fee-section-block">
-            <div class="fee-section-title-wrap">
-                <div class="fee-accent-bar" aria-hidden="true"></div>
-                <div>
-                    <h2>The Fee Covers All of This</h2>
-                    <p class="fee-section-desc">A holistic learning experience with no hidden costs.</p>
-                </div>
+            <div class="section-header-pill">
+                <span class="pill-badge"><i class="fa-solid fa-shield-heart"></i> Comprehensive Value</span>
+                <h2 class="pill-title">The Fee Covers <span class="pill-title-highlight">All of This</span></h2>
+                <p class="pill-subtitle">A holistic learning experience where world-class curriculum, STEAM labs, arts, and student care are fully covered with no hidden costs.</p>
             </div>
 
             <div class="fee-covers-grid">
@@ -339,17 +390,21 @@
                     <div class="cover-icon-circle orange" aria-hidden="true">
                         <i class="fa-solid fa-chalkboard-user"></i>
                     </div>
-                    <div class="cover-card-title">Academic Tuition</div>
-                    <p class="cover-card-desc">Well-structured curriculum &amp; classroom learning</p>
+                    <div class="cover-card-content">
+                        <h3 class="cover-card-title">Academic Tuition</h3>
+                        <p class="cover-card-desc">Concept-driven NEP 2020 curriculum delivered by certified CBSE educators with small class sizes.</p>
+                    </div>
                 </div>
 
                 <!-- Labs & Practicals -->
                 <div class="fee-cover-card">
                     <div class="cover-icon-circle teal" aria-hidden="true">
-                        <i class="fa-solid fa-flask"></i>
+                        <i class="fa-solid fa-flask-vial"></i>
                     </div>
-                    <div class="cover-card-title">Labs &amp; Practicals</div>
-                    <p class="cover-card-desc">Science, computer and skill-based learning</p>
+                    <div class="cover-card-content">
+                        <h3 class="cover-card-title">STEAM Labs &amp; Practicals</h3>
+                        <p class="cover-card-desc">Access to Robotics, Computer, Physics, Chemistry, and Biology laboratories with hands-on kits.</p>
+                    </div>
                 </div>
 
                 <!-- Co-curricular Activities -->
@@ -357,8 +412,10 @@
                     <div class="cover-icon-circle purple" aria-hidden="true">
                         <i class="fa-solid fa-palette"></i>
                     </div>
-                    <div class="cover-card-title">Co-curricular Activities</div>
-                    <p class="cover-card-desc">Sports, arts, music and student clubs</p>
+                    <div class="cover-card-content">
+                        <h3 class="cover-card-title">Arts, Music &amp; Sports</h3>
+                        <p class="cover-card-desc">Structured training in visual arts, classical music, yoga, athletics, cricket, and indoor games.</p>
+                    </div>
                 </div>
 
                 <!-- Examinations -->
@@ -366,8 +423,10 @@
                     <div class="cover-icon-circle pink" aria-hidden="true">
                         <i class="fa-solid fa-file-lines"></i>
                     </div>
-                    <div class="cover-card-title">Examinations</div>
-                    <p class="cover-card-desc">Periodic tests, terminal exams and evaluation</p>
+                    <div class="cover-card-content">
+                        <h3 class="cover-card-title">Examinations &amp; Reports</h3>
+                        <p class="cover-card-desc">Periodic formative assessments, terminal exams, Olympiad preparation, and continuous progress reports.</p>
+                    </div>
                 </div>
 
                 <!-- School Facilities -->
@@ -375,17 +434,21 @@
                     <div class="cover-icon-circle blue" aria-hidden="true">
                         <i class="fa-solid fa-school"></i>
                     </div>
-                    <div class="cover-card-title">School Facilities</div>
-                    <p class="cover-card-desc">Library, digital resources and campus amenities</p>
+                    <div class="cover-card-content">
+                        <h3 class="cover-card-title">Campus Amenities</h3>
+                        <p class="cover-card-desc">Modern digital classrooms, reading library, high-speed Wi-Fi, purified RO water, and 24/7 security.</p>
+                    </div>
                 </div>
 
                 <!-- Student Support -->
                 <div class="fee-cover-card">
                     <div class="cover-icon-circle green" aria-hidden="true">
-                        <i class="fa-solid fa-headset"></i>
+                        <i class="fa-solid fa-heart-pulse"></i>
                     </div>
-                    <div class="cover-card-title">Student Support</div>
-                    <p class="cover-card-desc">Counseling, health &amp; wellness programs</p>
+                    <div class="cover-card-content">
+                        <h3 class="cover-card-title">Student Care &amp; Health</h3>
+                        <p class="cover-card-desc">Annual health checkups, dedicated student counselling desk, first-aid infirmary, and life skills workshops.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -394,12 +457,10 @@
              5. HOW TO PAY?
              ========================================================================= -->
         <section class="fee-section-block">
-            <div class="fee-section-title-wrap">
-                <div class="fee-accent-bar" aria-hidden="true"></div>
-                <div>
-                    <h2>How to Pay?</h2>
-                    <p class="fee-section-desc">We offer multiple, secure and convenient payment options.</p>
-                </div>
+            <div class="section-header-pill">
+                <span class="pill-badge"><i class="fa-solid fa-wallet"></i> Multiple Channels</span>
+                <h2 class="pill-title">How to <span class="pill-title-highlight">Pay School Fees?</span></h2>
+                <p class="pill-subtitle">We offer multiple, secure, and flexible payment options designed for parents' convenience.</p>
             </div>
 
             <div class="fee-pay-layout">
@@ -407,61 +468,79 @@
                 <div class="fee-pay-methods-grid">
                     <!-- Online Payment -->
                     <div class="fee-pay-method-card">
-                        <div class="pay-icon-box pink" aria-hidden="true">
-                            <i class="fa-solid fa-credit-card"></i>
+                        <div class="pay-card-top">
+                            <div class="pay-icon-box pink" aria-hidden="true">
+                                <i class="fa-solid fa-credit-card"></i>
+                            </div>
+                            <span class="pay-method-badge">Instant / UPI</span>
                         </div>
                         <div class="pay-method-body">
-                            <div class="pay-method-title">Online Payment</div>
-                            <p class="pay-method-sub">Pay via secure online gateway (UPI, Net Banking, Cards)</p>
+                            <h3 class="pay-method-title">Online Payment Gateway</h3>
+                            <p class="pay-method-sub">Pay via secure gateway with Instant UPI (Google Pay, PhonePe, Paytm), Net Banking, and Debit/Credit Cards.</p>
                         </div>
                     </div>
 
                     <!-- Bank Transfer -->
                     <div class="fee-pay-method-card">
-                        <div class="pay-icon-box amber" aria-hidden="true">
-                            <i class="fa-solid fa-building-columns"></i>
+                        <div class="pay-card-top">
+                            <div class="pay-icon-box amber" aria-hidden="true">
+                                <i class="fa-solid fa-building-columns"></i>
+                            </div>
+                            <span class="pay-method-badge">NEFT / RTGS</span>
                         </div>
                         <div class="pay-method-body">
-                            <div class="pay-method-title">Bank Transfer</div>
-                            <p class="pay-method-sub">Direct transfer to the school account</p>
+                            <h3 class="pay-method-title">Bank Transfer</h3>
+                            <p class="pay-method-sub">Direct electronic fund transfer into the official school bank account with transaction reference submission.</p>
                         </div>
                     </div>
 
                     <!-- Cheque / DD -->
                     <div class="fee-pay-method-card">
-                        <div class="pay-icon-box blue" aria-hidden="true">
-                            <i class="fa-solid fa-money-check-dollar"></i>
+                        <div class="pay-card-top">
+                            <div class="pay-icon-box blue" aria-hidden="true">
+                                <i class="fa-solid fa-money-check-dollar"></i>
+                            </div>
+                            <span class="pay-method-badge">Cheque / DD</span>
                         </div>
                         <div class="pay-method-body">
-                            <div class="pay-method-title">Cheque / DD</div>
-                            <p class="pay-method-sub">In favour of Advaita School of Excellence</p>
+                            <h3 class="pay-method-title">Demand Draft / Cheque</h3>
+                            <p class="pay-method-sub">Drawn in favour of <strong>"Advaita School of Excellence"</strong>, payable at Parbhani with student's name on reverse.</p>
                         </div>
                     </div>
 
                     <!-- At School Office -->
                     <div class="fee-pay-method-card">
-                        <div class="pay-icon-box orange" aria-hidden="true">
-                            <i class="fa-solid fa-school"></i>
+                        <div class="pay-card-top">
+                            <div class="pay-icon-box orange" aria-hidden="true">
+                                <i class="fa-solid fa-school"></i>
+                            </div>
+                            <span class="pay-method-badge">Campus Counter</span>
                         </div>
                         <div class="pay-method-body">
-                            <div class="pay-method-title">At School Office</div>
-                            <p class="pay-method-sub">Cash/Card/UPI at the school accounts desk</p>
+                            <h3 class="pay-method-title">School Accounts Desk</h3>
+                            <p class="pay-method-sub">Visit our school administrative office during working hours (9:00 AM – 4:00 PM) for in-person receipts.</p>
                         </div>
                     </div>
                 </div>
 
                 <!-- Right: Important Note Card -->
                 <div class="fee-pay-note-card">
-                    <div class="pay-note-head">
-                        <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
-                        <strong>Important Note:</strong>
+                    <div>
+                        <div class="pay-note-head">
+                            <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                            <strong>Fee Guidelines &amp; Policies</strong>
+                        </div>
+                        <ul class="pay-note-list">
+                            <li><i class="fa-solid fa-circle-check"></i> <span>Fees once deposited are strictly non-refundable and non-transferable.</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> <span>Transport, uniform, and books are completely optional amenities.</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> <span>Term-wise installments must be cleared before the announced deadlines.</span></li>
+                            <li><i class="fa-solid fa-circle-check"></i> <span>Official printed receipts are issued for all transactions immediately.</span></li>
+                        </ul>
                     </div>
-                    <ul class="pay-note-list">
-                        <li>Fees once paid are non-refundable.</li>
-                        <li>Transport, uniform and books are optional.</li>
-                        <li>Late fee may be applicable as per school policy.</li>
-                        <li>For any queries, please contact our admissions team.</li>
-                    </ul>
+                    <div class="pay-note-footer">
+                        <i class="fa-solid fa-headset text-orange"></i>
+                        <span>Need payment assistance? Contact our accounts helpline.</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -470,11 +549,10 @@
              6. FREQUENTLY ASKED QUESTIONS
              ========================================================================= -->
         <section class="fee-section-block">
-            <div class="fee-section-title-wrap">
-                <div class="fee-accent-bar" aria-hidden="true"></div>
-                <div>
-                    <h2>Frequently Asked Questions</h2>
-                </div>
+            <div class="section-header-pill">
+                <span class="pill-badge"><i class="fa-solid fa-circle-question"></i> Help &amp; FAQs</span>
+                <h2 class="pill-title">Frequently Asked <span class="pill-title-highlight">Questions</span></h2>
+                <p class="pill-subtitle">Clear answers to common parent inquiries regarding installment plans, concessions, and fee terms.</p>
             </div>
 
             <div class="fee-faq-grid">
@@ -483,33 +561,33 @@
                     <!-- FAQ 1 -->
                     <div class="fee-faq-card">
                         <div class="fee-faq-question" role="button" tabindex="0" aria-expanded="false">
-                            <h3 class="fee-faq-q-text">1. &nbsp;Is the transport fee mandatory?</h3>
+                            <h3 class="fee-faq-q-text">1. Is school transport mandatory?</h3>
                             <i class="fa-solid fa-chevron-down fee-faq-chevron" aria-hidden="true"></i>
                         </div>
                         <div class="fee-faq-answer">
-                            No, school transport is completely optional. Parents who prefer to arrange their own private commute or drop off their wards are free to do so.
+                            No, school transport is completely optional. Parents who prefer to arrange their own private commute, carpool, or drop off their wards personally are completely free to do so.
                         </div>
                     </div>
 
                     <!-- FAQ 2 -->
                     <div class="fee-faq-card">
                         <div class="fee-faq-question" role="button" tabindex="0" aria-expanded="false">
-                            <h3 class="fee-faq-q-text">2. &nbsp;Can the fee be paid in installments?</h3>
+                            <h3 class="fee-faq-q-text">2. Can the school fee be paid in installments?</h3>
                             <i class="fa-solid fa-chevron-down fee-faq-chevron" aria-hidden="true"></i>
                         </div>
                         <div class="fee-faq-answer">
-                            Yes, parents can choose to pay the total fee in two term-wise installments (Term 1 in April at admission and Term 2 in October).
+                            Yes, parents can pay the total fee in convenient term-wise installments (Term 1 at admission in April, Term 2 in September/October, and Term 3 in December/January).
                         </div>
                     </div>
 
                     <!-- FAQ 3 -->
                     <div class="fee-faq-card">
                         <div class="fee-faq-question" role="button" tabindex="0" aria-expanded="false">
-                            <h3 class="fee-faq-q-text">3. &nbsp;Is there any concession for siblings?</h3>
+                            <h3 class="fee-faq-q-text">3. Is there any concession for siblings?</h3>
                             <i class="fa-solid fa-chevron-down fee-faq-chevron" aria-hidden="true"></i>
                         </div>
                         <div class="fee-faq-answer">
-                            Yes, Advaita offers a sibling concession on tuition fees for the second child enrolled concurrently in the school. Please contact our admissions desk for exact details.
+                            Yes, Advaita School of Excellence offers a sibling concession on tuition fees for the second child enrolled concurrently in the school. Please contact our admissions desk for exact application details.
                         </div>
                     </div>
                 </div>
@@ -519,33 +597,33 @@
                     <!-- FAQ 4 -->
                     <div class="fee-faq-card">
                         <div class="fee-faq-question" role="button" tabindex="0" aria-expanded="false">
-                            <h3 class="fee-faq-q-text">4. &nbsp;What happens if I delay the fee payment?</h3>
+                            <h3 class="fee-faq-q-text">4. What happens if I delay the fee payment?</h3>
                             <i class="fa-solid fa-chevron-down fee-faq-chevron" aria-hidden="true"></i>
                         </div>
                         <div class="fee-faq-answer">
-                            A nominal late fee may be applicable as per the school policy after the specified due date. In case of unforeseen difficulties, parents may contact the accounts team in advance.
+                            A nominal grace period is extended, after which a standard late fee may be applicable as per the school policy. In case of genuine personal emergencies, parents are requested to contact the accounts officer in advance.
                         </div>
                     </div>
 
                     <!-- FAQ 5 -->
                     <div class="fee-faq-card">
                         <div class="fee-faq-question" role="button" tabindex="0" aria-expanded="false">
-                            <h3 class="fee-faq-q-text">5. &nbsp;Are the Books and Uniform compulsory?</h3>
+                            <h3 class="fee-faq-q-text">5. Are books and uniform compulsory?</h3>
                             <i class="fa-solid fa-chevron-down fee-faq-chevron" aria-hidden="true"></i>
                         </div>
                         <div class="fee-faq-answer">
-                            Wearing the prescribed uniform and having standard books and notebooks is mandatory for all students, but parents are free to procure them from authorized vendors.
+                            Wearing the prescribed uniform and having standard CBSE/NCERT books is mandatory for all students, but parents are free to procure them from authorized retail counters at MRP.
                         </div>
                     </div>
 
                     <!-- FAQ 6 -->
                     <div class="fee-faq-card">
                         <div class="fee-faq-question" role="button" tabindex="0" aria-expanded="false">
-                            <h3 class="fee-faq-q-text">6. &nbsp;Is the fee structure the same for the entire academic year?</h3>
+                            <h3 class="fee-faq-q-text">6. Is the fee structure fixed for the entire academic year?</h3>
                             <i class="fa-solid fa-chevron-down fee-faq-chevron" aria-hidden="true"></i>
                         </div>
                         <div class="fee-faq-answer">
-                            Yes, the fee schedule declared at the start of the academic year 2026–27 remains constant and fixed for the entire duration of that session.
+                            Yes, the fee schedule declared at the start of Academic Session 2026–27 remains strictly constant and fixed for the entire duration of that session with zero mid-term escalations.
                         </div>
                     </div>
                 </div>
@@ -553,30 +631,47 @@
         </section>
 
         <!-- =========================================================================
-             7. STILL HAVE QUESTIONS CTA BOX
+             7. COUNSELLOR & ACCOUNTS HELPLINE BANNER
              ========================================================================= -->
-        <div class="fee-cta-box">
-            <div class="fee-cta-left">
-                <span class="fee-cta-eyebrow">FREQUENT QUESTIONS</span>
-                <h3 class="fee-cta-title">
-                    Still have questions about <span class="highlight-orange">our fee structure?</span>
+        <div class="fee-helpline-card">
+            <div class="fee-helpline-left">
+                <span class="fee-helpline-eyebrow">DEDICATED ADMISSION ASSISTANCE</span>
+                <h3 class="fee-helpline-title">
+                    Still have questions about our <span class="highlight-orange">fee structure?</span>
                 </h3>
-                <p class="fee-cta-desc">Our admissions team is happy to help you with any queries.</p>
+                <p class="fee-helpline-desc">
+                    Our admissions counsellor and accounts desk are here to assist you with transparent calculations, transport route fees, and installment schedules.
+                </p>
+
+                <div class="fee-helpline-meta-list">
+                    <div class="fee-meta-row">
+                        <i class="fa-solid fa-user-tie"></i>
+                        <span>Admission Counsellor: <strong>Ms. Vaishnavi (+91 94221 75522)</strong></span>
+                    </div>
+                    <div class="fee-meta-row">
+                        <i class="fa-solid fa-building-columns"></i>
+                        <span>Campus Lines: <strong>094130 62851 &bull; 02452 297298</strong></span>
+                    </div>
+                    <div class="fee-meta-row">
+                        <i class="fa-solid fa-clock"></i>
+                        <span>Office Hours: <strong>Monday – Saturday (9:00 AM – 4:00 PM)</strong></span>
+                    </div>
+                </div>
             </div>
 
-            <div class="fee-cta-actions">
-                <a href="tel:{{ $globalSite['phone_primary'] ?? '094130 62851' }}" class="fee-btn-call">
+            <div class="fee-helpline-right">
+                <a href="tel:+919422175522" class="btn-fee-call" title="Call the Admissions Team">
                     <i class="fa-solid fa-phone"></i>
-                    <span>Call the Admissions Team</span>
+                    <span>Call Admission Counsellor</span>
                 </a>
-                <a href="https://wa.me/919876543210?text=Hello%20Advaita%20School,%20I%20have%20a%20query%20regarding%20the%20fee%20structure." target="_blank" rel="noopener noreferrer" class="fee-btn-wa">
+                <a href="https://wa.me/919422175522?text=Hello%20Advaita%20School,%20I%20have%20a%20query%20regarding%20the%20fee%20structure%202026-27." target="_blank" rel="noopener noreferrer" class="btn-fee-wa" title="Chat on WhatsApp">
                     <i class="fa-brands fa-whatsapp"></i>
-                    <span>Chat on WhatsApp</span>
+                    <span>Chat on WhatsApp (+91 94221 75522)</span>
                 </a>
-            </div>
-
-            <div class="fee-cta-avatar" aria-hidden="true">
-                <img src="{{ asset($content['cta_image'] ?? 'assets/images/about-story-student.jpg') }}" alt="Advaita Student">
+                <a href="{{ route('admission-info') }}#quick-enquiry" class="btn-fee-enquiry" title="Submit Quick Enquiry">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>Submit Quick Enquiry Online</span>
+                </a>
             </div>
         </div>
 
@@ -599,8 +694,8 @@ document.addEventListener('DOMContentLoaded', function() {
             btnAnnual.setAttribute('aria-selected', 'true');
             btnTerm.classList.remove('active');
             btnTerm.setAttribute('aria-selected', 'false');
-            tableAnnual.style.display = 'block';
-            tableTerm.style.display = 'none';
+            tableAnnual.classList.remove('fee-table-hidden');
+            tableTerm.classList.add('fee-table-hidden');
         });
 
         btnTerm.addEventListener('click', function() {
@@ -608,8 +703,8 @@ document.addEventListener('DOMContentLoaded', function() {
             btnTerm.setAttribute('aria-selected', 'true');
             btnAnnual.classList.remove('active');
             btnAnnual.setAttribute('aria-selected', 'false');
-            tableAnnual.style.display = 'none';
-            tableTerm.style.display = 'block';
+            tableAnnual.classList.add('fee-table-hidden');
+            tableTerm.classList.remove('fee-table-hidden');
         });
     }
 
@@ -620,6 +715,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (questionBtn) {
             questionBtn.addEventListener('click', function() {
                 const isOpen = card.classList.contains('open');
+                // Optional: close other cards if accordion behavior is desired, or keep independent
                 card.classList.toggle('open');
                 questionBtn.setAttribute('aria-expanded', !isOpen);
             });
