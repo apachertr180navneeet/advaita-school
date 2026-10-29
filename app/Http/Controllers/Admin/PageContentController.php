@@ -23,47 +23,47 @@ class PageContentController extends Controller
             'icon' => 'fa-solid fa-school',
             'category' => 'Leadership & Story',
             'fields' => [
-                'about_hero_badge' => ['label' => 'Hero Badge Text', 'type' => 'text', 'default' => 'WELCOME TO'],
-                'about_hero_title' => ['label' => 'Hero Main Title', 'type' => 'text', 'default' => 'A Premier CBSE School with a'],
-                'about_hero_highlight' => ['label' => 'Hero Highlight Title', 'type' => 'text', 'default' => 'Stronger Purpose.'],
-                'about_hero_subtitle' => ['label' => 'Hero Subtitle Paragraph', 'type' => 'textarea', 'default' => 'At Advaita School of Excellence, Parbhani, we believe education extends far beyond classrooms. We build individuals of curiosity, empathy, and resilience.'],
-
-                // Story Section ("Built on Values")
-                'about_story_eyebrow' => ['label' => 'Story Eyebrow', 'type' => 'text', 'default' => 'BUILT ON A STRONG FOUNDATION'],
-                'about_story_title' => ['label' => 'Story Title', 'type' => 'text', 'default' => 'Built on Values.'],
-                'about_story_highlight' => ['label' => 'Story Highlight Title', 'type' => 'text', 'default' => 'Academic Excellence.'],
-                'about_story_p1' => ['label' => 'Story Description Paragraph 1', 'type' => 'textarea', 'default' => 'At Advaita School of Excellence, we blend academic rigor, character development, and future-focused learning to help every child grow into a confident, compassionate, and capable individual.'],
-                'about_story_p2' => ['label' => 'Story Description Paragraph 2', 'type' => 'textarea', 'default' => "Our focus on NEET/IIT foundation and various competitive exams, along with a strong CBSE curriculum, ensures that students are well-prepared for higher education and life's opportunities."],
-                'about_stat_students' => ['label' => 'Statistic: Happy Students', 'type' => 'text', 'default' => '5,000+'],
-                'about_stat_years' => ['label' => 'Statistic: Years of Legacy', 'type' => 'text', 'default' => '25+'],
-                'about_stat_satisfaction' => ['label' => 'Statistic: Parent Satisfaction', 'type' => 'text', 'default' => '95%'],
-                'about_story_badge_title' => ['label' => 'Student Photo Badge Line 1', 'type' => 'text', 'default' => 'Best CBSE'],
-                'about_story_badge_sub' => ['label' => 'Student Photo Badge Line 2', 'type' => 'text', 'default' => 'Result Producer'],
-                'about_story_badge_tag' => ['label' => 'Student Photo Badge Tag', 'type' => 'text', 'default' => 'Year after Year'],
-
-                // Core Philosophy
-                'about_philosophy_eyebrow' => ['label' => 'Philosophy Eyebrow', 'type' => 'text', 'default' => 'PREPARING FOR A BRIGHTER TOMORROW'],
-                'about_philosophy_title' => ['label' => 'Philosophy Heading Line 1', 'type' => 'text', 'default' => 'Education for Life,'],
-                'about_philosophy_highlight' => ['label' => 'Philosophy Heading Line 2', 'type' => 'text', 'default' => 'Not Just Exams.'],
-                'about_philosophy_desc' => ['label' => 'Philosophy Paragraph', 'type' => 'textarea', 'default' => 'We integrate CBSE academics with a focused NEET/IIT foundation and training for various competitive exams. Our student-centric approach ensures conceptual clarity, critical thinking, and real-world application — helping students achieve success in academics and beyond.'],
-
-                // Campus Showcase
-                'about_campus_eyebrow' => ['label' => 'Campus Showcase Eyebrow', 'type' => 'text', 'default' => 'A SPACE TO GROW'],
-                'about_campus_title' => ['label' => 'Campus Showcase Title', 'type' => 'text', 'default' => 'A Space to Learn,'],
-                'about_campus_highlight' => ['label' => 'Campus Showcase Highlight', 'type' => 'text', 'default' => 'Explore and Excel.'],
-                'about_campus_desc' => ['label' => 'Campus Showcase Description', 'type' => 'textarea', 'default' => 'Our modern campus is designed to inspire curiosity, encourage collaboration, and provide the best learning experience. From spacious classrooms to advanced labs and vibrant activity spaces, every corner of Advaita nurtures growth and opportunity.'],
-
-                // Admission CTA Banner
-                'about_cta_eyebrow' => ['label' => 'Admission CTA Eyebrow', 'type' => 'text', 'default' => 'BE A PART OF ADVAITA'],
-                'about_cta_headline' => ['label' => 'Admission CTA Headline', 'type' => 'text', 'default' => "Together, let's build brighter tomorrows."],
-                'about_cta_subtext' => ['label' => 'Admission CTA Subtext', 'type' => 'textarea', 'default' => 'Admissions are open for CBSE, NEET/IIT Foundation & Competitive Exam Programmes.'],
-
-                // Section Imagery
+                // Hero Section
+                'about_hero_eyebrow' => ['label' => 'Hero Eyebrow Badge', 'type' => 'text', 'default' => 'About Us'],
+                'about_hero_title' => ['label' => 'Hero Main Title Prefix', 'type' => 'text', 'default' => 'Advaita School of Excellence,'],
+                'about_hero_highlight' => ['label' => 'Hero Title Highlight', 'type' => 'text', 'default' => 'Parbhani'],
+                'about_hero_tagline' => ['label' => 'Hero Tagline (Bold)', 'type' => 'textarea', 'default' => "Nurturing Excellence. Inspiring Innovation.\nShaping Futures."],
+                'about_hero_desc' => ['label' => 'Hero Description Paragraph', 'type' => 'textarea', 'default' => 'Established in 2016 under the visionary leadership of Mr. Vishal Vattamwar, Chairman of Sanmati Sevabhavi Sanstha, Advaita School of Excellence, Parbhani, was founded to bring quality education to every student in Parbhani.'],
                 'about_hero_image' => ['label' => 'Hero Campus Building Image', 'type' => 'image', 'default' => 'assets/images/about-hero-building.jpg'],
-                'about_story_image' => ['label' => 'Student Photo (Built on Values)', 'type' => 'image', 'default' => 'assets/images/about-philosophy-student.jpg'],
-                'about_philosophy_image' => ['label' => 'Classroom Learning Photo (Education for Life)', 'type' => 'image', 'default' => 'assets/images/about-story-student.jpg'],
-                'about_campus_image' => ['label' => 'Campus Courtyard Photo (Campus Showcase)', 'type' => 'image', 'default' => 'assets/images/about-campus-courtyard.jpg'],
-                'about_cta_image' => ['label' => 'Admissions Banner Students Image', 'type' => 'image', 'default' => 'assets/images/about-cta-students-trio.png'],
+
+                // Our Vision Section
+                'about_vision_eyebrow' => ['label' => 'Vision Eyebrow', 'type' => 'text', 'default' => 'Our Vision'],
+                'about_vision_title' => ['label' => 'Vision Heading Prefix', 'type' => 'text', 'default' => 'A Vision Beyond Conventional'],
+                'about_vision_highlight' => ['label' => 'Vision Heading Highlight', 'type' => 'text', 'default' => 'Schooling.'],
+                'about_vision_desc' => ['label' => 'Vision Description', 'type' => 'textarea', 'default' => 'At Advaita, education goes beyond textbooks and examinations. We aim to nurture curious minds, develop strong conceptual foundations, and prepare students for a competitive future.'],
+                'about_vision_btn_text' => ['label' => 'Vision Button Label', 'type' => 'text', 'default' => 'Learn More'],
+                'about_vision_btn_url' => ['label' => 'Vision Button URL', 'type' => 'text', 'default' => '/vision-mission'],
+                'about_vision_image' => ['label' => 'Vision Students Image', 'type' => 'image', 'default' => 'assets/images/about-vision-students.jpg'],
+
+                // Our Pillars Section
+                'about_pillars_eyebrow' => ['label' => 'Pillars Eyebrow', 'type' => 'text', 'default' => 'Our Pillars'],
+                'about_pillars_title' => ['label' => 'Pillars Heading Prefix', 'type' => 'text', 'default' => 'Built on Values. Driven by'],
+                'about_pillars_highlight' => ['label' => 'Pillars Heading Highlight', 'type' => 'text', 'default' => 'Excellence.'],
+
+                // Our Journey Section
+                'about_journey_eyebrow' => ['label' => 'Journey Eyebrow', 'type' => 'text', 'default' => 'Our Journey'],
+                'about_journey_title' => ['label' => 'Journey Heading', 'type' => 'text', 'default' => 'From Roots to Remarkable Achievements.'],
+                'about_journey_desc' => ['label' => 'Journey Description', 'type' => 'textarea', 'default' => 'Affiliated with CBSE since 2019, Advaita School of Excellence achieved the No. 1 position in Parbhani in Class X Board Results in 2026 — a milestone of collective effort.'],
+                'about_journey_image' => ['label' => 'Journey Trophy Graphic', 'type' => 'image', 'default' => 'assets/images/about-journey-trophy.png'],
+
+                // Academic Stages Section
+                'about_stages_eyebrow' => ['label' => 'Academic Journey Eyebrow', 'type' => 'text', 'default' => 'Our Academic Journey'],
+                'about_stages_title' => ['label' => 'Academic Journey Title', 'type' => 'text', 'default' => 'Learning at Every Stage.'],
+                'about_stages_desc' => ['label' => 'Academic Journey Description', 'type' => 'textarea', 'default' => 'From Foundational to Secondary Stage, we provide a structured and engaging learning path for every child.'],
+
+                // Our Commitment Section
+                'about_commitment_eyebrow' => ['label' => 'Commitment Eyebrow', 'type' => 'text', 'default' => 'Our Commitment'],
+                'about_commitment_title' => ['label' => 'Commitment Heading Prefix', 'type' => 'text', 'default' => 'Empowering Every Child for a'],
+                'about_commitment_highlight' => ['label' => 'Commitment Heading Highlight', 'type' => 'text', 'default' => 'Brighter Tomorrow.'],
+                'about_commitment_desc' => ['label' => 'Commitment Description', 'type' => 'textarea', 'default' => 'With visionary leadership and dedicated educators, we are committed to empowering students with the knowledge, values and skills to succeed in life.'],
+                'about_commitment_btn_text' => ['label' => 'Commitment Button Label', 'type' => 'text', 'default' => 'Join Our Journey'],
+                'about_commitment_btn_url' => ['label' => 'Commitment Button URL', 'type' => 'text', 'default' => '/online-registration'],
+                'about_commitment_image' => ['label' => 'Commitment Students Photo', 'type' => 'image', 'default' => 'assets/images/about-commitment-students.jpg'],
             ],
         ],
         'vision' => [
@@ -269,6 +269,83 @@ class PageContentController extends Controller
                 // Imagery
                 'fee_hero_image' => ['label' => 'Hero Top Students Image', 'type' => 'image', 'default' => 'assets/images/about-cta-students-clean.png'],
                 'fee_cta_image' => ['label' => 'Admissions Questions Student Avatar', 'type' => 'image', 'default' => 'assets/images/about-story-student.jpg'],
+            ],
+        ],
+        'admission_info' => [
+            'name' => 'Admission Info Page',
+            'url' => '/admission-info',
+            'seo_key' => 'admission_info',
+            'icon' => 'fa-solid fa-circle-info',
+            'category' => 'Admissions & Information',
+            'fields' => [
+                'admission_academic_year' => ['label' => 'Academic Session', 'type' => 'text', 'default' => '2026–27'],
+                'admission_counsellor_name' => ['label' => 'Admission Counsellor Name', 'type' => 'text', 'default' => 'Ms. Vaishnavi'],
+                'admission_counsellor_phone' => ['label' => 'Counsellor Contact Phone', 'type' => 'text', 'default' => '9689898973'],
+
+                // Hero
+                'admission_hero_badge' => ['label' => 'Hero Eyebrow Badge', 'type' => 'text', 'default' => 'ADMISSIONS'],
+                'admission_hero_title' => ['label' => 'Hero Title Prefix', 'type' => 'text', 'default' => "Begin Your Child's Journey at"],
+                'admission_hero_highlight' => ['label' => 'Hero Title Highlight', 'type' => 'text', 'default' => 'Advaita.'],
+                'admission_hero_desc' => ['label' => 'Hero Description', 'type' => 'textarea', 'default' => 'A simple, transparent and supportive admission process designed to help your child take the right step towards a brighter future.'],
+                'admission_hero_script' => ['label' => 'Hero Script Text', 'type' => 'text', 'default' => 'More Than A School'],
+                'admission_hero_image' => ['label' => 'Hero Visual Image (from design)', 'type' => 'image', 'default' => 'assets/images/admission-hero-design.jpg'],
+                'admission_hero_building_image' => ['label' => 'Hero Campus Building Image', 'type' => 'image', 'default' => 'assets/images/about-hero-building.jpg'],
+
+                // Process Section
+                'admission_process_eyebrow' => ['label' => 'Process Section Eyebrow', 'type' => 'text', 'default' => '— THE ADMISSION PROCESS —'],
+                'admission_process_title' => ['label' => 'Process Heading Prefix', 'type' => 'text', 'default' => 'From application to'],
+                'admission_process_highlight' => ['label' => 'Process Heading Highlight', 'type' => 'text', 'default' => 'welcome,'],
+                'admission_process_suffix' => ['label' => 'Process Heading Suffix', 'type' => 'text', 'default' => 'in five clear steps.'],
+                'admission_process_desc' => ['label' => 'Process Section Description', 'type' => 'textarea', 'default' => 'Admission is open to all children, irrespective of caste, creed or community, and decisions are communicated transparently, on merit and fit.'],
+
+                // Guidelines Section
+                'admission_guidelines_eyebrow' => ['label' => 'Guidelines Eyebrow', 'type' => 'text', 'default' => '— ADMISSION INFORMATION —'],
+                'admission_guidelines_title' => ['label' => 'Guidelines Heading Prefix', 'type' => 'text', 'default' => 'Guidelines for a smooth start at'],
+                'admission_guidelines_highlight' => ['label' => 'Guidelines Heading Highlight', 'type' => 'text', 'default' => 'Advaita.'],
+                'admission_guidelines_desc' => ['label' => 'Guidelines Description', 'type' => 'textarea', 'default' => 'We welcome applications from aspiring learners who are eager to grow in a nurturing and future-focused environment. Our admission process is fair, transparent and designed to ensure the best fit for every child.'],
+                'admission_guidelines_image' => ['label' => 'Guidelines Student Photo (from design)', 'type' => 'image', 'default' => 'assets/images/admission-guidelines-student.jpg'],
+
+                // Feature Cards
+                'admission_feature1_title' => ['label' => 'Feature 1 Title', 'type' => 'text', 'default' => 'Classes Offered'],
+                'admission_feature1_desc' => ['label' => 'Feature 1 Description', 'type' => 'text', 'default' => 'Nursery to Class X (As per availability)'],
+                'admission_feature2_title' => ['label' => 'Feature 2 Title', 'type' => 'text', 'default' => 'Eligibility'],
+                'admission_feature2_desc' => ['label' => 'Feature 2 Description', 'type' => 'text', 'default' => 'Age-appropriate as per class guidelines'],
+                'admission_feature3_title' => ['label' => 'Feature 3 Title', 'type' => 'text', 'default' => 'Selection Process'],
+                'admission_feature3_desc' => ['label' => 'Feature 3 Description', 'type' => 'text', 'default' => 'Based on interaction and assessment (as applicable)'],
+                'admission_feature4_title' => ['label' => 'Feature 4 Title', 'type' => 'text', 'default' => 'Important Dates'],
+                'admission_feature4_desc' => ['label' => 'Feature 4 Description', 'type' => 'text', 'default' => 'Admissions open for the academic session 2026–27'],
+
+                // Documents Section
+                'admission_docs_eyebrow' => ['label' => 'Documents Eyebrow', 'type' => 'text', 'default' => '— DOCUMENTS REQUIRED —'],
+                'admission_docs_title' => ['label' => 'Documents Heading Prefix', 'type' => 'text', 'default' => 'Keep these ready for a'],
+                'admission_docs_highlight' => ['label' => 'Documents Heading Highlight', 'type' => 'text', 'default' => 'faster process.'],
+                'admission_docs_desc' => ['label' => 'Documents Description', 'type' => 'textarea', 'default' => 'Please carry self-attested photocopies of the following documents at the time of admission.'],
+                'admission_docs_image' => ['label' => 'Documents Clipboard Image', 'type' => 'image', 'default' => 'assets/images/admission-required-documents.jpg'],
+
+                // Action Cards
+                'admission_qe_tag' => ['label' => 'Quick Enquiry Tag', 'type' => 'text', 'default' => 'QUICK ENQUIRY REGISTRATION'],
+                'admission_qe_title' => ['label' => 'Quick Enquiry Title', 'type' => 'text', 'default' => "Share a few details and we'll get in touch."],
+                'admission_qe_desc' => ['label' => 'Quick Enquiry Description', 'type' => 'textarea', 'default' => 'Fill in your basic details and our admissions team will connect with you shortly.'],
+                'admission_online_tag' => ['label' => 'Online Registration Tag', 'type' => 'text', 'default' => 'ONLINE ADMISSION REGISTRATION'],
+                'admission_online_title' => ['label' => 'Online Registration Title', 'type' => 'text', 'default' => 'Ready to apply? Complete the online form.'],
+                'admission_online_desc' => ['label' => 'Online Registration Description', 'type' => 'textarea', 'default' => 'Fill in the detailed application form to formally register your ward for admission.'],
+
+                // Fee Structure
+                'admission_fee_eyebrow' => ['label' => 'Fee Eyebrow', 'type' => 'text', 'default' => '— FEE STRUCTURE —'],
+                'admission_fee_title' => ['label' => 'Fee Heading Prefix', 'type' => 'text', 'default' => 'Fees, paid in'],
+                'admission_fee_highlight' => ['label' => 'Fee Heading Highlight', 'type' => 'text', 'default' => 'simple terms.'],
+                'admission_fee_desc' => ['label' => 'Fee Description', 'type' => 'textarea', 'default' => 'Our fee structure is designed to be fair, transparent and value-driven.'],
+                'admission_fee_band1_title' => ['label' => 'Fee Band 1 Title', 'type' => 'text', 'default' => 'Classes I to V'],
+                'admission_fee_band1_subtitle' => ['label' => 'Fee Band 1 Subtitle', 'type' => 'text', 'default' => 'Strong foundation for a bright future.'],
+                'admission_fee_band2_title' => ['label' => 'Fee Band 2 Title', 'type' => 'text', 'default' => 'Classes VI to X'],
+                'admission_fee_band2_subtitle' => ['label' => 'Fee Band 2 Subtitle', 'type' => 'text', 'default' => 'Empowering learners for higher goals.'],
+
+                // Pre-Footer CTA
+                'admission_cta_pill' => ['label' => 'Bottom CTA Tag', 'type' => 'text', 'default' => "LET'S BEGIN TOGETHER"],
+                'admission_cta_title' => ['label' => 'Bottom CTA Heading', 'type' => 'text', 'default' => 'Ready to take the first step?'],
+                'admission_cta_desc' => ['label' => 'Bottom CTA Description', 'type' => 'textarea', 'default' => 'Apply now and give your child the opportunity to grow, learn and excel at Advaita.'],
+                'admission_cta_primary_btn' => ['label' => 'Primary Button Text', 'type' => 'text', 'default' => 'Apply for Admission'],
+                'admission_cta_secondary_btn' => ['label' => 'Secondary Button Text', 'type' => 'text', 'default' => 'Schedule a Campus Visit'],
             ],
         ],
         'admission_guidelines' => [

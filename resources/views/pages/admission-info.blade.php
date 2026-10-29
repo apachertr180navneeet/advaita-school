@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', "Admission Information (2026-27) - Advaita School of Excellence, Parbhani | Process, Documents & Fees")
+@section('title', "Admission Information (" . ($academicYear ?? '2026-27') . ") - Advaita School of Excellence, Parbhani | Process, Documents & Fees")
 
 @section('styles')
 <link rel="stylesheet" href="{{ asset('assets/css/admissions.css') }}?v={{ file_exists(public_path('assets/css/admissions.css')) ? filemtime(public_path('assets/css/admissions.css')) : '1.0' }}">
@@ -27,14 +27,11 @@
          ========================================================================= -->
     <section class="admission-hero-section">
         <div class="admission-hero-canvas">
-            <!-- Hero Composite Visual: School Campus Building + 3 Students Cutout -->
+            <!-- Hero Visual from Design Image -->
             <div class="admission-hero-bg-visual" aria-hidden="true">
-                <div class="admission-hero-building-layer">
-                    <img src="{{ asset('assets/images/about-hero-building.jpg') }}" alt="Advaita Campus Building" class="admission-hero-building-img">
-                </div>
-                <div class="admission-hero-students-layer">
-                    <img src="{{ asset('assets/images/about-cta-students-clean.png') }}" alt="Advaita Students" width="1024" height="682">
-                </div>
+                <img src="{{ asset($content['hero_image'] ?? 'assets/images/admission-hero-design.jpg') }}" 
+                     alt="Advaita Students and Campus" 
+                     class="admission-hero-design-img">
             </div>
 
             <!-- SVG Wave Overlay for Smooth Translucent Backdrop -->
@@ -45,13 +42,15 @@
                 </svg>
             </div>
 
-            <!-- Floating Script Tag at Top Right -->
+            <!-- Floating Script Tag at Top Right (if not using design composite) -->
+            @if(isset($content['hero_script']) && !empty($content['hero_script']) && ($content['hero_image'] ?? '') !== 'assets/images/admission-hero-design.jpg')
             <div class="admission-hero-script-tag" aria-hidden="true">
-                <span class="script-title">More<br>Than A School</span>
+                <span class="script-title">{{ $content['hero_script'] }}</span>
                 <svg class="script-underline" viewBox="0 0 120 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4 12C38 3 84 4 116 14" stroke="#083B7A" stroke-width="3" stroke-linecap="round"/>
                 </svg>
             </div>
+            @endif
 
             <!-- Left Content Panel -->
             <div class="admission-hero-left-panel">
@@ -66,17 +65,17 @@
                     </nav>
 
                     <!-- Eyebrow -->
-                    <div class="admission-eyebrow">ADMISSIONS</div>
+                    <div class="admission-eyebrow">{{ $content['hero_badge'] ?? 'ADMISSIONS' }}</div>
 
                     <!-- Main Headline -->
                     <h1 class="admission-hero-title">
-                        Begin Your Child's<br>
-                        Journey at <span class="highlight-serif">Advaita.</span>
+                        {!! nl2br(e($content['hero_title'] ?? "Begin Your Child's Journey at")) !!}
+                        <span class="highlight-serif">{{ $content['hero_highlight'] ?? 'Advaita.' }}</span>
                     </h1>
 
                     <!-- Description -->
                     <p class="admission-hero-desc">
-                        A simple, transparent and supportive admission process designed to help your child take the right step towards a brighter future.
+                        {{ $content['hero_desc'] ?? 'A simple, transparent and supportive admission process designed to help your child take the right step towards a brighter future.' }}
                     </p>
                 </div>
             </div>
@@ -89,81 +88,34 @@
     <section class="admission-process-section" id="admission-process">
         <div class="admission-section-container">
             <div class="admission-section-header">
-                <div class="admission-eyebrow">— THE ADMISSION PROCESS —</div>
+                <div class="admission-eyebrow">{{ $content['process_eyebrow'] ?? '— THE ADMISSION PROCESS —' }}</div>
                 <h2 class="admission-section-title">
-                    From application to <span class="highlight-serif">welcome,</span> in five clear steps.
+                    {{ $content['process_title'] ?? 'From application to' }}
+                    <span class="highlight-serif">{{ $content['process_highlight'] ?? 'welcome,' }}</span>
+                    {{ $content['process_suffix'] ?? 'in five clear steps.' }}
                 </h2>
                 <p class="admission-section-desc">
-                    Admission is open to all children, irrespective of caste, creed or community, and decisions are communicated transparently, on merit and fit.
+                    {{ $content['process_desc'] ?? 'Admission is open to all children, irrespective of caste, creed or community, and decisions are communicated transparently, on merit and fit.' }}
                 </p>
             </div>
 
             <div class="admission-steps-wrapper">
-                <!-- Step 01 -->
+                @foreach($admissionSteps ?? [] as $index => $step)
                 <div class="admission-step-card">
-                    <span class="step-num-pill step-pill-orange">01</span>
-                    <div class="step-icon-box step-icon-orange" aria-hidden="true">
-                        <i class="fa-solid fa-laptop"></i>
+                    <span class="step-num-pill {{ $step['badge_class'] ?? 'step-pill-orange' }}">{{ $step['step'] ?? sprintf('%02d', $index + 1) }}</span>
+                    <div class="step-icon-box {{ $step['icon_class'] ?? 'step-icon-orange' }}" aria-hidden="true">
+                        <i class="{{ $step['icon'] ?? 'fa-solid fa-circle-check' }}"></i>
                     </div>
-                    <h3 class="step-card-title">Admission Information</h3>
-                    <p class="step-card-desc">Find details about admission guidelines, eligibility criteria and important dates.</p>
+                    <h3 class="step-card-title">{{ $step['title'] }}</h3>
+                    <p class="step-card-desc">{{ $step['desc'] }}</p>
                 </div>
 
+                @if(!$loop->last)
                 <div class="step-arrow-divider" aria-hidden="true">
                     <i class="fa-solid fa-arrow-right"></i>
                 </div>
-
-                <!-- Step 02 -->
-                <div class="admission-step-card">
-                    <span class="step-num-pill step-pill-teal">02</span>
-                    <div class="step-icon-box step-icon-teal" aria-hidden="true">
-                        <i class="fa-solid fa-file-lines"></i>
-                    </div>
-                    <h3 class="step-card-title">Documents Required</h3>
-                    <p class="step-card-desc">Get the complete list of documents needed for admission.</p>
-                </div>
-
-                <div class="step-arrow-divider" aria-hidden="true">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-
-                <!-- Step 03 -->
-                <div class="admission-step-card">
-                    <span class="step-num-pill step-pill-purple">03</span>
-                    <div class="step-icon-box step-icon-purple" aria-hidden="true">
-                        <i class="fa-solid fa-users"></i>
-                    </div>
-                    <h3 class="step-card-title">Quick Enquiry Registration</h3>
-                    <p class="step-card-desc">A short form to share basic details and connect with our admissions team.</p>
-                </div>
-
-                <div class="step-arrow-divider" aria-hidden="true">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-
-                <!-- Step 04 -->
-                <div class="admission-step-card">
-                    <span class="step-num-pill step-pill-green">04</span>
-                    <div class="step-icon-box step-icon-green" aria-hidden="true">
-                        <i class="fa-solid fa-clipboard-user"></i>
-                    </div>
-                    <h3 class="step-card-title">Online Admission Registration</h3>
-                    <p class="step-card-desc">A detailed form for parents who wish to formally register their ward for admission.</p>
-                </div>
-
-                <div class="step-arrow-divider" aria-hidden="true">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </div>
-
-                <!-- Step 05 -->
-                <div class="admission-step-card">
-                    <span class="step-num-pill step-pill-gold">05</span>
-                    <div class="step-icon-box step-icon-gold" aria-hidden="true">
-                        <i class="fa-solid fa-coins"></i>
-                    </div>
-                    <h3 class="step-card-title">Fee Structure</h3>
-                    <p class="step-card-desc">Class-wise fee details, transport charges and payment schedule.</p>
-                </div>
+                @endif
+                @endforeach
             </div>
         </div>
     </section>
@@ -174,10 +126,10 @@
     <section class="admission-info-split-section" id="admission-guidelines">
         <div class="admission-section-container">
             <div class="admission-split-grid">
-                <!-- Left Column: Student Image -->
+                <!-- Left Column: Student Image from Design Mockup -->
                 <div class="admission-split-media">
                     <div class="admission-student-image-card">
-                        <img src="{{ asset('assets/images/about-philosophy-student.jpg') }}" 
+                        <img src="{{ asset($content['guidelines_image'] ?? 'assets/images/admission-guidelines-student.jpg') }}" 
                              alt="Student learning attentively at Advaita School of Excellence" 
                              class="admission-student-img">
                     </div>
@@ -185,12 +137,13 @@
 
                 <!-- Right Column: Information & 4-Grid Cards -->
                 <div class="admission-split-content">
-                    <div class="admission-eyebrow">— ADMISSION INFORMATION —</div>
+                    <div class="admission-eyebrow">{{ $content['guidelines_eyebrow'] ?? '— ADMISSION INFORMATION —' }}</div>
                     <h2 class="admission-section-title text-start">
-                        Guidelines for a smooth start at <span class="highlight-serif">Advaita.</span>
+                        {{ $content['guidelines_title'] ?? 'Guidelines for a smooth start at' }}
+                        <span class="highlight-serif">{{ $content['guidelines_highlight'] ?? 'Advaita.' }}</span>
                     </h2>
                     <p class="admission-split-desc">
-                        We welcome applications from aspiring learners who are eager to grow in a nurturing and future-focused environment. Our admission process is fair, transparent and designed to ensure the best fit for every child.
+                        {{ $content['guidelines_desc'] ?? 'We welcome applications from aspiring learners who are eager to grow in a nurturing and future-focused environment. Our admission process is fair, transparent and designed to ensure the best fit for every child.' }}
                     </p>
 
                     <!-- 2x2 Feature Mini-Cards Grid -->
@@ -200,8 +153,8 @@
                                 <i class="fa-solid fa-user-graduate"></i>
                             </div>
                             <div class="afc-text">
-                                <h4 class="afc-title">Classes Offered</h4>
-                                <p class="afc-desc">Nursery to Class X (As per availability)</p>
+                                <h4 class="afc-title">{{ $content['feature1_title'] ?? 'Classes Offered' }}</h4>
+                                <p class="afc-desc">{{ $content['feature1_desc'] ?? 'Nursery to Class X (As per availability)' }}</p>
                             </div>
                         </div>
 
@@ -210,8 +163,8 @@
                                 <i class="fa-solid fa-circle-check"></i>
                             </div>
                             <div class="afc-text">
-                                <h4 class="afc-title">Eligibility</h4>
-                                <p class="afc-desc">Age-appropriate as per class guidelines</p>
+                                <h4 class="afc-title">{{ $content['feature2_title'] ?? 'Eligibility' }}</h4>
+                                <p class="afc-desc">{{ $content['feature2_desc'] ?? 'Age-appropriate as per class guidelines' }}</p>
                             </div>
                         </div>
 
@@ -220,8 +173,8 @@
                                 <i class="fa-solid fa-scale-balanced"></i>
                             </div>
                             <div class="afc-text">
-                                <h4 class="afc-title">Selection Process</h4>
-                                <p class="afc-desc">Based on interaction and assessment (as applicable)</p>
+                                <h4 class="afc-title">{{ $content['feature3_title'] ?? 'Selection Process' }}</h4>
+                                <p class="afc-desc">{{ $content['feature3_desc'] ?? 'Based on interaction and assessment (as applicable)' }}</p>
                             </div>
                         </div>
 
@@ -230,8 +183,8 @@
                                 <i class="fa-regular fa-calendar-days"></i>
                             </div>
                             <div class="afc-text">
-                                <h4 class="afc-title">Important Dates</h4>
-                                <p class="afc-desc">Admissions open for the academic session {{ $academicYear ?? '2026–27' }}</p>
+                                <h4 class="afc-title">{{ $content['feature4_title'] ?? 'Important Dates' }}</h4>
+                                <p class="afc-desc">{{ $content['feature4_desc'] ?? ('Admissions open for the academic session ' . ($academicYear ?? '2026–27')) }}</p>
                             </div>
                         </div>
                     </div>
@@ -246,76 +199,42 @@
     <section class="admission-docs-section-v2" id="required-documents">
         <div class="admission-section-container">
             <div class="admission-section-header">
-                <div class="admission-eyebrow">— DOCUMENTS REQUIRED —</div>
+                <div class="admission-eyebrow">{{ $content['docs_eyebrow'] ?? '— DOCUMENTS REQUIRED —' }}</div>
                 <h2 class="admission-section-title">
-                    Keep these ready for a <span class="highlight-serif">faster process.</span>
+                    {{ $content['docs_title'] ?? 'Keep these ready for a' }}
+                    <span class="highlight-serif">{{ $content['docs_highlight'] ?? 'faster process.' }}</span>
                 </h2>
                 <p class="admission-section-desc">
-                    Please carry self-attested photocopies of the following documents at the time of admission.
+                    {{ $content['docs_desc'] ?? 'Please carry self-attested photocopies of the following documents at the time of admission.' }}
                 </p>
             </div>
 
             <div class="docs-checklist-split-grid">
                 <!-- Left Column: 10 Numbered Items -->
                 <div class="docs-items-list">
-                    <div class="doc-list-row">
-                        <span class="doc-num-badge">01</span>
-                        <div class="doc-list-text">Photocopy of Student's Birth Certificate</div>
-                    </div>
-
-                    <div class="doc-list-row">
-                        <span class="doc-num-badge">02</span>
-                        <div class="doc-list-text">Photocopy of Student's Aadhar Card</div>
-                    </div>
-
-                    <div class="doc-list-row">
-                        <span class="doc-num-badge">03</span>
-                        <div class="doc-list-text">Aadhar Card number of the Student</div>
-                    </div>
-
-                    <div class="doc-list-row">
-                        <span class="doc-num-badge">04</span>
-                        <div class="doc-list-text">School Leaving Certificate (Original)</div>
-                    </div>
-
-                    <div class="doc-list-row has-subline">
-                        <span class="doc-num-badge">05</span>
+                    @foreach($documentsList ?? [] as $doc)
+                    <div class="doc-list-row {{ !empty($doc['options']) || !empty($doc['subtext']) ? 'has-subline' : '' }}">
+                        <span class="doc-num-badge">{{ sprintf('%02d', $doc['number'] ?? $loop->iteration) }}</span>
                         <div class="doc-list-text">
-                            <div>Photocopy of Address proof (any one)</div>
-                            <div class="doc-options-subtext">Ration Card &nbsp;|&nbsp; Electricity Bill &nbsp;|&nbsp; Passport &nbsp;|&nbsp; Aadhar Card</div>
+                            <div>{{ $doc['title'] }}</div>
+                            @if(!empty($doc['options']))
+                            <div class="doc-options-subtext">
+                                {{ implode('  |  ', $doc['options']) }}
+                            </div>
+                            @elseif(!empty($doc['subtext']))
+                            <div class="doc-options-subtext">
+                                {{ $doc['subtext'] }}
+                            </div>
+                            @endif
                         </div>
                     </div>
-
-                    <div class="doc-list-row">
-                        <span class="doc-num-badge">06</span>
-                        <div class="doc-list-text">Photocopy of Aadhar Card of any one parent/guardian</div>
-                    </div>
-
-                    <div class="doc-list-row">
-                        <span class="doc-num-badge">07</span>
-                        <div class="doc-list-text">Photocopy of Pan Card of any one parent/guardian</div>
-                    </div>
-
-                    <div class="doc-list-row">
-                        <span class="doc-num-badge">08</span>
-                        <div class="doc-list-text">3 Passport size photographs of the Student</div>
-                    </div>
-
-                    <div class="doc-list-row">
-                        <span class="doc-num-badge">09</span>
-                        <div class="doc-list-text">Caste Certificate (if applicable)</div>
-                    </div>
-
-                    <div class="doc-list-row">
-                        <span class="doc-num-badge">10</span>
-                        <div class="doc-list-text">UDISE Number of the previous / current school</div>
-                    </div>
+                    @endforeach
                 </div>
 
-                <!-- Right Column: Clipboard Checklist Visual -->
+                <!-- Right Column: Clipboard Checklist Visual from Design Image -->
                 <div class="docs-checklist-media">
                     <div class="docs-clipboard-card">
-                        <img src="{{ asset('assets/images/admission-required-documents.jpg') }}" 
+                        <img src="{{ asset($content['docs_image'] ?? 'assets/images/admission-required-documents.jpg') }}" 
                              alt="Required Documents Checklist on Clipboard" 
                              class="docs-clipboard-img">
                     </div>
@@ -333,54 +252,38 @@
                 <!-- Card 1: Quick Enquiry Registration -->
                 <div class="cta-action-box orange-box">
                     <div class="cta-box-content">
-                        <span class="cta-tag-pill orange-pill">QUICK ENQUIRY REGISTRATION</span>
-                        <h3 class="cta-box-title">Share a few details and we'll get in touch.</h3>
-                        <p class="cta-box-desc">Fill in your basic details and our admissions team will connect with you shortly.</p>
+                        <span class="cta-tag-pill orange-pill">{{ $content['qe_tag'] ?? 'QUICK ENQUIRY REGISTRATION' }}</span>
+                        <h3 class="cta-box-title">{{ $content['qe_title'] ?? "Share a few details and we'll get in touch." }}</h3>
+                        <p class="cta-box-desc">{{ $content['qe_desc'] ?? 'Fill in your basic details and our admissions team will connect with you shortly.' }}</p>
                         
                         <button type="button" onclick="openEnquiryModal()" class="btn-cta-action orange-btn">
-                            <span>Quick Enquiry Form</span>
+                            <span>{{ $content['qe_btn'] ?? 'Quick Enquiry Form' }}</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </button>
                     </div>
                     <div class="cta-box-graphic" aria-hidden="true">
-                        <!-- Clean Vector SVG Form & Chat Bubble -->
-                        <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="15" y="15" width="70" height="90" rx="12" fill="#FFEDD5" stroke="#FDBA74" stroke-width="2"/>
-                            <rect x="25" y="32" width="50" height="5" rx="2.5" fill="#FB923C"/>
-                            <rect x="25" y="45" width="40" height="4" rx="2" fill="#FDBA74"/>
-                            <rect x="25" y="57" width="45" height="4" rx="2" fill="#FDBA74"/>
-                            <rect x="25" y="69" width="30" height="4" rx="2" fill="#FDBA74"/>
-                            <circle cx="90" cy="85" r="24" fill="#F97316"/>
-                            <circle cx="82" cy="85" r="3" fill="#ffffff"/>
-                            <circle cx="90" cy="85" r="3" fill="#ffffff"/>
-                            <circle cx="98" cy="85" r="3" fill="#ffffff"/>
-                        </svg>
+                        <img src="{{ asset($content['qe_graphic'] ?? 'assets/images/admission-qe-graphic.png') }}" 
+                             alt="Quick Enquiry Illustration" 
+                             class="cta-box-img">
                     </div>
                 </div>
 
                 <!-- Card 2: Online Admission Registration -->
                 <div class="cta-action-box blue-box">
                     <div class="cta-box-content">
-                        <span class="cta-tag-pill blue-pill">ONLINE ADMISSION REGISTRATION</span>
-                        <h3 class="cta-box-title">Ready to apply? Complete the online form.</h3>
-                        <p class="cta-box-desc">Fill in the detailed application form to formally register your ward for admission.</p>
+                        <span class="cta-tag-pill blue-pill">{{ $content['online_tag'] ?? 'ONLINE ADMISSION REGISTRATION' }}</span>
+                        <h3 class="cta-box-title">{{ $content['online_title'] ?? 'Ready to apply? Complete the online form.' }}</h3>
+                        <p class="cta-box-desc">{{ $content['online_desc'] ?? 'Fill in the detailed application form to formally register your ward for admission.' }}</p>
                         
                         <a href="{{ route('online-registration') }}" class="btn-cta-action blue-btn">
-                            <span>Apply Online</span>
+                            <span>{{ $content['online_btn'] ?? 'Apply Online' }}</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
                     <div class="cta-box-graphic" aria-hidden="true">
-                        <!-- Clean Vector SVG ID Card & Cursor Pointer -->
-                        <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="15" y="20" width="80" height="80" rx="14" fill="#DBEAFE" stroke="#93C5FD" stroke-width="2"/>
-                            <circle cx="40" cy="48" r="12" fill="#3B82F6"/>
-                            <rect x="60" y="40" width="26" height="5" rx="2.5" fill="#60A5FA"/>
-                            <rect x="60" y="52" width="20" height="4" rx="2" fill="#93C5FD"/>
-                            <rect x="25" y="70" width="60" height="4" rx="2" fill="#93C5FD"/>
-                            <rect x="25" y="80" width="45" height="4" rx="2" fill="#93C5FD"/>
-                            <path d="M85 75L98 102L91 104L85 90L77 98L85 75Z" fill="#0284C7" stroke="#ffffff" stroke-width="1.5"/>
-                        </svg>
+                        <img src="{{ asset($content['online_graphic'] ?? 'assets/images/admission-online-graphic.png') }}" 
+                             alt="Online Registration Application" 
+                             class="cta-box-img">
                     </div>
                 </div>
             </div>
@@ -393,12 +296,13 @@
     <section class="admission-fee-section-v2" id="fee-structure">
         <div class="admission-section-container">
             <div class="admission-section-header">
-                <div class="admission-eyebrow">— FEE STRUCTURE —</div>
+                <div class="admission-eyebrow">{{ $content['fee_eyebrow'] ?? '— FEE STRUCTURE —' }}</div>
                 <h2 class="admission-section-title">
-                    Fees, paid in <span class="highlight-serif">simple terms.</span>
+                    {{ $content['fee_title'] ?? 'Fees, paid in' }}
+                    <span class="highlight-serif">{{ $content['fee_highlight'] ?? 'simple terms.' }}</span>
                 </h2>
                 <p class="admission-section-desc">
-                    Our fee structure is designed to be fair, transparent and value-driven.
+                    {{ $content['fee_desc'] ?? 'Our fee structure is designed to be fair, transparent and value-driven.' }}
                 </p>
             </div>
 
@@ -410,8 +314,8 @@
                             <i class="fa-solid fa-book-open"></i>
                         </div>
                         <div class="fbc-info">
-                            <h3 class="fbc-title">Classes I to V</h3>
-                            <p class="fbc-subtitle">Strong foundation for a bright future.</p>
+                            <h3 class="fbc-title">{{ $content['fee_band1_title'] ?? 'Classes I to V' }}</h3>
+                            <p class="fbc-subtitle">{{ $content['fee_band1_subtitle'] ?? 'Strong foundation for a bright future.' }}</p>
                         </div>
                     </div>
                     <div class="fbc-right">
@@ -428,8 +332,8 @@
                             <i class="fa-solid fa-graduation-cap"></i>
                         </div>
                         <div class="fbc-info">
-                            <h3 class="fbc-title">Classes VI to X</h3>
-                            <p class="fbc-subtitle">Empowering learners for higher goals.</p>
+                            <h3 class="fbc-title">{{ $content['fee_band2_title'] ?? 'Classes VI to X' }}</h3>
+                            <p class="fbc-subtitle">{{ $content['fee_band2_subtitle'] ?? 'Empowering learners for higher goals.' }}</p>
                         </div>
                     </div>
                     <div class="fbc-right">
@@ -448,8 +352,8 @@
                         <i class="fa-regular fa-file-lines"></i>
                     </div>
                     <div class="fip-text">
-                        <h4 class="fip-title">Annual Fee Details</h4>
-                        <p class="fip-desc">Tuition, development and other charges</p>
+                        <h4 class="fip-title">{{ $content['fee_info1_title'] ?? 'Annual Fee Details' }}</h4>
+                        <p class="fip-desc">{{ $content['fee_info1_desc'] ?? 'Tuition, development and other charges' }}</p>
                     </div>
                 </div>
 
@@ -458,8 +362,8 @@
                         <i class="fa-solid fa-bus"></i>
                     </div>
                     <div class="fip-text">
-                        <h4 class="fip-title">Transport Charges</h4>
-                        <p class="fip-desc">Route-wise transport facility details</p>
+                        <h4 class="fip-title">{{ $content['fee_info2_title'] ?? 'Transport Charges' }}</h4>
+                        <p class="fip-desc">{{ $content['fee_info2_desc'] ?? 'Route-wise transport facility details' }}</p>
                     </div>
                 </div>
 
@@ -468,8 +372,8 @@
                         <i class="fa-regular fa-calendar-check"></i>
                     </div>
                     <div class="fip-text">
-                        <h4 class="fip-title">Payment Schedule</h4>
-                        <p class="fip-desc">Term-wise / annual payment options</p>
+                        <h4 class="fip-title">{{ $content['fee_info3_title'] ?? 'Payment Schedule' }}</h4>
+                        <p class="fip-desc">{{ $content['fee_info3_desc'] ?? 'Term-wise / annual payment options' }}</p>
                     </div>
                 </div>
 
@@ -478,8 +382,8 @@
                         <i class="fa-solid fa-circle-info"></i>
                     </div>
                     <div class="fip-text">
-                        <h4 class="fip-title">Important Notes</h4>
-                        <p class="fip-desc">Fees are subject to the school policy for the academic session.</p>
+                        <h4 class="fip-title">{{ $content['fee_info4_title'] ?? 'Important Notes' }}</h4>
+                        <p class="fip-desc">{{ $content['fee_info4_desc'] ?? 'Fees are subject to the school policy for the academic session.' }}</p>
                     </div>
                 </div>
             </div>
@@ -493,18 +397,18 @@
         <div class="admission-section-container">
             <div class="admission-peach-cta-box">
                 <div class="apc-left">
-                    <span class="apc-pill">LET'S BEGIN TOGETHER</span>
-                    <h2 class="apc-title">Ready to take the first step?</h2>
-                    <p class="apc-desc">Apply now and give your child the opportunity to grow, learn and excel at Advaita.</p>
+                    <span class="apc-pill">{{ $content['cta_pill'] ?? "LET'S BEGIN TOGETHER" }}</span>
+                    <h2 class="apc-title">{{ $content['cta_title'] ?? 'Ready to take the first step?' }}</h2>
+                    <p class="apc-desc">{{ $content['cta_desc'] ?? 'Apply now and give your child the opportunity to grow, learn and excel at Advaita.' }}</p>
                 </div>
                 <div class="apc-actions">
                     <a href="{{ route('online-registration') }}" class="btn-apc-primary">
-                        <span>Apply for Admission</span>
+                        <span>{{ $content['cta_primary_btn'] ?? 'Apply for Admission' }}</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                     <a href="{{ route('contact') }}" class="btn-apc-secondary">
                         <i class="fa-regular fa-calendar-check"></i>
-                        <span>Schedule a Campus Visit</span>
+                        <span>{{ $content['cta_secondary_btn'] ?? 'Schedule a Campus Visit' }}</span>
                     </a>
                 </div>
             </div>
@@ -578,12 +482,9 @@
                             <i class="fa-solid fa-graduation-cap"></i>
                             <select id="modal_applying_class" name="applying_class" class="form-control">
                                 <option value="">Select target class...</option>
-                                <option value="Nursery">Nursery (Age 3+)</option>
-                                <option value="LKG">LKG (Age 4+)</option>
-                                <option value="UKG">UKG (Age 5+)</option>
-                                @for($i = 1; $i <= 10; $i++)
-                                <option value="Class {{ $i }}">Class {{ $i }}</option>
-                                @endfor
+                                @foreach($classList ?? ['Nursery', 'LKG', 'UKG', 'Class 1', 'Class 2', 'Class 3', 'Class 4', 'Class 5', 'Class 6', 'Class 7', 'Class 8', 'Class 9', 'Class 10'] as $cls)
+                                <option value="{{ $cls }}">{{ $cls }}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>

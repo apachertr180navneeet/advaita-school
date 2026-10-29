@@ -58,60 +58,116 @@ class PageController extends Controller
     {
         $seo = $this->getPageSeo(
             'about_us',
-            'About Us - Advaita School of Excellence, Parbhani',
-            'Learn about Advaita School of Excellence, our history, leadership under Sanmati Sevabhavi Sanstha, pedagogy, infrastructure, and dedication to academic and moral excellence.',
-            'About Advaita School, Parbhani CBSE school history, Sanmati Sevabhavi Sanstha, CBSE school management Parbhani'
+            'About Us - Advaita School of Excellence, Parbhani | Nurturing Excellence',
+            'Learn about Advaita School of Excellence, Parbhani, established in 2016 under the visionary leadership of Mr. Vishal Vattamwar, Chairman of Sanmati Sevabhavi Sanstha.',
+            'About Advaita School, Parbhani CBSE school history, Vishal Vattamwar, Sanmati Sevabhavi Sanstha, CBSE school management Parbhani'
         );
 
         $content = [
-            'hero_badge' => Setting::get('about_hero_badge', 'WELCOME TO'),
-            'hero_title' => Setting::get('about_hero_title', 'A Premier CBSE School with a'),
-            'hero_highlight' => Setting::get('about_hero_highlight', 'Stronger Purpose.'),
-            'hero_subtitle' => Setting::get('about_hero_subtitle', 'At Advaita School of Excellence, we go beyond textbooks to create a learning environment where curiosity is encouraged, confidence is built, and every child is empowered to achieve their true potential.'),
-
-            // Story Section
-            'story_eyebrow' => Setting::get('about_story_eyebrow', 'BUILT ON A STRONG FOUNDATION'),
-            'story_title' => Setting::get('about_story_title', 'Built on Values.'),
-            'story_highlight' => Setting::get('about_story_highlight', 'Academic Excellence.'),
-            'story_p1' => Setting::get('about_story_p1', 'At Advaita School of Excellence, we blend academic rigor, character development, and future-focused learning to help every child grow into a confident, compassionate, and capable individual.'),
-            'story_p2' => Setting::get('about_story_p2', "Our focus on NEET/IIT foundation and various competitive exams, along with a strong CBSE curriculum, ensures that students are well-prepared for higher education and life's opportunities."),
-            'stat_students' => Setting::get('about_stat_students', '5000+'),
-            'stat_years' => Setting::get('about_stat_years', '25+'),
-            'stat_satisfaction' => Setting::get('about_stat_satisfaction', '95%'),
-            'story_badge_title' => Setting::get('about_story_badge_title', 'Best CBSE'),
-            'story_badge_sub' => Setting::get('about_story_badge_sub', 'Result Producer'),
-            'story_badge_tag' => Setting::get('about_story_badge_tag', 'Year after Year'),
-
-            // Vision, Mission, Values
-            'vision_text' => Setting::get('about_vmv_vision', 'To nurture confident, curious and responsible global citizens equipped to excel in academics and life.'),
-            'mission_text' => Setting::get('about_vmv_mission', 'To provide a safe, value-based learning environment with academic excellence, modern facilities and holistic growth opportunities.'),
-
-            // Philosophy Section
-            'philosophy_eyebrow' => Setting::get('about_philosophy_eyebrow', 'PREPARING FOR A BRIGHTER TOMORROW'),
-            'philosophy_title' => Setting::get('about_philosophy_title', 'Education for Life,'),
-            'philosophy_highlight' => Setting::get('about_philosophy_highlight', 'Not Just Exams.'),
-            'philosophy_desc' => Setting::get('about_philosophy_desc', 'We integrate CBSE academics with a focused NEET/IIT foundation and training for various competitive exams. Our student-centric approach ensures conceptual clarity, critical thinking, and real-world application — helping students achieve success in academics and beyond.'),
-
-            // Campus Showcase
-            'campus_eyebrow' => Setting::get('about_campus_eyebrow', 'A SPACE TO GROW'),
-            'campus_title' => Setting::get('about_campus_title', 'A Space to Learn,'),
-            'campus_highlight' => Setting::get('about_campus_highlight', 'Explore and Excel.'),
-            'campus_desc' => Setting::get('about_campus_desc', 'Our modern campus is designed to inspire curiosity, encourage collaboration, and provide the best learning experience. From spacious classrooms to advanced labs and vibrant activity spaces, every corner of Advaita nurtures growth and opportunity.'),
-
-            // CTA Banner
-            'cta_eyebrow' => Setting::get('about_cta_eyebrow', 'BE A PART OF ADVAITA'),
-            'cta_headline' => Setting::get('about_cta_headline', "Together, let's build brighter tomorrows."),
-            'cta_subtext' => Setting::get('about_cta_subtext', 'Admissions are open for CBSE, NEET/IIT Foundation & Competitive Exam Programmes.'),
-
-            // Section Images
+            // Hero Section
+            'hero_eyebrow' => Setting::get('about_hero_eyebrow', 'About Us'),
+            'hero_title' => Setting::get('about_hero_title', 'Advaita School of Excellence,'),
+            'hero_highlight' => Setting::get('about_hero_highlight', 'Parbhani'),
+            'hero_tagline' => Setting::get('about_hero_tagline', "Nurturing Excellence. Inspiring Innovation.\nShaping Futures."),
+            'hero_desc' => Setting::get('about_hero_desc', 'Established in 2016 under the visionary leadership of Mr. Vishal Vattamwar, Chairman of Sanmati Sevabhavi Sanstha, Advaita School of Excellence, Parbhani, was founded to bring quality education to every student in Parbhani.'),
             'hero_image' => Setting::get('about_hero_image', 'assets/images/about-hero-building.jpg'),
-            'story_image' => Setting::get('about_story_image', 'assets/images/about-philosophy-student.jpg'),
-            'philosophy_image' => Setting::get('about_philosophy_image', 'assets/images/about-story-student.jpg'),
-            'campus_image' => Setting::get('about_campus_image', 'assets/images/about-campus-courtyard.jpg'),
-            'cta_image' => Setting::get('about_cta_image', 'assets/images/about-cta-students-trio.png'),
+
+            // Our Vision Section
+            'vision_eyebrow' => Setting::get('about_vision_eyebrow', 'Our Vision'),
+            'vision_title' => Setting::get('about_vision_title', 'A Vision Beyond Conventional'),
+            'vision_highlight' => Setting::get('about_vision_highlight', 'Schooling.'),
+            'vision_desc' => Setting::get('about_vision_desc', 'At Advaita, education goes beyond textbooks and examinations. We aim to nurture curious minds, develop strong conceptual foundations, and prepare students for a competitive future.'),
+            'vision_btn_text' => Setting::get('about_vision_btn_text', 'Learn More'),
+            'vision_btn_url' => Setting::get('about_vision_btn_url', route('vision-mission')),
+            'vision_image' => Setting::get('about_vision_image', 'assets/images/about-vision-students.jpg'),
+
+            // Our Pillars Section
+            'pillars_eyebrow' => Setting::get('about_pillars_eyebrow', 'Our Pillars'),
+            'pillars_title' => Setting::get('about_pillars_title', 'Built on Values. Driven by'),
+            'pillars_highlight' => Setting::get('about_pillars_highlight', 'Excellence.'),
+
+            // Our Journey Section
+            'journey_eyebrow' => Setting::get('about_journey_eyebrow', 'Our Journey'),
+            'journey_title' => Setting::get('about_journey_title', 'From Roots to Remarkable Achievements.'),
+            'journey_desc' => Setting::get('about_journey_desc', 'Affiliated with CBSE since 2019, Advaita School of Excellence achieved the No. 1 position in Parbhani in Class X Board Results in 2026 — a milestone of collective effort.'),
+            'journey_image' => Setting::get('about_journey_image', 'assets/images/about-journey-trophy.png'),
+
+            // Academic Journey Stages Section
+            'stages_eyebrow' => Setting::get('about_stages_eyebrow', 'Our Academic Journey'),
+            'stages_title' => Setting::get('about_stages_title', 'Learning at Every Stage.'),
+            'stages_desc' => Setting::get('about_stages_desc', 'From Foundational to Secondary Stage, we provide a structured and engaging learning path for every child.'),
+
+            // Our Commitment Section
+            'commitment_eyebrow' => Setting::get('about_commitment_eyebrow', 'Our Commitment'),
+            'commitment_title' => Setting::get('about_commitment_title', 'Empowering Every Child for a'),
+            'commitment_highlight' => Setting::get('about_commitment_highlight', 'Brighter Tomorrow.'),
+            'commitment_desc' => Setting::get('about_commitment_desc', 'With visionary leadership and dedicated educators, we are committed to empowering students with the knowledge, values and skills to succeed in life.'),
+            'commitment_btn_text' => Setting::get('about_commitment_btn_text', 'Join Our Journey'),
+            'commitment_btn_url' => Setting::get('about_commitment_btn_url', route('online-registration')),
+            'commitment_image' => Setting::get('about_commitment_image', 'assets/images/about-commitment-students.jpg'),
         ];
 
-        return view('pages.about-us', compact('seo', 'content'));
+        $pillars = [
+            [
+                'title' => Setting::get('about_pillar1_title', 'Academic Excellence'),
+                'icon' => 'fa-solid fa-graduation-cap',
+                'icon_class' => 'blue',
+            ],
+            [
+                'title' => Setting::get('about_pillar2_title', 'Holistic Development'),
+                'icon' => 'fa-solid fa-trophy',
+                'icon_class' => 'orange',
+            ],
+            [
+                'title' => Setting::get('about_pillar3_title', 'Modern Infrastructure'),
+                'icon' => 'fa-solid fa-school',
+                'icon_class' => 'blue',
+            ],
+            [
+                'title' => Setting::get('about_pillar4_title', 'Competitive Preparation'),
+                'icon' => 'fa-solid fa-landmark',
+                'icon_class' => 'orange',
+            ],
+            [
+                'title' => Setting::get('about_pillar5_title', 'Safe & Supportive Environment'),
+                'icon' => 'fa-solid fa-location-dot',
+                'icon_class' => 'blue',
+            ],
+            [
+                'title' => Setting::get('about_pillar6_title', 'Future-Ready Skills'),
+                'icon' => 'fa-solid fa-user-astronaut',
+                'icon_class' => 'purple',
+            ],
+        ];
+
+        $academicStages = [
+            [
+                'title' => Setting::get('about_stage1_title', 'Foundational'),
+                'subtitle' => Setting::get('about_stage1_sub', '(Pre-Primary)'),
+                'icon' => 'fa-solid fa-shapes',
+                'color' => 'orange',
+            ],
+            [
+                'title' => Setting::get('about_stage2_title', 'Preparatory'),
+                'subtitle' => Setting::get('about_stage2_sub', '(Grades I–V)'),
+                'icon' => 'fa-solid fa-graduation-cap',
+                'color' => 'blue',
+            ],
+            [
+                'title' => Setting::get('about_stage3_title', 'Middle'),
+                'subtitle' => Setting::get('about_stage3_sub', '(Grades VI–VIII)'),
+                'icon' => 'fa-solid fa-chalkboard-user',
+                'color' => 'green',
+            ],
+            [
+                'title' => Setting::get('about_stage4_title', 'Secondary'),
+                'subtitle' => Setting::get('about_stage4_sub', '(Grades IX–X)'),
+                'icon' => 'fa-solid fa-users-line',
+                'color' => 'purple',
+            ],
+        ];
+
+        return view('pages.about-us', compact('seo', 'content', 'pillars', 'academicStages'));
     }
 
     public function visionMission(): View
@@ -440,6 +496,136 @@ class PageController extends Controller
             'https://www.google.com/maps/dir/?api=1&destination=Advaita+School+of+Excellence,+Jintur+Road,+Parbhani,+Maharashtra+431401'
         );
 
+        $content = [
+            // Hero Section
+            'hero_badge' => Setting::get('admission_hero_badge', 'ADMISSIONS'),
+            'hero_title' => Setting::get('admission_hero_title', "Begin Your Child's Journey at"),
+            'hero_highlight' => Setting::get('admission_hero_highlight', 'Advaita.'),
+            'hero_desc' => Setting::get('admission_hero_desc', 'A simple, transparent and supportive admission process designed to help your child take the right step towards a brighter future.'),
+            'hero_script' => Setting::get('admission_hero_script', 'More Than A School'),
+            'hero_image' => Setting::get('admission_hero_image', 'assets/images/admission-hero-design.jpg'),
+            'hero_students_image' => Setting::get('admission_hero_students_image', 'assets/images/about-cta-students-clean.png'),
+            'hero_building_image' => Setting::get('admission_hero_building_image', 'assets/images/about-hero-building.jpg'),
+
+            // The Admission Process Section
+            'process_eyebrow' => Setting::get('admission_process_eyebrow', '— THE ADMISSION PROCESS —'),
+            'process_title' => Setting::get('admission_process_title', 'From application to'),
+            'process_highlight' => Setting::get('admission_process_highlight', 'welcome,'),
+            'process_suffix' => Setting::get('admission_process_suffix', 'in five clear steps.'),
+            'process_desc' => Setting::get('admission_process_desc', 'Admission is open to all children, irrespective of caste, creed or community, and decisions are communicated transparently, on merit and fit.'),
+
+            // Guidelines Section
+            'guidelines_eyebrow' => Setting::get('admission_guidelines_eyebrow', '— ADMISSION INFORMATION —'),
+            'guidelines_title' => Setting::get('admission_guidelines_title', 'Guidelines for a smooth start at'),
+            'guidelines_highlight' => Setting::get('admission_guidelines_highlight', 'Advaita.'),
+            'guidelines_desc' => Setting::get('admission_guidelines_desc', 'We welcome applications from aspiring learners who are eager to grow in a nurturing and future-focused environment. Our admission process is fair, transparent and designed to ensure the best fit for every child.'),
+            'guidelines_image' => Setting::get('admission_guidelines_image', 'assets/images/admission-guidelines-student.jpg'),
+
+            // 4 Mini Feature Cards
+            'feature1_title' => Setting::get('admission_feature1_title', 'Classes Offered'),
+            'feature1_desc' => Setting::get('admission_feature1_desc', 'Nursery to Class X (As per availability)'),
+            'feature2_title' => Setting::get('admission_feature2_title', 'Eligibility'),
+            'feature2_desc' => Setting::get('admission_feature2_desc', 'Age-appropriate as per class guidelines'),
+            'feature3_title' => Setting::get('admission_feature3_title', 'Selection Process'),
+            'feature3_desc' => Setting::get('admission_feature3_desc', 'Based on interaction and assessment (as applicable)'),
+            'feature4_title' => Setting::get('admission_feature4_title', 'Important Dates'),
+            'feature4_desc' => Setting::get('admission_feature4_desc', 'Admissions open for the academic session '.$academicYear),
+
+            // Documents Required Section
+            'docs_eyebrow' => Setting::get('admission_docs_eyebrow', '— DOCUMENTS REQUIRED —'),
+            'docs_title' => Setting::get('admission_docs_title', 'Keep these ready for a'),
+            'docs_highlight' => Setting::get('admission_docs_highlight', 'faster process.'),
+            'docs_desc' => Setting::get('admission_docs_desc', 'Please carry self-attested photocopies of the following documents at the time of admission.'),
+            'docs_image' => Setting::get('admission_docs_image', 'assets/images/admission-required-documents.jpg'),
+
+            // Two Action Cards
+            'qe_tag' => Setting::get('admission_qe_tag', 'QUICK ENQUIRY REGISTRATION'),
+            'qe_title' => Setting::get('admission_qe_title', "Share a few details and we'll get in touch."),
+            'qe_desc' => Setting::get('admission_qe_desc', 'Fill in your basic details and our admissions team will connect with you shortly.'),
+            'qe_btn' => Setting::get('admission_qe_btn', 'Quick Enquiry Form'),
+            'qe_graphic' => Setting::get('admission_qe_graphic', 'assets/images/admission-qe-graphic.png'),
+
+            'online_tag' => Setting::get('admission_online_tag', 'ONLINE ADMISSION REGISTRATION'),
+            'online_title' => Setting::get('admission_online_title', 'Ready to apply? Complete the online form.'),
+            'online_desc' => Setting::get('admission_online_desc', 'Fill in the detailed application form to formally register your ward for admission.'),
+            'online_btn' => Setting::get('admission_online_btn', 'Apply Online'),
+            'online_graphic' => Setting::get('admission_online_graphic', 'assets/images/admission-online-graphic.png'),
+
+            // Fee Structure Section
+            'fee_eyebrow' => Setting::get('admission_fee_eyebrow', '— FEE STRUCTURE —'),
+            'fee_title' => Setting::get('admission_fee_title', 'Fees, paid in'),
+            'fee_highlight' => Setting::get('admission_fee_highlight', 'simple terms.'),
+            'fee_desc' => Setting::get('admission_fee_desc', 'Our fee structure is designed to be fair, transparent and value-driven.'),
+            'fee_band1_title' => Setting::get('admission_fee_band1_title', 'Classes I to V'),
+            'fee_band1_subtitle' => Setting::get('admission_fee_band1_subtitle', 'Strong foundation for a bright future.'),
+            'fee_band2_title' => Setting::get('admission_fee_band2_title', 'Classes VI to X'),
+            'fee_band2_subtitle' => Setting::get('admission_fee_band2_subtitle', 'Empowering learners for higher goals.'),
+
+            'fee_info1_title' => Setting::get('admission_fee_info1_title', 'Annual Fee Details'),
+            'fee_info1_desc' => Setting::get('admission_fee_info1_desc', 'Tuition, development and other charges'),
+            'fee_info2_title' => Setting::get('admission_fee_info2_title', 'Transport Charges'),
+            'fee_info2_desc' => Setting::get('admission_fee_info2_desc', 'Route-wise transport facility details'),
+            'fee_info3_title' => Setting::get('admission_fee_info3_title', 'Payment Schedule'),
+            'fee_info3_desc' => Setting::get('admission_fee_info3_desc', 'Term-wise / annual payment options'),
+            'fee_info4_title' => Setting::get('admission_fee_info4_title', 'Important Notes'),
+            'fee_info4_desc' => Setting::get('admission_fee_info4_desc', 'Fees are subject to the school policy for the academic session.'),
+
+            // Pre-Footer Peach CTA
+            'cta_pill' => Setting::get('admission_cta_pill', "LET'S BEGIN TOGETHER"),
+            'cta_title' => Setting::get('admission_cta_title', 'Ready to take the first step?'),
+            'cta_desc' => Setting::get('admission_cta_desc', 'Apply now and give your child the opportunity to grow, learn and excel at Advaita.'),
+            'cta_primary_btn' => Setting::get('admission_cta_primary_btn', 'Apply for Admission'),
+            'cta_secondary_btn' => Setting::get('admission_cta_secondary_btn', 'Schedule a Campus Visit'),
+        ];
+
+        $admissionSteps = [
+            [
+                'step' => '01',
+                'badge_class' => 'step-pill-orange',
+                'icon_class' => 'step-icon-orange',
+                'icon' => Setting::get('admission_step1_icon', 'fa-solid fa-laptop'),
+                'title' => Setting::get('admission_step1_title', 'Admission Information'),
+                'desc' => Setting::get('admission_step1_desc', 'Find details about admission guidelines, eligibility criteria and important dates.'),
+            ],
+            [
+                'step' => '02',
+                'badge_class' => 'step-pill-teal',
+                'icon_class' => 'step-icon-teal',
+                'icon' => Setting::get('admission_step2_icon', 'fa-solid fa-file-lines'),
+                'title' => Setting::get('admission_step2_title', 'Documents Required'),
+                'desc' => Setting::get('admission_step2_desc', 'Get the complete list of documents needed for admission.'),
+            ],
+            [
+                'step' => '03',
+                'badge_class' => 'step-pill-purple',
+                'icon_class' => 'step-icon-purple',
+                'icon' => Setting::get('admission_step3_icon', 'fa-solid fa-users'),
+                'title' => Setting::get('admission_step3_title', 'Quick Enquiry Registration'),
+                'desc' => Setting::get('admission_step3_desc', 'A short form to share basic details and connect with our admissions team.'),
+            ],
+            [
+                'step' => '04',
+                'badge_class' => 'step-pill-green',
+                'icon_class' => 'step-icon-green',
+                'icon' => Setting::get('admission_step4_icon', 'fa-solid fa-clipboard-user'),
+                'title' => Setting::get('admission_step4_title', 'Online Admission Registration'),
+                'desc' => Setting::get('admission_step4_desc', 'A detailed form for parents who wish to formally register their ward for admission.'),
+            ],
+            [
+                'step' => '05',
+                'badge_class' => 'step-pill-gold',
+                'icon_class' => 'step-icon-gold',
+                'icon' => Setting::get('admission_step5_icon', 'fa-solid fa-coins'),
+                'title' => Setting::get('admission_step5_title', 'Fee Structure'),
+                'desc' => Setting::get('admission_step5_desc', 'Class-wise fee details, transport charges and payment schedule.'),
+            ],
+        ];
+
+        $classList = ['Nursery', 'LKG', 'UKG'];
+        for ($i = 1; $i <= 10; $i++) {
+            $classList[] = "Class {$i}";
+        }
+
         $eligibilityList = [
             [
                 'grade' => 'Nursery',
@@ -618,6 +804,9 @@ class PageController extends Controller
 
         return view('pages.admission-info', compact(
             'seo',
+            'content',
+            'admissionSteps',
+            'classList',
             'academicYear',
             'counsellorName',
             'counsellorPhone',
