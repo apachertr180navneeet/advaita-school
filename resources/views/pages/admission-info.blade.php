@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', "Admission Info 2026-27 - Advaita School of Excellence, Parbhani | Process, Eligibility & Guidelines")
+@section('title', "Admission Information (2026-27) - Advaita School of Excellence, Parbhani | Process, Documents & Fees")
 
 @section('styles')
 <link rel="stylesheet" href="{{ asset('assets/css/admissions.css') }}?v={{ file_exists(public_path('assets/css/admissions.css')) ? filemtime(public_path('assets/css/admissions.css')) : '1.0' }}">
@@ -9,14 +9,32 @@
 @section('content')
 <main id="main" class="main-content-wrapper admission-page-wrapper">
 
+    <!-- Flash message alerts -->
+    @if(session('success'))
+    <div class="admission-section-container pt-20">
+        <div class="alert alert-success d-flex align-items-center justify-content-between p-16 rounded-16" style="background: #DCFCE7; border: 1.5px solid #86EFAC; color: #166534;">
+            <div class="d-flex align-items-center gap-10">
+                <i class="fa-solid fa-circle-check fs-20 text-success"></i>
+                <span class="fs-14 font-bold">{{ session('success') }}</span>
+            </div>
+            <button type="button" class="btn-close" onclick="this.parentElement.remove()" aria-label="Close"></button>
+        </div>
+    </div>
+    @endif
+
     <!-- =========================================================================
-         1. HERO SECTION: Breadcrumb + Title + Visual with Students
+         1. HERO SECTION: Breadcrumb + Title + Visual with School & Students
          ========================================================================= -->
     <section class="admission-hero-section">
         <div class="admission-hero-canvas">
-            <!-- Hero Students Visual -->
+            <!-- Hero Composite Visual: School Campus Building + 3 Students Cutout -->
             <div class="admission-hero-bg-visual" aria-hidden="true">
-                <img src="{{ asset('assets/images/about-cta-students-clean.png') }}" alt="Advaita Students" class="admission-hero-bg-img" width="1024" height="682">
+                <div class="admission-hero-building-layer">
+                    <img src="{{ asset('assets/images/about-hero-building.jpg') }}" alt="Advaita Campus Building" class="admission-hero-building-img">
+                </div>
+                <div class="admission-hero-students-layer">
+                    <img src="{{ asset('assets/images/about-cta-students-clean.png') }}" alt="Advaita Students" width="1024" height="682">
+                </div>
             </div>
 
             <!-- SVG Wave Overlay for Smooth Translucent Backdrop -->
@@ -48,274 +66,47 @@
                     </nav>
 
                     <!-- Eyebrow -->
-                    <div class="admission-eyebrow">ADMISSIONS {{ $academicYear ?? '2026–27' }}</div>
+                    <div class="admission-eyebrow">ADMISSIONS</div>
 
                     <!-- Main Headline -->
                     <h1 class="admission-hero-title">
-                        Begin Your Child's Journey at <span class="highlight-serif">Advaita.</span>
+                        Begin Your Child's<br>
+                        Journey at <span class="highlight-serif">Advaita.</span>
                     </h1>
 
                     <!-- Description -->
                     <p class="admission-hero-desc">
-                        A supportive, transparent admission process designed to help your child take the right step towards excellence in CBSE academics, Abacus, Olympiads, and NEET/IIT Foundation.
+                        A simple, transparent and supportive admission process designed to help your child take the right step towards a brighter future.
                     </p>
-
-                    <!-- Quick Navigation CTA Group -->
-                    <div class="d-flex align-items-center gap-12 flex-wrap mt-20">
-                        <a href="#quick-enquiry" class="admission-btn-primary">
-                            <i class="fa-solid fa-bolt"></i>
-                            <span>Quick Enquiry Form</span>
-                        </a>
-                        <a href="{{ route('online-registration') }}" class="admission-btn-visit" style="background: rgba(8, 59, 122, 0.08); border-color: rgba(8, 59, 122, 0.2); color: #083B7A;">
-                            <i class="fa-solid fa-file-pen"></i>
-                            <span>Detailed Application</span>
-                        </a>
-                        <a href="{{ route('fee-structure') }}" class="admission-btn-visit">
-                            <i class="fa-solid fa-indian-rupee-sign"></i>
-                            <span>Fee Structure</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Quick Navigation Sub-bar -->
-    <div class="admission-subnav-bar">
-        <div class="admission-section-container">
-            <div class="subnav-links-wrap">
-                <a href="#quick-actions" class="subnav-link highlight"><i class="fa-solid fa-bolt"></i> Quick Actions</a>
-                <a href="#admission-process" class="subnav-link"><i class="fa-solid fa-list-check"></i> Admission Process</a>
-                <a href="#eligibility-criteria" class="subnav-link"><i class="fa-solid fa-user-check"></i> Eligibility Criteria</a>
-                <a href="#required-documents" class="subnav-link"><i class="fa-solid fa-folder-open"></i> Required Documents</a>
-                <a href="#books-uniforms" class="subnav-link"><i class="fa-solid fa-shirt"></i> Books &amp; Uniforms</a>
-                <a href="#transport-facilities" class="subnav-link"><i class="fa-solid fa-bus"></i> Transport Facilities</a>
-                <a href="#quick-enquiry" class="subnav-link"><i class="fa-solid fa-paper-plane"></i> Quick Enquiry</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- =========================================================================
-         QUICK ACTIONS SECTION (All 7 Verified Actions & Contact Hub)
-         ========================================================================= -->
-    <section class="admission-quick-actions-section" id="quick-actions">
-        <div class="admission-section-container">
-            <div class="admission-section-header">
-                <div class="admission-eyebrow">— ADMISSIONS QUICK ACTIONS &amp; CONTACT HUB —</div>
-                <h2 class="admission-section-title">
-                    Instant Assistance &amp; <span class="highlight-serif">Direct Connect.</span>
-                </h2>
-                <p class="admission-section-desc">
-                    Connect directly with our admissions counsellor, access fee structures, download guidelines, or get directions to our campus.
-                </p>
-            </div>
-
-            <div class="quick-actions-grid">
-                <!-- 1. View Fee Structure -->
-                <div class="qa-card">
-                    <div>
-                        <div class="qa-card-header">
-                            <div class="qa-icon-wrap navy" aria-hidden="true">
-                                <i class="fa-solid fa-indian-rupee-sign"></i>
-                            </div>
-                            <span class="qa-badge navy">Session {{ $academicYear }}</span>
-                        </div>
-                        <div class="qa-card-body">
-                            <h3 class="qa-card-title">1. View Fee Structure</h3>
-                            <p class="qa-card-desc">Review transparent class-wise tuition fees, term installment schedules, and policy guidelines.</p>
-                        </div>
-                    </div>
-                    <div class="qa-card-footer">
-                        <a href="{{ route('fee-structure') }}" class="btn-qa-action primary">
-                            <span>View Fee Structure</span>
-                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 2. Download Admission Guidelines -->
-                <div class="qa-card">
-                    <div>
-                        <div class="qa-card-header">
-                            <div class="qa-icon-wrap orange" aria-hidden="true">
-                                <i class="fa-solid fa-file-arrow-down"></i>
-                            </div>
-                            <span class="qa-badge orange">Official PDF</span>
-                        </div>
-                        <div class="qa-card-body">
-                            <h3 class="qa-card-title">2. Download Admission Guidelines</h3>
-                            <p class="qa-card-desc">Complete 5-step admission protocol, age criteria matrix, and regulatory verification instructions.</p>
-                        </div>
-                    </div>
-                    <div class="qa-card-footer">
-                        <a href="{{ route('admission-guidelines.download') }}" class="btn-qa-action orange" title="Download Admission Guidelines PDF">
-                            <i class="fa-solid fa-file-pdf me-1" aria-hidden="true"></i>
-                            <span>Download Official PDF</span>
-                        </a>
-                        <a href="{{ route('admission-guidelines') }}" class="btn-qa-action outline mt-2" style="font-size: 13px;">
-                            <i class="fa-solid fa-book-open me-1" aria-hidden="true"></i>
-                            <span>View Full Guidelines</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 3. Check Required Documents -->
-                <div class="qa-card">
-                    <div>
-                        <div class="qa-card-header">
-                            <div class="qa-icon-wrap purple" aria-hidden="true">
-                                <i class="fa-solid fa-clipboard-check"></i>
-                            </div>
-                            <span class="qa-badge navy">10 Documents</span>
-                        </div>
-                        <div class="qa-card-body">
-                            <h3 class="qa-card-title">3. Check Required Documents</h3>
-                            <p class="qa-card-desc">Management-approved checklist of documents required for student admission confirmation.</p>
-                        </div>
-                    </div>
-                    <div class="qa-card-footer">
-                        <a href="#required-documents" class="btn-qa-action outline" title="Scroll to documents checklist on this page">
-                            <i class="fa-solid fa-list-check me-1" aria-hidden="true"></i>
-                            <span>Check Required Documents</span>
-                        </a>
-                        <a href="{{ route('admission-guidelines') }}#documents-required" class="btn-qa-action primary mt-2" style="font-size: 13px;">
-                            <i class="fa-solid fa-circle-check me-1" aria-hidden="true"></i>
-                            <span>Guidelines Checklist</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 4. Talk to an Admission Counsellor -->
-                <div class="qa-card highlight-card">
-                    <div>
-                        <div class="qa-card-header">
-                            <div class="qa-icon-wrap orange" aria-hidden="true">
-                                <i class="fa-solid fa-headset"></i>
-                            </div>
-                            <span class="qa-badge orange">Counsellor Desk</span>
-                        </div>
-                        <div class="qa-card-body">
-                            <h3 class="qa-card-title">4. Talk to an Admission Counsellor</h3>
-                            <p class="qa-card-desc">Speak directly with our dedicated admissions counsellor for personalized academic guidance.</p>
-                            <div class="qa-card-meta">
-                                <i class="fa-solid fa-user-tie" aria-hidden="true"></i>
-                                <span>{{ $counsellorName }} &middot; {{ $counsellorPhone }}</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="qa-card-footer">
-                        <a href="tel:{{ $counsellorPhone }}" class="btn-qa-action orange">
-                            <i class="fa-solid fa-phone me-1" aria-hidden="true"></i>
-                            <span>Call {{ $counsellorName }}: {{ $counsellorPhone }}</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 5. Get Directions to School -->
-                <div class="qa-card">
-                    <div>
-                        <div class="qa-card-header">
-                            <div class="qa-icon-wrap blue" aria-hidden="true">
-                                <i class="fa-solid fa-diamond-turn-right"></i>
-                            </div>
-                            <span class="qa-badge navy">Google Maps</span>
-                        </div>
-                        <div class="qa-card-body">
-                            <h3 class="qa-card-title">5. Get Directions to School</h3>
-                            <p class="qa-card-desc">Turn-by-turn route navigation directly to Advaita School of Excellence campus.</p>
-                            <div class="qa-card-meta" style="color: #475569;">
-                                <i class="fa-solid fa-location-dot text-orange" aria-hidden="true"></i>
-                                <span>{{ $campusAddress }}</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="qa-card-footer">
-                        <a href="{{ $directionsUrl }}" target="_blank" rel="noopener noreferrer" class="btn-qa-action primary">
-                            <i class="fa-solid fa-location-arrow me-1" aria-hidden="true"></i>
-                            <span>Get Directions</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 6. Call the School -->
-                <div class="qa-card">
-                    <div>
-                        <div class="qa-card-header">
-                            <div class="qa-icon-wrap teal" aria-hidden="true">
-                                <i class="fa-solid fa-phone-volume"></i>
-                            </div>
-                            <span class="qa-badge green">Official Lines</span>
-                        </div>
-                        <div class="qa-card-body">
-                            <h3 class="qa-card-title">6. Call the School</h3>
-                            <p class="qa-card-desc">Tap either verified official telephone number to connect with the school reception:</p>
-                        </div>
-                    </div>
-                    <div class="qa-card-footer">
-                        <div class="qa-dual-buttons">
-                            <a href="tel:{{ $schoolPhone1 }}" class="btn-qa-action primary" title="Call Line 1">
-                                <i class="fa-solid fa-phone me-1" aria-hidden="true"></i>
-                                <span>{{ $schoolPhone1 }}</span>
-                            </a>
-                            <a href="tel:{{ $schoolPhone2 }}" class="btn-qa-action outline" title="Call Line 2">
-                                <i class="fa-solid fa-phone me-1" aria-hidden="true"></i>
-                                <span>{{ $schoolPhone2 }}</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 7. WhatsApp Enquiry Banner (Full Width Feature) -->
-                <div class="qa-card qa-card-banner">
-                    <div class="qa-banner-content">
-                        <div class="qa-icon-wrap whatsapp" aria-hidden="true">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </div>
-                        <div class="qa-banner-text">
-                            <div class="d-flex align-items-center gap-10 flex-wrap mb-6">
-                                <h3 class="qa-card-title m-0">7. Instant WhatsApp Enquiry Desk</h3>
-                                <span class="qa-badge whatsapp"><i class="fa-solid fa-bolt me-1"></i> Quick Response</span>
-                            </div>
-                            <p class="qa-card-desc m-0">Prefer instant messaging? Connect directly with our admissions counsellor on WhatsApp (<strong>{{ $whatsappNumber }}</strong>) to ask quick questions, receive fee schedules, or request the admission prospectus.</p>
-                        </div>
-                    </div>
-                    <div class="qa-banner-action">
-                        <a href="{{ $whatsappUrl }}" target="_blank" rel="noopener noreferrer" class="btn-qa-action whatsapp">
-                            <i class="fa-brands fa-whatsapp me-2" aria-hidden="true"></i>
-                            <span>Chat on WhatsApp ({{ $whatsappNumber }})</span>
-                            <i class="fa-solid fa-arrow-up-right-from-square ms-2 fs-12" aria-hidden="true"></i>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- =========================================================================
-         2. SECTION A: FIVE-STEP ADMISSION PROCESS & IMPORTANT DATES
+         2. FIVE-STEP ADMISSION PROCESS SECTION
          ========================================================================= -->
     <section class="admission-process-section" id="admission-process">
         <div class="admission-section-container">
             <div class="admission-section-header">
-                <div class="admission-eyebrow">— ADMISSION GUIDELINES —</div>
+                <div class="admission-eyebrow">— THE ADMISSION PROCESS —</div>
                 <h2 class="admission-section-title">
-                    From application to <span class="highlight-serif">welcome</span>, in five clear steps.
+                    From application to <span class="highlight-serif">welcome,</span> in five clear steps.
                 </h2>
                 <p class="admission-section-desc">
-                    Admission is open to all children irrespective of caste, creed, or community. All decisions are communicated transparently based on seat availability and age eligibility.
+                    Admission is open to all children, irrespective of caste, creed or community, and decisions are communicated transparently, on merit and fit.
                 </p>
             </div>
 
-            <!-- Steps Grid / Row with Flow Connectors -->
             <div class="admission-steps-wrapper">
                 <!-- Step 01 -->
                 <div class="admission-step-card">
-                    <span class="step-num-pill">01</span>
-                    <div class="step-icon-circle orange" aria-hidden="true">
+                    <span class="step-num-pill step-pill-orange">01</span>
+                    <div class="step-icon-box step-icon-orange" aria-hidden="true">
                         <i class="fa-solid fa-laptop"></i>
                     </div>
-                    <h3 class="step-card-title">Enquiry / Application</h3>
-                    <p class="step-card-desc">Submit the Quick Enquiry or complete the detailed Online Admission Registration form.</p>
+                    <h3 class="step-card-title">Admission Information</h3>
+                    <p class="step-card-desc">Find details about admission guidelines, eligibility criteria and important dates.</p>
                 </div>
 
                 <div class="step-arrow-divider" aria-hidden="true">
@@ -324,12 +115,12 @@
 
                 <!-- Step 02 -->
                 <div class="admission-step-card">
-                    <span class="step-num-pill">02</span>
-                    <div class="step-icon-circle mint" aria-hidden="true">
-                        <i class="fa-solid fa-file-arrow-up"></i>
+                    <span class="step-num-pill step-pill-teal">02</span>
+                    <div class="step-icon-box step-icon-teal" aria-hidden="true">
+                        <i class="fa-solid fa-file-lines"></i>
                     </div>
-                    <h3 class="step-card-title">Document Verification</h3>
-                    <p class="step-card-desc">Submit required documents (Birth Certificate, TC, Report Card) for verification.</p>
+                    <h3 class="step-card-title">Documents Required</h3>
+                    <p class="step-card-desc">Get the complete list of documents needed for admission.</p>
                 </div>
 
                 <div class="step-arrow-divider" aria-hidden="true">
@@ -338,12 +129,12 @@
 
                 <!-- Step 03 -->
                 <div class="admission-step-card">
-                    <span class="step-num-pill">03</span>
-                    <div class="step-icon-circle purple" aria-hidden="true">
-                        <i class="fa-solid fa-comments"></i>
+                    <span class="step-num-pill step-pill-purple">03</span>
+                    <div class="step-icon-box step-icon-purple" aria-hidden="true">
+                        <i class="fa-solid fa-users"></i>
                     </div>
-                    <h3 class="step-card-title">Counselor Interaction</h3>
-                    <p class="step-card-desc">Our admissions counselor guides parents through the curriculum, pedagogy, and facilities.</p>
+                    <h3 class="step-card-title">Quick Enquiry Registration</h3>
+                    <p class="step-card-desc">A short form to share basic details and connect with our admissions team.</p>
                 </div>
 
                 <div class="step-arrow-divider" aria-hidden="true">
@@ -352,12 +143,12 @@
 
                 <!-- Step 04 -->
                 <div class="admission-step-card">
-                    <span class="step-num-pill">04</span>
-                    <div class="step-icon-circle pink" aria-hidden="true">
-                        <i class="fa-solid fa-clipboard-check"></i>
+                    <span class="step-num-pill step-pill-green">04</span>
+                    <div class="step-icon-box step-icon-green" aria-hidden="true">
+                        <i class="fa-solid fa-clipboard-user"></i>
                     </div>
-                    <h3 class="step-card-title">Student Interaction</h3>
-                    <p class="step-card-desc">Friendly informal interaction / grade-appropriate baseline review for higher classes.</p>
+                    <h3 class="step-card-title">Online Admission Registration</h3>
+                    <p class="step-card-desc">A detailed form for parents who wish to formally register their ward for admission.</p>
                 </div>
 
                 <div class="step-arrow-divider" aria-hidden="true">
@@ -366,31 +157,83 @@
 
                 <!-- Step 05 -->
                 <div class="admission-step-card">
-                    <span class="step-num-pill">05</span>
-                    <div class="step-icon-circle gold" aria-hidden="true">
-                        <i class="fa-solid fa-circle-check"></i>
+                    <span class="step-num-pill step-pill-gold">05</span>
+                    <div class="step-icon-box step-icon-gold" aria-hidden="true">
+                        <i class="fa-solid fa-coins"></i>
                     </div>
-                    <h3 class="step-card-title">Admission Confirmation</h3>
-                    <p class="step-card-desc">Upon seat allocation, receive admission confirmation and complete fee formalities.</p>
+                    <h3 class="step-card-title">Fee Structure</h3>
+                    <p class="step-card-desc">Class-wise fee details, transport charges and payment schedule.</p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- Important Dates Card -->
-            <div class="admission-dates-banner mt-32">
-                <div class="d-flex align-items-center justify-content-between gap-16 flex-wrap">
-                    <div class="d-flex align-items-center gap-14">
-                        <div class="adm-dates-icon" aria-hidden="true">
-                            <i class="fa-regular fa-calendar-days"></i>
-                        </div>
-                        <div>
-                            <h4 class="m-0 text-navy fs-16 font-extrabold">Academic Session {{ $academicYear ?? '2026–27' }} Admission Schedule</h4>
-                            <p class="m-0 text-muted fs-13 mt-2">Registrations are currently open for Nursery to Class 10. Limited seats are allocated strictly on early confirmation to maintain an optimal 25:1 student-teacher ratio.</p>
-                        </div>
+    <!-- =========================================================================
+         3. ADMISSION INFORMATION & GUIDELINES (SPLIT WITH STUDENT PHOTO)
+         ========================================================================= -->
+    <section class="admission-info-split-section" id="admission-guidelines">
+        <div class="admission-section-container">
+            <div class="admission-split-grid">
+                <!-- Left Column: Student Image -->
+                <div class="admission-split-media">
+                    <div class="admission-student-image-card">
+                        <img src="{{ asset('assets/images/about-philosophy-student.jpg') }}" 
+                             alt="Student learning attentively at Advaita School of Excellence" 
+                             class="admission-student-img">
                     </div>
-                    <div class="d-flex align-items-center gap-10">
-                        <span class="badge-featured-pill font-extrabold fs-12">
-                            <i class="fa-solid fa-fire text-orange"></i> Admissions Open
-                        </span>
+                </div>
+
+                <!-- Right Column: Information & 4-Grid Cards -->
+                <div class="admission-split-content">
+                    <div class="admission-eyebrow">— ADMISSION INFORMATION —</div>
+                    <h2 class="admission-section-title text-start">
+                        Guidelines for a smooth start at <span class="highlight-serif">Advaita.</span>
+                    </h2>
+                    <p class="admission-split-desc">
+                        We welcome applications from aspiring learners who are eager to grow in a nurturing and future-focused environment. Our admission process is fair, transparent and designed to ensure the best fit for every child.
+                    </p>
+
+                    <!-- 2x2 Feature Mini-Cards Grid -->
+                    <div class="admission-features-grid">
+                        <div class="adm-feature-card">
+                            <div class="afc-icon" aria-hidden="true">
+                                <i class="fa-solid fa-user-graduate"></i>
+                            </div>
+                            <div class="afc-text">
+                                <h4 class="afc-title">Classes Offered</h4>
+                                <p class="afc-desc">Nursery to Class X (As per availability)</p>
+                            </div>
+                        </div>
+
+                        <div class="adm-feature-card">
+                            <div class="afc-icon" aria-hidden="true">
+                                <i class="fa-solid fa-circle-check"></i>
+                            </div>
+                            <div class="afc-text">
+                                <h4 class="afc-title">Eligibility</h4>
+                                <p class="afc-desc">Age-appropriate as per class guidelines</p>
+                            </div>
+                        </div>
+
+                        <div class="adm-feature-card">
+                            <div class="afc-icon" aria-hidden="true">
+                                <i class="fa-solid fa-scale-balanced"></i>
+                            </div>
+                            <div class="afc-text">
+                                <h4 class="afc-title">Selection Process</h4>
+                                <p class="afc-desc">Based on interaction and assessment (as applicable)</p>
+                            </div>
+                        </div>
+
+                        <div class="adm-feature-card">
+                            <div class="afc-icon" aria-hidden="true">
+                                <i class="fa-regular fa-calendar-days"></i>
+                            </div>
+                            <div class="afc-text">
+                                <h4 class="afc-title">Important Dates</h4>
+                                <p class="afc-desc">Admissions open for the academic session {{ $academicYear ?? '2026–27' }}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -398,196 +241,270 @@
     </section>
 
     <!-- =========================================================================
-         3. SECTION A (CONT): CLASS-WISE ELIGIBILITY CRITERIA & AGE REQUIREMENTS
+         4. DOCUMENTS REQUIRED SECTION
          ========================================================================= -->
-    <section class="admission-eligibility-section" id="eligibility-criteria">
+    <section class="admission-docs-section-v2" id="required-documents">
         <div class="admission-section-container">
             <div class="admission-section-header">
-                <div class="admission-eyebrow">— ELIGIBILITY CRITERIA —</div>
+                <div class="admission-eyebrow">— DOCUMENTS REQUIRED —</div>
                 <h2 class="admission-section-title">
-                    Class-wise <span class="highlight-serif">age &amp; admission</span> requirements.
+                    Keep these ready for a <span class="highlight-serif">faster process.</span>
                 </h2>
                 <p class="admission-section-desc">
-                    Age criteria are formulated in alignment with the National Education Policy (NEP) and government guidelines for CBSE affiliated institutions.
+                    Please carry self-attested photocopies of the following documents at the time of admission.
                 </p>
             </div>
 
-            <div class="eligibility-table-card">
-                <!-- Table Card Top Header Bar -->
-                <div class="table-card-topbar">
-                    <div class="d-flex align-items-center gap-12 flex-wrap">
-                        <div class="table-topbar-icon" aria-hidden="true">
+            <div class="docs-checklist-split-grid">
+                <!-- Left Column: 10 Numbered Items -->
+                <div class="docs-items-list">
+                    <div class="doc-list-row">
+                        <span class="doc-num-badge">01</span>
+                        <div class="doc-list-text">Photocopy of Student's Birth Certificate</div>
+                    </div>
+
+                    <div class="doc-list-row">
+                        <span class="doc-num-badge">02</span>
+                        <div class="doc-list-text">Photocopy of Student's Aadhar Card</div>
+                    </div>
+
+                    <div class="doc-list-row">
+                        <span class="doc-num-badge">03</span>
+                        <div class="doc-list-text">Aadhar Card number of the Student</div>
+                    </div>
+
+                    <div class="doc-list-row">
+                        <span class="doc-num-badge">04</span>
+                        <div class="doc-list-text">School Leaving Certificate (Original)</div>
+                    </div>
+
+                    <div class="doc-list-row has-subline">
+                        <span class="doc-num-badge">05</span>
+                        <div class="doc-list-text">
+                            <div>Photocopy of Address proof (any one)</div>
+                            <div class="doc-options-subtext">Ration Card &nbsp;|&nbsp; Electricity Bill &nbsp;|&nbsp; Passport &nbsp;|&nbsp; Aadhar Card</div>
+                        </div>
+                    </div>
+
+                    <div class="doc-list-row">
+                        <span class="doc-num-badge">06</span>
+                        <div class="doc-list-text">Photocopy of Aadhar Card of any one parent/guardian</div>
+                    </div>
+
+                    <div class="doc-list-row">
+                        <span class="doc-num-badge">07</span>
+                        <div class="doc-list-text">Photocopy of Pan Card of any one parent/guardian</div>
+                    </div>
+
+                    <div class="doc-list-row">
+                        <span class="doc-num-badge">08</span>
+                        <div class="doc-list-text">3 Passport size photographs of the Student</div>
+                    </div>
+
+                    <div class="doc-list-row">
+                        <span class="doc-num-badge">09</span>
+                        <div class="doc-list-text">Caste Certificate (if applicable)</div>
+                    </div>
+
+                    <div class="doc-list-row">
+                        <span class="doc-num-badge">10</span>
+                        <div class="doc-list-text">UDISE Number of the previous / current school</div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Clipboard Checklist Visual -->
+                <div class="docs-checklist-media">
+                    <div class="docs-clipboard-card">
+                        <img src="{{ asset('assets/images/admission-required-documents.jpg') }}" 
+                             alt="Required Documents Checklist on Clipboard" 
+                             class="docs-clipboard-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         5. TWO ACTION CARDS: QUICK ENQUIRY vs ONLINE REGISTRATION
+         ========================================================================= -->
+    <section class="admission-dual-cta-section">
+        <div class="admission-section-container">
+            <div class="dual-cta-grid">
+                <!-- Card 1: Quick Enquiry Registration -->
+                <div class="cta-action-box orange-box">
+                    <div class="cta-box-content">
+                        <span class="cta-tag-pill orange-pill">QUICK ENQUIRY REGISTRATION</span>
+                        <h3 class="cta-box-title">Share a few details and we'll get in touch.</h3>
+                        <p class="cta-box-desc">Fill in your basic details and our admissions team will connect with you shortly.</p>
+                        
+                        <button type="button" onclick="openEnquiryModal()" class="btn-cta-action orange-btn">
+                            <span>Quick Enquiry Form</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    <div class="cta-box-graphic" aria-hidden="true">
+                        <!-- Clean Vector SVG Form & Chat Bubble -->
+                        <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="15" y="15" width="70" height="90" rx="12" fill="#FFEDD5" stroke="#FDBA74" stroke-width="2"/>
+                            <rect x="25" y="32" width="50" height="5" rx="2.5" fill="#FB923C"/>
+                            <rect x="25" y="45" width="40" height="4" rx="2" fill="#FDBA74"/>
+                            <rect x="25" y="57" width="45" height="4" rx="2" fill="#FDBA74"/>
+                            <rect x="25" y="69" width="30" height="4" rx="2" fill="#FDBA74"/>
+                            <circle cx="90" cy="85" r="24" fill="#F97316"/>
+                            <circle cx="82" cy="85" r="3" fill="#ffffff"/>
+                            <circle cx="90" cy="85" r="3" fill="#ffffff"/>
+                            <circle cx="98" cy="85" r="3" fill="#ffffff"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Card 2: Online Admission Registration -->
+                <div class="cta-action-box blue-box">
+                    <div class="cta-box-content">
+                        <span class="cta-tag-pill blue-pill">ONLINE ADMISSION REGISTRATION</span>
+                        <h3 class="cta-box-title">Ready to apply? Complete the online form.</h3>
+                        <p class="cta-box-desc">Fill in the detailed application form to formally register your ward for admission.</p>
+                        
+                        <a href="{{ route('online-registration') }}" class="btn-cta-action blue-btn">
+                            <span>Apply Online</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="cta-box-graphic" aria-hidden="true">
+                        <!-- Clean Vector SVG ID Card & Cursor Pointer -->
+                        <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="15" y="20" width="80" height="80" rx="14" fill="#DBEAFE" stroke="#93C5FD" stroke-width="2"/>
+                            <circle cx="40" cy="48" r="12" fill="#3B82F6"/>
+                            <rect x="60" y="40" width="26" height="5" rx="2.5" fill="#60A5FA"/>
+                            <rect x="60" y="52" width="20" height="4" rx="2" fill="#93C5FD"/>
+                            <rect x="25" y="70" width="60" height="4" rx="2" fill="#93C5FD"/>
+                            <rect x="25" y="80" width="45" height="4" rx="2" fill="#93C5FD"/>
+                            <path d="M85 75L98 102L91 104L85 90L77 98L85 75Z" fill="#0284C7" stroke="#ffffff" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         6. FEE STRUCTURE SECTION
+         ========================================================================= -->
+    <section class="admission-fee-section-v2" id="fee-structure">
+        <div class="admission-section-container">
+            <div class="admission-section-header">
+                <div class="admission-eyebrow">— FEE STRUCTURE —</div>
+                <h2 class="admission-section-title">
+                    Fees, paid in <span class="highlight-serif">simple terms.</span>
+                </h2>
+                <p class="admission-section-desc">
+                    Our fee structure is designed to be fair, transparent and value-driven.
+                </p>
+            </div>
+
+            <!-- Two Main Class Cards -->
+            <div class="fee-band-cards-grid">
+                <div class="fee-band-card">
+                    <div class="fbc-left">
+                        <div class="fbc-icon-circle" aria-hidden="true">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <div class="fbc-info">
+                            <h3 class="fbc-title">Classes I to V</h3>
+                            <p class="fbc-subtitle">Strong foundation for a bright future.</p>
+                        </div>
+                    </div>
+                    <div class="fbc-right">
+                        <a href="{{ route('fee-structure') }}" class="btn-fee-band">
+                            <span>View Fee Details</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="fee-band-card">
+                    <div class="fbc-left">
+                        <div class="fbc-icon-circle" aria-hidden="true">
                             <i class="fa-solid fa-graduation-cap"></i>
                         </div>
-                        <div>
-                            <h3 class="table-topbar-title">Class-wise Age &amp; Admission Norms Matrix</h3>
-                            <p class="table-topbar-sub">Academic Session {{ $academicYear ?? '2026–27' }} &middot; Structured in accordance with NEP 2020 &amp; CBSE admission bylaws</p>
+                        <div class="fbc-info">
+                            <h3 class="fbc-title">Classes VI to X</h3>
+                            <p class="fbc-subtitle">Empowering learners for higher goals.</p>
                         </div>
                     </div>
-                    <div class="d-flex align-items-center gap-10 flex-wrap">
-                        <span class="table-cutoff-pill">
-                            <i class="fa-solid fa-calendar-check text-orange"></i>
-                            <span>Cut-Off Date: <strong>31st December</strong></span>
-                        </span>
-                        <a href="{{ route('admission-guidelines.download') }}" class="btn-table-topbar" title="Download Guidelines PDF">
-                            <i class="fa-solid fa-file-arrow-down"></i>
-                            <span>Download PDF</span>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Table Content -->
-                <div class="table-responsive">
-                    <table class="eligibility-table">
-                        <thead>
-                            <tr>
-                                <th style="width: 20%;">Class / Grade</th>
-                                <th style="width: 25%;">Minimum Age Criteria</th>
-                                <th style="width: 40%;">Eligibility &amp; Document Requirements</th>
-                                <th style="width: 15%; text-align: center;">Status &amp; Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @foreach($eligibilityList as $el)
-                            <tr>
-                                <td>
-                                    <div class="class-grade-wrap">
-                                        <div class="class-grade-name">{{ $el['grade'] }}</div>
-                                        <span class="wing-tag {{ $el['wing_type'] ?? 'primary' }}">
-                                            @if(($el['wing_type'] ?? '') === 'preprimary')
-                                            <i class="fa-solid fa-shapes"></i>
-                                            @elseif(($el['wing_type'] ?? '') === 'secondary')
-                                            <i class="fa-solid fa-graduation-cap"></i>
-                                            @else
-                                            <i class="fa-solid fa-book-open"></i>
-                                            @endif
-                                            <span>{{ $el['wing'] ?? 'Advaita Wing' }}</span>
-                                        </span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="age-badge-group">
-                                        <span class="age-pill {{ $el['wing_type'] ?? 'primary' }}">
-                                            <i class="fa-regular fa-clock"></i>
-                                            <strong>{{ $el['age_badge'] ?? $el['age'] }}</strong>
-                                        </span>
-                                        <span class="age-subtext">{{ $el['age_note'] ?? 'As on 31st Dec 2026' }}</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="criterion-content">
-                                        <div class="criterion-text">{{ $el['criterion'] }}</div>
-                                        @if(!empty($el['doc_req']))
-                                        <div class="criterion-req-tag">
-                                            <i class="fa-solid fa-file-circle-check"></i>
-                                            <span>{{ $el['doc_req'] }}</span>
-                                        </div>
-                                        @endif
-                                    </div>
-                                </td>
-                                <td style="text-align: center;">
-                                    <div class="entry-mode-cell">
-                                        <span class="status-live-chip">
-                                            <span class="status-live-dot"></span>
-                                            <span>Admissions Open</span>
-                                        </span>
-                                        <a href="#quick-enquiry" class="btn-table-apply-row">
-                                            <span>Enquire</span>
-                                            <i class="fa-solid fa-arrow-right"></i>
-                                        </a>
-                                    </div>
-                                </td>
-                            </tr>
-                            @endforeach
-                        </tbody>
-                    </table>
-                </div>
-
-                <!-- Table Card Bottom Callout -->
-                <div class="eligibility-table-footer">
-                    <div class="etf-icon" aria-hidden="true">
-                        <i class="fa-solid fa-shield-halved"></i>
-                    </div>
-                    <div class="etf-content">
-                        <strong>Statutory Age Verification Rule:</strong> Proof of date of birth must be established through a verified birth certificate issued by Municipal Corporation, Nagar Palika, or Gram Panchayat. For Class 2 onwards, an original counter-signed Transfer Certificate (TC) is strictly mandatory before admission confirmation.
-                    </div>
-                    <div class="etf-action">
-                        <a href="{{ route('admission-guidelines') }}" class="btn-etf-link">
-                            <span>Full Guidelines</span>
-                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <div class="fbc-right">
+                        <a href="{{ route('fee-structure') }}" class="btn-fee-band">
+                            <span>View Fee Details</span>
+                            <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
             </div>
+
+            <!-- 4 Information Cards in a row -->
+            <div class="fee-info-row-grid">
+                <div class="fee-info-pill-card">
+                    <div class="fip-icon blue" aria-hidden="true">
+                        <i class="fa-regular fa-file-lines"></i>
+                    </div>
+                    <div class="fip-text">
+                        <h4 class="fip-title">Annual Fee Details</h4>
+                        <p class="fip-desc">Tuition, development and other charges</p>
+                    </div>
+                </div>
+
+                <div class="fee-info-pill-card">
+                    <div class="fip-icon green" aria-hidden="true">
+                        <i class="fa-solid fa-bus"></i>
+                    </div>
+                    <div class="fip-text">
+                        <h4 class="fip-title">Transport Charges</h4>
+                        <p class="fip-desc">Route-wise transport facility details</p>
+                    </div>
+                </div>
+
+                <div class="fee-info-pill-card">
+                    <div class="fip-icon pink" aria-hidden="true">
+                        <i class="fa-regular fa-calendar-check"></i>
+                    </div>
+                    <div class="fip-text">
+                        <h4 class="fip-title">Payment Schedule</h4>
+                        <p class="fip-desc">Term-wise / annual payment options</p>
+                    </div>
+                </div>
+
+                <div class="fee-info-pill-card">
+                    <div class="fip-icon cyan" aria-hidden="true">
+                        <i class="fa-solid fa-circle-info"></i>
+                    </div>
+                    <div class="fip-text">
+                        <h4 class="fip-title">Important Notes</h4>
+                        <p class="fip-desc">Fees are subject to the school policy for the academic session.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- =========================================================================
-         4. SECTION B: REQUIRED DOCUMENTS CHECKLIST
+         7. BOTTOM CTA BANNER: READY TO TAKE THE FIRST STEP?
          ========================================================================= -->
-    <section class="admission-docs-section" id="required-documents">
+    <section class="admission-cta-banner-section">
         <div class="admission-section-container">
-            <div class="admission-section-header">
-                <div class="admission-eyebrow">— DOCUMENTATION CHECKLIST —</div>
-                <h2 class="admission-section-title">
-                    Documents Required for <span class="highlight-serif">School Admission.</span>
-                </h2>
-                <p class="admission-section-desc">
-                    Please ensure the following management-approved documents are ready during application submission and verification:
-                </p>
-            </div>
-
-            <div class="docs-checklist-grid">
-                @foreach($documentsList as $doc)
-                <div class="doc-card-item">
-                    <div class="doc-card-number-badge">
-                        {{ sprintf('%02d', $doc['number'] ?? $loop->iteration) }}
-                    </div>
-                    <div class="doc-card-icon" aria-hidden="true">
-                        <i class="{{ $doc['icon'] }}"></i>
-                    </div>
-                    <div class="doc-card-content">
-                        <div class="d-flex align-items-center justify-content-between gap-6 mb-4 flex-wrap">
-                            <h3 class="doc-card-title">{{ $doc['title'] }}</h3>
-                            <div class="d-flex align-items-center gap-6">
-                                @if(!empty($doc['badge']))
-                                <span class="badge-neutral font-bold fs-11" style="background: #EEF2F6; color: #083B7A; padding: 2px 8px; border-radius: 6px;">{{ $doc['badge'] }}</span>
-                                @endif
-                                @if($doc['mandatory'])
-                                <span class="doc-badge-mandatory">Mandatory</span>
-                                @else
-                                <span class="doc-badge-optional">If Applicable</span>
-                                @endif
-                            </div>
-                        </div>
-                        <p class="doc-card-desc">{{ $doc['desc'] }}</p>
-
-                        @if(!empty($doc['options']))
-                        <div class="doc-options-list mt-8">
-                            <span class="fs-11 font-bold text-navy me-1">Accepted Documents:</span>
-                            @foreach($doc['options'] as $opt)
-                            <span class="badge-option-tag">{{ $opt }}</span>
-                            @endforeach
-                        </div>
-                        @endif
-                    </div>
+            <div class="admission-peach-cta-box">
+                <div class="apc-left">
+                    <span class="apc-pill">LET'S BEGIN TOGETHER</span>
+                    <h2 class="apc-title">Ready to take the first step?</h2>
+                    <p class="apc-desc">Apply now and give your child the opportunity to grow, learn and excel at Advaita.</p>
                 </div>
-                @endforeach
-            </div>
-
-            <!-- Official Requirements Notice Box -->
-            <div class="docs-submission-alert mt-24">
-                <div class="docs-submission-alert-inner">
-                    <div class="dsa-icon" aria-hidden="true"><i class="fa-solid fa-clipboard-check"></i></div>
-                    <div class="docs-submission-alert-content">
-                        <h4 class="m-0 fs-14 font-extrabold text-navy">Important Admission Document Notice</h4>
-                        <p class="m-0 fs-12 text-muted mt-2">
-                            <strong>Note:</strong> Please verify the school's current document requirements before submitting the application. All original documents will be inspected by the verification desk and returned immediately.
-                        </p>
-                    </div>
-                    <a href="{{ route('online-registration') }}" class="btn-adv-primary">
-                        <span>Proceed to Registration</span>
-                        <i class="fa-solid fa-arrow-right ms-1"></i>
+                <div class="apc-actions">
+                    <a href="{{ route('online-registration') }}" class="btn-apc-primary">
+                        <span>Apply for Admission</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="{{ route('contact') }}" class="btn-apc-secondary">
+                        <i class="fa-regular fa-calendar-check"></i>
+                        <span>Schedule a Campus Visit</span>
                     </a>
                 </div>
             </div>
@@ -595,503 +512,138 @@
     </section>
 
     <!-- =========================================================================
-         5. SECTION C: BOOKS, UNIFORMS & SHOES
+         8. INTERACTIVE QUICK ENQUIRY MODAL POPUP
          ========================================================================= -->
-    <section class="admission-uniform-section" id="books-uniforms">
-        <div class="admission-section-container">
-            <div class="admission-section-header">
-                <div class="admission-eyebrow">— BOOKS, UNIFORMS &amp; SHOES —</div>
-                <h2 class="admission-section-title">
-                    Prescribed guidelines for <span class="highlight-serif">books &amp; school uniform.</span>
-                </h2>
-                <p class="admission-section-desc">
-                    Advaita School of Excellence maintains standardized, high-quality curriculum material and uniform decorum reflecting dignity, discipline, and unity.
-                </p>
+    <div id="advEnquiryModal" class="adv-enquiry-modal-backdrop" aria-hidden="true">
+        <div class="adv-enquiry-modal-card" role="dialog" aria-modal="true" aria-labelledby="enquiryModalTitle">
+            <div class="aem-header">
+                <h3 class="aem-title" id="enquiryModalTitle">
+                    <i class="fa-solid fa-paper-plane text-orange"></i>
+                    <span>Quick Admission Enquiry</span>
+                </h3>
+                <button type="button" class="aem-close-btn" onclick="closeEnquiryModal()" aria-label="Close dialog">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
             </div>
+            <div class="aem-body">
+                <form action="{{ route('admission-enquiry.store') }}" method="POST" id="quickAdmissionModalForm">
+                    @csrf
 
-            <!-- Books & Stationery Protocol Card -->
-            <div class="books-procurement-card mb-24">
-                <div class="bpc-head">
-                    <div class="d-flex align-items-center gap-12">
-                        <div class="bpc-icon"><i class="fa-solid fa-book-bookmark"></i></div>
-                        <div>
-                            <h3 class="m-0 text-navy fs-18 font-extrabold">NCERT / CBSE Textbooks &amp; Curriculum Kits</h3>
-                            <span class="text-muted fs-13">Academic Session {{ $academicYear ?? '2026–27' }} Book Guidelines</span>
-                        </div>
+                    <!-- Honeypot anti-spam -->
+                    <div style="display:none !important;" aria-hidden="true">
+                        <input type="text" name="website" tabindex="-1" autocomplete="off">
+                        <input type="text" name="security_token_trap" tabindex="-1" autocomplete="off">
                     </div>
-                    <span class="badge-blue-pill font-bold">Authorized Distribution Counter</span>
-                </div>
-                <div class="bpc-body">
-                    <div class="bpc-grid">
-                        <div class="bpc-item">
-                            <i class="fa-solid fa-circle-check text-success"></i>
-                            <div>
-                                <strong class="text-navy fs-14 d-block">Curriculum Prescribed Sets</strong>
-                                <span class="text-muted fs-12">Strictly follows NCERT and CBSE approved curriculum guidelines with Abacus workbook kits for Primary classes and Foundation modules for Secondary classes.</span>
-                            </div>
-                        </div>
-                        <div class="bpc-item">
-                            <i class="fa-solid fa-circle-check text-success"></i>
-                            <div>
-                                <strong class="text-navy fs-14 d-block">Procurement &amp; Counter Location</strong>
-                                <span class="text-muted fs-12">To prevent outdated editions, customized book kits and notebooks bearing the school crest are made available at the school campus bookstore counter during admission confirmation.</span>
-                            </div>
-                        </div>
-                        <div class="bpc-item">
-                            <i class="fa-solid fa-circle-check text-success"></i>
-                            <div>
-                                <strong class="text-navy fs-14 d-block">Transparent Pricing</strong>
-                                <span class="text-muted fs-12">All book packages are provided strictly on printed MRP with detailed itemized receipts provided to parents.</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Uniform Specification Cards (Primary & Senior) -->
-            <div class="uniform-cards-grid">
-                <!-- Primary Wing (Classes 1 to 5) -->
-                <div class="uniform-card">
-                    <div class="uniform-card-head">
-                        <div class="uniform-head-icon orange" aria-hidden="true">
-                            <i class="fa-solid fa-shirt"></i>
-                        </div>
-                        <div>
-                            <h3 class="uniform-head-title">Primary Wing (Classes 1 to 5)</h3>
-                            <p class="uniform-head-sub">Daily Dress Code &amp; Specifications</p>
+                    <input type="hidden" name="academic_year" value="{{ $academicYear ?? '2026-27' }}">
+
+                    <div class="mb-14">
+                        <label class="form-label font-bold text-navy fs-13 mb-4" for="modal_parent_name">
+                            Parent / Guardian Name <span class="text-danger">*</span>
+                        </label>
+                        <div class="input-with-icon-wrap">
+                            <i class="fa-regular fa-user"></i>
+                            <input type="text" id="modal_parent_name" name="parent_name" 
+                                   class="form-control" placeholder="e.g. Rameshwar Patil" required maxlength="255">
                         </div>
                     </div>
 
-                    <ul class="uniform-checklist">
-                        <li class="uniform-check-item orange">
-                            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
-                            <span><strong>Boys:</strong> Check pattern short-sleeve shirt with navy shorts/trousers and school badge.</span>
-                        </li>
-                        <li class="uniform-check-item orange">
-                            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
-                            <span><strong>Girls:</strong> Check pattern shirt with navy pleated skirt / pinafore and school badge.</span>
-                        </li>
-                        <li class="uniform-check-item orange">
-                            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
-                            <span><strong>Footwear:</strong> Polished black leather shoes with navy socks with orange stripes (Mon, Tue, Thu, Fri).</span>
-                        </li>
-                        <li class="uniform-check-item orange">
-                            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
-                            <span><strong>Sports (PT):</strong> House-colored t-shirt with navy track pants and clean white canvas shoes (Wed &amp; Sat).</span>
-                        </li>
-                        <li class="uniform-check-item orange">
-                            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
-                            <span><strong>Winter Wear:</strong> Prescribed navy blue cardigan / school sweater with Advaita crest.</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Senior Wing (Classes 6 to 10) -->
-                <div class="uniform-card">
-                    <div class="uniform-card-head">
-                        <div class="uniform-head-icon blue" aria-hidden="true">
-                            <i class="fa-solid fa-user-graduate"></i>
-                        </div>
-                        <div>
-                            <h3 class="uniform-head-title">Secondary Wing (Classes 6 to 10)</h3>
-                            <p class="uniform-head-sub">Senior Uniform Standards &amp; Formal Code</p>
+                    <div class="mb-14">
+                        <label class="form-label font-bold text-navy fs-13 mb-4" for="modal_ward_name">
+                            Ward / Child Name <span class="text-danger">*</span>
+                        </label>
+                        <div class="input-with-icon-wrap">
+                            <i class="fa-solid fa-child"></i>
+                            <input type="text" id="modal_ward_name" name="ward_name" 
+                                   class="form-control" placeholder="e.g. Aarav Patil" required maxlength="255">
                         </div>
                     </div>
 
-                    <ul class="uniform-checklist">
-                        <li class="uniform-check-item blue">
-                            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
-                            <span><strong>Boys:</strong> Prescribed check shirt with navy tailored formal trousers, school tie, and belt.</span>
-                        </li>
-                        <li class="uniform-check-item blue">
-                            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
-                            <span><strong>Girls:</strong> Prescribed check shirt with navy divided skirt / salwar kameez with school tie.</span>
-                        </li>
-                        <li class="uniform-check-item blue">
-                            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
-                            <span><strong>Footwear:</strong> Formal black leather shoes with navy socks on regular weekdays.</span>
-                        </li>
-                        <li class="uniform-check-item blue">
-                            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
-                            <span><strong>Sports (PT):</strong> Official sports house uniform with white sports sneakers on activity days.</span>
-                        </li>
-                        <li class="uniform-check-item blue">
-                            <i class="fa-solid fa-circle-check" aria-hidden="true"></i>
-                            <span><strong>Winter Blazer:</strong> Formal Advaita navy blazer with golden embroidered school crest (mandatory in winter).</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+                    <div class="mb-14">
+                        <label class="form-label font-bold text-navy fs-13 mb-4" for="modal_mobile_number">
+                            Mobile Number (10 Digits) <span class="text-danger">*</span>
+                        </label>
+                        <div class="input-with-icon-wrap">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="tel" id="modal_mobile_number" name="mobile_number" 
+                                   class="form-control" placeholder="e.g. 9822012345" required pattern="[6-9][0-9]{9}" maxlength="10">
+                        </div>
+                    </div>
 
-            <!-- Authorized Counter Info Note -->
-            <div class="admission-process-note mt-20">
-                <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
-                <span><strong>Authorized Supplier Counter:</strong> Prescribed school uniforms, ties, belts, and sports kits are available at the authorized school campus store on all working days from 9:00 AM to 4:30 PM.</span>
+                    <div class="mb-14">
+                        <label class="form-label font-bold text-navy fs-13 mb-4" for="modal_applying_class">
+                            Target Class
+                        </label>
+                        <div class="input-with-icon-wrap">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <select id="modal_applying_class" name="applying_class" class="form-control">
+                                <option value="">Select target class...</option>
+                                <option value="Nursery">Nursery (Age 3+)</option>
+                                <option value="LKG">LKG (Age 4+)</option>
+                                <option value="UKG">UKG (Age 5+)</option>
+                                @for($i = 1; $i <= 10; $i++)
+                                <option value="Class {{ $i }}">Class {{ $i }}</option>
+                                @endfor
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-20">
+                        <label class="form-label font-bold text-navy fs-13 mb-4" for="modal_notes">
+                            Specific Questions / Notes (Optional)
+                        </label>
+                        <textarea id="modal_notes" name="notes" rows="2" class="form-control" 
+                                  placeholder="e.g. Transport route, school timings, admission schedule..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-apc-primary w-100 justify-content-center" style="border: none; cursor: pointer;">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Submit Enquiry</span>
+                    </button>
+
+                    <div class="text-center mt-12 text-muted fs-11">
+                        <i class="fa-solid fa-shield-halved text-success me-1"></i> Your contact details will be kept confidential.
+                    </div>
+                </form>
             </div>
         </div>
-    </section>
-
-    <!-- =========================================================================
-         6. SECTION D: TRANSPORT FACILITIES
-         ========================================================================= -->
-    <section class="admission-transport-section" id="transport-facilities">
-        <div class="admission-section-container">
-            <div class="admission-section-header">
-                <div class="admission-eyebrow">— TRANSPORT FACILITIES —</div>
-                <h2 class="admission-section-title">
-                    Safe, connected, and <span class="highlight-serif">GPS-monitored</span> bus transport.
-                </h2>
-                <p class="admission-section-desc">
-                    Advaita School of Excellence operates a fleet of modern, safety-compliant buses covering key residential hubs across Parbhani.
-                </p>
-            </div>
-
-            <!-- Safety Badges 4-Grid -->
-            <div class="transport-safety-grid mb-24">
-                <div class="safety-feature-card">
-                    <div class="sfc-icon"><i class="fa-solid fa-satellite-dish"></i></div>
-                    <h4 class="sfc-title">Live GPS Tracking</h4>
-                    <p class="sfc-desc">Real-time route monitoring accessible to the transport desk for accurate arrival updates.</p>
-                </div>
-
-                <div class="safety-feature-card">
-                    <div class="sfc-icon"><i class="fa-solid fa-video"></i></div>
-                    <h4 class="sfc-title">CCTV Surveillance</h4>
-                    <p class="sfc-desc">Interior CCTV cameras installed in all buses ensuring continuous student safety and discipline.</p>
-                </div>
-
-                <div class="safety-feature-card">
-                    <div class="sfc-icon"><i class="fa-solid fa-person-dress"></i></div>
-                    <h4 class="sfc-title">Female Bus Attendant</h4>
-                    <p class="sfc-desc">Trained female attendant on board every bus to assist younger students during boarding and drop-off.</p>
-                </div>
-
-                <div class="safety-feature-card">
-                    <div class="sfc-icon"><i class="fa-solid fa-gauge-high"></i></div>
-                    <h4 class="sfc-title">Speed Governors &amp; First Aid</h4>
-                    <p class="sfc-desc">Certified speed governors (max 40 km/h in city limit), fire extinguishers, and emergency medical kits.</p>
-                </div>
-            </div>
-
-            <!-- Route Corridors Grid -->
-            <div class="transport-routes-grid">
-                @foreach($transportRoutes as $tr)
-                <div class="route-item-card">
-                    <div class="d-flex align-items-center gap-12 mb-8">
-                        <div class="ric-icon"><i class="{{ $tr['icon'] }}"></i></div>
-                        <h4 class="ric-title">{{ $tr['route'] }}</h4>
-                    </div>
-                    <div class="ric-coverage">
-                        <i class="fa-solid fa-location-dot text-orange me-1"></i>
-                        <span>{{ $tr['coverage'] }}</span>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-
-            <!-- Transport Policy Note -->
-            <div class="admission-fee-notes-card mt-24">
-                <div class="fee-note-icon" aria-hidden="true">
-                    <i class="fa-solid fa-bus"></i>
-                </div>
-                <div class="fee-note-content">
-                    <strong>Transport Availability &amp; Policy Notice:</strong>
-                    <ul class="fee-note-list">
-                        <li>School transport is optional and provided on a first-come, first-served basis subject to seat availability on designated routes.</li>
-                        <li>Bus charges depend on the distance from the school campus and approved route stops.</li>
-                        <li>For specific pickup points, timing, and fee calculation, please connect with the Transport Desk at <strong>{{ $contactPhone }}</strong>.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- =========================================================================
-         7. SECTION E: QUICK ENQUIRY REGISTRATION FORM (EMBEDDED)
-         ========================================================================= -->
-    <section class="admission-quick-enquiry-section" id="quick-enquiry">
-        <div class="admission-section-container">
-            <div class="quick-enquiry-wrapper">
-                <div class="quick-enquiry-layout">
-                    
-                    <!-- Left Pitch Column -->
-                    <div class="qe-pitch-col">
-                        <div class="qe-pitch-box">
-                            <span class="badge-featured-pill mb-12 d-inline-block">EXPRESS ADMISSION INTEREST</span>
-                            <h2 class="qe-headline">
-                                Submit a <span class="text-orange">Quick Enquiry</span>
-                            </h2>
-                            <p class="qe-subtext">
-                                Not ready for the full application yet? Send us your contact information and our dedicated admissions counselor will reach out to schedule your personalized campus tour and consultation.
-                            </p>
-
-                            <div class="qe-perks-list">
-                                <div class="qe-perk-item">
-                                    <i class="fa-solid fa-circle-check text-orange"></i>
-                                    <span>Guaranteed callback within 24 working hours</span>
-                                </div>
-                                <div class="qe-perk-item">
-                                    <i class="fa-solid fa-circle-check text-orange"></i>
-                                    <span>Personalized fee estimate &amp; sibling benefit details</span>
-                                </div>
-                                <div class="qe-perk-item">
-                                    <i class="fa-solid fa-circle-check text-orange"></i>
-                                    <span>Priority campus counseling slot</span>
-                                </div>
-                            </div>
-
-                            <div class="qe-helpline-box mt-24">
-                                <div class="d-flex align-items-center justify-content-between mb-8 pb-8 border-bottom">
-                                    <div>
-                                        <div class="text-muted fs-11 font-bold text-uppercase">Admissions Counsellor</div>
-                                        <strong class="text-navy fs-15">{{ $counsellorName }}</strong>
-                                    </div>
-                                    <span class="badge-neutral font-bold fs-11" style="background: #FFF7ED; color: #EA580C; padding: 2px 8px; border-radius: 6px;">Available</span>
-                                </div>
-
-                                <div class="d-flex flex-column gap-6">
-                                    <a href="tel:{{ $schoolPhone1 }}" class="qe-phone-link">
-                                        <i class="fa-solid fa-phone-volume text-orange"></i>
-                                        <span>{{ $schoolPhone1 }}</span>
-                                        <small class="text-muted ms-auto fs-11">(Line 1 / Counsellor)</small>
-                                    </a>
-                                    <a href="tel:{{ $schoolPhone2 }}" class="qe-phone-link">
-                                        <i class="fa-solid fa-phone text-navy"></i>
-                                        <span>{{ $schoolPhone2 }}</span>
-                                        <small class="text-muted ms-auto fs-11">(Line 2 / Office)</small>
-                                    </a>
-                                </div>
-
-                                <div class="d-flex align-items-center gap-8 mt-12 pt-10 border-top flex-wrap">
-                                    <a href="{{ $whatsappUrl }}" target="_blank" rel="noopener noreferrer" class="btn-qa-action whatsapp" style="flex: 1; padding: 8px 12px; font-size: 12.5px;">
-                                        <i class="fa-brands fa-whatsapp"></i>
-                                        <span>WhatsApp ({{ $whatsappNumber }})</span>
-                                    </a>
-                                    <a href="{{ $directionsUrl }}" target="_blank" rel="noopener noreferrer" class="btn-qa-action outline" style="flex: 1; padding: 8px 12px; font-size: 12.5px;">
-                                        <i class="fa-solid fa-location-dot text-orange"></i>
-                                        <span>Directions</span>
-                                    </a>
-                                </div>
-                                <span class="text-muted fs-11 d-block mt-2 text-center">Monday to Saturday &middot; 9:00 AM to 5:00 PM</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right Form Column -->
-                    <div class="qe-form-col">
-                        <div class="qe-form-card">
-                            <div class="qe-form-header">
-                                <h3 class="qe-form-title">
-                                    <i class="fa-solid fa-paper-plane text-orange me-2"></i> Quick Admission Enquiry
-                                </h3>
-                                <p class="qe-form-desc">Fill in basic contact details to begin the conversation.</p>
-                            </div>
-
-                            @if(session('success'))
-                            <div class="alert alert-success d-flex align-items-center gap-10 mb-20 p-14 rounded-12" style="background: #DCFCE7; border: 1.5px solid #86EFAC; color: #166534;">
-                                <i class="fa-solid fa-circle-check fs-18"></i>
-                                <span class="fs-13 font-bold">{{ session('success') }}</span>
-                            </div>
-                            @endif
-
-                            @if($errors->any())
-                            <div class="alert alert-danger mb-20 p-14 rounded-12" style="background: #FEE2E2; border: 1.5px solid #FCA5A5; color: #991B1B;">
-                                <div class="font-bold fs-13 mb-4"><i class="fa-solid fa-triangle-exclamation me-1"></i> Please correct the highlighted errors:</div>
-                                <ul class="m-0 fs-12 ps-16">
-                                    @foreach($errors->all() as $err)
-                                    <li>{{ $err }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                            @endif
-
-                            <form action="{{ route('admission-enquiry.store') }}" method="POST" id="quickAdmissionForm" class="qe-actual-form">
-                                @csrf
-
-                                <!-- Honeypot anti-spam (invisible) -->
-                                <div style="display:none !important;" aria-hidden="true">
-                                    <input type="text" name="website" tabindex="-1" autocomplete="off">
-                                    <input type="text" name="security_token_trap" tabindex="-1" autocomplete="off">
-                                </div>
-
-                                <div class="form-grid-2">
-                                    <!-- Parent's Full Name -->
-                                    <div class="form-group">
-                                        <label class="form-label" for="qe_parent_name">
-                                            <span>Parent / Guardian Name</span>
-                                            <span class="required">*</span>
-                                        </label>
-                                        <div class="input-with-icon-wrap">
-                                            <i class="fa-regular fa-user"></i>
-                                            <input type="text" id="qe_parent_name" name="parent_name" value="{{ old('parent_name') }}" 
-                                                   class="form-control @error('parent_name') is-invalid @enderror" 
-                                                   placeholder="e.g. Rameshwar Patil" required maxlength="255">
-                                        </div>
-                                        @error('parent_name')
-                                        <span class="form-error-msg">{{ $message }}</span>
-                                        @enderror
-                                    </div>
-
-                                    <!-- Ward's Full Name -->
-                                    <div class="form-group">
-                                        <label class="form-label" for="qe_ward_name">
-                                            <span>Ward / Child Name</span>
-                                            <span class="required">*</span>
-                                        </label>
-                                        <div class="input-with-icon-wrap">
-                                            <i class="fa-solid fa-child"></i>
-                                            <input type="text" id="qe_ward_name" name="ward_name" value="{{ old('ward_name') }}" 
-                                                   class="form-control @error('ward_name') is-invalid @enderror" 
-                                                   placeholder="e.g. Aarav Patil" required maxlength="255">
-                                        </div>
-                                        @error('ward_name')
-                                        <span class="form-error-msg">{{ $message }}</span>
-                                        @enderror
-                                    </div>
-
-                                    <!-- Mobile Number -->
-                                    <div class="form-group">
-                                        <label class="form-label" for="qe_mobile_number">
-                                            <span>Mobile Number (10 Digits)</span>
-                                            <span class="required">*</span>
-                                        </label>
-                                        <div class="input-with-icon-wrap">
-                                            <i class="fa-solid fa-phone"></i>
-                                            <input type="tel" id="qe_mobile_number" name="mobile_number" value="{{ old('mobile_number') }}" 
-                                                   class="form-control @error('mobile_number') is-invalid @enderror" 
-                                                   placeholder="e.g. 9822012345" required pattern="[6-9][0-9]{9}" maxlength="10">
-                                        </div>
-                                        @error('mobile_number')
-                                        <span class="form-error-msg">{{ $message }}</span>
-                                        @enderror
-                                    </div>
-
-                                    <!-- Class of Interest -->
-                                    <div class="form-group">
-                                        <label class="form-label" for="qe_applying_class">
-                                            <span>Seeking Admission in Class</span>
-                                        </label>
-                                        <div class="input-with-icon-wrap">
-                                            <i class="fa-solid fa-graduation-cap"></i>
-                                            <select id="qe_applying_class" name="applying_class" class="form-control">
-                                                <option value="">Select Target Class...</option>
-                                                <option value="Nursery" {{ old('applying_class') === 'Nursery' ? 'selected' : '' }}>Nursery (Age 3+)</option>
-                                                <option value="LKG" {{ old('applying_class') === 'LKG' ? 'selected' : '' }}>LKG (Age 4+)</option>
-                                                <option value="UKG" {{ old('applying_class') === 'UKG' ? 'selected' : '' }}>UKG (Age 5+)</option>
-                                                @for($i = 1; $i <= 10; $i++)
-                                                <option value="Class {{ $i }}" {{ old('applying_class') === "Class $i" ? 'selected' : '' }}>Class {{ $i }}</option>
-                                                @endfor
-                                            </select>
-                                        </div>
-                                    </div>
-
-                                    <!-- Academic Session (Preset) -->
-                                    <input type="hidden" name="academic_year" value="2026-27">
-
-                                    <!-- Brief Query / Note -->
-                                    <div class="form-group full-width">
-                                        <label class="form-label" for="qe_notes">
-                                            <span>Questions / Specific Requirements (Optional)</span>
-                                        </label>
-                                        <textarea id="qe_notes" name="notes" rows="2" class="form-control" 
-                                                  placeholder="e.g. Inquiring about school transport, hostel, or scholarship eligibility...">{{ old('notes') }}</textarea>
-                                    </div>
-                                </div>
-
-                                <div class="d-flex align-items-center justify-content-between gap-16 flex-wrap mt-20">
-                                    <button type="submit" class="qe-submit-btn" id="btnSubmitQuickEnquiry">
-                                        <i class="fa-solid fa-paper-plane"></i>
-                                        <span>Submit Quick Enquiry</span>
-                                    </button>
-
-                                    <div class="text-muted fs-12 d-flex align-items-center gap-6">
-                                        <i class="fa-solid fa-shield-halved text-success"></i>
-                                        <span>Your contact details are strictly confidential.</span>
-                                    </div>
-                                </div>
-                            </form>
-
-                            <!-- Alternative Link to Detailed Form -->
-                            <div class="mt-20 pt-16 border-top text-center">
-                                <span class="fs-13 text-muted">Ready to fill out the comprehensive admission form?</span>
-                                <a href="{{ route('online-registration') }}" class="fs-13 font-bold text-navy ms-1" style="text-decoration: underline;">
-                                    Switch to Detailed Online Registration <i class="fa-solid fa-arrow-right fs-11"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- =========================================================================
-         8. PRE-FOOTER CALL TO ACTION BANNER
-         ========================================================================= -->
-    <section class="admission-cta-section">
-        <div class="admission-section-container">
-            <div class="admission-cta-box">
-                <div class="admission-cta-left">
-                    <span class="admission-cta-pill">SCHEDULE A CAMPUS TOUR</span>
-                    <h2 class="admission-cta-headline">Experience Advaita in Person</h2>
-                    <p class="admission-cta-desc">Walk through our smart classrooms, science labs, splash pool, and robotics center with our school leadership.</p>
-                </div>
-
-                <div class="admission-cta-actions">
-                    <a href="{{ route('online-registration') }}" class="admission-btn-primary">
-                        <span>Fill Online Application</span>
-                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
-                    </a>
-                    <a href="{{ route('contact') }}" class="admission-btn-visit">
-                        <i class="fa-regular fa-calendar-check" aria-hidden="true"></i>
-                        <span>Contact Admissions Desk</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
 </main>
 @endsection
 
 @section('scripts')
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const subnavLinks = document.querySelectorAll('.subnav-link');
-    const sections = Array.from(subnavLinks).map(link => {
-        const id = link.getAttribute('href');
-        if (id && id.startsWith('#')) {
-            return document.querySelector(id);
-        }
-        return null;
-    }).filter(Boolean);
-
-    function updateActiveSubnav() {
-        const scrollPosition = window.scrollY + 130;
-        let currentSectionId = '';
-
-        sections.forEach(section => {
-            const top = section.offsetTop;
-            const height = section.offsetHeight;
-            if (scrollPosition >= top && scrollPosition < top + height) {
-                currentSectionId = '#' + section.getAttribute('id');
-            }
-        });
-
-        if (currentSectionId) {
-            subnavLinks.forEach(link => {
-                if (link.getAttribute('href') === currentSectionId) {
-                    link.classList.add('active');
-                } else {
-                    link.classList.remove('active');
-                }
-            });
-        }
+function openEnquiryModal() {
+    const modal = document.getElementById('advEnquiryModal');
+    if (modal) {
+        modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
     }
+}
 
-    window.addEventListener('scroll', updateActiveSubnav, { passive: true });
-    updateActiveSubnav();
+function closeEnquiryModal() {
+    const modal = document.getElementById('advEnquiryModal');
+    if (modal) {
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+}
+
+// Close on backdrop click
+document.getElementById('advEnquiryModal')?.addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeEnquiryModal();
+    }
+});
+
+// Close on Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeEnquiryModal();
+    }
 });
 </script>
 @endsection
