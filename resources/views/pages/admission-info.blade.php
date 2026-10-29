@@ -101,14 +101,41 @@
 
             <div class="admission-steps-wrapper">
                 @foreach($admissionSteps ?? [] as $index => $step)
+                @php
+                    $actionType = $step['action_type'] ?? 'scroll';
+                    $target = $step['target'] ?? '#';
+                @endphp
+                @if($actionType === 'scroll')
+                <a href="{{ $target }}" class="admission-step-card step-interactive-card" title="Click to view {{ $step['title'] }}">
+                @elseif($actionType === 'enquiry_modal')
+                <button type="button" onclick="openEnquiryModal()" class="admission-step-card step-interactive-card text-start" title="Open Quick Enquiry Form">
+                @elseif($actionType === 'link')
+                <a href="{{ $target }}" class="admission-step-card step-interactive-card" title="Go to {{ $step['title'] }}">
+                @else
                 <div class="admission-step-card">
+                @endif
                     <span class="step-num-pill {{ $step['badge_class'] ?? 'step-pill-orange' }}">{{ $step['step'] ?? sprintf('%02d', $index + 1) }}</span>
                     <div class="step-icon-box {{ $step['icon_class'] ?? 'step-icon-orange' }}" aria-hidden="true">
                         <i class="{{ $step['icon'] ?? 'fa-solid fa-circle-check' }}"></i>
                     </div>
                     <h3 class="step-card-title">{{ $step['title'] }}</h3>
                     <p class="step-card-desc">{{ $step['desc'] }}</p>
+                    <span class="step-action-hint">
+                        @if($actionType === 'enquiry_modal')
+                            <span>Open Form</span> <i class="fa-solid fa-arrow-up-right-from-square fs-10"></i>
+                        @elseif($actionType === 'link')
+                            <span>Register Now</span> <i class="fa-solid fa-arrow-right fs-10"></i>
+                        @else
+                            <span>Explore Step</span> <i class="fa-solid fa-arrow-down fs-10"></i>
+                        @endif
+                    </span>
+                @if($actionType === 'scroll' || $actionType === 'link')
+                </a>
+                @elseif($actionType === 'enquiry_modal')
+                </button>
+                @else
                 </div>
+                @endif
 
                 @if(!$loop->last)
                 <div class="step-arrow-divider" aria-hidden="true">
@@ -210,11 +237,19 @@
             </div>
 
             <div class="docs-checklist-split-grid">
-                <!-- Left Column: 10 Numbered Items -->
-                <div class="docs-items-list">
+                <!-- Left Column: 10 Numbered Items (Interactive Readiness Checklist) -->
+                <div class="docs-items-list" id="docsInteractiveChecklist">
                     @foreach($documentsList ?? [] as $doc)
-                    <div class="doc-list-row {{ !empty($doc['options']) || !empty($doc['subtext']) ? 'has-subline' : '' }}">
-                        <span class="doc-num-badge">{{ sprintf('%02d', $doc['number'] ?? $loop->iteration) }}</span>
+                    <div class="doc-list-row {{ !empty($doc['options']) || !empty($doc['subtext']) ? 'has-subline' : '' }}" 
+                         onclick="toggleDocCheck(this)" 
+                         role="checkbox" 
+                         aria-checked="false" 
+                         tabindex="0"
+                         title="Click to check off this document as ready">
+                        <span class="doc-num-badge">
+                            <span class="doc-num-text">{{ sprintf('%02d', $doc['number'] ?? $loop->iteration) }}</span>
+                            <i class="fa-solid fa-check doc-check-icon" style="display:none;" aria-hidden="true"></i>
+                        </span>
                         <div class="doc-list-text">
                             <div>{{ $doc['title'] }}</div>
                             @if(!empty($doc['options']))
@@ -227,6 +262,10 @@
                             </div>
                             @endif
                         </div>
+                        <span class="doc-status-pill">
+                            <i class="fa-regular fa-circle"></i>
+                            <span class="status-label">To arrange</span>
+                        </span>
                     </div>
                     @endforeach
                 </div>
@@ -319,10 +358,10 @@
                         </div>
                     </div>
                     <div class="fbc-right">
-                        <a href="{{ route('fee-structure') }}" class="btn-fee-band">
+                        <button type="button" onclick="openFeeModal('primary')" class="btn-fee-band" aria-label="View Fee Details for Classes I to V">
                             <span>View Fee Details</span>
                             <i class="fa-solid fa-arrow-right"></i>
-                        </a>
+                        </button>
                     </div>
                 </div>
 
@@ -337,17 +376,17 @@
                         </div>
                     </div>
                     <div class="fbc-right">
-                        <a href="{{ route('fee-structure') }}" class="btn-fee-band">
+                        <button type="button" onclick="openFeeModal('secondary')" class="btn-fee-band" aria-label="View Fee Details for Classes VI to X">
                             <span>View Fee Details</span>
                             <i class="fa-solid fa-arrow-right"></i>
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
 
-            <!-- 4 Information Cards in a row -->
+            <!-- 4 Information Cards in a row (Clickable to open corresponding fee tab) -->
             <div class="fee-info-row-grid">
-                <div class="fee-info-pill-card">
+                <div class="fee-info-pill-card clickable-pill" onclick="openFeeModal('primary')" role="button" tabindex="0" title="Click to view Annual Fee Details">
                     <div class="fip-icon blue" aria-hidden="true">
                         <i class="fa-regular fa-file-lines"></i>
                     </div>
@@ -357,7 +396,7 @@
                     </div>
                 </div>
 
-                <div class="fee-info-pill-card">
+                <div class="fee-info-pill-card clickable-pill" onclick="openFeeModal('transport')" role="button" tabindex="0" title="Click to view Transport Charges">
                     <div class="fip-icon green" aria-hidden="true">
                         <i class="fa-solid fa-bus"></i>
                     </div>
@@ -367,7 +406,7 @@
                     </div>
                 </div>
 
-                <div class="fee-info-pill-card">
+                <div class="fee-info-pill-card clickable-pill" onclick="openFeeModal('schedule')" role="button" tabindex="0" title="Click to view Payment Schedule">
                     <div class="fip-icon pink" aria-hidden="true">
                         <i class="fa-regular fa-calendar-check"></i>
                     </div>
@@ -377,7 +416,7 @@
                     </div>
                 </div>
 
-                <div class="fee-info-pill-card">
+                <div class="fee-info-pill-card clickable-pill" onclick="openFeeModal('schedule')" role="button" tabindex="0" title="Click to view Important Notes">
                     <div class="fip-icon cyan" aria-hidden="true">
                         <i class="fa-solid fa-circle-info"></i>
                     </div>
@@ -416,7 +455,247 @@
     </section>
 
     <!-- =========================================================================
-         8. INTERACTIVE QUICK ENQUIRY MODAL POPUP
+         8. DYNAMIC INTERACTIVE FEE DETAILS MODAL
+         ========================================================================= -->
+    <div id="advFeeModal" class="adv-enquiry-modal-backdrop" aria-hidden="true">
+        <div class="adv-enquiry-modal-card fee-modal-card" role="dialog" aria-modal="true" aria-labelledby="feeModalTitle">
+            <div class="aem-header">
+                <div class="d-flex align-items-center gap-10">
+                    <div class="fbc-icon-circle" style="width: 36px; height: 36px; font-size: 1rem;" aria-hidden="true">
+                        <i class="fa-solid fa-indian-rupee-sign"></i>
+                    </div>
+                    <div>
+                        <h3 class="aem-title" id="feeModalTitle">Fee Structure & Schedule</h3>
+                        <span class="fs-12 text-white-50">Academic Session {{ $academicYear ?? '2026–27' }}</span>
+                    </div>
+                </div>
+                <button type="button" class="aem-close-btn" onclick="closeFeeModal()" aria-label="Close dialog">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+
+            <!-- Tab Navigation Header -->
+            <div class="fee-modal-tabs-nav">
+                <button type="button" class="fee-tab-btn active" data-tab="primary" onclick="switchFeeTab('primary')">
+                    <i class="fa-solid fa-book-open"></i>
+                    <span>Classes I–V</span>
+                </button>
+                <button type="button" class="fee-tab-btn" data-tab="secondary" onclick="switchFeeTab('secondary')">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <span>Classes VI–X</span>
+                </button>
+                <button type="button" class="fee-tab-btn" data-tab="transport" onclick="switchFeeTab('transport')">
+                    <i class="fa-solid fa-bus"></i>
+                    <span>Transport</span>
+                </button>
+                <button type="button" class="fee-tab-btn" data-tab="schedule" onclick="switchFeeTab('schedule')">
+                    <i class="fa-regular fa-calendar-check"></i>
+                    <span>Policy & Terms</span>
+                </button>
+            </div>
+
+            <div class="aem-body fee-modal-body">
+                <!-- Tab Pane 1: Classes I to V -->
+                <div class="fee-tab-pane active" id="feeTabPane-primary">
+                    <div class="fee-pane-header">
+                        <span class="fee-wing-badge orange">PRIMARY WING</span>
+                        <h4 class="fee-pane-title">Classes I to V — Detailed Breakdown</h4>
+                        <p class="fee-pane-desc">Tuition, term installments and annual structure designed for foundational primary education.</p>
+                    </div>
+
+                    @if(isset($primaryFees) && $primaryFees->count() > 0)
+                    <div class="table-responsive fee-table-wrap">
+                        <table class="table fee-details-table">
+                            <thead>
+                                <tr>
+                                    <th>Class</th>
+                                    <th>Admission Fee</th>
+                                    <th>Tuition Fee</th>
+                                    <th>Term 1</th>
+                                    <th>Term 2</th>
+                                    <th>Term 3</th>
+                                    <th>Annual Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($primaryFees as $fee)
+                                <tr>
+                                    <td class="font-bold text-navy">{{ $fee->class_name }}</td>
+                                    <td>₹{{ number_format($fee->admission_fee) }}</td>
+                                    <td>₹{{ number_format($fee->tuition_fee) }}</td>
+                                    <td>₹{{ number_format($fee->term1_fee) }}</td>
+                                    <td>₹{{ number_format($fee->term2_fee) }}</td>
+                                    <td>₹{{ number_format($fee->term3_fee) }}</td>
+                                    <td class="font-bold text-orange">₹{{ number_format($fee->annual_total) }}</td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                    @else
+                    <div class="fee-fallback-slab-grid">
+                        <div class="fee-slab-card">
+                            <span class="slab-badge">Class 1 & 2</span>
+                            <div class="slab-amount">₹32,000 <span class="fs-12 text-muted">/ year</span></div>
+                            <div class="slab-terms">Term 1: ₹12,000 | Term 2: ₹10,000 | Term 3: ₹10,000</div>
+                        </div>
+                        <div class="fee-slab-card">
+                            <span class="slab-badge">Class 3 to 5</span>
+                            <div class="slab-amount">₹36,000 <span class="fs-12 text-muted">/ year</span></div>
+                            <div class="slab-terms">Term 1: ₹14,000 | Term 2: ₹11,000 | Term 3: ₹11,000</div>
+                        </div>
+                    </div>
+                    @endif
+
+                    <div class="fee-notice-banner mt-16">
+                        <i class="fa-solid fa-circle-info text-blue"></i>
+                        <span>{{ $feePolicyNote ?? 'Fees can be conveniently paid in three term-wise installments or an annual one-time payment.' }}</span>
+                    </div>
+                </div>
+
+                <!-- Tab Pane 2: Classes VI to X -->
+                <div class="fee-tab-pane" id="feeTabPane-secondary">
+                    <div class="fee-pane-header">
+                        <span class="fee-wing-badge purple">SECONDARY WING</span>
+                        <h4 class="fee-pane-title">Classes VI to X — Detailed Breakdown</h4>
+                        <p class="fee-pane-desc">Empowering learners with modern science labs, computer education, and competitive exam foundations.</p>
+                    </div>
+
+                    @if(isset($secondaryFees) && $secondaryFees->count() > 0)
+                    <div class="table-responsive fee-table-wrap">
+                        <table class="table fee-details-table">
+                            <thead>
+                                <tr>
+                                    <th>Class</th>
+                                    <th>Admission Fee</th>
+                                    <th>Tuition Fee</th>
+                                    <th>Term 1</th>
+                                    <th>Term 2</th>
+                                    <th>Term 3</th>
+                                    <th>Annual Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach($secondaryFees as $fee)
+                                <tr>
+                                    <td class="font-bold text-navy">{{ $fee->class_name }}</td>
+                                    <td>₹{{ number_format($fee->admission_fee) }}</td>
+                                    <td>₹{{ number_format($fee->tuition_fee) }}</td>
+                                    <td>₹{{ number_format($fee->term1_fee) }}</td>
+                                    <td>₹{{ number_format($fee->term2_fee) }}</td>
+                                    <td>₹{{ number_format($fee->term3_fee) }}</td>
+                                    <td class="font-bold text-orange">₹{{ number_format($fee->annual_total) }}</td>
+                                </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                    @else
+                    <div class="fee-fallback-slab-grid">
+                        <div class="fee-slab-card">
+                            <span class="slab-badge">Class 6 to 8</span>
+                            <div class="slab-amount">₹42,000 <span class="fs-12 text-muted">/ year</span></div>
+                            <div class="slab-terms">Term 1: ₹16,000 | Term 2: ₹13,000 | Term 3: ₹13,000</div>
+                        </div>
+                        <div class="fee-slab-card">
+                            <span class="slab-badge">Class 9 & 10</span>
+                            <div class="slab-amount">₹48,000 <span class="fs-12 text-muted">/ year</span></div>
+                            <div class="slab-terms">Term 1: ₹18,000 | Term 2: ₹15,000 | Term 3: ₹15,000</div>
+                        </div>
+                    </div>
+                    @endif
+
+                    <div class="fee-notice-banner mt-16">
+                        <i class="fa-solid fa-circle-info text-blue"></i>
+                        <span>Includes computer lab, science laboratory, and co-curricular programs. Board registration charges extra as per CBSE norms.</span>
+                    </div>
+                </div>
+
+                <!-- Tab Pane 3: Transport Charges -->
+                <div class="fee-tab-pane" id="feeTabPane-transport">
+                    <div class="fee-pane-header">
+                        <span class="fee-wing-badge green">BUS SERVICE</span>
+                        <h4 class="fee-pane-title">Safe & Tracked School Bus Facility</h4>
+                        <p class="fee-pane-desc">Our buses are fitted with GPS tracking, CCTV surveillance, speed governors, and trained attendants.</p>
+                    </div>
+
+                    <div class="transport-routes-list">
+                        @foreach($transportRoutes ?? [] as $tr)
+                        <div class="tr-route-row">
+                            <div class="tr-icon-box"><i class="{{ $tr['icon'] ?? 'fa-solid fa-bus' }}"></i></div>
+                            <div class="tr-info">
+                                <h5 class="tr-name">{{ $tr['route'] }}</h5>
+                                <p class="tr-stops">{{ $tr['coverage'] }}</p>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+
+                    <div class="fee-notice-banner mt-16">
+                        <i class="fa-solid fa-location-dot text-green"></i>
+                        <span>Transport fees are calculated route-wise and paid in term installments. Contact our transport coordinator for custom stop inquiries.</span>
+                    </div>
+                </div>
+
+                <!-- Tab Pane 4: Payment Schedule & Policy -->
+                <div class="fee-tab-pane" id="feeTabPane-schedule">
+                    <div class="fee-pane-header">
+                        <span class="fee-wing-badge blue">PAYMENT POLICY</span>
+                        <h4 class="fee-pane-title">Installment Schedule & Transparency Policy</h4>
+                        <p class="fee-pane-desc">Clear, predictable deadlines with zero surprise expenses.</p>
+                    </div>
+
+                    <div class="schedule-timeline-grid">
+                        <div class="timeline-step-card">
+                            <div class="tsc-num">1st Installment</div>
+                            <div class="tsc-title">At Admission / Re-opening</div>
+                            <div class="tsc-desc">Due on or before 15th June. Covers admission, first term tuition, and development fund.</div>
+                        </div>
+                        <div class="timeline-step-card">
+                            <div class="tsc-num">2nd Installment</div>
+                            <div class="tsc-title">Mid-Term (Post-Diwali)</div>
+                            <div class="tsc-desc">Due on or before 15th October. Covers term 2 tuition and semester examination fees.</div>
+                        </div>
+                        <div class="timeline-step-card">
+                            <div class="tsc-num">3rd Installment</div>
+                            <div class="tsc-title">Final Term</div>
+                            <div class="tsc-desc">Due on or before 15th January. Final term settlement and annual assessment.</div>
+                        </div>
+                    </div>
+
+                    <div class="fee-policy-bullets mt-16">
+                        <div class="fpb-item">
+                            <i class="fa-solid fa-circle-check text-success"></i>
+                            <span><strong>Payment Modes:</strong> Online NetBanking, UPI, Debit/Credit Card, or Demand Draft / Cheque in favor of "Advaita School of Excellence".</span>
+                        </div>
+                        <div class="fpb-item">
+                            <i class="fa-solid fa-circle-check text-success"></i>
+                            <span><strong>Sibling Concession:</strong> Available for the second and third child as per management policy.</span>
+                        </div>
+                        <div class="fpb-item">
+                            <i class="fa-solid fa-circle-check text-success"></i>
+                            <span>{{ $feeTransparencyNote ?? 'No hidden charges or mandatory surprise fees. Detailed receipts are issued for all transactions.' }}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="fee-modal-footer">
+                <a href="{{ route('fee-structure') }}" class="btn-fee-page-link">
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    <span>Official Fee Policy Page</span>
+                </a>
+                <button type="button" onclick="closeFeeModal(); openEnquiryModal();" class="btn-apc-primary py-8 px-18 fs-13">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>Enquire About Fees</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================================
+         9. INTERACTIVE QUICK ENQUIRY MODAL POPUP
          ========================================================================= -->
     <div id="advEnquiryModal" class="adv-enquiry-modal-backdrop" aria-hidden="true">
         <div class="adv-enquiry-modal-card" role="dialog" aria-modal="true" aria-labelledby="enquiryModalTitle">
@@ -429,7 +708,10 @@
                     <i class="fa-solid fa-xmark"></i>
                 </button>
             </div>
-            <div class="aem-body">
+            <div class="aem-body" id="enquiryModalBody">
+                <!-- Live Alert Container -->
+                <div id="modalAlertBox" style="display: none;" class="mb-14"></div>
+
                 <form action="{{ route('admission-enquiry.store') }}" method="POST" id="quickAdmissionModalForm">
                     @csrf
 
@@ -497,9 +779,9 @@
                                   placeholder="e.g. Transport route, school timings, admission schedule..."></textarea>
                     </div>
 
-                    <button type="submit" class="btn-apc-primary w-100 justify-content-center" style="border: none; cursor: pointer;">
-                        <i class="fa-solid fa-paper-plane"></i>
-                        <span>Submit Enquiry</span>
+                    <button type="submit" id="modalSubmitBtn" class="btn-apc-primary w-100 justify-content-center" style="border: none; cursor: pointer;">
+                        <i class="fa-solid fa-paper-plane" id="modalSubmitIcon"></i>
+                        <span id="modalSubmitText">Submit Enquiry</span>
                     </button>
 
                     <div class="text-center mt-12 text-muted fs-11">
@@ -515,6 +797,9 @@
 
 @section('scripts')
 <script>
+// ==========================================
+// 1. Quick Enquiry Modal Management & AJAX
+// ==========================================
 function openEnquiryModal() {
     const modal = document.getElementById('advEnquiryModal');
     if (modal) {
@@ -533,18 +818,178 @@ function closeEnquiryModal() {
     }
 }
 
-// Close on backdrop click
-document.getElementById('advEnquiryModal')?.addEventListener('click', function(e) {
-    if (e.target === this) {
-        closeEnquiryModal();
+// ==========================================
+// 2. Fee Structure Interactive Modal
+// ==========================================
+function openFeeModal(tabName = 'primary') {
+    const modal = document.getElementById('advFeeModal');
+    if (modal) {
+        modal.classList.add('active');
+        modal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        switchFeeTab(tabName);
     }
+}
+
+function closeFeeModal() {
+    const modal = document.getElementById('advFeeModal');
+    if (modal) {
+        modal.classList.remove('active');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+}
+
+function switchFeeTab(tabName) {
+    // Map shortcut tab keys
+    const tabMap = {
+        'primary': 'primary',
+        'secondary': 'secondary',
+        'transport': 'transport',
+        'schedule': 'schedule',
+        'annual': 'primary',
+        'notes': 'schedule'
+    };
+    const targetKey = tabMap[tabName] || 'primary';
+
+    // Buttons
+    document.querySelectorAll('.fee-tab-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-tab') === targetKey);
+    });
+
+    // Panes
+    document.querySelectorAll('.fee-tab-pane').forEach(pane => {
+        pane.classList.remove('active');
+    });
+    const targetPane = document.getElementById('feeTabPane-' + targetKey);
+    if (targetPane) {
+        targetPane.classList.add('active');
+    }
+}
+
+// ==========================================
+// 3. Interactive Document Checklist Toggle
+// ==========================================
+function toggleDocCheck(row) {
+    const isChecked = row.classList.toggle('is-checked');
+    row.setAttribute('aria-checked', isChecked ? 'true' : 'false');
+
+    const numText = row.querySelector('.doc-num-text');
+    const checkIcon = row.querySelector('.doc-check-icon');
+    const statusPill = row.querySelector('.doc-status-pill');
+
+    if (isChecked) {
+        if (numText) numText.style.display = 'none';
+        if (checkIcon) checkIcon.style.display = 'inline-block';
+        if (statusPill) {
+            statusPill.innerHTML = '<i class="fa-solid fa-check"></i> <span class="status-label">Ready</span>';
+        }
+    } else {
+        if (numText) numText.style.display = 'inline-block';
+        if (checkIcon) checkIcon.style.display = 'none';
+        if (statusPill) {
+            statusPill.innerHTML = '<i class="fa-regular fa-circle"></i> <span class="status-label">To arrange</span>';
+        }
+    }
+}
+
+// ==========================================
+// 4. Modal Backdrop & Escape Key Handlers
+// ==========================================
+document.getElementById('advEnquiryModal')?.addEventListener('click', function(e) {
+    if (e.target === this) closeEnquiryModal();
 });
 
-// Close on Escape key
+document.getElementById('advFeeModal')?.addEventListener('click', function(e) {
+    if (e.target === this) closeFeeModal();
+});
+
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
         closeEnquiryModal();
+        closeFeeModal();
     }
+});
+
+// ==========================================
+// 5. AJAX Form Submission with Feedback
+// ==========================================
+document.getElementById('quickAdmissionModalForm')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = this;
+    const submitBtn = document.getElementById('modalSubmitBtn');
+    const submitIcon = document.getElementById('modalSubmitIcon');
+    const submitText = document.getElementById('modalSubmitText');
+    const alertBox = document.getElementById('modalAlertBox');
+    const bodyBox = document.getElementById('enquiryModalBody');
+
+    // UI loading state
+    if (submitBtn) submitBtn.disabled = true;
+    if (submitIcon) submitIcon.className = 'fa-solid fa-spinner fa-spin';
+    if (submitText) submitText.innerText = 'Submitting...';
+
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-Requested-With': 'XMLHttpRequest',
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            return response.json().then(data => { throw data; });
+        }
+        return response.json();
+    })
+    .then(data => {
+        const parentName = formData.get('parent_name') || 'Parent';
+        const wardName = formData.get('ward_name') || 'Child';
+        const phone = '{{ $counsellorPhone ?? "9689898973" }}';
+        const counsellor = '{{ $counsellorName ?? "Ms. Vaishnavi" }}';
+
+        if (bodyBox) {
+            bodyBox.innerHTML = `
+                <div class="aem-success-box">
+                    <div class="asb-icon-wrap">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <h4 class="asb-title">Enquiry Received!</h4>
+                    <p class="asb-desc">
+                        Thank you, <strong>${parentName}</strong>! Your admission enquiry for <strong>${wardName}</strong> has been successfully registered. Our admission coordinator (<strong>${counsellor}</strong>) will contact you shortly.
+                    </p>
+                    <div class="d-flex flex-column gap-10">
+                        <a href="https://wa.me/91${phone}?text=Hello%20${encodeURIComponent(counsellor)},%20I%20have%20submitted%20an%20admission%20enquiry%20for%20${encodeURIComponent(wardName)}." target="_blank" class="btn-apc-primary justify-content-center">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                        <button type="button" onclick="closeEnquiryModal()" class="btn-cta-action blue-btn justify-content-center py-10">
+                            <span>Done</span>
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+    })
+    .catch(error => {
+        if (submitBtn) submitBtn.disabled = false;
+        if (submitIcon) submitIcon.className = 'fa-solid fa-paper-plane';
+        if (submitText) submitText.innerText = 'Submit Enquiry';
+
+        if (alertBox) {
+            let errorMsg = 'An error occurred while submitting. Please check your inputs and try again.';
+            if (error && error.message) {
+                errorMsg = error.message;
+            } else if (error && error.errors) {
+                errorMsg = Object.values(error.errors).flat().join('<br>');
+            }
+            alertBox.style.display = 'block';
+            alertBox.className = 'alert alert-danger p-12 rounded-12 fs-13';
+            alertBox.innerHTML = '<i class="fa-solid fa-circle-exclamation me-1"></i> ' + errorMsg;
+        }
+    });
 });
 </script>
 @endsection

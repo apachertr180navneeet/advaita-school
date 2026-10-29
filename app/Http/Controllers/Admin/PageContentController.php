@@ -326,9 +326,14 @@ class PageContentController extends Controller
                 'admission_qe_tag' => ['label' => 'Quick Enquiry Tag', 'type' => 'text', 'default' => 'QUICK ENQUIRY REGISTRATION'],
                 'admission_qe_title' => ['label' => 'Quick Enquiry Title', 'type' => 'text', 'default' => "Share a few details and we'll get in touch."],
                 'admission_qe_desc' => ['label' => 'Quick Enquiry Description', 'type' => 'textarea', 'default' => 'Fill in your basic details and our admissions team will connect with you shortly.'],
+                'admission_qe_btn' => ['label' => 'Quick Enquiry Button Text', 'type' => 'text', 'default' => 'Quick Enquiry Form'],
+                'admission_qe_graphic' => ['label' => 'Quick Enquiry Graphic (from design)', 'type' => 'image', 'default' => 'assets/images/admission-qe-graphic.png'],
+
                 'admission_online_tag' => ['label' => 'Online Registration Tag', 'type' => 'text', 'default' => 'ONLINE ADMISSION REGISTRATION'],
                 'admission_online_title' => ['label' => 'Online Registration Title', 'type' => 'text', 'default' => 'Ready to apply? Complete the online form.'],
                 'admission_online_desc' => ['label' => 'Online Registration Description', 'type' => 'textarea', 'default' => 'Fill in the detailed application form to formally register your ward for admission.'],
+                'admission_online_btn' => ['label' => 'Online Registration Button Text', 'type' => 'text', 'default' => 'Apply Online'],
+                'admission_online_graphic' => ['label' => 'Online Registration Graphic (from design)', 'type' => 'image', 'default' => 'assets/images/admission-online-graphic.png'],
 
                 // Fee Structure
                 'admission_fee_eyebrow' => ['label' => 'Fee Eyebrow', 'type' => 'text', 'default' => '— FEE STRUCTURE —'],
@@ -339,6 +344,15 @@ class PageContentController extends Controller
                 'admission_fee_band1_subtitle' => ['label' => 'Fee Band 1 Subtitle', 'type' => 'text', 'default' => 'Strong foundation for a bright future.'],
                 'admission_fee_band2_title' => ['label' => 'Fee Band 2 Title', 'type' => 'text', 'default' => 'Classes VI to X'],
                 'admission_fee_band2_subtitle' => ['label' => 'Fee Band 2 Subtitle', 'type' => 'text', 'default' => 'Empowering learners for higher goals.'],
+
+                'admission_fee_info1_title' => ['label' => 'Fee Pill 1 Title', 'type' => 'text', 'default' => 'Annual Fee Details'],
+                'admission_fee_info1_desc' => ['label' => 'Fee Pill 1 Description', 'type' => 'text', 'default' => 'Tuition, development and other charges'],
+                'admission_fee_info2_title' => ['label' => 'Fee Pill 2 Title', 'type' => 'text', 'default' => 'Transport Charges'],
+                'admission_fee_info2_desc' => ['label' => 'Fee Pill 2 Description', 'type' => 'text', 'default' => 'Route-wise transport facility details'],
+                'admission_fee_info3_title' => ['label' => 'Fee Pill 3 Title', 'type' => 'text', 'default' => 'Payment Schedule'],
+                'admission_fee_info3_desc' => ['label' => 'Fee Pill 3 Description', 'type' => 'text', 'default' => 'Term-wise / annual payment options'],
+                'admission_fee_info4_title' => ['label' => 'Fee Pill 4 Title', 'type' => 'text', 'default' => 'Important Notes'],
+                'admission_fee_info4_desc' => ['label' => 'Fee Pill 4 Description', 'type' => 'text', 'default' => 'Fees are subject to the school policy for the academic session.'],
 
                 // Pre-Footer CTA
                 'admission_cta_pill' => ['label' => 'Bottom CTA Tag', 'type' => 'text', 'default' => "LET'S BEGIN TOGETHER"],

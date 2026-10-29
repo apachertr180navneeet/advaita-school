@@ -586,6 +586,8 @@ class PageController extends Controller
                 'icon' => Setting::get('admission_step1_icon', 'fa-solid fa-laptop'),
                 'title' => Setting::get('admission_step1_title', 'Admission Information'),
                 'desc' => Setting::get('admission_step1_desc', 'Find details about admission guidelines, eligibility criteria and important dates.'),
+                'target' => '#admission-guidelines',
+                'action_type' => 'scroll',
             ],
             [
                 'step' => '02',
@@ -594,6 +596,8 @@ class PageController extends Controller
                 'icon' => Setting::get('admission_step2_icon', 'fa-solid fa-file-lines'),
                 'title' => Setting::get('admission_step2_title', 'Documents Required'),
                 'desc' => Setting::get('admission_step2_desc', 'Get the complete list of documents needed for admission.'),
+                'target' => '#required-documents',
+                'action_type' => 'scroll',
             ],
             [
                 'step' => '03',
@@ -602,6 +606,8 @@ class PageController extends Controller
                 'icon' => Setting::get('admission_step3_icon', 'fa-solid fa-users'),
                 'title' => Setting::get('admission_step3_title', 'Quick Enquiry Registration'),
                 'desc' => Setting::get('admission_step3_desc', 'A short form to share basic details and connect with our admissions team.'),
+                'target' => 'modal',
+                'action_type' => 'enquiry_modal',
             ],
             [
                 'step' => '04',
@@ -610,6 +616,8 @@ class PageController extends Controller
                 'icon' => Setting::get('admission_step4_icon', 'fa-solid fa-clipboard-user'),
                 'title' => Setting::get('admission_step4_title', 'Online Admission Registration'),
                 'desc' => Setting::get('admission_step4_desc', 'A detailed form for parents who wish to formally register their ward for admission.'),
+                'target' => route('online-registration'),
+                'action_type' => 'link',
             ],
             [
                 'step' => '05',
@@ -618,8 +626,20 @@ class PageController extends Controller
                 'icon' => Setting::get('admission_step5_icon', 'fa-solid fa-coins'),
                 'title' => Setting::get('admission_step5_title', 'Fee Structure'),
                 'desc' => Setting::get('admission_step5_desc', 'Class-wise fee details, transport charges and payment schedule.'),
+                'target' => '#fee-structure',
+                'action_type' => 'scroll',
             ],
         ];
+
+        try {
+            $primaryFees = FeeStructure::where('wing', 'primary')->orderBy('order')->get();
+            $secondaryFees = FeeStructure::where('wing', 'secondary')->orderBy('order')->get();
+        } catch (\Throwable $e) {
+            $primaryFees = collect();
+            $secondaryFees = collect();
+        }
+        $feePolicyNote = Setting::get('fee_installments_note', 'Fees can be conveniently paid in three term-wise installments or an annual one-time payment with special benefits.');
+        $feeTransparencyNote = Setting::get('fee_transparency_note', 'No hidden charges or mandatory surprise fees. Detailed receipts are issued for all transactions.');
 
         $classList = ['Nursery', 'LKG', 'UKG'];
         for ($i = 1; $i <= 10; $i++) {
@@ -821,7 +841,11 @@ class PageController extends Controller
             'campusAddress',
             'eligibilityList',
             'documentsList',
-            'transportRoutes'
+            'transportRoutes',
+            'primaryFees',
+            'secondaryFees',
+            'feePolicyNote',
+            'feeTransparencyNote'
         ));
     }
 

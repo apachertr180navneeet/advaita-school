@@ -3562,6 +3562,428 @@ textarea.form-control:focus {
     overflow-y: auto;
 }
 
+/* Interactive Frontend Micro-interactions */
+.step-interactive-card {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 1.5px solid #F1F5F9;
+    border-radius: 18px;
+    padding: 22px 18px 16px;
+    background: #ffffff;
+    box-shadow: 0 4px 16px rgba(8, 59, 122, 0.04);
+    transition: all 0.25s ease;
+}
+
+.step-interactive-card:hover {
+    transform: translateY(-4px);
+    border-color: #FED7AA;
+    box-shadow: 0 10px 24px rgba(243, 112, 33, 0.12);
+    color: inherit;
+}
+
+.step-action-hint {
+    margin-top: auto;
+    padding-top: 10px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #0284C7;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    opacity: 0.85;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.step-interactive-card:hover .step-action-hint {
+    opacity: 1;
+    transform: translateX(2px);
+    color: #F37021;
+}
+
+/* Interactive Checklist Rows */
+.doc-list-row {
+    cursor: pointer;
+    user-select: none;
+}
+
+.doc-list-row:hover {
+    border-color: #93C5FD;
+    background: #F8FAFC;
+    transform: translateX(3px);
+}
+
+.doc-list-row.is-checked {
+    background: #F0FDF4;
+    border-color: #86EFAC;
+}
+
+.doc-list-row.is-checked .doc-num-badge {
+    background: #16A34A;
+}
+
+.doc-status-pill {
+    margin-left: auto;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: #F1F5F9;
+    color: #64748B;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+.doc-list-row.is-checked .doc-status-pill {
+    background: #DCFCE7;
+    color: #15803D;
+}
+
+/* Clickable Fee Info Pills */
+.fee-info-pill-card.clickable-pill {
+    cursor: pointer;
+}
+
+.fee-info-pill-card.clickable-pill:hover {
+    border-color: #93C5FD;
+    box-shadow: 0 6px 18px rgba(8, 59, 122, 0.08);
+    transform: translateY(-3px);
+}
+
+/* Fee Structure Interactive Modal */
+.fee-modal-card {
+    max-width: 780px;
+}
+
+.fee-modal-tabs-nav {
+    display: flex;
+    background: #F8FAFC;
+    border-bottom: 1.5px solid #E2E8F0;
+    padding: 8px 16px 0;
+    gap: 8px;
+    overflow-x: auto;
+}
+
+.fee-tab-btn {
+    border: none;
+    background: transparent;
+    padding: 10px 18px;
+    border-radius: 12px 12px 0 0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #64748B;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-bottom: 2px solid transparent;
+    white-space: nowrap;
+}
+
+.fee-tab-btn:hover {
+    color: #083B7A;
+    background: #F1F5F9;
+}
+
+.fee-tab-btn.active {
+    background: #ffffff;
+    color: #083B7A;
+    border-bottom: 2.5px solid #F37021;
+    box-shadow: 0 -2px 8px rgba(8, 59, 122, 0.04);
+}
+
+.fee-modal-body {
+    padding: 24px;
+}
+
+.fee-tab-pane {
+    display: none;
+}
+
+.fee-tab-pane.active {
+    display: block;
+    animation: fadeInPane 0.25s ease-out;
+}
+
+@keyframes fadeInPane {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fee-pane-header {
+    margin-bottom: 18px;
+}
+
+.fee-wing-badge {
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.6px;
+    padding: 3px 10px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 6px;
+}
+
+.fee-wing-badge.orange { background: #FFF4ED; color: #EA580C; }
+.fee-wing-badge.purple { background: #F5F3FF; color: #7C3AED; }
+.fee-wing-badge.green  { background: #ECFDF5; color: #059669; }
+.fee-wing-badge.blue   { background: #EFF6FF; color: #2563EB; }
+
+.fee-pane-title {
+    font-family: var(--adv-font-sans);
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: #083B7A;
+    margin: 0 0 4px;
+}
+
+.fee-pane-desc {
+    font-size: 0.85rem;
+    color: #64748B;
+    margin: 0;
+}
+
+.fee-table-wrap {
+    border: 1px solid #E2E8F0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.fee-details-table {
+    width: 100%;
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+.fee-details-table th {
+    background: #F8FAFC;
+    color: #083B7A;
+    font-weight: 800;
+    padding: 10px 14px;
+    border-bottom: 1px solid #E2E8F0;
+    white-space: nowrap;
+}
+
+.fee-details-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #F1F5F9;
+    color: #334155;
+    vertical-align: middle;
+}
+
+.fee-fallback-slab-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+.fee-slab-card {
+    background: #F8FAFC;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 14px;
+    padding: 16px;
+}
+
+.slab-badge {
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: #083B7A;
+    background: #EEF6FC;
+    padding: 3px 10px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.slab-amount {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #F37021;
+    margin-bottom: 4px;
+}
+
+.slab-terms {
+    font-size: 0.78rem;
+    color: #64748B;
+}
+
+.fee-notice-banner {
+    background: #F0F9FF;
+    border: 1px solid #BAE6FD;
+    border-radius: 10px;
+    padding: 10px 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.82rem;
+    color: #0369A1;
+    line-height: 1.45;
+}
+
+.transport-routes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tr-route-row {
+    background: #ffffff;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.tr-icon-box {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+    background: #DCFCE7;
+    color: #16A34A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.tr-name {
+    font-size: 0.88rem;
+    font-weight: 800;
+    color: #083B7A;
+    margin: 0 0 2px;
+}
+
+.tr-stops {
+    font-size: 0.78rem;
+    color: #64748B;
+    margin: 0;
+}
+
+.schedule-timeline-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.timeline-step-card {
+    background: #F8FAFC;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 12px;
+    padding: 14px;
+}
+
+.tsc-num {
+    font-size: 0.72rem;
+    font-weight: 800;
+    color: #F37021;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+}
+
+.tsc-title {
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: #083B7A;
+    margin-bottom: 4px;
+}
+
+.tsc-desc {
+    font-size: 0.75rem;
+    color: #64748B;
+    line-height: 1.4;
+}
+
+.fee-policy-bullets {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.fpb-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 0.82rem;
+    color: #334155;
+    line-height: 1.45;
+}
+
+.fee-modal-footer {
+    padding: 16px 24px;
+    background: #F8FAFC;
+    border-top: 1px solid #E2E8F0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.btn-fee-page-link {
+    color: #0284C7;
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-fee-page-link:hover {
+    color: #0369a1;
+    text-decoration: underline;
+}
+
+/* AJAX Enquiry Success Box */
+.aem-success-box {
+    text-align: center;
+    padding: 32px 20px;
+}
+
+.asb-icon-wrap {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background: #DCFCE7;
+    color: #16A34A;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    animation: popSuccess 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes popSuccess {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.asb-title {
+    font-family: var(--adv-font-sans);
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #083B7A;
+    margin: 0 0 8px;
+}
+
+.asb-desc {
+    font-size: 0.9rem;
+    color: #475569;
+    line-height: 1.5;
+    max-width: 420px;
+    margin: 0 auto 20px;
+}
+
 /* Responsive Media Queries */
 @media (max-width: 1024px) {
     .fee-info-row-grid {
