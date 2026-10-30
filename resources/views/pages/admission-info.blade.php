@@ -27,11 +27,14 @@
          ========================================================================= -->
     <section class="admission-hero-section">
         <div class="admission-hero-canvas">
-            <!-- Hero Visual from Design Image -->
+            <!-- Hero Composite Visual: School Campus Building + 3 Students Cutout (Crystal Clear Full HD) -->
             <div class="admission-hero-bg-visual" aria-hidden="true">
-                <img src="{{ asset($content['hero_image'] ?? 'assets/images/admission-hero-design.jpg') }}" 
-                     alt="Advaita Students and Campus" 
-                     class="admission-hero-design-img">
+                <div class="admission-hero-building-layer">
+                    <img src="{{ asset($content['hero_building_image'] ?? 'assets/images/about-hero-building.jpg') }}" alt="Advaita Campus Building" class="admission-hero-building-img" width="1024" height="731">
+                </div>
+                <div class="admission-hero-students-layer">
+                    <img src="{{ asset($content['hero_students_image'] ?? 'assets/images/about-cta-students-clean.png') }}" alt="Advaita Students" width="1024" height="682">
+                </div>
             </div>
 
             <!-- SVG Wave Overlay for Smooth Translucent Backdrop -->
@@ -42,15 +45,13 @@
                 </svg>
             </div>
 
-            <!-- Floating Script Tag at Top Right (if not using design composite) -->
-            @if(isset($content['hero_script']) && !empty($content['hero_script']) && ($content['hero_image'] ?? '') !== 'assets/images/admission-hero-design.jpg')
+            <!-- Floating Script Tag at Top Right -->
             <div class="admission-hero-script-tag" aria-hidden="true">
-                <span class="script-title">{{ $content['hero_script'] }}</span>
+                <span class="script-title">{{ $content['hero_script'] ?? 'More Than A School' }}</span>
                 <svg class="script-underline" viewBox="0 0 120 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4 12C38 3 84 4 116 14" stroke="#083B7A" stroke-width="3" stroke-linecap="round"/>
                 </svg>
             </div>
-            @endif
 
             <!-- Left Content Panel -->
             <div class="admission-hero-left-panel">
@@ -237,19 +238,11 @@
             </div>
 
             <div class="docs-checklist-split-grid">
-                <!-- Left Column: 10 Numbered Items (Interactive Readiness Checklist) -->
-                <div class="docs-items-list" id="docsInteractiveChecklist">
+                <!-- Left Column: 10 Numbered Items -->
+                <div class="docs-items-list">
                     @foreach($documentsList ?? [] as $doc)
-                    <div class="doc-list-row {{ !empty($doc['options']) || !empty($doc['subtext']) ? 'has-subline' : '' }}" 
-                         onclick="toggleDocCheck(this)" 
-                         role="checkbox" 
-                         aria-checked="false" 
-                         tabindex="0"
-                         title="Click to check off this document as ready">
-                        <span class="doc-num-badge">
-                            <span class="doc-num-text">{{ sprintf('%02d', $doc['number'] ?? $loop->iteration) }}</span>
-                            <i class="fa-solid fa-check doc-check-icon" style="display:none;" aria-hidden="true"></i>
-                        </span>
+                    <div class="doc-list-row {{ !empty($doc['options']) || !empty($doc['subtext']) ? 'has-subline' : '' }}">
+                        <span class="doc-num-badge">{{ sprintf('%02d', $doc['number'] ?? $loop->iteration) }}</span>
                         <div class="doc-list-text">
                             <div>{{ $doc['title'] }}</div>
                             @if(!empty($doc['options']))
@@ -262,10 +255,6 @@
                             </div>
                             @endif
                         </div>
-                        <span class="doc-status-pill">
-                            <i class="fa-regular fa-circle"></i>
-                            <span class="status-label">To arrange</span>
-                        </span>
                     </div>
                     @endforeach
                 </div>
@@ -868,33 +857,7 @@ function switchFeeTab(tabName) {
 }
 
 // ==========================================
-// 3. Interactive Document Checklist Toggle
-// ==========================================
-function toggleDocCheck(row) {
-    const isChecked = row.classList.toggle('is-checked');
-    row.setAttribute('aria-checked', isChecked ? 'true' : 'false');
-
-    const numText = row.querySelector('.doc-num-text');
-    const checkIcon = row.querySelector('.doc-check-icon');
-    const statusPill = row.querySelector('.doc-status-pill');
-
-    if (isChecked) {
-        if (numText) numText.style.display = 'none';
-        if (checkIcon) checkIcon.style.display = 'inline-block';
-        if (statusPill) {
-            statusPill.innerHTML = '<i class="fa-solid fa-check"></i> <span class="status-label">Ready</span>';
-        }
-    } else {
-        if (numText) numText.style.display = 'inline-block';
-        if (checkIcon) checkIcon.style.display = 'none';
-        if (statusPill) {
-            statusPill.innerHTML = '<i class="fa-regular fa-circle"></i> <span class="status-label">To arrange</span>';
-        }
-    }
-}
-
-// ==========================================
-// 4. Modal Backdrop & Escape Key Handlers
+// 3. Modal Backdrop & Escape Key Handlers
 // ==========================================
 document.getElementById('advEnquiryModal')?.addEventListener('click', function(e) {
     if (e.target === this) closeEnquiryModal();
