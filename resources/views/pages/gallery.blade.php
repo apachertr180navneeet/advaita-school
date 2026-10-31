@@ -2,10 +2,11 @@
 
 @section('title', "Gallery - Advaita School of Excellence | Moments That Matter")
 
-@section('content')
-<!-- Dedicated Gallery Page Stylesheet -->
-<link rel="stylesheet" href="{{ asset('assets/css/gallery.css?v=<?php echo file_exists(__DIR__ . ') }}"/assets/css/gallery.css') ? filemtime(__DIR__ . '/assets/css/gallery.css') : '1.0'; ?>">
+@section('styles')
+<link rel="stylesheet" href="{{ asset('assets/css/gallery.css') }}?v={{ file_exists(public_path('assets/css/gallery.css')) ? filemtime(public_path('assets/css/gallery.css')) : '1.0' }}">
+@endsection
 
+@section('content')
 <main id="main" class="main-content-wrapper adv-gallery-page-wrapper">
 
     <!-- =========================================================================
@@ -71,7 +72,8 @@
 
     <!-- =========================================================================
          2. CATEGORY FILTER ROW: 9 Rounded Pill Cards
-         ========================================================================= --    <section class="adv-gal-categories-section">
+         ========================================================================= -->
+    <section class="adv-gal-categories-section">
         <div class="adv-gal-container">
             <div class="adv-gal-filters-scroll" role="tablist" aria-label="Gallery category filter">
                 <!-- 1. All Photos -->
@@ -967,7 +969,8 @@
         <!-- Dynamically populated thumbnail strip -->
     </div>
 </div>
+@endsection
 
-<!-- Dedicated Gallery JavaScript -->
-<script src="{{ asset('assets/js/gallery.js?v=<?php echo file_exists(__DIR__ . ') }}"/assets/js/gallery.js') ? filemtime(__DIR__ . '/assets/js/gallery.js') : '1.0'; ?>"></script>
+@section('scripts')
+<script src="{{ asset('assets/js/gallery.js') }}?v={{ file_exists(public_path('assets/js/gallery.js')) ? filemtime(public_path('assets/js/gallery.js')) : '1.0' }}"></script>
 @endsection

@@ -2,10 +2,11 @@
 
 @section('title', "Blog & News - Advaita School of Excellence | Insights, Stories and Updates")
 
-@section('content')
-<!-- Dedicated Blog Page Stylesheet -->
-<link rel="stylesheet" href="{{ asset('assets/css/blog.css?v=<?php echo file_exists(__DIR__ . ') }}"/assets/css/blog.css') ? filemtime(__DIR__ . '/assets/css/blog.css') : '1.0'; ?>">
+@section('styles')
+<link rel="stylesheet" href="{{ asset('assets/css/blog.css') }}?v={{ file_exists(public_path('assets/css/blog.css')) ? filemtime(public_path('assets/css/blog.css')) : '1.0' }}">
+@endsection
 
+@section('content')
 <main id="main" class="main-content-wrapper adv-blog-page-wrapper">
 
     <!-- =========================================================================
@@ -503,7 +504,8 @@
     </section>
 
 </main>
+@endsection
 
-<!-- Dedicated Blog JavaScript -->
-<script src="{{ asset('assets/js/blog.js?v=<?php echo file_exists(__DIR__ . ') }}"/assets/js/blog.js') ? filemtime(__DIR__ . '/assets/js/blog.js') : '1.0'; ?>"></script>
+@section('scripts')
+<script src="{{ asset('assets/js/blog.js') }}?v={{ file_exists(public_path('assets/js/blog.js')) ? filemtime(public_path('assets/js/blog.js')) : '1.0' }}"></script>
 @endsection

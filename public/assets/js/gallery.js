@@ -390,12 +390,27 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.style.overflow = 'hidden';
     }
 
+    function resolvePhotoSrc(src) {
+        if (!src) return '';
+        if (src.startsWith('http://') || src.startsWith('https://') || src.startsWith('//') || src.startsWith('/')) {
+            return src;
+        }
+        const firstImg = document.querySelector('.adv-gal-card-thumb img');
+        if (firstImg && firstImg.src) {
+            const match = firstImg.src.match(/^(.*\/)assets\/images\//);
+            if (match) {
+                return match[1] + src.replace(/^\/+/, '');
+            }
+        }
+        return src;
+    }
+
     function showLightboxPhoto(index) {
         if (!currentAlbumCards.length) return;
         currentLightboxIndex = (index + currentAlbumCards.length) % currentAlbumCards.length;
         const photo = currentAlbumCards[currentLightboxIndex];
 
-        lightboxImg.src = photo.src;
+        lightboxImg.src = resolvePhotoSrc(photo.src);
         lightboxImg.alt = photo.caption || 'Advaita Gallery Photo';
         lightboxCounter.textContent = `${currentLightboxIndex + 1} / ${currentAlbumCards.length}`;
 
@@ -415,7 +430,7 @@ document.addEventListener('DOMContentLoaded', function () {
         currentAlbumCards.forEach((photo, idx) => {
             const thumb = document.createElement('div');
             thumb.className = `adv-gal-lightbox-thumb-item ${idx === 0 ? 'active' : ''}`;
-            thumb.innerHTML = `<img src="${photo.src}" alt="Thumb ${idx + 1}">`;
+            thumb.innerHTML = `<img src="${resolvePhotoSrc(photo.src)}" alt="Thumb ${idx + 1}">`;
             thumb.addEventListener('click', () => showLightboxPhoto(idx));
             lightboxThumbs.appendChild(thumb);
         });
