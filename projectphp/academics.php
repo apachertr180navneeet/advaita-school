@@ -134,49 +134,49 @@ require_once __DIR__.'/includes/header.php';
                     A Well-Structured Journey from <span class="highlight-orange">Foundation to Future.</span>
                 </h2>
                 <p class="acad-section-desc">
-                    Our academic programme is designed for students from Nursery to Class 10, with age-appropriate pedagogy and progressive learning goals.
+                    Our academic programme is designed for students from Play Group to Class 10, aligned with the NEP 2020 pedagogical framework and progressive learning goals.
                 </p>
             </div>
 
             <div class="acad-stages-grid">
-                <!-- Stage 1 -->
+                <!-- Stage 1: Foundational Stage -->
                 <div class="acad-stage-card">
                     <div class="acad-stage-icon orange" aria-hidden="true">
                         <i class="fa-solid fa-shapes"></i>
                     </div>
                     <h3 class="acad-stage-title">Foundational Stage</h3>
-                    <span class="acad-stage-classes">Nursery – LKG – UKG</span>
-                    <p class="acad-stage-desc">Play-based and activity-based learning to build early skills and confidence.</p>
+                    <span class="acad-stage-classes">Play Group &bull; Nursery &bull; LKG &bull; UKG &bull; Classes 1–2</span>
+                    <p class="acad-stage-desc">Play-based and activity-based learning to build early literacy, numeracy and confidence.</p>
                 </div>
 
-                <!-- Stage 2 -->
+                <!-- Stage 2: Preparatory Stage -->
                 <div class="acad-stage-card">
                     <div class="acad-stage-icon blue" aria-hidden="true">
                         <i class="fa-solid fa-pencil"></i>
                     </div>
                     <h3 class="acad-stage-title">Preparatory Stage</h3>
-                    <span class="acad-stage-classes">Class 1 – 2</span>
-                    <p class="acad-stage-desc">Building strong literacy, numeracy and problem-solving skills.</p>
+                    <span class="acad-stage-classes">Classes 3 to 5 (Grades III–V)</span>
+                    <p class="acad-stage-desc">Building strong bilingual literacy, numeracy and foundational problem-solving skills.</p>
                 </div>
 
-                <!-- Stage 3 -->
+                <!-- Stage 3: Middle Stage -->
                 <div class="acad-stage-card">
                     <div class="acad-stage-icon teal" aria-hidden="true">
                         <i class="fa-solid fa-flask"></i>
                     </div>
                     <h3 class="acad-stage-title">Middle Stage</h3>
-                    <span class="acad-stage-classes">Class 3 – 5</span>
-                    <p class="acad-stage-desc">Expanding knowledge with subject depth and experiential learning.</p>
+                    <span class="acad-stage-classes">Classes 6 to 8 (Grades VI–VIII)</span>
+                    <p class="acad-stage-desc">Expanding knowledge with subject depth, lab experiments and experiential learning.</p>
                 </div>
 
-                <!-- Stage 4 -->
+                <!-- Stage 4: Secondary Stage -->
                 <div class="acad-stage-card">
                     <div class="acad-stage-icon purple" aria-hidden="true">
                         <i class="fa-solid fa-award"></i>
                     </div>
                     <h3 class="acad-stage-title">Secondary Stage</h3>
-                    <span class="acad-stage-classes">Class 6 – 10</span>
-                    <p class="acad-stage-desc">Focused academic learning with critical thinking, application and future readiness.</p>
+                    <span class="acad-stage-classes">Classes 9 &amp; 10 (Grades IX–X)</span>
+                    <p class="acad-stage-desc">Rigorous CBSE Board preparation with integrated NEET/IIT Foundation mentoring and future readiness.</p>
                 </div>
             </div>
         </section>

@@ -143,25 +143,25 @@ class PageController extends Controller
         $academicStages = [
             [
                 'title' => Setting::get('about_stage1_title', 'Foundational'),
-                'subtitle' => Setting::get('about_stage1_sub', '(Pre-Primary)'),
+                'subtitle' => Setting::get('about_stage1_sub', '(Play Group – Gr 2)'),
                 'icon' => 'fa-solid fa-shapes',
                 'color' => 'orange',
             ],
             [
                 'title' => Setting::get('about_stage2_title', 'Preparatory'),
-                'subtitle' => Setting::get('about_stage2_sub', '(Grades I–V)'),
+                'subtitle' => Setting::get('about_stage2_sub', '(Grades 3–5)'),
                 'icon' => 'fa-solid fa-graduation-cap',
                 'color' => 'blue',
             ],
             [
                 'title' => Setting::get('about_stage3_title', 'Middle'),
-                'subtitle' => Setting::get('about_stage3_sub', '(Grades VI–VIII)'),
+                'subtitle' => Setting::get('about_stage3_sub', '(Grades 6–8)'),
                 'icon' => 'fa-solid fa-chalkboard-user',
                 'color' => 'green',
             ],
             [
                 'title' => Setting::get('about_stage4_title', 'Secondary'),
-                'subtitle' => Setting::get('about_stage4_sub', '(Grades IX–X)'),
+                'subtitle' => Setting::get('about_stage4_sub', '(Grades 9–10)'),
                 'icon' => 'fa-solid fa-users-line',
                 'color' => 'purple',
             ],

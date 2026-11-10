@@ -120,7 +120,7 @@
                     <i class="fa-solid fa-building-columns"></i>
                 </div>
                 <div class="acad-affil-text">
-                    <strong>CBSE Affiliated Senior Secondary Institution</strong>
+                    <strong>CBSE Affiliated Institution</strong>
                     <span>{{ $content['affiliation_line'] ?? 'Affiliated with the Central Board of Secondary Education (CBSE), New Delhi. Affiliation No: 1130920.' }}</span>
                 </div>
             </div>
@@ -154,24 +154,24 @@
                     A Well-Structured Journey from <span class="highlight-serif highlight-orange">Foundation to Future.</span>
                 </h2>
                 <p class="acad-section-desc">
-                    Explore our dedicated wings from Nursery to Class 10 with age-appropriate pedagogy, specialized tracks, and state-of-the-art facilities.
+                    Explore our 4 dedicated stages from Play Group to Class 10 aligned with the NEP 2020 pedagogical framework, specialized tracks, and state-of-the-art facilities.
                 </p>
             </div>
 
             <div class="acad-stages-grid">
-                <!-- Stage 1: Pre-Primary -->
+                <!-- Stage 1: Foundational Stage -->
                 <a href="{{ route('academics.pre-primary') }}" class="acad-stage-card">
-                    <span class="stage-badge-top orange">Ages 3–6 · Early Years</span>
+                    <span class="stage-badge-top orange">Ages 3–8 · Early Years &amp; Foundational</span>
                     <div class="acad-stage-header">
                         <div class="acad-stage-icon orange" aria-hidden="true">
                             <i class="fa-solid fa-shapes"></i>
                         </div>
                         <div class="acad-stage-title-wrap">
                             <h3 class="acad-stage-title">Foundational Stage</h3>
-                            <span class="acad-stage-classes">Nursery – LKG – UKG</span>
+                            <span class="acad-stage-classes">Play Group &bull; Nursery &bull; LKG &bull; UKG &bull; Classes 1–2</span>
                         </div>
                     </div>
-                    <p class="acad-stage-desc">Play-based early learning, multi-sensory discovery, jolly phonics, and our upcoming state-of-the-art new school building.</p>
+                    <p class="acad-stage-desc">Play-based early learning, multi-sensory discovery, jolly phonics, and foundational literacy &amp; numeracy in a joyful, child-safe environment.</p>
                     <ul class="stage-highlights-list">
                         <li><i class="fa-solid fa-check"></i> Play-way experiential pedagogy</li>
                         <li><i class="fa-solid fa-check"></i> Tactile blocks, sand &amp; music stations</li>
@@ -183,16 +183,16 @@
                     </div>
                 </a>
 
-                <!-- Stage 2: Preparatory Stage (Class 1-2) -->
+                <!-- Stage 2: Preparatory Stage (Classes 3-5) -->
                 <a href="{{ route('academics.primary') }}" class="acad-stage-card">
-                    <span class="stage-badge-top blue">Ages 6–8 · Fundamentals</span>
+                    <span class="stage-badge-top blue">Ages 8–11 · Preparatory</span>
                     <div class="acad-stage-header">
                         <div class="acad-stage-icon blue" aria-hidden="true">
                             <i class="fa-solid fa-pencil"></i>
                         </div>
                         <div class="acad-stage-title-wrap">
                             <h3 class="acad-stage-title">Preparatory Stage</h3>
-                            <span class="acad-stage-classes">Class 1 – 2</span>
+                            <span class="acad-stage-classes">Classes 3 to 5 (Grades III–V)</span>
                         </div>
                     </div>
                     <p class="acad-stage-desc">Building strong bilingual literacy, numeracy, mental arithmetic with Abacus, and early Olympiad conceptual drills.</p>
@@ -207,40 +207,40 @@
                     </div>
                 </a>
 
-                <!-- Stage 3: Middle Stage (Class 3-5) -->
+                <!-- Stage 3: Middle Stage (Classes 6-8) -->
                 <a href="{{ route('academics.primary') }}#abacus-section" class="acad-stage-card">
-                    <span class="stage-badge-top teal">Ages 8–11 · Analytical</span>
+                    <span class="stage-badge-top teal">Ages 11–14 · Middle School</span>
                     <div class="acad-stage-header">
                         <div class="acad-stage-icon teal" aria-hidden="true">
                             <i class="fa-solid fa-calculator"></i>
                         </div>
                         <div class="acad-stage-title-wrap">
-                            <h3 class="acad-stage-title">Middle Primary Stage</h3>
-                            <span class="acad-stage-classes">Class 3 – 5</span>
+                            <h3 class="acad-stage-title">Middle Stage</h3>
+                            <span class="acad-stage-classes">Classes 6 to 8 (Grades VI–VIII)</span>
                         </div>
                     </div>
-                    <p class="acad-stage-desc">Subject depth, multi-digit Abacus speed calculation, and national SOF Olympiad competitive exam mastery.</p>
+                    <p class="acad-stage-desc">Subject depth in sciences and mathematics, experiential learning, SOF Olympiad competitive exam mastery, and robotics foundation.</p>
                     <ul class="stage-highlights-list">
-                        <li><i class="fa-solid fa-check"></i> State &amp; National Abacus Trophies</li>
+                        <li><i class="fa-solid fa-check"></i> State &amp; National Abacus &amp; Olympiad Trophies</li>
                         <li><i class="fa-solid fa-check"></i> NSO, IMO &amp; IEO Olympiad mentoring</li>
                         <li><i class="fa-solid fa-check"></i> Robotics &amp; computer coding foundation</li>
                     </ul>
                     <div class="stage-card-footer-btn">
-                        <span>Explore Abacus &amp; Olympiads</span>
+                        <span>Explore Middle School</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </div>
                 </a>
 
-                <!-- Stage 4: Secondary Stage (Class 6-10) -->
+                <!-- Stage 4: Secondary Stage (Classes 9-10) -->
                 <a href="{{ route('academics.secondary') }}" class="acad-stage-card">
-                    <span class="stage-badge-top purple">Ages 11–16 · Career Track</span>
+                    <span class="stage-badge-top purple">Ages 14–16 · Secondary &amp; Board Track</span>
                     <div class="acad-stage-header">
                         <div class="acad-stage-icon purple" aria-hidden="true">
                             <i class="fa-solid fa-atom"></i>
                         </div>
                         <div class="acad-stage-title-wrap">
                             <h3 class="acad-stage-title">Secondary Stage</h3>
-                            <span class="acad-stage-classes">Class 6 – 10</span>
+                            <span class="acad-stage-classes">Classes 9 &amp; 10 (Grades IX–X)</span>
                         </div>
                     </div>
                     <p class="acad-stage-desc">Consistent 100% CBSE Class 10 Board results paired with integrated NEET/IIT Foundation mentoring and high-tech labs.</p>
