@@ -9,31 +9,64 @@
          1. HERO SECTION: We'd love to hear from you.
          ========================================================================= -->
     <section class="contact-hero-section">
-        <div class="contact-hero-canvas contact-hero-centered-canvas">
-            <div class="contact-hero-ambient-glow" aria-hidden="true"></div>
+        <div class="contact-hero-canvas">
+            <!-- Background Image & Sky on the Right -->
+            <div class="contact-hero-bg-visual" aria-hidden="true">
+                <img src="{{ asset('assets/images/about-hero-building.jpg') }}" alt="Advaita School of Excellence Campus" class="contact-hero-bg-img" loading="eager">
+                
+                <!-- Floating Script Badge in Sky -->
+                <div class="contact-hero-script-tag">
+                    <span class="script-title">More<br>Than A School</span>
+                    <svg class="script-underline" viewBox="0 0 140 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M4 10C36 4 98 4 136 12" stroke="#F37021" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M18 14C48 9 92 8 126 15" stroke="#F37021" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
+                    </svg>
+                </div>
+            </div>
 
-            <!-- Centered Content Panel -->
-            <div class="contact-hero-center-panel">
+            <!-- Full Width Wave Mask Overlay with ambient blue contour -->
+            <div class="contact-hero-wave-overlay" aria-hidden="true">
+                <svg viewBox="0 0 1440 480" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="contactWaveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#0284C7"/>
+                            <stop offset="50%" stop-color="#38BDF8"/>
+                            <stop offset="100%" stop-color="#60A5FA"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Ambient soft blue aura at far left -->
+                    <path d="M0,60 C90,60 140,160 140,260 C140,360 85,430 0,450 Z" fill="#E8F4FE" opacity="0.85"/>
+                    <!-- Outer vibrant sky-blue contour wave -->
+                    <path d="M0,0 L615,0 C680,110 720,230 685,330 C655,410 590,455 535,480 L0,480 Z" fill="url(#contactWaveGrad)" opacity="0.95"/>
+                    <!-- Mid soft blue contour wave -->
+                    <path d="M0,0 L600,0 C665,110 705,230 670,330 C640,410 575,455 520,480 L0,480 Z" fill="#BAE6FD"/>
+                    <!-- Main solid white wave panel covering left side completely -->
+                    <path d="M0,0 L585,0 C650,110 690,230 655,330 C625,410 560,455 505,480 L0,480 Z" fill="#FFFFFF"/>
+                </svg>
+            </div>
+
+            <!-- Left Dot Matrix Ambient Decor -->
+            <div class="contact-hero-dots-decor" aria-hidden="true"></div>
+
+            <!-- Left Content Panel -->
+            <div class="contact-hero-left-panel">
                 <div class="contact-hero-content-inner">
-                    <!-- Breadcrumbs (Centered) -->
-                    <nav class="contact-breadcrumb contact-breadcrumb-center" aria-label="Breadcrumb">
+                    <!-- Breadcrumbs -->
+                    <nav class="contact-breadcrumb" aria-label="Breadcrumb">
                         <a href="{{ route('home') }}">Home</a>
                         <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
                         <span class="active">Contact Us</span>
                     </nav>
 
-                    <!-- Eyebrow Pill -->
-                    <div class="contact-eyebrow-pill">
-                        <i class="fa-solid fa-headset text-orange"></i>
-                        <span>GET IN TOUCH</span>
-                    </div>
+                    <div class="contact-eyebrow">GET IN TOUCH</div>
 
                     <h1 class="contact-hero-title">
-                        We'd Love to <span class="contact-highlight-serif">Hear From You.</span>
+                        We'd love to<br>
+                        <span class="contact-highlight-serif">hear from you.</span>
                     </h1>
 
                     <p class="contact-hero-desc">
-                        Admissions, academics, or just a friendly hello — our dedicated administrative and leadership team is always here to help you every step of the way.
+                        Admissions, academics, or just a friendly hello — our team is always here to help.
                     </p>
                 </div>
             </div>

@@ -14,38 +14,66 @@ require_once __DIR__.'/includes/header.php';
 <div class="faculty-page-wrapper">
 
     <!-- =========================================================================
-         1. HERO SECTION: Meet the Educators (Centered)
+         1. HERO SECTION: Meet the Educators
          ========================================================================= -->
     <section class="staff-hero-section">
-        <div class="staff-hero-canvas staff-hero-centered-canvas">
-            <!-- Background Image & Subtle Ambient Overlay -->
+        <div class="staff-hero-canvas">
+            <!-- Background Image & Sky on the Right -->
             <div class="staff-hero-bg-visual" aria-hidden="true">
                 <img src="assets/images/about-hero-building.jpg" alt="Advaita School of Excellence Campus" class="staff-hero-bg-img" loading="eager">
-                <div class="staff-hero-overlay-center"></div>
+                <!-- Floating Script Badge in Sky -->
+                <div class="staff-hero-script-tag">
+                    <span class="script-title">More<br>Than A School</span>
+                    <svg class="script-underline" viewBox="0 0 140 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M4 10C36 4 98 4 136 12" stroke="#F37021" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M18 14C48 9 92 8 126 15" stroke="#F37021" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
+                    </svg>
+                </div>
             </div>
 
-            <!-- Centered Content Panel -->
-            <div class="staff-hero-center-panel">
-                <div class="staff-hero-content-inner text-center">
-                    <!-- Breadcrumbs Centered -->
-                    <nav class="staff-breadcrumb staff-breadcrumb-center" aria-label="Breadcrumb">
+            <!-- Full Width Wave Mask Overlay with ambient blue contour -->
+            <div class="staff-hero-wave-overlay" aria-hidden="true">
+                <svg viewBox="0 0 1440 480" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="staffWaveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#0284C7"/>
+                            <stop offset="50%" stop-color="#38BDF8"/>
+                            <stop offset="100%" stop-color="#60A5FA"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Ambient soft blue aura at far left -->
+                    <path d="M0,60 C90,60 140,160 140,260 C140,360 85,430 0,450 Z" fill="#E8F4FE" opacity="0.85"/>
+                    <!-- Outer vibrant sky-blue contour wave -->
+                    <path d="M0,0 L615,0 C680,110 720,230 685,330 C655,410 590,455 535,480 L0,480 Z" fill="url(#staffWaveGrad)" opacity="0.95"/>
+                    <!-- Mid soft blue contour wave -->
+                    <path d="M0,0 L600,0 C665,110 705,230 670,330 C640,410 575,455 520,480 L0,480 Z" fill="#BAE6FD"/>
+                    <!-- Main solid white wave panel covering left side completely -->
+                    <path d="M0,0 L585,0 C650,110 690,230 655,330 C625,410 560,455 505,480 L0,480 Z" fill="#FFFFFF"/>
+                </svg>
+            </div>
+
+            <!-- Left Dot Matrix Decor -->
+            <div class="staff-hero-dots-decor" aria-hidden="true"></div>
+
+            <!-- Left Content Panel -->
+            <div class="staff-hero-left-panel">
+                <div class="staff-hero-content-inner">
+                    <!-- Breadcrumbs -->
+                    <div class="staff-breadcrumb">
                         <a href="index.php">Home</a>
                         <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
                         <a href="about-us.php">About Us</a>
                         <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
                         <span class="active">Our Faculty</span>
-                    </nav>
-
-                    <div class="staff-eyebrow-pill">
-                        <i class="fa-solid fa-chalkboard-user"></i>
-                        <span>OUR FACULTY &amp; MENTORS</span>
                     </div>
 
+                    <div class="staff-eyebrow">OUR FACULTY</div>
                     <h1 class="staff-hero-title">
-                        Meet the Educators Who Inspire Every
+                        Meet the Educators<br>
+                        Who Inspire Every<br>
                         <span class="text-orange">Advaita</span> Learner.
                     </h1>
-
+                    
                     <p class="staff-hero-desc">
                         Our teachers are more than subject experts — they are mentors, role models and lifelong guides who nurture curiosity, build confidence and inspire every child to excel in academics and in life.
                     </p>

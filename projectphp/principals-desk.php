@@ -16,59 +16,65 @@ require_once __DIR__.'/includes/header.php';
          1. HERO SECTION: Nurturing Potential for a Brighter Tomorrow
          ========================================================================= -->
     <section class="principal-hero-section">
-        <div class="principal-hero-canvas principal-hero-centered-canvas">
-            <!-- Background Image & Subtle Ambient Overlay -->
+        <div class="principal-hero-canvas">
+            <!-- Background Image & Sky on the Right -->
             <div class="principal-hero-bg-visual" aria-hidden="true">
                 <img src="assets/images/about-hero-building.jpg" alt="Advaita School of Excellence Campus" class="principal-hero-bg-img" loading="eager">
-                <div class="principal-hero-overlay-center"></div>
+                <!-- Floating Script Badge in Sky -->
+                <div class="principal-hero-script-tag">
+                    <span class="script-title">More<br>Than A School</span>
+                    <svg class="script-underline" viewBox="0 0 140 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M4 10C36 4 98 4 136 12" stroke="#F37021" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M18 14C48 9 92 8 126 15" stroke="#F37021" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
+                    </svg>
+                </div>
             </div>
 
-            <!-- Centered Content Panel -->
-            <div class="principal-hero-center-panel">
-                <div class="principal-hero-content-inner text-center">
-                    <!-- Breadcrumbs Centered -->
-                    <nav class="principal-breadcrumb principal-breadcrumb-center" aria-label="Breadcrumb">
+            <!-- Full Width Wave Mask Overlay with ambient blue contour -->
+            <div class="principal-hero-wave-overlay" aria-hidden="true">
+                <svg viewBox="0 0 1440 480" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="principalWaveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#0284C7"/>
+                            <stop offset="50%" stop-color="#38BDF8"/>
+                            <stop offset="100%" stop-color="#60A5FA"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Ambient soft blue aura at far left -->
+                    <path d="M0,60 C90,60 140,160 140,260 C140,360 85,430 0,450 Z" fill="#E8F4FE" opacity="0.85"/>
+                    <!-- Outer vibrant sky-blue contour wave -->
+                    <path d="M0,0 L615,0 C680,110 720,230 685,330 C655,410 590,455 535,480 L0,480 Z" fill="url(#principalWaveGrad)" opacity="0.95"/>
+                    <!-- Mid soft blue contour wave -->
+                    <path d="M0,0 L600,0 C665,110 705,230 670,330 C640,410 575,455 520,480 L0,480 Z" fill="#BAE6FD"/>
+                    <!-- Main solid white wave panel covering left side completely -->
+                    <path d="M0,0 L585,0 C650,110 690,230 655,330 C625,410 560,455 505,480 L0,480 Z" fill="#FFFFFF"/>
+                </svg>
+            </div>
+
+            <!-- Left Dot Matrix Decor -->
+            <div class="principal-hero-dots-decor" aria-hidden="true"></div>
+
+            <!-- Left Content Panel -->
+            <div class="principal-hero-left-panel">
+                <div class="principal-hero-content-inner">
+                    <!-- Breadcrumbs -->
+                    <div class="principal-breadcrumb">
                         <a href="index.php">Home</a>
                         <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
                         <a href="about-us.php">About Us</a>
                         <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
                         <span class="active">Principal's Desk</span>
-                    </nav>
-
-                    <div class="principal-eyebrow-pill">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span>FROM THE PRINCIPAL'S DESK</span>
                     </div>
 
+                    <span class="principal-eyebrow">FROM THE PRINCIPAL</span>
                     <h1 class="principal-hero-title">
-                        Nurturing Potential for a
-                        <span class="text-orange">Brighter Tomorrow.</span>
+                        Nurturing Potential<br>
+                        Towards a <span class="text-orange">Brighter<br>Tomorrow.</span>
                     </h1>
-
-                    <!-- Pipeline Sub-list Centered -->
-                    <div class="principal-hero-pillars principal-hero-pillars-center">
-                        <span>Academic Excellence</span>
-                        <span class="pillar-pipe">&bull;</span>
-                        <span>Character &amp; Values</span>
-                        <span class="pillar-pipe">&bull;</span>
-                        <span>Holistic Growth</span>
-                    </div>
 
                     <p class="principal-hero-desc">
                         At Advaita School of Excellence, we are committed to providing a nurturing and inspiring environment where every child is encouraged to learn, grow, and succeed.
                     </p>
-
-                    <!-- Hero Action Buttons Centered -->
-                    <div class="principal-hero-actions principal-hero-actions-center">
-                        <a href="#message" class="principal-btn-orange">
-                            <span>Read Principal's Message</span>
-                            <i class="fa-solid fa-arrow-down"></i>
-                        </a>
-                        <a href="our-staff.php" class="principal-btn-video">
-                            <span>Meet Our Faculty</span>
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>

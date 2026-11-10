@@ -16,45 +16,73 @@ require_once __DIR__.'/includes/header.php';
          1. HERO SECTION: Building Stronger Foundations for Brighter Tomorrows
          ========================================================================= -->
     <section class="chairman-hero-section">
-        <div class="chairman-hero-canvas chairman-hero-centered-canvas">
-            <!-- Background Image & Subtle Ambient Overlay -->
+        <div class="chairman-hero-canvas">
+            <!-- Background Image & Sky on the Right -->
             <div class="chairman-hero-bg-visual" aria-hidden="true">
                 <img src="assets/images/about-hero-building.jpg" alt="Advaita School of Excellence Campus" class="chairman-hero-bg-img" loading="eager">
-                <div class="chairman-hero-overlay-center"></div>
+                <!-- Floating Script Badge in Sky -->
+                <div class="chairman-hero-script-tag">
+                    <span class="script-title">More<br>Than A School</span>
+                    <svg class="script-underline" viewBox="0 0 140 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M4 10C36 4 98 4 136 12" stroke="#F37021" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M18 14C48 9 92 8 126 15" stroke="#F37021" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
+                    </svg>
+                </div>
             </div>
 
-            <!-- Centered Content Panel -->
-            <div class="chairman-hero-center-panel">
-                <div class="chairman-hero-content-inner text-center">
-                    <!-- Breadcrumbs Centered -->
-                    <nav class="chairman-breadcrumb chairman-breadcrumb-center" aria-label="Breadcrumb">
+            <!-- Full Width Wave Mask Overlay with ambient blue contour -->
+            <div class="chairman-hero-wave-overlay" aria-hidden="true">
+                <svg viewBox="0 0 1440 480" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="chairmanWaveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#0284C7"/>
+                            <stop offset="50%" stop-color="#38BDF8"/>
+                            <stop offset="100%" stop-color="#60A5FA"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Ambient soft blue aura at far left -->
+                    <path d="M0,60 C90,60 140,160 140,260 C140,360 85,430 0,450 Z" fill="#E8F4FE" opacity="0.85"/>
+                    <!-- Outer vibrant sky-blue contour wave -->
+                    <path d="M0,0 L615,0 C680,110 720,230 685,330 C655,410 590,455 535,480 L0,480 Z" fill="url(#chairmanWaveGrad)" opacity="0.95"/>
+                    <!-- Mid soft blue contour wave -->
+                    <path d="M0,0 L600,0 C665,110 705,230 670,330 C640,410 575,455 520,480 L0,480 Z" fill="#BAE6FD"/>
+                    <!-- Main solid white wave panel covering left side completely -->
+                    <path d="M0,0 L585,0 C650,110 690,230 655,330 C625,410 560,455 505,480 L0,480 Z" fill="#FFFFFF"/>
+                </svg>
+            </div>
+
+            <!-- Left Dot Matrix Decor -->
+            <div class="chairman-hero-dots-decor" aria-hidden="true"></div>
+
+            <!-- Left Content Panel -->
+            <div class="chairman-hero-left-panel">
+                <div class="chairman-hero-content-inner">
+                    <!-- Breadcrumbs -->
+                    <div class="chairman-breadcrumb">
                         <a href="index.php">Home</a>
                         <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
                         <a href="about-us.php">About Us</a>
                         <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
                         <span class="active">Chairman's Desk</span>
-                    </nav>
-
-                    <div class="chairman-eyebrow-pill">
-                        <i class="fa-solid fa-user-tie"></i>
-                        <span>FROM THE CHAIRMAN'S DESK</span>
                     </div>
 
+                    <span class="chairman-eyebrow">FROM THE CHAIRMAN</span>
                     <h1 class="chairman-hero-title">
-                        Building Stronger Foundations for
+                        Building Stronger<br>
+                        Foundations for<br>
                         <span class="text-orange">Brighter Tomorrows.</span>
                     </h1>
 
-                    <!-- Pipeline Sub-list Centered -->
-                    <div class="chairman-hero-pillars chairman-hero-pillars-center">
+                    <!-- Pipeline Sub-list -->
+                    <div class="chairman-hero-pillars">
                         <span>Education</span>
-                        <span class="pillar-pipe">&bull;</span>
+                        <span class="pillar-pipe">|</span>
                         <span>Values</span>
-                        <span class="pillar-pipe">&bull;</span>
+                        <span class="pillar-pipe">|</span>
                         <span>Discipline</span>
-                        <span class="pillar-pipe">&bull;</span>
+                        <span class="pillar-pipe">|</span>
                         <span>Opportunities</span>
-                        <span class="pillar-pipe">&bull;</span>
+                        <span class="pillar-pipe">|</span>
                         <span>A Better Society</span>
                     </div>
 
@@ -62,15 +90,15 @@ require_once __DIR__.'/includes/header.php';
                         At Advaita School of Excellence, we go beyond textbooks to create a nurturing environment where every child is encouraged to learn, grow and shape a brighter future.
                     </p>
 
-                    <!-- Hero Action Buttons Centered -->
-                    <div class="chairman-hero-actions chairman-hero-actions-center">
-                        <a href="#message" class="chairman-btn-orange">
-                            <span>Read Chairman's Message</span>
-                            <i class="fa-solid fa-arrow-down"></i>
-                        </a>
-                        <a href="vision-mission.php" class="chairman-btn-video">
-                            <span>Our Vision &amp; Mission</span>
+                    <!-- Hero Action Buttons -->
+                    <div class="chairman-hero-actions">
+                        <a href="about-us.php" class="chairman-btn-orange">
+                            <span>Our Journey</span>
                             <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="index.php#tour" class="chairman-btn-video">
+                            <span class="video-circle-icon"><i class="fa-solid fa-play"></i></span>
+                            <span>Watch Video</span>
                         </a>
                     </div>
                 </div>
