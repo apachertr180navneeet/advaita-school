@@ -329,9 +329,24 @@ require_once __DIR__.'/includes/header.php';
         <div class="shape-two"></div>
         <div class="shape-three"></div>
 
-        <!-- Left Graphic: Paper Airplane Image -->
+        <!-- Left Graphic: Paper Airplane SVG -->
         <div class="staff-join-plane-left" aria-hidden="true">
-            <img src="assets/images/staff-airplane-trail.svg" alt="Paper Airplane Trail" class="staff-join-plane-img" loading="lazy">
+            <svg class="staff-join-plane-img" viewBox="0 0 360 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Dotted Loop Flight Path -->
+                <path d="M 15 205 C 70 150, 110 98, 165 98 C 215 98, 235 145, 205 165 C 175 180, 178 125, 255 58" 
+                      stroke="#0284C7" 
+                      stroke-width="2.4" 
+                      stroke-dasharray="6 6" 
+                      stroke-linecap="round" 
+                      opacity="0.85" />
+                <!-- Classic Straight Paper Airplane -->
+                <g transform="translate(255, 58) rotate(-38)">
+                    <polygon points="46,0 0,-18 16,0" fill="#E0F2FE" stroke="#0284C7" stroke-width="1.8" stroke-linejoin="round"/>
+                    <polygon points="46,0 16,0 0,18" fill="#38BDF8" stroke="#0284C7" stroke-width="1.8" stroke-linejoin="round"/>
+                    <polygon points="16,0 0,18 6,6" fill="#0284C7" stroke="#0284C7" stroke-width="1.2" stroke-linejoin="round"/>
+                    <line x1="46" y1="0" x2="16" y2="0" stroke="#0284C7" stroke-width="1.8" stroke-linecap="round"/>
+                </g>
+            </svg>
         </div>
 
         <!-- Center Content -->

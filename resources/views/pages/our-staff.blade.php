@@ -2,6 +2,10 @@
 
 @section('title', "Our Faculty - Advaita School of Excellence, Parbhani")
 
+@section('styles')
+<link rel="stylesheet" href="{{ asset('assets/css/our-staff.css') }}?v={{ file_exists(public_path('assets/css/our-staff.css')) ? filemtime(public_path('assets/css/our-staff.css')) : '1.0' }}">
+@endsection
+
 @section('content')
 <div class="faculty-page-wrapper">
 

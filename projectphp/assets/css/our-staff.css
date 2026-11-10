@@ -1,0 +1,1169 @@
+/* ==========================================================================
+   OUR FACULTY (STAFF) PAGE STYLES - ADVAITA SCHOOL OF EXCELLENCE
+   CBSE Affiliated No. 1130920 · Parbhani
+   Fully responsive across Mobile (320px - 767px), Tablet (768px - 1024px), and Desktop
+   ========================================================================== */
+
+.faculty-page-wrapper {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    overflow-x: hidden;
+    font-family: var(--adv-font-body, 'Plus Jakarta Sans', sans-serif);
+    color: #173d5d;
+}
+
+.faculty-page-wrapper * {
+    box-sizing: border-box;
+}
+
+.text-orange {
+    color: #F37021 !important;
+}
+
+/* ==========================================================================
+   1. HERO SECTION
+   ========================================================================== */
+
+.staff-hero-section {
+    position: relative;
+    width: 100%;
+    background: #ffffff;
+    padding: 12px 12px 0;
+}
+
+.staff-hero-canvas {
+    position: relative;
+    min-height: clamp(340px, 24vw, 400px);
+    display: flex;
+    align-items: stretch;
+    background: #eef6fc;
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: 1px solid #dbeafe;
+    box-shadow: 0 4px 20px rgba(8, 59, 122, 0.05);
+}
+
+/* Right Background Campus Building */
+.staff-hero-bg-visual {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 58%;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.staff-hero-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    display: block;
+}
+
+/* Floating Script Badge in Sky */
+.staff-hero-script-tag {
+    position: absolute;
+    top: 14px;
+    right: clamp(16px, 3.5vw, 45px);
+    z-index: 5;
+    text-align: center;
+    transform: rotate(-3deg);
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.staff-hero-script-tag .script-title {
+    font-family: var(--adv-font-script, 'Caveat', cursive, serif);
+    font-size: clamp(1.85rem, 2.7vw, 2.7rem);
+    font-weight: 700;
+    color: #083B7A;
+    line-height: 0.95;
+    display: block;
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.9);
+}
+
+.staff-hero-script-tag .script-underline {
+    width: clamp(90px, 7vw, 115px);
+    height: 14px;
+    display: block;
+    margin: 3px auto 0;
+}
+
+/* Full Width Wave Mask Overlay */
+.staff-hero-wave-overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.staff-hero-wave-overlay svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Left Dot Matrix Decor */
+.staff-hero-dots-decor {
+    position: absolute;
+    top: 16px;
+    left: 18px;
+    width: 70px;
+    height: 60px;
+    background-image: radial-gradient(#93c5fd 1.8px, transparent 1.8px);
+    background-size: 13px 13px;
+    opacity: 0.45;
+    z-index: 4;
+    pointer-events: none;
+}
+
+/* Left Content Panel */
+.staff-hero-left-panel {
+    position: relative;
+    z-index: 3;
+    width: 53%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    padding: clamp(20px, 3vw, 36px) clamp(20px, 3vw, 36px) clamp(20px, 3vw, 36px) clamp(22px, 3.5vw, 45px);
+}
+
+.staff-hero-content-inner {
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    max-width: 520px;
+}
+
+/* Breadcrumbs */
+.staff-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+}
+
+.staff-breadcrumb a {
+    color: #083B7A;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.staff-breadcrumb a:hover {
+    color: #F37021;
+}
+
+.staff-breadcrumb .sep {
+    font-size: 0.65rem;
+    color: #94a3b8;
+}
+
+.staff-breadcrumb .active {
+    color: #F37021;
+}
+
+/* Eyebrow */
+.staff-eyebrow {
+    display: inline-block;
+    color: #F37021;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.staff-eyebrow::before,
+.staff-eyebrow::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* Main Title */
+.staff-hero-title {
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: clamp(1.75rem, 2.5vw, 2.35rem);
+    font-weight: 800;
+    color: #083B7A;
+    line-height: 1.18;
+    margin: 0 0 10px;
+    letter-spacing: -0.4px;
+}
+
+/* Description */
+.staff-hero-desc {
+    font-size: 0.88rem;
+    color: #475569;
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* ==========================================================================
+   2. FLOATING STATS STRIP
+   ========================================================================== */
+
+.staff-stats-strip-wrapper {
+    position: relative;
+    z-index: 10;
+    margin-top: -24px;
+    padding: 0 clamp(16px, 3vw, 24px);
+    width: 100%;
+}
+
+.staff-stats-strip {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #dbeafe;
+    border-radius: 16px;
+    padding: 12px 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    box-shadow: 0 8px 24px rgba(8, 59, 122, 0.06);
+}
+
+.staff-stat-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+    border-right: 1px solid #e2e8f0;
+    padding: 4px 10px;
+}
+
+.staff-stat-item:last-child {
+    border-right: none;
+}
+
+.staff-stat-icon {
+    font-size: 1.45rem;
+    color: #0284C7;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.staff-stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.staff-stat-num {
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #083B7A;
+    line-height: 1.1;
+}
+
+.staff-stat-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #64748b;
+    margin-top: 1px;
+    white-space: nowrap;
+}
+
+/* ==========================================================================
+   3. EDUCATORS GRID SECTION
+   ========================================================================== */
+
+.staff-grid-section {
+    position: relative;
+    padding: clamp(32px, 4vw, 48px) 0 clamp(20px, 3vw, 32px);
+    background: #ffffff;
+}
+
+.staff-decor-dots-left,
+.staff-decor-dots-right {
+    position: absolute;
+    width: 80px;
+    height: 100px;
+    background-image: radial-gradient(#93c5fd 1.8px, transparent 1.8px);
+    background-size: 16px 16px;
+    opacity: 0.45;
+    pointer-events: none;
+}
+
+.staff-decor-dots-left {
+    top: 30px;
+    left: clamp(15px, 3.5vw, 48px);
+}
+
+.staff-decor-dots-right {
+    top: 30px;
+    right: clamp(15px, 3.5vw, 48px);
+}
+
+.staff-grid-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 clamp(16px, 2.5vw, 24px);
+    position: relative;
+    z-index: 2;
+}
+
+.staff-section-header {
+    text-align: center;
+    max-width: 740px;
+    margin: 0 auto clamp(20px, 3vw, 32px);
+}
+
+.staff-educators-eyebrow {
+    display: inline-block;
+    color: #0284c7;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.staff-section-title {
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: clamp(1.6rem, 2.4vw, 2.15rem);
+    font-weight: 800;
+    color: #083B7A;
+    line-height: 1.2;
+    margin: 0 0 8px;
+    letter-spacing: -0.3px;
+}
+
+.staff-section-desc {
+    font-size: 0.86rem;
+    color: #64748b;
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* 8 Faculty Cards Grid */
+.staff-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.staff-card {
+    background: #ffffff;
+    border: 1px solid #e0effa;
+    border-radius: 16px;
+    padding: 20px 14px 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 3px 12px rgba(8, 59, 122, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    width: 100%;
+}
+
+.staff-card:hover {
+    transform: translateY(-3px);
+    border-color: #b9dcf2;
+    box-shadow: 0 8px 20px rgba(8, 59, 122, 0.08);
+}
+
+.staff-card-avatar-wrap {
+    margin-bottom: 10px;
+}
+
+.staff-card-avatar-circle {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: #e0f2fe;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 2px solid #ffffff;
+    box-shadow: 0 3px 10px rgba(8, 59, 122, 0.08);
+}
+
+.staff-avatar-svg {
+    width: 85%;
+    height: 85%;
+    display: block;
+}
+
+.staff-avatar-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 18%;
+    display: block;
+}
+
+/* Role Pills */
+.staff-role-pill {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 0.62rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin-bottom: 8px;
+    line-height: 1.3;
+    text-align: center;
+    max-width: 100%;
+    word-break: break-word;
+}
+
+.role-orange { background: #fff0e6; color: #e65100; }
+.role-blue { background: #e0f2fe; color: #0284c7; }
+.role-purple { background: #f3e8ff; color: #7c3aed; }
+.role-rose { background: #ffe4e6; color: #e11d48; }
+.role-green { background: #dcfce7; color: #16a34a; }
+.role-amber { background: #fef3c7; color: #d97706; }
+.role-cyan { background: #e0f2fe; color: #0284c7; }
+.role-pink { background: #fce7f3; color: #db2777; }
+
+.staff-card-name {
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 1rem;
+    font-weight: 800;
+    color: #083B7A;
+    margin: 0 0 6px;
+    letter-spacing: -0.2px;
+    line-height: 1.25;
+}
+
+/* Qualification */
+.staff-card-qual {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 0.74rem;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.qual-orange { color: #e65100; }
+.qual-blue { color: #0284c7; }
+.qual-purple { color: #7c3aed; }
+.qual-rose { color: #e11d48; }
+.qual-green { color: #16a34a; }
+.qual-amber { color: #d97706; }
+.qual-cyan { color: #0284c7; }
+.qual-pink { color: #db2777; }
+
+/* ==========================================================================
+   4. JOIN OUR TEAM SECTION (CTA BANNER)
+   ========================================================================== */
+
+.staff-join-section {
+    position: relative;
+    width: 100%;
+    min-height: 220px;
+    overflow: hidden;
+    background: linear-gradient(110deg, #edf8ff 0%, #dceeff 52%, #c9e3fb 100%);
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Background curved shapes */
+.staff-join-section .shape-one {
+    position: absolute;
+    width: 66%;
+    height: 125%;
+    left: -13%;
+    top: -35%;
+    border-radius: 50%;
+    background: rgba(205, 227, 247, 0.62);
+    transform: rotate(-3deg);
+    pointer-events: none;
+}
+
+.staff-join-section .shape-two {
+    position: absolute;
+    width: 43%;
+    height: 170%;
+    right: 13%;
+    top: -55%;
+    border-radius: 50%;
+    background: rgba(182, 214, 245, 0.48);
+    pointer-events: none;
+}
+
+.staff-join-section .shape-three {
+    position: absolute;
+    width: 31%;
+    height: 145%;
+    right: -5%;
+    top: -42%;
+    border-radius: 50%;
+    background: rgba(238, 248, 255, 0.75);
+    pointer-events: none;
+}
+
+/* Left Paper Airplane Graphic */
+.staff-join-plane-left {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 30%;
+    max-width: 340px;
+    z-index: 2;
+    pointer-events: none;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.staff-join-plane-img {
+    width: 100%;
+    height: 85%;
+    max-height: 190px;
+    object-fit: contain;
+    object-position: left center;
+    display: block;
+    mix-blend-mode: multiply;
+}
+
+/* Dots Pattern before Students on right */
+.staff-join-section .dot-pattern {
+    position: absolute;
+    right: 32%;
+    bottom: 20px;
+    width: 140px;
+    height: 80px;
+    opacity: 0.65;
+    background-image: radial-gradient(#2380c9 1.6px, transparent 1.7px);
+    background-size: 16px 16px;
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* Center Content */
+.banner-content-center {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    max-width: 580px;
+    margin: 0 auto;
+    padding: 26px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.copy-center {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.staff-join-section .eyebrow {
+    margin-bottom: 6px;
+    color: #F37021;
+    font-size: 0.74rem;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    text-align: center;
+}
+
+.staff-join-section .headline {
+    margin: 0 0 6px;
+    color: #083B7A;
+    font-size: clamp(20px, 2.2vw, 30px);
+    line-height: 1.2;
+    font-weight: 800;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    text-align: center;
+}
+
+.staff-join-section .subtext {
+    margin: 0 auto 16px;
+    color: #475569;
+    font-size: clamp(13px, 0.95vw, 15px);
+    line-height: 1.5;
+    max-width: 480px;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    text-align: center;
+}
+
+.staff-join-section .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.staff-btn-orange {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #F37021;
+    color: #ffffff !important;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 10px 22px;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(243, 112, 33, 0.25);
+    transition: all 0.2s ease;
+}
+
+.staff-btn-orange:hover {
+    background: #e05d0e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(243, 112, 33, 0.35);
+}
+
+.staff-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.92);
+    color: #083B7A !important;
+    border: 1.5px solid #083B7A;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 0.85rem;
+    font-weight: 700;
+    padding: 9px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.staff-btn-outline:hover {
+    background: #ffffff;
+    transform: translateY(-2px);
+}
+
+/* Students Image on Right */
+.staff-join-section .students {
+    position: absolute;
+    z-index: 4;
+    right: 0;
+    bottom: 0;
+    width: 36%;
+    max-width: 360px;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.staff-join-section .students img {
+    height: 100%;
+    max-height: 270px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: right bottom;
+    display: block;
+}
+
+/* ==========================================================================
+   5. CAMPUS SHOWCASE STRIP
+   ========================================================================== */
+
+.staff-campus-showcase-section {
+    padding: 10px 14px 36px;
+    background: #ffffff;
+    width: 100%;
+}
+
+.staff-campus-showcase-card {
+    max-width: 1140px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1.5px solid #d8ecff;
+    border-radius: 18px;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    box-shadow: 0 6px 20px rgba(8, 59, 122, 0.05);
+    width: 100%;
+}
+
+.staff-showcase-left {
+    position: relative;
+    padding-left: 14px;
+    max-width: 320px;
+    flex-shrink: 0;
+}
+
+.staff-showcase-bar {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    bottom: 2px;
+    width: 4px;
+    background: #0284C7;
+    border-radius: 4px;
+}
+
+.staff-showcase-title {
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: clamp(1.15rem, 1.4vw, 1.35rem);
+    font-weight: 800;
+    color: #083B7A;
+    line-height: 1.25;
+    margin: 0 0 4px;
+    letter-spacing: -0.3px;
+}
+
+.staff-showcase-desc {
+    font-size: 0.78rem;
+    color: #64748b;
+    line-height: 1.45;
+    margin: 0;
+}
+
+.staff-showcase-gallery {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    max-width: 440px;
+}
+
+.staff-showcase-thumb {
+    flex: 1 1 0;
+    min-width: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 72px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.staff-thumb-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+}
+
+.staff-showcase-thumb:hover .staff-thumb-img {
+    transform: scale(1.06);
+}
+
+.staff-showcase-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-shrink: 0;
+    min-width: 180px;
+}
+
+.staff-showcase-btn-orange {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #F37021;
+    color: #ffffff !important;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 9px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    box-shadow: 0 3px 10px rgba(243, 112, 33, 0.2);
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.staff-showcase-btn-orange:hover {
+    background: #e05d0e;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+
+.staff-showcase-btn-video {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: #ffffff;
+    color: #083B7A !important;
+    border: 1px solid #083B7A;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 9px 18px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.staff-showcase-btn-video i {
+    color: #0284C7;
+}
+
+.staff-showcase-btn-video:hover {
+    background: #f0f7ff;
+    color: #083B7A !important;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   ========================================================================== */
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .staff-cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+    }
+
+    .staff-showcase-gallery {
+        max-width: 360px;
+    }
+}
+
+/* Medium Devices (max-width: 991px) */
+@media (max-width: 991px) {
+    .staff-hero-left-panel {
+        width: 60%;
+        padding: 24px 20px;
+    }
+
+    .staff-campus-showcase-card {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+        padding: 18px 18px;
+    }
+
+    .staff-showcase-left {
+        max-width: 100%;
+    }
+
+    .staff-showcase-gallery {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .staff-showcase-thumb {
+        height: 80px;
+    }
+
+    .staff-showcase-actions {
+        width: 100%;
+        min-width: 100%;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .staff-showcase-btn-orange,
+    .staff-showcase-btn-video {
+        flex: 1;
+    }
+}
+
+/* Mobile & Phablet (max-width: 767px) */
+@media (max-width: 767px) {
+    .staff-hero-section {
+        padding: 6px 6px 0;
+    }
+
+    .staff-hero-canvas {
+        min-height: auto;
+        border-radius: 16px;
+        position: relative;
+        overflow: hidden;
+        background: linear-gradient(180deg, #f0f7fe 0%, #ffffff 100%);
+    }
+
+    /* Keep building image soft in background on mobile */
+    .staff-hero-bg-visual {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 180px;
+        opacity: 0.22;
+        pointer-events: none;
+    }
+
+    .staff-hero-wave-overlay {
+        display: none;
+    }
+
+    .staff-hero-dots-decor {
+        display: none;
+    }
+
+    .staff-hero-script-tag {
+        top: 10px;
+        right: 12px;
+        transform: scale(0.72) rotate(-3deg);
+        transform-origin: right top;
+    }
+
+    .staff-hero-left-panel {
+        width: 100%;
+        padding: 22px 16px 28px;
+    }
+
+    .staff-hero-title {
+        font-size: clamp(1.45rem, 5.5vw, 1.85rem);
+        line-height: 1.22;
+        margin-bottom: 8px;
+    }
+
+    /* Allow title to wrap naturally without rigid breaks on mobile */
+    .staff-hero-title br {
+        display: none;
+    }
+
+    .staff-hero-desc {
+        font-size: 0.84rem;
+        line-height: 1.5;
+    }
+
+    /* Stats Strip on Mobile */
+    .staff-stats-strip-wrapper {
+        margin-top: 12px;
+        padding: 0 10px;
+    }
+
+    .staff-stats-strip {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        padding: 12px 10px;
+        border-radius: 14px;
+    }
+
+    .staff-stat-item {
+        border-right: none !important;
+        background: #f8fafc;
+        border-radius: 10px;
+        padding: 8px 10px;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    .staff-stat-icon {
+        font-size: 1.25rem;
+    }
+
+    .staff-stat-num {
+        font-size: 1.12rem;
+    }
+
+    .staff-stat-label {
+        font-size: 0.68rem;
+        white-space: normal;
+        line-height: 1.2;
+    }
+
+    /* Educators Grid on Mobile */
+    .staff-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .staff-card {
+        padding: 14px 8px 12px;
+        border-radius: 14px;
+    }
+
+    .staff-card-avatar-circle {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 6px;
+    }
+
+    .staff-role-pill {
+        font-size: 0.58rem;
+        padding: 2px 6px;
+        letter-spacing: 0.2px;
+        margin-bottom: 6px;
+    }
+
+    .staff-card-name {
+        font-size: 0.9rem;
+        margin-bottom: 3px;
+    }
+
+    .staff-card-qual {
+        font-size: 0.68rem;
+    }
+
+    /* Join Our Team Section on Mobile */
+    .staff-join-section {
+        min-height: auto;
+        flex-direction: column;
+        align-items: center;
+        padding: 28px 16px 0;
+        margin: 24px 0;
+        border-radius: 0;
+    }
+
+    .staff-join-plane-left {
+        display: none;
+    }
+
+    .staff-join-section .dot-pattern {
+        display: none;
+    }
+
+    .banner-content-center {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 0 20px;
+        text-align: center;
+    }
+
+    .staff-join-section .headline {
+        font-size: clamp(1.35rem, 5vw, 1.65rem);
+        line-height: 1.25;
+        margin-bottom: 8px;
+    }
+
+    .staff-join-section .subtext {
+        font-size: 0.82rem;
+        line-height: 1.48;
+        margin: 0 auto 16px;
+        max-width: 360px;
+    }
+
+    .staff-join-section .buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+        gap: 10px;
+    }
+
+    .staff-btn-orange,
+    .staff-btn-outline {
+        width: 100%;
+        justify-content: center;
+        padding: 11px 20px;
+        font-size: 0.85rem;
+    }
+
+    .staff-join-section .students {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: 75%;
+        max-width: 260px;
+        height: auto;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .staff-join-section .students img {
+        height: auto;
+        max-height: 175px;
+        width: 100%;
+    }
+
+    /* Campus Showcase Strip on Mobile */
+    .staff-campus-showcase-section {
+        padding: 8px 10px 28px;
+    }
+
+    .staff-campus-showcase-card {
+        padding: 16px 14px;
+        border-radius: 14px;
+    }
+
+    .staff-showcase-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .staff-showcase-btn-orange,
+    .staff-showcase-btn-video {
+        width: 100%;
+        padding: 10px 16px;
+        font-size: 0.82rem;
+    }
+}
+
+/* Small Mobile Screens (max-width: 380px) */
+@media (max-width: 380px) {
+    .staff-stats-strip {
+        grid-template-columns: 1fr;
+        gap: 6px;
+    }
+
+    .staff-stat-item {
+        padding: 8px 10px;
+    }
+
+    .staff-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .staff-card {
+        padding: 12px 6px 10px;
+    }
+
+    .staff-card-avatar-circle {
+        width: 52px;
+        height: 52px;
+    }
+
+    .staff-card-name {
+        font-size: 0.84rem;
+    }
+
+    .staff-role-pill {
+        font-size: 0.54rem;
+        padding: 2px 4px;
+    }
+
+    .staff-card-qual {
+        font-size: 0.64rem;
+    }
+}
+
