@@ -51,13 +51,14 @@
 }
 
 .about-breadcrumb {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     gap: 8px;
     font-size: 0.8rem;
     font-weight: 600;
     color: #64748b;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+    width: 100%;
 }
 
 .about-breadcrumb a {
@@ -87,6 +88,12 @@
     margin-bottom: 6px;
     display: inline-block;
     letter-spacing: 0.5px;
+}
+
+.about-eyebrow::before,
+.about-eyebrow::after {
+    display: none !important;
+    content: none !important;
 }
 
 .about-hero-title {

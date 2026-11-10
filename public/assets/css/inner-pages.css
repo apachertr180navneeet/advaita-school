@@ -1315,11 +1315,8 @@
 
 .chairman-message-eyebrow::before,
 .chairman-message-eyebrow::after {
-    content: '';
-    display: inline-block;
-    width: 20px;
-    height: 2px;
-    background: #F37021;
+    display: none !important;
+    content: none !important;
 }
 
 .chairman-message-title {
@@ -1885,11 +1882,8 @@
 .principal-message-eyebrow::after,
 .principal-commitment-eyebrow::before,
 .principal-commitment-eyebrow::after {
-    content: '';
-    display: inline-block;
-    width: 18px;
-    height: 2px;
-    background: #0284C7;
+    display: none !important;
+    content: none !important;
 }
 
 .principal-message-title,
@@ -2221,11 +2215,8 @@
 
 .principal-cta-eyebrow::before,
 .principal-cta-eyebrow::after {
-    content: '';
-    display: inline-block;
-    width: 18px;
-    height: 2px;
-    background: #0284C7;
+    display: none !important;
+    content: none !important;
 }
 
 .principal-cta-title {
@@ -2606,11 +2597,8 @@
 .principal-eyebrow::after,
 .vision-eyebrow::before,
 .vision-eyebrow::after {
-    content: '';
-    display: inline-block;
-    width: 18px;
-    height: 2px;
-    background: #F37021;
+    display: none !important;
+    content: none !important;
 }
 
 .staff-hero-title,
@@ -3797,11 +3785,8 @@
 
 .vision-focus-eyebrow::before,
 .vision-focus-eyebrow::after {
-    content: '';
-    display: inline-block;
-    width: 18px;
-    height: 2px;
-    background: #F37021;
+    display: none !important;
+    content: none !important;
 }
 
 .vision-focus-grid {

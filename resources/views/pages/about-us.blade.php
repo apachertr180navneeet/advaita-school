@@ -40,9 +40,6 @@
                         <span class="active">About Us</span>
                     </nav>
 
-                    <!-- Eyebrow -->
-                    <div class="about-eyebrow">{{ $content['hero_eyebrow'] ?? 'About Us' }}</div>
-
                     <!-- Main Headline -->
                     <h1 class="about-hero-title">
                         {{ $content['hero_title'] ?? 'Advaita School of Excellence,' }}<br>
