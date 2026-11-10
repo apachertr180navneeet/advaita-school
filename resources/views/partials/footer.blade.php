@@ -78,7 +78,7 @@
                         <div class="adv-footer-touch-content">
                             <span class="touch-label">Campus</span>
                             <span class="touch-text">
-                                {{ \App\Models\Setting::get('site_address', 'Near Sanmati Campus, Jintur Road, Parbhani, Maharashtra – 431401') }}
+                                {{ \App\Models\Setting::get('site_address', '394, Madhav Nagar, Gangakhed Rd, Brahmangaon, Tq. Dist. Parbhani (MS)') }}
                             </span>
                         </div>
                     </div>
@@ -88,9 +88,9 @@
                             <i class="fa-solid fa-phone"></i>
                         </div>
                         <div class="adv-footer-touch-content">
-                            <span class="touch-label">Phone</span>
-                            <a href="tel:{{ \App\Models\Setting::get('site_phone_primary', '094130 62851') }}" class="touch-link">
-                                {{ \App\Models\Setting::get('site_phone_primary', '094130 62851') }} / {{ \App\Models\Setting::get('site_landline', '02452-224455') }}
+                            <span class="touch-label">Mobile</span>
+                            <a href="tel:{{ preg_replace('/[^0-9+]/', '', \App\Models\Setting::get('site_phone_primary', '+91 9689898973')) }}" class="touch-link">
+                                {{ \App\Models\Setting::get('site_phone_primary', '+91 9689898973') }}
                             </a>
                         </div>
                     </div>
@@ -101,8 +101,11 @@
                         </div>
                         <div class="adv-footer-touch-content">
                             <span class="touch-label">Email</span>
-                            <a href="mailto:{{ \App\Models\Setting::get('site_email_primary', 'info@advaitaschool.edu.in') }}" class="touch-link">
-                                {{ \App\Models\Setting::get('site_email_primary', 'info@advaitaschool.edu.in') }}
+                            <a href="mailto:{{ \App\Models\Setting::get('site_email_admissions', 'admissions.advaita@gmail.com') }}" class="touch-link">
+                                {{ \App\Models\Setting::get('site_email_admissions', 'admissions.advaita@gmail.com') }}
+                            </a>
+                            <a href="mailto:{{ \App\Models\Setting::get('site_email_principal', 'principal.advaita2019@gmail.com') }}" class="touch-link" style="margin-top: 3px; display: block;">
+                                {{ \App\Models\Setting::get('site_email_principal', 'principal.advaita2019@gmail.com') }}
                             </a>
                         </div>
                     </div>
@@ -124,7 +127,7 @@
                 <div class="adv-footer-map-card">
                     <div class="adv-footer-map-iframe-wrap">
                         <iframe class="adv-footer-map-iframe" 
-                            src="{{ \App\Models\Setting::get('site_google_map_embed', 'https://maps.google.com/maps?q=Advaita+School+of+Excellence,+Parbhani&t=&z=15&ie=UTF8&iwloc=&output=embed') }}" 
+                            src="{{ \App\Models\Setting::get('site_google_map_embed', 'https://maps.google.com/maps?q=394,+Madhav+Nagar,+Gangakhed+Rd,+Brahmangaon,+Parbhani&t=&z=15&ie=UTF8&iwloc=&output=embed') }}" 
                             width="100%" 
                             height="100%" 
                             allowfullscreen="" 
@@ -133,7 +136,7 @@
                             title="Advaita School of Excellence Parbhani on Google Maps">
                         </iframe>
                     </div>
-                    <a href="{{ \App\Models\Setting::get('site_google_map_link', 'https://www.google.com/maps/place/Advaita+School+of+Excellence/@19.2634,76.7749,17z/') }}" target="_blank" rel="noopener noreferrer" class="adv-footer-map-btn">
+                    <a href="{{ \App\Models\Setting::get('site_google_map_link', 'https://www.google.com/maps/search/?api=1&query=394,+Madhav+Nagar,+Gangakhed+Rd,+Brahmangaon,+Parbhani') }}" target="_blank" rel="noopener noreferrer" class="adv-footer-map-btn">
                         <span>View on Google Maps</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>

@@ -233,11 +233,11 @@ $currentPage = $activePage ?? '';
 
     <!-- Quick Action Contact Bar -->
     <div class="adv-mobile-quickbar">
-        <a href="tel:+919413062851" class="adv-mobile-quick-btn call-btn">
+        <a href="tel:+919689898973" class="adv-mobile-quick-btn call-btn">
             <i class="fa-solid fa-phone"></i>
             <span>Call School</span>
         </a>
-        <a href="https://wa.me/919413062851" target="_blank" rel="noopener noreferrer" class="adv-mobile-quick-btn whatsapp-btn">
+        <a href="https://wa.me/919689898973" target="_blank" rel="noopener noreferrer" class="adv-mobile-quick-btn whatsapp-btn">
             <i class="fa-brands fa-whatsapp"></i>
             <span>WhatsApp</span>
         </a>

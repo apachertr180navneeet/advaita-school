@@ -89,7 +89,7 @@
                             <div class="adv-footer-touch-content">
                                 <span class="touch-label">Campus</span>
                                 <span class="touch-text">
-                                    Sanmati Campus, Near Highway Ring Road, Parbhani, Maharashtra – 431401
+                                    394, Madhav Nagar, Gangakhed Rd, Brahmangaon, Tq. Dist. Parbhani (MS)
                                 </span>
                             </div>
                         </div>
@@ -100,8 +100,8 @@
                                 <i class="fa-solid fa-phone"></i>
                             </div>
                             <div class="adv-footer-touch-content">
-                                <span class="touch-label">Phone</span>
-                                <a href="tel:+919876543210" class="touch-link">+91 98765 43210 / 02452-224455</a>
+                                <span class="touch-label">Mobile</span>
+                                <a href="tel:+919689898973" class="touch-link">+91 9689898973</a>
                             </div>
                         </div>
 
@@ -112,7 +112,8 @@
                             </div>
                             <div class="adv-footer-touch-content">
                                 <span class="touch-label">Email</span>
-                                <a href="mailto:info@advaitaschool.edu.in" class="touch-link">info@advaitaschool.edu.in</a>
+                                <a href="mailto:admissions.advaita@gmail.com" class="touch-link">admissions.advaita@gmail.com</a>
+                                <a href="mailto:principal.advaita2019@gmail.com" class="touch-link" style="margin-top: 3px; display: block;">principal.advaita2019@gmail.com</a>
                             </div>
                         </div>
 
@@ -135,7 +136,7 @@
                     <div class="adv-footer-map-card">
                         <div class="adv-footer-map-iframe-wrap">
                             <iframe 
-                                src="https://maps.google.com/maps?q=Advaita+School+of+Excellence,+Parbhani&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                                src="https://maps.google.com/maps?q=394,+Madhav+Nagar,+Gangakhed+Rd,+Brahmangaon,+Parbhani&t=&z=15&ie=UTF8&iwloc=&output=embed" 
                                 width="100%" 
                                 height="100%" 
                                 style="border:0;" 
@@ -145,7 +146,7 @@
                                 title="Advaita School of Excellence Parbhani on Google Maps">
                             </iframe>
                         </div>
-                        <a href="https://www.google.com/maps/place/Advaita+School+of+Excellence/@19.2634,76.7749,17z/" target="_blank" rel="noopener noreferrer" class="adv-footer-map-btn">
+                        <a href="https://www.google.com/maps/search/?api=1&query=394,+Madhav+Nagar,+Gangakhed+Rd,+Brahmangaon,+Parbhani" target="_blank" rel="noopener noreferrer" class="adv-footer-map-btn">
                             <span>View on Google Maps</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>

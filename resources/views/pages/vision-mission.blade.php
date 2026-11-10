@@ -2,66 +2,43 @@
 
 @section('title', "Vision & Mission - Advaita School of Excellence, Parbhani")
 
+@section('styles')
+<link rel="stylesheet" href="{{ asset('assets/css/vision-mission.css') }}?v={{ file_exists(public_path('assets/css/vision-mission.css')) ? filemtime(public_path('assets/css/vision-mission.css')) : '1.0' }}">
+@endsection
+
 @section('content')
 <main id="main" class="main-content-wrapper vision-page-wrapper">
 
     <!-- =========================================================================
-         1. HERO SECTION: Guiding Young Minds Towards a Brighter Tomorrow
+         1. HERO SECTION: Guiding Young Minds Towards a Brighter Tomorrow (Centered)
          ========================================================================= -->
     <section class="vision-hero-section">
-        <div class="vision-hero-canvas">
-            <!-- Background Image & Sky on the Right -->
+        <div class="vision-hero-canvas vision-hero-centered-canvas">
+            <!-- Background Image & Subtle Ambient Overlay -->
             <div class="vision-hero-bg-visual" aria-hidden="true">
                 <img src="{{ asset($content['hero_image'] ?? 'assets/images/about-hero-building.jpg') }}" alt="Advaita School of Excellence Campus" class="vision-hero-bg-img" loading="eager">
-                <!-- Floating Script Badge in Sky -->
-                <div class="vision-hero-script-tag">
-                    <span class="script-title">More<br>Than A School</span>
-                    <svg class="script-underline" viewBox="0 0 140 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                        <path d="M4 10C36 4 98 4 136 12" stroke="#F37021" stroke-width="3.5" stroke-linecap="round"/>
-                        <path d="M18 14C48 9 92 8 126 15" stroke="#F37021" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
-                    </svg>
-                </div>
+                <div class="vision-hero-overlay-center"></div>
             </div>
 
-            <!-- Full Width Wave Mask Overlay with ambient blue contour -->
-            <div class="vision-hero-wave-overlay" aria-hidden="true">
-                <svg viewBox="0 0 1440 480" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <linearGradient id="visionWaveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#0284C7"/>
-                            <stop offset="50%" stop-color="#38BDF8"/>
-                            <stop offset="100%" stop-color="#60A5FA"/>
-                        </linearGradient>
-                    </defs>
-                    <!-- Ambient soft blue aura at far left -->
-                    <path d="M0,60 C90,60 140,160 140,260 C140,360 85,430 0,450 Z" fill="#E8F4FE" opacity="0.85"/>
-                    <!-- Outer vibrant sky-blue contour wave -->
-                    <path d="M0,0 L615,0 C680,110 720,230 685,330 C655,410 590,455 535,480 L0,480 Z" fill="url(#visionWaveGrad)" opacity="0.95"/>
-                    <!-- Mid soft blue contour wave -->
-                    <path d="M0,0 L600,0 C665,110 705,230 670,330 C640,410 575,455 520,480 L0,480 Z" fill="#BAE6FD"/>
-                    <!-- Main solid white wave panel covering left side completely -->
-                    <path d="M0,0 L585,0 C650,110 690,230 655,330 C625,410 560,455 505,480 L0,480 Z" fill="#FFFFFF"/>
-                </svg>
-            </div>
-
-            <!-- Left Dot Matrix Decor -->
-            <div class="vision-hero-dots-decor" aria-hidden="true"></div>
-
-            <!-- Left Content Panel -->
-            <div class="vision-hero-left-panel">
-                <div class="vision-hero-content-inner">
-                    <!-- Breadcrumbs -->
-                    <div class="vision-breadcrumb">
+            <!-- Centered Content Panel -->
+            <div class="vision-hero-center-panel">
+                <div class="vision-hero-content-inner text-center">
+                    <!-- Breadcrumbs Centered -->
+                    <nav class="vision-breadcrumb vision-breadcrumb-center" aria-label="Breadcrumb">
                         <a href="{{ route('home') }}">Home</a>
                         <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
                         <a href="{{ route('about-us') }}">About Us</a>
                         <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
                         <span class="active">Vision &amp; Mission</span>
+                    </nav>
+
+                    <div class="vision-eyebrow-pill">
+                        <i class="fa-solid fa-compass"></i>
+                        <span>{{ $content['hero_badge'] ?? 'OUR VISION & MISSION' }}</span>
                     </div>
 
-                    <span class="vision-eyebrow">{{ $content['hero_badge'] ?? 'OUR VISION & MISSION' }}</span>
                     <h1 class="vision-hero-title">
-                        {{ $content['hero_title'] ?? 'Guiding Young Minds Towards a' }}<br>
+                        {{ $content['hero_title'] ?? 'Guiding Young Minds Towards a' }}
                         <span class="text-orange">{{ $content['hero_highlight'] ?? 'Brighter Tomorrow.' }}</span>
                     </h1>
 
@@ -77,17 +54,13 @@
          2. DUAL FEATURED HERO CARDS: OUR VISION & OUR MISSION
          ========================================================================= -->
     <section class="vision-dual-cards-section">
-        <!-- Ambient decorative dots -->
-        <div class="vision-dots-left" aria-hidden="true"></div>
-        <div class="vision-dots-right" aria-hidden="true"></div>
-
         <div class="vision-dual-cards-container">
             <div class="vision-dual-cards-grid">
 
-                <!-- Card 1: OUR VISION -->
+                <!-- Card 1: OUR VISION (With Advaita Students Image) -->
                 <div class="vision-featured-card vision-card-left">
                     <div class="vision-card-bg-visual">
-                        <img src="{{ asset($content['vision_card_image'] ?? 'assets/images/vision-mountain-peak.jpg') }}" alt="Majestic Mountain Summit - Vision" class="vision-mountain-img" loading="lazy">
+                        <img src="{{ asset($content['vision_card_image'] ?? 'assets/images/about-vision-students.jpg') }}" alt="Advaita Students Learning - Vision" class="vision-mountain-img" loading="lazy">
                         <div class="vision-mountain-overlay"></div>
                     </div>
                     
@@ -114,7 +87,7 @@
                     </div>
                 </div>
 
-                <!-- Card 2: OUR MISSION -->
+                <!-- Card 2: OUR MISSION (With Advaita Students Image) -->
                 <div class="vision-featured-card mission-card-right">
                     <div class="mission-card-bg-visual">
                         <img src="{{ asset($content['mission_card_image'] ?? 'assets/images/mission-student-inspirational.jpg') }}" alt="Inspiring Student - Mission" class="mission-student-img" loading="lazy">
@@ -149,7 +122,7 @@
     </section>
 
     <!-- =========================================================================
-         3. OUR CORE BELIEFS: What We Stand For (3 Cards Grid)
+         3. OUR CORE BELIEFS: What We Stand For (Cards + Children Photo)
          ========================================================================= -->
     <section class="vision-beliefs-section">
         <div class="vision-beliefs-container">
@@ -163,38 +136,69 @@
                 </p>
             </div>
 
-            <div class="vision-beliefs-grid">
-                <!-- Belief 1: Academic Excellence -->
-                <div class="vision-belief-card">
-                    <div class="vision-belief-icon icon-blue">
-                        <i class="fa-solid fa-eye"></i>
+            <!-- Two-column split: Left 3 Core Belief Cards + Right Children Showcase Image -->
+            <div class="vision-beliefs-split-layout">
+                <!-- Left: 3 Core Belief Cards Stacked -->
+                <div class="vision-beliefs-cards-col">
+                    <!-- Belief 1: Academic Excellence -->
+                    <div class="vision-belief-card card-orange-accent">
+                        <div class="vision-belief-icon icon-orange">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div class="vision-belief-info">
+                            <h3 class="vision-belief-title">Academic Excellence</h3>
+                            <p class="vision-belief-desc">
+                                A strong foundation with CBSE academics and integrated NEET/IIT preparation.
+                            </p>
+                        </div>
                     </div>
-                    <h3 class="vision-belief-title">Academic Excellence</h3>
-                    <p class="vision-belief-desc">
-                        A strong foundation with CBSE academics and integrated NEET/IIT preparation.
-                    </p>
+
+                    <!-- Belief 2: Character & Values -->
+                    <div class="vision-belief-card card-blue-accent">
+                        <div class="vision-belief-icon icon-blue">
+                            <i class="fa-solid fa-shield-heart"></i>
+                        </div>
+                        <div class="vision-belief-info">
+                            <h3 class="vision-belief-title">Character &amp; Values</h3>
+                            <p class="vision-belief-desc">
+                                Discipline, empathy and responsibility to create compassionate individuals.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Belief 3: Holistic Development -->
+                    <div class="vision-belief-card card-green-accent">
+                        <div class="vision-belief-icon icon-green">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <div class="vision-belief-info">
+                            <h3 class="vision-belief-title">Holistic Development</h3>
+                            <p class="vision-belief-desc">
+                                Encouraging creativity, curiosity and participation in academics, sports, arts and life skills.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Belief 2: Character & Values -->
-                <div class="vision-belief-card">
-                    <div class="vision-belief-icon icon-blue">
-                        <i class="fa-solid fa-users"></i>
+                <!-- Right: High-quality Image of Advaita Children -->
+                <div class="vision-beliefs-media-col">
+                    <div class="vision-beliefs-photo-frame">
+                        <img src="{{ asset('assets/images/about-commitment-students.jpg') }}" 
+                             alt="Advaita School students smiling together" 
+                             class="vision-beliefs-photo" 
+                             loading="lazy">
+                        
+                        <!-- Floating Trust Badge over photo -->
+                        <div class="vision-beliefs-floating-badge">
+                            <div class="vbfb-icon">
+                                <i class="fa-solid fa-shapes"></i>
+                            </div>
+                            <div class="vbfb-text">
+                                <strong>Values in Action</strong>
+                                <span>Confidence &bull; Character &bull; Excellence</span>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="vision-belief-title">Character &amp; Values</h3>
-                    <p class="vision-belief-desc">
-                        Discipline, empathy and responsibility to create compassionate individuals.
-                    </p>
-                </div>
-
-                <!-- Belief 3: Holistic Development -->
-                <div class="vision-belief-card">
-                    <div class="vision-belief-icon icon-blue">
-                        <i class="fa-solid fa-lightbulb"></i>
-                    </div>
-                    <h3 class="vision-belief-title">Holistic Development</h3>
-                    <p class="vision-belief-desc">
-                        Encouraging creativity, curiosity and participation in academics, sports, arts and life skills.
-                    </p>
                 </div>
             </div>
         </div>
@@ -320,9 +324,24 @@
         <div class="shape-two"></div>
         <div class="shape-three"></div>
 
-        <!-- Left Graphic: Paper Airplane Image -->
+        <!-- Left Graphic: Paper Airplane SVG -->
         <div class="staff-join-plane-left" aria-hidden="true">
-            <img src="{{ asset('assets/images/staff-airplane-trail.svg') }}" alt="Paper Airplane Trail" class="staff-join-plane-img" loading="lazy">
+            <svg class="staff-join-plane-img" viewBox="0 0 360 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Dotted Loop Flight Path -->
+                <path d="M 15 205 C 70 150, 110 98, 165 98 C 215 98, 235 145, 205 165 C 175 180, 178 125, 255 58" 
+                      stroke="#0284C7" 
+                      stroke-width="2.4" 
+                      stroke-dasharray="6 6" 
+                      stroke-linecap="round" 
+                      opacity="0.85" />
+                <!-- Classic Straight Paper Airplane -->
+                <g transform="translate(255, 58) rotate(-38)">
+                    <polygon points="46,0 0,-18 16,0" fill="#E0F2FE" stroke="#0284C7" stroke-width="1.8" stroke-linejoin="round"/>
+                    <polygon points="46,0 16,0 0,18" fill="#38BDF8" stroke="#0284C7" stroke-width="1.8" stroke-linejoin="round"/>
+                    <polygon points="16,0 0,18 6,6" fill="#0284C7" stroke="#0284C7" stroke-width="1.2" stroke-linejoin="round"/>
+                    <line x1="46" y1="0" x2="16" y2="0" stroke="#0284C7" stroke-width="1.8" stroke-linecap="round"/>
+                </g>
+            </svg>
         </div>
 
         <!-- Center Content -->

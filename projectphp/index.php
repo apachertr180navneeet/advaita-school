@@ -215,7 +215,7 @@ require_once __DIR__.'/includes/header.php';
                                 <i class="fa-solid fa-graduation-cap"></i>
                             </div>
                             <div class="adv-trust-badge-content">
-                                <span class="adv-trust-num">Play Group</span>
+                                <span class="adv-trust-num">Play Group to Class X</span>
                                 <span class="adv-trust-sub">CBSE Affiliation No. 1130920</span>
                             </div>
                         </div>
@@ -251,7 +251,7 @@ require_once __DIR__.'/includes/header.php';
 
                     <!-- Explanatory Paragraph -->
                     <p class="adv-welcome-desc">
-                        Established with a deep commitment to educational excellence, Advaita School of Excellence provides a seamless educational journey from Play Group onwards. We harmonize rigorous CBSE academic standards with experiential learning, cultural values, and modern 21st-century competencies.
+                        Established with a deep commitment to educational excellence, Advaita School of Excellence provides a seamless educational journey from Play Group to Class X. We harmonize rigorous CBSE academic standards with experiential learning, cultural values, and modern 21st-century competencies.
                     </p>
 
                     <!-- 4 Core Feature Cards (2x2 Grid) -->

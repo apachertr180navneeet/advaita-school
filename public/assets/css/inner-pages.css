@@ -3731,6 +3731,199 @@
     margin: 0;
 }
 
+/* Vision & Mission Centered Hero & Beliefs Split Layout */
+.vision-hero-centered-canvas {
+    min-height: 380px !important;
+    background: linear-gradient(135deg, #f0f7fd 0%, #e8f3fc 60%, #e2effa 100%) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center;
+}
+
+.vision-hero-centered-canvas .vision-hero-bg-visual {
+    width: 100% !important;
+    opacity: 0.22;
+    background: transparent !important;
+}
+
+.vision-hero-centered-canvas .vision-hero-bg-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.vision-hero-overlay-center {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(240, 247, 253, 0.92) 20%, rgba(240, 247, 253, 0.75) 70%, rgba(226, 239, 250, 0.6) 100%);
+}
+
+.vision-hero-center-panel {
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 36px 20px;
+    text-align: center;
+}
+
+.vision-breadcrumb-center {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 14px;
+}
+
+.vision-breadcrumb-center a {
+    color: #083B7A;
+    text-decoration: none;
+}
+
+.vision-breadcrumb-center a:hover {
+    color: #F37021;
+}
+
+.vision-eyebrow-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    border: 1px solid #fed7aa;
+    box-shadow: 0 2px 8px rgba(243, 112, 33, 0.08);
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #F37021;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.vision-beliefs-split-layout {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 32px;
+    align-items: stretch;
+    margin-top: 24px;
+}
+
+.vision-beliefs-cards-col {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    justify-content: center;
+}
+
+.vision-belief-card.card-orange-accent { border-left: 4px solid #F37021; }
+.vision-belief-card.card-blue-accent { border-left: 4px solid #083B7A; }
+.vision-belief-card.card-green-accent { border-left: 4px solid #16a34a; }
+
+.vision-beliefs-media-col {
+    display: flex;
+    align-items: stretch;
+}
+
+.vision-beliefs-photo-frame {
+    position: relative;
+    width: 100%;
+    min-height: 320px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 12px 32px rgba(8, 59, 122, 0.12);
+    border: 3px solid #ffffff;
+}
+
+.vision-beliefs-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.vision-beliefs-floating-badge {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(8, 59, 122, 0.1);
+    border-radius: 14px;
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 8px 24px rgba(8, 59, 122, 0.12);
+}
+
+.vbfb-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #F37021 0%, #ff8c42 100%);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+}
+
+.vbfb-text strong {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 800;
+    color: #083B7A;
+    line-height: 1.2;
+}
+
+.vbfb-text span {
+    font-size: 0.72rem;
+    color: #64748b;
+    font-weight: 600;
+}
+
+@media (max-width: 991px) {
+    .vision-beliefs-split-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .vision-beliefs-photo-frame {
+        min-height: 250px;
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 640px) {
+    .vision-hero-centered-canvas {
+        min-height: 270px !important;
+        border-radius: 16px !important;
+    }
+    .vision-hero-center-panel {
+        padding: 24px 14px;
+    }
+    .vision-hero-title {
+        font-size: 1.6rem !important;
+    }
+    .vision-hero-desc {
+        font-size: 0.85rem !important;
+    }
+    .vision-beliefs-photo-frame {
+        min-height: 220px;
+        max-height: 250px;
+    }
+}
+
 /* Vision Focus Areas (8 Cards Grid) */
 .vision-focus-section {
     position: relative;

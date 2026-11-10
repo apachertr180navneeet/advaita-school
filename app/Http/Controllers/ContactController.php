@@ -17,16 +17,18 @@ class ContactController extends Controller
         ];
 
         $site = [
-            'phone_primary' => Setting::get('site_phone_primary', '094130 62851'),
-            'phone_secondary' => Setting::get('site_phone_secondary', '+91 98765 43210'),
-            'landline' => Setting::get('site_landline', '02452-224455'),
-            'email_primary' => Setting::get('site_email_primary', 'info@advaitaschool.edu.in'),
-            'email_admissions' => Setting::get('site_email_admissions', 'admissions@advaitaschool.edu.in'),
-            'address' => Setting::get('site_address', 'Near Sanmati Campus, Jintur Road, Parbhani, Maharashtra - 431401'),
+            'phone_primary' => Setting::get('site_phone_primary', '+91 9689898973'),
+            'phone_secondary' => Setting::get('site_phone_secondary', '+91 9689898973'),
+            'landline' => Setting::get('site_landline', '+91 9689898973'),
+            'whatsapp_number' => Setting::get('site_whatsapp_number', '919689898973'),
+            'email_primary' => Setting::get('site_email_primary', 'admissions.advaita@gmail.com'),
+            'email_admissions' => Setting::get('site_email_admissions', 'admissions.advaita@gmail.com'),
+            'email_principal' => Setting::get('site_email_principal', 'principal.advaita2019@gmail.com'),
+            'address' => Setting::get('site_address', '394, Madhav Nagar, Gangakhed Rd, Brahmangaon, Tq. Dist. Parbhani (MS)'),
             'school_hours' => Setting::get('site_school_hours', 'Mon – Sat | 8:00 AM – 3:00 PM'),
             'office_hours' => Setting::get('site_office_hours', 'Mon – Sat | 9:00 AM – 5:00 PM'),
-            'google_map_embed' => Setting::get('site_google_map_embed', 'https://maps.google.com/maps?q=Advaita+School+of+Excellence,+Parbhani&t=&z=15&ie=UTF8&iwloc=&output=embed'),
-            'google_map_link' => Setting::get('site_google_map_link', 'https://www.google.com/maps/place/Advaita+School+of+Excellence/@19.2634,76.7749,17z/'),
+            'google_map_embed' => Setting::get('site_google_map_embed', 'https://maps.google.com/maps?q=394,+Madhav+Nagar,+Gangakhed+Rd,+Brahmangaon,+Parbhani&t=&z=15&ie=UTF8&iwloc=&output=embed'),
+            'google_map_link' => Setting::get('site_google_map_link', 'https://www.google.com/maps/search/?api=1&query=394,+Madhav+Nagar,+Gangakhed+Rd,+Brahmangaon,+Parbhani'),
         ];
 
         return view('pages.contact', compact('seo', 'site'));
