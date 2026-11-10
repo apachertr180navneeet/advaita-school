@@ -304,13 +304,13 @@ class PageController extends Controller
     {
         $seo = $this->getPageSeo(
             'pre_primary',
-            'Pre-Primary Wing (Nursery, LKG, UKG) - Advaita School of Excellence, Parbhani',
+            'Pre-Primary Wing (Play Group, Nursery, LKG, UKG) - Advaita School of Excellence, Parbhani',
             'Dedicated Pre-Primary landing page showcasing our play-based early learning curriculum, child-friendly facilities, and upcoming state-of-the-art new school building.',
-            'Pre-Primary school Parbhani, Nursery admission Parbhani, Kindergarten CBSE, play school, early childhood education'
+            'Pre-Primary school Parbhani, Play Group Nursery admission Parbhani, Kindergarten CBSE, play school, early childhood education'
         );
 
         $content = [
-            'hero_badge' => Setting::get('pre_hero_badge', 'PRE-PRIMARY WING (NURSERY · LKG · UKG)'),
+            'hero_badge' => Setting::get('pre_hero_badge', 'FOUNDATIONAL STAGE · PRE-PRIMARY WING (PLAY GROUP · NURSERY · LKG · UKG)'),
             'hero_title' => Setting::get('pre_hero_title', 'Nurturing Curiosity in their'),
             'hero_highlight' => Setting::get('pre_hero_highlight', 'Most Wonder-Filled Years.'),
             'hero_subtitle' => Setting::get('pre_hero_subtitle', 'A joyful, play-based early childhood environment blending Montessori methods, sensory learning, and creative discovery.'),

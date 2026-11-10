@@ -11122,6 +11122,38 @@ textarea.reg-input-control {
    ========================================================================== */
 
 /* Pre-Primary Hero Enhancements */
+.pre-primary-hero .admission-hero-canvas {
+    position: relative;
+    overflow: hidden;
+    background: #eef6fc;
+}
+
+.pre-primary-hero .admission-hero-bg-visual {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 52%;
+    z-index: 1;
+    overflow: hidden;
+    display: block !important;
+}
+
+.pre-primary-hero .admission-hero-bg-img {
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    object-fit: cover !important;
+    object-position: center right !important;
+    filter: none !important;
+}
+
+.pre-primary-hero .admission-hero-left-panel {
+    position: relative;
+    z-index: 3;
+    width: 52%;
+}
+
 .pre-primary-hero .admission-hero-title {
     font-size: clamp(2rem, 3.2vw, 2.85rem);
     line-height: 1.2;
@@ -11702,32 +11734,164 @@ textarea.reg-input-control {
 }
 
 /* Responsive Media Queries for Pre-Primary Page */
-@media (max-width: 1024px) {
+@media (max-width: 991px) {
+    .pre-primary-hero .admission-hero-canvas {
+        flex-direction: column !important;
+        min-height: auto !important;
+        position: relative !important;
+    }
+
+    .pre-primary-hero .admission-hero-bg-visual {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        display: block !important;
+        z-index: 1 !important;
+        opacity: 0.16 !important;
+    }
+
+    .pre-primary-hero .admission-hero-bg-img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center !important;
+    }
+
+    .pre-primary-hero .admission-hero-wave-overlay {
+        display: none !important;
+    }
+
+    .pre-primary-hero .admission-hero-left-panel {
+        width: 100% !important;
+        position: relative !important;
+        z-index: 3 !important;
+        padding: 32px 20px 28px !important;
+    }
+
+    .pre-primary-hero .admission-hero-content-inner {
+        max-width: 100% !important;
+    }
+
+    .pre-primary-hero .admission-hero-script-tag {
+        display: none !important;
+    }
+
+    .pre-building-spotlight {
+        margin: 30px 0 40px !important;
+    }
+
+    .pre-building-card {
+        padding: 28px 20px !important;
+        border-radius: 20px !important;
+    }
+
+    .pre-building-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+    }
+
+    .pre-building-img-box img {
+        height: 280px !important;
+    }
+
+    .building-specs-tabs {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
     .acad-curriculum-grid,
     .instruments-grid,
     .safety-pillars-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
     }
+
     .pre-gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
     }
+
     .pre-helpline-card {
-        grid-template-columns: 1fr;
-        gap: 28px;
+        grid-template-columns: 1fr !important;
+        gap: 24px !important;
+        padding: 28px 20px !important;
+        margin: 36px 0 16px !important;
+        border-radius: 20px !important;
+    }
+
+    .pre-helpline-right {
+        width: 100% !important;
+    }
+
+    .btn-pre-cta-primary,
+    .btn-pre-cta-wa,
+    .btn-pre-cta-call {
+        width: 100% !important;
+        justify-content: center !important;
+        white-space: normal !important;
+        text-align: center !important;
     }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 600px) {
+    .pre-primary-hero .admission-hero-left-panel {
+        padding: 24px 16px 20px !important;
+    }
+
+    .pre-primary-hero .admission-hero-title {
+        font-size: 1.7rem !important;
+        line-height: 1.22 !important;
+    }
+
+    .pre-primary-hero .admission-btn-primary,
+    .pre-primary-hero .admission-btn-visit {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    .pre-building-card {
+        padding: 20px 14px !important;
+        border-radius: 16px !important;
+    }
+
+    .pre-building-img-box img {
+        height: 220px !important;
+    }
+
+    .building-heading {
+        font-size: 22px !important;
+    }
+
+    .building-status-badge {
+        font-size: 11.5px !important;
+        padding: 6px 10px !important;
+        bottom: 10px !important;
+        left: 10px !important;
+        right: 10px !important;
+    }
+
+    .btn-building-cta {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
     .acad-curriculum-grid,
     .instruments-grid,
     .safety-pillars-grid,
     .pre-gallery-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
     }
-    .btn-pre-cta-primary,
-    .btn-pre-cta-wa,
-    .btn-pre-cta-call {
-        width: 100%;
+
+    .pre-helpline-card {
+        padding: 22px 16px !important;
+        border-radius: 16px !important;
+    }
+
+    .pre-meta-row {
+        font-size: 0.82rem !important;
+        align-items: flex-start !important;
+        word-break: break-word !important;
     }
 }
 

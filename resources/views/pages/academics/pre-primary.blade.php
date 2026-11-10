@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', "Pre-Primary Wing (Nursery, LKG, UKG) - Advaita School of Excellence, Parbhani")
+@section('title', "Pre-Primary Wing (Play Group, Nursery, LKG, UKG) - Advaita School of Excellence, Parbhani")
 @section('meta_description', "Explore Advaita's Pre-Primary Wing featuring play-based learning, creative teaching methods, child-safe infrastructure, and our upcoming new state-of-the-art school building.")
 
 @section('content')
@@ -39,7 +39,7 @@
                     <nav class="admission-breadcrumb" aria-label="Breadcrumb">
                         <a href="{{ route('home') }}">Home</a>
                         <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
-                        <a href="{{ route('academics') }}">Programmes</a>
+                        <a href="{{ route('academics') }}">Academics</a>
                         <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
                         <span class="active">Pre-Primary</span>
                     </nav>
@@ -47,7 +47,7 @@
                     <!-- Eyebrow -->
                     <div class="admission-eyebrow">
                         <i class="fa-solid fa-shapes text-orange me-1"></i>
-                        {{ $content['hero_badge'] ?? 'PRE-PRIMARY WING (NURSERY · LKG · UKG)' }}
+                        {{ $content['hero_badge'] ?? 'FOUNDATIONAL STAGE · PRE-PRIMARY WING (PLAY GROUP · NURSERY · LKG · UKG)' }}
                     </div>
 
                     <!-- Main Headline with Fraunces Serif Highlight -->
@@ -95,7 +95,7 @@
                 </a>
                 <a href="{{ route('academics.pre-primary') }}" class="acad-pill-btn active">
                     <i class="fa-solid fa-shapes"></i>
-                    <span>Pre-Primary (Nursery–UKG)</span>
+                    <span>Pre-Primary (Play Group–UKG)</span>
                 </a>
                 <a href="{{ route('academics.primary') }}" class="acad-pill-btn">
                     <i class="fa-solid fa-book-open-reader"></i>
@@ -412,21 +412,21 @@
                     Give Your Child the <span class="highlight-orange">Best Start in Life.</span>
                 </h2>
                 <p class="pre-helpline-desc">
-                    Admissions are now open for Nursery, LKG, and UKG for the upcoming academic session. Limited seats per batch to preserve our 1:15 educator ratio.
+                    Admissions are now open for Play Group, Nursery, LKG, and UKG for the upcoming academic session. Limited seats per batch to preserve our 1:15 educator ratio.
                 </p>
 
                 <div class="pre-helpline-meta-list">
                     <div class="pre-meta-row">
-                        <i class="fa-solid fa-user-tie"></i>
-                        <span>Pre-Primary Counsellor: <strong>Ms. Vaishnavi (+91 94221 75522)</strong></span>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Admissions Desk: <a href="mailto:admissions.advaita@gmail.com" class="text-white text-decoration-none"><strong>admissions.advaita@gmail.com</strong></a></span>
                     </div>
                     <div class="pre-meta-row">
                         <i class="fa-solid fa-phone"></i>
-                        <span>Campus Helpline: <strong>094130 62851 &bull; 02452 297298</strong></span>
+                        <span>Campus Helpline: <a href="tel:+919689898973" class="text-white text-decoration-none"><strong>+91 9689898973</strong></a></span>
                     </div>
                     <div class="pre-meta-row">
                         <i class="fa-solid fa-clock"></i>
-                        <span>Campus Visiting Hours: <strong>Monday – Saturday (9:00 AM – 4:00 PM)</strong></span>
+                        <span>Campus Visiting Hours: <strong>Monday – Saturday (8:00 AM – 3:00 PM)</strong></span>
                     </div>
                 </div>
             </div>
@@ -436,13 +436,13 @@
                     <i class="fa-solid fa-file-pen"></i>
                     <span>Register Online Now</span>
                 </a>
-                <a href="https://wa.me/919413062851?text=Hello%20Advaita%20School,%20I%20am%20inquiring%20about%20Pre-Primary%20Admissions%202026-27." target="_blank" rel="noopener noreferrer" class="btn-pre-cta-wa" title="WhatsApp Enquiry">
+                <a href="https://wa.me/919689898973?text=Hello%20Advaita%20School,%20I%20am%20inquiring%20about%20Pre-Primary%20Admissions." target="_blank" rel="noopener noreferrer" class="btn-pre-cta-wa" title="WhatsApp Enquiry">
                     <i class="fa-brands fa-whatsapp"></i>
                     <span>Chat on WhatsApp</span>
                 </a>
-                <a href="tel:09413062851" class="btn-pre-cta-call" title="Call the School">
+                <a href="tel:+919689898973" class="btn-pre-cta-call" title="Call the School">
                     <i class="fa-solid fa-phone"></i>
-                    <span>Call: 094130 62851</span>
+                    <span>Call: +91 9689898973</span>
                 </a>
             </div>
         </div>
