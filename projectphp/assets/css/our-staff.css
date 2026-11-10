@@ -863,11 +863,154 @@
     }
 }
 
-/* Medium Devices (max-width: 991px) */
+/* Medium Devices & Tablet (max-width: 991px) */
 @media (max-width: 991px) {
+    .staff-hero-canvas {
+        min-height: auto !important;
+        border-radius: 18px !important;
+        position: relative !important;
+        overflow: hidden !important;
+        background: linear-gradient(135deg, #f0f7fe 0%, #e8f3fc 60%, #e2effa 100%) !important;
+        border: 1px solid #ddecfa !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+
+    .staff-hero-bg-visual {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        opacity: 0.16 !important;
+        pointer-events: none !important;
+        z-index: 1 !important;
+    }
+
+    .staff-hero-bg-img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center 25% !important;
+    }
+
+    .staff-hero-wave-overlay,
+    .staff-hero-dots-decor {
+        display: none !important;
+    }
+
+    .staff-hero-script-tag {
+        position: absolute !important;
+        top: 16px !important;
+        right: 20px !important;
+        transform: scale(0.85) rotate(-3deg) !important;
+        transform-origin: right top !important;
+        z-index: 2 !important;
+    }
+
     .staff-hero-left-panel {
-        width: 60%;
-        padding: 24px 20px;
+        position: relative !important;
+        z-index: 3 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: clamp(28px, 4vw, 36px) clamp(20px, 3.5vw, 32px) clamp(36px, 5vw, 48px) !important;
+        background: transparent !important;
+    }
+
+    .staff-hero-content-inner {
+        max-width: 680px !important;
+    }
+
+    .staff-hero-title {
+        font-size: clamp(1.85rem, 4vw, 2.35rem) !important;
+        line-height: 1.2 !important;
+        margin-bottom: 12px !important;
+    }
+
+    .staff-hero-desc {
+        font-size: clamp(0.92rem, 1.35vw, 1rem) !important;
+        line-height: 1.6 !important;
+        max-width: 640px !important;
+        color: #475569 !important;
+    }
+
+    /* Tablet Stats Strip: Clean 2x2 Grid with Flexible Columns */
+    .staff-stats-strip-wrapper {
+        position: relative !important;
+        z-index: 10 !important;
+        margin-top: -20px !important;
+        padding: 0 16px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .staff-stats-strip {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 12px !important;
+        padding: 14px 18px !important;
+        border-radius: 16px !important;
+        box-shadow: 0 8px 24px rgba(8, 59, 122, 0.08) !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .staff-stat-item {
+        border-right: none !important;
+        background: #f8fafc !important;
+        border: 1px solid #edf2f7 !important;
+        border-radius: 12px !important;
+        padding: 12px 14px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 12px !important;
+        min-width: 0 !important;
+        overflow: hidden !important;
+        box-sizing: border-box !important;
+    }
+
+    .staff-stat-icon {
+        width: 42px !important;
+        height: 42px !important;
+        font-size: 1.25rem !important;
+        color: #0284C7 !important;
+        background: #e0f2fe !important;
+        border-radius: 10px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-shrink: 0 !important;
+    }
+
+    .staff-stat-info {
+        min-width: 0 !important;
+        flex: 1 !important;
+        overflow: hidden !important;
+    }
+
+    .staff-stat-num {
+        font-size: 1.3rem !important;
+        font-weight: 800 !important;
+        color: #083B7A !important;
+        line-height: 1 !important;
+        display: block !important;
+    }
+
+    .staff-stat-label {
+        font-size: 0.76rem !important;
+        font-weight: 600 !important;
+        color: #64748b !important;
+        margin-top: 3px !important;
+        display: block !important;
+        white-space: normal !important;
+        line-height: 1.25 !important;
+        overflow-wrap: break-word !important;
+        word-break: normal !important;
+    }
+
+    /* Tablet Faculty Cards: 2 Spacious Columns */
+    .staff-cards-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
     }
 
     .staff-campus-showcase-card {
@@ -966,38 +1109,61 @@
 
     /* Stats Strip on Mobile */
     .staff-stats-strip-wrapper {
-        margin-top: 12px;
-        padding: 0 10px;
+        margin-top: 12px !important;
+        padding: 0 8px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
     }
 
     .staff-stats-strip {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
-        padding: 12px 10px;
-        border-radius: 14px;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 8px !important;
+        padding: 10px 8px !important;
+        border-radius: 12px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .staff-stat-item {
         border-right: none !important;
-        background: #f8fafc;
-        border-radius: 10px;
-        padding: 8px 10px;
-        justify-content: flex-start;
-        gap: 10px;
+        background: #f8fafc !important;
+        border: 1px solid #edf2f7 !important;
+        border-radius: 10px !important;
+        padding: 8px 8px !important;
+        justify-content: flex-start !important;
+        gap: 8px !important;
+        min-width: 0 !important;
+        overflow: hidden !important;
+        box-sizing: border-box !important;
     }
 
     .staff-stat-icon {
-        font-size: 1.25rem;
+        font-size: 1.15rem !important;
+        width: 34px !important;
+        height: 34px !important;
+        border-radius: 8px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .staff-stat-info {
+        min-width: 0 !important;
+        flex: 1 !important;
+        overflow: hidden !important;
     }
 
     .staff-stat-num {
-        font-size: 1.12rem;
+        font-size: 1.15rem !important;
+        line-height: 1.1 !important;
     }
 
     .staff-stat-label {
-        font-size: 0.68rem;
-        white-space: normal;
-        line-height: 1.2;
+        font-size: 0.65rem !important;
+        white-space: normal !important;
+        line-height: 1.22 !important;
+        word-break: normal !important;
+        overflow-wrap: break-word !important;
+        margin-top: 2px !important;
     }
 
     /* Educators Grid on Mobile */
@@ -1131,12 +1297,13 @@
 /* Small Mobile Screens (max-width: 380px) */
 @media (max-width: 380px) {
     .staff-stats-strip {
-        grid-template-columns: 1fr;
-        gap: 6px;
+        grid-template-columns: 1fr !important;
+        gap: 6px !important;
+        padding: 8px !important;
     }
 
     .staff-stat-item {
-        padding: 8px 10px;
+        padding: 8px 10px !important;
     }
 
     .staff-cards-grid {
