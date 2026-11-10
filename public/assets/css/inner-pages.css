@@ -9948,7 +9948,8 @@ textarea.reg-input-control {
     box-shadow: 0 4px 18px rgba(8, 59, 122, 0.04);
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
     transition: all 0.25s ease;
 }
 
@@ -9966,7 +9967,7 @@ textarea.reg-input-control {
     align-items: center;
     justify-content: center;
     font-size: 1.3rem;
-    margin-bottom: 18px;
+    margin: 0 auto 18px;
     flex-shrink: 0;
 }
 
@@ -9982,6 +9983,8 @@ textarea.reg-input-control {
     color: #083B7A;
     margin: 0 0 6px;
     line-height: 1.3;
+    text-align: center;
+    width: 100%;
 }
 
 .acad-curr-desc {
@@ -9989,6 +9992,7 @@ textarea.reg-input-control {
     color: #64748b;
     line-height: 1.55;
     margin: 0;
+    text-align: center;
 }
 
 /* 2. Academic Stages Grid (4 Cards) */
@@ -10183,7 +10187,8 @@ textarea.reg-input-control {
     box-shadow: 0 4px 18px rgba(8, 59, 122, 0.04);
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
     transition: all 0.25s ease;
 }
 
@@ -10201,7 +10206,7 @@ textarea.reg-input-control {
     align-items: center;
     justify-content: center;
     font-size: 1.25rem;
-    margin-bottom: 16px;
+    margin: 0 auto 16px;
     flex-shrink: 0;
 }
 
@@ -10217,6 +10222,8 @@ textarea.reg-input-control {
     color: #083B7A;
     margin: 0 0 6px;
     line-height: 1.3;
+    text-align: center;
+    width: 100%;
 }
 
 .acad-approach-desc {
@@ -10224,6 +10231,7 @@ textarea.reg-input-control {
     color: #64748b;
     line-height: 1.55;
     margin: 0;
+    text-align: center;
 }
 
 /* 5. Beyond The Classroom (Left: 5 Clubs, Right: Creative Visual) */
@@ -11182,7 +11190,8 @@ textarea.reg-input-control {
     padding: 26px 22px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
     box-shadow: 0 6px 20px rgba(8, 59, 122, 0.04);
     transition: all 0.25s ease;
 }
@@ -11201,7 +11210,7 @@ textarea.reg-input-control {
     align-items: center;
     justify-content: center;
     font-size: 1.35rem;
-    margin-bottom: 16px;
+    margin: 0 auto 16px;
     flex-shrink: 0;
 }
 
@@ -11217,6 +11226,8 @@ textarea.reg-input-control {
     color: #083B7A;
     margin: 0 0 6px;
     line-height: 1.3;
+    text-align: center;
+    width: 100%;
 }
 
 .acad-curr-desc {
@@ -11224,6 +11235,7 @@ textarea.reg-input-control {
     color: #64748b;
     line-height: 1.55;
     margin: 0;
+    text-align: center;
 }
 
 /* Pre-Primary Facilities Gallery */
@@ -11277,6 +11289,8 @@ textarea.reg-input-control {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    align-items: center;
+    text-align: center;
     opacity: 0.95;
     transition: opacity 0.3s ease;
 }
@@ -11295,7 +11309,7 @@ textarea.reg-input-control {
     padding: 3px 10px;
     border-radius: 9999px;
     display: inline-block;
-    align-self: flex-start;
+    align-self: center;
     margin-bottom: 8px;
 }
 
@@ -11306,6 +11320,8 @@ textarea.reg-input-control {
     color: #ffffff;
     margin: 0 0 4px;
     line-height: 1.3;
+    text-align: center;
+    width: 100%;
 }
 
 .pre-gallery-overlay p {
@@ -11313,6 +11329,7 @@ textarea.reg-input-control {
     color: #e2e8f0;
     line-height: 1.45;
     margin: 0;
+    text-align: center;
 }
 
 .zoom-icon {
@@ -11351,7 +11368,8 @@ textarea.reg-input-control {
     padding: 26px 22px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
     box-shadow: 0 6px 20px rgba(8, 59, 122, 0.04);
     transition: all 0.25s ease;
 }
@@ -11370,7 +11388,7 @@ textarea.reg-input-control {
     align-items: center;
     justify-content: center;
     font-size: 1.35rem;
-    margin-bottom: 16px;
+    margin: 0 auto 16px;
     flex-shrink: 0;
 }
 
@@ -11386,6 +11404,8 @@ textarea.reg-input-control {
     color: #083B7A;
     margin: 0 0 6px;
     line-height: 1.3;
+    text-align: center;
+    width: 100%;
 }
 
 .instrument-item p {
@@ -11393,6 +11413,7 @@ textarea.reg-input-control {
     color: #64748b;
     line-height: 1.55;
     margin: 0;
+    text-align: center;
 }
 
 /* Child Safety & Hygiene Section */
@@ -11458,7 +11479,8 @@ textarea.reg-input-control {
     padding: 24px 20px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
     transition: all 0.25s ease;
 }
 
@@ -11477,7 +11499,7 @@ textarea.reg-input-control {
     align-items: center;
     justify-content: center;
     font-size: 1.25rem;
-    margin-bottom: 14px;
+    margin: 0 auto 14px;
     flex-shrink: 0;
 }
 
@@ -11493,6 +11515,8 @@ textarea.reg-input-control {
     color: #083B7A;
     margin: 0 0 6px;
     line-height: 1.3;
+    text-align: center;
+    width: 100%;
 }
 
 .safety-pillar p {
@@ -11500,6 +11524,7 @@ textarea.reg-input-control {
     color: #64748b;
     line-height: 1.5;
     margin: 0;
+    text-align: center;
 }
 
 /* Pre-Primary Admission Helpline Card (Replaces unstyled acad-cta-banner) */
@@ -12859,6 +12884,7 @@ textarea.reg-input-control {
 .curr-tags-wrap {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: 6px;
     margin-top: 14px;
     padding-top: 12px;
