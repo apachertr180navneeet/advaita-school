@@ -54,7 +54,7 @@
                         <span class="active">Mandatory Public Disclosure</span>
                     </nav>
 
-                    <div class="contact-eyebrow">{{ $content['hero_badge'] ?? '— OUR COMMITMENT —' }}</div>
+                    <div class="contact-eyebrow">{{ $content['hero_badge'] ?? 'OUR COMMITMENT' }}</div>
 
                     <h1 class="contact-hero-title">
                         {{ $content['hero_title'] ?? 'Mandatory Public Disclosure' }}

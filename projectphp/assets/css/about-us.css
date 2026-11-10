@@ -1,0 +1,801 @@
+/* ==========================================================================
+   ABOUT US PAGE STYLES - ADVAITA SCHOOL OF EXCELLENCE
+   CBSE Affiliated No. 1130920 · Parbhani
+   ========================================================================== */
+
+.about-page-wrapper {
+    background: #ffffff;
+    overflow-x: hidden;
+}
+
+.about-section-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 1. HERO SECTION */
+.about-hero-section {
+    position: relative;
+    width: 100%;
+    background: #ffffff;
+    padding: 12px 12px 0;
+}
+
+.about-hero-canvas {
+    position: relative;
+    min-height: 380px;
+    background: linear-gradient(135deg, #f0f7fd 0%, #e8f3fc 60%, #e2effa 100%);
+    overflow: hidden;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: 1px solid #dbeafe;
+    box-shadow: 0 4px 20px rgba(8, 59, 122, 0.05);
+}
+
+.about-hero-bg-visual {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.about-hero-bg-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    opacity: 0.35;
+}
+
+.about-hero-bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #f0f7fd 0%, rgba(240, 247, 253, 0.75) 45%, rgba(240, 247, 253, 0.2) 100%);
+}
+
+.about-hero-inner-grid {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    padding: 30px clamp(20px, 3.5vw, 40px);
+}
+
+.about-hero-left-panel {
+    flex: 1 1 50%;
+    max-width: 530px;
+}
+
+.about-hero-content-inner {
+    width: 100%;
+}
+
+.about-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #64748b;
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+.about-breadcrumb a {
+    color: #083B7A;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.about-breadcrumb a:hover {
+    color: #F37021;
+}
+
+.about-breadcrumb .sep {
+    font-size: 0.65rem;
+    color: #94a3b8;
+}
+
+.about-breadcrumb .active {
+    color: #F37021;
+}
+
+.about-eyebrow {
+    color: #F37021;
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 0.82rem;
+    font-weight: 800;
+    margin-bottom: 6px;
+    display: inline-block;
+    letter-spacing: 0.5px;
+}
+
+.about-eyebrow::before,
+.about-eyebrow::after {
+    display: none !important;
+    content: none !important;
+}
+
+.about-hero-title {
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: clamp(1.75rem, 2.6vw, 2.3rem);
+    font-weight: 800;
+    color: #083B7A;
+    line-height: 1.16;
+    margin: 0 0 10px;
+    letter-spacing: -0.3px;
+}
+
+.about-hero-title .highlight-orange {
+    color: #F37021;
+}
+
+.about-hero-tagline {
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #083B7A;
+    line-height: 1.35;
+    margin: 0 0 10px;
+}
+
+.about-hero-desc {
+    font-size: 0.88rem;
+    color: #475569;
+    line-height: 1.5;
+    margin: 0 0 16px;
+}
+
+.about-hero-aff-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    border: 1px solid #dbeafe;
+    box-shadow: 0 2px 8px rgba(8, 59, 122, 0.04);
+    padding: 7px 14px;
+    border-radius: 999px;
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: #083B7A;
+}
+
+.about-hero-aff-pill i {
+    color: #F37021;
+    font-size: 0.85rem;
+}
+
+/* RIGHT FEATURE PANEL (Affiliation & 4 Stages) */
+.about-hero-right-panel {
+    flex: 1 1 48%;
+    max-width: 530px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.about-hero-features-card {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(8, 59, 122, 0.12);
+    box-shadow: 0 10px 30px rgba(8, 59, 122, 0.08);
+    border-radius: 18px;
+    padding: 20px 22px;
+}
+
+/* Affiliation Header inside Right Card */
+.hero-aff-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #f1f5f9;
+    margin-bottom: 14px;
+}
+
+.hero-aff-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #083B7A 0%, #0d4f9f 100%);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(8, 59, 122, 0.18);
+}
+
+.hero-aff-content {
+    flex: 1;
+}
+
+.hero-aff-kicker {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #F37021;
+    margin-bottom: 2px;
+}
+
+.hero-aff-title {
+    font-size: 0.96rem;
+    font-weight: 800;
+    color: #083B7A;
+    margin: 0 0 3px;
+    line-height: 1.25;
+}
+
+.hero-aff-meta {
+    font-size: 0.78rem;
+    color: #334155;
+    margin: 0 0 3px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+}
+
+.hero-aff-meta strong {
+    color: #083B7A;
+}
+
+.meta-dot {
+    color: #94a3b8;
+}
+
+.hero-aff-scope {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #64748b;
+}
+
+/* 4 Stages Card */
+.hero-stages-card {
+    width: 100%;
+}
+
+.hero-stages-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    color: #083B7A;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.hero-stages-header i {
+    color: #F37021;
+}
+
+.hero-stages-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.hero-stage-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.hero-stage-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(8, 59, 122, 0.08);
+}
+
+.hero-stage-badge .stage-num {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+.hero-stage-badge.stage-orange {
+    border-color: #fed7aa;
+    background: #fffaf5;
+}
+.hero-stage-badge.stage-orange .stage-num {
+    background: #F37021;
+}
+
+.hero-stage-badge.stage-blue {
+    border-color: #bfdbfe;
+    background: #f5f9ff;
+}
+.hero-stage-badge.stage-blue .stage-num {
+    background: #083B7A;
+}
+
+.hero-stage-badge.stage-green {
+    border-color: #bbf7d0;
+    background: #f4fbf6;
+}
+.hero-stage-badge.stage-green .stage-num {
+    background: #16a34a;
+}
+
+.hero-stage-badge.stage-purple {
+    border-color: #ddd6fe;
+    background: #faf7ff;
+}
+.hero-stage-badge.stage-purple .stage-num {
+    background: #8b5cf6;
+}
+
+.hero-stage-badge .stage-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.hero-stage-badge .stage-name {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.hero-stage-badge .stage-level {
+    font-size: 0.68rem;
+    color: #64748b;
+    line-height: 1.25;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 2. COMMON SECTION STYLES */
+.about-section-header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 16px;
+}
+
+.about-section-title {
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: clamp(1.5rem, 2.2vw, 1.95rem);
+    font-weight: 800;
+    color: #083B7A;
+    line-height: 1.2;
+    margin: 4px 0 6px;
+}
+
+.about-section-title .highlight-serif {
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-weight: 600;
+    color: #F37021;
+}
+
+.about-section-title .highlight-orange {
+    color: #F37021;
+}
+
+.btn-about-primary {
+    background: #F37021;
+    color: #ffffff;
+    border-radius: 999px;
+    padding: 8px 22px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 14px rgba(243, 112, 33, 0.28);
+    transition: all 0.2s ease;
+}
+
+.btn-about-primary:hover {
+    background: #ea580c;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(243, 112, 33, 0.35);
+}
+
+/* 3. OUR VISION SECTION */
+.about-vision-section {
+    padding: 32px 0 24px;
+    background: #ffffff;
+}
+
+.about-vision-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+    gap: 32px;
+    align-items: center;
+}
+
+.about-vision-content {
+    max-width: 500px;
+}
+
+.about-vision-desc {
+    font-size: 0.92rem;
+    color: #475569;
+    line-height: 1.55;
+    margin: 0 0 18px;
+}
+
+.about-vision-media {
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(8, 59, 122, 0.07);
+    border: 1px solid #E2E8F0;
+    background: #f8fafc;
+}
+
+.about-vision-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.about-vision-media:hover .about-vision-img {
+    transform: scale(1.02);
+}
+
+/* 4. OUR PILLARS SECTION */
+.about-pillars-section {
+    padding: 30px 0 32px;
+    background: #F8FAFC;
+    border-top: 1px solid #EEF2F6;
+    border-bottom: 1px solid #EEF2F6;
+}
+
+.about-pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.about-pillar-card {
+    background: #ffffff;
+    border: 1.5px solid #E2E8F0;
+    border-radius: 14px;
+    padding: 16px 10px 14px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 10px rgba(8, 59, 122, 0.03);
+    transition: all 0.25s ease;
+}
+
+.about-pillar-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(8, 59, 122, 0.08);
+    border-color: #CBD5E1;
+}
+
+.pillar-icon-box {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+    transition: transform 0.2s ease;
+}
+
+.about-pillar-card:hover .pillar-icon-box {
+    transform: scale(1.1);
+}
+
+.pillar-icon-box.blue   { background: #EFF6FF; color: #0284C7; }
+.pillar-icon-box.orange { background: #FFF7ED; color: #EA580C; }
+.pillar-icon-box.purple { background: #F5F3FF; color: #8B5CF6; }
+
+.pillar-title {
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: #083B7A;
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* 5. OUR JOURNEY SECTION */
+.about-journey-section {
+    padding: 26px 0;
+    background: #ffffff;
+}
+
+.about-journey-banner {
+    background: linear-gradient(135deg, #083B7A 0%, #05244C 100%);
+    border-radius: 18px;
+    padding: 24px 36px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    box-shadow: 0 10px 28px rgba(8, 59, 122, 0.18);
+    overflow: hidden;
+    position: relative;
+}
+
+.about-journey-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.about-journey-title {
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.25;
+    margin: 4px 0 8px;
+}
+
+.about-journey-desc {
+    font-size: 0.88rem;
+    color: #E2E8F0;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.about-journey-media {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-journey-trophy {
+    max-height: 105px;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.35));
+}
+
+/* 6. OUR ACADEMIC JOURNEY SECTION */
+.about-stages-section {
+    padding: 30px 0 32px;
+    background: #F8FAFC;
+    border-top: 1px solid #EEF2F6;
+    border-bottom: 1px solid #EEF2F6;
+}
+
+.about-stages-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.about-stages-info {
+    max-width: 380px;
+}
+
+.about-stages-title {
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #083B7A;
+    line-height: 1.25;
+    margin: 4px 0 6px;
+}
+
+.about-stages-desc {
+    font-size: 0.88rem;
+    color: #64748B;
+    line-height: 1.45;
+    margin: 0;
+}
+
+.about-stages-sequence {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.about-stage-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 96px;
+    background: #ffffff;
+    border: 1px solid #E2E8F0;
+    border-radius: 14px;
+    padding: 12px 10px;
+    box-shadow: 0 2px 8px rgba(8, 59, 122, 0.03);
+    transition: transform 0.2s ease;
+}
+
+.about-stage-item:hover {
+    transform: translateY(-2px);
+    border-color: #CBD5E1;
+}
+
+.stage-icon-circle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.05rem;
+    margin-bottom: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.stage-icon-circle.orange { background: #FFF7ED; color: #EA580C; }
+.stage-icon-circle.blue   { background: #EFF6FF; color: #0284C7; }
+.stage-icon-circle.green  { background: #ECFDF5; color: #059669; }
+.stage-icon-circle.purple { background: #F5F3FF; color: #7C3AED; }
+
+.stage-title {
+    font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: #083B7A;
+    margin: 0 0 2px;
+}
+
+.stage-sub {
+    font-size: 0.7rem;
+    color: #64748B;
+    margin: 0;
+}
+
+.stage-arrow {
+    color: #94A3B8;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 7. OUR COMMITMENT SECTION */
+.about-commitment-section {
+    padding: 32px 0 44px;
+    background: #ffffff;
+}
+
+.about-commitment-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.05fr;
+    gap: 32px;
+    align-items: center;
+}
+
+.about-commitment-content {
+    max-width: 500px;
+}
+
+.about-commitment-desc {
+    font-size: 0.92rem;
+    color: #475569;
+    line-height: 1.55;
+    margin: 0 0 18px;
+}
+
+.about-commitment-media {
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(8, 59, 122, 0.07);
+    border: 1px solid #E2E8F0;
+    background: #f8fafc;
+}
+
+.about-commitment-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.about-commitment-media:hover .about-commitment-img {
+    transform: scale(1.02);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1024px) {
+    .about-pillars-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .about-stages-sequence {
+        justify-content: flex-start;
+        margin-top: 20px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 992px) {
+    .about-hero-inner-grid {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+        padding: 24px 20px;
+    }
+    .about-hero-left-panel,
+    .about-hero-right-panel {
+        max-width: 100%;
+        flex: 1 1 100%;
+    }
+    .about-hero-bg-visual {
+        width: 100%;
+        opacity: 0.18;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-vision-grid,
+    .about-commitment-grid {
+        grid-template-columns: 1fr;
+    }
+    .about-pillars-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .about-journey-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 28px 24px;
+    }
+    .about-stages-layout {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .stage-arrow {
+        display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-stages-grid {
+        grid-template-columns: 1fr;
+    }
+    .about-pillars-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-aff-card {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

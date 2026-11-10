@@ -168,7 +168,7 @@
         <div class="results-hub-section" id="results-hub">
             <div class="results-hub-header">
                 <div>
-                    <span class="acad-eyebrow">— EXAMINATION ACHIEVEMENTS &amp; PODIUMS —</span>
+                    <span class="acad-eyebrow">EXAMINATION ACHIEVEMENTS &amp; PODIUMS</span>
                     <h2 class="results-hub-title">
                         Centralized <span class="highlight-orange">Results &amp; Honors.</span>
                     </h2>

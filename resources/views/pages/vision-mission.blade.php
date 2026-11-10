@@ -154,7 +154,7 @@
     <section class="vision-beliefs-section">
         <div class="vision-beliefs-container">
             <div class="about-section-header text-center">
-                <span class="about-eyebrow">— WHAT WE STAND FOR —</span>
+                <span class="about-eyebrow">WHAT WE STAND FOR</span>
                 <h2 class="about-section-heading">
                     Our <span>Core Beliefs</span>
                 </h2>
@@ -328,7 +328,7 @@
         <!-- Center Content -->
         <div class="banner-content-center">
             <div class="copy-center">
-                <div class="eyebrow">{{ $content['cta_eyebrow'] ?? '— TOGETHER TOWARDS A BRIGHTER TOMORROW —' }}</div>
+                <div class="eyebrow">{{ $content['cta_eyebrow'] ?? 'TOGETHER TOWARDS A BRIGHTER TOMORROW' }}</div>
                 <h2 class="headline">
                     {{ $content['cta_headline'] ?? 'Be a Part of the Advaita Journey' }}
                 </h2>

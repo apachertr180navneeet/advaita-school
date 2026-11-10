@@ -58,7 +58,7 @@
                         <span class="active">Contact Us</span>
                     </nav>
 
-                    <div class="contact-eyebrow">— GET IN TOUCH —</div>
+                    <div class="contact-eyebrow">GET IN TOUCH</div>
 
                     <h1 class="contact-hero-title">
                         We'd love to<br>
@@ -159,7 +159,7 @@
 
                 <!-- Left Column: Ways to reach us & Office details -->
                 <div class="contact-info-col">
-                    <span class="contact-sub-eyebrow">— VISIT · CALL · WRITE —</span>
+                    <span class="contact-sub-eyebrow">VISIT · CALL · WRITE</span>
                     <h2 class="contact-section-heading">
                         A few ways to <span class="contact-highlight-serif">reach us.</span>
                     </h2>
@@ -362,7 +362,7 @@
     <section class="contact-map-section" id="campus-map">
         <div class="contact-map-container">
             <div class="contact-map-header text-center">
-                <span class="contact-sub-eyebrow">— FIND US IN PARBHANI —</span>
+                <span class="contact-sub-eyebrow">FIND US IN PARBHANI</span>
                 <h2 class="contact-section-heading">
                     Come see the school <span class="contact-highlight-serif">in person.</span>
                 </h2>

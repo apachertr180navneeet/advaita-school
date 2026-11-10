@@ -19,35 +19,64 @@
     position: relative;
     width: 100%;
     background: #ffffff;
-    padding: 10px 10px 0;
+    padding: 12px 12px 0;
 }
 
 .about-hero-canvas {
     position: relative;
-    min-height: clamp(340px, 24vw, 390px);
-    display: flex;
-    align-items: stretch;
-    background: #eef6fc;
+    min-height: 380px;
+    background: linear-gradient(135deg, #f0f7fd 0%, #e8f3fc 60%, #e2effa 100%);
     overflow: hidden;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     border-radius: 20px;
-    border: 1px solid #e0effa;
+    border: 1px solid #dbeafe;
     box-shadow: 0 4px 20px rgba(8, 59, 122, 0.05);
 }
 
-.about-hero-left-panel {
+.about-hero-bg-visual {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.about-hero-bg-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    opacity: 0.35;
+}
+
+.about-hero-bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #f0f7fd 0%, rgba(240, 247, 253, 0.75) 45%, rgba(240, 247, 253, 0.2) 100%);
+}
+
+.about-hero-inner-grid {
     position: relative;
-    z-index: 4;
-    width: 52%;
+    z-index: 3;
     display: flex;
     align-items: center;
-    padding: 28px clamp(20px, 3.5vw, 44px);
+    justify-content: space-between;
+    gap: 28px;
+    padding: 30px clamp(20px, 3.5vw, 40px);
+}
+
+.about-hero-left-panel {
+    flex: 1 1 50%;
+    max-width: 530px;
 }
 
 .about-hero-content-inner {
-    max-width: 500px;
+    width: 100%;
 }
 
 .about-breadcrumb {
@@ -98,11 +127,12 @@
 
 .about-hero-title {
     font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
-    font-size: clamp(1.8rem, 2.8vw, 2.4rem);
+    font-size: clamp(1.75rem, 2.6vw, 2.3rem);
     font-weight: 800;
     color: #083B7A;
-    line-height: 1.15;
+    line-height: 1.16;
     margin: 0 0 10px;
+    letter-spacing: -0.3px;
 }
 
 .about-hero-title .highlight-orange {
@@ -111,7 +141,7 @@
 
 .about-hero-tagline {
     font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
-    font-size: 0.98rem;
+    font-size: 0.95rem;
     font-weight: 800;
     color: #083B7A;
     line-height: 1.35;
@@ -122,38 +152,229 @@
     font-size: 0.88rem;
     color: #475569;
     line-height: 1.5;
-    margin: 0;
+    margin: 0 0 16px;
 }
 
-.about-hero-bg-visual {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 52%;
-    z-index: 1;
-    overflow: hidden;
+.about-hero-aff-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    border: 1px solid #dbeafe;
+    box-shadow: 0 2px 8px rgba(8, 59, 122, 0.04);
+    padding: 7px 14px;
+    border-radius: 999px;
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: #083B7A;
 }
 
-.about-hero-bg-visual img {
+.about-hero-aff-pill i {
+    color: #F37021;
+    font-size: 0.85rem;
+}
+
+/* RIGHT FEATURE PANEL (Affiliation & 4 Stages) */
+.about-hero-right-panel {
+    flex: 1 1 48%;
+    max-width: 530px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.about-hero-features-card {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(8, 59, 122, 0.12);
+    box-shadow: 0 10px 30px rgba(8, 59, 122, 0.08);
+    border-radius: 18px;
+    padding: 20px 22px;
 }
 
-/* Wave Overlay Edge on Hero */
-.about-hero-wave-overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    pointer-events: none;
+/* Affiliation Header inside Right Card */
+.hero-aff-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #f1f5f9;
+    margin-bottom: 14px;
 }
 
-.about-hero-wave-overlay svg {
-    width: 100%;
-    height: 100%;
+.hero-aff-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #083B7A 0%, #0d4f9f 100%);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(8, 59, 122, 0.18);
+}
+
+.hero-aff-content {
+    flex: 1;
+}
+
+.hero-aff-kicker {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #F37021;
+    margin-bottom: 2px;
+}
+
+.hero-aff-title {
+    font-size: 0.96rem;
+    font-weight: 800;
+    color: #083B7A;
+    margin: 0 0 3px;
+    line-height: 1.25;
+}
+
+.hero-aff-meta {
+    font-size: 0.78rem;
+    color: #334155;
+    margin: 0 0 3px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+}
+
+.hero-aff-meta strong {
+    color: #083B7A;
+}
+
+.meta-dot {
+    color: #94a3b8;
+}
+
+.hero-aff-scope {
     display: block;
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #64748b;
+}
+
+/* 4 Stages Card */
+.hero-stages-card {
+    width: 100%;
+}
+
+.hero-stages-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    color: #083B7A;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.hero-stages-header i {
+    color: #F37021;
+}
+
+.hero-stages-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.hero-stage-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    background: #f8fafc;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.hero-stage-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(8, 59, 122, 0.08);
+}
+
+.hero-stage-badge .stage-num {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #ffffff;
+    flex-shrink: 0;
+}
+
+.hero-stage-badge.stage-orange {
+    border-color: #fed7aa;
+    background: #fffaf5;
+}
+.hero-stage-badge.stage-orange .stage-num {
+    background: #F37021;
+}
+
+.hero-stage-badge.stage-blue {
+    border-color: #bfdbfe;
+    background: #f5f9ff;
+}
+.hero-stage-badge.stage-blue .stage-num {
+    background: #083B7A;
+}
+
+.hero-stage-badge.stage-green {
+    border-color: #bbf7d0;
+    background: #f4fbf6;
+}
+.hero-stage-badge.stage-green .stage-num {
+    background: #16a34a;
+}
+
+.hero-stage-badge.stage-purple {
+    border-color: #ddd6fe;
+    background: #faf7ff;
+}
+.hero-stage-badge.stage-purple .stage-num {
+    background: #8b5cf6;
+}
+
+.hero-stage-badge .stage-text {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.hero-stage-badge .stage-name {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.hero-stage-badge .stage-level {
+    font-size: 0.68rem;
+    color: #64748b;
+    line-height: 1.25;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* 2. COMMON SECTION STYLES */
@@ -526,14 +747,25 @@
     }
 }
 
-@media (max-width: 768px) {
-    .about-hero-left-panel {
-        width: 100%;
-        padding: 32px 20px;
+@media (max-width: 992px) {
+    .about-hero-inner-grid {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 24px;
+        padding: 24px 20px;
+    }
+    .about-hero-left-panel,
+    .about-hero-right-panel {
+        max-width: 100%;
+        flex: 1 1 100%;
     }
     .about-hero-bg-visual {
-        display: none;
+        width: 100%;
+        opacity: 0.18;
     }
+}
+
+@media (max-width: 768px) {
     .about-vision-grid,
     .about-commitment-grid {
         grid-template-columns: 1fr;
@@ -552,5 +784,18 @@
     }
     .stage-arrow {
         display: none;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-stages-grid {
+        grid-template-columns: 1fr;
+    }
+    .about-pillars-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-aff-card {
+        flex-direction: column;
+        gap: 10px;
     }
 }

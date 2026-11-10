@@ -89,7 +89,7 @@
     <section class="admission-process-section" id="admission-process">
         <div class="admission-section-container">
             <div class="admission-section-header">
-                <div class="admission-eyebrow">{{ $content['process_eyebrow'] ?? '— THE ADMISSION PROCESS —' }}</div>
+                <div class="admission-eyebrow">{{ $content['process_eyebrow'] ?? 'THE ADMISSION PROCESS' }}</div>
                 <h2 class="admission-section-title">
                     {{ $content['process_title'] ?? 'From application to' }}
                     <span class="highlight-serif">{{ $content['process_highlight'] ?? 'welcome,' }}</span>
@@ -165,7 +165,7 @@
 
                 <!-- Right Column: Information & 4-Grid Cards -->
                 <div class="admission-split-content">
-                    <div class="admission-eyebrow">{{ $content['guidelines_eyebrow'] ?? '— ADMISSION INFORMATION —' }}</div>
+                    <div class="admission-eyebrow">{{ $content['guidelines_eyebrow'] ?? 'ADMISSION INFORMATION' }}</div>
                     <h2 class="admission-section-title text-start">
                         {{ $content['guidelines_title'] ?? 'Guidelines for a smooth start at' }}
                         <span class="highlight-serif">{{ $content['guidelines_highlight'] ?? 'Advaita.' }}</span>
@@ -227,7 +227,7 @@
     <section class="admission-docs-section-v2" id="required-documents">
         <div class="admission-section-container">
             <div class="admission-section-header">
-                <div class="admission-eyebrow">{{ $content['docs_eyebrow'] ?? '— DOCUMENTS REQUIRED —' }}</div>
+                <div class="admission-eyebrow">{{ $content['docs_eyebrow'] ?? 'DOCUMENTS REQUIRED' }}</div>
                 <h2 class="admission-section-title">
                     {{ $content['docs_title'] ?? 'Keep these ready for a' }}
                     <span class="highlight-serif">{{ $content['docs_highlight'] ?? 'faster process.' }}</span>
@@ -324,7 +324,7 @@
     <section class="admission-fee-section-v2" id="fee-structure">
         <div class="admission-section-container">
             <div class="admission-section-header">
-                <div class="admission-eyebrow">{{ $content['fee_eyebrow'] ?? '— FEE STRUCTURE —' }}</div>
+                <div class="admission-eyebrow">{{ $content['fee_eyebrow'] ?? 'FEE STRUCTURE' }}</div>
                 <h2 class="admission-section-title">
                     {{ $content['fee_title'] ?? 'Fees, paid in' }}
                     <span class="highlight-serif">{{ $content['fee_highlight'] ?? 'simple terms.' }}</span>

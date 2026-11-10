@@ -53,7 +53,7 @@
                 <!-- Left Content -->
                 <div class="adv-gal-hero-content">
                     <div class="adv-gal-kicker">
-                        <span class="kicker-line">—</span> MOMENTS THAT MATTER
+                        MOMENTS THAT MATTER
                     </div>
 
                     <h1 class="adv-gal-hero-title">Gallery</h1>

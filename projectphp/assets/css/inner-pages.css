@@ -2484,11 +2484,8 @@
 .principal-eyebrow::after,
 .vision-eyebrow::before,
 .vision-eyebrow::after {
-    content: '';
-    display: inline-block;
-    width: 18px;
-    height: 2px;
-    background: #F37021;
+    display: none !important;
+    content: none !important;
 }
 
 .staff-hero-title,

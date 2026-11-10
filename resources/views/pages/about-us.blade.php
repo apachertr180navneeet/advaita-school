@@ -10,7 +10,7 @@
 <main id="main" class="main-content-wrapper about-page-wrapper">
 
     <!-- =========================================================================
-         1. HERO SECTION: Breadcrumb + Title + Building Visual
+         1. HERO SECTION: Breadcrumb + Title + Affiliation & 4 Stages Showcase
          ========================================================================= -->
     <section class="about-hero-section">
         <div class="about-hero-canvas">
@@ -20,41 +20,113 @@
                      alt="Advaita School of Excellence Campus" 
                      class="about-hero-bg-img" 
                      loading="eager">
+                <div class="about-hero-bg-overlay"></div>
             </div>
 
-            <!-- SVG Wave Overlay for Organic Boundary -->
-            <div class="about-hero-wave-overlay" aria-hidden="true">
-                <svg viewBox="0 0 1200 440" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0H520C550 120 500 280 600 440H0V0Z" fill="#EEF6FC" fill-opacity="0.96"/>
-                    <path d="M500 0C530 140 480 280 580 440H560C460 280 510 140 480 0H500Z" fill="#F37021" fill-opacity="0.3"/>
-                </svg>
-            </div>
+            <!-- Two-Column Hero Grid: Content (Left) + Affiliation & 4 Stages Card (Right) -->
+            <div class="about-hero-inner-grid">
+                <!-- Left Content Panel -->
+                <div class="about-hero-left-panel">
+                    <div class="about-hero-content-inner">
+                        <!-- Breadcrumbs (No duplicate "About Us" label or dashes) -->
+                        <nav class="about-breadcrumb" aria-label="Breadcrumb">
+                            <a href="{{ route('home') }}">Home</a>
+                            <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
+                            <span class="active">About Us</span>
+                        </nav>
 
-            <!-- Left Content Panel -->
-            <div class="about-hero-left-panel">
-                <div class="about-hero-content-inner">
-                    <!-- Breadcrumbs -->
-                    <nav class="about-breadcrumb" aria-label="Breadcrumb">
-                        <a href="{{ route('home') }}">Home</a>
-                        <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
-                        <span class="active">About Us</span>
-                    </nav>
+                        <!-- Main Headline -->
+                        <h1 class="about-hero-title">
+                            {{ $content['hero_title'] ?? 'Advaita School of Excellence,' }}<br>
+                            <span class="highlight-orange">{{ $content['hero_highlight'] ?? 'Parbhani' }}</span>
+                        </h1>
 
-                    <!-- Main Headline -->
-                    <h1 class="about-hero-title">
-                        {{ $content['hero_title'] ?? 'Advaita School of Excellence,' }}<br>
-                        <span class="highlight-orange">{{ $content['hero_highlight'] ?? 'Parbhani' }}</span>
-                    </h1>
+                        <!-- Bold Tagline -->
+                        <div class="about-hero-tagline">
+                            {!! nl2br(e($content['hero_tagline'] ?? "Nurturing Excellence. Inspiring Innovation.\nShaping Futures.")) !!}
+                        </div>
 
-                    <!-- Bold Tagline -->
-                    <div class="about-hero-tagline">
-                        {!! nl2br(e($content['hero_tagline'] ?? "Nurturing Excellence. Inspiring Innovation.\nShaping Futures.")) !!}
+                        <!-- Description -->
+                        <p class="about-hero-desc">
+                            {{ $content['hero_desc'] ?? 'Established in 2016 under the visionary leadership of Mr. Vishal Vattamwar, Chairman of Sanmati Sevabhavi Sanstha, Advaita School of Excellence, Parbhani, was founded to bring quality education to every student in Parbhani.' }}
+                        </p>
+
+                        <!-- Affiliation Mini Highlight Pill -->
+                        <div class="about-hero-aff-pill">
+                            <i class="fa-solid fa-certificate"></i>
+                            <span>CBSE Affiliated &bull; Affiliation No. 1130920 &bull; School Code: 30882</span>
+                        </div>
                     </div>
+                </div>
 
-                    <!-- Description -->
-                    <p class="about-hero-desc">
-                        {{ $content['hero_desc'] ?? 'Established in 2016 under the visionary leadership of Mr. Vishal Vattamwar, Chairman of Sanmati Sevabhavi Sanstha, Advaita School of Excellence, Parbhani, was founded to bring quality education to every student in Parbhani.' }}
-                    </p>
+                <!-- Right Feature Panel (Fills the space beside the text) -->
+                <div class="about-hero-right-panel">
+                    <div class="about-hero-features-card">
+                        
+                        <!-- Top: CBSE Affiliation Highlight -->
+                        <div class="hero-aff-card">
+                            <div class="hero-aff-icon">
+                                <i class="fa-solid fa-school-flag"></i>
+                            </div>
+                            <div class="hero-aff-content">
+                                <span class="hero-aff-kicker">OFFICIAL AFFILIATION</span>
+                                <h3 class="hero-aff-title">CBSE Affiliated Institution</h3>
+                                <p class="hero-aff-meta">
+                                    <span><strong>Affiliation No:</strong> 1130920</span>
+                                    <span class="meta-dot">&bull;</span>
+                                    <span><strong>School Code:</strong> 30882</span>
+                                </p>
+                                <span class="hero-aff-scope">Play Group to Class X &bull; Central Board of Secondary Education, New Delhi</span>
+                            </div>
+                        </div>
+
+                        <!-- Bottom: Four Stages of Education -->
+                        <div class="hero-stages-card">
+                            <div class="hero-stages-header">
+                                <i class="fa-solid fa-layer-group"></i>
+                                <span>4 STAGES WE PROVIDE (NEP 2020)</span>
+                            </div>
+
+                            <div class="hero-stages-grid">
+                                <!-- 1. Foundational -->
+                                <div class="hero-stage-badge stage-orange">
+                                    <div class="stage-num">01</div>
+                                    <div class="stage-text">
+                                        <strong class="stage-name">Foundational Stage</strong>
+                                        <span class="stage-level">Play Group &bull; Nursery &bull; LKG &bull; UKG &bull; Grades 1–2</span>
+                                    </div>
+                                </div>
+
+                                <!-- 2. Preparatory -->
+                                <div class="hero-stage-badge stage-blue">
+                                    <div class="stage-num">02</div>
+                                    <div class="stage-text">
+                                        <strong class="stage-name">Preparatory Stage</strong>
+                                        <span class="stage-level">Grades 3 to 5 (Classes III–V)</span>
+                                    </div>
+                                </div>
+
+                                <!-- 3. Middle -->
+                                <div class="hero-stage-badge stage-green">
+                                    <div class="stage-num">03</div>
+                                    <div class="stage-text">
+                                        <strong class="stage-name">Middle Stage</strong>
+                                        <span class="stage-level">Grades 6 to 8 (Classes VI–VIII)</span>
+                                    </div>
+                                </div>
+
+                                <!-- 4. Secondary -->
+                                <div class="hero-stage-badge stage-purple">
+                                    <div class="stage-num">04</div>
+                                    <div class="stage-text">
+                                        <strong class="stage-name">Secondary Stage</strong>
+                                        <span class="stage-level">Grades 9 &amp; 10 (Classes IX–X)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
         </div>

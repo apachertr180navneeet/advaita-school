@@ -245,7 +245,7 @@
         <!-- Center Content -->
         <div class="banner-content-center">
             <div class="copy-center">
-                <div class="eyebrow">— BE A PART OF ADVAITA —</div>
+                <div class="eyebrow">BE A PART OF ADVAITA</div>
                 <h2 class="headline">
                     Together, let’s build <span class="text-orange">brighter tomorrows.</span>
                 </h2>

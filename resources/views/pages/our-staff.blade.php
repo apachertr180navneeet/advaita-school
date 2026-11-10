@@ -129,7 +129,7 @@
 
         <div class="staff-grid-container">
             <div class="staff-section-header">
-                <span class="staff-educators-eyebrow">— OUR EDUCATORS —</span>
+                <span class="staff-educators-eyebrow">OUR EDUCATORS</span>
                 <h2 class="staff-section-title">
                     The Teachers Behind Every <span class="text-orange">Advaita Learner.</span>
                 </h2>
@@ -299,7 +299,7 @@
         <!-- Center Content -->
         <div class="banner-content-center">
             <div class="copy-center">
-                <div class="eyebrow">— JOIN OUR TEAM —</div>
+                <div class="eyebrow">JOIN OUR TEAM</div>
                 <h2 class="headline">Want to Teach with <span class="text-orange">Us?</span></h2>
                 <p class="subtext">
                     We are always looking for passionate educators who believe in creating brighter futures. Explore open roles or share your CV with us.

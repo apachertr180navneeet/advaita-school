@@ -36,7 +36,7 @@ require_once __DIR__.'/includes/header.php';
                 <div class="about-hero-dots-decor" aria-hidden="true"></div>
 
                 <div class="about-hero-content-inner">
-                    <span class="about-eyebrow">— WELCOME TO —</span>
+                    <span class="about-eyebrow">WELCOME TO</span>
                     <h1 class="about-hero-title">
                         A Premier<br>
                         CBSE School with a<br>
@@ -164,7 +164,7 @@ require_once __DIR__.'/includes/header.php';
 
                 <!-- Right: Story Content & Stats -->
                 <div class="about-story-content">
-                    <span class="about-eyebrow">— BUILT ON A STRONG FOUNDATION —</span>
+                    <span class="about-eyebrow">BUILT ON A STRONG FOUNDATION</span>
                     <h2 class="about-story-title">
                         Built on Values.<br>
                         Driven by <span class="about-text-orange">Academic Excellence.</span>
@@ -269,7 +269,7 @@ require_once __DIR__.'/includes/header.php';
             <div class="about-philosophy-grid">
                 <!-- Left: Content -->
                 <div class="about-philosophy-content">
-                    <span class="about-eyebrow">— PREPARING FOR A BRIGHTER TOMORROW —</span>
+                    <span class="about-eyebrow">PREPARING FOR A BRIGHTER TOMORROW</span>
                     <h2 class="about-philosophy-title">
                         Education for<br>
                         Life, <span class="about-text-orange">Not Just Exams.</span>
@@ -324,7 +324,7 @@ require_once __DIR__.'/includes/header.php';
     <section class="about-why-choose">
         <div class="about-section-container">
             <div class="about-section-header text-center">
-                <span class="about-eyebrow">— WHAT SETS US APART —</span>
+                <span class="about-eyebrow">WHAT SETS US APART</span>
                 <h2 class="about-section-heading">
                     What Makes <span class="about-text-orange">Advaita</span> Unique.
                 </h2>
@@ -399,7 +399,7 @@ require_once __DIR__.'/includes/header.php';
             <div class="about-campus-grid">
                 <!-- Left: Content -->
                 <div class="about-campus-content">
-                    <span class="about-campus-eyebrow">— A SPACE TO GROW —</span>
+                    <span class="about-campus-eyebrow">A SPACE TO GROW</span>
                     <h2 class="about-campus-title">
                         A Space to Learn,<br>
                         <span class="about-text-orange">Explore and Excel.</span>

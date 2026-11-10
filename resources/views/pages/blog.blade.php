@@ -53,7 +53,7 @@
                 <!-- Left Content -->
                 <div class="adv-blog-hero-content">
                     <div class="adv-blog-kicker">
-                        <span class="kicker-line">—</span> OUR STORIES <span class="kicker-line">—</span>
+                        OUR STORIES
                     </div>
 
                     <h1 class="adv-blog-hero-title">
