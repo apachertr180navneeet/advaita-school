@@ -19,6 +19,43 @@ class Pillar extends Model
     ];
 
     /**
+     * Get tags formatted and sanitized.
+     */
+    public function getTagsAttribute($value): array
+    {
+        $tags = is_string($value) ? (json_decode($value, true) ?: []) : (is_array($value) ? $value : []);
+        $hasLibrary = false;
+
+        foreach ($tags as &$tag) {
+            if (is_array($tag)) {
+                if (($tag['label'] ?? '') === 'Digital Maths Lab') {
+                    $tag['label'] = 'Maths Lab';
+                }
+                if (($tag['label'] ?? '') === 'Futuristic Library') {
+                    $hasLibrary = true;
+                }
+            } elseif (is_string($tag)) {
+                if ($tag === 'Digital Maths Lab') {
+                    $tag = 'Maths Lab';
+                }
+                if ($tag === 'Futuristic Library') {
+                    $hasLibrary = true;
+                }
+            }
+        }
+        unset($tag);
+
+        if (! $hasLibrary && (int) ($this->order ?? 1) === 1) {
+            $tags[] = [
+                'label' => 'Futuristic Library',
+                'icon' => 'fa-solid fa-book-open',
+            ];
+        }
+
+        return $tags;
+    }
+
+    /**
      * Get the full URL for the pillar image.
      */
     public function getImageUrlAttribute(): string

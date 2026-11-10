@@ -40,8 +40,9 @@ class PillarSeeder extends Seeder
                     ['label' => 'Robotics Lab', 'icon' => 'fa-solid fa-robot'],
                     ['label' => 'Computer Lab', 'icon' => 'fa-solid fa-display'],
                     ['label' => 'Science Lab', 'icon' => 'fa-solid fa-flask'],
-                    ['label' => 'Digital Maths Lab', 'icon' => 'fa-solid fa-calculator'],
+                    ['label' => 'Maths Lab', 'icon' => 'fa-solid fa-calculator'],
                     ['label' => 'Language Lab', 'icon' => 'fa-solid fa-earth-americas'],
+                    ['label' => 'Futuristic Library', 'icon' => 'fa-solid fa-book-open'],
                 ],
                 'is_active' => true,
             ]);

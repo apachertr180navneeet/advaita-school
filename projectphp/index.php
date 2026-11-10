@@ -373,11 +373,15 @@ require_once __DIR__.'/includes/header.php';
                             </div>
                             <div class="adv-pillar-tag">
                                 <i class="fa-solid fa-calculator"></i>
-                                <span>Digital Maths Lab</span>
+                                <span>Maths Lab</span>
                             </div>
                             <div class="adv-pillar-tag">
                                 <i class="fa-solid fa-earth-americas"></i>
                                 <span>Language Lab</span>
+                            </div>
+                            <div class="adv-pillar-tag">
+                                <i class="fa-solid fa-book-open"></i>
+                                <span>Futuristic Library</span>
                             </div>
                         </div>
                     </div>

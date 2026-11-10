@@ -427,8 +427,25 @@
                             </p>
                         @endif
                         @if(!empty($pillar->tags) && is_array($pillar->tags))
+                            @php
+                                $pillarTags = $pillar->tags;
+                                $hasLibrary = false;
+                                foreach ($pillarTags as &$t) {
+                                    $lbl = is_array($t) ? ($t['label'] ?? '') : $t;
+                                    if ($lbl === 'Digital Maths Lab') {
+                                        if (is_array($t)) { $t['label'] = 'Maths Lab'; } else { $t = 'Maths Lab'; }
+                                    }
+                                    if ($lbl === 'Futuristic Library' || (is_array($t) && ($t['label'] ?? '') === 'Futuristic Library')) {
+                                        $hasLibrary = true;
+                                    }
+                                }
+                                unset($t);
+                                if (! $hasLibrary && (int) ($pillar->order ?? 0) === 1) {
+                                    $pillarTags[] = ['label' => 'Futuristic Library', 'icon' => 'fa-solid fa-book-open'];
+                                }
+                            @endphp
                             <div class="adv-pillar-tags-grid">
-                                @foreach($pillar->tags as $tag)
+                                @foreach($pillarTags as $tag)
                                     @php
                                         $tagLabel = is_array($tag) ? ($tag['label'] ?? '') : $tag;
                                         $tagIcon = is_array($tag) ? ($tag['icon'] ?? 'fa-solid fa-check') : 'fa-solid fa-check';
