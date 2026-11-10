@@ -184,7 +184,7 @@
              3. EARLY YEARS CURRICULUM & METHODOLOGY (4 Pillared Cards)
              ========================================================================= -->
         <section class="acad-section" id="pedagogy">
-            <div class="section-header-pill text-center mx-auto" style="max-width: 800px;">
+            <div class="section-header-pill text-center mx-auto">
                 <span class="pill-badge"><i class="fa-solid fa-shapes"></i> Play-Way Pedagogy</span>
                 <h2 class="pill-title">Learning That Feels Like <span class="pill-title-highlight">Pure Play</span></h2>
                 <p class="pill-subtitle mx-auto">
@@ -235,7 +235,7 @@
              4. CLASSROOMS & PLAY FACILITIES SHOWCASE (Photo Gallery with Lightbox)
              ========================================================================= -->
         <section class="acad-section" id="facilities-gallery">
-            <div class="section-header-pill text-center mx-auto" style="max-width: 800px;">
+            <div class="section-header-pill text-center mx-auto">
                 <span class="pill-badge"><i class="fa-solid fa-camera"></i> Infrastructure Showcase</span>
                 <h2 class="pill-title">Classrooms, Play Lawns &amp; <span class="pill-title-highlight">Activity Spaces</span></h2>
                 <p class="pill-subtitle mx-auto">
@@ -328,7 +328,7 @@
              5. LEARNING INSTRUMENTS & ACTIVITY AREAS
              ========================================================================= -->
         <section class="acad-section" id="learning-instruments">
-            <div class="section-header-pill text-center mx-auto" style="max-width: 800px;">
+            <div class="section-header-pill text-center mx-auto">
                 <span class="pill-badge"><i class="fa-solid fa-puzzle-piece"></i> Hands-On Instruments</span>
                 <h2 class="pill-title">Educational Toys &amp; <span class="pill-title-highlight">Activity Instruments</span></h2>
                 <p class="pill-subtitle mx-auto">
