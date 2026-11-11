@@ -62,7 +62,7 @@
                     <!-- Hero Quick CTAs -->
                     <div class="d-flex align-items-center gap-12 mt-20 flex-wrap">
                         <a href="#campus-infrastructure" class="btn-primary-pill">
-                            <span>Explore 12 Facilities</span>
+                            <span>Explore 15 Premier Facilities</span>
                             <i class="fa-solid fa-arrow-down"></i>
                         </a>
                         <a href="{{ route('contact') }}" class="btn-outline-pill">
@@ -170,14 +170,314 @@
         </div>
 
         <!-- =========================================================================
-             5. VERIFIED 12 FACILITY CARDS GRID
+             5. VERIFIED 15 PREMIER FACILITY CARDS GRID
              ========================================================================= -->
         <div class="facilities-grid">
 
-            <!-- Card 1: Smart Classrooms -->
+            <!-- Card 1: Well-Equipped Futuristic Library -->
             <div class="facility-card">
                 <div class="facility-thumb-wrap">
-                    <img src="{{ asset($content['card1_image'] ?? 'assets/images/fac-smart-class.jpg') }}" alt="25 Smart Classrooms at Advaita" class="facility-thumb-img" loading="lazy">
+                    <img src="{{ asset('assets/images/fac-library.jpg') }}" alt="Well-Equipped Futuristic Library at Advaita" class="facility-thumb-img" loading="lazy">
+                    <div class="facility-badge-overlay">
+                        <i class="fa-solid fa-book-bookmark"></i>
+                        <span>Futuristic Library</span>
+                    </div>
+                </div>
+                <div class="facility-card-body">
+                    <div class="facility-meta-row">
+                        <span class="facility-tag-pill" style="color: #4338ca; background: #eef2ff; border: 1px solid #c7d2fe;">CBSE Curriculum</span>
+                        <span class="facility-spec-text">10,000+ Volumes</span>
+                    </div>
+                    <h3 class="facility-card-title">Well-Equipped Futuristic Library</h3>
+                    <p class="facility-card-desc">
+                        A peaceful, high-tech reading sanctuary housing 10,000+ curated volumes, children's literature, encyclopedias, journals, and digital research bays that nurture lifelong inquisitive minds.
+                    </p>
+                    <a href="{{ route('gallery') }}" class="facility-card-link-btn">
+                        <span>Explore Library</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 2: Dedicated Dance Studio -->
+            <div class="facility-card">
+                <div class="facility-thumb-wrap">
+                    <img src="{{ asset('assets/images/gallery/dance.jpg') }}" alt="Dedicated Dance Studio at Advaita School of Excellence" class="facility-thumb-img" loading="lazy">
+                    <div class="facility-badge-overlay">
+                        <i class="fa-solid fa-person-chalkboard"></i>
+                        <span>Dance Studio</span>
+                    </div>
+                </div>
+                <div class="facility-card-body">
+                    <div class="facility-meta-row">
+                        <span class="facility-tag-pill" style="color: #c026d3; background: #fdf4ff; border: 1px solid #f5d0fe;">Performing Arts</span>
+                        <span class="facility-spec-text">Mirrored Floor</span>
+                    </div>
+                    <h3 class="facility-card-title">Dedicated Dance Room</h3>
+                    <p class="facility-card-desc">
+                        Spacious performing arts studio designed for Indian classical dance, Bharatnatyam, folk choreography, and rhythm movement under specialized instructors to develop poise and grace.
+                    </p>
+                    <a href="{{ route('gallery') }}" class="facility-card-link-btn">
+                        <span>View Dance Performances</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 3: High-Tech Computer Lab -->
+            <div class="facility-card">
+                <div class="facility-thumb-wrap">
+                    <img src="{{ asset('assets/images/gallery/computer-lab.png') }}" alt="High-Tech Computer Laboratory at Advaita" class="facility-thumb-img" loading="lazy">
+                    <div class="facility-badge-overlay">
+                        <i class="fa-solid fa-desktop"></i>
+                        <span>Computer Lab</span>
+                    </div>
+                </div>
+                <div class="facility-card-body">
+                    <div class="facility-meta-row">
+                        <span class="facility-tag-pill" style="color: #0284c7; background: #f0f9ff; border: 1px solid #bae6fd;">56 m² IT Arena</span>
+                        <span class="facility-spec-text">1:1 Student Ratio</span>
+                    </div>
+                    <h3 class="facility-card-title">High-Tech Computer Lab</h3>
+                    <p class="facility-card-desc">
+                        State-of-the-art computer workstations connected to high-speed fiber internet for AI coding, Python programming, Typing Master, and foundational digital literacy in a secure environment.
+                    </p>
+                    <a href="{{ route('academics') }}" class="facility-card-link-btn">
+                        <span>Explore Digital Skills</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 4: Music Room & Instrumental Studio -->
+            <div class="facility-card">
+                <div class="facility-thumb-wrap">
+                    <img src="{{ asset('assets/images/gallery/gallery-school-band.jpg') }}" alt="Music Room and School Band at Advaita" class="facility-thumb-img" loading="lazy">
+                    <div class="facility-badge-overlay">
+                        <i class="fa-solid fa-music"></i>
+                        <span>Music Studio</span>
+                    </div>
+                </div>
+                <div class="facility-card-body">
+                    <div class="facility-meta-row">
+                        <span class="facility-tag-pill" style="color: #ea580c; background: #fff7ed; border: 1px solid #fed7aa;">Vocal &amp; Band</span>
+                        <span class="facility-spec-text">Marching Troupe</span>
+                    </div>
+                    <h3 class="facility-card-title">Music Room &amp; Band Studio</h3>
+                    <p class="facility-card-desc">
+                        Acoustically optimized practice studio for classical vocal training, harmonium, keyboards, tabla, and ceremonial school marching band brass and percussion troupes.
+                    </p>
+                    <a href="{{ route('gallery') }}" class="facility-card-link-btn">
+                        <span>View Music Gallery</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 5: Grand Auditorium & Assembly Hall -->
+            <div class="facility-card">
+                <div class="facility-thumb-wrap">
+                    <img src="{{ asset('assets/images/gallery/cultural.jpg') }}" alt="Grand Auditorium & Assembly Hall at Advaita" class="facility-thumb-img" loading="lazy">
+                    <div class="facility-badge-overlay">
+                        <i class="fa-solid fa-masks-theater"></i>
+                        <span>Auditorium</span>
+                    </div>
+                </div>
+                <div class="facility-card-body">
+                    <div class="facility-meta-row">
+                        <span class="facility-tag-pill" style="color: #b45309; background: #fffbeb; border: 1px solid #fde68a;">Central Space</span>
+                        <span class="facility-spec-text">Acoustic Sound &amp; Lights</span>
+                    </div>
+                    <h3 class="facility-card-title">Auditorium &amp; Assembly Hall</h3>
+                    <p class="facility-card-desc">
+                        Magnificent multi-purpose indoor auditorium equipped with theatrical stage lighting, modern acoustic sound systems, and seating for annual gatherings, debates, seminars, and fests.
+                    </p>
+                    <a href="{{ route('gallery') }}" class="facility-card-link-btn">
+                        <span>View Cultural Events</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 6: Big Playing Green Lawn -->
+            <div class="facility-card">
+                <div class="facility-thumb-wrap">
+                    <img src="{{ asset('assets/images/gallery/gallery-parachute-lawn-building.jpg') }}" alt="Big Playing Green Lawn at Advaita" class="facility-thumb-img" loading="lazy">
+                    <div class="facility-badge-overlay">
+                        <i class="fa-solid fa-clover"></i>
+                        <span>Big Green Lawn</span>
+                    </div>
+                </div>
+                <div class="facility-card-body">
+                    <div class="facility-meta-row">
+                        <span class="facility-tag-pill" style="color: #15803d; background: #f0fdf4; border: 1px solid #bbf7d0;">Lush Turf</span>
+                        <span class="facility-spec-text">Campus Frontage</span>
+                    </div>
+                    <h3 class="facility-card-title">Big Playing Green Lawn</h3>
+                    <p class="facility-card-desc">
+                        Expansive, manicured natural grass lawn in front of the main campus building dedicated to morning community bonding, parachute activities, open-air physical training, and free play.
+                    </p>
+                    <a href="{{ route('gallery') }}" class="facility-card-link-btn">
+                        <span>View Lawn Activities</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 7: Cricket Field & Practice Nets -->
+            <div class="facility-card">
+                <div class="facility-thumb-wrap">
+                    <img src="{{ asset('assets/images/gallery/gallery-sports-field-agility.jpg') }}" alt="Cricket Field and Net Practice Arena at Advaita" class="facility-thumb-img" loading="lazy">
+                    <div class="facility-badge-overlay">
+                        <i class="fa-solid fa-baseball-bat-ball"></i>
+                        <span>Cricket Arena</span>
+                    </div>
+                </div>
+                <div class="facility-card-body">
+                    <div class="facility-meta-row">
+                        <span class="facility-tag-pill" style="color: #d97706; background: #fffbeb; border: 1px solid #fde68a;">Cricket Nets</span>
+                        <span class="facility-spec-text">Turf Pitch</span>
+                    </div>
+                    <h3 class="facility-card-title">Cricket Field &amp; Practice Nets</h3>
+                    <p class="facility-card-desc">
+                        Dedicated cricket ground with practice turf nets for batting drills, bowling run-ups, and fielding reflexes under the expert supervision of qualified cricket mentors.
+                    </p>
+                    <a href="{{ route('gallery') }}" class="facility-card-link-btn">
+                        <span>View Cricket Drills</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 8: Basketball & Volleyball Courts -->
+            <div class="facility-card">
+                <div class="facility-thumb-wrap">
+                    <img src="{{ asset('assets/images/fac-sports.jpg') }}" alt="Basketball and Volleyball Courts at Advaita" class="facility-thumb-img" loading="lazy">
+                    <div class="facility-badge-overlay">
+                        <i class="fa-solid fa-volleyball"></i>
+                        <span>Court Sports</span>
+                    </div>
+                </div>
+                <div class="facility-card-body">
+                    <div class="facility-meta-row">
+                        <span class="facility-tag-pill" style="color: #dc2626; background: #fef2f2; border: 1px solid #fecaca;">Hardcourt Surface</span>
+                        <span class="facility-spec-text">Standard Marking</span>
+                    </div>
+                    <h3 class="facility-card-title">Basketball &amp; Volleyball Courts</h3>
+                    <p class="facility-card-desc">
+                        Professionally surfaced outdoor multi-sport courts for basketball and volleyball, fostering quick agility, vertical jumping, hand-eye coordination, and tournament-ready teamwork.
+                    </p>
+                    <a href="{{ route('gallery') }}" class="facility-card-link-btn">
+                        <span>View Court Sports</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 9: Full-Sized Football Ground -->
+            <div class="facility-card">
+                <div class="facility-thumb-wrap">
+                    <img src="{{ asset('assets/images/gallery/gallery-football-match-sprint.jpg') }}" alt="Full-Sized Football Ground at Advaita" class="facility-thumb-img" loading="lazy">
+                    <div class="facility-badge-overlay">
+                        <i class="fa-solid fa-futbol"></i>
+                        <span>Football Ground</span>
+                    </div>
+                </div>
+                <div class="facility-card-body">
+                    <div class="facility-meta-row">
+                        <span class="facility-tag-pill" style="color: #16a34a; background: #f0fdf4; border: 1px solid #bbf7d0;">Lush Grass Pitch</span>
+                        <span class="facility-spec-text">Regulation Posts</span>
+                    </div>
+                    <h3 class="facility-card-title">Full-Sized Football Ground</h3>
+                    <p class="facility-card-desc">
+                        Lush natural grass football ground with regulation goalposts where students train in competitive sprint stamina, passing precision, and inter-house football championship matches.
+                    </p>
+                    <a href="{{ route('gallery') }}" class="facility-card-link-btn">
+                        <span>View Football Matches</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 10: Composite Science Laboratories -->
+            <div class="facility-card">
+                <div class="facility-thumb-wrap">
+                    <img src="{{ asset('assets/images/gallery/science-lab.png') }}" alt="Composite Science Laboratories at Advaita" class="facility-thumb-img" loading="lazy">
+                    <div class="facility-badge-overlay">
+                        <i class="fa-solid fa-flask-vial"></i>
+                        <span>Science Labs</span>
+                    </div>
+                </div>
+                <div class="facility-card-body">
+                    <div class="facility-meta-row">
+                        <span class="facility-tag-pill" style="color: #0891b2; background: #ecfeff; border: 1px solid #a5f3fc;">Physics · Chem · Bio</span>
+                        <span class="facility-spec-text">56 m² CBSE Lab</span>
+                    </div>
+                    <h3 class="facility-card-title">Composite Science Laboratories</h3>
+                    <p class="facility-card-desc">
+                        Fully equipped composite science laboratory for hands-on experimentation across Physics, Chemistry, and Biology with high-grade optical microscopes and strict safety protocols.
+                    </p>
+                    <a href="{{ route('academics') }}" class="facility-card-link-btn">
+                        <span>Explore Science Labs</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 11: Robotics & STEAM Innovation Lab -->
+            <div class="facility-card">
+                <div class="facility-thumb-wrap">
+                    <img src="{{ asset('assets/images/gallery/robotics-lab.png') }}" alt="Robotics and STEAM Innovation Lab at Advaita" class="facility-thumb-img" loading="lazy">
+                    <div class="facility-badge-overlay">
+                        <i class="fa-solid fa-robot"></i>
+                        <span>Robotics &amp; STEAM</span>
+                    </div>
+                </div>
+                <div class="facility-card-body">
+                    <div class="facility-meta-row">
+                        <span class="facility-tag-pill" style="color: #7c3aed; background: #f5f3ff; border: 1px solid #ddd6fe;">Microcontrollers &amp; AI</span>
+                        <span class="facility-spec-text">Hands-On Kits</span>
+                    </div>
+                    <h3 class="facility-card-title">Robotics &amp; STEAM Innovation Lab</h3>
+                    <p class="facility-card-desc">
+                        Experiential robotics arena with microcontrollers, motorized building kits, sensors, and coding puzzles where young innovators build automated projects and computational logic.
+                    </p>
+                    <a href="{{ route('academics') }}" class="facility-card-link-btn">
+                        <span>Explore Robotics Track</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 12: Mathematics & Abacus Activity Lab -->
+            <div class="facility-card">
+                <div class="facility-thumb-wrap">
+                    <img src="{{ asset('assets/images/gallery/academic-learning.png') }}" alt="Mathematics and Abacus Activity Lab at Advaita" class="facility-thumb-img" loading="lazy">
+                    <div class="facility-badge-overlay">
+                        <i class="fa-solid fa-calculator"></i>
+                        <span>Math &amp; Abacus</span>
+                    </div>
+                </div>
+                <div class="facility-card-body">
+                    <div class="facility-meta-row">
+                        <span class="facility-tag-pill" style="color: #0284c7; background: #f0f9ff; border: 1px solid #bae6fd;">Speed Arithmetic</span>
+                        <span class="facility-spec-text">47 m² Lab</span>
+                    </div>
+                    <h3 class="facility-card-title">Mathematics &amp; Abacus Lab</h3>
+                    <p class="facility-card-desc">
+                        Dedicated math activity space featuring Abacus apparatus, tactile geometric kits, 3D solids, and mental math tools making arithmetic intuitive and engaging for all age groups.
+                    </p>
+                    <a href="{{ route('academics.primary') }}#abacus-section" class="facility-card-link-btn">
+                        <span>Explore Abacus Track</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 13: 25 Smart Classrooms -->
+            <div class="facility-card">
+                <div class="facility-thumb-wrap">
+                    <img src="{{ asset('assets/images/fac-smart-class.jpg') }}" alt="25 Smart Classrooms at Advaita" class="facility-thumb-img" loading="lazy">
                     <div class="facility-badge-overlay">
                         <i class="fa-solid fa-chalkboard-user"></i>
                         <span>Smart Classrooms</span>
@@ -188,146 +488,21 @@
                         <span class="facility-tag-pill" style="color: #ea580c; background: #fff7ed; border: 1px solid #fed7aa;">25 Classrooms</span>
                         <span class="facility-spec-text">47.08 m² each</span>
                     </div>
-                    <h3 class="facility-card-title">Smart Classrooms</h3>
+                    <h3 class="facility-card-title">Interactive Smart Classrooms</h3>
                     <p class="facility-card-desc">
-                        Well-ventilated, spacious classrooms adhering to CBSE spatial guidelines, equipped with interactive multimedia teaching displays, ergonomic student desks, and natural airflow.
+                        Well-ventilated, spacious air-cooled classrooms adhering to CBSE spatial norms, equipped with interactive multimedia panels, natural airflow, and child-safe ergonomic furniture.
                     </p>
                     <a href="{{ route('academics') }}" class="facility-card-link-btn">
-                        <span>Explore Academics</span>
+                        <span>Explore Classrooms</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
 
-            <!-- Card 2: Science & Mathematics Laboratories -->
+            <!-- Card 14: GPS-Enabled Transport Fleet -->
             <div class="facility-card">
                 <div class="facility-thumb-wrap">
-                    <img src="{{ asset($content['card2_image'] ?? 'assets/images/gallery/science-lab.png') }}" alt="Science and Mathematics Laboratories at Advaita" class="facility-thumb-img" loading="lazy">
-                    <div class="facility-badge-overlay">
-                        <i class="fa-solid fa-flask"></i>
-                        <span>Science &amp; Math</span>
-                    </div>
-                </div>
-                <div class="facility-card-body">
-                    <div class="facility-meta-row">
-                        <span class="facility-tag-pill" style="color: #0284c7; background: #f0f9ff; border: 1px solid #bae6fd;">Composite Science Lab</span>
-                        <span class="facility-spec-text">56 m² &amp; 47 m²</span>
-                    </div>
-                    <h3 class="facility-card-title">Science &amp; Mathematics Laboratories</h3>
-                    <p class="facility-card-desc">
-                        Composite Science Lab for practical experimentation across Physics, Chemistry, and Biology, paired with a dedicated Mathematics Lab with Abacus apparatus, geometric kits, and calculators.
-                    </p>
-                    <a href="{{ route('academics') }}" class="facility-card-link-btn">
-                        <span>Explore Practical Labs</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Card 3: Robotics & Technology Labs -->
-            <div class="facility-card">
-                <div class="facility-thumb-wrap">
-                    <img src="{{ asset($content['card3_image'] ?? 'assets/images/gallery/robotics-lab.png') }}" alt="Robotics and Computer Technology Lab at Advaita" class="facility-thumb-img" loading="lazy">
-                    <div class="facility-badge-overlay">
-                        <i class="fa-solid fa-robot"></i>
-                        <span>Robotics &amp; Tech</span>
-                    </div>
-                </div>
-                <div class="facility-card-body">
-                    <div class="facility-meta-row">
-                        <span class="facility-tag-pill" style="color: #7c3aed; background: #f5f3ff; border: 1px solid #ddd6fe;">STEAM robotics kits</span>
-                        <span class="facility-spec-text">56 m² Lab</span>
-                    </div>
-                    <h3 class="facility-card-title">Robotics &amp; Technology Labs</h3>
-                    <p class="facility-card-desc">
-                        Hands-on STEAM robotics kits, microcontrollers, and sensor experimentation sets alongside our 56 m² Computer Laboratory with high-speed internet for coding, logic building, and digital literacy.
-                    </p>
-                    <a href="{{ route('academics') }}" class="facility-card-link-btn">
-                        <span>Explore Tech &amp; Coding</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Card 4: Library & Reading Resource Center -->
-            <div class="facility-card">
-                <div class="facility-thumb-wrap">
-                    <img src="{{ asset($content['card4_image'] ?? 'assets/images/fac-library.jpg') }}" alt="School Library and Reading Resource Center" class="facility-thumb-img" loading="lazy">
-                    <div class="facility-badge-overlay">
-                        <i class="fa-solid fa-book-bookmark"></i>
-                        <span>Resource Center</span>
-                    </div>
-                </div>
-                <div class="facility-card-body">
-                    <div class="facility-meta-row">
-                        <span class="facility-tag-pill" style="color: #4338ca; background: #eef2ff; border: 1px solid #c7d2fe;">CBSE Curriculum</span>
-                        <span class="facility-spec-text">10,000+ Books</span>
-                    </div>
-                    <h3 class="facility-card-title">Library &amp; Resource Center</h3>
-                    <p class="facility-card-desc">
-                        Carefully curated collection of curriculum reference volumes, children's literature, encyclopedias, and educational periodicals with peaceful reading desks to foster lifelong reading habits.
-                    </p>
-                    <a href="{{ route('about-us') }}" class="facility-card-link-btn">
-                        <span>Explore Reading Culture</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Card 5: Green Sports Lawns & Playgrounds -->
-            <div class="facility-card">
-                <div class="facility-thumb-wrap">
-                    <img src="{{ asset($content['card5_image'] ?? 'assets/images/gallery/gallery-parachute-lawn-building.jpg') }}" alt="Green Sports Lawn and Outdoor Playgrounds at Advaita" class="facility-thumb-img" loading="lazy">
-                    <div class="facility-badge-overlay">
-                        <i class="fa-solid fa-person-running"></i>
-                        <span>Green Sports Lawn</span>
-                    </div>
-                </div>
-                <div class="facility-card-body">
-                    <div class="facility-meta-row">
-                        <span class="facility-tag-pill" style="color: #15803d; background: #f0fdf4; border: 1px solid #bbf7d0;">Outdoor Grounds</span>
-                        <span class="facility-spec-text">Natural Grass</span>
-                    </div>
-                    <h3 class="facility-card-title">Green Sports Lawns &amp; Playgrounds</h3>
-                    <p class="facility-card-desc">
-                        Expansive natural grass sports lawn and playground dedicated to football, cricket, athletics, yoga, gymnastics, and pre-primary obstacle games under qualified physical education mentors.
-                    </p>
-                    <a href="{{ route('gallery') }}" class="facility-card-link-btn">
-                        <span>View Sports Gallery</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Card 6: Multi-Purpose Hall & Assembly Space -->
-            <div class="facility-card">
-                <div class="facility-thumb-wrap">
-                    <img src="{{ asset($content['card6_image'] ?? 'assets/images/gallery-assembly.jpg') }}" alt="Multi-Purpose Hall and Assembly Space at Advaita" class="facility-thumb-img" loading="lazy">
-                    <div class="facility-badge-overlay">
-                        <i class="fa-solid fa-landmark"></i>
-                        <span>Events &amp; Assembly</span>
-                    </div>
-                </div>
-                <div class="facility-card-body">
-                    <div class="facility-meta-row">
-                        <span class="facility-tag-pill" style="color: #b45309; background: #fffbeb; border: 1px solid #fde68a;">Central Space</span>
-                        <span class="facility-spec-text">Indoor Stage</span>
-                    </div>
-                    <h3 class="facility-card-title">Multi-Purpose Hall &amp; Assembly Space</h3>
-                    <p class="facility-card-desc">
-                        Central indoor gathering space utilized for morning assemblies, inter-house debates, seminars, cultural celebrations, and student presentations without unverified equipment claims.
-                    </p>
-                    <a href="{{ route('gallery') }}" class="facility-card-link-btn">
-                        <span>View Assembly Events</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Card 7: GPS-Enabled Transport Fleet -->
-            <div class="facility-card">
-                <div class="facility-thumb-wrap">
-                    <img src="{{ asset($content['card7_image'] ?? 'assets/images/fac-transport.jpg') }}" alt="GPS-Enabled School Transport Fleet" class="facility-thumb-img" loading="lazy">
+                    <img src="{{ asset('assets/images/fac-transport.jpg') }}" alt="GPS-Enabled School Transport Fleet" class="facility-thumb-img" loading="lazy">
                     <div class="facility-badge-overlay">
                         <i class="fa-solid fa-bus"></i>
                         <span>GPS Fleet</span>
@@ -335,24 +510,24 @@
                 </div>
                 <div class="facility-card-body">
                     <div class="facility-meta-row">
-                        <span class="facility-tag-pill" style="color: #ea580c; background: #fff7ed; border: 1px solid #fed7aa;">4 Major Routes</span>
-                        <span class="facility-spec-text">Female Attendants</span>
+                        <span class="facility-tag-pill" style="color: #ea580c; background: #fff7ed; border: 1px solid #fed7aa;">Third Party</span>
+                        <span class="facility-spec-text">Head: Shakir Bhai</span>
                     </div>
                     <h3 class="facility-card-title">GPS-Enabled School Transport</h3>
                     <p class="facility-card-desc">
-                        Dedicated school bus fleet covering 4 key corridors in Parbhani (Station, Stadium, Collector Office, and Sambhaji Nagar) equipped with GPS tracking, speed governors, and female attendants.
+                        Dedicated school transport provided via a verified third party, managed by Transport Head <strong>Shakir Bhai (<a href="tel:+919923747775" class="text-orange fw-bold">+91 99237 47775</a>)</strong> with GPS tracking, speed governors, and female attendants.
                     </p>
-                    <a href="{{ route('admission-info') }}#transport-facilities" class="facility-card-link-btn">
-                        <span>View Bus Corridors</span>
+                    <a href="{{ route('admission-info') }}#fee-structure" class="facility-card-link-btn">
+                        <span>View Bus Routes</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
             </div>
 
-            <!-- Card 8: Safety & 24/7 CCTV Security -->
+            <!-- Card 15: Safety & 24/7 CCTV Security -->
             <div class="facility-card">
                 <div class="facility-thumb-wrap">
-                    <img src="{{ asset($content['card8_image'] ?? 'assets/images/fac-security.jpg') }}" alt="Safety and 24/7 CCTV Security Surveillance" class="facility-thumb-img" loading="lazy">
+                    <img src="{{ asset('assets/images/fac-security.jpg') }}" alt="Safety and 24/7 CCTV Security Surveillance" class="facility-thumb-img" loading="lazy">
                     <div class="facility-badge-overlay">
                         <i class="fa-solid fa-shield-halved"></i>
                         <span>24/7 Monitored</span>
@@ -361,114 +536,14 @@
                 <div class="facility-card-body">
                     <div class="facility-meta-row">
                         <span class="facility-tag-pill" style="color: #0369a1; background: #f0f9ff; border: 1px solid #bae6fd;">CCTV Network</span>
-                        <span class="facility-spec-text">Guarded Gates</span>
+                        <span class="facility-spec-text">Full-Time Nurse</span>
                     </div>
-                    <h3 class="facility-card-title">Safety &amp; 24/7 CCTV Security</h3>
+                    <h3 class="facility-card-title">24/7 CCTV Campus Safety &amp; Infirmary</h3>
                     <p class="facility-card-desc">
-                        Full perimeter boundary wall, round-the-clock CCTV camera coverage at all entrance checkpoints, corridors, and school grounds, manned visitor entry verification, and fire safety provisions.
+                        Full perimeter boundary wall, round-the-clock CCTV cameras across checkpoints and corridors, guarded gates, campus sick bay with full-time nurse, and pure RO drinking water stations.
                     </p>
                     <a href="{{ route('mandatory-disclosure') }}" class="facility-card-link-btn">
-                        <span>View Safety Compliance</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Card 9: Hygienic Dining & Refreshment Space -->
-            <div class="facility-card">
-                <div class="facility-thumb-wrap">
-                    <img src="{{ asset($content['card9_image'] ?? 'assets/images/gallery-day-1.jpg') }}" alt="Hygienic Dining and Refreshment Space at Advaita" class="facility-thumb-img" loading="lazy">
-                    <div class="facility-badge-overlay">
-                        <i class="fa-solid fa-utensils"></i>
-                        <span>Dining Space</span>
-                    </div>
-                </div>
-                <div class="facility-card-body">
-                    <div class="facility-meta-row">
-                        <span class="facility-tag-pill" style="color: #be123c; background: #fff1f2; border: 1px solid #fecdd3;">RO Purified Water</span>
-                        <span class="facility-spec-text">Clean &amp; Supervised</span>
-                    </div>
-                    <h3 class="facility-card-title">Hygienic Dining Space</h3>
-                    <p class="facility-card-desc">
-                        Clean, comfortable dining space equipped with continuous RO-purified drinking water systems and supervised hygiene standards for students during lunch and recess periods.
-                    </p>
-                    <a href="{{ route('gallery') }}" class="facility-card-link-btn">
-                        <span>View Campus Life</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Card 10: Medical Infirmary & First-Aid Center -->
-            <div class="facility-card">
-                <div class="facility-thumb-wrap">
-                    <img src="{{ asset($content['card10_image'] ?? 'assets/images/prog-early-years.jpg') }}" alt="On-Campus Medical Infirmary and First Aid Center" class="facility-thumb-img" loading="lazy">
-                    <div class="facility-badge-overlay">
-                        <i class="fa-solid fa-briefcase-medical"></i>
-                        <span>First Aid Post</span>
-                    </div>
-                </div>
-                <div class="facility-card-body">
-                    <div class="facility-meta-row">
-                        <span class="facility-tag-pill" style="color: #be185d; background: #fdf2f8; border: 1px solid #fbcfe8;">Health Monitoring</span>
-                        <span class="facility-spec-text">Emergency Care</span>
-                    </div>
-                    <h3 class="facility-card-title">Infirmary &amp; First-Aid Center</h3>
-                    <p class="facility-card-desc">
-                        On-campus medical room equipped with essential first-aid supplies, patient rest bed, first-aid trained personnel, regular student health checks, and swift emergency hospital coordination in Parbhani.
-                    </p>
-                    <a href="{{ route('contact') }}" class="facility-card-link-btn">
-                        <span>Contact Help Desk</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Card 11: Eco-Friendly Green Campus (10,000 Sq. Mtr.) -->
-            <div class="facility-card">
-                <div class="facility-thumb-wrap">
-                    <img src="{{ asset($content['card11_image'] ?? 'assets/images/gallery/campus-building.png') }}" alt="10,000 Sq. Mtrs. Eco-Friendly Green Campus at Parbhani" class="facility-thumb-img" loading="lazy">
-                    <div class="facility-badge-overlay">
-                        <i class="fa-solid fa-leaf"></i>
-                        <span>Green Campus</span>
-                    </div>
-                </div>
-                <div class="facility-card-body">
-                    <div class="facility-meta-row">
-                        <span class="facility-tag-pill" style="color: #15803d; background: #f0fdf4; border: 1px solid #bbf7d0;">10,000 m² Campus</span>
-                        <span class="facility-spec-text">Sanmati Campus</span>
-                    </div>
-                    <h3 class="facility-card-title">Eco-Friendly Green Campus</h3>
-                    <p class="facility-card-desc">
-                        Verified 10,000 Sq. Mtrs. (~2.47 Acres) of lush, clean educational premises on Jintur Road, featuring tree-lined perimeter walkways, natural ventilation, and an eco-conscious learning atmosphere.
-                    </p>
-                    <a href="{{ route('contact') }}#campus-map" class="facility-card-link-btn">
-                        <span>Locate on Map</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Card 12: Arts, Music & Creative Studios -->
-            <div class="facility-card">
-                <div class="facility-thumb-wrap">
-                    <img src="{{ asset($content['card12_image'] ?? 'assets/images/gallery/gallery-art-circle-kids.jpg') }}" alt="Arts, Music and Creative Activity Studios at Advaita" class="facility-thumb-img" loading="lazy">
-                    <div class="facility-badge-overlay">
-                        <i class="fa-solid fa-palette"></i>
-                        <span>Creative Studios</span>
-                    </div>
-                </div>
-                <div class="facility-card-body">
-                    <div class="facility-meta-row">
-                        <span class="facility-tag-pill" style="color: #0f766e; background: #f0fdfa; border: 1px solid #99f6e4;">Arts &amp; Music</span>
-                        <span class="facility-spec-text">Dedicated Studio</span>
-                    </div>
-                    <h3 class="facility-card-title">Arts &amp; Creative Studios</h3>
-                    <p class="facility-card-desc">
-                        Dedicated studios for fine arts, paper craft, origami, and vocal music, encouraging students to express their originality, develop dexterity, and explore performing arts beyond textbooks.
-                    </p>
-                    <a href="{{ route('gallery') }}" class="facility-card-link-btn">
-                        <span>View Creative Works</span>
+                        <span>View Safety Certifications</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>

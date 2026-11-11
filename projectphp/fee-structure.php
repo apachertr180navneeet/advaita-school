@@ -336,9 +336,9 @@ require_once __DIR__.'/includes/header.php';
                         <i class="fa-solid fa-bus"></i>
                     </div>
                     <div class="fee-addon-info">
-                        <div class="fee-addon-title">Transport Fee</div>
-                        <div class="fee-addon-sub">(Annual, optional)</div>
-                        <div class="fee-addon-amount">₹ 18,000</div>
+                        <div class="fee-addon-title">Transport Facility</div>
+                        <div class="fee-addon-sub">Provided via third party &bull; Head: Shakir Bhai (<a href="tel:+919923747775">+91 99237 47775</a>)</div>
+                        <div class="fee-addon-amount">Route-Based</div>
                     </div>
                 </div>
 

@@ -28,6 +28,14 @@ class GalleryItem extends Model
             'slug' => 'life-at-advaita',
             'icon' => 'fa-solid fa-school-flag',
         ],
+        'Campus & Facilities' => [
+            'slug' => 'campus-facilities',
+            'icon' => 'fa-solid fa-landmark',
+        ],
+        'Advaita Kids' => [
+            'slug' => 'advaita-kids',
+            'icon' => 'fa-solid fa-child-reaching',
+        ],
         'Events & Celebrations' => [
             'slug' => 'events-celebrations',
             'icon' => 'fa-solid fa-cake-candles',
@@ -51,14 +59,6 @@ class GalleryItem extends Model
         'Art, Culture & Creativity' => [
             'slug' => 'art-culture',
             'icon' => 'fa-solid fa-palette',
-        ],
-        'Advaita Kids' => [
-            'slug' => 'advaita-kids',
-            'icon' => 'fa-solid fa-child-reaching',
-        ],
-        'Campus & Facilities' => [
-            'slug' => 'campus-facilities',
-            'icon' => 'fa-solid fa-landmark',
         ],
     ];
 

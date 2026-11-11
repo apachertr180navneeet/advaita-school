@@ -16,11 +16,11 @@
                 <img src="{{ asset($content['hero_image'] ?? 'assets/images/gallery/gallery-painted-hands-girl.jpg') }}" alt="Pre-Primary Kids at Advaita School of Excellence" class="admission-hero-bg-img" width="1024" height="682">
             </div>
 
-            <!-- SVG Wave Overlay for Smooth Translucent Backdrop -->
+            <!-- SVG Wave Overlay for Smooth Translucent Backdrop (Shifted Left for Enlarged Visual) -->
             <div class="admission-hero-wave-overlay" aria-hidden="true">
                 <svg viewBox="0 0 1200 440" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0H560C600 130 530 280 640 440H0V0Z" fill="#EEF6FC" fill-opacity="0.97"/>
-                    <path d="M540 0C580 140 510 280 620 440H590C490 280 550 140 510 0H540Z" fill="#F37021" fill-opacity="0.25"/>
+                    <path d="M0 0H260C310 130 250 280 340 440H0V0Z" fill="#EEF6FC" fill-opacity="0.97"/>
+                    <path d="M240 0C290 140 230 280 320 440H290C200 280 260 140 210 0H240Z" fill="#F37021" fill-opacity="0.25"/>
                 </svg>
             </div>
 
@@ -56,9 +56,9 @@
                         <span class="highlight-serif">Wonder-Filled Years.</span>
                     </h1>
 
-                    <!-- Description -->
+                    <!-- Description with NEP 2020 & NCF-FS line -->
                     <p class="admission-hero-desc">
-                        {{ $content['hero_subtitle'] ?? 'A joyful, play-based early childhood environment blending Montessori methods, sensory learning, and creative discovery.' }}
+                        <strong>Aligned with NEP 2020 &amp; NCF-FS for Holistic Development</strong> — Focusing on Panchakosha Vikas for children 3–6 years through joyful sensory exploration, child safety, and loving care.
                     </p>
 
                     <!-- Quick Action Buttons -->
@@ -67,13 +67,17 @@
                             <i class="fa-solid fa-file-pen"></i>
                             <span>Enquire for Pre-Primary</span>
                         </a>
+                        <a href="#panchakosha-framework" class="admission-btn-visit" style="background: rgba(243, 112, 33, 0.08); border-color: rgba(243, 112, 33, 0.25); color: #ea580c;" title="Panchakosha Vikas & NEP 2020">
+                            <i class="fa-solid fa-certificate"></i>
+                            <span>NEP 2020 &amp; Panchakosha</span>
+                        </a>
+                        <a href="#preprimary-experiences" class="admission-btn-visit" title="Early Years Image Showcase">
+                            <i class="fa-solid fa-palette"></i>
+                            <span>Early Years Showcase</span>
+                        </a>
                         <a href="#new-building" class="admission-btn-visit" style="background: rgba(8, 59, 122, 0.08); border-color: rgba(8, 59, 122, 0.2); color: #083B7A;" title="Upcoming New Building">
                             <i class="fa-solid fa-building-flag"></i>
-                            <span>Upcoming New Building</span>
-                        </a>
-                        <a href="#pedagogy" class="admission-btn-visit" title="Play-Way Curriculum">
-                            <i class="fa-solid fa-shapes"></i>
-                            <span>Play-Way Pedagogy</span>
+                            <span>New School Building</span>
                         </a>
                     </div>
                 </div>
@@ -181,62 +185,393 @@
         </section>
 
         <!-- =========================================================================
-             3. EARLY YEARS CURRICULUM & METHODOLOGY (4 Pillared Cards)
+             3. PANCHAKOSHA VIKAS & NEP 2020 / NCF-FS HOLISTIC FRAMEWORK
              ========================================================================= -->
-        <section class="acad-section" id="pedagogy">
-            <div class="section-header-pill text-center mx-auto">
-                <span class="pill-badge"><i class="fa-solid fa-shapes"></i> Play-Way Pedagogy</span>
-                <h2 class="pill-title">Learning That Feels Like <span class="pill-title-highlight">Pure Play</span></h2>
-                <p class="pill-subtitle mx-auto">
-                    Children learn best when they are active participants. Our pre-primary curriculum builds foundational literacy, numeracy, and emotional intelligence through joyful sensory exploration.
+        <section class="acad-section pre-panchakosha-section" id="panchakosha-framework">
+            <div class="pre-panchakosha-banner">
+                <div class="panchakosha-kicker">
+                    <span class="panchakosha-badge">
+                        <i class="fa-solid fa-certificate"></i>
+                        NEP 2020 &amp; NCF-FS COMPLIANT · AGES 3–6 YEARS
+                    </span>
+                </div>
+
+                <!-- REQUIRED MAIN LINE -->
+                <h2 class="panchakosha-main-title">
+                    Aligned with NEP 2020 &amp; NCF-FS for Holistic Development
+                    <span class="panchakosha-highlight">— Focusing on Panchakosha Vikas for children 3–6 years.</span>
+                </h2>
+
+                <p class="panchakosha-subtext">
+                    Rooted in the National Curriculum Framework for Foundational Stage (NCF-FS), our joyful early-years pedagogy nurtures all five layers of human potential through experiential play, loving care, and active sensory immersion.
                 </p>
+
+                <!-- 5 Koshas Colorful Interactive Ribbon -->
+                <div class="panchakosha-ribbon-grid">
+                    <div class="kosha-pill kosha-red">
+                        <span class="kosha-name">Annamaya Kosha</span>
+                        <span class="kosha-desc">Physical Health &amp; Nutrition</span>
+                    </div>
+                    <div class="kosha-pill kosha-orange">
+                        <span class="kosha-name">Pranamaya Kosha</span>
+                        <span class="kosha-desc">Breath, Vitality &amp; Gross Motor</span>
+                    </div>
+                    <div class="kosha-pill kosha-gold">
+                        <span class="kosha-name">Manomaya Kosha</span>
+                        <span class="kosha-desc">Emotional Warmth &amp; Peer Care</span>
+                    </div>
+                    <div class="kosha-pill kosha-green">
+                        <span class="kosha-name">Vijnanamaya Kosha</span>
+                        <span class="kosha-desc">Curiosity, Phonics &amp; FLN Logic</span>
+                    </div>
+                    <div class="kosha-pill kosha-purple">
+                        <span class="kosha-name">Anandamaya Kosha</span>
+                        <span class="kosha-desc">Pure Joy, Wonder &amp; Creativity</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="acad-curriculum-grid">
-                <!-- Card 1 -->
-                <div class="acad-curriculum-card">
-                    <div class="acad-curr-icon orange" aria-hidden="true">
-                        <i class="fa-solid fa-shapes"></i>
+            <!-- 3 Institutional Guarantees (Safety First, Health & Hygiene, CBSE & NEP 2020 Ready) -->
+            <div class="pre-institution-pillars-grid">
+                <!-- Pillar 1: Safety First -->
+                <div class="pre-pillar-card">
+                    <div class="pillar-img-box">
+                        <img src="{{ asset('assets/images/fac-transport.jpg') }}" alt="Safety First at Advaita Pre-Primary" loading="lazy">
+                        <span class="pillar-badge-overlay orange">
+                            <i class="fa-solid fa-shield-heart"></i> Safety First
+                        </span>
                     </div>
-                    <h3 class="acad-curr-title">Sensory &amp; Hands-On Play</h3>
-                    <p class="acad-curr-desc">Montessori sensorial blocks, textured materials, and clay modeling to foster tactile brain development.</p>
+                    <div class="pillar-body">
+                        <div class="pillar-title-row">
+                            <div class="pillar-icon-circle orange" aria-hidden="true">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+                            <h3 class="pillar-card-title">Safety First</h3>
+                        </div>
+                        <ul class="pillar-checklist">
+                            <li>
+                                <i class="fa-solid fa-circle-check text-orange"></i>
+                                <span><strong>Female Attendant</strong> in every Washroom &amp; Classroom</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check text-orange"></i>
+                                <span><strong>RFID / GPS Tracked Transport</strong> with Female Attendant</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check text-orange"></i>
+                                <span><strong>Fire Safety Certified Campus</strong> &amp; Child-Safe Rounded Furniture</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
-                <!-- Card 2 -->
-                <div class="acad-curriculum-card">
-                    <div class="acad-curr-icon blue" aria-hidden="true">
-                        <i class="fa-solid fa-music"></i>
+                <!-- Pillar 2: Health & Hygiene -->
+                <div class="pre-pillar-card">
+                    <div class="pillar-img-box">
+                        <img src="{{ asset('assets/images/about-commitment-students.jpg') }}" alt="Health and Hygiene at Advaita Pre-Primary" loading="lazy">
+                        <span class="pillar-badge-overlay teal">
+                            <i class="fa-solid fa-heart-pulse"></i> Health &amp; Hygiene
+                        </span>
                     </div>
-                    <h3 class="acad-curr-title">Language &amp; Phonics Immersion</h3>
-                    <p class="acad-curr-desc">Jolly Phonics, musical rhymes, storytelling circles, and picture books to cultivate effortless speech and listening habits.</p>
+                    <div class="pillar-body">
+                        <div class="pillar-title-row">
+                            <div class="pillar-icon-circle teal" aria-hidden="true">
+                                <i class="fa-solid fa-stethoscope"></i>
+                            </div>
+                            <h3 class="pillar-card-title">Health &amp; Hygiene</h3>
+                        </div>
+                        <ul class="pillar-checklist">
+                            <li>
+                                <i class="fa-solid fa-circle-check text-teal"></i>
+                                <span><strong>Full-Time Trained Female Nurse</strong> &amp; Dedicated Sick Bay</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check text-teal"></i>
+                                <span><strong>Daily Sanitized Toys</strong> &amp; Non-Toxic Learning Materials</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check text-teal"></i>
+                                <span><strong>RO Purified Drinking Water</strong> with Child-Height Faucets</span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
-                <!-- Card 3 -->
-                <div class="acad-curriculum-card">
-                    <div class="acad-curr-icon teal" aria-hidden="true">
-                        <i class="fa-solid fa-cubes"></i>
+                <!-- Pillar 3: CBSE & NEP 2020 Ready -->
+                <div class="pre-pillar-card">
+                    <div class="pillar-img-box">
+                        <img src="{{ asset('assets/images/gallery/gallery-foundation-achievers.jpg') }}" alt="CBSE and NEP 2020 Ready at Advaita" loading="lazy">
+                        <span class="pillar-badge-overlay blue">
+                            <i class="fa-solid fa-award"></i> CBSE &amp; NEP Ready
+                        </span>
                     </div>
-                    <h3 class="acad-curr-title">Number Readiness &amp; Logic</h3>
-                    <p class="acad-curr-desc">Counting beads, pattern puzzles, and spatial sorting games that build an early natural love for mathematics.</p>
-                </div>
-
-                <!-- Card 4 -->
-                <div class="acad-curriculum-card">
-                    <div class="acad-curr-icon pink" aria-hidden="true">
-                        <i class="fa-solid fa-heart-pulse"></i>
+                    <div class="pillar-body">
+                        <div class="pillar-title-row">
+                            <div class="pillar-icon-circle blue" aria-hidden="true">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <h3 class="pillar-card-title">CBSE &amp; NEP 2020 Ready</h3>
+                        </div>
+                        <ul class="pillar-checklist">
+                            <li>
+                                <i class="fa-solid fa-circle-check text-navy"></i>
+                                <span><strong>1:12 Teacher-Student Ratio</strong> for Intimate Mentorship</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check text-navy"></i>
+                                <span><strong>NIPUN Bharat Aligned</strong> — Foundational Literacy &amp; Numeracy (FLN)</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-circle-check text-navy"></i>
+                                <span><strong>Holistic Progress Card (HPC)</strong> Tracking 360° Growth</span>
+                            </li>
+                        </ul>
                     </div>
-                    <h3 class="acad-curr-title">Social &amp; Emotional Warmth</h3>
-                    <p class="acad-curr-desc">Sharing routines, guided emotional expression, and cooperative games in a safe, loving peer circle.</p>
                 </div>
             </div>
         </section>
 
         <!-- =========================================================================
-             4. CLASSROOMS & PLAY FACILITIES SHOWCASE (Photo Gallery with Lightbox)
+             4. THE 9 VIBRANT EARLY YEARS FEATURE IMAGE SHOWCASE (ALL IMAGE CARDS)
+             ========================================================================= -->
+        <section class="acad-section pre-activities-gallery-section" id="preprimary-experiences">
+            <div class="section-header-pill text-center mx-auto">
+                <span class="pill-badge rainbow-badge">
+                    <i class="fa-solid fa-palette"></i> Colorful Early Childhood Journeys
+                </span>
+                <h2 class="pill-title">
+                    Every Day A <span class="pill-title-highlight rainbow-text">Joyful Adventure</span>
+                </h2>
+                <p class="pill-subtitle mx-auto">
+                    Live moments from our classrooms, labs, lawns, and play zones — each capturing child-centered, screen-balanced experiential joy.
+                </p>
+            </div>
+
+            <div class="pre-exp-gallery-grid">
+                <!-- Card 1: Sensory Sand Pit & Water Play Zone -->
+                <div class="pre-exp-card theme-aqua">
+                    <div class="pre-exp-thumb" onclick="openPreModal('{{ asset('assets/images/gallery/gallery-splash-pool-kids-play.jpg') }}', 'Sensory Sand Pit & Water Play Zone')">
+                        <img src="{{ asset('assets/images/gallery/gallery-splash-pool-kids-play.jpg') }}" alt="Sensory Sand Pit & Water Play Zone - Advaita Pre-Primary" loading="lazy">
+                        <span class="pre-exp-badge">
+                            <i class="fa-solid fa-water"></i> Water &amp; Sand Zone
+                        </span>
+                        <button type="button" class="pre-exp-zoom-btn" aria-label="Zoom Photo">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </button>
+                    </div>
+                    <div class="pre-exp-body">
+                        <h3 class="pre-exp-title">Sensory Sand Pit &amp; Water Play Zone</h3>
+                        <p class="pre-exp-desc">
+                            Safe, shallow splash pool for summer water drills, kinetic sand pits, and pouring channels that build tactile brain pathways under certified lady supervision.
+                        </p>
+                        <div class="pre-exp-tags">
+                            <span class="exp-tag-pill">Splash Pool</span>
+                            <span class="exp-tag-pill">Sand Sculpting</span>
+                            <span class="exp-tag-pill">Sensory Touch</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Mini Pet Corner & Organic Gardening Patch -->
+                <div class="pre-exp-card theme-green">
+                    <div class="pre-exp-thumb" onclick="openPreModal('{{ asset('assets/images/gallery/gallery-parachute-lawn-building.jpg') }}', 'Mini Pet Corner & Organic Gardening Patch')">
+                        <img src="{{ asset('assets/images/gallery/gallery-parachute-lawn-building.jpg') }}" alt="Mini Pet Corner & Organic Gardening Patch - Advaita" loading="lazy">
+                        <span class="pre-exp-badge">
+                            <i class="fa-solid fa-seedling"></i> Nature &amp; Empathy
+                        </span>
+                        <button type="button" class="pre-exp-zoom-btn" aria-label="Zoom Photo">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </button>
+                    </div>
+                    <div class="pre-exp-body">
+                        <h3 class="pre-exp-title">Mini Pet Corner &amp; Organic Gardening Patch</h3>
+                        <p class="pre-exp-desc">
+                            Designed for empathy and nature connect. Toddlers nurture potted botanicals, water micro-greens, interact with gentle mini-pets, and form an early love for Mother Earth.
+                        </p>
+                        <div class="pre-exp-tags">
+                            <span class="exp-tag-pill">Empathy Connect</span>
+                            <span class="exp-tag-pill">Green Patch</span>
+                            <span class="exp-tag-pill">Nature Loving</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Phonics & Language Lab / Reading Nook -->
+                <div class="pre-exp-card theme-blue">
+                    <div class="pre-exp-thumb" onclick="openPreModal('{{ asset('assets/images/gallery/gallery-classroom-learning.jpg') }}', 'Phonics & Language Lab / Reading Nook')">
+                        <img src="{{ asset('assets/images/gallery/gallery-classroom-learning.jpg') }}" alt="Phonics & Language Lab / Reading Nook - Advaita" loading="lazy">
+                        <span class="pre-exp-badge">
+                            <i class="fa-solid fa-book-open-reader"></i> Phonics &amp; Reading
+                        </span>
+                        <button type="button" class="pre-exp-zoom-btn" aria-label="Zoom Photo">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </button>
+                    </div>
+                    <div class="pre-exp-body">
+                        <h3 class="pre-exp-title">Phonics &amp; Language Lab / Reading Nook</h3>
+                        <p class="pre-exp-desc">
+                            Jolly Phonics based early reading program. Multi-sensory sound blending, large picture books, tactile letter tracing, and cozy storytelling floor nests.
+                        </p>
+                        <div class="pre-exp-tags">
+                            <span class="exp-tag-pill">Jolly Phonics</span>
+                            <span class="exp-tag-pill">Reading Nook</span>
+                            <span class="exp-tag-pill">Sound Blending</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Sensory & Hands-On Play -->
+                <div class="pre-exp-card theme-orange">
+                    <div class="pre-exp-thumb" onclick="openPreModal('{{ asset('assets/images/gallery/gallery-painted-hands-girl.jpg') }}', 'Sensory & Hands-On Play')">
+                        <img src="{{ asset('assets/images/gallery/gallery-painted-hands-girl.jpg') }}" alt="Sensory & Hands-On Play - Advaita Pre-Primary" loading="lazy">
+                        <span class="pre-exp-badge">
+                            <i class="fa-solid fa-shapes"></i> Sensory &amp; Hands-On
+                        </span>
+                        <button type="button" class="pre-exp-zoom-btn" aria-label="Zoom Photo">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </button>
+                    </div>
+                    <div class="pre-exp-body">
+                        <h3 class="pre-exp-title">Sensory &amp; Hands-On Play</h3>
+                        <p class="pre-exp-desc">
+                            Montessori sensorial cylinders, textured fabrics, safe non-toxic finger colors, and therapeutic clay sculpting that build fine-motor agility and neural connections.
+                        </p>
+                        <div class="pre-exp-tags">
+                            <span class="exp-tag-pill">Montessori Blocks</span>
+                            <span class="exp-tag-pill">Clay Modeling</span>
+                            <span class="exp-tag-pill">Tactile Art</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Early STEAM & Puzzle Play -->
+                <div class="pre-exp-card theme-purple">
+                    <div class="pre-exp-thumb" onclick="openPreModal('{{ asset('assets/images/gallery/gallery-math-science-lab.jpg') }}', 'Early STEAM & Puzzle Play')">
+                        <img src="{{ asset('assets/images/gallery/gallery-math-science-lab.jpg') }}" alt="Early STEAM & Puzzle Play - Advaita" loading="lazy">
+                        <span class="pre-exp-badge">
+                            <i class="fa-solid fa-puzzle-piece"></i> Early STEAM
+                        </span>
+                        <button type="button" class="pre-exp-zoom-btn" aria-label="Zoom Photo">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </button>
+                    </div>
+                    <div class="pre-exp-body">
+                        <h3 class="pre-exp-title">Early STEAM &amp; Puzzle Play</h3>
+                        <p class="pre-exp-desc">
+                            Age-appropriate STEM kits, giant building blocks, gear sets, spatial geometry sorting, and cognitive brain puzzles that spark early logic and mathematical curiosity.
+                        </p>
+                        <div class="pre-exp-tags">
+                            <span class="exp-tag-pill">STEM Kits</span>
+                            <span class="exp-tag-pill">Brain Puzzles</span>
+                            <span class="exp-tag-pill">Spatial Logic</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Language & Story Magic -->
+                <div class="pre-exp-card theme-pink">
+                    <div class="pre-exp-thumb" onclick="openPreModal('{{ asset('assets/images/gallery/gallery-art-circle-kids.jpg') }}', 'Language & Story Magic')">
+                        <img src="{{ asset('assets/images/gallery/gallery-art-circle-kids.jpg') }}" alt="Language & Story Magic - Advaita" loading="lazy">
+                        <span class="pre-exp-badge">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> Story Magic
+                        </span>
+                        <button type="button" class="pre-exp-zoom-btn" aria-label="Zoom Photo">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </button>
+                    </div>
+                    <div class="pre-exp-body">
+                        <h3 class="pre-exp-title">Language &amp; Story Magic</h3>
+                        <p class="pre-exp-desc">
+                            Jolly Phonics, Picture Talk circles, storytelling hand puppets, rhyme theatrette, and confidence-building Show-and-Tell sessions where every little voice is celebrated.
+                        </p>
+                        <div class="pre-exp-tags">
+                            <span class="exp-tag-pill">Picture Talk</span>
+                            <span class="exp-tag-pill">Show &amp; Tell</span>
+                            <span class="exp-tag-pill">Puppet Stories</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7: Music, Dance & Movement -->
+                <div class="pre-exp-card theme-coral">
+                    <div class="pre-exp-thumb" onclick="openPreModal('{{ asset('assets/images/gallery/dance.jpg') }}', 'Music, Dance & Movement')">
+                        <img src="{{ asset('assets/images/gallery/dance.jpg') }}" alt="Music, Dance & Movement - Advaita" loading="lazy">
+                        <span class="pre-exp-badge">
+                            <i class="fa-solid fa-music"></i> Dance &amp; Movement
+                        </span>
+                        <button type="button" class="pre-exp-zoom-btn" aria-label="Zoom Photo">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </button>
+                    </div>
+                    <div class="pre-exp-body">
+                        <h3 class="pre-exp-title">Music, Dance &amp; Movement</h3>
+                        <p class="pre-exp-desc">
+                            For rhythm and gross motor skills. Free rhythmic dancing, Orff percussion instruments, action songs, and guided physical agility games that build body coordination.
+                        </p>
+                        <div class="pre-exp-tags">
+                            <span class="exp-tag-pill">Gross Motor</span>
+                            <span class="exp-tag-pill">Rhythm Play</span>
+                            <span class="exp-tag-pill">Creative Dance</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8: Value & Life Skills -->
+                <div class="pre-exp-card theme-gold">
+                    <div class="pre-exp-thumb" onclick="openPreModal('{{ asset('assets/images/gallery/gallery-parachute-activity.jpg') }}', 'Value & Life Skills')">
+                        <img src="{{ asset('assets/images/gallery/gallery-parachute-activity.jpg') }}" alt="Value & Life Skills - Advaita Pre-Primary" loading="lazy">
+                        <span class="pre-exp-badge">
+                            <i class="fa-solid fa-heart"></i> Values &amp; Life Skills
+                        </span>
+                        <button type="button" class="pre-exp-zoom-btn" aria-label="Zoom Photo">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </button>
+                    </div>
+                    <div class="pre-exp-body">
+                        <h3 class="pre-exp-title">Value &amp; Life Skills</h3>
+                        <p class="pre-exp-desc">
+                            Sharing, Gratitude, and Good Manners. Guided daily peer circles where children practice shoe rack tidying, snack time gratitude, gentle words, and caring friendships.
+                        </p>
+                        <div class="pre-exp-tags">
+                            <span class="exp-tag-pill">Sharing &amp; Care</span>
+                            <span class="exp-tag-pill">Gratitude</span>
+                            <span class="exp-tag-pill">Good Manners</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 9: Screen-Free Smart Learning -->
+                <div class="pre-exp-card theme-indigo">
+                    <div class="pre-exp-thumb" onclick="openPreModal('{{ asset('assets/images/fac-smart-class.jpg') }}', 'Screen-Free Smart Learning')">
+                        <img src="{{ asset('assets/images/fac-smart-class.jpg') }}" alt="Screen-Free Smart Learning - Advaita" loading="lazy">
+                        <span class="pre-exp-badge">
+                            <i class="fa-solid fa-tv"></i> Guided Smart Tech
+                        </span>
+                        <button type="button" class="pre-exp-zoom-btn" aria-label="Zoom Photo">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </button>
+                    </div>
+                    <div class="pre-exp-body">
+                        <h3 class="pre-exp-title">Screen-Free Smart Learning</h3>
+                        <p class="pre-exp-desc">
+                            Interactive smart panels with limited, teacher-guided use. We preserve healthy eyes with short audio-visual phonics sessions while prioritizing physical, touch-based instruments.
+                        </p>
+                        <div class="pre-exp-tags">
+                            <span class="exp-tag-pill">Interactive Panels</span>
+                            <span class="exp-tag-pill">Guided Sessions</span>
+                            <span class="exp-tag-pill">Eye Safe</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================================================
+             5. CLASSROOMS, SOFT GYM & ACTIVITY SPACES (Facility Highlights)
              ========================================================================= -->
         <section class="acad-section" id="facilities-gallery">
             <div class="section-header-pill text-center mx-auto">
-                <span class="pill-badge"><i class="fa-solid fa-camera"></i> Infrastructure Showcase</span>
+                <span class="pill-badge"><i class="fa-solid fa-camera"></i> Infrastructure Highlights</span>
                 <h2 class="pill-title">Classrooms, Play Lawns &amp; <span class="pill-title-highlight">Activity Spaces</span></h2>
                 <p class="pill-subtitle mx-auto">
                     Every square foot is thoughtfully child-proofed, colorfully curated, and equipped with safe learning instruments to inspire creativity.
@@ -244,20 +579,7 @@
             </div>
 
             <div class="pre-gallery-grid">
-                <!-- Item 1: Splash Pool -->
-                <div class="pre-gallery-card">
-                    <div class="pre-gallery-thumb" onclick="openPreModal('{{ asset('assets/images/gallery/gallery-splash-pool-kids-play.jpg') }}', 'Splash Pool Water Fun')">
-                        <img src="{{ asset('assets/images/gallery/gallery-splash-pool-kids-play.jpg') }}" alt="Pre-Primary Splash Pool Fun" loading="lazy">
-                        <div class="pre-gallery-overlay">
-                            <span class="pre-tag">Recreation</span>
-                            <h4>Splash Pool &amp; Water Play</h4>
-                            <p>Safe, shallow splash pool for summer sensory fun under certified supervision.</p>
-                            <i class="fa-solid fa-magnifying-glass-plus zoom-icon" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 2: Crawl Tunnels & Soft Gym -->
+                <!-- Item 1: Crawl Tunnels & Soft Gym -->
                 <div class="pre-gallery-card">
                     <div class="pre-gallery-thumb" onclick="openPreModal('{{ asset('assets/images/gallery/gallery-crawl-tunnel-kids.jpg') }}', 'Indoor Crawl Tunnels & Soft Play')">
                         <img src="{{ asset('assets/images/gallery/gallery-crawl-tunnel-kids.jpg') }}" alt="Indoor Crawl Tunnels and Soft Play" loading="lazy">
@@ -270,46 +592,20 @@
                     </div>
                 </div>
 
-                <!-- Item 3: Creative Art & Craft Studio -->
+                <!-- Item 2: Creative Art & Origami Studio -->
                 <div class="pre-gallery-card">
-                    <div class="pre-gallery-thumb" onclick="openPreModal('{{ asset('assets/images/gallery/gallery-art-circle-kids.jpg') }}', 'Creative Expression & Finger Art')">
-                        <img src="{{ asset('assets/images/gallery/gallery-art-circle-kids.jpg') }}" alt="Creative Art Studio at Advaita School" loading="lazy">
+                    <div class="pre-gallery-thumb" onclick="openPreModal('{{ asset('assets/images/gallery/gallery-art-studio-origami-planes.jpg') }}', 'Creative Expression & Origami Studio')">
+                        <img src="{{ asset('assets/images/gallery/gallery-art-studio-origami-planes.jpg') }}" alt="Creative Art and Origami Studio at Advaita" loading="lazy">
                         <div class="pre-gallery-overlay">
                             <span class="pre-tag">Creativity</span>
-                            <h4>Art, Craft &amp; Finger Painting</h4>
-                            <p>Non-toxic finger colors, origami, and collage activities to unleash imagination.</p>
+                            <h4>Origami &amp; Art Studio</h4>
+                            <p>Paper crafts, colorful folding planes, and collage activities to unleash imagination.</p>
                             <i class="fa-solid fa-magnifying-glass-plus zoom-icon" aria-hidden="true"></i>
                         </div>
                     </div>
                 </div>
 
-                <!-- Item 4: Outdoor Parachute & Lawn Games -->
-                <div class="pre-gallery-card">
-                    <div class="pre-gallery-thumb" onclick="openPreModal('{{ asset('assets/images/gallery/gallery-parachute-activity.jpg') }}', 'Outdoor Parachute Team Games')">
-                        <img src="{{ asset('assets/images/gallery/gallery-parachute-activity.jpg') }}" alt="Outdoor Parachute Team Play" loading="lazy">
-                        <div class="pre-gallery-overlay">
-                            <span class="pre-tag">Outdoor Lawn</span>
-                            <h4>Parachute Play &amp; Lawn Games</h4>
-                            <p>Sunlit green lawns for parachute drills, ring games, and joyful physical games.</p>
-                            <i class="fa-solid fa-magnifying-glass-plus zoom-icon" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 5: Early Phonics & Classroom Learning -->
-                <div class="pre-gallery-card">
-                    <div class="pre-gallery-thumb" onclick="openPreModal('{{ asset('assets/images/gallery/gallery-classroom-learning.jpg') }}', 'Interactive Thematic Classrooms')">
-                        <img src="{{ asset('assets/images/gallery/gallery-classroom-learning.jpg') }}" alt="Pre-Primary Interactive Smart Classroom" loading="lazy">
-                        <div class="pre-gallery-overlay">
-                            <span class="pre-tag">Smart Class</span>
-                            <h4>Interactive Phonics Classrooms</h4>
-                            <p>Spacious, naturally ventilated rooms with smart boards and low-height desks.</p>
-                            <i class="fa-solid fa-magnifying-glass-plus zoom-icon" aria-hidden="true"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Item 6: Hula Hoop & Motor Agility -->
+                <!-- Item 3: Hula Hoop & Gymnastics -->
                 <div class="pre-gallery-card">
                     <div class="pre-gallery-thumb" onclick="openPreModal('{{ asset('assets/images/gallery/gallery-hula-hoop-kid.jpg') }}', 'Gymnastics & Balance Play')">
                         <img src="{{ asset('assets/images/gallery/gallery-hula-hoop-kid.jpg') }}" alt="Toddler Gymnastics and Balance Play" loading="lazy">
@@ -319,84 +615,6 @@
                             <p>Guided movement drills to develop body balance, rhythm, and confidence.</p>
                             <i class="fa-solid fa-magnifying-glass-plus zoom-icon" aria-hidden="true"></i>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========================================================================
-             5. LEARNING INSTRUMENTS & ACTIVITY AREAS
-             ========================================================================= -->
-        <section class="acad-section" id="learning-instruments">
-            <div class="section-header-pill text-center mx-auto">
-                <span class="pill-badge"><i class="fa-solid fa-puzzle-piece"></i> Hands-On Instruments</span>
-                <h2 class="pill-title">Educational Toys &amp; <span class="pill-title-highlight">Activity Instruments</span></h2>
-                <p class="pill-subtitle mx-auto">
-                    We replace passive screen time with real-world tangible learning tools that stimulate cognitive curiosity, spatial reasoning, and fine motor control.
-                </p>
-            </div>
-
-            <div class="instruments-grid">
-                <div class="instrument-item">
-                    <div class="ins-icon" aria-hidden="true"><i class="fa-solid fa-puzzle-piece"></i></div>
-                    <h4>Montessori Tactile Blocks</h4>
-                    <p>Wooden geometry blocks, sorting cylinders, and sensory touch boards to develop spatial intelligence.</p>
-                </div>
-
-                <div class="instrument-item">
-                    <div class="ins-icon" aria-hidden="true"><i class="fa-solid fa-drum"></i></div>
-                    <h4>Orff Musical Instruments</h4>
-                    <p>Xylophones, rhythm shakers, and hand cymbals to develop auditory discrimination and musical sense.</p>
-                </div>
-
-                <div class="instrument-item">
-                    <div class="ins-icon" aria-hidden="true"><i class="fa-solid fa-seedling"></i></div>
-                    <h4>Nature &amp; Sensory Sand Pit</h4>
-                    <p>Safe fine-grain kinetic sand tables and botany discovery garden boxes for hands-on sensory exploration.</p>
-                </div>
-
-                <div class="instrument-item">
-                    <div class="ins-icon" aria-hidden="true"><i class="fa-solid fa-book-sparkles"></i></div>
-                    <h4>Storybooks &amp; Puppet Theatre</h4>
-                    <p>Hand puppets and bilingual storybooks for expressive storytelling, empathy, and vocabulary expansion.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- =========================================================================
-             6. SAFETY, HYGIENE & CHILD-FRIENDLY INFRASTRUCTURE
-             ========================================================================= -->
-        <section class="pre-safety-section">
-            <div class="pre-safety-card">
-                <div class="pre-safety-header">
-                    <span class="safety-badge"><i class="fa-solid fa-shield-heart"></i> SAFETY FIRST PROTOCOL</span>
-                    <h2>Uncompromising Child Safety &amp; Hygiene</h2>
-                    <p>We treat every child in our care with the gentleness, compassion, and vigilance of a second home.</p>
-                </div>
-
-                <div class="safety-pillars-grid">
-                    <div class="safety-pillar">
-                        <div class="safety-icon-wrap" aria-hidden="true"><i class="fa-solid fa-video"></i></div>
-                        <h4>24×7 CCTV Surveillance</h4>
-                        <p>Complete campus, corridor, and play area video coverage accessible to administrators at all times.</p>
-                    </div>
-
-                    <div class="safety-pillar">
-                        <div class="safety-icon-wrap" aria-hidden="true"><i class="fa-solid fa-person-dress"></i></div>
-                        <h4>Female Attendants &amp; Nannies</h4>
-                        <p>Warm, trained female attendants present at all times for bathroom assistance, meals, and gentle comfort.</p>
-                    </div>
-
-                    <div class="safety-pillar">
-                        <div class="safety-icon-wrap" aria-hidden="true"><i class="fa-solid fa-pump-soap"></i></div>
-                        <h4>Medical-Grade Sanitization</h4>
-                        <p>All toys, activity mats, splash gear, and dining tables are sanitized daily with child-safe organic disinfectants.</p>
-                    </div>
-
-                    <div class="safety-pillar">
-                        <div class="safety-icon-wrap" aria-hidden="true"><i class="fa-solid fa-shield-halved"></i></div>
-                        <h4>Rounded Ergonomic Furniture</h4>
-                        <p>No sharp corners. All desks, chairs, and play obstacles meet international infant and toddler safety norms.</p>
                     </div>
                 </div>
             </div>

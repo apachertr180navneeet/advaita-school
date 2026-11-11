@@ -20,8 +20,7 @@ require_once __DIR__.'/includes/header.php';
          1. HERO SECTION: "MOMENTS THAT MATTER" & SCULPTED CAMPUS VISUAL
          ========================================================================= -->
     <section class="adv-gal-hero-section">
-        <!-- Decorative subtle pattern dots on the far left -->
-        <div class="adv-gal-hero-dots-decor" aria-hidden="true"></div>
+
 
         <!-- Full-Bleed Right Visual: Sculpted Campus Panorama with Royal Blue Ribbon -->
         <div class="adv-gal-hero-curved-visual">

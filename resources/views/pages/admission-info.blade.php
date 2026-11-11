@@ -98,6 +98,10 @@
                 <p class="admission-section-desc">
                     {{ $content['process_desc'] ?? 'Admission is open to all children, irrespective of caste, creed or community, and decisions are communicated transparently, on merit and fit.' }}
                 </p>
+                <div class="steps-swipe-pill d-md-none mt-10">
+                    <i class="fa-solid fa-arrows-left-right text-orange"></i>
+                    <span>Swipe 5 steps horizontally</span>
+                </div>
             </div>
 
             <div class="admission-steps-wrapper">
@@ -144,6 +148,24 @@
                 </div>
                 @endif
                 @endforeach
+            </div>
+
+            <!-- Quick Admission Enquiry Callout 1 (After 5-Step Process) -->
+            <div class="adm-inline-enquiry-bar">
+                <div class="aieb-content">
+                    <span class="aieb-badge"><i class="fa-solid fa-bolt text-orange"></i> ADMISSIONS 2026–27 LIVE · NURSERY TO CLASS X</span>
+                    <p class="aieb-lead"><strong>Ready to give your child an exceptional learning foundation?</strong> Limited seats per division to preserve our 1:15 student-teacher ratio. Get instant admission assistance today.</p>
+                </div>
+                <div class="aieb-buttons">
+                    <button type="button" onclick="openEnquiryModal()" class="btn-enquiry-pill">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Quick Admission Enquiry (30 Sec)</span>
+                    </button>
+                    <a href="tel:{{ $contactPhone ?? '9689898973' }}" class="btn-call-pill">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Call: {{ $counsellorPhone ?? '9689898973' }}</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
@@ -218,6 +240,92 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Quick Admission Enquiry Callout 2 (After Guidelines) -->
+            <div class="adm-inline-enquiry-bar alt-teal">
+                <div class="aieb-content">
+                    <span class="aieb-badge"><i class="fa-solid fa-comments"></i> 1-ON-1 ADMISSION GUIDANCE</span>
+                    <p class="aieb-lead"><strong>Have questions regarding age criteria, syllabus fit, or class availability?</strong> Our admissions counselor {{ $counsellorName ?? 'Ms. Vaishnavi' }} is ready to assist you.</p>
+                </div>
+                <div class="aieb-buttons">
+                    <button type="button" onclick="openEnquiryModal()" class="btn-enquiry-pill">
+                        <i class="fa-solid fa-headset"></i>
+                        <span>Talk to Admission Counselor</span>
+                    </button>
+                    <a href="{{ $whatsappUrl ?? 'https://wa.me/919689898973' }}" target="_blank" class="btn-wa-pill">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <span>WhatsApp Admissions</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         PARENT TRUST & DECISION SECTION (Why Parents Choose Advaita)
+         ========================================================================= -->
+    <section class="admission-convince-section" id="why-advaita">
+        <div class="admission-section-container">
+            <div class="admission-section-header">
+                <div class="admission-eyebrow text-orange"><i class="fa-solid fa-star me-1"></i> PARENT TRUST &amp; PROVEN RESULTS</div>
+                <h2 class="admission-section-title">
+                    Why 1,500+ Parents Entrust Their Child's Future to <span class="highlight-serif highlight-orange">Advaita.</span>
+                </h2>
+                <p class="admission-section-desc">
+                    From joyful early foundational learning to Class 10 board exam mastery, Advaita blends rigorous CBSE academics with empathetic, holistic care so your child thrives every single day.
+                </p>
+            </div>
+
+            <div class="convince-pillars-grid">
+                <!-- Pillar 1 -->
+                <div class="convince-pillar-card p-orange">
+                    <div class="cpc-badge">ACADEMIC PINNACLE</div>
+                    <div class="cpc-icon-wrap"><i class="fa-solid fa-trophy"></i></div>
+                    <h3 class="cpc-title">100% CBSE Board Pass &amp; District 1st Topper</h3>
+                    <p class="cpc-desc">Consistently delivering top board ranks in Parbhani with 98.40% district first rank and 35%+ of our students scoring above 90% in CBSE Class 10.</p>
+                    <div class="cpc-foot-tag"><i class="fa-solid fa-circle-check"></i> Proven Academic Excellence</div>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="convince-pillar-card p-blue">
+                    <div class="cpc-badge">COMPETITIVE EDGE</div>
+                    <div class="cpc-icon-wrap"><i class="fa-solid fa-atom"></i></div>
+                    <h3 class="cpc-title">Integrated NEET &amp; IIT Foundation</h3>
+                    <p class="cpc-desc">Advanced Olympiad, Abacus, and JEE/NEET analytical foundation embedded right into daily curriculum from Class 6 onwards—no outside tuition stress.</p>
+                    <div class="cpc-foot-tag"><i class="fa-solid fa-circle-check"></i> Zero Tuition Fatigue</div>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="convince-pillar-card p-green">
+                    <div class="cpc-badge">UNCOMPROMISED SAFETY</div>
+                    <div class="cpc-icon-wrap"><i class="fa-solid fa-shield-heart"></i></div>
+                    <h3 class="cpc-title">360° Child-Safe &amp; Caring Campus</h3>
+                    <p class="cpc-desc">100% CCTV coverage, RFID student tracking, GPS-monitored fleet with female attendants, fire-safety certified, and full-time trained female nurse.</p>
+                    <div class="cpc-foot-tag"><i class="fa-solid fa-circle-check"></i> Complete Parental Peace of Mind</div>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="convince-pillar-card p-purple">
+                    <div class="cpc-badge">STUDENT CENTRIC</div>
+                    <div class="cpc-icon-wrap"><i class="fa-solid fa-heart-pulse"></i></div>
+                    <h3 class="cpc-title">1:15 Ratio &amp; Transparent Support</h3>
+                    <p class="cpc-desc">Low teacher-student ratio ensures gentle personal attention. Fast 48-hour admission confirmation, zero hidden fees, and transparent term installments.</p>
+                    <div class="cpc-foot-tag"><i class="fa-solid fa-circle-check"></i> Transparent &amp; Fair Process</div>
+                </div>
+            </div>
+
+            <!-- Inline Enquiry Action -->
+            <div class="convince-cta-strip">
+                <div class="ccs-left">
+                    <strong>Seats for Academic Session {{ $academicYear ?? '2026–27' }} are limited to preserve our 1:15 ratio.</strong>
+                    <span>Take the first step today — submit a quick enquiry to schedule your campus visit and secure your seat.</span>
+                </div>
+                <div class="ccs-right">
+                    <button type="button" onclick="openEnquiryModal()" class="btn-enquiry-pill">
+                        <i class="fa-solid fa-paper-plane"></i> Quick Admission Enquiry (30 Sec)
+                    </button>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -266,6 +374,24 @@
                              alt="Required Documents Checklist on Clipboard" 
                              class="docs-clipboard-img">
                     </div>
+                </div>
+            </div>
+
+            <!-- Quick Admission Enquiry Callout 3 (After Required Documents) -->
+            <div class="adm-inline-enquiry-bar alt-purple">
+                <div class="aieb-content">
+                    <span class="aieb-badge"><i class="fa-solid fa-file-shield"></i> FAST-TRACK PROVISIONAL ADMISSION</span>
+                    <p class="aieb-lead"><strong>Awaiting previous school report card or Transfer Certificate (TC)?</strong> Don't let documentation delays cost your child a seat. Submit a quick enquiry to secure provisional admission while paperwork is completed.</p>
+                </div>
+                <div class="aieb-buttons">
+                    <button type="button" onclick="openEnquiryModal()" class="btn-enquiry-pill">
+                        <i class="fa-solid fa-calendar-check"></i>
+                        <span>Reserve Provisional Seat</span>
+                    </button>
+                    <a href="tel:{{ $contactPhone ?? '9689898973' }}" class="btn-call-pill">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Call Desk</span>
+                    </a>
                 </div>
             </div>
         </div>
@@ -391,7 +517,7 @@
                     </div>
                     <div class="fip-text">
                         <h4 class="fip-title">{{ $content['fee_info2_title'] ?? 'Transport Charges' }}</h4>
-                        <p class="fip-desc">{{ $content['fee_info2_desc'] ?? 'Route-wise transport facility details' }}</p>
+                        <p class="fip-desc">{{ $content['fee_info2_desc'] ?? 'Third-party facility • Head: Shakir Bhai (+91 99237 47775)' }}</p>
                     </div>
                 </div>
 
@@ -413,6 +539,24 @@
                         <h4 class="fip-title">{{ $content['fee_info4_title'] ?? 'Important Notes' }}</h4>
                         <p class="fip-desc">{{ $content['fee_info4_desc'] ?? 'Fees are subject to the school policy for the academic session.' }}</p>
                     </div>
+                </div>
+            </div>
+
+            <!-- Quick Admission Enquiry Callout 4 (After Fee Structure) -->
+            <div class="adm-inline-enquiry-bar alt-amber">
+                <div class="aieb-content">
+                    <span class="aieb-badge"><i class="fa-solid fa-receipt"></i> 100% TRANSPARENT FEE POLICY</span>
+                    <p class="aieb-lead"><strong>Want a detailed breakdown of tuition fees, transport bus routes, or installment payment plans?</strong> We believe in complete transparency with zero hidden surprises.</p>
+                </div>
+                <div class="aieb-buttons">
+                    <button type="button" onclick="openFeeModal('primary')" class="btn-enquiry-pill">
+                        <i class="fa-solid fa-file-invoice-dollar"></i>
+                        <span>View Detailed Fee Breakdown</span>
+                    </button>
+                    <button type="button" onclick="openEnquiryModal()" class="btn-call-pill">
+                        <i class="fa-solid fa-envelope-open-text"></i>
+                        <span>Enquire About Installments</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -603,12 +747,41 @@
                 <!-- Tab Pane 3: Transport Charges -->
                 <div class="fee-tab-pane" id="feeTabPane-transport">
                     <div class="fee-pane-header">
-                        <span class="fee-wing-badge green">BUS SERVICE</span>
-                        <h4 class="fee-pane-title">Safe & Tracked School Bus Facility</h4>
-                        <p class="fee-pane-desc">Our buses are fitted with GPS tracking, CCTV surveillance, speed governors, and trained attendants.</p>
+                        <span class="fee-wing-badge green">BUS SERVICE &amp; COMMUTE</span>
+                        <h4 class="fee-pane-title">Safe &amp; Tracked School Bus Facility</h4>
+                        <p class="fee-pane-desc">Advaita School of Excellence provides safe, dependable transport facility via a verified third party, equipped with GPS tracking, CCTV surveillance, speed governors, and female attendants.</p>
                     </div>
 
-                    <div class="transport-routes-list">
+                    <!-- Third-Party Transport Coordinator Card -->
+                    <div class="transport-coordinator-card">
+                        <div class="tcc-left">
+                            <div class="tcc-avatar">
+                                <i class="fa-solid fa-user-tie"></i>
+                            </div>
+                            <div class="tcc-details">
+                                <span class="tcc-kicker"><i class="fa-solid fa-shield-halved text-green me-1"></i> THIRD-PARTY TRANSPORT SERVICE</span>
+                                <h4 class="tcc-name">Shakir Bhai</h4>
+                                <p class="tcc-role">Head of Transport Facility</p>
+                                <p class="tcc-note">School transport is managed via third party under Shakir Bhai. For exact route-wise bus charges, pickup/drop points, and seat availability, please connect with him directly.</p>
+                            </div>
+                        </div>
+                        <div class="tcc-actions">
+                            <a href="tel:+919923747775" class="btn-tcc-call">
+                                <i class="fa-solid fa-phone"></i>
+                                <span>+91 99237 47775</span>
+                            </a>
+                            <a href="https://wa.me/919923747775?text=Hello%20Shakir%20Bhai,%20I%20would%20like%20to%20enquire%20about%20Advaita%20School%20bus%20routes%20and%20charges" target="_blank" class="btn-tcc-wa">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <span>WhatsApp Shakir Bhai</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="transport-routes-list mt-20">
+                        <div class="routes-header-badge">
+                            <i class="fa-solid fa-route text-orange me-1"></i>
+                            <span>Key Operational Bus Corridors in Parbhani</span>
+                        </div>
                         @foreach($transportRoutes ?? [] as $tr)
                         <div class="tr-route-row">
                             <div class="tr-icon-box"><i class="{{ $tr['icon'] ?? 'fa-solid fa-bus' }}"></i></div>
@@ -616,13 +789,18 @@
                                 <h5 class="tr-name">{{ $tr['route'] }}</h5>
                                 <p class="tr-stops">{{ $tr['coverage'] }}</p>
                             </div>
+                            <div class="tr-action-tag">
+                                <a href="tel:+919923747775" class="tr-call-link" title="Call Shakir Bhai for route fare">
+                                    <i class="fa-solid fa-phone"></i> Enquire Fare
+                                </a>
+                            </div>
                         </div>
                         @endforeach
                     </div>
 
                     <div class="fee-notice-banner mt-16">
-                        <i class="fa-solid fa-location-dot text-green"></i>
-                        <span>Transport fees are calculated route-wise and paid in term installments. Contact our transport coordinator for custom stop inquiries.</span>
+                        <i class="fa-solid fa-circle-info text-green"></i>
+                        <span><strong>Important Note:</strong> Transport is provided via a third party. Route-wise bus charges are calculated according to the designated pickup/drop corridor across Parbhani. Please contact <strong>Shakir Bhai (Head of Transport Facility) at <a href="tel:+919923747775" class="text-green fw-bold">+91 99237 47775</a></strong> for route-wise fare details and seat booking.</span>
                     </div>
                 </div>
 
@@ -779,6 +957,18 @@
                 </form>
             </div>
         </div>
+    </div>
+
+    <!-- Sticky Bottom Floating Action Bar for Mobile Parents -->
+    <div class="floating-mobile-enquiry-bar" aria-label="Quick Mobile Admission Enquiry">
+        <div class="fme-text">
+            <strong>Admissions {{ $academicYear ?? '2026–27' }} Open</strong>
+            <span>Limited Seats • Nursery to Class 10</span>
+        </div>
+        <button type="button" onclick="openEnquiryModal()" class="btn-fme-action">
+            <i class="fa-solid fa-bolt"></i>
+            <span>Quick Enquiry</span>
+        </button>
     </div>
 
 </main>

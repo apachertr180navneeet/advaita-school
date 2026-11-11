@@ -44,8 +44,7 @@
                 </svg>
             </div>
 
-            <!-- Left Dot Matrix Decor -->
-            <div class="chairman-hero-dots-decor" aria-hidden="true"></div>
+
 
             <!-- Left Content Panel -->
             <div class="chairman-hero-left-panel">

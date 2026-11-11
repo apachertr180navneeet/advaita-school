@@ -194,7 +194,7 @@ require_once __DIR__.'/includes/header.php';
                 <!-- Stage 3: Middle Stage -->
                 <a href="primary.php#abacus-section" class="acad-stage-card">
                     <div class="acad-stage-thumb">
-                        <img src="assets/images/gallery/gallery-math-science-lab.jpg" alt="Middle Stage Students at Advaita" loading="lazy">
+                        <img src="assets/images/gallery/robotics-lab.png" alt="Middle Stage Students at Advaita" loading="lazy">
                         <span class="stage-badge-top teal">
                             <i class="fa-solid fa-calculator me-1"></i> Ages 11–14 · Middle School
                         </span>
@@ -278,7 +278,7 @@ require_once __DIR__.'/includes/header.php';
                 <!-- Mathematics & Logic -->
                 <div class="acad-stream-card">
                     <div class="acad-stream-thumb">
-                        <img src="assets/images/gallery/gallery-math-science-lab.jpg" alt="Mathematics &amp; Logic students at Advaita" loading="lazy">
+                        <img src="assets/images/gallery/academic-learning.png" alt="Mathematics &amp; Logic students at Advaita" loading="lazy">
                         <span class="acad-stream-tag blue">
                             <i class="fa-solid fa-calculator"></i>
                             <span>Mathematics</span>
@@ -338,7 +338,7 @@ require_once __DIR__.'/includes/header.php';
                 <!-- Sports & Physical Fitness -->
                 <div class="acad-stream-card">
                     <div class="acad-stream-thumb">
-                        <img src="assets/images/gallery/gallery-sports-field-agility.jpg" alt="Sports &amp; Physical Fitness students at Advaita" loading="lazy">
+                        <img src="assets/images/gallery/gallery-football-match-sprint.jpg" alt="Sports &amp; Physical Fitness students at Advaita" loading="lazy">
                         <span class="acad-stream-tag amber">
                             <i class="fa-solid fa-dumbbell"></i>
                             <span>Physical Fitness</span>

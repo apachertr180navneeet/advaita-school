@@ -56,21 +56,23 @@ require_once __DIR__.'/includes/header.php';
                 <span class="current">Blog</span>
             </nav>
 
-            <div class="adv-blog-hero-grid">
-                <!-- Left Content -->
-                <div class="adv-blog-hero-content">
-                    <div class="adv-blog-kicker">
-                        <span class="kicker-line">—</span> OUR STORIES <span class="kicker-line">—</span>
-                    </div>
-
-                    <h1 class="adv-blog-hero-title">
-                        Insights, stories and <span class="adv-blog-highlight">updates.</span>
-                    </h1>
-
-                    <p class="adv-blog-hero-desc">
-                        Discover the latest news, achievements, events and stories from Advaita School of Excellence.
-                    </p>
+            <div class="adv-blog-hero-centered">
+                <!-- Eyebrow / Kicker -->
+                <div class="adv-blog-kicker">
+                    <span class="kicker-line">—</span>
+                    <span>ADVAITA CHRONICLES &amp; BLOG</span>
+                    <span class="kicker-line">—</span>
                 </div>
+
+                <!-- Main Highlighted Headline: Our Story -->
+                <h1 class="adv-blog-hero-title">
+                    Our <span class="adv-blog-highlight highlight-serif">Story</span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="adv-blog-hero-desc">
+                    Discover the latest news, achievements, events, and inspiring stories from Advaita School of Excellence.
+                </p>
             </div>
         </div>
     </section>

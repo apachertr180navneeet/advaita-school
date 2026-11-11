@@ -81,6 +81,10 @@ require_once __DIR__.'/includes/header.php';
                 <p class="admission-section-desc">
                     Admission is open to all children, irrespective of caste, creed or community, and decisions are communicated transparently, on merit and fit.
                 </p>
+                <div class="steps-swipe-pill d-md-none mt-10">
+                    <i class="fa-solid fa-arrows-left-right text-orange"></i>
+                    <span>Swipe 5 steps horizontally</span>
+                </div>
             </div>
 
             <!-- Steps Grid / Row with Flow Connectors -->
@@ -149,6 +153,24 @@ require_once __DIR__.'/includes/header.php';
                     </div>
                     <h3 class="step-card-title">Admission Confirmation</h3>
                     <p class="step-card-desc">On successful completion, you will receive the admission confirmation and further details.</p>
+                </div>
+            </div>
+
+            <!-- Quick Admission Enquiry Callout 1 (After 5-Step Process) -->
+            <div class="adm-inline-enquiry-bar">
+                <div class="aieb-content">
+                    <span class="aieb-badge"><i class="fa-solid fa-bolt text-orange"></i> ADMISSIONS 2026–27 LIVE · NURSERY TO CLASS X</span>
+                    <p class="aieb-lead"><strong>Ready to give your child an exceptional learning foundation?</strong> Limited seats per division to preserve our 1:15 student-teacher ratio. Get instant admission assistance today.</p>
+                </div>
+                <div class="aieb-buttons">
+                    <a href="online-registration.php" class="btn-enquiry-pill">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Quick Admission Enquiry (30 Sec)</span>
+                    </a>
+                    <a href="tel:9689898973" class="btn-call-pill">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Call: 9689898973</span>
+                    </a>
                 </div>
             </div>
 

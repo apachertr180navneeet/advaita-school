@@ -174,7 +174,10 @@ p {
     .facilities-hero-canvas,
     .adv-gal-hero-section,
     .adv-blog-hero-section,
-    .results-hero-grid {
+    .results-hero-grid,
+    .primary-hero .admission-hero-canvas,
+    .secondary-hero .admission-hero-canvas,
+    .pre-primary-hero .admission-hero-canvas {
         flex-direction: column !important;
         min-height: auto !important;
     }
@@ -186,7 +189,11 @@ p {
     .vision-hero-left-panel,
     .contact-hero-left-panel,
     .admission-hero-left-panel,
-    .facilities-hero-left-panel {
+    .facilities-hero-left-panel,
+    .primary-hero .admission-hero-left-panel,
+    .secondary-hero .admission-hero-left-panel,
+    .pre-primary-hero .admission-hero-left-panel {
+        order: 1 !important;
         width: 100% !important;
         max-width: 100% !important;
         padding: 26px 20px !important;
@@ -198,12 +205,53 @@ p {
     .principal-hero-bg-visual,
     .vision-hero-bg-visual,
     .contact-hero-bg-visual,
+    .admission-hero-bg-visual,
     .adv-gal-hero-curved-visual,
-    .adv-blog-hero-curved-visual {
+    .adv-blog-hero-curved-visual,
+    .primary-hero .admission-hero-bg-visual,
+    .secondary-hero .admission-hero-bg-visual,
+    .pre-primary-hero .admission-hero-bg-visual {
+        order: 2 !important;
         position: relative !important;
         width: 100% !important;
         height: 240px !important;
         max-height: 260px !important;
+    }
+
+    /* Hide decorative wave overlays, sky script tags, and dots on tablet & mobile */
+    .about-hero-wave-edge,
+    .staff-hero-wave-overlay,
+    .chairman-hero-wave-overlay,
+    .principal-hero-wave-overlay,
+    .vision-hero-wave-overlay,
+    .admission-hero-wave-overlay,
+    .about-hero-script-tag,
+    .staff-hero-script-tag,
+    .vision-hero-script-tag,
+    .admission-hero-script-tag,
+    .about-hero-dots-decor,
+    .staff-hero-dots-decor,
+    .chairman-hero-dots-decor,
+    .principal-hero-dots-decor,
+    .vision-hero-dots-decor {
+        display: none !important;
+    }
+
+    /* Vision & Mission page tablet adjustments */
+    .vision-dual-cards-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+    }
+    .vision-featured-card {
+        min-height: auto !important;
+        padding: 26px 22px !important;
+    }
+    .vision-card-content {
+        max-width: 100% !important;
+    }
+    .vision-beliefs-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 16px !important;
     }
 
     /* Desk Message Cards (Chairman / Principal) */
@@ -342,21 +390,80 @@ p {
     .staff-cards-grid,
     .vision-dual-cards-grid,
     .vision-focus-grid,
+    .vision-beliefs-grid,
     .facilities-grid,
     .acad-curriculum-grid,
     .acad-stages-grid,
     .acad-streams-grid,
     .acad-approach-grid,
+    .acad-clubs-grid,
     .acad-streams-layout,
     .acad-beyond-layout,
     .fee-cards-grid,
     .uniform-cards-grid,
+    .special-track-grid,
+    .pre-building-grid,
+    .track-benefits-grid,
+    .iit-features-grid,
+    .spotlight-metrics-row,
+    .secondary-labs-grid,
+    .pre-gallery-grid,
+    .pre-exp-gallery-grid,
+    .pre-institution-pillars-grid,
+    .instruments-grid,
+    .safety-pillars-grid,
     .adv-blog-posts-grid,
     .adv-blog-sidebar,
     .results-posters-pair,
     .results-stats-row {
         grid-template-columns: 1fr !important;
         gap: 16px !important;
+    }
+
+    /* Floating Action Buttons stacking (prevent overlap on mobile) */
+    .adv-floating-whatsapp-btn {
+        bottom: 18px !important;
+        right: 16px !important;
+        z-index: 998 !important;
+        width: 46px !important;
+        height: 46px !important;
+    }
+    .adv-scroll-top-btn {
+        bottom: 72px !important;
+        right: 16px !important;
+        z-index: 997 !important;
+        width: 42px !important;
+        height: 42px !important;
+    }
+
+    /* Universal Breadcrumb touch scrolling */
+    .admission-breadcrumb,
+    .about-breadcrumb,
+    .vision-breadcrumb,
+    .staff-breadcrumb,
+    .chairman-breadcrumb,
+    .principal-breadcrumb,
+    .contact-breadcrumb,
+    .results-breadcrumb,
+    .adv-gal-breadcrumb,
+    .adv-blog-breadcrumb {
+        max-width: 100% !important;
+        overflow-x: auto !important;
+        white-space: nowrap !important;
+        -webkit-overflow-scrolling: touch !important;
+        scrollbar-width: none !important;
+    }
+    .admission-breadcrumb::-webkit-scrollbar,
+    .about-breadcrumb::-webkit-scrollbar,
+    .vision-breadcrumb::-webkit-scrollbar,
+    .staff-breadcrumb::-webkit-scrollbar,
+    .chairman-breadcrumb::-webkit-scrollbar,
+    .principal-breadcrumb::-webkit-scrollbar,
+    .contact-breadcrumb::-webkit-scrollbar,
+    .results-breadcrumb::-webkit-scrollbar,
+    .adv-gal-breadcrumb::-webkit-scrollbar,
+    .adv-blog-breadcrumb::-webkit-scrollbar {
+        display: none !important;
     }
 
     /* Universal CTA Banners on Inner Pages */
@@ -417,9 +524,22 @@ p {
         gap: 14px !important;
     }
 
-    /* Admission Process Stepper */
+    /* Admission Process Stepper (Horizontal Mobile Rail) */
+    .admission-steps-wrapper {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        scroll-snap-type: x mandatory !important;
+        gap: 12px !important;
+        padding: 8px 4px 14px 4px !important;
+    }
     .admission-step-card {
-        flex: 1 1 100% !important;
+        flex: 0 0 200px !important;
+        min-width: 190px !important;
+        max-width: 220px !important;
+        scroll-snap-align: start !important;
     }
 
     /* Gallery Category Filter Pills (Mobile Swipe) */

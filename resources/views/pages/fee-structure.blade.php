@@ -227,8 +227,8 @@
                         <div class="policy-item">
                             <i class="fa-solid fa-bus-simple policy-icon text-warning"></i>
                             <div>
-                                <strong>Route-Based Transport</strong>
-                                <p class="mb-0 text-muted small">Transport charges vary strictly according to the designated pickup/drop corridor within Parbhani.</p>
+                                <strong>Route-Based Transport (Third Party)</strong>
+                                <p class="mb-0 text-muted small">Transport facility is provided via a third party. Head of Transport: <strong>Shakir Bhai (<a href="tel:+919923747775" class="text-orange fw-bold">+91 99237 47775</a>)</strong>. Route-wise charges vary according to the designated pickup corridor within Parbhani.</p>
                             </div>
                         </div>
                     </div>
@@ -324,7 +324,7 @@
                     </div>
                     <div class="fee-addon-body">
                         <h3 class="fee-addon-title">Transport Facility</h3>
-                        <p class="fee-addon-sub">GPS tracked &amp; CCTV secured school bus corridors.</p>
+                        <p class="fee-addon-sub">Provided via third party &bull; Head: <strong>Shakir Bhai (<a href="tel:+919923747775" class="text-orange">+91 99237 47775</a>)</strong></p>
                         <div class="fee-addon-price-badge">
                             @if($isPublished)
                                 <span>Route-Based</span>

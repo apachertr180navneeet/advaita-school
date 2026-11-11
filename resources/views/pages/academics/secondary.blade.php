@@ -387,7 +387,7 @@
 
                 <div class="sec-lab-card">
                     <div class="sec-lab-img-wrap">
-                        <img src="{{ asset($content['iit_image'] ?? 'assets/images/gallery/academic-learning.png') }}" alt="Computer Science Laboratory at Advaita">
+                        <img src="{{ asset($content['computer_lab_image'] ?? 'assets/images/gallery/computer-lab.png') }}" alt="Computer Science Laboratory at Advaita">
                         <span class="sec-lab-badge">Computer Science</span>
                     </div>
                     <div class="sec-lab-body">

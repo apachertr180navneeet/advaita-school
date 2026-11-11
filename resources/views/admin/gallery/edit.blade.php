@@ -69,14 +69,14 @@
                             <!-- Quick Category Presets -->
                             <div class="chip-presets-row">
                                 <button type="button" class="chip-preset-btn" onclick="setCategory('Life at Advaita', 'fa-solid fa-school-flag')">Life at Advaita</button>
+                                <button type="button" class="chip-preset-btn" onclick="setCategory('Campus & Facilities', 'fa-solid fa-landmark')">Campus &amp; Facilities</button>
+                                <button type="button" class="chip-preset-btn" onclick="setCategory('Advaita Kids', 'fa-solid fa-child-reaching')">Advaita Kids</button>
                                 <button type="button" class="chip-preset-btn" onclick="setCategory('Events & Celebrations', 'fa-solid fa-cake-candles')">Events &amp; Celebrations</button>
                                 <button type="button" class="chip-preset-btn" onclick="setCategory('Academics and Science Activities', 'fa-solid fa-flask-vial')">Academics &amp; Science</button>
                                 <button type="button" class="chip-preset-btn" onclick="setCategory('Educational Tours & Excursions', 'fa-solid fa-bus-simple')">Tours &amp; Excursions</button>
                                 <button type="button" class="chip-preset-btn" onclick="setCategory('Sports & Competitions', 'fa-solid fa-trophy')">Sports &amp; Competitions</button>
                                 <button type="button" class="chip-preset-btn" onclick="setCategory('Student Leadership & Achievements', 'fa-solid fa-award')">Leadership &amp; Achievements</button>
                                 <button type="button" class="chip-preset-btn" onclick="setCategory('Art, Culture & Creativity', 'fa-solid fa-palette')">Art &amp; Culture</button>
-                                <button type="button" class="chip-preset-btn" onclick="setCategory('Advaita Kids', 'fa-solid fa-child-reaching')">Advaita Kids</button>
-                                <button type="button" class="chip-preset-btn" onclick="setCategory('Campus & Facilities', 'fa-solid fa-landmark')">Campus &amp; Facilities</button>
                             </div>
                         </div>
 

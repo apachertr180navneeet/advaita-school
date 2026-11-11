@@ -51,8 +51,7 @@ require_once __DIR__.'/includes/header.php';
                 </svg>
             </div>
 
-            <!-- Left Dot Matrix Decor -->
-            <div class="vision-hero-dots-decor" aria-hidden="true"></div>
+
 
             <!-- Left Content Panel -->
             <div class="vision-hero-left-panel">

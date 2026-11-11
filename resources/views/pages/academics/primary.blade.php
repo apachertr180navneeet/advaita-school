@@ -148,7 +148,7 @@
             <div class="special-track-card">
                 <div class="special-track-grid">
                     <div class="special-track-visual">
-                        <img src="{{ asset($content['abacus_image'] ?? 'assets/images/gallery/gallery-math-science-lab.jpg') }}" alt="Abacus and Mental Math at Advaita" loading="lazy">
+                        <img src="{{ asset($content['abacus_image'] ?? 'assets/images/gallery/academic-learning.png') }}" alt="Abacus and Mental Math at Advaita" loading="lazy">
                         <div class="track-badge-floating">
                             <i class="fa-solid fa-brain"></i>
                             <span>Brain Development Track</span>
@@ -287,81 +287,111 @@
             </div>
 
             <div class="subjects-grid">
-                <!-- Subject 1 -->
-                <div class="subject-card">
-                    <span class="subject-code-tag">Grades 1–5 Core</span>
-                    <div class="subject-icon icon-blue"><i class="fa-solid fa-spell-check"></i></div>
-                    <h3>English Language &amp; Literacy</h3>
-                    <p>Phonics mastery, vocabulary expansion, reading fluency, and creative writing circles.</p>
-                    <div class="subject-focus-pills">
-                        <span class="pill-tag">Phonics Mastery</span>
-                        <span class="pill-tag">Reading Circles</span>
-                        <span class="pill-tag">Creative Writing</span>
+                <!-- Subject 1: English Language & Literacy -->
+                <div class="subject-card has-thumb">
+                    <div class="subject-thumb">
+                        <img src="{{ asset('assets/images/gallery/gallery-classroom-learning.jpg') }}" alt="English Language and Literacy at Advaita" loading="lazy">
+                        <span class="subject-code-tag">Grades 1–5 Core</span>
+                    </div>
+                    <div class="subject-card-body">
+                        <div class="subject-icon icon-blue"><i class="fa-solid fa-spell-check"></i></div>
+                        <h3>English Language &amp; Literacy</h3>
+                        <p>Phonics mastery, vocabulary expansion, reading fluency, and creative writing circles.</p>
+                        <div class="subject-focus-pills">
+                            <span class="pill-tag">Phonics Mastery</span>
+                            <span class="pill-tag">Reading Circles</span>
+                            <span class="pill-tag">Creative Writing</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Subject 2 -->
-                <div class="subject-card">
-                    <span class="subject-code-tag">Speed &amp; Logic</span>
-                    <div class="subject-icon icon-orange"><i class="fa-solid fa-calculator"></i></div>
-                    <h3>Mathematics &amp; Mental Math</h3>
-                    <p>Conceptual arithmetic, geometric shapes, spatial logic, and speed calculation drills.</p>
-                    <div class="subject-focus-pills">
-                        <span class="pill-tag">Mental Math</span>
-                        <span class="pill-tag">Geometry Basics</span>
-                        <span class="pill-tag">Speed Calculation</span>
+                <!-- Subject 2: Mathematics & Mental Math -->
+                <div class="subject-card has-thumb">
+                    <div class="subject-thumb">
+                        <img src="{{ asset('assets/images/gallery/academic-learning.png') }}" alt="Mathematics and Mental Math at Advaita" loading="lazy">
+                        <span class="subject-code-tag">Speed &amp; Logic</span>
+                    </div>
+                    <div class="subject-card-body">
+                        <div class="subject-icon icon-orange"><i class="fa-solid fa-calculator"></i></div>
+                        <h3>Mathematics &amp; Mental Math</h3>
+                        <p>Conceptual arithmetic, geometric shapes, spatial logic, and speed calculation drills.</p>
+                        <div class="subject-focus-pills">
+                            <span class="pill-tag">Mental Math</span>
+                            <span class="pill-tag">Geometry Basics</span>
+                            <span class="pill-tag">Speed Calculation</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Subject 3 -->
-                <div class="subject-card">
-                    <span class="subject-code-tag">Experiential Eco</span>
-                    <div class="subject-icon icon-teal"><i class="fa-solid fa-seedling"></i></div>
-                    <h3>Environmental Studies (EVS)</h3>
-                    <p>Understanding nature, social environments, basic science concepts, and green ecology.</p>
-                    <div class="subject-focus-pills">
-                        <span class="pill-tag">Nature Study</span>
-                        <span class="pill-tag">Community &amp; Civic</span>
-                        <span class="pill-tag">Junior Science</span>
+                <!-- Subject 3: Environmental Studies (EVS) -->
+                <div class="subject-card has-thumb">
+                    <div class="subject-thumb">
+                        <img src="{{ asset('assets/images/gallery/gallery-parachute-lawn-building.jpg') }}" alt="Environmental Studies at Advaita" loading="lazy">
+                        <span class="subject-code-tag">Experiential Eco</span>
+                    </div>
+                    <div class="subject-card-body">
+                        <div class="subject-icon icon-teal"><i class="fa-solid fa-seedling"></i></div>
+                        <h3>Environmental Studies (EVS)</h3>
+                        <p>Understanding nature, social environments, basic science concepts, and green ecology.</p>
+                        <div class="subject-focus-pills">
+                            <span class="pill-tag">Nature Study</span>
+                            <span class="pill-tag">Community &amp; Civic</span>
+                            <span class="pill-tag">Junior Science</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Subject 4 -->
-                <div class="subject-card">
-                    <span class="subject-code-tag">Hindi &amp; Marathi</span>
-                    <div class="subject-icon icon-purple"><i class="fa-solid fa-language"></i></div>
-                    <h3>Regional &amp; National Languages</h3>
-                    <p>Hindi and Marathi language instruction for cultural grounding and multilingual articulation.</p>
-                    <div class="subject-focus-pills">
-                        <span class="pill-tag">Hindi Grammar</span>
-                        <span class="pill-tag">Marathi Vyakaran</span>
-                        <span class="pill-tag">Bilingual Storytelling</span>
+                <!-- Subject 4: Regional & National Languages -->
+                <div class="subject-card has-thumb">
+                    <div class="subject-thumb">
+                        <img src="{{ asset('assets/images/gallery/gallery-art-circle-kids.jpg') }}" alt="Regional and National Languages at Advaita" loading="lazy">
+                        <span class="subject-code-tag">Hindi &amp; Marathi</span>
+                    </div>
+                    <div class="subject-card-body">
+                        <div class="subject-icon icon-purple"><i class="fa-solid fa-language"></i></div>
+                        <h3>Regional &amp; National Languages</h3>
+                        <p>Hindi and Marathi language instruction for cultural grounding and multilingual articulation.</p>
+                        <div class="subject-focus-pills">
+                            <span class="pill-tag">Hindi Grammar</span>
+                            <span class="pill-tag">Marathi Vyakaran</span>
+                            <span class="pill-tag">Bilingual Storytelling</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Subject 5 -->
-                <div class="subject-card">
-                    <span class="subject-code-tag">Coding &amp; STEM</span>
-                    <div class="subject-icon icon-indigo"><i class="fa-solid fa-laptop-code"></i></div>
-                    <h3>Computer &amp; Digital Skills</h3>
-                    <p>Early coding logic, typing skills, digital presentation tools, and internet safety basics.</p>
-                    <div class="subject-focus-pills">
-                        <span class="pill-tag">Blockly Coding</span>
-                        <span class="pill-tag">Touch Typing</span>
-                        <span class="pill-tag">Safe Browsing</span>
+                <!-- Subject 5: Computer & Digital Skills -->
+                <div class="subject-card has-thumb">
+                    <div class="subject-thumb">
+                        <img src="{{ asset('assets/images/gallery/robotics-lab.png') }}" alt="Computer and Digital Skills at Advaita" loading="lazy">
+                        <span class="subject-code-tag">Coding &amp; STEM</span>
+                    </div>
+                    <div class="subject-card-body">
+                        <div class="subject-icon icon-indigo"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h3>Computer &amp; Digital Skills</h3>
+                        <p>Early coding logic, typing skills, digital presentation tools, and internet safety basics.</p>
+                        <div class="subject-focus-pills">
+                            <span class="pill-tag">Blockly Coding</span>
+                            <span class="pill-tag">Touch Typing</span>
+                            <span class="pill-tag">Safe Browsing</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Subject 6 -->
-                <div class="subject-card">
-                    <span class="subject-code-tag">Holistic Wellness</span>
-                    <div class="subject-icon icon-pink"><i class="fa-solid fa-palette"></i></div>
-                    <h3>Art, Music &amp; Physical Activity</h3>
-                    <p>Visual arts, theatre, rhythm drills, yoga, and team games for physical well-being.</p>
-                    <div class="subject-focus-pills">
-                        <span class="pill-tag">Visual Arts</span>
-                        <span class="pill-tag">Yoga &amp; Fitness</span>
-                        <span class="pill-tag">Team Sports</span>
+                <!-- Subject 6: Art, Music & Physical Activity -->
+                <div class="subject-card has-thumb">
+                    <div class="subject-thumb">
+                        <img src="{{ asset('assets/images/gallery/gallery-art-studio-origami-planes.jpg') }}" alt="Art, Music & Physical Activity at Advaita" loading="lazy">
+                        <span class="subject-code-tag">Holistic Wellness</span>
+                    </div>
+                    <div class="subject-card-body">
+                        <div class="subject-icon icon-pink"><i class="fa-solid fa-palette"></i></div>
+                        <h3>Art, Music &amp; Physical Activity</h3>
+                        <p>Visual arts, theatre, rhythm drills, yoga, and team games for physical well-being.</p>
+                        <div class="subject-focus-pills">
+                            <span class="pill-tag">Visual Arts</span>
+                            <span class="pill-tag">Yoga &amp; Fitness</span>
+                            <span class="pill-tag">Team Sports</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -385,9 +415,10 @@
             </div>
 
             <div class="secondary-labs-grid">
+                <!-- Card 1: Junior Science Experiments -->
                 <div class="sec-lab-card">
                     <div class="sec-lab-img-wrap">
-                        <img src="{{ asset('assets/images/gallery/gallery-math-science-lab.jpg') }}" alt="Science Experiments at Advaita" loading="lazy">
+                        <img src="{{ asset('assets/images/gallery/gallery-math-science-lab.jpg') }}" alt="Junior Science Experiments at Advaita" loading="lazy">
                         <span class="sec-lab-badge">Hands-On Science</span>
                     </div>
                     <div class="sec-lab-body">
@@ -401,6 +432,7 @@
                     </div>
                 </div>
 
+                <!-- Card 2: Smart Digital Lab -->
                 <div class="sec-lab-card">
                     <div class="sec-lab-img-wrap">
                         <img src="{{ asset('assets/images/gallery/computer-lab.png') }}" alt="Computer Lab at Advaita" loading="lazy">
@@ -417,9 +449,10 @@
                     </div>
                 </div>
 
+                <!-- Card 3: Athletics & Field Games -->
                 <div class="sec-lab-card">
                     <div class="sec-lab-img-wrap">
-                        <img src="{{ asset('assets/images/gallery/gallery-sports-field-agility.jpg') }}" alt="Sports and Athletics at Advaita" loading="lazy">
+                        <img src="{{ asset('assets/images/gallery/gallery-football-match-sprint.jpg') }}" alt="Sports and Athletics at Advaita" loading="lazy">
                         <span class="sec-lab-badge">Physical Growth</span>
                     </div>
                     <div class="sec-lab-body">

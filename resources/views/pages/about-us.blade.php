@@ -25,8 +25,7 @@
 
             <!-- Left Organic White Panel with Curved Boundary -->
             <div class="about-hero-left-panel">
-                <!-- Ambient decorative dots -->
-                <div class="about-hero-dots-decor" aria-hidden="true"></div>
+
 
                 <div class="about-hero-content-inner">
                     <!-- Breadcrumbs -->
