@@ -161,97 +161,105 @@
             <div class="acad-stages-grid">
                 <!-- Stage 1: Foundational Stage -->
                 <a href="{{ route('academics.pre-primary') }}" class="acad-stage-card">
-                    <span class="stage-badge-top orange">Ages 3–8 · Early Years &amp; Foundational</span>
-                    <div class="acad-stage-header">
-                        <div class="acad-stage-icon orange" aria-hidden="true">
-                            <i class="fa-solid fa-shapes"></i>
-                        </div>
-                        <div class="acad-stage-title-wrap">
+                    <div class="acad-stage-thumb">
+                        <img src="{{ asset('assets/images/gallery/gallery-crawl-tunnel-kids.jpg') }}" alt="Foundational Stage Students at Advaita" loading="lazy">
+                        <span class="stage-badge-top orange">
+                            <i class="fa-solid fa-shapes me-1"></i> Ages 3–8 · Foundational
+                        </span>
+                    </div>
+                    <div class="acad-stage-body">
+                        <div class="acad-stage-header">
                             <h3 class="acad-stage-title">Foundational Stage</h3>
                             <span class="acad-stage-classes">Play Group &bull; Nursery &bull; LKG &bull; UKG &bull; Classes 1–2</span>
                         </div>
-                    </div>
-                    <p class="acad-stage-desc">Play-based early learning, multi-sensory discovery, jolly phonics, and foundational literacy &amp; numeracy in a joyful, child-safe environment.</p>
-                    <ul class="stage-highlights-list">
-                        <li><i class="fa-solid fa-check"></i> Play-way experiential pedagogy</li>
-                        <li><i class="fa-solid fa-check"></i> Tactile blocks, sand &amp; music stations</li>
-                        <li><i class="fa-solid fa-check"></i> 100% child-safe CCTV campus</li>
-                    </ul>
-                    <div class="stage-card-footer-btn">
-                        <span>Explore Pre-Primary Wing</span>
-                        <i class="fa-solid fa-arrow-right"></i>
+                        <p class="acad-stage-desc">Play-based early learning, multi-sensory discovery, jolly phonics, and foundational literacy &amp; numeracy in a joyful, child-safe environment.</p>
+                        <ul class="stage-highlights-list">
+                            <li><i class="fa-solid fa-circle-check"></i> Play-way experiential pedagogy</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Tactile blocks, sand &amp; music stations</li>
+                            <li><i class="fa-solid fa-circle-check"></i> 100% child-safe CCTV campus</li>
+                        </ul>
+                        <div class="stage-card-footer-btn">
+                            <span>Explore Pre-Primary Wing</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
                     </div>
                 </a>
 
                 <!-- Stage 2: Preparatory Stage (Classes 3-5) -->
                 <a href="{{ route('academics.primary') }}" class="acad-stage-card">
-                    <span class="stage-badge-top blue">Ages 8–11 · Preparatory</span>
-                    <div class="acad-stage-header">
-                        <div class="acad-stage-icon blue" aria-hidden="true">
-                            <i class="fa-solid fa-pencil"></i>
-                        </div>
-                        <div class="acad-stage-title-wrap">
+                    <div class="acad-stage-thumb">
+                        <img src="{{ asset('assets/images/about-story-student.jpg') }}" alt="Preparatory Stage Students at Advaita" loading="lazy">
+                        <span class="stage-badge-top blue">
+                            <i class="fa-solid fa-pencil me-1"></i> Ages 8–11 · Preparatory
+                        </span>
+                    </div>
+                    <div class="acad-stage-body">
+                        <div class="acad-stage-header">
                             <h3 class="acad-stage-title">Preparatory Stage</h3>
                             <span class="acad-stage-classes">Classes 3 to 5 (Grades III–V)</span>
                         </div>
-                    </div>
-                    <p class="acad-stage-desc">Building strong bilingual literacy, numeracy, mental arithmetic with Abacus, and early Olympiad conceptual drills.</p>
-                    <ul class="stage-highlights-list">
-                        <li><i class="fa-solid fa-check"></i> Introductory Abacus &amp; Vedic Math</li>
-                        <li><i class="fa-solid fa-check"></i> Reading clubs &amp; expressive communication</li>
-                        <li><i class="fa-solid fa-check"></i> Joyful STEAM experiment corners</li>
-                    </ul>
-                    <div class="stage-card-footer-btn">
-                        <span>Explore Primary School Wing</span>
-                        <i class="fa-solid fa-arrow-right"></i>
+                        <p class="acad-stage-desc">Building strong bilingual literacy, numeracy, mental arithmetic with Abacus, and early Olympiad conceptual drills.</p>
+                        <ul class="stage-highlights-list">
+                            <li><i class="fa-solid fa-circle-check"></i> Introductory Abacus &amp; Vedic Math</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Reading clubs &amp; expressive communication</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Joyful STEAM experiment corners</li>
+                        </ul>
+                        <div class="stage-card-footer-btn">
+                            <span>Explore Primary School Wing</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
                     </div>
                 </a>
 
                 <!-- Stage 3: Middle Stage (Classes 6-8) -->
                 <a href="{{ route('academics.primary') }}#abacus-section" class="acad-stage-card">
-                    <span class="stage-badge-top teal">Ages 11–14 · Middle School</span>
-                    <div class="acad-stage-header">
-                        <div class="acad-stage-icon teal" aria-hidden="true">
-                            <i class="fa-solid fa-calculator"></i>
-                        </div>
-                        <div class="acad-stage-title-wrap">
+                    <div class="acad-stage-thumb">
+                        <img src="{{ asset('assets/images/gallery/gallery-math-science-lab.jpg') }}" alt="Middle Stage Students at Advaita" loading="lazy">
+                        <span class="stage-badge-top teal">
+                            <i class="fa-solid fa-calculator me-1"></i> Ages 11–14 · Middle School
+                        </span>
+                    </div>
+                    <div class="acad-stage-body">
+                        <div class="acad-stage-header">
                             <h3 class="acad-stage-title">Middle Stage</h3>
                             <span class="acad-stage-classes">Classes 6 to 8 (Grades VI–VIII)</span>
                         </div>
-                    </div>
-                    <p class="acad-stage-desc">Subject depth in sciences and mathematics, experiential learning, SOF Olympiad competitive exam mastery, and robotics foundation.</p>
-                    <ul class="stage-highlights-list">
-                        <li><i class="fa-solid fa-check"></i> State &amp; National Abacus &amp; Olympiad Trophies</li>
-                        <li><i class="fa-solid fa-check"></i> NSO, IMO &amp; IEO Olympiad mentoring</li>
-                        <li><i class="fa-solid fa-check"></i> Robotics &amp; computer coding foundation</li>
-                    </ul>
-                    <div class="stage-card-footer-btn">
-                        <span>Explore Middle School</span>
-                        <i class="fa-solid fa-arrow-right"></i>
+                        <p class="acad-stage-desc">Subject depth in sciences and mathematics, experiential learning, SOF Olympiad competitive exam mastery, and robotics foundation.</p>
+                        <ul class="stage-highlights-list">
+                            <li><i class="fa-solid fa-circle-check"></i> State &amp; National Abacus &amp; Olympiad Trophies</li>
+                            <li><i class="fa-solid fa-circle-check"></i> NSO, IMO &amp; IEO Olympiad mentoring</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Robotics &amp; computer coding foundation</li>
+                        </ul>
+                        <div class="stage-card-footer-btn">
+                            <span>Explore Middle School</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
                     </div>
                 </a>
 
                 <!-- Stage 4: Secondary Stage (Classes 9-10) -->
                 <a href="{{ route('academics.secondary') }}" class="acad-stage-card">
-                    <span class="stage-badge-top purple">Ages 14–16 · Secondary &amp; Board Track</span>
-                    <div class="acad-stage-header">
-                        <div class="acad-stage-icon purple" aria-hidden="true">
-                            <i class="fa-solid fa-atom"></i>
-                        </div>
-                        <div class="acad-stage-title-wrap">
+                    <div class="acad-stage-thumb">
+                        <img src="{{ asset('assets/images/about-philosophy-student.jpg') }}" alt="Secondary Stage Students at Advaita" loading="lazy">
+                        <span class="stage-badge-top purple">
+                            <i class="fa-solid fa-atom me-1"></i> Ages 14–16 · Secondary Track
+                        </span>
+                    </div>
+                    <div class="acad-stage-body">
+                        <div class="acad-stage-header">
                             <h3 class="acad-stage-title">Secondary Stage</h3>
                             <span class="acad-stage-classes">Classes 9 &amp; 10 (Grades IX–X)</span>
                         </div>
-                    </div>
-                    <p class="acad-stage-desc">Consistent 100% CBSE Class 10 Board results paired with integrated NEET/IIT Foundation mentoring and high-tech labs.</p>
-                    <ul class="stage-highlights-list">
-                        <li><i class="fa-solid fa-check"></i> 100% Board Pass Rate (District 1st Topper)</li>
-                        <li><i class="fa-solid fa-check"></i> Integrated JEE / NEET Milestone series</li>
-                        <li><i class="fa-solid fa-check"></i> Composite Science &amp; Robotics Labs</li>
-                    </ul>
-                    <div class="stage-card-footer-btn">
-                        <span>Explore Secondary &amp; IIT Track</span>
-                        <i class="fa-solid fa-arrow-right"></i>
+                        <p class="acad-stage-desc">Consistent 100% CBSE Class 10 Board results paired with integrated NEET/IIT Foundation mentoring and high-tech labs.</p>
+                        <ul class="stage-highlights-list">
+                            <li><i class="fa-solid fa-circle-check"></i> 100% Board Pass Rate (District 1st Topper)</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Integrated JEE / NEET Milestone series</li>
+                            <li><i class="fa-solid fa-circle-check"></i> Composite Science &amp; Robotics Labs</li>
+                        </ul>
+                        <div class="stage-card-footer-btn">
+                            <span>Explore Secondary &amp; IIT Track</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
                     </div>
                 </a>
             </div>
