@@ -1,4 +1,4 @@
-﻿@extends('layouts.app')
+@extends('layouts.app')
 
 @section('title', "About Us - Advaita School of Excellence, Parbhani | Premier CBSE School")
 

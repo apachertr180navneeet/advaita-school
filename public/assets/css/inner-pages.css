@@ -2524,6 +2524,7 @@
     width: 100%;
 }
 
+.about-breadcrumb,
 .staff-breadcrumb,
 .chairman-breadcrumb,
 .principal-breadcrumb,
@@ -2538,6 +2539,7 @@
     width: 100%;
 }
 
+.about-breadcrumb a,
 .staff-breadcrumb a,
 .chairman-breadcrumb a,
 .principal-breadcrumb a,
@@ -2547,6 +2549,7 @@
     transition: color 0.2s;
 }
 
+.about-breadcrumb a:hover,
 .staff-breadcrumb a:hover,
 .chairman-breadcrumb a:hover,
 .principal-breadcrumb a:hover,
@@ -2554,6 +2557,7 @@
     color: #F37021;
 }
 
+.about-breadcrumb .sep,
 .staff-breadcrumb .sep,
 .chairman-breadcrumb .sep,
 .principal-breadcrumb .sep,
@@ -2562,6 +2566,7 @@
     color: #94a3b8;
 }
 
+.about-breadcrumb .active,
 .staff-breadcrumb .active,
 .chairman-breadcrumb .active,
 .principal-breadcrumb .active,

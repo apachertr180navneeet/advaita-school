@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 /**
  * About Us Page - Advaita School of Excellence, Parbhani
  * CBSE Affiliated (Affiliation No. 1130920)
