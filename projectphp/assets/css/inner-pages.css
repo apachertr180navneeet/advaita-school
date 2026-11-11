@@ -5003,8 +5003,11 @@
         padding: 16px 14px !important;
     }
     .staff-stats-strip {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         border-radius: var(--adv-radius-xl);
+    }
+    .staff-stat-label {
+        white-space: normal;
     }
     .staff-cards-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -10429,67 +10432,95 @@ textarea.reg-input-control {
 
 .acad-streams-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
 }
 
 .acad-stream-card {
     background: #ffffff;
     border: 1px solid #e2e8f0;
-    border-radius: 16px;
-    padding: 16px 18px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(8, 59, 122, 0.05);
     display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    box-shadow: 0 3px 12px rgba(8, 59, 122, 0.03);
-    transition: all 0.25s ease;
+    flex-direction: column;
+    transition: all 0.3s ease;
 }
 
 .acad-stream-card:hover {
-    transform: translateY(-2px);
+    transform: translateY(-5px);
     border-color: #cbd5e1;
-    box-shadow: 0 8px 20px rgba(8, 59, 122, 0.08);
+    box-shadow: 0 12px 28px rgba(8, 59, 122, 0.12);
 }
 
-.acad-stream-icon {
-    width: 44px;
-    height: 44px;
-    border-radius: 12px;
-    display: flex;
+.acad-stream-thumb {
+    position: relative;
+    width: 100%;
+    height: 165px;
+    overflow: hidden;
+    background: #083b7a;
+}
+
+.acad-stream-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+    display: block;
+}
+
+.acad-stream-card:hover .acad-stream-thumb img {
+    transform: scale(1.05);
+}
+
+.acad-stream-tag {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    font-size: 1.15rem;
-    flex-shrink: 0;
+    gap: 6px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.74rem;
+    font-weight: 700;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
 }
 
-.acad-stream-icon.orange { background: #fff7ed; color: #ea580c; }
-.acad-stream-icon.blue   { background: #eff6ff; color: #0284c7; }
-.acad-stream-icon.teal   { background: #f0fdfa; color: #0d9488; }
-.acad-stream-icon.purple { background: #f5f3ff; color: #7c3aed; }
-.acad-stream-icon.pink   { background: #fdf2f8; color: #db2777; }
-.acad-stream-icon.amber  { background: #fef3c7; color: #d97706; }
+.acad-stream-tag.orange { background: rgba(243, 112, 33, 0.92); color: #ffffff; }
+.acad-stream-tag.blue   { background: rgba(2, 132, 199, 0.92); color: #ffffff; }
+.acad-stream-tag.teal   { background: rgba(13, 148, 136, 0.92); color: #ffffff; }
+.acad-stream-tag.purple { background: rgba(124, 58, 237, 0.92); color: #ffffff; }
+.acad-stream-tag.pink   { background: rgba(219, 39, 119, 0.92); color: #ffffff; }
+.acad-stream-tag.amber  { background: rgba(217, 119, 6, 0.92); color: #ffffff; }
 
 .acad-stream-body {
+    padding: 18px 20px 22px;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
 }
 
 .acad-stream-title {
     font-family: var(--adv-font-sans);
-    font-size: 0.96rem;
+    font-size: 1.05rem;
     font-weight: 800;
     color: #083B7A;
-    margin: 0 0 3px;
+    margin: 0 0 6px;
+    line-height: 1.3;
 }
 
 .acad-stream-desc {
-    font-size: 0.78rem;
+    font-size: 0.84rem;
     color: #64748b;
-    line-height: 1.45;
+    line-height: 1.5;
     margin: 0;
 }
 
-/* 4. Our Approach Grid (4 Cards) */
+/* 4. Our Approach Grid (4 Cards with Student Photos) */
 .acad-approach-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -10500,55 +10531,82 @@ textarea.reg-input-control {
     background: #ffffff;
     border: 1px solid #e2e8f0;
     border-radius: 20px;
-    padding: 26px 22px;
+    overflow: hidden;
     box-shadow: 0 4px 18px rgba(8, 59, 122, 0.04);
     display: flex;
     flex-direction: column;
-    align-items: center;
     transition: all 0.25s ease;
 }
 
 .acad-approach-card:hover {
     transform: translateY(-4px);
     border-color: #cbd5e1;
-    box-shadow: 0 10px 28px rgba(8, 59, 122, 0.09);
+    box-shadow: 0 10px 28px rgba(8, 59, 122, 0.1);
 }
 
-.acad-approach-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 14px;
+.acad-approach-thumb {
+    position: relative;
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    background: #083b7a;
+}
+
+.acad-approach-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.4s ease;
+    display: block;
+}
+
+.acad-approach-card:hover .acad-approach-thumb img {
+    transform: scale(1.05);
+}
+
+.acad-approach-icon-badge {
+    position: absolute;
+    bottom: -18px;
+    right: 18px;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.25rem;
-    margin: 0 auto 16px;
-    flex-shrink: 0;
+    font-size: 1.15rem;
+    box-shadow: 0 4px 12px rgba(8, 59, 122, 0.15);
+    border: 2.5px solid #ffffff;
+    z-index: 2;
 }
 
-.acad-approach-icon.orange { background: #fff7ed; color: #ea580c; }
-.acad-approach-icon.blue   { background: #eff6ff; color: #0284c7; }
-.acad-approach-icon.teal   { background: #f0fdfa; color: #0d9488; }
-.acad-approach-icon.pink   { background: #fdf2f8; color: #db2777; }
+.acad-approach-icon-badge.orange { background: #fff7ed; color: #ea580c; }
+.acad-approach-icon-badge.blue   { background: #eff6ff; color: #0284c7; }
+.acad-approach-icon-badge.teal   { background: #f0fdfa; color: #0d9488; }
+.acad-approach-icon-badge.pink   { background: #fdf2f8; color: #db2777; }
+
+.acad-approach-body {
+    padding: 24px 18px 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
 
 .acad-approach-title {
     font-family: var(--adv-font-sans);
-    font-size: 1.04rem;
+    font-size: 1.02rem;
     font-weight: 800;
     color: #083B7A;
     margin: 0 0 8px;
     line-height: 1.3;
-    text-align: center;
-    width: 100%;
 }
 
 .acad-approach-desc {
-    font-size: 0.85rem;
+    font-size: 0.83rem;
     color: #64748b;
-    line-height: 1.55;
+    line-height: 1.5;
     margin: 0;
-    text-align: left;
-    width: 100%;
 }
 
 /* 5. Beyond The Classroom (Left: 5 Clubs, Right: Creative Visual) */
@@ -13221,22 +13279,21 @@ textarea.reg-input-control {
     color: #64748b;
 }
 
-/* Beyond the Classroom Clubs Grid */
+/* Beyond the Classroom Clubs Grid with Student Photos */
 .acad-clubs-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 16px;
+    gap: 18px;
 }
 
 .acad-club-card {
     background: #ffffff;
     border: 1.5px solid #e2e8f0;
     border-radius: 18px;
-    padding: 20px 16px;
-    text-align: center;
+    overflow: hidden;
+    text-align: left;
     display: flex;
     flex-direction: column;
-    align-items: center;
     box-shadow: 0 4px 14px rgba(8, 59, 122, 0.04);
     transition: all 0.3s ease;
 }
@@ -13244,34 +13301,70 @@ textarea.reg-input-control {
 .acad-club-card:hover {
     transform: translateY(-4px);
     border-color: #083B7A;
-    box-shadow: 0 10px 24px rgba(8, 59, 122, 0.09);
+    box-shadow: 0 10px 24px rgba(8, 59, 122, 0.1);
 }
 
-.acad-club-card .acad-club-icon-circle {
-    width: 52px;
-    height: 52px;
-    border-radius: 14px;
-    display: flex;
+.acad-club-thumb {
+    position: relative;
+    width: 100%;
+    height: 135px;
+    overflow: hidden;
+    background: #083b7a;
+}
+
+.acad-club-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+    display: block;
+}
+
+.acad-club-card:hover .acad-club-thumb img {
+    transform: scale(1.06);
+}
+
+.acad-club-pill {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    font-size: 1.25rem;
-    margin-bottom: 12px;
-    transition: all 0.25s ease;
+    gap: 5px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
 }
 
-.acad-club-card:hover .acad-club-icon-circle {
-    transform: scale(1.08);
+.acad-club-pill.c1 { background: rgba(2, 132, 199, 0.92); color: #ffffff; }
+.acad-club-pill.c2 { background: rgba(243, 112, 33, 0.92); color: #ffffff; }
+.acad-club-pill.c3 { background: rgba(13, 148, 136, 0.92); color: #ffffff; }
+.acad-club-pill.c4 { background: rgba(219, 39, 119, 0.92); color: #ffffff; }
+.acad-club-pill.c5 { background: rgba(5, 150, 105, 0.92); color: #ffffff; }
+
+.acad-club-body {
+    padding: 16px 14px 18px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 .acad-club-card h4 {
-    font-size: 14px;
+    font-family: var(--adv-font-sans);
+    font-size: 0.95rem;
     font-weight: 800;
     color: #083B7A;
-    margin: 0 0 4px;
+    margin: 0 0 6px;
+    line-height: 1.3;
 }
 
 .acad-club-card p {
-    font-size: 12px;
+    font-size: 0.78rem;
     color: #64748b;
     line-height: 1.45;
     margin: 0;
@@ -13282,8 +13375,17 @@ textarea.reg-input-control {
     .acad-stages-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    .acad-streams-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
+    .acad-approach-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+    }
     .acad-clubs-grid {
         grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
     }
     .acad-streams-layout,
     .acad-beyond-layout {
@@ -13297,12 +13399,33 @@ textarea.reg-input-control {
     }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 768px) {
     .acad-stages-grid {
         grid-template-columns: 1fr;
     }
+    .acad-streams-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+    .acad-stream-thumb {
+        height: 140px;
+    }
+    .acad-stream-body {
+        padding: 14px;
+    }
+    .acad-approach-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+    .acad-approach-thumb {
+        height: 135px;
+    }
+    .acad-approach-body {
+        padding: 20px 14px 16px;
+    }
     .acad-clubs-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
     }
     .acad-affiliation-bar {
         padding: 20px;
@@ -13310,6 +13433,30 @@ textarea.reg-input-control {
     .acad-affil-left {
         flex-direction: column;
         align-items: flex-start;
+    }
+}
+
+@media (max-width: 580px) {
+    .acad-streams-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .acad-stream-thumb {
+        height: 165px;
+    }
+    .acad-approach-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .acad-approach-thumb {
+        height: 160px;
+    }
+    .acad-clubs-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+    .acad-club-thumb {
+        height: 145px;
     }
 }
 

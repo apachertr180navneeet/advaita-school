@@ -182,7 +182,7 @@ require_once __DIR__.'/includes/header.php';
         </section>
 
         <!-- =========================================================================
-             5. LEARNING STREAMS SECTION (Boy Visual Left + 6 Cards Right)
+             5. LEARNING STREAMS SECTION (6 Cards with Student Photos)
              ========================================================================= -->
         <section class="acad-section" id="learning-streams">
             <div class="acad-section-header">
@@ -195,88 +195,101 @@ require_once __DIR__.'/includes/header.php';
                 </p>
             </div>
 
-            <div class="acad-streams-layout">
-                <!-- Left Visual with Aura -->
-                <div class="acad-streams-visual">
-                    <div class="acad-streams-aura" aria-hidden="true"></div>
-                    <div class="acad-streams-img-box">
-                        <img src="assets/images/about-philosophy-student.jpg" alt="Student studying at Advaita School of Excellence">
+            <div class="acad-streams-grid">
+                <!-- Languages & Literature -->
+                <div class="acad-stream-card">
+                    <div class="acad-stream-thumb">
+                        <img src="assets/images/gallery/gallery-classroom-learning.jpg" alt="Languages &amp; Literature students at Advaita" loading="lazy">
+                        <span class="acad-stream-tag orange">
+                            <i class="fa-solid fa-book-bookmark"></i>
+                            <span>Languages</span>
+                        </span>
+                    </div>
+                    <div class="acad-stream-body">
+                        <h3 class="acad-stream-title">Languages &amp; Literature</h3>
+                        <p class="acad-stream-desc">English fluency, Hindi, Sanskrit, and Marathi language comprehension, storytelling circles, and expressive public speaking.</p>
                     </div>
                 </div>
 
-                <!-- Right 6 Stream Cards -->
-                <div class="acad-streams-grid">
-                    <!-- Languages -->
-                    <div class="acad-stream-card">
-                        <div class="acad-stream-icon orange" aria-hidden="true">
-                            <i class="fa-solid fa-book-bookmark"></i>
-                        </div>
-                        <div class="acad-stream-body">
-                            <h3 class="acad-stream-title">Languages</h3>
-                            <p class="acad-stream-desc">English, Hindi, Marathi and more.</p>
-                        </div>
-                    </div>
-
-                    <!-- Mathematics -->
-                    <div class="acad-stream-card">
-                        <div class="acad-stream-icon blue" aria-hidden="true">
+                <!-- Mathematics & Logic -->
+                <div class="acad-stream-card">
+                    <div class="acad-stream-thumb">
+                        <img src="assets/images/gallery/gallery-math-science-lab.jpg" alt="Mathematics &amp; Logic students at Advaita" loading="lazy">
+                        <span class="acad-stream-tag blue">
                             <i class="fa-solid fa-calculator"></i>
-                        </div>
-                        <div class="acad-stream-body">
-                            <h3 class="acad-stream-title">Mathematics</h3>
-                            <p class="acad-stream-desc">Logical thinking and problem solving.</p>
-                        </div>
+                            <span>Mathematics</span>
+                        </span>
                     </div>
+                    <div class="acad-stream-body">
+                        <h3 class="acad-stream-title">Mathematics &amp; Logic</h3>
+                        <p class="acad-stream-desc">Conceptual arithmetic, geometry proofs, Abacus speed calculations, and multi-step analytical problem solving.</p>
+                    </div>
+                </div>
 
-                    <!-- Science -->
-                    <div class="acad-stream-card">
-                        <div class="acad-stream-icon teal" aria-hidden="true">
+                <!-- Science & Discovery -->
+                <div class="acad-stream-card">
+                    <div class="acad-stream-thumb">
+                        <img src="assets/images/fac-science-lab.jpg" alt="Science &amp; Discovery students at Advaita" loading="lazy">
+                        <span class="acad-stream-tag teal">
                             <i class="fa-solid fa-flask-vial"></i>
-                        </div>
-                        <div class="acad-stream-body">
-                            <h3 class="acad-stream-title">Science</h3>
-                            <p class="acad-stream-desc">Hands-on learning and discovery.</p>
-                        </div>
+                            <span>Science</span>
+                        </span>
                     </div>
+                    <div class="acad-stream-body">
+                        <h3 class="acad-stream-title">Science &amp; Discovery</h3>
+                        <p class="acad-stream-desc">Hands-on experimentation across Physics, Chemistry, Biology, and interactive science laboratories.</p>
+                    </div>
+                </div>
 
-                    <!-- Social Science -->
-                    <div class="acad-stream-card">
-                        <div class="acad-stream-icon purple" aria-hidden="true">
+                <!-- Social Sciences -->
+                <div class="acad-stream-card">
+                    <div class="acad-stream-thumb">
+                        <img src="assets/images/gallery/educational-tour.jpg" alt="Social Sciences students at Advaita" loading="lazy">
+                        <span class="acad-stream-tag purple">
                             <i class="fa-solid fa-globe"></i>
-                        </div>
-                        <div class="acad-stream-body">
-                            <h3 class="acad-stream-title">Social Science</h3>
-                            <p class="acad-stream-desc">Understanding people, society and the world.</p>
-                        </div>
+                            <span>Social Studies</span>
+                        </span>
                     </div>
+                    <div class="acad-stream-body">
+                        <h3 class="acad-stream-title">Social Sciences</h3>
+                        <p class="acad-stream-desc">Understanding history, democratic values, global geography, heritage field exploration, and civic stewardship.</p>
+                    </div>
+                </div>
 
-                    <!-- Arts & Creativity -->
-                    <div class="acad-stream-card">
-                        <div class="acad-stream-icon pink" aria-hidden="true">
+                <!-- Arts & Expression -->
+                <div class="acad-stream-card">
+                    <div class="acad-stream-thumb">
+                        <img src="assets/images/gallery/gallery-art-circle-kids.jpg" alt="Arts &amp; Expression students at Advaita" loading="lazy">
+                        <span class="acad-stream-tag pink">
                             <i class="fa-solid fa-palette"></i>
-                        </div>
-                        <div class="acad-stream-body">
-                            <h3 class="acad-stream-title">Arts &amp; Creativity</h3>
-                            <p class="acad-stream-desc">Music, dance, art and dramatic expression.</p>
-                        </div>
+                            <span>Arts &amp; Music</span>
+                        </span>
                     </div>
+                    <div class="acad-stream-body">
+                        <h3 class="acad-stream-title">Arts &amp; Expression</h3>
+                        <p class="acad-stream-desc">Visual art, Indian classical dance, vocal music, drama, origami craft, and digital creative media.</p>
+                    </div>
+                </div>
 
-                    <!-- Physical Education -->
-                    <div class="acad-stream-card">
-                        <div class="acad-stream-icon amber" aria-hidden="true">
+                <!-- Sports & Physical Fitness -->
+                <div class="acad-stream-card">
+                    <div class="acad-stream-thumb">
+                        <img src="assets/images/gallery/gallery-sports-field-agility.jpg" alt="Sports &amp; Physical Fitness students at Advaita" loading="lazy">
+                        <span class="acad-stream-tag amber">
                             <i class="fa-solid fa-dumbbell"></i>
-                        </div>
-                        <div class="acad-stream-body">
-                            <h3 class="acad-stream-title">Physical Education</h3>
-                            <p class="acad-stream-desc">Sports and fitness for a healthy mind and body.</p>
-                        </div>
+                            <span>Physical Fitness</span>
+                        </span>
+                    </div>
+                    <div class="acad-stream-body">
+                        <h3 class="acad-stream-title">Sports &amp; Physical Fitness</h3>
+                        <p class="acad-stream-desc">Athletics, cricket, badminton, yoga, gymnastics, and team sports fostering lifelong physical health and teamwork.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- =========================================================================
-             6. OUR APPROACH SECTION (4 Cards)
+             6. OUR APPROACH SECTION (4 Cards with Student Photos)
              ========================================================================= -->
         <section class="acad-section" id="our-approach">
             <div class="acad-section-header">
@@ -292,103 +305,149 @@ require_once __DIR__.'/includes/header.php';
             <div class="acad-approach-grid">
                 <!-- Card 1 -->
                 <div class="acad-approach-card">
-                    <div class="acad-approach-icon orange" aria-hidden="true">
-                        <i class="fa-regular fa-lightbulb"></i>
+                    <div class="acad-approach-thumb">
+                        <img src="assets/images/about-commitment-students.jpg" alt="Student-Centric Learning at Advaita" loading="lazy">
+                        <div class="acad-approach-icon-badge orange" aria-hidden="true">
+                            <i class="fa-regular fa-lightbulb"></i>
+                        </div>
                     </div>
-                    <h3 class="acad-approach-title">Student-Centric Learning</h3>
-                    <p class="acad-approach-desc">Personalized attention to every learner.</p>
+                    <div class="acad-approach-body">
+                        <h3 class="acad-approach-title">Student-Centric Learning</h3>
+                        <p class="acad-approach-desc">Low teacher-student ratio ensuring individualized academic attention, remedial guidance, and differentiated pace.</p>
+                    </div>
                 </div>
 
                 <!-- Card 2 -->
                 <div class="acad-approach-card">
-                    <div class="acad-approach-icon blue" aria-hidden="true">
-                        <i class="fa-solid fa-shield-halved"></i>
+                    <div class="acad-approach-thumb">
+                        <img src="assets/images/about-vision-students.jpg" alt="Safe &amp; Supportive Environment at Advaita" loading="lazy">
+                        <div class="acad-approach-icon-badge blue" aria-hidden="true">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
                     </div>
-                    <h3 class="acad-approach-title">Safe &amp; Supportive Environment</h3>
-                    <p class="acad-approach-desc">A nurturing campus that feels like home.</p>
+                    <div class="acad-approach-body">
+                        <h3 class="acad-approach-title">Safe &amp; Supportive Environment</h3>
+                        <p class="acad-approach-desc">A nurturing, fully CCTV-monitored campus with compassionate faculty where every child feels respected and inspired.</p>
+                    </div>
                 </div>
 
                 <!-- Card 3 -->
                 <div class="acad-approach-card">
-                    <div class="acad-approach-icon teal" aria-hidden="true">
-                        <i class="fa-regular fa-heart"></i>
+                    <div class="acad-approach-thumb">
+                        <img src="assets/images/gallery/yoga.jpg" alt="Focus on Values &amp; Character at Advaita" loading="lazy">
+                        <div class="acad-approach-icon-badge teal" aria-hidden="true">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
                     </div>
-                    <h3 class="acad-approach-title">Focus on Values</h3>
-                    <p class="acad-approach-desc">Building character and responsible citizens.</p>
+                    <div class="acad-approach-body">
+                        <h3 class="acad-approach-title">Focus on Values &amp; Character</h3>
+                        <p class="acad-approach-desc">Instilling integrity, social responsibility, empathy, and cultural respect alongside academic achievement.</p>
+                    </div>
                 </div>
 
                 <!-- Card 4 -->
                 <div class="acad-approach-card">
-                    <div class="acad-approach-icon pink" aria-hidden="true">
-                        <i class="fa-solid fa-rocket"></i>
+                    <div class="acad-approach-thumb">
+                        <img src="assets/images/gallery/computer-lab.png" alt="Future-Ready Competencies at Advaita" loading="lazy">
+                        <div class="acad-approach-icon-badge pink" aria-hidden="true">
+                            <i class="fa-solid fa-rocket"></i>
+                        </div>
                     </div>
-                    <h3 class="acad-approach-title">Future-Ready Skills</h3>
-                    <p class="acad-approach-desc">Preparing for higher education and life beyond.</p>
+                    <div class="acad-approach-body">
+                        <h3 class="acad-approach-title">Future-Ready Competencies</h3>
+                        <p class="acad-approach-desc">Equipping students with analytical reasoning, technological literacy, and confidence for higher competitive success.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- =========================================================================
-             7. BEYOND THE CLASSROOM SECTION (Clubs + Creative Student Visual)
+             7. BEYOND THE CLASSROOM SECTION (Clubs with Student Photos)
              ========================================================================= -->
         <section class="acad-section" id="beyond-classroom">
-            <div class="acad-left-header-wrap">
-                <div class="acad-accent-bar" aria-hidden="true"></div>
-                <div class="acad-left-header-content">
-                    <span class="acad-eyebrow">— BEYOND THE CLASSROOM —</span>
-                    <h2 class="acad-section-title">
-                        Learning That <span class="highlight-orange">Goes Further.</span>
-                    </h2>
-                    <p class="acad-section-desc">
-                        Our academic programme is enriched with co-curricular activities, competitions, clubs and real-world exposure to help students discover and grow their interests.
-                    </p>
-                </div>
+            <div class="acad-section-header">
+                <span class="acad-eyebrow">— BEYOND THE CLASSROOM —</span>
+                <h2 class="acad-section-title">
+                    Learning That <span class="highlight-orange">Goes Further.</span>
+                </h2>
+                <p class="acad-section-desc">
+                    Our academic programme is enriched with co-curricular clubs, competitions, and leadership opportunities that let students discover their unique passions.
+                </p>
             </div>
 
-            <div class="acad-beyond-layout">
-                <!-- Left 5 Clubs -->
-                <div class="acad-clubs-row">
-                    <div class="acad-club-item">
-                        <div class="acad-club-icon-circle c1" aria-hidden="true">
+            <div class="acad-clubs-grid">
+                <!-- Club 1: Science & STEM -->
+                <div class="acad-club-card">
+                    <div class="acad-club-thumb">
+                        <img src="assets/images/gallery/robotics-lab.png" alt="Science &amp; STEM Club students" loading="lazy">
+                        <span class="acad-club-pill c1">
                             <i class="fa-solid fa-microscope"></i>
-                        </div>
-                        <span class="acad-club-name">Science Club</span>
+                            <span>STEM</span>
+                        </span>
                     </div>
-
-                    <div class="acad-club-item">
-                        <div class="acad-club-icon-circle c2" aria-hidden="true">
-                            <i class="fa-solid fa-book-open"></i>
-                        </div>
-                        <span class="acad-club-name">Literary Club</span>
-                    </div>
-
-                    <div class="acad-club-item">
-                        <div class="acad-club-icon-circle c3" aria-hidden="true">
-                            <i class="fa-solid fa-bullhorn"></i>
-                        </div>
-                        <span class="acad-club-name">Debate &amp; Public Speaking</span>
-                    </div>
-
-                    <div class="acad-club-item">
-                        <div class="acad-club-icon-circle c4" aria-hidden="true">
-                            <i class="fa-solid fa-music"></i>
-                        </div>
-                        <span class="acad-club-name">Art &amp; Music</span>
-                    </div>
-
-                    <div class="acad-club-item">
-                        <div class="acad-club-icon-circle c5" aria-hidden="true">
-                            <i class="fa-solid fa-person-running"></i>
-                        </div>
-                        <span class="acad-club-name">Sports</span>
+                    <div class="acad-club-body">
+                        <h4>Science &amp; STEM Club</h4>
+                        <p>Science exhibitions, robotics challenges, and observational nature experiments.</p>
                     </div>
                 </div>
 
-                <!-- Right Visual -->
-                <div class="acad-beyond-visual">
-                    <div class="acad-beyond-aura" aria-hidden="true"></div>
-                    <div class="acad-beyond-img-box">
-                        <img src="assets/images/about-story-student.jpg" alt="Student participating in co-curricular arts and activities at Advaita School">
+                <!-- Club 2: Literary & Editorial -->
+                <div class="acad-club-card">
+                    <div class="acad-club-thumb">
+                        <img src="assets/images/fac-library.jpg" alt="Literary &amp; Editorial students" loading="lazy">
+                        <span class="acad-club-pill c2">
+                            <i class="fa-solid fa-book-open"></i>
+                            <span>Literary</span>
+                        </span>
+                    </div>
+                    <div class="acad-club-body">
+                        <h4>Literary &amp; Editorial</h4>
+                        <p>Creative writing, school magazine editorial board, and poetry recitations.</p>
+                    </div>
+                </div>
+
+                <!-- Club 3: Debate & Elocution -->
+                <div class="acad-club-card">
+                    <div class="acad-club-thumb">
+                        <img src="assets/images/gallery/gallery-foundation-achievers.jpg" alt="Debate &amp; Elocution students" loading="lazy">
+                        <span class="acad-club-pill c3">
+                            <i class="fa-solid fa-bullhorn"></i>
+                            <span>Debate</span>
+                        </span>
+                    </div>
+                    <div class="acad-club-body">
+                        <h4>Debate &amp; Elocution</h4>
+                        <p>Public speaking, parliamentary debate drills, and Model United Nations (MUN).</p>
+                    </div>
+                </div>
+
+                <!-- Club 4: Fine Arts & Music -->
+                <div class="acad-club-card">
+                    <div class="acad-club-thumb">
+                        <img src="assets/images/gallery/gallery-school-band.jpg" alt="Fine Arts &amp; Music students" loading="lazy">
+                        <span class="acad-club-pill c4">
+                            <i class="fa-solid fa-music"></i>
+                            <span>Arts</span>
+                        </span>
+                    </div>
+                    <div class="acad-club-body">
+                        <h4>Fine Arts &amp; Music</h4>
+                        <p>Vocal training, classical instrumental music, painting, and craft workshops.</p>
+                    </div>
+                </div>
+
+                <!-- Club 5: Sports & Athletics -->
+                <div class="acad-club-card">
+                    <div class="acad-club-thumb">
+                        <img src="assets/images/gallery/gallery-football-match-sprint.jpg" alt="Sports &amp; Athletics students" loading="lazy">
+                        <span class="acad-club-pill c5">
+                            <i class="fa-solid fa-person-running"></i>
+                            <span>Sports</span>
+                        </span>
+                    </div>
+                    <div class="acad-club-body">
+                        <h4>Sports &amp; Athletics</h4>
+                        <p>Inter-house tournaments, physical agility drills, cricket, and martial arts.</p>
                     </div>
                 </div>
             </div>
