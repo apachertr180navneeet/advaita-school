@@ -4778,8 +4778,11 @@
         grid-template-columns: 1fr;
     }
     .staff-stats-strip {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         border-radius: var(--adv-radius-xl);
+    }
+    .staff-stat-label {
+        white-space: normal;
     }
     .staff-cards-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -9994,7 +9997,7 @@ textarea.reg-input-control {
     color: #64748b;
     line-height: 1.55;
     margin: 0;
-    text-align: left;
+    text-align: center;
     width: 100%;
 }
 
@@ -11237,7 +11240,7 @@ textarea.reg-input-control {
     color: #64748b;
     line-height: 1.55;
     margin: 0;
-    text-align: left;
+    text-align: center;
     width: 100%;
 }
 

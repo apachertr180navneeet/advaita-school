@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * About Us Page - Advaita School of Excellence, Parbhani
  * CBSE Affiliated (Affiliation No. 1130920)
@@ -9,132 +9,85 @@ $activePage = 'about';
 
 require_once __DIR__.'/includes/header.php';
 ?>
-<link rel="stylesheet" href="assets/css/about-us.css?v=<?php echo file_exists(__DIR__.'/assets/css/about-us.css') ? filemtime(__DIR__.'/assets/css/about-us.css') : '1'; ?>">
 
 <main id="main" class="main-content-wrapper about-page-wrapper">
 
     <!-- =========================================================================
-         1. HERO SECTION: Breadcrumb + Title + Affiliation & 4 Stages Showcase
+         1. HERO SECTION: Welcome to A Premier CBSE School with a Stronger Purpose
          ========================================================================= -->
     <section class="about-hero-section">
         <div class="about-hero-canvas">
-            <!-- Background School Building on the Right -->
-            <div class="about-hero-bg-visual" aria-hidden="true">
-                <img src="assets/images/about-hero-building.jpg" 
-                     alt="Advaita School of Excellence Campus" 
-                     class="about-hero-bg-img" 
-                     loading="eager">
-                <div class="about-hero-bg-overlay"></div>
+            <!-- Background Image & Sky on the Right -->
+            <div class="about-hero-bg-visual">
+                <img src="assets/images/about-hero-building.jpg" alt="Advaita School of Excellence Campus" class="about-hero-bg-img" loading="eager">
+                <!-- Floating Script Badge in Sky -->
+                <div class="about-hero-script-tag">
+                    <span class="script-title">More<br>Than A School</span>
+                    <svg class="script-underline" viewBox="0 0 140 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M4 10C36 4 98 4 136 12" stroke="#F37021" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M18 14C48 9 92 8 126 15" stroke="#F37021" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
+                    </svg>
+                </div>
             </div>
 
-            <!-- Two-Column Hero Grid: Content (Left) + Affiliation & 4 Stages Card (Right) -->
-            <div class="about-hero-inner-grid">
-                <!-- Left Content Panel -->
-                <div class="about-hero-left-panel">
-                    <div class="about-hero-content-inner">
-                        <!-- Breadcrumbs (No duplicate "About Us" label or dashes) -->
-                        <nav class="about-breadcrumb" aria-label="Breadcrumb">
-                            <a href="index.php">Home</a>
-                            <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
-                            <span class="active">About Us</span>
-                        </nav>
+            <!-- Left Organic White Panel with Curved Boundary -->
+            <div class="about-hero-left-panel">
+                <!-- Ambient decorative dots -->
+                <div class="about-hero-dots-decor" aria-hidden="true"></div>
 
-                        <!-- Main Headline -->
-                        <h1 class="about-hero-title">
-                            Advaita School of Excellence,<br>
-                            <span class="highlight-orange">Parbhani</span>
-                        </h1>
+                <div class="about-hero-content-inner">
+                    <!-- Breadcrumbs -->
+                    <div class="about-breadcrumb">
+                        <a href="index.php">Home</a>
+                        <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
+                        <span class="active">About Us</span>
+                    </div>
 
-                        <!-- Bold Tagline -->
-                        <div class="about-hero-tagline">
-                            Nurturing Excellence. Inspiring Innovation.<br>Shaping Futures.
+                    <span class="about-eyebrow">— WELCOME TO —</span>
+                    <h1 class="about-hero-title">
+                        A Premier<br>
+                        CBSE School with a<br>
+                        <span class="about-text-orange">Stronger Purpose.</span>
+                    </h1>
+                    
+                    <div class="about-hero-highlights">
+                        <div class="highlight-line">
+                            <span class="highlight-item">Academic Excellence</span>
+                            <span class="highlight-pipe">|</span>
+                            <span class="highlight-item">NEET / IIT Foundation</span>
                         </div>
-
-                        <!-- Description -->
-                        <p class="about-hero-desc">
-                            Established in 2016 under the visionary leadership of Mr. Vishal Vattamwar, Chairman of Sanmati Sevabhavi Sanstha, Advaita School of Excellence, Parbhani, was founded to bring quality education to every student in Parbhani.
-                        </p>
-
-                        <!-- Affiliation Mini Highlight Pill -->
-                        <div class="about-hero-aff-pill">
-                            <i class="fa-solid fa-certificate"></i>
-                            <span>CBSE Affiliated &bull; Affiliation No. 1130920 &bull; School Code: 30882</span>
+                        <div class="highlight-line">
+                            <span class="highlight-item">Competitive Exam Preparation</span>
+                            <span class="highlight-pipe">|</span>
+                            <span class="highlight-item">Values for Life</span>
                         </div>
+                    </div>
+
+                    <p class="about-hero-desc">
+                        At Advaita School of Excellence, we go beyond textbooks to create a learning environment where curiosity is encouraged, confidence is built, and every child is empowered to achieve their true potential.
+                    </p>
+
+                    <div class="about-hero-actions">
+                        <a href="online-registration.php" class="about-btn-orange">
+                            <span>Book a Campus Visit</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="vision-mission.php" class="about-btn-vision">
+                            <span class="vision-play-circle"><i class="fa-solid fa-play"></i></span>
+                            <span>Our Vision</span>
+                        </a>
                     </div>
                 </div>
 
-                <!-- Right Feature Panel (Fills the space beside the text) -->
-                <div class="about-hero-right-panel">
-                    <div class="about-hero-features-card">
-                        
-                        <!-- Top: CBSE Affiliation Highlight -->
-                        <div class="hero-aff-card">
-                            <div class="hero-aff-icon">
-                                <i class="fa-solid fa-school-flag"></i>
-                            </div>
-                            <div class="hero-aff-content">
-                                <span class="hero-aff-kicker">OFFICIAL AFFILIATION</span>
-                                <h3 class="hero-aff-title">CBSE Affiliated Institution</h3>
-                                <p class="hero-aff-meta">
-                                    <span><strong>Affiliation No:</strong> 1130920</span>
-                                    <span class="meta-dot">&bull;</span>
-                                    <span><strong>School Code:</strong> 30882</span>
-                                </p>
-                                <span class="hero-aff-scope">Play Group to Class X &bull; Central Board of Secondary Education, New Delhi</span>
-                            </div>
-                        </div>
-
-                        <!-- Bottom: Four Stages of Education -->
-                        <div class="hero-stages-card">
-                            <div class="hero-stages-header">
-                                <i class="fa-solid fa-layer-group"></i>
-                                <span>4 STAGES WE PROVIDE (NEP 2020)</span>
-                            </div>
-
-                            <div class="hero-stages-grid">
-                                <!-- 1. Foundational -->
-                                <div class="hero-stage-badge stage-orange">
-                                    <div class="stage-num">01</div>
-                                    <div class="stage-text">
-                                        <strong class="stage-name">Foundational Stage</strong>
-                                        <span class="stage-level">Play Group &bull; Nursery &bull; LKG &bull; UKG &bull; Grades 1–2</span>
-                                    </div>
-                                </div>
-
-                                <!-- 2. Preparatory -->
-                                <div class="hero-stage-badge stage-blue">
-                                    <div class="stage-num">02</div>
-                                    <div class="stage-text">
-                                        <strong class="stage-name">Preparatory Stage</strong>
-                                        <span class="stage-level">Grades 3 to 5 (Classes III–V)</span>
-                                    </div>
-                                </div>
-
-                                <!-- 3. Middle -->
-                                <div class="hero-stage-badge stage-green">
-                                    <div class="stage-num">03</div>
-                                    <div class="stage-text">
-                                        <strong class="stage-name">Middle Stage</strong>
-                                        <span class="stage-level">Grades 6 to 8 (Classes VI–VIII)</span>
-                                    </div>
-                                </div>
-
-                                <!-- 4. Secondary -->
-                                <div class="hero-stage-badge stage-purple">
-                                    <div class="stage-num">04</div>
-                                    <div class="stage-text">
-                                        <strong class="stage-name">Secondary Stage</strong>
-                                        <span class="stage-level">Grades 9 &amp; 10 (Classes IX–X)</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+                <!-- Organic Wave Edge SVG -->
+                <div class="about-hero-wave-edge" aria-hidden="true">
+                    <svg viewBox="0 0 100 600" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0 0 C35 80 85 160 85 270 C85 390 30 480 75 600 L0 600 Z" fill="#d8ecff" opacity="0.6"/>
+                        <path d="M0 0 C25 80 65 160 65 270 C65 390 15 480 55 600 L0 600 Z" fill="#ffffff"/>
+                    </svg>
                 </div>
             </div>
         </div>
-    </section>
 
         <!-- 4 Feature Cards Strip -->
         <div class="about-features-strip">
@@ -218,7 +171,7 @@ require_once __DIR__.'/includes/header.php';
 
                 <!-- Right: Story Content & Stats -->
                 <div class="about-story-content">
-                    <span class="about-eyebrow">BUILT ON A STRONG FOUNDATION</span>
+                    <span class="about-eyebrow">— BUILT ON A STRONG FOUNDATION —</span>
                     <h2 class="about-story-title">
                         Built on Values.<br>
                         Driven by <span class="about-text-orange">Academic Excellence.</span>
@@ -323,7 +276,7 @@ require_once __DIR__.'/includes/header.php';
             <div class="about-philosophy-grid">
                 <!-- Left: Content -->
                 <div class="about-philosophy-content">
-                    <span class="about-eyebrow">PREPARING FOR A BRIGHTER TOMORROW</span>
+                    <span class="about-eyebrow">— PREPARING FOR A BRIGHTER TOMORROW —</span>
                     <h2 class="about-philosophy-title">
                         Education for<br>
                         Life, <span class="about-text-orange">Not Just Exams.</span>
@@ -378,7 +331,7 @@ require_once __DIR__.'/includes/header.php';
     <section class="about-why-choose">
         <div class="about-section-container">
             <div class="about-section-header text-center">
-                <span class="about-eyebrow">WHAT SETS US APART</span>
+                <span class="about-eyebrow">— WHAT SETS US APART —</span>
                 <h2 class="about-section-heading">
                     What Makes <span class="about-text-orange">Advaita</span> Unique.
                 </h2>
@@ -453,7 +406,7 @@ require_once __DIR__.'/includes/header.php';
             <div class="about-campus-grid">
                 <!-- Left: Content -->
                 <div class="about-campus-content">
-                    <span class="about-campus-eyebrow">A SPACE TO GROW</span>
+                    <span class="about-campus-eyebrow">— A SPACE TO GROW —</span>
                     <h2 class="about-campus-title">
                         A Space to Learn,<br>
                         <span class="about-text-orange">Explore and Excel.</span>

@@ -1107,22 +1107,29 @@
         line-height: 1.5;
     }
 
-    /* Stats Strip on Mobile */
+    /* Stats Strip on Mobile - Clean 2x2 Grid that fits without clipping */
     .staff-stats-strip-wrapper {
-        margin-top: 12px !important;
-        padding: 0 8px !important;
+        position: relative !important;
+        z-index: 10 !important;
+        margin-top: -16px !important;
+        padding: 0 10px !important;
         width: 100% !important;
+        max-width: 100% !important;
         box-sizing: border-box !important;
-        overflow: hidden !important;
+        overflow: visible !important;
     }
 
     .staff-stats-strip {
+        display: grid !important;
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-        gap: 8px !important;
+        gap: 6px !important;
         padding: 10px 8px !important;
-        border-radius: 12px !important;
+        border-radius: 14px !important;
         width: 100% !important;
+        max-width: 100% !important;
         box-sizing: border-box !important;
+        box-shadow: 0 6px 20px rgba(8, 59, 122, 0.08) !important;
+        background: #ffffff !important;
     }
 
     .staff-stat-item {
@@ -1131,18 +1138,26 @@
         border: 1px solid #edf2f7 !important;
         border-radius: 10px !important;
         padding: 8px 8px !important;
+        display: flex !important;
+        align-items: center !important;
         justify-content: flex-start !important;
         gap: 8px !important;
         min-width: 0 !important;
-        overflow: hidden !important;
+        width: 100% !important;
         box-sizing: border-box !important;
+        overflow: hidden !important;
     }
 
     .staff-stat-icon {
-        font-size: 1.15rem !important;
-        width: 34px !important;
-        height: 34px !important;
+        font-size: 0.95rem !important;
+        width: 32px !important;
+        height: 32px !important;
+        color: #0284C7 !important;
+        background: #e0f2fe !important;
         border-radius: 8px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
         flex-shrink: 0 !important;
     }
 
@@ -1153,17 +1168,23 @@
     }
 
     .staff-stat-num {
-        font-size: 1.15rem !important;
+        font-size: 1.05rem !important;
+        font-weight: 800 !important;
+        color: #083B7A !important;
         line-height: 1.1 !important;
+        display: block !important;
     }
 
     .staff-stat-label {
-        font-size: 0.65rem !important;
+        font-size: 0.64rem !important;
+        font-weight: 600 !important;
+        color: #64748b !important;
+        margin-top: 1px !important;
+        display: block !important;
         white-space: normal !important;
-        line-height: 1.22 !important;
-        word-break: normal !important;
+        line-height: 1.2 !important;
+        word-break: break-word !important;
         overflow-wrap: break-word !important;
-        margin-top: 2px !important;
     }
 
     /* Educators Grid on Mobile */
