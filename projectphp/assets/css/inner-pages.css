@@ -3563,38 +3563,46 @@
 /* Dual Featured Cards (Vision & Mission Side-by-Side) */
 .vision-dual-cards-section {
     position: relative;
-    padding: clamp(18px, 1.8vw, 26px) 0 10px;
+    padding: clamp(20px, 2.5vw, 32px) 0 14px;
     background: #ffffff;
 }
 
 .vision-dual-cards-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 14px;
+    gap: 18px;
 }
 
 .vision-featured-card {
     position: relative;
-    border-radius: 16px;
+    border-radius: 20px;
     overflow: hidden;
-    min-height: 250px;
+    min-height: 260px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 18px 18px;
-    box-shadow: 0 8px 24px rgba(8, 59, 122, 0.06);
+    padding: 22px 22px;
+    box-shadow: 0 10px 30px rgba(8, 59, 122, 0.07);
     border: 1px solid #e0effa;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.vision-featured-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 36px rgba(8, 59, 122, 0.12);
 }
 
 .vision-card-left {
-    background: linear-gradient(135deg, #05264f 0%, #083B7A 100%);
+    background: linear-gradient(135deg, #052349 0%, #073166 40%, #083B7A 100%);
     color: #ffffff;
+    border-color: #0c4a96;
 }
 
 .mission-card-right {
     background: #ffffff;
-    border: 1.5px solid #d8ecff;
+    border: 1.5px solid #fed7aa;
     color: var(--adv-navy);
+    box-shadow: 0 10px 30px rgba(243, 112, 33, 0.08);
 }
 
 .vision-card-bg-visual,
@@ -3603,7 +3611,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    width: 50%;
+    width: 52%;
     overflow: hidden;
     z-index: 1;
 }
@@ -3619,59 +3627,84 @@
 .vision-mountain-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, #083B7A 0%, rgba(8, 59, 122, 0.6) 50%, transparent 100%);
+    background: linear-gradient(90deg, #052349 0%, rgba(5, 35, 73, 0.85) 45%, rgba(5, 35, 73, 0.25) 100%);
 }
 
 .mission-student-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0.4) 50%, transparent 100%);
+    background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0.9) 45%, rgba(255, 255, 255, 0.35) 100%);
 }
 
 .vision-card-content {
     position: relative;
     z-index: 2;
-    max-width: 72%;
+    max-width: 68%;
 }
 
 .vision-card-icon-wrap {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1rem;
-    margin-bottom: 6px;
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+    transition: transform 0.25s ease;
+}
+
+.vision-featured-card:hover .vision-card-icon-wrap {
+    transform: scale(1.08);
+}
+
+.vision-card-icon-wrap.icon-blue {
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    color: #38bdf8;
+    backdrop-filter: blur(4px);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+.vision-card-icon-wrap.icon-orange {
+    background: #fff7ed;
+    border: 1.5px solid #fdba74;
+    color: #ea580c;
+    box-shadow: 0 4px 14px rgba(243, 112, 33, 0.15);
 }
 
 .vision-pill-badge {
     display: inline-block;
-    padding: 2px 10px;
-    border-radius: var(--adv-radius-pill);
+    padding: 3px 12px;
+    border-radius: var(--adv-radius-pill, 999px);
     font-family: var(--adv-font-sans);
-    font-size: 0.65rem;
+    font-size: 0.68rem;
     font-weight: 800;
-    letter-spacing: 1px;
-    margin-bottom: 6px;
+    letter-spacing: 1.2px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
 }
 
 .pill-navy {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.28);
     color: #ffffff;
+    backdrop-filter: blur(4px);
 }
 
 .pill-orange {
-    background: var(--adv-orange);
+    background: #F37021;
     color: #ffffff;
+    box-shadow: 0 2px 10px rgba(243, 112, 33, 0.3);
 }
 
 .vision-card-heading {
     font-family: var(--adv-font-sans);
-    font-size: clamp(1.1rem, 1.4vw, 1.35rem);
+    font-size: clamp(1.15rem, 1.45vw, 1.38rem);
     font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 6px;
+    line-height: 1.25;
+    margin-bottom: 8px;
+    letter-spacing: -0.2px;
 }
 
 .vision-card-left .vision-card-heading {
@@ -3679,12 +3712,12 @@
 }
 
 .mission-card-right .vision-card-heading {
-    color: var(--adv-navy);
+    color: #083B7A;
 }
 
 .vision-card-text {
-    font-size: 0.78rem;
-    line-height: 1.45;
+    font-size: 0.82rem;
+    line-height: 1.5;
     margin: 0;
 }
 
@@ -3693,51 +3726,100 @@
 }
 
 .mission-card-right .vision-card-text {
-    color: var(--adv-text-body);
+    color: #475569;
 }
 
 /* Vision Beliefs Section (3 Cards) */
 .vision-beliefs-section {
-    padding: clamp(18px, 1.8vw, 26px) 0;
+    padding: clamp(24px, 2.5vw, 36px) 0;
     background: #ffffff;
 }
 
 .vision-beliefs-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    margin-top: 12px;
+    gap: 16px;
+    margin-top: 16px;
 }
 
 .vision-belief-card {
     background: #ffffff;
     border: 1px solid #e2e8f0;
-    border-radius: 14px;
-    padding: 14px 14px;
+    border-radius: 18px;
+    padding: 22px 18px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 3px 12px rgba(8, 59, 122, 0.03);
-    transition: all 0.2s ease;
+    box-shadow: 0 4px 18px rgba(8, 59, 122, 0.04);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vision-belief-card.card-blue {
+    border-top: 4px solid #0284C7;
+}
+
+.vision-belief-card.card-orange {
+    border-top: 4px solid #F37021;
+}
+
+.vision-belief-card.card-green {
+    border-top: 4px solid #16a34a;
 }
 
 .vision-belief-card:hover {
-    transform: translateY(-3px);
+    transform: translateY(-4px);
     border-color: #cbd5e1;
-    box-shadow: 0 8px 20px rgba(8, 59, 122, 0.07);
+    box-shadow: 0 12px 28px rgba(8, 59, 122, 0.09);
 }
 
 .vision-belief-icon {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.05rem;
-    margin-bottom: 8px;
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    flex-shrink: 0;
+}
+
+.vision-belief-icon.icon-blue {
+    background: #eff6ff;
+    color: #0284c7;
+    border: 1.5px solid #bfdbfe;
+}
+
+.vision-belief-icon.icon-orange {
+    background: #fff7ed;
+    color: #ea580c;
+    border: 1.5px solid #fed7aa;
+}
+
+.vision-belief-icon.icon-green {
+    background: #f0fdf4;
+    color: #16a34a;
+    border: 1.5px solid #bbf7d0;
+}
+
+.vision-belief-content {
+    flex: 1;
 }
 
 .vision-belief-title {
+    font-family: var(--adv-font-sans);
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #083B7A;
+    margin: 0 0 6px;
+    line-height: 1.25;
+}
+
+.vision-belief-desc {
+    font-size: 0.82rem;
+    color: #64748b;
+    line-height: 1.52;
+    margin: 0;
+}
     font-family: var(--adv-font-sans);
     font-size: 0.98rem;
     font-weight: 800;
@@ -4029,16 +4111,88 @@
     box-shadow: 0 8px 20px rgba(8, 59, 122, 0.08);
 }
 
+.vision-focus-card {
+    background: #ffffff;
+    border: 1px solid #e1effa;
+    border-radius: 16px;
+    padding: 18px 14px 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    box-shadow: 0 4px 14px rgba(8, 59, 122, 0.04);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.vision-focus-card:hover {
+    transform: translateY(-3px);
+    border-color: #bae6fd;
+    box-shadow: 0 10px 24px rgba(8, 59, 122, 0.09);
+}
+
 .vision-focus-icon {
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.05rem;
-    margin-bottom: 8px;
+    font-size: 1.15rem;
+    margin-bottom: 10px;
     flex-shrink: 0;
+    transition: transform 0.25s ease;
+}
+
+.vision-focus-card:hover .vision-focus-icon {
+    transform: scale(1.08);
+}
+
+.vision-focus-icon.icon-blue {
+    background: #eff6ff;
+    color: #2563eb;
+    border: 1.5px solid #bfdbfe;
+}
+
+.vision-focus-icon.icon-sky {
+    background: #f0f9ff;
+    color: #0284c7;
+    border: 1.5px solid #bae6fd;
+}
+
+.vision-focus-icon.icon-indigo {
+    background: #eef2ff;
+    color: #4f46e5;
+    border: 1.5px solid #c7d2fe;
+}
+
+.vision-focus-icon.icon-orange {
+    background: #fff7ed;
+    color: #ea580c;
+    border: 1.5px solid #fed7aa;
+}
+
+.vision-focus-icon.icon-rose {
+    background: #fff1f2;
+    color: #e11d48;
+    border: 1.5px solid #fecdd3;
+}
+
+.vision-focus-icon.icon-amber {
+    background: #fffbeb;
+    color: #d97706;
+    border: 1.5px solid #fde68a;
+}
+
+.vision-focus-icon.icon-purple {
+    background: #faf5ff;
+    color: #9333ea;
+    border: 1.5px solid #e9d5ff;
+}
+
+.vision-focus-icon.icon-yellow {
+    background: #fefce8;
+    color: #ca8a04;
+    border: 1.5px solid #fef08a;
 }
 
 .vision-focus-card-title {
@@ -4056,19 +4210,6 @@
     color: #556987;
     line-height: 1.45;
     margin: 0;
-}
-
-@media (max-width: 1024px) {
-    .vision-focus-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-    }
-}
-
-@media (max-width: 576px) {
-    .vision-focus-grid {
-        grid-template-columns: 1fr;
-    }
 }
 
 /* ==========================================================================
@@ -4907,18 +5048,99 @@
     .chairman-hero-canvas,
     .principal-hero-canvas,
     .vision-hero-canvas {
-        border-radius: var(--adv-radius-md);
+        border-radius: var(--adv-radius-md, 16px);
+    }
+    .vision-hero-left-panel {
+        padding: 22px 16px 24px !important;
+    }
+    .vision-hero-script-tag {
+        top: 10px !important;
+        right: 12px !important;
+        transform: scale(0.72) rotate(-3deg) !important;
+    }
+    .vision-hero-title {
+        font-size: clamp(1.48rem, 5.5vw, 1.85rem) !important;
+        line-height: 1.24 !important;
+        margin-bottom: 8px !important;
+    }
+    .vision-hero-desc {
+        font-size: 0.85rem !important;
+        line-height: 1.5 !important;
     }
     .vision-dual-cards-grid {
         grid-template-columns: 1fr !important;
         gap: 14px !important;
     }
+    .vision-featured-card {
+        min-height: 220px !important;
+        padding: 18px 16px !important;
+        border-radius: 16px !important;
+    }
     .vision-card-content {
-        max-width: 75% !important;
+        max-width: 76% !important;
+    }
+    .vision-card-heading {
+        font-size: 1.1rem !important;
+        margin-bottom: 6px !important;
+    }
+    .vision-card-text {
+        font-size: 0.78rem !important;
+        line-height: 1.45 !important;
     }
     .vision-beliefs-grid {
         grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+    .vision-belief-card {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: flex-start !important;
+        gap: 14px !important;
+        padding: 16px 14px !important;
+        border-radius: 14px !important;
+    }
+    .vision-belief-icon {
+        width: 42px !important;
+        height: 42px !important;
+        font-size: 1.15rem !important;
+        margin-bottom: 0 !important;
+        flex-shrink: 0 !important;
+    }
+    .vision-belief-content {
+        flex: 1 !important;
+        min-width: 0 !important;
+    }
+    .vision-belief-title {
+        font-size: 0.98rem !important;
+        margin-bottom: 4px !important;
+    }
+    .vision-belief-desc {
+        font-size: 0.78rem !important;
+        line-height: 1.42 !important;
+    }
+    .vision-focus-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
         gap: 10px !important;
+    }
+    .vision-focus-card {
+        padding: 14px 12px 12px !important;
+        border-radius: 14px !important;
+    }
+    .vision-focus-icon {
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 1rem !important;
+        margin-bottom: 8px !important;
+        border-radius: 10px !important;
+    }
+    .vision-focus-card-title {
+        font-size: 0.86rem !important;
+        line-height: 1.25 !important;
+        margin-bottom: 3px !important;
+    }
+    .vision-focus-card-desc {
+        font-size: 0.72rem !important;
+        line-height: 1.35 !important;
     }
     .about-strip-grid {
         grid-template-columns: 1fr;
@@ -4934,9 +5156,6 @@
         padding: 14px;
     }
     .staff-cards-grid {
-        grid-template-columns: 1fr;
-    }
-    .vision-focus-grid {
         grid-template-columns: 1fr;
     }
     .chairman-commitment-grid,

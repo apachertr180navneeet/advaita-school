@@ -1,4 +1,4 @@
-﻿@extends('layouts.app')
+@extends('layouts.app')
 
 @section('title', "Vision & Mission - Advaita School of Excellence, Parbhani")
 
@@ -165,36 +165,42 @@
 
             <div class="vision-beliefs-grid">
                 <!-- Belief 1: Academic Excellence -->
-                <div class="vision-belief-card">
+                <div class="vision-belief-card card-blue">
                     <div class="vision-belief-icon icon-blue">
-                        <i class="fa-solid fa-eye"></i>
+                        <i class="fa-solid fa-graduation-cap"></i>
                     </div>
-                    <h3 class="vision-belief-title">Academic Excellence</h3>
-                    <p class="vision-belief-desc">
-                        A strong foundation with CBSE academics and integrated NEET/IIT preparation.
-                    </p>
+                    <div class="vision-belief-content">
+                        <h3 class="vision-belief-title">Academic Excellence</h3>
+                        <p class="vision-belief-desc">
+                            A strong foundation with CBSE academics and integrated NEET/IIT preparation.
+                        </p>
+                    </div>
                 </div>
 
                 <!-- Belief 2: Character & Values -->
-                <div class="vision-belief-card">
-                    <div class="vision-belief-icon icon-blue">
-                        <i class="fa-solid fa-users"></i>
+                <div class="vision-belief-card card-orange">
+                    <div class="vision-belief-icon icon-orange">
+                        <i class="fa-solid fa-heart-pulse"></i>
                     </div>
-                    <h3 class="vision-belief-title">Character &amp; Values</h3>
-                    <p class="vision-belief-desc">
-                        Discipline, empathy and responsibility to create compassionate individuals.
-                    </p>
+                    <div class="vision-belief-content">
+                        <h3 class="vision-belief-title">Character &amp; Values</h3>
+                        <p class="vision-belief-desc">
+                            Discipline, empathy and responsibility to create compassionate individuals.
+                        </p>
+                    </div>
                 </div>
 
                 <!-- Belief 3: Holistic Development -->
-                <div class="vision-belief-card">
-                    <div class="vision-belief-icon icon-blue">
+                <div class="vision-belief-card card-green">
+                    <div class="vision-belief-icon icon-green">
                         <i class="fa-solid fa-lightbulb"></i>
                     </div>
-                    <h3 class="vision-belief-title">Holistic Development</h3>
-                    <p class="vision-belief-desc">
-                        Encouraging creativity, curiosity and participation in academics, sports, arts and life skills.
-                    </p>
+                    <div class="vision-belief-content">
+                        <h3 class="vision-belief-title">Holistic Development</h3>
+                        <p class="vision-belief-desc">
+                            Encouraging creativity, curiosity and participation in academics, sports, arts and life skills.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
