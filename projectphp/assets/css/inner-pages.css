@@ -3420,16 +3420,32 @@
 
 /* Tablet Media Query */
 @media (max-width: 991px) {
+    .staff-join-section {
+        min-height: 280px;
+        padding: 24px 20px;
+        overflow: hidden;
+    }
     .banner-content-center {
-        max-width: 500px;
-        padding-left: 20px;
+        max-width: 440px;
+        padding-left: 0;
+        margin: 0 auto;
+        position: relative;
+        z-index: 3;
     }
     .staff-join-plane-left {
-        width: 30%;
-        opacity: 0.8;
+        width: 18%;
+        max-width: 120px;
+        opacity: 0.45;
     }
     .staff-join-section .students {
-        width: 34%;
+        width: 28%;
+        max-width: 220px;
+        opacity: 0.85;
+        z-index: 2;
+    }
+    .staff-join-section .buttons {
+        position: relative;
+        z-index: 4;
     }
     .staff-campus-showcase-card {
         flex-direction: column;
@@ -4750,20 +4766,67 @@
     }
     .about-hero-bg-visual,
     .chairman-hero-bg-visual,
-    .principal-hero-bg-visual,
-    .vision-hero-bg-visual {
+    .principal-hero-bg-visual {
         position: relative;
         width: 100%;
         height: 240px;
     }
-    .staff-hero-bg-visual {
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-        opacity: 0.16;
-        pointer-events: none;
-        z-index: 1;
+    .staff-hero-bg-visual,
+    .vision-hero-bg-visual {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        opacity: 0.16 !important;
+        pointer-events: none !important;
+        z-index: 1 !important;
+        background: transparent !important;
+    }
+    .vision-hero-canvas {
+        min-height: auto !important;
+        border-radius: 18px !important;
+        position: relative !important;
+        overflow: hidden !important;
+        background: linear-gradient(135deg, #f0f7fe 0%, #e8f3fc 60%, #e2effa 100%) !important;
+        border: 1px solid #ddecfa !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+    .vision-hero-bg-img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center 25% !important;
+    }
+    .vision-hero-script-tag {
+        position: absolute !important;
+        top: 16px !important;
+        right: 20px !important;
+        transform: scale(0.85) rotate(-3deg) !important;
+        transform-origin: right top !important;
+        z-index: 2 !important;
+    }
+    .vision-hero-left-panel {
+        position: relative !important;
+        z-index: 3 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: clamp(28px, 4vw, 36px) clamp(20px, 3.5vw, 32px) clamp(32px, 4vw, 40px) !important;
+        background: transparent !important;
+    }
+    .vision-hero-content-inner {
+        max-width: 680px !important;
+    }
+    .vision-hero-title {
+        font-size: clamp(1.85rem, 4vw, 2.35rem) !important;
+        line-height: 1.2 !important;
+        margin-bottom: 12px !important;
+    }
+    .vision-hero-desc {
+        font-size: clamp(0.92rem, 1.35vw, 1rem) !important;
+        line-height: 1.6 !important;
+        max-width: 640px !important;
+        color: #475569 !important;
     }
     .about-strip-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -4773,14 +4836,30 @@
     .about-campus-grid,
     .chairman-message-card,
     .principal-message-grid,
-    .principal-cta-banner-full,
-    .vision-dual-cards-grid {
+    .principal-cta-banner-full {
         grid-template-columns: 1fr;
         gap: 22px;
     }
-    .about-vmv-grid,
-    .vision-beliefs-grid {
+    .vision-dual-cards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 16px !important;
+    }
+    .vision-featured-card {
+        min-height: 250px !important;
+        padding: 20px 18px !important;
+    }
+    .vision-card-content {
+        max-width: 70% !important;
+    }
+    .about-vmv-grid {
         grid-template-columns: 1fr;
+    }
+    .vision-beliefs-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 12px !important;
+    }
+    .vision-belief-card {
+        padding: 16px 14px !important;
     }
     .staff-stats-strip {
         grid-template-columns: repeat(2, 1fr);
@@ -4811,7 +4890,7 @@
         justify-content: center;
     }
     .vision-card-content {
-        max-width: 100%;
+        max-width: 70%;
     }
 }
 
@@ -4829,6 +4908,17 @@
     .principal-hero-canvas,
     .vision-hero-canvas {
         border-radius: var(--adv-radius-md);
+    }
+    .vision-dual-cards-grid {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+    }
+    .vision-card-content {
+        max-width: 75% !important;
+    }
+    .vision-beliefs-grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
     }
     .about-strip-grid {
         grid-template-columns: 1fr;
