@@ -904,3 +904,259 @@ p {
     font-family: 'Plus Jakarta Sans', system-ui, sans-serif !important;
 }
 
+/* ==========================================================================
+   COMPREHENSIVE MOBILE & TABLET RESPONSIVENESS SUITE (320px to 1024px)
+   ========================================================================== */
+
+/* 1. Global Viewport & Container Hardening */
+html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    width: 100% !important;
+    position: relative;
+}
+
+/* Ensure flex & grid containers never cause horizontal overflow */
+.adv-container,
+.adv-container-narrow,
+.adv-container-medium,
+.main-content-wrapper,
+.acad-container,
+.facilities-container,
+.adv-gal-container,
+.adv-blog-container,
+.results-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden;
+}
+
+/* Exempt scrollable rails from overflow clipping */
+.table-responsive,
+.docs-table-wrapper,
+.fee-table-container,
+.fee-classwise-wrapper,
+.disclosure-table-wrap,
+.results-table-wrap,
+.admission-steps-wrapper,
+.adv-gal-filters-scroll,
+.adv-blog-filters-scroll,
+.acad-pills-bar,
+.acad-pills-bar-wrap,
+.admission-breadcrumb,
+.about-breadcrumb,
+.vision-breadcrumb,
+.staff-breadcrumb,
+.chairman-breadcrumb,
+.principal-breadcrumb,
+.contact-breadcrumb,
+.results-breadcrumb,
+.adv-gal-breadcrumb,
+.adv-blog-breadcrumb {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+}
+
+/* Academics Wing Switcher Pill Bar (Smooth Touch Scroll on Mobile & Tablet) */
+.acad-pills-bar {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+}
+.acad-pills-bar::-webkit-scrollbar {
+    display: none !important;
+}
+.acad-pill-btn {
+    flex-shrink: 0 !important;
+    white-space: nowrap !important;
+}
+
+/* 2. Tablet Layouts (641px to 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+    /* 2-Column Balanced Grids on Tablets */
+    .facilities-grid,
+    .adv-gal-grid,
+    .adv-blog-posts-grid,
+    .results-achievements-grid,
+    .staff-cards-grid,
+    .about-apart-grid,
+    .fee-cards-grid,
+    .uniform-cards-grid,
+    .pre-exp-gallery-grid,
+    .secondary-labs-grid,
+    .special-track-grid,
+    .vision-beliefs-grid,
+    .admission-convince-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 20px !important;
+    }
+
+    /* Panchakosha Ribbon on Tablet */
+    .panchakosha-ribbon-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 12px !important;
+    }
+
+    /* Hero Visuals on Tablet */
+    .about-hero-bg-visual,
+    .staff-hero-bg-visual,
+    .chairman-hero-bg-visual,
+    .principal-hero-bg-visual,
+    .vision-hero-bg-visual,
+    .contact-hero-bg-visual,
+    .facilities-hero-bg-visual {
+        height: 260px !important;
+    }
+
+    /* Desk Messages */
+    .chairman-message-card,
+    .principal-message-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* 3. Mobile Layouts (320px to 640px) */
+@media (max-width: 640px) {
+    /* Full Single Column for all Grid Cards */
+    .facilities-grid,
+    .adv-gal-grid,
+    .adv-blog-posts-grid,
+    .results-achievements-grid,
+    .staff-cards-grid,
+    .about-apart-grid,
+    .about-story-grid,
+    .about-philosophy-grid,
+    .about-campus-grid,
+    .about-vmv-grid,
+    .fee-cards-grid,
+    .uniform-cards-grid,
+    .pre-exp-gallery-grid,
+    .pre-institution-pillars-grid,
+    .secondary-labs-grid,
+    .special-track-grid,
+    .vision-dual-cards-grid,
+    .vision-focus-grid,
+    .vision-beliefs-grid,
+    .admission-convince-grid,
+    .contact-columns-grid,
+    .contact-quick-cards-grid,
+    .results-posters-pair,
+    .spotlight-grid,
+    .panchakosha-ribbon-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    /* Standardized Card Thumbnails on Mobile */
+    .facility-thumb-wrap,
+    .adv-gal-card-thumb,
+    .adv-blog-card-thumb,
+    .pre-exp-thumb,
+    .sec-lab-img-wrap {
+        height: 210px !important;
+        width: 100% !important;
+    }
+
+    .facility-thumb-img,
+    .adv-gal-card-thumb img,
+    .adv-blog-card-thumb img,
+    .pre-exp-thumb img,
+    .sec-lab-img-wrap img {
+        height: 100% !important;
+        width: 100% !important;
+        object-fit: cover !important;
+    }
+
+    /* Mobile Typography Rhythm */
+    h1, .h1,
+    .about-hero-title,
+    .staff-hero-title,
+    .chairman-hero-title,
+    .principal-hero-title,
+    .vision-hero-title,
+    .contact-hero-title,
+    .facilities-hero-title,
+    .admission-hero-title,
+    .acad-hero-title,
+    .adv-gal-hero-title,
+    .adv-blog-hero-title,
+    .results-hero-title {
+        font-size: clamp(1.4rem, 6.2vw, 1.85rem) !important;
+        line-height: 1.22 !important;
+    }
+
+    h2, .h2,
+    .facilities-section-title,
+    .panchakosha-main-title,
+    .pill-title,
+    .building-heading,
+    .acad-section-title {
+        font-size: clamp(1.25rem, 5vw, 1.6rem) !important;
+        line-height: 1.25 !important;
+    }
+
+    /* Touch Friendly Mobile Buttons & Action Bars */
+    .admission-btn-primary,
+    .admission-btn-visit,
+    .facility-card-link-btn,
+    .adv-gal-card-btn,
+    .adv-blog-card-btn,
+    .btn-building-cta,
+    .contact-submit-btn,
+    .reg-btn-continue,
+    .reg-btn-back {
+        min-height: 44px !important;
+        touch-action: manipulation !important;
+    }
+
+    /* Safe Bottom Clearance for Sticky Mobile Bottom Bars */
+    .floating-mobile-enquiry-bar {
+        position: fixed !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        z-index: 9999 !important;
+        display: flex !important;
+        box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.12) !important;
+    }
+
+    body.has-floating-bar {
+        padding-bottom: 74px !important;
+    }
+
+    /* Adjust Floating WhatsApp Button to not overlap bottom sticky bar */
+    .adv-floating-whatsapp-btn {
+        bottom: 76px !important;
+        right: 14px !important;
+    }
+
+    .adv-scroll-top-btn {
+        bottom: 130px !important;
+        right: 14px !important;
+    }
+}
+
+/* 4. Extra Narrow Screens (<= 360px - e.g. Galaxy Fold, iPhone SE 1st gen) */
+@media (max-width: 360px) {
+    .adv-container,
+    .adv-container-narrow,
+    .adv-container-medium {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    .facility-card-body,
+    .adv-gal-card-info,
+    .adv-blog-card-body,
+    .pre-exp-body {
+        padding: 14px 12px !important;
+    }
+
+    .admission-step-card {
+        flex: 0 0 175px !important;
+        min-width: 170px !important;
+    }
+}
+
