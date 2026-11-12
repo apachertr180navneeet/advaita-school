@@ -214,8 +214,21 @@ p {
         order: 2 !important;
         position: relative !important;
         width: 100% !important;
-        height: 240px !important;
-        max-height: 260px !important;
+        height: 250px !important;
+        max-height: 280px !important;
+        opacity: 1 !important;
+        display: block !important;
+        overflow: hidden !important;
+        border-radius: 0 0 20px 20px !important;
+    }
+
+    .pre-primary-hero .admission-hero-bg-img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center 20% !important;
+        display: block !important;
+        opacity: 1 !important;
     }
 
     /* Hide decorative wave overlays, sky script tags, and dots on tablet & mobile */
@@ -1021,14 +1034,25 @@ html, body {
 }
 
 /* Pre-Primary Dedicated Desktop Refinements */
-.pre-primary-hero .admission-hero-canvas {
-    min-height: 440px;
-}
-.pre-primary-hero .admission-hero-bg-visual {
-    width: 58% !important;
-}
-.pre-primary-hero .admission-hero-bg-img {
-    object-position: center center !important;
+@media (min-width: 992px) {
+    .pre-primary-hero .admission-hero-canvas {
+        min-height: 440px;
+    }
+    .pre-primary-hero .admission-hero-bg-visual {
+        position: absolute !important;
+        top: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        width: 58% !important;
+        height: 100% !important;
+        opacity: 1 !important;
+        display: block !important;
+    }
+    .pre-primary-hero .admission-hero-bg-img {
+        object-position: center center !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
 }
 .pre-primary-hero .hero-action-buttons {
     max-width: 480px;
@@ -1286,6 +1310,44 @@ html, body {
     .reg-btn-back {
         min-height: 44px !important;
         touch-action: manipulation !important;
+    }
+
+    /* Pre-Primary Hero on Mobile */
+    .pre-primary-hero .admission-hero-bg-visual {
+        width: 100% !important;
+        height: 230px !important;
+        opacity: 1 !important;
+        display: block !important;
+        border-radius: 0 0 20px 20px !important;
+    }
+    .pre-primary-hero .admission-hero-bg-img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center 20% !important;
+        display: block !important;
+        opacity: 1 !important;
+    }
+    .pre-primary-hero .hero-action-buttons {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    .pre-primary-hero .admission-btn-primary {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 11px 16px !important;
+        font-size: 0.88rem !important;
+    }
+    .pre-primary-hero .admission-btn-visit {
+        flex: 1 1 calc(50% - 6px) !important;
+        width: auto !important;
+        min-width: 125px !important;
+        justify-content: center !important;
+        padding: 8px 10px !important;
+        font-size: 0.78rem !important;
     }
 
     /* Safe Bottom Clearance for Sticky Mobile Bottom Bars */

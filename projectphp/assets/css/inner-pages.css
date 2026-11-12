@@ -12316,20 +12316,29 @@ textarea.reg-input-control {
     }
 
     .pre-primary-hero .admission-hero-bg-visual {
-        position: absolute !important;
-        inset: 0 !important;
+        order: 2 !important;
+        position: relative !important;
+        inset: auto !important;
         width: 100% !important;
-        height: 100% !important;
+        height: 250px !important;
+        min-height: 240px !important;
+        max-height: 280px !important;
         display: block !important;
-        z-index: 1 !important;
-        opacity: 0.16 !important;
+        z-index: 2 !important;
+        opacity: 1 !important;
+        overflow: hidden !important;
+        border-radius: 0 0 20px 20px !important;
+        margin: 0 !important;
     }
 
     .pre-primary-hero .admission-hero-bg-img {
         width: 100% !important;
         height: 100% !important;
         object-fit: cover !important;
-        object-position: center !important;
+        object-position: center 20% !important;
+        display: block !important;
+        opacity: 1 !important;
+        filter: none !important;
     }
 
     .pre-primary-hero .admission-hero-wave-overlay {
@@ -12418,10 +12427,28 @@ textarea.reg-input-control {
         line-height: 1.22 !important;
     }
 
-    .pre-primary-hero .admission-btn-primary,
-    .pre-primary-hero .admission-btn-visit {
+    .pre-primary-hero .hero-action-buttons {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+        width: 100% !important;
+    }
+
+    .pre-primary-hero .admission-btn-primary {
         width: 100% !important;
         justify-content: center !important;
+        padding: 11px 16px !important;
+        font-size: 0.88rem !important;
+    }
+
+    .pre-primary-hero .admission-btn-visit {
+        flex: 1 1 calc(50% - 6px) !important;
+        width: auto !important;
+        min-width: 130px !important;
+        justify-content: center !important;
+        padding: 8px 10px !important;
+        font-size: 0.78rem !important;
+        text-align: center !important;
     }
 
     .pre-building-card {
