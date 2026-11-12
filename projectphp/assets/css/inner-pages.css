@@ -10145,7 +10145,8 @@ textarea.reg-input-control {
     align-items: center;
     justify-content: space-between;
     gap: 8px;
-    overflow: visible;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 
 .acad-pills-bar::-webkit-scrollbar {
@@ -10156,7 +10157,7 @@ textarea.reg-input-control {
     display: inline-flex;
     align-items: center;
     gap: 9px;
-    padding: 11px 20px;
+    padding: 11px 16px;
     border-radius: 12px;
     font-family: var(--adv-font-sans);
     font-size: 0.88rem;
@@ -10166,6 +10167,8 @@ textarea.reg-input-control {
     transition: all 0.25s ease;
     white-space: nowrap;
     border: 1px solid transparent;
+    box-sizing: border-box;
+    min-width: 0;
 }
 
 .acad-pill-btn i {
