@@ -247,24 +247,35 @@
         <div class="adv-welcome-bg-glow" aria-hidden="true"></div>
         <div class="adv-welcome-dots-pattern" aria-hidden="true"></div>
 
+        @php
+            $wImg = $welcomeSettings['image'] ?? 'assets/images/about-advaita-visual-clean.jpg?v=3';
+            if (str_starts_with($wImg, 'http://') || str_starts_with($wImg, 'https://')) {
+                $wImgUrl = $wImg;
+            } elseif (str_starts_with($wImg, 'assets/')) {
+                $wImgUrl = asset($wImg);
+            } else {
+                $wImgUrl = asset('storage/' . ltrim($wImg, '/'));
+            }
+        @endphp
+
         <div class="adv-welcome-container">
             <div class="adv-welcome-grid">
                 
                 <!-- Left Visual Column with Multi-layer Campus Frame -->
                 <div class="adv-welcome-visual-col">
                     <div class="adv-welcome-frame-wrap">
-                        <!-- Decorative Backdrop Offset Accent -->
+                        <!-- Decorative Backdrop Accent -->
                         <div class="adv-welcome-backdrop-accent" aria-hidden="true"></div>
 
                         <!-- Main Clean Campus Image Card -->
                         <div class="adv-welcome-image-card">
-                            <img src="{{ asset('assets/images/about-advaita-visual-clean.jpg?v=3') }}" alt="Advaita School of Excellence Campus - Premier CBSE School Parbhani" class="adv-welcome-img" loading="eager">
+                            <img src="{{ $wImgUrl }}" alt="{{ $welcomeSettings['heading_brand'] ?? 'Advaita School of Excellence Campus' }}" class="adv-welcome-img" loading="eager">
                             <div class="adv-welcome-img-overlay" aria-hidden="true"></div>
                             
                             <!-- Floating Tag on Image -->
                             <div class="adv-welcome-script-pill">
                                 <i class="fa-solid fa-sparkles"></i>
-                                <span>Excellence in Every Child</span>
+                                <span>{{ $welcomeSettings['image_tag'] ?? 'Excellence in Every Child' }}</span>
                             </div>
                         </div>
 
@@ -274,8 +285,8 @@
                                 <i class="fa-solid fa-graduation-cap"></i>
                             </div>
                             <div class="adv-trust-badge-content">
-                                <span class="adv-trust-num">Play Group to Class X</span>
-                                <span class="adv-trust-sub">CBSE Affiliation No. 1130920</span>
+                                <span class="adv-trust-num">{{ $welcomeSettings['badge_title'] ?? 'Play Group' }}</span>
+                                <span class="adv-trust-sub">{{ $welcomeSettings['badge_sub'] ?? 'CBSE Affiliation No. 1130920' }}</span>
                             </div>
                         </div>
                     </div>
@@ -288,13 +299,13 @@
                     <div class="adv-welcome-pill-badge">
                         <span class="badge-dot"></span>
                         <i class="fa-solid fa-landmark"></i>
-                        <span>ABOUT OUR SCHOOL</span>
+                        <span>{{ $welcomeSettings['eyebrow'] ?? 'ABOUT OUR SCHOOL' }}</span>
                     </div>
 
                     <!-- Main Section Heading -->
                     <h2 class="adv-welcome-heading">
-                        <span class="adv-heading-prefix">Welcome to</span>
-                        <span class="adv-heading-brand">Advaita School of Excellence</span>
+                        <span class="adv-heading-prefix">{{ $welcomeSettings['heading_prefix'] ?? 'Welcome to' }}</span>
+                        <span class="adv-heading-brand">{{ $welcomeSettings['heading_brand'] ?? 'Advaita School of Excellence' }}</span>
                     </h2>
                     <div class="adv-heading-underline-bar"></div>
 
@@ -304,13 +315,13 @@
                             <i class="fa-solid fa-quote-left"></i>
                         </div>
                         <p class="adv-welcome-quote-text">
-                            &ldquo;At Advaita School of Excellence, we believe education is more than academic achievement. It is about developing confident, responsible and compassionate individuals who are prepared for the future.&rdquo;
+                            &ldquo;{{ $welcomeSettings['quote'] ?? 'At Advaita School of Excellence, we believe education is more than academic achievement. It is about developing confident, responsible and compassionate individuals who are prepared for the future.' }}&rdquo;
                         </p>
                     </div>
 
                     <!-- Explanatory Paragraph -->
                     <p class="adv-welcome-desc">
-                        Established with a deep commitment to educational excellence, Advaita School of Excellence provides a seamless educational journey from Play Group to Class X. We harmonize rigorous CBSE academic standards with experiential learning, cultural values, and modern 21st-century competencies.
+                        {{ $welcomeSettings['description'] ?? 'Established with a deep commitment to educational excellence, Advaita School of Excellence provides a seamless educational journey from Play Group onwards. We harmonize rigorous CBSE academic standards with experiential learning, cultural values, and modern 21st-century competencies.' }}
                     </p>
 
                     <!-- 4 Core Feature Cards (2x2 Grid) -->
@@ -319,44 +330,44 @@
                         <!-- Feature 1: Academic Excellence -->
                         <div class="adv-welcome-feature-card feature-theme-orange">
                             <div class="adv-feature-icon-box">
-                                <i class="fa-solid fa-book-open"></i>
+                                <i class="{{ $welcomeSettings['feat_1_icon'] ?? 'fa-solid fa-book-open' }}"></i>
                             </div>
                             <div class="adv-feature-info">
-                                <h3 class="adv-feature-heading">Academic Excellence</h3>
-                                <p class="adv-feature-subtext">Strong foundation for brighter futures</p>
+                                <h3 class="adv-feature-heading">{{ $welcomeSettings['feat_1_title'] ?? 'Academic Excellence' }}</h3>
+                                <p class="adv-feature-subtext">{{ $welcomeSettings['feat_1_sub'] ?? 'Strong foundation for brighter futures' }}</p>
                             </div>
                         </div>
 
                         <!-- Feature 2: Holistic Development -->
                         <div class="adv-welcome-feature-card feature-theme-blue">
                             <div class="adv-feature-icon-box">
-                                <i class="fa-solid fa-user-group"></i>
+                                <i class="{{ $welcomeSettings['feat_2_icon'] ?? 'fa-solid fa-user-group' }}"></i>
                             </div>
                             <div class="adv-feature-info">
-                                <h3 class="adv-feature-heading">Holistic Development</h3>
-                                <p class="adv-feature-subtext">Nurturing mind, body and character</p>
+                                <h3 class="adv-feature-heading">{{ $welcomeSettings['feat_2_title'] ?? 'Holistic Development' }}</h3>
+                                <p class="adv-feature-subtext">{{ $welcomeSettings['feat_2_sub'] ?? 'Nurturing mind, body and character' }}</p>
                             </div>
                         </div>
 
                         <!-- Feature 3: Safe & Supportive Campus -->
                         <div class="adv-welcome-feature-card feature-theme-teal">
                             <div class="adv-feature-icon-box">
-                                <i class="fa-solid fa-shield-halved"></i>
+                                <i class="{{ $welcomeSettings['feat_3_icon'] ?? 'fa-solid fa-shield-halved' }}"></i>
                             </div>
                             <div class="adv-feature-info">
-                                <h3 class="adv-feature-heading">Safe & Supportive Campus</h3>
-                                <p class="adv-feature-subtext">A second home for every child</p>
+                                <h3 class="adv-feature-heading">{{ $welcomeSettings['feat_3_title'] ?? 'Safe & Supportive Campus' }}</h3>
+                                <p class="adv-feature-subtext">{{ $welcomeSettings['feat_3_sub'] ?? 'A second home for every child' }}</p>
                             </div>
                         </div>
 
                         <!-- Feature 4: Future-Ready Learning -->
                         <div class="adv-welcome-feature-card feature-theme-amber">
                             <div class="adv-feature-icon-box">
-                                <i class="fa-regular fa-lightbulb"></i>
+                                <i class="{{ $welcomeSettings['feat_4_icon'] ?? 'fa-regular fa-lightbulb' }}"></i>
                             </div>
                             <div class="adv-feature-info">
-                                <h3 class="adv-feature-heading">Future-Ready Learning</h3>
-                                <p class="adv-feature-subtext">Skills for a changing world</p>
+                                <h3 class="adv-feature-heading">{{ $welcomeSettings['feat_4_title'] ?? 'Future-Ready Learning' }}</h3>
+                                <p class="adv-feature-subtext">{{ $welcomeSettings['feat_4_sub'] ?? 'Skills for a changing world' }}</p>
                             </div>
                         </div>
 
@@ -364,13 +375,13 @@
 
                     <!-- Bottom Action Buttons -->
                     <div class="adv-welcome-actions">
-                        <a href="#why-advaita" class="adv-btn-welcome-orange">
-                            <span>Know More About Us</span>
+                        <a href="{{ $welcomeSettings['btn_1_url'] ?? '#why-advaita' }}" class="adv-btn-welcome-orange">
+                            <span>{{ $welcomeSettings['btn_1_text'] ?? 'Know More About Us' }}</span>
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
-                        <a href="#gallery" class="adv-btn-welcome-outline">
+                        <a href="{{ $welcomeSettings['btn_2_url'] ?? '#gallery' }}" class="adv-btn-welcome-outline">
                             <i class="fa-solid fa-building-columns"></i>
-                            <span>Take a Campus Tour</span>
+                            <span>{{ $welcomeSettings['btn_2_text'] ?? 'Take a Campus Tour' }}</span>
                         </a>
                     </div>
 

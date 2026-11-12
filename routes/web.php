@@ -17,6 +17,7 @@ use App\Http\Controllers\Admin\SeoController as AdminSeoController;
 use App\Http\Controllers\Admin\SiteSettingController as AdminSiteSettingController;
 use App\Http\Controllers\Admin\SliderController as AdminSliderController;
 use App\Http\Controllers\Admin\TestimonialController as AdminTestimonialController;
+use App\Http\Controllers\Admin\WelcomeSectionController as AdminWelcomeSectionController;
 use App\Http\Controllers\Admin\WhyChooseController as AdminWhyChooseController;
 use App\Http\Controllers\AdmissionEnquiryController;
 use App\Http\Controllers\ContactController;
@@ -116,6 +117,10 @@ Route::prefix('admin')->name('admin.')->group(function () {
         // Hero Sliders Management
         Route::patch('/sliders/{id}/toggle-status', [AdminSliderController::class, 'toggleStatus'])->name('sliders.toggle-status');
         Route::resource('sliders', AdminSliderController::class)->except(['show']);
+
+        // About School / Welcome Section Management
+        Route::get('/welcome-section', [AdminWelcomeSectionController::class, 'index'])->name('welcome-section.index');
+        Route::patch('/welcome-section', [AdminWelcomeSectionController::class, 'update'])->name('welcome-section.update');
 
         // Three Pillars (What Makes Advaita Special) Management
         Route::get('/pillars/section-header', [AdminPillarController::class, 'editSectionHeader'])->name('pillars.section-header');

@@ -93,6 +93,12 @@
                     </a>
                 </li>
                 <li>
+                    <a href="{{ route('admin.welcome-section.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.welcome-section.*') ? 'active' : '' }}">
+                        <i class="fa-solid fa-school"></i>
+                        <span>About School Section</span>
+                    </a>
+                </li>
+                <li>
                     <a href="{{ route('admin.pillars.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.pillars.*') ? 'active' : '' }}">
                         <i class="fa-solid fa-shapes"></i>
                         <span>Three Pillars</span>

@@ -57,6 +57,39 @@ class HomeController extends Controller
             ->orderBy('id', 'asc')
             ->get();
 
+        $welcomeSettings = [
+            'image' => Setting::get('welcome_image', 'assets/images/about-advaita-visual-clean.jpg?v=3'),
+            'image_tag' => Setting::get('welcome_image_tag', 'Excellence in Every Child'),
+            'badge_title' => Setting::get('welcome_badge_title', 'Play Group'),
+            'badge_sub' => Setting::get('welcome_badge_sub', 'CBSE Affiliation No. '.Setting::get('site_affiliation_no', '1130920')),
+            'eyebrow' => Setting::get('welcome_eyebrow', 'ABOUT OUR SCHOOL'),
+            'heading_prefix' => Setting::get('welcome_heading_prefix', 'Welcome to'),
+            'heading_brand' => Setting::get('welcome_heading_brand', 'Advaita School of Excellence'),
+            'quote' => Setting::get('welcome_quote', 'At Advaita School of Excellence, we believe education is more than academic achievement. It is about developing confident, responsible and compassionate individuals who are prepared for the future.'),
+            'description' => Setting::get('welcome_description', 'Established with a deep commitment to educational excellence, Advaita School of Excellence provides a seamless educational journey from Play Group onwards. We harmonize rigorous CBSE academic standards with experiential learning, cultural values, and modern 21st-century competencies.'),
+
+            'feat_1_title' => Setting::get('welcome_feat_1_title', 'Academic Excellence'),
+            'feat_1_sub' => Setting::get('welcome_feat_1_sub', 'Strong foundation for brighter futures'),
+            'feat_1_icon' => Setting::get('welcome_feat_1_icon', 'fa-solid fa-book-open'),
+
+            'feat_2_title' => Setting::get('welcome_feat_2_title', 'Holistic Development'),
+            'feat_2_sub' => Setting::get('welcome_feat_2_sub', 'Nurturing mind, body and character'),
+            'feat_2_icon' => Setting::get('welcome_feat_2_icon', 'fa-solid fa-user-group'),
+
+            'feat_3_title' => Setting::get('welcome_feat_3_title', 'Safe & Supportive Campus'),
+            'feat_3_sub' => Setting::get('welcome_feat_3_sub', 'A second home for every child'),
+            'feat_3_icon' => Setting::get('welcome_feat_3_icon', 'fa-solid fa-shield-halved'),
+
+            'feat_4_title' => Setting::get('welcome_feat_4_title', 'Future-Ready Learning'),
+            'feat_4_sub' => Setting::get('welcome_feat_4_sub', 'Skills for a changing world'),
+            'feat_4_icon' => Setting::get('welcome_feat_4_icon', 'fa-regular fa-lightbulb'),
+
+            'btn_1_text' => Setting::get('welcome_btn_1_text', 'Know More About Us'),
+            'btn_1_url' => Setting::get('welcome_btn_1_url', '#why-advaita'),
+            'btn_2_text' => Setting::get('welcome_btn_2_text', 'Take a Campus Tour'),
+            'btn_2_url' => Setting::get('welcome_btn_2_url', '#gallery'),
+        ];
+
         $pillars = Pillar::where('is_active', true)
             ->orderBy('order', 'asc')
             ->orderBy('id', 'asc')
@@ -154,6 +187,7 @@ class HomeController extends Controller
 
         return view('pages.home', compact(
             'sliders',
+            'welcomeSettings',
             'pillars',
             'pillarSettings',
             'whyChooseCards',
