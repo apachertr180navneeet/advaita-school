@@ -11570,7 +11570,7 @@ textarea.reg-input-control {
     top: 0;
     right: 0;
     bottom: 0;
-    width: 78%;
+    width: 58%;
     z-index: 1;
     overflow: hidden;
     display: block !important;
@@ -11581,14 +11581,14 @@ textarea.reg-input-control {
     height: 100% !important;
     max-width: none !important;
     object-fit: cover !important;
-    object-position: 25% center !important;
+    object-position: center center !important;
     filter: none !important;
 }
 
 .pre-primary-hero .admission-hero-left-panel {
     position: relative;
     z-index: 3;
-    width: 48%;
+    width: 50%;
     max-width: 540px;
 }
 

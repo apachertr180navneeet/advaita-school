@@ -1018,14 +1018,70 @@ html, body {
 }
 
 /* Pre-Primary Dedicated Desktop Refinements */
+.pre-primary-hero .admission-hero-canvas {
+    min-height: 440px;
+}
+.pre-primary-hero .admission-hero-bg-visual {
+    width: 58% !important;
+}
+.pre-primary-hero .admission-hero-bg-img {
+    object-position: center center !important;
+}
 .pre-primary-hero .hero-action-buttons {
     max-width: 480px;
 }
-.pre-primary-hero .admission-btn-primary,
-.pre-primary-hero .admission-btn-visit {
+.pre-primary-hero .admission-btn-primary {
+    background: linear-gradient(135deg, #F37021 0%, #d95d12 100%) !important;
+    color: #ffffff !important;
     padding: 10px 18px !important;
+    border-radius: 50px !important;
     font-size: 0.86rem !important;
-    gap: 7px !important;
+    font-weight: 700 !important;
+    box-shadow: 0 4px 14px rgba(243, 112, 33, 0.35) !important;
+}
+.pre-primary-hero .admission-btn-visit {
+    background: #ffffff !important;
+    color: #083B7A !important;
+    border: 1.5px solid #083B7A !important;
+    padding: 10px 18px !important;
+    border-radius: 50px !important;
+    font-size: 0.86rem !important;
+    font-weight: 700 !important;
+    box-shadow: 0 2px 8px rgba(8, 59, 122, 0.06) !important;
+    transition: all 0.25s ease !important;
+}
+.pre-primary-hero .admission-btn-visit:hover {
+    background: #083B7A !important;
+    color: #ffffff !important;
+    transform: translateY(-2px) !important;
+}
+.pre-primary-hero .btn-nep-pill {
+    border-color: #F37021 !important;
+    color: #ea580c !important;
+}
+.pre-primary-hero .btn-nep-pill i {
+    color: #F37021 !important;
+}
+.pre-primary-hero .btn-nep-pill:hover {
+    background: #F37021 !important;
+    color: #ffffff !important;
+}
+.pre-primary-hero .btn-nep-pill:hover i {
+    color: #ffffff !important;
+}
+.pre-primary-hero .btn-building-pill {
+    border-color: #0284c7 !important;
+    color: #0369a1 !important;
+}
+.pre-primary-hero .btn-building-pill i {
+    color: #0284c7 !important;
+}
+.pre-primary-hero .btn-building-pill:hover {
+    background: #0284c7 !important;
+    color: #ffffff !important;
+}
+.pre-primary-hero .btn-building-pill:hover i {
+    color: #ffffff !important;
 }
 .pre-building-grid {
     grid-template-columns: minmax(360px, 440px) 1fr;

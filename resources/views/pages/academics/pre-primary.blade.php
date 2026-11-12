@@ -16,11 +16,11 @@
                 <img src="{{ asset($content['hero_image'] ?? 'assets/images/gallery/gallery-painted-hands-girl.jpg') }}" alt="Pre-Primary Kids at Advaita School of Excellence" class="admission-hero-bg-img" width="1024" height="682">
             </div>
 
-            <!-- SVG Wave Overlay for Smooth Translucent Backdrop (Shifted Left for Enlarged Visual) -->
+            <!-- SVG Wave Overlay for Smooth Translucent Backdrop -->
             <div class="admission-hero-wave-overlay" aria-hidden="true">
                 <svg viewBox="0 0 1200 440" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0H260C310 130 250 280 340 440H0V0Z" fill="#EEF6FC" fill-opacity="0.97"/>
-                    <path d="M240 0C290 140 230 280 320 440H290C200 280 260 140 210 0H240Z" fill="#F37021" fill-opacity="0.25"/>
+                    <path d="M0 0H560C600 130 530 280 640 440H0V0Z" fill="#EEF6FC" fill-opacity="0.98"/>
+                    <path d="M540 0C580 140 510 280 620 440H590C490 280 550 140 510 0H540Z" fill="#F37021" fill-opacity="0.18"/>
                 </svg>
             </div>
 
@@ -67,7 +67,7 @@
                             <i class="fa-solid fa-file-pen"></i>
                             <span>Enquire for Pre-Primary</span>
                         </a>
-                        <a href="#panchakosha-framework" class="admission-btn-visit" style="background: rgba(243, 112, 33, 0.08); border-color: rgba(243, 112, 33, 0.25); color: #ea580c;" title="Panchakosha Vikas & NEP 2020">
+                        <a href="#panchakosha-framework" class="admission-btn-visit btn-nep-pill" title="Panchakosha Vikas & NEP 2020">
                             <i class="fa-solid fa-certificate"></i>
                             <span>NEP &amp; Panchakosha</span>
                         </a>
@@ -75,7 +75,7 @@
                             <i class="fa-solid fa-palette"></i>
                             <span>Early Years Showcase</span>
                         </a>
-                        <a href="#new-building" class="admission-btn-visit" style="background: rgba(8, 59, 122, 0.08); border-color: rgba(8, 59, 122, 0.2); color: #083B7A;" title="Upcoming New Building">
+                        <a href="#new-building" class="admission-btn-visit btn-building-pill" title="Upcoming New Building">
                             <i class="fa-solid fa-building-flag"></i>
                             <span>New School Building</span>
                         </a>
