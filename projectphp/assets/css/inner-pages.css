@@ -10121,9 +10121,10 @@ textarea.reg-input-control {
 }
 
 .acad-container {
-    max-width: 1180px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 30px 20px 0;
+    padding: 20px 10px 60px;
+    box-sizing: border-box;
 }
 
 /* Sub-Menu Pill Navigation Bar Floating Card */
@@ -10131,21 +10132,20 @@ textarea.reg-input-control {
     position: relative;
     z-index: 10;
     margin-top: -30px;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .acad-pills-bar {
     background: #ffffff;
     border: 1px solid #e2e8f0;
     border-radius: 18px;
-    padding: 10px 14px;
+    padding: 8px 10px;
     box-shadow: 0 10px 30px rgba(8, 59, 122, 0.08);
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 8px;
-    overflow-x: auto;
-    scrollbar-width: none;
+    overflow: visible;
 }
 
 .acad-pills-bar::-webkit-scrollbar {

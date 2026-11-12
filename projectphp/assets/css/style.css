@@ -916,19 +916,22 @@ html, body {
     position: relative;
 }
 
-/* Ensure flex & grid containers never cause horizontal overflow */
+/* Ensure main content wrapper prevents horizontal overflow without breaking container max-widths */
+.main-content-wrapper {
+    width: 100% !important;
+    overflow-x: hidden;
+}
+
 .adv-container,
 .adv-container-narrow,
 .adv-container-medium,
-.main-content-wrapper,
 .acad-container,
 .facilities-container,
 .adv-gal-container,
 .adv-blog-container,
 .results-container {
-    width: 100% !important;
-    max-width: 100% !important;
-    overflow-x: hidden;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Exempt scrollable rails from overflow clipping */
@@ -941,8 +944,6 @@ html, body {
 .admission-steps-wrapper,
 .adv-gal-filters-scroll,
 .adv-blog-filters-scroll,
-.acad-pills-bar,
-.acad-pills-bar-wrap,
 .admission-breadcrumb,
 .about-breadcrumb,
 .vision-breadcrumb,
@@ -957,20 +958,78 @@ html, body {
     -webkit-overflow-scrolling: touch !important;
 }
 
-/* Academics Wing Switcher Pill Bar (Smooth Touch Scroll on Mobile & Tablet) */
+/* Academics Wing Switcher Pill Bar (Responsive Segmented Layout - No Scroll) */
+.acad-pills-bar-wrap {
+    position: relative;
+    z-index: 10;
+    margin-top: -30px;
+    margin-bottom: 40px;
+    overflow: visible !important;
+}
 .acad-pills-bar {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 8px 10px;
+    box-shadow: 0 10px 30px rgba(8, 59, 122, 0.08);
     display: flex !important;
     flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    -webkit-overflow-scrolling: touch !important;
-    scrollbar-width: none !important;
-}
-.acad-pills-bar::-webkit-scrollbar {
-    display: none !important;
+    overflow: visible !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 8px !important;
 }
 .acad-pill-btn {
-    flex-shrink: 0 !important;
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    padding: 11px 12px !important;
+    border-radius: 12px !important;
+    font-size: 0.88rem !important;
+    font-weight: 700 !important;
+    text-align: center !important;
     white-space: nowrap !important;
+    transition: all 0.25s ease !important;
+}
+.acad-pill-btn i {
+    font-size: 1rem !important;
+    flex-shrink: 0 !important;
+}
+
+@media (max-width: 991px) {
+    .acad-pills-bar-wrap {
+        margin-top: -20px;
+        margin-bottom: 30px;
+    }
+    .acad-pills-bar {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 8px !important;
+        padding: 10px !important;
+    }
+    .acad-pill-btn {
+        width: 100% !important;
+        padding: 10px 8px !important;
+        font-size: 0.82rem !important;
+        white-space: normal !important;
+    }
+    .acad-pill-btn:last-child:nth-child(odd) {
+        grid-column: 1 / -1 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .acad-pill-btn {
+        padding: 8px 6px !important;
+        font-size: 0.76rem !important;
+        gap: 6px !important;
+    }
+    .acad-pill-btn i {
+        font-size: 0.9rem !important;
+    }
 }
 
 /* 2. Tablet Layouts (641px to 1024px) */

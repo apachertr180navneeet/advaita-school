@@ -34,12 +34,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <!-- Core Stylesheets -->
-    <link rel="stylesheet" href="{{ asset('assets/css/header.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/header.css') }}?v={{ file_exists(public_path('assets/css/header.css')) ? filemtime(public_path('assets/css/header.css')) : '1.0' }}">
     <link rel="stylesheet" href="{{ asset('assets/css/slider.css') }}?v={{ file_exists(public_path('assets/css/slider.css')) ? filemtime(public_path('assets/css/slider.css')) : '1.0' }}">
     <link rel="stylesheet" href="{{ asset('assets/css/homepage.css') }}?v={{ file_exists(public_path('assets/css/homepage.css')) ? filemtime(public_path('assets/css/homepage.css')) : '1.0' }}">
     <link rel="stylesheet" href="{{ asset('assets/css/inner-pages.css') }}?v={{ file_exists(public_path('assets/css/inner-pages.css')) ? filemtime(public_path('assets/css/inner-pages.css')) : '1.0' }}">
     <link rel="stylesheet" href="{{ asset('assets/css/admissions.css') }}?v={{ file_exists(public_path('assets/css/admissions.css')) ? filemtime(public_path('assets/css/admissions.css')) : '1.0' }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}?v={{ file_exists(public_path('assets/css/style.css')) ? filemtime(public_path('assets/css/style.css')) : '1.0' }}">
     <link rel="stylesheet" href="{{ asset('assets/css/footer.css') }}?v={{ file_exists(public_path('assets/css/footer.css')) ? filemtime(public_path('assets/css/footer.css')) : '1.0' }}">
 @yield('styles')
 </head>
