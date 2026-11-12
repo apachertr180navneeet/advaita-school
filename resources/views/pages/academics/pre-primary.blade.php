@@ -268,7 +268,7 @@
                 <!-- Pillar 2: Health & Hygiene -->
                 <div class="pre-pillar-card">
                     <div class="pillar-img-box">
-                        <img src="{{ asset('assets/images/about-commitment-students.jpg') }}" alt="Health and Hygiene at Advaita Pre-Primary" loading="lazy">
+                        <img src="{{ asset('assets/images/gallery/gallery-splash-pool-fun.jpg') }}" alt="Health and Hygiene at Advaita Pre-Primary" loading="lazy">
                         <span class="pillar-badge-overlay teal">
                             <i class="fa-solid fa-heart-pulse"></i> Health &amp; Hygiene
                         </span>

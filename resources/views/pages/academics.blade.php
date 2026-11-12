@@ -468,7 +468,7 @@
                 <!-- Card 1 -->
                 <div class="acad-approach-card">
                     <div class="acad-approach-thumb">
-                        <img src="{{ asset('assets/images/about-commitment-students.jpg') }}" alt="Student-Centric Learning at Advaita" loading="lazy">
+                        <img src="{{ asset('assets/images/gallery/gallery-classroom-learning.jpg') }}" alt="Student-Centric Learning at Advaita" loading="lazy">
                         <div class="acad-approach-icon-badge orange" aria-hidden="true">
                             <i class="fa-regular fa-lightbulb"></i>
                         </div>
