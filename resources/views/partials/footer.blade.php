@@ -101,8 +101,8 @@
                         </div>
                         <div class="adv-footer-touch-content">
                             <span class="touch-label">Email</span>
-                            <a href="mailto:{{ \App\Models\Setting::get('site_email_admissions', 'admissions.advaita@gmail.com') }}" class="touch-link">
-                                {{ \App\Models\Setting::get('site_email_admissions', 'admissions.advaita@gmail.com') }}
+                            <a href="mailto:{{ \App\Models\Setting::get('site_email_primary', 'admissions.advaita@gmail.com') }}" class="touch-link">
+                                {{ \App\Models\Setting::get('site_email_primary', 'admissions.advaita@gmail.com') }}
                             </a>
                             <a href="mailto:{{ \App\Models\Setting::get('site_email_principal', 'principal.advaita2019@gmail.com') }}" class="touch-link" style="margin-top: 3px; display: block;">
                                 {{ \App\Models\Setting::get('site_email_principal', 'principal.advaita2019@gmail.com') }}
