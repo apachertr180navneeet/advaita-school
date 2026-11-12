@@ -348,31 +348,7 @@
             </div>
 
             <div class="pre-exp-gallery-grid">
-                <!-- Card 1: Sensory Sand Pit & Water Play Zone -->
-                <div class="pre-exp-card theme-aqua">
-                    <div class="pre-exp-thumb" onclick="openPreModal('{{ asset('assets/images/gallery/gallery-splash-pool-kids-play.jpg') }}', 'Sensory Sand Pit & Water Play Zone')">
-                        <img src="{{ asset('assets/images/gallery/gallery-splash-pool-kids-play.jpg') }}" alt="Sensory Sand Pit & Water Play Zone - Advaita Pre-Primary" loading="lazy">
-                        <span class="pre-exp-badge">
-                            <i class="fa-solid fa-water"></i> Water &amp; Sand Zone
-                        </span>
-                        <button type="button" class="pre-exp-zoom-btn" aria-label="Zoom Photo">
-                            <i class="fa-solid fa-magnifying-glass-plus"></i>
-                        </button>
-                    </div>
-                    <div class="pre-exp-body">
-                        <h3 class="pre-exp-title">Sensory Sand Pit &amp; Water Play Zone</h3>
-                        <p class="pre-exp-desc">
-                            Safe, shallow splash pool for summer water drills, kinetic sand pits, and pouring channels that build tactile brain pathways under certified lady supervision.
-                        </p>
-                        <div class="pre-exp-tags">
-                            <span class="exp-tag-pill">Splash Pool</span>
-                            <span class="exp-tag-pill">Sand Sculpting</span>
-                            <span class="exp-tag-pill">Sensory Touch</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Card 2: Mini Pet Corner & Organic Gardening Patch -->
+                <!-- Card 1: Mini Pet Corner & Organic Gardening Patch -->
                 <div class="pre-exp-card theme-green">
                     <div class="pre-exp-thumb" onclick="openPreModal('{{ asset('assets/images/gallery/gallery-parachute-lawn-building.jpg') }}', 'Mini Pet Corner & Organic Gardening Patch')">
                         <img src="{{ asset('assets/images/gallery/gallery-parachute-lawn-building.jpg') }}" alt="Mini Pet Corner & Organic Gardening Patch - Advaita" loading="lazy">
@@ -396,7 +372,7 @@
                     </div>
                 </div>
 
-                <!-- Card 3: Phonics & Language Lab / Reading Nook -->
+                <!-- Card 2: Phonics & Language Lab / Reading Nook -->
                 <div class="pre-exp-card theme-blue">
                     <div class="pre-exp-thumb" onclick="openPreModal('{{ asset('assets/images/gallery/gallery-classroom-learning.jpg') }}', 'Phonics & Language Lab / Reading Nook')">
                         <img src="{{ asset('assets/images/gallery/gallery-classroom-learning.jpg') }}" alt="Phonics & Language Lab / Reading Nook - Advaita" loading="lazy">
@@ -416,6 +392,30 @@
                             <span class="exp-tag-pill">Jolly Phonics</span>
                             <span class="exp-tag-pill">Reading Nook</span>
                             <span class="exp-tag-pill">Sound Blending</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Sensory Sand Pit & Water Play Zone -->
+                <div class="pre-exp-card theme-aqua">
+                    <div class="pre-exp-thumb" onclick="openPreModal('{{ asset('assets/images/gallery/gallery-splash-pool-kids-play.jpg') }}', 'Sensory Sand Pit & Water Play Zone')">
+                        <img src="{{ asset('assets/images/gallery/gallery-splash-pool-kids-play.jpg') }}" alt="Sensory Sand Pit & Water Play Zone - Advaita Pre-Primary" loading="lazy">
+                        <span class="pre-exp-badge">
+                            <i class="fa-solid fa-water"></i> Water &amp; Sand Zone
+                        </span>
+                        <button type="button" class="pre-exp-zoom-btn" aria-label="Zoom Photo">
+                            <i class="fa-solid fa-magnifying-glass-plus"></i>
+                        </button>
+                    </div>
+                    <div class="pre-exp-body">
+                        <h3 class="pre-exp-title">Sensory Sand Pit &amp; Water Play Zone</h3>
+                        <p class="pre-exp-desc">
+                            Safe, shallow splash pool for summer water drills, kinetic sand pits, and pouring channels that build tactile brain pathways under certified lady supervision.
+                        </p>
+                        <div class="pre-exp-tags">
+                            <span class="exp-tag-pill">Splash Pool</span>
+                            <span class="exp-tag-pill">Sand Sculpting</span>
+                            <span class="exp-tag-pill">Sensory Touch</span>
                         </div>
                     </div>
                 </div>
