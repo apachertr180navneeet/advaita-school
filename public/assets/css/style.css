@@ -962,8 +962,8 @@ html, body {
 .acad-pills-bar-wrap {
     position: relative;
     z-index: 10;
-    margin-top: -30px;
-    margin-bottom: 40px;
+    margin-top: -32px;
+    margin-bottom: 42px;
     overflow: visible !important;
 }
 .acad-pills-bar {
@@ -975,28 +975,61 @@ html, body {
     display: flex !important;
     flex-wrap: nowrap !important;
     overflow: visible !important;
-    justify-content: center !important;
+    justify-content: space-between !important;
     align-items: center !important;
     gap: 8px !important;
 }
 .acad-pill-btn {
-    flex: 1 1 0 !important;
-    min-width: 0 !important;
+    flex: 1 1 auto !important;
+    min-width: max-content !important;
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
     gap: 8px !important;
-    padding: 11px 12px !important;
+    padding: 11px 18px !important;
     border-radius: 12px !important;
+    font-family: var(--adv-font-sans, system-ui, sans-serif) !important;
     font-size: 0.88rem !important;
     font-weight: 700 !important;
+    color: #083B7A !important;
+    text-decoration: none !important;
     text-align: center !important;
     white-space: nowrap !important;
+    border: 1px solid transparent !important;
     transition: all 0.25s ease !important;
+}
+.acad-pill-btn:hover {
+    background: #f8fafc !important;
+    color: #F37021 !important;
+    border-color: #fed7aa !important;
+}
+.acad-pill-btn.active {
+    background: #F37021 !important;
+    color: #ffffff !important;
+    border-color: #F37021 !important;
+    box-shadow: 0 4px 14px rgba(243, 112, 33, 0.35) !important;
+}
+.acad-pill-btn.active i {
+    color: #ffffff !important;
 }
 .acad-pill-btn i {
     font-size: 1rem !important;
     flex-shrink: 0 !important;
+}
+
+/* Pre-Primary Dedicated Desktop Refinements */
+.pre-primary-hero .hero-action-buttons {
+    max-width: 480px;
+}
+.pre-primary-hero .admission-btn-primary,
+.pre-primary-hero .admission-btn-visit {
+    padding: 10px 18px !important;
+    font-size: 0.86rem !important;
+    gap: 7px !important;
+}
+.pre-building-grid {
+    grid-template-columns: minmax(360px, 440px) 1fr;
+    gap: clamp(24px, 3.5vw, 44px);
 }
 
 @media (max-width: 991px) {

@@ -62,14 +62,14 @@
                     </p>
 
                     <!-- Quick Action Buttons -->
-                    <div class="d-flex align-items-center gap-12 mt-20 flex-wrap">
+                    <div class="d-flex align-items-center gap-10 mt-20 flex-wrap hero-action-buttons">
                         <a href="{{ route('online-registration') }}" class="admission-btn-primary" title="Apply for Pre-Primary Admissions">
                             <i class="fa-solid fa-file-pen"></i>
                             <span>Enquire for Pre-Primary</span>
                         </a>
                         <a href="#panchakosha-framework" class="admission-btn-visit" style="background: rgba(243, 112, 33, 0.08); border-color: rgba(243, 112, 33, 0.25); color: #ea580c;" title="Panchakosha Vikas & NEP 2020">
                             <i class="fa-solid fa-certificate"></i>
-                            <span>NEP 2020 &amp; Panchakosha</span>
+                            <span>NEP &amp; Panchakosha</span>
                         </a>
                         <a href="#preprimary-experiences" class="admission-btn-visit" title="Early Years Image Showcase">
                             <i class="fa-solid fa-palette"></i>
@@ -99,7 +99,7 @@
                 </a>
                 <a href="{{ route('academics.pre-primary') }}" class="acad-pill-btn active">
                     <i class="fa-solid fa-shapes"></i>
-                    <span>Pre-Primary (Play Group–UKG)</span>
+                    <span>Pre-Primary (Nursery–UKG)</span>
                 </a>
                 <a href="{{ route('academics.primary') }}" class="acad-pill-btn">
                     <i class="fa-solid fa-book-open-reader"></i>
