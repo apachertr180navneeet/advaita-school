@@ -59,7 +59,7 @@
                     </p>
 
                     <!-- Quick Navigation CTA Group -->
-                    <div class="d-flex align-items-center gap-12 flex-wrap mt-20">
+                    <div class="d-flex align-items-center gap-12 flex-wrap mt-20 hero-action-buttons">
                         <a href="{{ route('admission-guidelines.download') }}" class="admission-btn-primary" title="Download Official Admission Guidelines PDF">
                             <i class="fa-solid fa-file-pdf"></i>
                             <span>Download Guidelines PDF</span>

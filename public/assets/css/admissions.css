@@ -21,8 +21,8 @@ html {
     border-top: 1px solid #e2e8f0;
     border-bottom: 2px solid #e2e8f0;
     position: sticky;
-    top: 0;
-    z-index: 40;
+    top: 64px;
+    z-index: 99;
     box-shadow: 0 4px 15px rgba(8, 59, 122, 0.04);
 }
 
@@ -2827,24 +2827,222 @@ textarea.form-control:focus {
 }
 
 @media (max-width: 991px) {
+    .admission-subnav-bar {
+        position: sticky !important;
+        top: 60px !important;
+        z-index: 99 !important;
+        background: #ffffff !important;
+    }
+    .subnav-links-wrap {
+        padding: 10px 14px !important;
+        gap: 8px !important;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+    .subnav-link {
+        padding: 7px 14px !important;
+        font-size: 12px !important;
+        flex-shrink: 0 !important;
+    }
     .guidelines-cutoff-banner {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 16px !important;
+        padding: 20px 18px !important;
+    }
+    .cutoff-badge {
+        width: 100% !important;
+        text-align: center !important;
+    }
+    .docs-list-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+    .doc-item-card {
+        min-width: 0 !important;
+        width: 100% !important;
     }
     .procedure-sequence-wrapper::before {
-        display: none;
+        display: none !important;
     }
     .procedure-sequence-item {
-        flex-direction: column;
+        flex-direction: column !important;
+        gap: 0 !important;
     }
     .procedure-step-badge {
-        width: 100%;
-        flex-direction: row;
-        gap: 10px;
-        padding: 10px 16px;
+        width: 100% !important;
+        border-radius: 14px 14px 0 0 !important;
+        flex-direction: row !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        gap: 10px !important;
+        padding: 8px 16px !important;
+        margin-bottom: 0 !important;
+    }
+    .procedure-card {
+        border-radius: 0 0 14px 14px !important;
+        padding: 18px 16px !important;
     }
     .helpline-card {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+        padding: 24px 18px !important;
+        gap: 24px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .guidelines-table-header {
+        padding: 16px !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 12px !important;
+    }
+    .guidelines-table-header .btn-guidelines-sm {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+    .guidelines-custom-table {
+        min-width: 580px !important;
+    }
+    .guidelines-custom-table th {
+        padding: 12px 14px !important;
+        font-size: 11.5px !important;
+        white-space: nowrap !important;
+    }
+    .guidelines-custom-table td {
+        padding: 14px 14px !important;
+        font-size: 12.5px !important;
+    }
+    .class-cell-badge {
+        font-size: 12px !important;
+        padding: 4px 10px !important;
+        white-space: nowrap !important;
+    }
+    .docs-header-bar {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 14px !important;
+        padding-bottom: 16px !important;
+        margin-bottom: 18px !important;
+    }
+    .docs-header-actions {
+        width: 100% !important;
+        flex-direction: column !important;
+        gap: 8px !important;
+    }
+    .docs-header-actions .btn-guidelines-sm,
+    .docs-header-actions .btn-guidelines-primary {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+    .procedure-cta-banner {
+        padding: 22px 18px !important;
+        border-radius: 16px !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 16px !important;
+    }
+    .cta-banner-buttons {
+        width: 100% !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+    }
+    .btn-cta-main,
+    .btn-cta-alt {
+        width: 100% !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+    .instructions-list {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+    .instruction-item {
+        padding: 14px 14px !important;
+        border-radius: 12px !important;
+        gap: 12px !important;
+    }
+    .btn-helpline-call,
+    .btn-helpline-wa,
+    .btn-helpline-dir,
+    .btn-helpline-pdf {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 12px 16px !important;
+        font-size: 13px !important;
+    }
+}
+
+@media (max-width: 640px) {
+    .admission-hero-left-panel .d-flex.gap-12 {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 10px !important;
+    }
+    .admission-hero-left-panel .admission-btn-primary,
+    .admission-hero-left-panel .admission-btn-visit {
+        width: 100% !important;
+        justify-content: center !important;
+        text-align: center !important;
+        padding: 11px 16px !important;
+        font-size: 0.88rem !important;
+    }
+    .quick-actions-grid {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+    }
+    .qa-card {
+        padding: 18px 16px !important;
+    }
+    .qa-card.qa-card-banner {
+        padding: 18px 16px !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 14px !important;
+    }
+    .qa-banner-content {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
+    }
+    .btn-qa-action.whatsapp {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+    .phased-schedule-box {
+        padding: 20px 16px !important;
+        border-radius: 16px !important;
+    }
+    .phased-cards-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+    .phased-step-card {
+        padding: 16px 14px !important;
+        border-radius: 14px !important;
+    }
+    .docs-checklist-container {
+        padding: 20px 16px !important;
+        border-radius: 16px !important;
+    }
+    .class-eligibility-grid {
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+    }
+    .eligibility-card {
+        padding: 18px 16px !important;
+        border-radius: 16px !important;
+    }
+    .important-instructions-card {
+        padding: 20px 16px !important;
+        border-radius: 16px !important;
+    }
+    .instructions-footer-note {
+        padding: 12px 14px !important;
+        font-size: 12.5px !important;
     }
 }
 

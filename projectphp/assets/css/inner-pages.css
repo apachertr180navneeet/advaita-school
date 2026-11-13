@@ -7402,6 +7402,8 @@
 .admission-page-wrapper {
     background-color: #f8fafc;
     padding-bottom: 60px;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 /* 1. Admission Hero Section */
