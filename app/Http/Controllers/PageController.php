@@ -6,6 +6,7 @@ use App\Models\AcademicProgramme;
 use App\Models\AcademicResult;
 use App\Models\FeeStructure;
 use App\Models\Setting;
+use App\Models\StaffMember;
 use App\Services\AdmissionGuidelinesPdfService;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -267,7 +268,22 @@ class PageController extends Controller
             'Advaita school teachers, CBSE faculty Parbhani, qualified teachers, experienced school educators'
         );
 
-        return view('pages.our-staff', compact('seo'));
+        $staffMembers = StaffMember::active()
+            ->orderBy('order', 'asc')
+            ->orderBy('id', 'asc')
+            ->get();
+
+        $staffHeader = [
+            'eyebrow' => Setting::get('staff_section_eyebrow', 'OUR EDUCATORS'),
+            'title_prefix' => Setting::get('staff_section_title_prefix', 'The Teachers Behind Every'),
+            'title_highlight' => Setting::get('staff_section_title_highlight', 'Advaita Learner.'),
+            'description' => Setting::get(
+                'staff_section_description',
+                'Each one is here because they love what they teach — and because they care deeply about how every child grows. Our faculty bring expertise, experience and a genuine passion for guiding students towards academic and personal excellence.'
+            ),
+        ];
+
+        return view('pages.our-staff', compact('seo', 'staffMembers', 'staffHeader'));
     }
 
     public function academics(): View

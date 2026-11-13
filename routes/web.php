@@ -16,6 +16,7 @@ use App\Http\Controllers\Admin\RegistrationController as AdminRegistrationContro
 use App\Http\Controllers\Admin\SeoController as AdminSeoController;
 use App\Http\Controllers\Admin\SiteSettingController as AdminSiteSettingController;
 use App\Http\Controllers\Admin\SliderController as AdminSliderController;
+use App\Http\Controllers\Admin\StaffMemberController as AdminStaffMemberController;
 use App\Http\Controllers\Admin\TestimonialController as AdminTestimonialController;
 use App\Http\Controllers\Admin\WelcomeSectionController as AdminWelcomeSectionController;
 use App\Http\Controllers\Admin\WhyChooseController as AdminWhyChooseController;
@@ -176,6 +177,11 @@ Route::prefix('admin')->name('admin.')->group(function () {
         // Centralized Results & Achievements Management
         Route::patch('/results/{result}/toggle-status', [AdminAcademicResultController::class, 'toggle'])->name('results.toggle-status');
         Route::resource('results', AdminAcademicResultController::class)->except(['show']);
+
+        // Faculty & Staff Management
+        Route::patch('/staff/section-header', [AdminStaffMemberController::class, 'updateSectionHeader'])->name('staff.section-header');
+        Route::patch('/staff/{staff}/toggle-status', [AdminStaffMemberController::class, 'toggle'])->name('staff.toggle-status');
+        Route::resource('staff', AdminStaffMemberController::class)->except(['show']);
 
         // Storage Symlink Helper
         Route::get('/storage-link', fn () => redirect()->route('storage.link'));

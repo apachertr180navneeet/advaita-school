@@ -82,6 +82,12 @@
                         <span>Results &amp; Achievements</span>
                     </a>
                 </li>
+                <li>
+                    <a href="{{ route('admin.staff.index') }}" class="sidebar-nav-link {{ request()->routeIs('admin.staff.*') ? 'active' : '' }}">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <span>Faculty &amp; Staff</span>
+                    </a>
+                </li>
             </ul>
 
             <div class="menu-category-title">Homepage Dynamic Sections</div>

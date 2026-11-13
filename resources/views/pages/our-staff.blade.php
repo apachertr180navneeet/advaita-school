@@ -132,156 +132,42 @@
 
         <div class="staff-grid-container">
             <div class="staff-section-header">
-                <span class="staff-educators-eyebrow">OUR EDUCATORS</span>
+                <span class="staff-educators-eyebrow">{{ $staffHeader['eyebrow'] ?? 'OUR EDUCATORS' }}</span>
                 <h2 class="staff-section-title">
-                    The Teachers Behind Every <span class="text-orange">Advaita Learner.</span>
+                    {{ $staffHeader['title_prefix'] ?? 'The Teachers Behind Every' }} <span class="text-orange">{{ $staffHeader['title_highlight'] ?? 'Advaita Learner.' }}</span>
                 </h2>
                 <p class="staff-section-desc">
-                    Each one is here because they love what they teach — and because they care deeply about how every child grows. Our faculty bring expertise, experience and a genuine passion for guiding students towards academic and personal excellence.
+                    {{ $staffHeader['description'] ?? 'Each one is here because they love what they teach — and because they care deeply about how every child grows. Our faculty bring expertise, experience and a genuine passion for guiding students towards academic and personal excellence.' }}
                 </p>
             </div>
 
             <div class="staff-cards-grid">
-                <!-- CARD 1: Principal -->
+                @forelse($staffMembers as $staff)
                 <article class="staff-card">
                     <div class="staff-card-avatar-wrap">
                         <div class="staff-card-avatar-circle">
-                            <img src="{{ asset('assets/images/principal-desk.jpg') }}" alt="Divine Mam - Principal" class="staff-avatar-photo" loading="lazy">
+                            @if($staff->photo_url)
+                                <img src="{{ $staff->photo_url }}" alt="{{ $staff->name }} - {{ $staff->designation }}" class="staff-avatar-photo" loading="lazy">
+                            @else
+                                <svg class="staff-avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <circle cx="50" cy="38" r="20" fill="#8d99ae"/>
+                                    <path d="M18 90C18 68 32 62 50 62C68 62 82 68 82 90" fill="#8d99ae"/>
+                                </svg>
+                            @endif
                         </div>
                     </div>
-                    <span class="staff-role-pill role-orange">PRINCIPAL</span>
-                    <h3 class="staff-card-name">Divine Mam</h3>
-                    <div class="staff-card-qual qual-orange">
+                    <span class="staff-role-pill {{ $staff->pill_class }}">{{ $staff->designation }}</span>
+                    <h3 class="staff-card-name">{{ $staff->name }}</h3>
+                    <div class="staff-card-qual {{ $staff->qual_class }}">
                         <i class="fa-solid fa-graduation-cap"></i>
-                        <span>M.A., B.Ed.</span>
+                        <span>{{ $staff->qualification }}</span>
                     </div>
                 </article>
-
-                <!-- CARD 2: Vice Principal -->
-                <article class="staff-card">
-                    <div class="staff-card-avatar-wrap">
-                        <div class="staff-card-avatar-circle">
-                            <svg class="staff-avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <circle cx="50" cy="38" r="20" fill="#8d99ae"/>
-                                <path d="M18 90C18 68 32 62 50 62C68 62 82 68 82 90" fill="#8d99ae"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="staff-role-pill role-blue">VICE PRINCIPAL</span>
-                    <h3 class="staff-card-name">Faculty Name 02</h3>
-                    <div class="staff-card-qual qual-blue">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span>M.Sc. (Mathematics), B.Ed.</span>
-                    </div>
-                </article>
-
-                <!-- CARD 3: Senior Faculty - Science -->
-                <article class="staff-card">
-                    <div class="staff-card-avatar-wrap">
-                        <div class="staff-card-avatar-circle">
-                            <svg class="staff-avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <circle cx="50" cy="38" r="20" fill="#8d99ae"/>
-                                <path d="M18 90C18 68 32 62 50 62C68 62 82 68 82 90" fill="#8d99ae"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="staff-role-pill role-purple">SENIOR FACULTY - SCIENCE</span>
-                    <h3 class="staff-card-name">Faculty Name 03</h3>
-                    <div class="staff-card-qual qual-purple">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span>M.Sc. (Physics), B.Ed.</span>
-                    </div>
-                </article>
-
-                <!-- CARD 4: Head - English Department -->
-                <article class="staff-card">
-                    <div class="staff-card-avatar-wrap">
-                        <div class="staff-card-avatar-circle">
-                            <svg class="staff-avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <circle cx="50" cy="38" r="20" fill="#8d99ae"/>
-                                <path d="M18 90C18 68 32 62 50 62C68 62 82 68 82 90" fill="#8d99ae"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="staff-role-pill role-rose">HEAD - ENGLISH DEPARTMENT</span>
-                    <h3 class="staff-card-name">Faculty Name 04</h3>
-                    <div class="staff-card-qual qual-rose">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span>M.A. (English), M.Ed.</span>
-                    </div>
-                </article>
-
-                <!-- CARD 5: Senior Faculty - Mathematics -->
-                <article class="staff-card">
-                    <div class="staff-card-avatar-wrap">
-                        <div class="staff-card-avatar-circle">
-                            <svg class="staff-avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <circle cx="50" cy="38" r="20" fill="#8d99ae"/>
-                                <path d="M18 90C18 68 32 62 50 62C68 62 82 68 82 90" fill="#8d99ae"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="staff-role-pill role-green">SENIOR FACULTY - MATHEMATICS</span>
-                    <h3 class="staff-card-name">Faculty Name 05</h3>
-                    <div class="staff-card-qual qual-green">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span>M.Sc. (Maths), B.Ed.</span>
-                    </div>
-                </article>
-
-                <!-- CARD 6: Head - Hindi Department -->
-                <article class="staff-card">
-                    <div class="staff-card-avatar-wrap">
-                        <div class="staff-card-avatar-circle">
-                            <svg class="staff-avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <circle cx="50" cy="38" r="20" fill="#8d99ae"/>
-                                <path d="M18 90C18 68 32 62 50 62C68 62 82 68 82 90" fill="#8d99ae"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="staff-role-pill role-amber">HEAD - HINDI DEPARTMENT</span>
-                    <h3 class="staff-card-name">Faculty Name 06</h3>
-                    <div class="staff-card-qual qual-amber">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span>M.A. (Hindi), B.Ed.</span>
-                    </div>
-                </article>
-
-                <!-- CARD 7: Senior Faculty - Commerce -->
-                <article class="staff-card">
-                    <div class="staff-card-avatar-wrap">
-                        <div class="staff-card-avatar-circle">
-                            <svg class="staff-avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <circle cx="50" cy="38" r="20" fill="#8d99ae"/>
-                                <path d="M18 90C18 68 32 62 50 62C68 62 82 68 82 90" fill="#8d99ae"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="staff-role-pill role-cyan">SENIOR FACULTY - COMMERCE</span>
-                    <h3 class="staff-card-name">Faculty Name 07</h3>
-                    <div class="staff-card-qual qual-cyan">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span>M.Com., B.Ed.</span>
-                    </div>
-                </article>
-
-                <!-- CARD 8: Head - Primary Wing -->
-                <article class="staff-card">
-                    <div class="staff-card-avatar-wrap">
-                        <div class="staff-card-avatar-circle">
-                            <svg class="staff-avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <circle cx="50" cy="38" r="20" fill="#8d99ae"/>
-                                <path d="M18 90C18 68 32 62 50 62C68 62 82 68 82 90" fill="#8d99ae"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="staff-role-pill role-pink">HEAD - PRIMARY WING</span>
-                    <h3 class="staff-card-name">Faculty Name 08</h3>
-                    <div class="staff-card-qual qual-pink">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span>M.A., D.Ed., B.Ed.</span>
-                    </div>
-                </article>
+                @empty
+                <div class="col-12 text-center py-40">
+                    <p class="text-muted">Faculty profiles will be updated shortly.</p>
+                </div>
+                @endforelse
             </div>
         </div>
     </section>
