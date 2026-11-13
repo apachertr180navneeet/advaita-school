@@ -257,9 +257,9 @@ require_once __DIR__.'/includes/header.php';
                     <div class="about-vmv-body">
                         <h3 class="about-vmv-title">Our Values</h3>
                         <div class="about-vmv-values-list">
-                            <div class="values-pair"><span>Excellence</span> <span class="v-pipe">|</span> <span>Integrity</span></div>
-                            <div class="values-pair"><span>Empathy</span> <span class="v-pipe">|</span> <span>Discipline</span></div>
-                            <div class="values-pair"><span>Curiosity</span> <span class="v-pipe">|</span> <span>Lifelong Learning</span></div>
+                            <div class="values-pair"><span class="val-left">Excellence</span> <span class="v-pipe">|</span> <span class="val-right">Integrity</span></div>
+                            <div class="values-pair"><span class="val-left">Empathy</span> <span class="v-pipe">|</span> <span class="val-right">Discipline</span></div>
+                            <div class="values-pair"><span class="val-left">Curiosity</span> <span class="v-pipe">|</span> <span class="val-right">Lifelong Learning</span></div>
                         </div>
                     </div>
                 </div>

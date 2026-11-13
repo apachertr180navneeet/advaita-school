@@ -720,6 +720,7 @@
     justify-content: center;
     font-size: 1rem;
     flex-shrink: 0;
+    margin-top: 2px;
 }
 
 .about-vmv-title {
@@ -740,20 +741,33 @@
 .about-vmv-values-list {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 3px;
     font-size: 0.78rem;
     font-weight: 600;
     color: var(--adv-text-body);
 }
 
 .values-pair {
-    display: flex;
+    display: grid;
+    grid-template-columns: 84px 16px auto;
     align-items: center;
-    gap: 6px;
 }
 
-.v-pipe {
+.values-pair .val-left,
+.values-pair span:first-child {
+    white-space: nowrap;
+}
+
+.values-pair .v-pipe {
     color: #cbd5e1;
+    text-align: center;
+    font-weight: 400;
+    user-select: none;
+}
+
+.values-pair .val-right,
+.values-pair span:last-child {
+    white-space: nowrap;
 }
 
 /* Education for Life Section */
