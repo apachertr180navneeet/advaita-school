@@ -5,9 +5,11 @@ namespace App\Http\Controllers;
 use App\Models\AcademicProgramme;
 use App\Models\AcademicResult;
 use App\Models\FeeStructure;
+use App\Models\GalleryItem;
 use App\Models\Setting;
 use App\Models\StaffMember;
 use App\Services\AdmissionGuidelinesPdfService;
+use Database\Seeders\GalleryItemSeeder;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\View\View;
@@ -1210,7 +1212,18 @@ class PageController extends Controller
             'Advaita school photos, campus life pictures, school sports gallery, events and celebrations'
         );
 
-        return view('pages.gallery', compact('seo'));
+        if (GalleryItem::count() === 0) {
+            (new GalleryItemSeeder)->run();
+        }
+
+        $galleryItems = GalleryItem::where('is_active', true)
+            ->orderBy('order', 'asc')
+            ->orderBy('id', 'asc')
+            ->get();
+
+        $categories = GalleryItem::CATEGORIES;
+
+        return view('pages.gallery', compact('seo', 'galleryItems', 'categories'));
     }
 
     public function blog(): View

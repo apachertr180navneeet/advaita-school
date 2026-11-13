@@ -28,14 +28,6 @@ class GalleryItem extends Model
             'slug' => 'life-at-advaita',
             'icon' => 'fa-solid fa-school-flag',
         ],
-        'Campus & Facilities' => [
-            'slug' => 'campus-facilities',
-            'icon' => 'fa-solid fa-landmark',
-        ],
-        'Advaita Kids' => [
-            'slug' => 'advaita-kids',
-            'icon' => 'fa-solid fa-child-reaching',
-        ],
         'Events & Celebrations' => [
             'slug' => 'events-celebrations',
             'icon' => 'fa-solid fa-cake-candles',
@@ -59,6 +51,14 @@ class GalleryItem extends Model
         'Art, Culture & Creativity' => [
             'slug' => 'art-culture',
             'icon' => 'fa-solid fa-palette',
+        ],
+        'Advaita Kids' => [
+            'slug' => 'advaita-kids',
+            'icon' => 'fa-solid fa-child-reaching',
+        ],
+        'Campus & Facilities' => [
+            'slug' => 'campus-facilities',
+            'icon' => 'fa-solid fa-landmark',
         ],
     ];
 
@@ -96,6 +96,41 @@ class GalleryItem extends Model
         }
 
         return 'fa-solid fa-camera';
+    }
+
+    /**
+     * Resolved category slug accessor.
+     */
+    public function getCategorySlugAttribute(): string
+    {
+        return self::getCategorySlug($this->category);
+    }
+
+    /**
+     * Resolved category icon accessor.
+     */
+    public function getCategoryIconAttribute(): string
+    {
+        return $this->icon ?: self::getCategoryIcon($this->category);
+    }
+
+    /**
+     * Theme color corresponding to category for badge/btn accents.
+     */
+    public function getThemeColorAttribute(): string
+    {
+        return match ($this->category_slug) {
+            'life-at-advaita' => 'blue',
+            'campus-facilities' => 'teal',
+            'advaita-kids' => 'amber',
+            'events-celebrations' => 'orange',
+            'academics-science' => 'emerald',
+            'educational-tours' => 'violet',
+            'sports-competitions' => 'red',
+            'student-leadership' => 'indigo',
+            'art-culture' => 'fuchsia',
+            default => 'sky',
+        };
     }
 
     /**
