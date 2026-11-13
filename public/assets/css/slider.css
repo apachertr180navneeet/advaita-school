@@ -1046,7 +1046,18 @@ p.adv-hero-lead-desc {
         min-height: auto;
     }
 
+    .adv-slider-container,
+    .adv-slider-wrapper {
+        height: auto;
+    }
+
+    .adv-slide.active {
+        position: relative;
+        height: auto;
+    }
+
     .adv-slide-banner-wrap {
+        height: auto;
         min-height: auto;
         display: flex;
         flex-direction: column;
