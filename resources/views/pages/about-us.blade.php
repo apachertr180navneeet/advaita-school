@@ -287,19 +287,19 @@
                             <span class="pill-item-text">Integrated IIT-JEE Foundation</span>
                         </div>
                         <div class="philosophy-pill-item">
-                            <span class="pill-badge-icon badge-navy"><i class="fa-solid fa-check"></i></span>
+                            <span class="pill-badge-icon badge-blue"><i class="fa-solid fa-check"></i></span>
                             <span class="pill-item-text">Preparation for Competitive Exams</span>
                         </div>
                         <div class="philosophy-pill-item">
-                            <span class="pill-badge-icon badge-orange"><i class="fa-solid fa-circle-dot"></i></span>
+                            <span class="pill-badge-icon badge-blue"><i class="fa-solid fa-check"></i></span>
                             <span class="pill-item-text">Beyond Text Learning</span>
                         </div>
                         <div class="philosophy-pill-item">
-                            <span class="pill-badge-icon badge-orange"><i class="fa-solid fa-circle-dot"></i></span>
+                            <span class="pill-badge-icon badge-blue"><i class="fa-solid fa-check"></i></span>
                             <span class="pill-item-text">Holistic Student Development</span>
                         </div>
                         <div class="philosophy-pill-item">
-                            <span class="pill-badge-icon badge-orange"><i class="fa-solid fa-circle-dot"></i></span>
+                            <span class="pill-badge-icon badge-blue"><i class="fa-solid fa-check"></i></span>
                             <span class="pill-item-text">Future-Ready Skills</span>
                         </div>
                     </div>
