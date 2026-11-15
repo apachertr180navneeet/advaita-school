@@ -3730,11 +3730,18 @@
 
     .adv-welcome-trust-badge {
         position: static !important;
-        margin-top: 14px !important;
+        margin: 14px auto 0 auto !important;
         width: 100% !important;
-        justify-content: flex-start !important;
+        max-width: 320px !important;
+        justify-content: center !important;
+        text-align: center !important;
         border-radius: 16px !important;
         padding: 12px 16px !important;
+    }
+
+    .adv-trust-badge-content {
+        align-items: center !important;
+        text-align: center !important;
     }
 
     .adv-welcome-script-pill {
@@ -3744,37 +3751,94 @@
         padding: 6px 14px !important;
     }
 
+    .adv-welcome-content-col {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .adv-welcome-pill-badge {
+        margin: 0 auto 12px auto !important;
+    }
+
+    .adv-welcome-heading {
+        text-align: center !important;
+        width: 100% !important;
+    }
+
     .adv-welcome-heading .adv-heading-prefix {
         font-size: 1.5rem !important;
+        text-align: center !important;
+        display: block !important;
     }
 
     .adv-welcome-heading .adv-heading-brand {
         font-size: 1.85rem !important;
+        text-align: center !important;
+        display: block !important;
+    }
+
+    .adv-heading-underline-bar {
+        margin: 10px auto 16px auto !important;
     }
 
     .adv-welcome-quote-card {
         padding: 14px 16px !important;
-        margin-bottom: 16px !important;
+        margin: 0 auto 16px auto !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .adv-quote-mark {
+        text-align: center !important;
+        margin: 0 auto 6px auto !important;
     }
 
     .adv-welcome-quote-text {
         font-size: 0.9375rem !important;
         line-height: 1.6 !important;
+        text-align: center !important;
+    }
+
+    .adv-welcome-desc {
+        text-align: center !important;
+        margin: 0 auto 20px auto !important;
     }
 
     .adv-welcome-features-grid {
         grid-template-columns: 1fr !important;
         gap: 12px !important;
+        width: 100% !important;
     }
 
     .adv-welcome-feature-card {
-        padding: 12px 14px !important;
+        padding: 14px 16px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    .adv-feature-info {
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .adv-feature-heading {
+        text-align: center !important;
+    }
+
+    .adv-feature-subtext {
+        text-align: center !important;
     }
 
     .adv-welcome-actions {
         flex-direction: column !important;
         width: 100% !important;
         gap: 12px !important;
+        align-items: center !important;
     }
 
     .adv-btn-welcome-orange,
@@ -3785,6 +3849,26 @@
     }
 
     /* Section 4: Pillars */
+    .adv-pillars-header {
+        text-align: center !important;
+    }
+
+    .adv-pillars-eyebrow {
+        margin: 0 auto 12px auto !important;
+    }
+
+    .adv-pillars-title {
+        text-align: center !important;
+    }
+
+    .adv-pillars-underline-bar {
+        margin: 10px auto 14px auto !important;
+    }
+
+    .adv-pillars-subtitle {
+        text-align: center !important;
+    }
+
     .adv-pillars-grid {
         grid-template-columns: 1fr !important;
         gap: 24px !important;
@@ -3796,6 +3880,7 @@
 
     .adv-pillar-card {
         border-radius: 18px !important;
+        text-align: center !important;
     }
 
     .adv-pillar-image-wrap,
@@ -3805,11 +3890,33 @@
 
     .adv-pillar-content {
         padding: 20px 18px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .adv-pillar-heading {
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .adv-pillar-desc {
+        text-align: center !important;
+        width: 100% !important;
     }
 
     .adv-pillar-tags-grid {
-        grid-template-columns: repeat(2, 1fr) !important;
+        grid-template-columns: 1fr !important;
         gap: 8px !important;
+        width: 100% !important;
+    }
+
+    .adv-pillar-tag {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
     }
 
     .adv-btn-pillars-primary {
@@ -3820,6 +3927,26 @@
     }
 
     /* Section 5: Why Choose */
+    .adv-why-header {
+        text-align: center !important;
+    }
+
+    .adv-why-eyebrow {
+        margin: 0 auto 12px auto !important;
+    }
+
+    .adv-why-title {
+        text-align: center !important;
+    }
+
+    .adv-why-underline-bar {
+        margin: 10px auto 14px auto !important;
+    }
+
+    .adv-why-subtitle {
+        text-align: center !important;
+    }
+
     .adv-why-watermark-left,
     .adv-why-watermark-right,
     .adv-why-bottom-tagline {
@@ -3838,6 +3965,18 @@
         max-width: calc((100% - 14px) / 2) !important;
     }
 
+    .adv-why-content {
+        text-align: center !important;
+    }
+
+    .adv-why-card-title {
+        text-align: center !important;
+    }
+
+    .adv-why-card-desc {
+        text-align: center !important;
+    }
+
     .adv-why-arrow {
         width: 34px !important;
         height: 34px !important;
@@ -3852,6 +3991,11 @@
         right: 4px !important;
     }
 
+    .adv-why-cta-wrap {
+        text-align: center !important;
+    }
+
+    .adv-btn-why-primary,
     .adv-btn-why-cta {
         width: 100% !important;
         max-width: 320px !important;
@@ -3872,22 +4016,54 @@
 
     .adv-visit-content-side {
         padding: 28px 18px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .adv-visit-pill-badge {
+        margin: 0 auto 12px auto !important;
+    }
+
+    .adv-visit-heading-wrap {
+        text-align: center !important;
+        justify-content: center !important;
+        width: 100% !important;
     }
 
     .adv-visit-heading {
         font-size: clamp(1.4rem, 5vw, 1.85rem) !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .adv-visit-plane-icon {
+        display: none !important;
     }
 
     .adv-visit-desc-row {
         flex-direction: column !important;
-        align-items: flex-start !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
         gap: 12px !important;
+        width: 100% !important;
+    }
+
+    .adv-visit-desc {
+        text-align: center !important;
     }
 
     .adv-visit-cursive-tag {
-        align-items: flex-start !important;
-        text-align: left !important;
-        margin-right: 0 !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+    }
+
+    .adv-visit-separator {
+        margin: 16px auto !important;
     }
 
     .adv-visit-visual-side {
@@ -3901,11 +4077,41 @@
         max-width: 100% !important;
         padding: 16px !important;
         box-shadow: none !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 12px !important;
     }
 
     .adv-visit-features-row {
         flex-direction: column !important;
-        gap: 10px !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 12px !important;
+        width: 100% !important;
+    }
+
+    .adv-visit-feat-item {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .adv-visit-feat-info {
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .adv-visit-pod-orange,
+    .adv-visit-pod-white {
+        width: 100% !important;
+        max-width: 320px !important;
+        margin: 0 auto !important;
+        justify-content: center !important;
+        text-align: center !important;
     }
 
     .adv-btn-visit-primary,
@@ -3915,6 +4121,22 @@
     }
 
     /* Section 7: Gallery */
+    .adv-gallery-header {
+        text-align: center !important;
+    }
+
+    .adv-gallery-eyebrow {
+        margin: 0 auto 12px auto !important;
+    }
+
+    .adv-gallery-title {
+        text-align: center !important;
+    }
+
+    .adv-gallery-subtitle {
+        text-align: center !important;
+    }
+
     .adv-gallery-grid {
         gap: 14px !important;
         flex-wrap: nowrap !important;
@@ -3946,6 +4168,8 @@
 
     .adv-gallery-actions {
         flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
         gap: 14px !important;
     }
 
@@ -3956,7 +4180,34 @@
         justify-content: center !important;
     }
 
+    .adv-btn-gallery-video {
+        width: 100% !important;
+        max-width: 320px !important;
+        margin: 0 auto !important;
+        justify-content: center !important;
+    }
+
     /* Section 8: Testimonials */
+    .adv-testimonials-header {
+        text-align: center !important;
+    }
+
+    .adv-testimonials-eyebrow {
+        margin: 0 auto 12px auto !important;
+    }
+
+    .adv-testimonials-title {
+        text-align: center !important;
+    }
+
+    .adv-testimonials-underline-bar {
+        margin: 10px auto 14px auto !important;
+    }
+
+    .adv-testimonials-subtitle {
+        text-align: center !important;
+    }
+
     .adv-testimonials-viewport .adv-testi-card,
     .adv-testi-card {
         flex: 0 0 100% !important;
@@ -3964,6 +4215,45 @@
         max-width: 100% !important;
         padding: 24px 20px !important;
         border-radius: 18px !important;
+        text-align: center !important;
+    }
+
+    .adv-testi-top-bar {
+        justify-content: center !important;
+    }
+
+    .adv-testi-stars {
+        justify-content: center !important;
+    }
+
+    .adv-testi-quote-mark {
+        display: none !important;
+    }
+
+    .adv-testi-text {
+        text-align: center !important;
+    }
+
+    .adv-testi-footer {
+        justify-content: center !important;
+        text-align: center !important;
+    }
+
+    .adv-testi-author-info {
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .adv-testi-name {
+        text-align: center !important;
+    }
+
+    .adv-testi-role {
+        text-align: center !important;
+    }
+
+    .adv-testi-close-quote {
+        display: none !important;
     }
 
     .adv-testimonials-grid {
@@ -3984,6 +4274,22 @@
     }
 
     /* Section 9: FAQ */
+    .adv-faq-header {
+        text-align: center !important;
+    }
+
+    .adv-faq-title {
+        text-align: center !important;
+    }
+
+    .adv-faq-underline-bar {
+        margin: 10px auto 14px auto !important;
+    }
+
+    .adv-faq-subtitle {
+        text-align: center !important;
+    }
+
     .adv-faq-btn {
         padding: 14px 16px !important;
         gap: 10px !important;
@@ -4185,15 +4491,24 @@
 
     .adv-pillar-tags-grid {
         grid-template-columns: 1fr !important;
+        gap: 8px !important;
+    }
+
+    .adv-pillar-tag {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
     }
 
     .adv-visit-heading {
         font-size: 1.5rem !important;
+        text-align: center !important;
     }
 
     .adv-visit-features-row {
         flex-direction: column !important;
-        align-items: flex-start !important;
+        align-items: center !important;
     }
 
     .adv-faq-btn {
