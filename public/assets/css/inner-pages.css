@@ -3491,24 +3491,27 @@
     .staff-join-section .students {
         position: relative;
         width: 100%;
-        max-width: 300px;
+        max-width: 320px;
         height: auto;
-        margin: 12px auto 0;
+        margin: 12px auto 0 0;
+        margin-left: -16px;
         display: flex;
         align-items: flex-end;
-        justify-content: center;
+        justify-content: flex-start;
         bottom: 0;
+        left: 0;
         right: auto;
     }
     .staff-join-section .students img {
         height: auto;
-        max-height: 185px;
+        max-height: 190px;
         width: 100%;
-        max-width: 280px;
-        margin: 0 auto;
+        max-width: 290px;
+        margin: 0;
+        margin-left: -18px;
         display: block;
         object-fit: contain;
-        object-position: bottom center;
+        object-position: bottom left;
     }
 }
 
@@ -4582,14 +4585,15 @@
         width: 100%;
         max-width: 320px;
         height: auto;
-        margin: 12px auto 0;
+        margin: 12px auto 0 0;
+        margin-left: -16px;
         padding: 0;
         display: flex;
         align-items: flex-end;
-        justify-content: center;
+        justify-content: flex-start;
         bottom: 0;
+        left: 0;
         right: auto;
-        left: auto;
         z-index: 4;
         pointer-events: none;
     }
@@ -4597,11 +4601,12 @@
         width: 100%;
         max-width: 290px;
         height: auto;
-        max-height: 185px;
+        max-height: 190px;
         object-fit: contain;
-        object-position: bottom center;
+        object-position: bottom left;
         display: block;
-        margin: 0 auto;
+        margin: 0;
+        margin-left: -18px;
     }
     .admission-banner .dot-pattern,
     .admission-banner .shape-airplane {
@@ -4644,12 +4649,17 @@
         max-width: 180px;
     }
     .admission-banner .students {
-        max-width: 270px;
+        max-width: 280px;
         margin-top: 10px;
+        margin-left: -12px;
+        justify-content: flex-start;
+        left: 0;
     }
     .admission-banner .students img {
-        max-width: 260px;
-        max-height: 165px;
+        max-width: 270px;
+        max-height: 170px;
+        margin-left: -16px;
+        object-position: bottom left;
     }
 }
 
