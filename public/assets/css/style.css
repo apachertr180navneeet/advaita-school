@@ -182,7 +182,6 @@ p {
         min-height: auto !important;
     }
 
-    .about-hero-left-panel,
     .staff-hero-left-panel,
     .chairman-hero-left-panel,
     .principal-hero-left-panel,
@@ -199,7 +198,6 @@ p {
         padding: 26px 20px !important;
     }
 
-    .about-hero-bg-visual,
     .staff-hero-bg-visual,
     .chairman-hero-bg-visual,
     .principal-hero-bg-visual,
@@ -327,7 +325,6 @@ p {
     }
 
     /* Inner Page Hero Backgrounds (Mobile) */
-    .about-hero-bg-visual,
     .staff-hero-bg-visual,
     .chairman-hero-bg-visual,
     .principal-hero-bg-visual,
@@ -599,7 +596,6 @@ p {
         padding-right: 12px;
     }
 
-    .about-hero-bg-visual,
     .staff-hero-bg-visual,
     .chairman-hero-bg-visual,
     .principal-hero-bg-visual,
@@ -1216,7 +1212,6 @@ html, body {
     }
 
     /* Hero Visuals on Tablet */
-    .about-hero-bg-visual,
     .staff-hero-bg-visual,
     .chairman-hero-bg-visual,
     .principal-hero-bg-visual,
@@ -1428,6 +1423,380 @@ html, body {
     .admission-step-card {
         flex: 0 0 175px !important;
         min-width: 170px !important;
+    }
+}
+
+/* =========================================================================
+   ABOUT US PAGE - MOBILE OPTIMIZATION
+   1. Banner on Top, Content Below in Hero Section
+   2. All text center-aligned across all sections on mobile
+   ========================================================================= */
+@media (max-width: 991px) {
+    /* Hero Canvas: Banner on Top, Content Below */
+    .about-page-wrapper .about-hero-canvas,
+    .about-hero-section .about-hero-canvas {
+        flex-direction: column !important;
+        border-radius: var(--adv-radius-lg, 18px) !important;
+        overflow: hidden !important;
+        min-height: auto !important;
+    }
+
+    .about-page-wrapper .about-hero-bg-visual,
+    .about-hero-section .about-hero-bg-visual {
+        order: 1 !important;
+        position: relative !important;
+        width: 100% !important;
+        height: clamp(210px, 52vw, 260px) !important;
+        max-height: 270px !important;
+        opacity: 1 !important;
+        display: block !important;
+        overflow: hidden !important;
+        border-radius: 18px 18px 0 0 !important;
+        margin: 0 !important;
+    }
+
+    .about-page-wrapper .about-hero-bg-img,
+    .about-hero-section .about-hero-bg-img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center 25% !important;
+        display: block !important;
+    }
+
+    .about-page-wrapper .about-hero-script-tag,
+    .about-hero-section .about-hero-script-tag {
+        position: absolute !important;
+        top: 12px !important;
+        right: 14px !important;
+        transform: scale(0.74) rotate(-3deg) !important;
+        transform-origin: right top !important;
+        z-index: 5 !important;
+        display: flex !important;
+    }
+
+    .about-page-wrapper .about-hero-script-tag .script-title {
+        color: #083B7A !important;
+        text-shadow: 0 2px 8px rgba(255, 255, 255, 0.95), 0 0 12px #ffffff !important;
+    }
+
+    .about-page-wrapper .about-hero-left-panel,
+    .about-hero-section .about-hero-left-panel {
+        order: 2 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 24px 20px 22px !important;
+        background: #ffffff !important;
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .about-page-wrapper .about-hero-content-inner,
+    .about-hero-section .about-hero-content-inner {
+        width: 100% !important;
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .about-page-wrapper .about-breadcrumb {
+        justify-content: center !important;
+        text-align: center !important;
+        margin: 0 auto 10px !important;
+    }
+
+    .about-page-wrapper .about-eyebrow {
+        text-align: center !important;
+        display: block !important;
+        margin: 0 auto 8px !important;
+    }
+
+    .about-page-wrapper .about-hero-title {
+        text-align: center !important;
+        margin: 0 auto 12px !important;
+        font-size: clamp(1.48rem, 5.5vw, 1.95rem) !important;
+        line-height: 1.22 !important;
+    }
+
+    .about-page-wrapper .about-hero-highlights {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        margin: 0 auto 14px !important;
+        gap: 6px !important;
+    }
+
+    .about-page-wrapper .highlight-line {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        flex-wrap: wrap !important;
+        gap: 6px 10px !important;
+    }
+
+    .about-page-wrapper .about-hero-desc {
+        text-align: center !important;
+        margin: 0 auto 18px !important;
+        max-width: 520px !important;
+        font-size: 0.88rem !important;
+        line-height: 1.55 !important;
+    }
+
+    .about-page-wrapper .about-hero-actions {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    .about-page-wrapper .about-btn-orange {
+        margin: 0 auto !important;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Feature Strip Cards Centered */
+    .about-page-wrapper .about-strip-card {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 14px 10px !important;
+    }
+
+    .about-page-wrapper .strip-icon-box {
+        margin: 0 auto 8px !important;
+    }
+
+    .about-page-wrapper .strip-card-body {
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .about-page-wrapper .strip-card-title,
+    .about-page-wrapper .strip-card-subtitle,
+    .about-page-wrapper .strip-card-desc {
+        text-align: center !important;
+    }
+
+    /* Section 2: Story / Built on Values Centered */
+    .about-page-wrapper .about-story-content {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .about-page-wrapper .about-story-content .about-eyebrow,
+    .about-page-wrapper .about-story-title,
+    .about-page-wrapper .about-story-desc {
+        text-align: center !important;
+    }
+
+    .about-page-wrapper .about-stats-row {
+        width: 100% !important;
+        justify-content: center !important;
+    }
+
+    .about-page-wrapper .about-stat-item {
+        flex-direction: column !important;
+        text-align: center !important;
+        align-items: center !important;
+        padding: 10px 6px !important;
+    }
+
+    .about-page-wrapper .stat-icon-square {
+        margin: 0 auto 4px !important;
+    }
+
+    .about-page-wrapper .stat-meta {
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .about-page-wrapper .stat-num,
+    .about-page-wrapper .stat-lbl {
+        text-align: center !important;
+    }
+
+    /* Section 3: Vision, Mission & Values Centered */
+    .about-page-wrapper .about-vmv-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    .about-page-wrapper .about-vmv-card {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 18px 16px !important;
+    }
+
+    .about-page-wrapper .about-vmv-icon-ring {
+        margin: 0 auto 10px !important;
+    }
+
+    .about-page-wrapper .about-vmv-body {
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .about-page-wrapper .about-vmv-title,
+    .about-page-wrapper .about-vmv-desc {
+        text-align: center !important;
+    }
+
+    .about-page-wrapper .about-vmv-values-list {
+        align-items: center !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .about-page-wrapper .values-pair {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 10px !important;
+    }
+
+    /* Section 4: Education for Life Centered */
+    .about-page-wrapper .about-philosophy-content {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .about-page-wrapper .about-philosophy-content .about-eyebrow,
+    .about-page-wrapper .about-philosophy-title,
+    .about-page-wrapper .about-philosophy-desc {
+        text-align: center !important;
+    }
+
+    .about-page-wrapper .about-philosophy-pills-grid {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+        width: 100% !important;
+    }
+
+    .about-page-wrapper .philosophy-pill-item {
+        justify-content: center !important;
+        text-align: center !important;
+        padding: 10px 16px !important;
+    }
+
+    .about-page-wrapper .about-philosophy-action {
+        display: flex !important;
+        justify-content: center !important;
+        width: 100% !important;
+        margin: 14px auto 0 !important;
+    }
+
+    .about-page-wrapper .about-philosophy-action .about-btn-orange {
+        margin: 0 auto !important;
+    }
+
+    /* Section 5: What Makes Advaita Unique Centered */
+    .about-page-wrapper .about-apart-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+    }
+
+    .about-page-wrapper .about-apart-card {
+        text-align: center !important;
+        align-items: center !important;
+        padding: 14px 10px !important;
+    }
+
+    .about-page-wrapper .apart-icon-box {
+        margin: 0 auto 8px !important;
+    }
+
+    .about-page-wrapper .apart-title,
+    .about-page-wrapper .apart-desc {
+        text-align: center !important;
+    }
+
+    /* Section 6: Campus Showcase Centered */
+    .about-page-wrapper .about-campus-content {
+        text-align: center !important;
+        align-items: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .about-page-wrapper .about-campus-eyebrow,
+    .about-page-wrapper .about-campus-title,
+    .about-page-wrapper .about-campus-desc {
+        text-align: center !important;
+    }
+
+    .about-page-wrapper .about-campus-content .about-btn-orange {
+        margin: 0 auto !important;
+    }
+
+    /* Section 7: Admission CTA Banner Centered */
+    .about-page-wrapper .admission-banner .copy {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 24px 16px 20px !important;
+    }
+
+    .about-page-wrapper .admission-banner .eyebrow,
+    .about-page-wrapper .admission-banner .headline,
+    .about-page-wrapper .admission-banner .subtext {
+        text-align: center !important;
+        max-width: 100% !important;
+    }
+
+    .about-page-wrapper .admission-banner .buttons {
+        justify-content: center !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 10px !important;
+        margin: 12px auto 0 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-page-wrapper .about-hero-bg-visual,
+    .about-hero-section .about-hero-bg-visual {
+        height: 200px !important;
+    }
+
+    .about-page-wrapper .about-hero-left-panel,
+    .about-hero-section .about-hero-left-panel {
+        padding: 20px 14px 18px !important;
+    }
+
+    .about-page-wrapper .about-hero-title {
+        font-size: 1.45rem !important;
+    }
+
+    .about-page-wrapper .about-hero-highlights {
+        font-size: 0.8rem !important;
+    }
+
+    .about-page-wrapper .about-hero-desc {
+        font-size: 0.83rem !important;
+    }
+
+    .about-page-wrapper .about-stats-row {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+    }
+
+    .about-page-wrapper .about-apart-grid {
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
     }
 }
 
