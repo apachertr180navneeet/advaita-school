@@ -1106,6 +1106,8 @@ p.adv-hero-lead-desc {
         -webkit-backdrop-filter: none;
         border: none;
         gap: 8px;
+        align-items: center !important;
+        text-align: center !important;
     }
 
     .adv-hero-dots-decor {
@@ -1114,22 +1116,35 @@ p.adv-hero-lead-desc {
 
     .adv-hero-taglines {
         font-size: clamp(1.35rem, 5.5vw, 1.85rem);
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .adv-hero-taglines span {
+        text-align: center !important;
     }
 
     .adv-hero-taglines .tagline-orange {
         font-size: clamp(1.1rem, 4.2vw, 1.45rem);
     }
 
+    .adv-hero-title-bar {
+        margin: 10px auto 14px auto !important;
+    }
+
     p.adv-hero-lead-desc {
         max-width: 100%;
         font-size: 0.85rem;
         line-height: 1.55;
-        margin-bottom: 14px;
+        margin: 0 auto 14px auto !important;
         text-shadow: none;
+        text-align: center !important;
     }
 
     .adv-hero-actions-group {
         display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
         gap: 10px;
     }
 
@@ -1199,14 +1214,31 @@ p.adv-hero-lead-desc {
 
     .adv-hero-text-overlay {
         padding: 16px 14px 20px;
+        align-items: center !important;
+        text-align: center !important;
     }
 
     .adv-hero-taglines {
         font-size: clamp(1.22rem, 5.8vw, 1.55rem);
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .adv-hero-taglines span {
+        text-align: center !important;
     }
 
     .adv-hero-taglines .tagline-orange {
         font-size: clamp(1rem, 4.5vw, 1.2rem);
+    }
+
+    p.adv-hero-lead-desc {
+        text-align: center !important;
+        margin: 0 auto 12px auto !important;
+    }
+
+    .adv-hero-actions-group {
+        justify-content: center !important;
     }
 
     .adv-hero-real-btn {

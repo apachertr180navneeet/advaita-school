@@ -3686,6 +3686,7 @@
     .parshv-stat-card:nth-child(5) {
         grid-column: span 2 !important;
         border-bottom: none !important;
+        justify-content: center !important;
     }
 
     .parshv-stat-icon-wrap {
@@ -4062,7 +4063,7 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 576px) {
     .parshv-stats-grid {
         grid-template-columns: 1fr !important;
     }
@@ -4070,6 +4071,9 @@
     .parshv-stat-card {
         border-right: none !important;
         border-bottom: 1px solid #f1f5f9 !important;
+        justify-content: center !important;
+        text-align: center !important;
+        padding: 16px 14px !important;
     }
 
     .parshv-stat-card:last-child {
@@ -4078,6 +4082,62 @@
 
     .parshv-stat-card:nth-child(5) {
         grid-column: span 1 !important;
+    }
+
+    .parshv-stat-info {
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .parshv-stat-num {
+        text-align: center !important;
+    }
+
+    .parshv-stat-label {
+        text-align: center !important;
+    }
+
+    .parshv-stat-sub-badge {
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .parshv-stats-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .parshv-stat-card {
+        border-right: none !important;
+        border-bottom: 1px solid #f1f5f9 !important;
+        justify-content: center !important;
+        text-align: center !important;
+        padding: 16px 14px !important;
+    }
+
+    .parshv-stat-card:last-child {
+        border-bottom: none !important;
+    }
+
+    .parshv-stat-card:nth-child(5) {
+        grid-column: span 1 !important;
+    }
+
+    .parshv-stat-info {
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .parshv-stat-num {
+        text-align: center !important;
+    }
+
+    .parshv-stat-label {
+        text-align: center !important;
+    }
+
+    .parshv-stat-sub-badge {
+        text-align: center !important;
     }
 
     .adv-pillar-image-wrap,
