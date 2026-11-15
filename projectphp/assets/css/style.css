@@ -2289,6 +2289,52 @@ html, body {
         text-align: center !important;
         margin: 0 !important;
     }
+
+    /* Chairman's Desk: 2x2 Commitment Beliefs Grid on Mobile */
+    .chairman-commitment-grid,
+    .principal-commitment-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px 8px !important;
+        margin-top: 14px !important;
+    }
+
+    .chairman-commitment-card,
+    .principal-commitment-card {
+        padding: 13px 11px 11px !important;
+        border-radius: 14px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+        height: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .chairman-commitment-icon,
+    .principal-commitment-icon {
+        width: 34px !important;
+        height: 34px !important;
+        font-size: 0.95rem !important;
+        margin-bottom: 7px !important;
+        border-radius: 50% !important;
+    }
+
+    .chairman-commitment-card-title,
+    .principal-commitment-card-title {
+        font-size: 0.88rem !important;
+        line-height: 1.22 !important;
+        margin-bottom: 4px !important;
+        font-weight: 800 !important;
+    }
+
+    .chairman-commitment-desc,
+    .principal-commitment-desc {
+        font-size: 0.72rem !important;
+        line-height: 1.38 !important;
+        color: #556987 !important;
+        margin: 0 !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2361,6 +2407,38 @@ html, body {
     .vision-focus-card-desc {
         font-size: 0.68rem !important;
         line-height: 1.3 !important;
+    }
+
+    /* Chairman's Desk: 2x2 Commitment Beliefs Grid on Small Mobile */
+    .chairman-commitment-grid,
+    .principal-commitment-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 8px 6px !important;
+    }
+
+    .chairman-commitment-card,
+    .principal-commitment-card {
+        padding: 11px 9px 10px !important;
+        border-radius: 12px !important;
+    }
+
+    .chairman-commitment-icon,
+    .principal-commitment-icon {
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 0.88rem !important;
+        margin-bottom: 5px !important;
+    }
+
+    .chairman-commitment-card-title,
+    .principal-commitment-card-title {
+        font-size: 0.82rem !important;
+    }
+
+    .chairman-commitment-desc,
+    .principal-commitment-desc {
+        font-size: 0.68rem !important;
+        line-height: 1.32 !important;
     }
 
     /* Small Mobile Admission & Repeating CTA Banners */

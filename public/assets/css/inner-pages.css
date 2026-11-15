@@ -5313,7 +5313,31 @@
     }
     .chairman-commitment-grid,
     .principal-commitment-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px 8px !important;
+    }
+    .chairman-commitment-card,
+    .principal-commitment-card {
+        padding: 13px 11px 11px !important;
+        border-radius: 14px !important;
+    }
+    .chairman-commitment-icon,
+    .principal-commitment-icon {
+        width: 34px !important;
+        height: 34px !important;
+        font-size: 0.95rem !important;
+        margin-bottom: 7px !important;
+    }
+    .chairman-commitment-card-title,
+    .principal-commitment-card-title {
+        font-size: 0.88rem !important;
+        line-height: 1.22 !important;
+        margin-bottom: 4px !important;
+    }
+    .chairman-commitment-desc,
+    .principal-commitment-desc {
+        font-size: 0.72rem !important;
+        line-height: 1.38 !important;
     }
 }
 
