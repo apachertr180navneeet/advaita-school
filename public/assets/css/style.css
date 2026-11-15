@@ -639,7 +639,6 @@ p {
     .about-stats-row,
     .staff-cards-grid,
     .vision-dual-cards-grid,
-    .vision-focus-grid,
     .vision-beliefs-grid,
     .facilities-grid,
     .acad-curriculum-grid,
@@ -1480,7 +1479,6 @@ html, body {
     .secondary-labs-grid,
     .special-track-grid,
     .vision-dual-cards-grid,
-    .vision-focus-grid,
     .vision-beliefs-grid,
     .admission-convince-grid,
     .contact-columns-grid,
@@ -2203,6 +2201,55 @@ html, body {
     .admission-banner .shape-airplane {
         display: none !important;
     }
+
+    /* Vision & Mission: 2x4 Focus Areas Grid on Mobile (2 columns x 4 rows = 8 cards) */
+    .vision-focus-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px 8px !important;
+        margin-top: 14px !important;
+    }
+
+    .vision-focus-card {
+        background: #ffffff !important;
+        border: 1px solid #e1effa !important;
+        border-radius: 14px !important;
+        padding: 14px 10px 12px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        min-width: 0 !important;
+        box-shadow: 0 2px 8px rgba(8, 59, 122, 0.04) !important;
+    }
+
+    .vision-focus-icon {
+        width: 36px !important;
+        height: 36px !important;
+        font-size: 0.95rem !important;
+        border-radius: 10px !important;
+        margin: 0 auto 8px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .vision-focus-card-title {
+        font-size: 0.82rem !important;
+        line-height: 1.25 !important;
+        font-weight: 700 !important;
+        color: #0A2540 !important;
+        margin-bottom: 4px !important;
+        text-align: center !important;
+    }
+
+    .vision-focus-card-desc {
+        font-size: 0.72rem !important;
+        line-height: 1.35 !important;
+        color: #475569 !important;
+        text-align: center !important;
+        margin: 0 !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -2247,6 +2294,34 @@ html, body {
     .about-page-wrapper .about-apart-grid {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 8px 6px !important;
+    }
+
+    /* Vision & Mission 2x4 Focus Grid on Small Mobile */
+    .vision-focus-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 8px 6px !important;
+    }
+
+    .vision-focus-card {
+        padding: 12px 8px 10px !important;
+        border-radius: 12px !important;
+    }
+
+    .vision-focus-icon {
+        width: 32px !important;
+        height: 32px !important;
+        font-size: 0.88rem !important;
+        margin-bottom: 6px !important;
+    }
+
+    .vision-focus-card-title {
+        font-size: 0.76rem !important;
+        margin-bottom: 3px !important;
+    }
+
+    .vision-focus-card-desc {
+        font-size: 0.68rem !important;
+        line-height: 1.3 !important;
     }
 
     /* Small Mobile Admission CTA Banner */
