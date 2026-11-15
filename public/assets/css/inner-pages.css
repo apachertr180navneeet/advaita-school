@@ -5041,8 +5041,10 @@
     .principal-hero-left-panel,
     .vision-hero-left-panel {
         width: 100%;
-        padding: 26px 20px;
-        background: #ffffff;
+        padding: 24px 18px 28px;
+        background: transparent;
+        position: relative;
+        z-index: 3;
     }
     .about-hero-wave-edge,
     .staff-hero-wave-overlay,
@@ -5056,13 +5058,9 @@
         display: none;
     }
     .about-hero-bg-visual,
-    .chairman-hero-bg-visual,
-    .principal-hero-bg-visual {
-        position: relative;
-        width: 100%;
-        height: 240px;
-    }
     .staff-hero-bg-visual,
+    .chairman-hero-bg-visual,
+    .principal-hero-bg-visual,
     .vision-hero-bg-visual {
         position: absolute !important;
         inset: 0 !important;
@@ -5073,6 +5071,10 @@
         z-index: 1 !important;
         background: transparent !important;
     }
+    .about-hero-canvas,
+    .staff-hero-canvas,
+    .chairman-hero-canvas,
+    .principal-hero-canvas,
     .vision-hero-canvas {
         min-height: auto !important;
         border-radius: 18px !important;
@@ -5203,21 +5205,45 @@
     .vision-hero-canvas {
         border-radius: var(--adv-radius-md, 16px);
     }
+    .about-hero-left-panel,
+    .staff-hero-left-panel,
+    .chairman-hero-left-panel,
+    .principal-hero-left-panel,
     .vision-hero-left-panel {
         padding: 22px 16px 24px !important;
+        background: transparent !important;
     }
+    .about-hero-script-tag,
+    .staff-hero-script-tag,
+    .chairman-hero-script-tag,
+    .principal-hero-script-tag,
     .vision-hero-script-tag {
         top: 10px !important;
         right: 12px !important;
         transform: scale(0.72) rotate(-3deg) !important;
     }
+    .about-hero-title,
+    .staff-hero-title,
+    .chairman-hero-title,
+    .principal-hero-title,
     .vision-hero-title {
-        font-size: clamp(1.48rem, 5.5vw, 1.85rem) !important;
-        line-height: 1.24 !important;
+        font-size: clamp(1.45rem, 5.5vw, 1.85rem) !important;
+        line-height: 1.22 !important;
         margin-bottom: 8px !important;
     }
+    .about-hero-title br,
+    .staff-hero-title br,
+    .chairman-hero-title br,
+    .principal-hero-title br,
+    .vision-hero-title br {
+        display: none !important;
+    }
+    .about-hero-desc,
+    .staff-hero-desc,
+    .chairman-hero-desc,
+    .principal-hero-desc,
     .vision-hero-desc {
-        font-size: 0.85rem !important;
+        font-size: 0.84rem !important;
         line-height: 1.5 !important;
     }
     .vision-dual-cards-grid {

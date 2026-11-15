@@ -182,7 +182,58 @@ p {
         min-height: auto !important;
     }
 
-    /* 1. Universal Inner Page Hero Banners: Banner Visual on TOP (Order: 1 across ALL pages) */
+    /* =========================================================================
+       UNIVERSAL INNER PAGE HERO SECTIONS (Unified Card Layout matching Our Faculty)
+       ========================================================================= */
+
+    /* 1. Outer Hero Section Padding & Wrapper */
+    .about-hero-section,
+    .staff-hero-section,
+    .chairman-hero-section,
+    .principal-hero-section,
+    .vision-hero-section,
+    .contact-hero-section,
+    .admission-hero-section,
+    .facilities-hero-unified,
+    .adv-gal-hero-section,
+    .adv-blog-hero-section,
+    .results-hero-section {
+        padding: 6px 6px 0 !important;
+        width: 100% !important;
+        max-width: 1200px !important;
+        margin: 0 auto !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 2. Hero Canvas: Single Unified Rounded Card with Soft Gradient */
+    .about-hero-canvas,
+    .staff-hero-canvas,
+    .chairman-hero-canvas,
+    .principal-hero-canvas,
+    .vision-hero-canvas,
+    .contact-hero-canvas,
+    .admission-hero-canvas,
+    .facilities-hero-canvas,
+    .adv-gal-hero-section,
+    .adv-blog-hero-section,
+    .results-hero-grid,
+    .primary-hero .admission-hero-canvas,
+    .secondary-hero .admission-hero-canvas,
+    .pre-primary-hero .admission-hero-canvas {
+        min-height: auto !important;
+        border-radius: 16px !important;
+        position: relative !important;
+        overflow: hidden !important;
+        background: linear-gradient(180deg, #f0f7fe 0%, #ffffff 100%) !important;
+        border: 1px solid #ddecfa !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 3. Soft Campus Building Visual embedded in Canvas Background */
     .about-hero-bg-visual,
     .staff-hero-bg-visual,
     .chairman-hero-bg-visual,
@@ -196,164 +247,23 @@ p {
     .primary-hero .admission-hero-bg-visual,
     .secondary-hero .admission-hero-bg-visual,
     .pre-primary-hero .admission-hero-bg-visual {
-        order: 1 !important;
-        position: relative !important;
+        order: unset !important;
+        position: absolute !important;
+        top: 0 !important;
+        right: 0 !important;
+        left: 0 !important;
         width: 100% !important;
-        height: clamp(210px, 52vw, 260px) !important;
-        max-height: 270px !important;
-        opacity: 1 !important;
+        height: 180px !important;
+        opacity: 0.22 !important;
+        pointer-events: none !important;
+        z-index: 1 !important;
+        border-radius: 16px 16px 0 0 !important;
+        margin: 0 !important;
         display: block !important;
         overflow: hidden !important;
-        border-radius: 18px 18px 0 0 !important;
-        margin: 0 !important;
+        background: transparent !important;
     }
 
-    /* 2. Universal Inner Page Hero Content: Text Panel BELOW Banner (Order: 2 across ALL pages, Center-Aligned) */
-    .about-hero-left-panel,
-    .staff-hero-left-panel,
-    .chairman-hero-left-panel,
-    .principal-hero-left-panel,
-    .vision-hero-left-panel,
-    .contact-hero-left-panel,
-    .admission-hero-left-panel,
-    .facilities-hero-left-panel,
-    .adv-gal-container,
-    .adv-blog-container,
-    .results-hero-text,
-    .primary-hero .admission-hero-left-panel,
-    .secondary-hero .admission-hero-left-panel,
-    .pre-primary-hero .admission-hero-left-panel {
-        order: 2 !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 24px 20px 22px !important;
-        background: #ffffff !important;
-        text-align: center !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        border-radius: 0 0 18px 18px !important;
-    }
-
-    /* Universal Inner Page Hero Text & Content Center Alignment */
-    .about-hero-content-inner,
-    .staff-hero-content-inner,
-    .chairman-hero-content-inner,
-    .principal-hero-content-inner,
-    .vision-hero-content-inner,
-    .contact-hero-content-inner,
-    .admission-hero-content-inner,
-    .adv-gal-hero-content,
-    .adv-blog-hero-content,
-    .results-hero-text {
-        width: 100% !important;
-        text-align: center !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-
-    /* Universal Breadcrumbs Centered */
-    .about-breadcrumb,
-    .staff-breadcrumb,
-    .chairman-breadcrumb,
-    .principal-breadcrumb,
-    .vision-breadcrumb,
-    .contact-breadcrumb,
-    .admission-breadcrumb,
-    .adv-gal-breadcrumb,
-    .adv-blog-breadcrumb,
-    .results-breadcrumb {
-        justify-content: center !important;
-        text-align: center !important;
-        margin: 0 auto 10px !important;
-        width: 100% !important;
-    }
-
-    /* Universal Eyebrows & Badges Centered */
-    .about-eyebrow,
-    .staff-eyebrow,
-    .chairman-eyebrow,
-    .principal-eyebrow,
-    .vision-eyebrow,
-    .contact-eyebrow,
-    .admission-eyebrow,
-    .adv-gal-kicker,
-    .adv-blog-kicker,
-    .results-eyebrow {
-        text-align: center !important;
-        display: block !important;
-        margin: 0 auto 8px !important;
-        width: 100% !important;
-    }
-
-    .results-eyebrow {
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-    }
-
-    /* Universal Hero Titles Centered */
-    .about-hero-title,
-    .staff-hero-title,
-    .chairman-hero-title,
-    .principal-hero-title,
-    .vision-hero-title,
-    .contact-hero-title,
-    .admission-hero-title,
-    .facilities-hero-title,
-    .adv-gal-hero-title,
-    .adv-blog-hero-title,
-    .results-hero-title,
-    .acad-hero-title {
-        text-align: center !important;
-        margin: 0 auto 12px !important;
-        font-size: clamp(1.48rem, 5.5vw, 1.95rem) !important;
-        line-height: 1.22 !important;
-        width: 100% !important;
-    }
-
-    /* Universal Hero Descriptions Centered */
-    .about-hero-desc,
-    .staff-hero-desc,
-    .chairman-hero-desc,
-    .principal-hero-desc,
-    .vision-hero-desc,
-    .contact-hero-desc,
-    .admission-hero-desc,
-    .adv-gal-hero-subtitle,
-    .adv-blog-hero-subtitle,
-    .results-hero-desc,
-    .acad-hero-desc {
-        text-align: center !important;
-        margin: 0 auto 18px !important;
-        max-width: 540px !important;
-        font-size: 0.88rem !important;
-        line-height: 1.55 !important;
-        width: 100% !important;
-    }
-
-    /* Universal Hero Action Buttons Centered */
-    .about-hero-actions,
-    .staff-hero-actions,
-    .chairman-hero-actions,
-    .principal-hero-actions,
-    .vision-hero-actions,
-    .contact-hero-actions,
-    .admission-hero-actions,
-    .adv-gal-hero-actions,
-    .adv-blog-hero-actions,
-    .results-hero-actions {
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        width: 100% !important;
-        margin: 0 auto !important;
-        flex-wrap: wrap !important;
-        gap: 10px !important;
-    }
-
-    /* Universal Banner Background Images Fit */
     .about-hero-bg-img,
     .staff-hero-bg-img,
     .chairman-hero-bg-img,
@@ -370,44 +280,347 @@ p {
         display: block !important;
     }
 
-    .admission-hero-bg-visual .admission-hero-bg-img {
-        width: auto !important;
-        max-width: 90% !important;
-        height: 100% !important;
-        max-height: 250px !important;
-        object-fit: contain !important;
-        object-position: center bottom !important;
-        display: block !important;
-        margin: 0 auto !important;
-        filter: drop-shadow(0 10px 20px rgba(8, 59, 122, 0.15)) !important;
-    }
-
-    .pre-primary-hero .admission-hero-bg-img {
-        width: 100% !important;
-        max-width: 100% !important;
-        height: 100% !important;
-        object-fit: cover !important;
-        object-position: center 20% !important;
-        display: block !important;
-        opacity: 1 !important;
-    }
-
-    /* Hide decorative wave overlays, sky script tags, and dots on tablet & mobile */
+    /* 4. Hide clunky wave masks, wave overlays, and dot decor on mobile & tablet */
     .about-hero-wave-edge,
     .staff-hero-wave-overlay,
     .chairman-hero-wave-overlay,
     .principal-hero-wave-overlay,
     .vision-hero-wave-overlay,
+    .staff-hero-wave-edge,
+    .chairman-hero-wave-edge,
+    .principal-hero-wave-edge,
+    .vision-hero-wave-edge,
     .admission-hero-wave-overlay,
-    .about-hero-script-tag,
-    .staff-hero-script-tag,
-    .vision-hero-script-tag,
-    .admission-hero-script-tag,
     .about-hero-dots-decor,
     .staff-hero-dots-decor,
     .chairman-hero-dots-decor,
     .principal-hero-dots-decor,
     .vision-hero-dots-decor {
+        display: none !important;
+    }
+
+    /* 5. Floating Script Tag ("More Than A School") */
+    .about-hero-script-tag,
+    .staff-hero-script-tag,
+    .chairman-hero-script-tag,
+    .principal-hero-script-tag,
+    .vision-hero-script-tag,
+    .admission-hero-script-tag {
+        position: absolute !important;
+        top: 10px !important;
+        right: 12px !important;
+        transform: scale(0.72) rotate(-3deg) !important;
+        transform-origin: right top !important;
+        z-index: 2 !important;
+        display: flex !important;
+    }
+
+    /* 6. Content Left Panel: Clean Left-Aligned Typography */
+    .about-hero-left-panel,
+    .staff-hero-left-panel,
+    .chairman-hero-left-panel,
+    .principal-hero-left-panel,
+    .vision-hero-left-panel,
+    .contact-hero-left-panel,
+    .admission-hero-left-panel,
+    .facilities-hero-left-panel,
+    .adv-gal-container,
+    .adv-blog-container,
+    .results-hero-text,
+    .primary-hero .admission-hero-left-panel,
+    .secondary-hero .admission-hero-left-panel,
+    .pre-primary-hero .admission-hero-left-panel {
+        order: unset !important;
+        position: relative !important;
+        z-index: 3 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 22px 16px 28px !important;
+        background: transparent !important;
+        text-align: left !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        border-radius: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .about-hero-content-inner,
+    .staff-hero-content-inner,
+    .chairman-hero-content-inner,
+    .principal-hero-content-inner,
+    .vision-hero-content-inner,
+    .contact-hero-content-inner,
+    .admission-hero-content-inner,
+    .adv-gal-hero-content,
+    .adv-blog-hero-content,
+    .results-hero-text {
+        width: 100% !important;
+        max-width: 680px !important;
+        text-align: left !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+    }
+
+    /* Breadcrumbs Left-Aligned */
+    .about-breadcrumb,
+    .staff-breadcrumb,
+    .chairman-breadcrumb,
+    .principal-breadcrumb,
+    .vision-breadcrumb,
+    .contact-breadcrumb,
+    .admission-breadcrumb,
+    .adv-gal-breadcrumb,
+    .adv-blog-breadcrumb,
+    .results-breadcrumb {
+        justify-content: flex-start !important;
+        text-align: left !important;
+        margin: 0 0 10px !important;
+        width: auto !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        font-size: 0.78rem !important;
+    }
+
+    /* Eyebrows / Badges Left-Aligned */
+    .about-eyebrow,
+    .staff-eyebrow,
+    .chairman-eyebrow,
+    .principal-eyebrow,
+    .vision-eyebrow,
+    .contact-eyebrow,
+    .admission-eyebrow,
+    .adv-gal-kicker,
+    .adv-blog-kicker,
+    .results-eyebrow {
+        text-align: left !important;
+        display: inline-block !important;
+        margin: 0 0 6px !important;
+        width: auto !important;
+        font-size: 0.74rem !important;
+        font-weight: 800 !important;
+        letter-spacing: 1.5px !important;
+        text-transform: uppercase !important;
+        color: #F37021 !important;
+    }
+
+    /* Hero Titles Left-Aligned, Crisp Scaling, Natural Line Breaks */
+    .about-hero-title,
+    .staff-hero-title,
+    .chairman-hero-title,
+    .principal-hero-title,
+    .vision-hero-title,
+    .contact-hero-title,
+    .admission-hero-title,
+    .facilities-hero-title,
+    .adv-gal-hero-title,
+    .adv-blog-hero-title,
+    .results-hero-title,
+    .acad-hero-title {
+        text-align: left !important;
+        margin: 0 0 8px !important;
+        font-size: clamp(1.45rem, 5.5vw, 1.85rem) !important;
+        line-height: 1.22 !important;
+        font-weight: 800 !important;
+        color: #083B7A !important;
+        width: 100% !important;
+    }
+
+    /* Allow titles to wrap naturally without rigid breaks on mobile */
+    .about-hero-title br,
+    .staff-hero-title br,
+    .chairman-hero-title br,
+    .principal-hero-title br,
+    .vision-hero-title br,
+    .contact-hero-title br,
+    .admission-hero-title br,
+    .facilities-hero-title br,
+    .acad-hero-title br {
+        display: none !important;
+    }
+
+    /* Hero Descriptions Left-Aligned */
+    .about-hero-desc,
+    .staff-hero-desc,
+    .chairman-hero-desc,
+    .principal-hero-desc,
+    .vision-hero-desc,
+    .contact-hero-desc,
+    .admission-hero-desc,
+    .adv-gal-hero-subtitle,
+    .adv-blog-hero-subtitle,
+    .results-hero-desc,
+    .acad-hero-desc {
+        text-align: left !important;
+        margin: 0 0 14px !important;
+        max-width: 620px !important;
+        font-size: 0.84rem !important;
+        line-height: 1.5 !important;
+        color: #475569 !important;
+        width: 100% !important;
+    }
+
+    /* Hero Highlights / Pillars (About Us, Chairman's Desk) Left-Aligned */
+    .about-page-wrapper .about-hero-highlights,
+    .about-hero-highlights,
+    .chairman-hero-pillars {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        margin: 0 0 12px !important;
+        gap: 4px !important;
+        width: 100% !important;
+    }
+
+    .about-page-wrapper .highlight-line,
+    .highlight-line {
+        display: flex !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        text-align: left !important;
+        flex-wrap: wrap !important;
+        gap: 4px 8px !important;
+        font-size: 0.78rem !important;
+    }
+
+    /* Hero Action Buttons Left-Aligned */
+    .about-page-wrapper .about-hero-actions,
+    .about-hero-actions,
+    .staff-hero-actions,
+    .chairman-hero-actions,
+    .principal-hero-actions,
+    .vision-hero-actions,
+    .contact-hero-actions,
+    .admission-hero-actions,
+    .adv-gal-hero-actions,
+    .adv-blog-hero-actions,
+    .results-hero-actions {
+        display: flex !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+        width: 100% !important;
+        margin: 0 !important;
+        flex-wrap: wrap !important;
+        gap: 10px !important;
+    }
+
+    .about-page-wrapper .about-btn-orange,
+    .about-btn-orange,
+    .chairman-btn-orange {
+        margin: 0 !important;
+    }
+
+    /* 7. Floating 2x2 Stats & Feature Strips (Our Faculty, About Us, Facilities) */
+    .staff-stats-strip-wrapper,
+    .about-features-strip,
+    .facilities-metrics-strip-wrap {
+        position: relative !important;
+        z-index: 10 !important;
+        margin-top: -16px !important;
+        padding: 0 10px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        overflow: visible !important;
+    }
+
+    .staff-stats-strip,
+    .about-page-wrapper .about-strip-grid,
+    .about-strip-grid,
+    .facilities-metrics-strip {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 6px !important;
+        padding: 10px 8px !important;
+        border-radius: 14px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        box-shadow: 0 6px 20px rgba(8, 59, 122, 0.08) !important;
+        background: #ffffff !important;
+        margin-top: 0 !important;
+    }
+
+    .staff-stat-item,
+    .about-page-wrapper .about-strip-card,
+    .about-strip-card,
+    .fac-metric-card {
+        border-right: none !important;
+        background: #f8fafc !important;
+        border: 1px solid #edf2f7 !important;
+        border-radius: 10px !important;
+        padding: 8px 8px !important;
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 8px !important;
+        min-width: 0 !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        overflow: hidden !important;
+        text-align: left !important;
+    }
+
+    .staff-stat-icon,
+    .about-page-wrapper .strip-icon-box,
+    .strip-icon-box,
+    .fac-metric-icon {
+        font-size: 0.95rem !important;
+        width: 32px !important;
+        height: 32px !important;
+        border-radius: 8px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex-shrink: 0 !important;
+        margin: 0 !important;
+    }
+
+    .staff-stat-info,
+    .about-page-wrapper .strip-card-body,
+    .strip-card-body,
+    .fac-metric-info {
+        min-width: 0 !important;
+        flex: 1 !important;
+        overflow: hidden !important;
+        text-align: left !important;
+    }
+
+    .staff-stat-num,
+    .about-page-wrapper .strip-card-title,
+    .strip-card-title,
+    .fac-metric-strong {
+        font-size: 0.98rem !important;
+        font-weight: 800 !important;
+        color: #083B7A !important;
+        line-height: 1.15 !important;
+        display: block !important;
+        margin: 0 !important;
+        text-align: left !important;
+    }
+
+    .staff-stat-label,
+    .about-page-wrapper .strip-card-subtitle,
+    .strip-card-subtitle,
+    .fac-metric-sub {
+        font-size: 0.64rem !important;
+        font-weight: 600 !important;
+        color: #64748b !important;
+        margin-top: 1px !important;
+        display: block !important;
+        white-space: normal !important;
+        line-height: 1.2 !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+        text-align: left !important;
+    }
+
+    .about-page-wrapper .strip-card-desc,
+    .strip-card-desc {
         display: none !important;
     }
 
@@ -1662,132 +1875,7 @@ html, body {
    2. All text center-aligned across all sections on mobile
    ========================================================================= */
 @media (max-width: 991px) {
-    /* Hero Canvas: Banner on Top, Content Below */
-    .about-page-wrapper .about-hero-canvas,
-    .about-hero-section .about-hero-canvas {
-        flex-direction: column !important;
-        border-radius: var(--adv-radius-lg, 18px) !important;
-        overflow: hidden !important;
-        min-height: auto !important;
-    }
-
-    .about-page-wrapper .about-hero-bg-visual,
-    .about-hero-section .about-hero-bg-visual {
-        order: 1 !important;
-        position: relative !important;
-        width: 100% !important;
-        height: clamp(210px, 52vw, 260px) !important;
-        max-height: 270px !important;
-        opacity: 1 !important;
-        display: block !important;
-        overflow: hidden !important;
-        border-radius: 18px 18px 0 0 !important;
-        margin: 0 !important;
-    }
-
-    .about-page-wrapper .about-hero-bg-img,
-    .about-hero-section .about-hero-bg-img {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover !important;
-        object-position: center 25% !important;
-        display: block !important;
-    }
-
-    .about-page-wrapper .about-hero-script-tag,
-    .about-hero-section .about-hero-script-tag {
-        position: absolute !important;
-        top: 12px !important;
-        right: 14px !important;
-        transform: scale(0.74) rotate(-3deg) !important;
-        transform-origin: right top !important;
-        z-index: 5 !important;
-        display: flex !important;
-    }
-
-    .about-page-wrapper .about-hero-script-tag .script-title {
-        color: #083B7A !important;
-        text-shadow: 0 2px 8px rgba(255, 255, 255, 0.95), 0 0 12px #ffffff !important;
-    }
-
-    .about-page-wrapper .about-hero-left-panel,
-    .about-hero-section .about-hero-left-panel {
-        order: 2 !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 24px 20px 22px !important;
-        background: #ffffff !important;
-        text-align: center !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-
-    .about-page-wrapper .about-hero-content-inner,
-    .about-hero-section .about-hero-content-inner {
-        width: 100% !important;
-        text-align: center !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-
-    .about-page-wrapper .about-breadcrumb {
-        justify-content: center !important;
-        text-align: center !important;
-        margin: 0 auto 10px !important;
-    }
-
-    .about-page-wrapper .about-eyebrow {
-        text-align: center !important;
-        display: block !important;
-        margin: 0 auto 8px !important;
-    }
-
-    .about-page-wrapper .about-hero-title {
-        text-align: center !important;
-        margin: 0 auto 12px !important;
-        font-size: clamp(1.48rem, 5.5vw, 1.95rem) !important;
-        line-height: 1.22 !important;
-    }
-
-    .about-page-wrapper .about-hero-highlights {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
-        margin: 0 auto 14px !important;
-        gap: 6px !important;
-    }
-
-    .about-page-wrapper .highlight-line {
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        text-align: center !important;
-        flex-wrap: wrap !important;
-        gap: 6px 10px !important;
-    }
-
-    .about-page-wrapper .about-hero-desc {
-        text-align: center !important;
-        margin: 0 auto 18px !important;
-        max-width: 520px !important;
-        font-size: 0.88rem !important;
-        line-height: 1.55 !important;
-    }
-
-    .about-page-wrapper .about-hero-actions {
-        display: flex !important;
-        justify-content: center !important;
-        align-items: center !important;
-        width: 100% !important;
-        margin: 0 auto !important;
-    }
-
-    .about-page-wrapper .about-btn-orange {
-        margin: 0 auto !important;
-    }
+    /* About Us Hero inherits Universal Card Hero Layout matching Our Faculty */
 }
 
 @media (max-width: 768px) {
@@ -2338,14 +2426,9 @@ html, body {
 }
 
 @media (max-width: 480px) {
-    .about-page-wrapper .about-hero-bg-visual,
-    .about-hero-section .about-hero-bg-visual {
-        height: 200px !important;
-    }
-
     .about-page-wrapper .about-hero-left-panel,
     .about-hero-section .about-hero-left-panel {
-        padding: 20px 14px 18px !important;
+        padding: 18px 12px 20px !important;
     }
 
     .about-page-wrapper .about-hero-title {
