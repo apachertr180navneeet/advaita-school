@@ -1259,37 +1259,72 @@
     }
 
     .staff-join-section .buttons {
-        flex-direction: column;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         width: 100%;
-        max-width: 320px;
+        max-width: 100%;
         margin: 0 auto;
-        gap: 10px;
+        gap: 9px;
+        justify-content: center;
+        align-items: center;
     }
 
     .staff-btn-orange,
     .staff-btn-outline {
-        width: 100%;
+        width: auto;
+        height: 38px;
+        padding: 0 16px;
+        font-size: 11.5px;
+        border-radius: 25px;
+        display: inline-flex;
+        align-items: center;
         justify-content: center;
-        padding: 11px 20px;
-        font-size: 0.85rem;
+        white-space: nowrap;
+        text-decoration: none;
+        gap: 7px;
+    }
+
+    .staff-btn-orange {
+        background: #ff751b;
+        color: #ffffff !important;
+        box-shadow: 0 4px 14px rgba(255, 117, 27, 0.22);
+        border: none;
+    }
+
+    .staff-btn-outline {
+        background: rgba(255, 255, 255, 0.9);
+        color: #183b61 !important;
+        border: 1.5px solid #357fc0;
     }
 
     .staff-join-section .students {
         position: relative;
-        right: auto;
-        bottom: auto;
-        width: 75%;
-        max-width: 260px;
+        width: 100%;
+        max-width: 320px;
         height: auto;
-        margin: 0 auto;
+        margin: 10px 0 0 auto;
+        margin-left: auto;
+        margin-right: 0;
         display: flex;
-        justify-content: center;
+        align-items: flex-end;
+        justify-content: flex-end;
+        bottom: 0;
+        right: 0;
+        left: auto;
+        z-index: 4;
+        pointer-events: none;
     }
 
     .staff-join-section .students img {
-        height: auto;
-        max-height: 175px;
         width: 100%;
+        max-width: 290px;
+        height: auto;
+        max-height: 195px;
+        object-fit: contain;
+        object-position: bottom right;
+        display: block;
+        margin: 0 0 0 auto;
     }
 
     /* Campus Showcase Strip on Mobile */

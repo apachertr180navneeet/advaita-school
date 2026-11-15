@@ -3488,6 +3488,30 @@
         width: 100%;
         text-align: center;
     }
+    .staff-join-section .buttons {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 9px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .staff-btn-orange,
+    .staff-btn-outline {
+        width: auto;
+        height: 38px;
+        padding: 0 16px;
+        font-size: 11.5px;
+        border-radius: 25px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        text-decoration: none;
+        gap: 7px;
+    }
     .staff-join-section .students {
         position: relative;
         width: 100%;
@@ -3567,14 +3591,18 @@
         font-size: 0.7rem;
     }
 
+    .staff-join-section .buttons,
     .staff-join-actions {
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
         width: 100%;
+        justify-content: center;
+        gap: 9px;
     }
 
     .staff-btn-orange,
     .staff-btn-outline {
-        width: 100%;
+        width: auto;
         justify-content: center;
     }
 
