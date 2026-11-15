@@ -4184,6 +4184,9 @@ textarea.form-control:focus {
     .fee-band-cards-grid {
         grid-template-columns: 1fr;
     }
+    .docs-checklist-media {
+        display: none !important;
+    }
     .admission-features-grid {
         grid-template-columns: 1fr;
     }

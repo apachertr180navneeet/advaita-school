@@ -2329,6 +2329,11 @@ html, body {
         display: none !important;
     }
 
+    /* Hide decorative required documents clipboard visual on mobile */
+    .docs-checklist-media {
+        display: none !important;
+    }
+
     /* Vision & Mission: 2x4 Focus Areas Grid on Mobile (2 columns x 4 rows = 8 cards) */
     .vision-focus-grid {
         display: grid !important;
