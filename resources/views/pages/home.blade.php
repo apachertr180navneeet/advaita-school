@@ -1024,5 +1024,35 @@
         </div>
     </section>
 
+    <!-- ====================================================================
+         ADMISSION OPEN ON-LOAD POPUP MODAL
+         ==================================================================== -->
+    <div class="adv-onload-modal" id="advOnloadModal" role="dialog" aria-modal="true" aria-label="Admissions Open Announcement">
+        <div class="adv-onload-backdrop" id="advOnloadBackdrop"></div>
+        <div class="adv-onload-dialog">
+            <!-- Close Button -->
+            <button type="button" class="adv-onload-close" id="advOnloadClose" aria-label="Close Announcement">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="adv-onload-card">
+                <a href="{{ route('online-registration') }}" class="adv-onload-poster-link" title="Apply for Admission">
+                    <img src="{{ asset('assets/images/onload-admission-popup.jpg') }}" alt="Admissions Open 2026-27 - Advaita School of Excellence" class="adv-onload-poster-img" loading="eager">
+                </a>
+
+                <div class="adv-onload-footer-actions">
+                    <a href="{{ route('online-registration') }}" class="adv-onload-btn-primary">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Apply for Admission</span>
+                    </a>
+                    <a href="tel:{{ preg_replace('/[^0-9+]/', '', \App\Models\Setting::get('site_phone_primary', '+919689898973')) }}" class="adv-onload-btn-call">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>Call Us</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </main>
 @endsection

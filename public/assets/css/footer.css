@@ -514,57 +514,79 @@ a.touch-link:hover {
 
 @media (max-width: 640px) {
     .adv-footer-container {
-        grid-template-columns: 1fr;
-        gap: 32px;
-        text-align: center;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 28px 16px !important;
     }
 
     .adv-footer-main {
         padding: 28px 0 24px;
     }
 
-    .adv-footer-col {
+    .adv-footer-brand-col {
+        grid-column: span 2 !important;
         text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
+    .adv-footer-col {
+        grid-column: span 1 !important;
+        text-align: left !important;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+
     .adv-footer-col-title {
-        text-align: center;
+        text-align: left !important;
         width: 100%;
+        font-size: 1rem !important;
+        margin-bottom: 12px !important;
     }
 
     .adv-footer-links-list {
-        align-items: center;
-        text-align: center;
+        align-items: flex-start !important;
+        text-align: left !important;
         width: 100%;
+        gap: 8px !important;
     }
 
     .adv-footer-link {
-        text-align: center;
+        text-align: left !important;
+        font-size: 0.8125rem !important;
+    }
+
+    .adv-footer-touch-col {
+        grid-column: span 2 !important;
+        text-align: center !important;
+        align-items: center !important;
+    }
+
+    .adv-footer-touch-col .adv-footer-col-title {
+        text-align: center !important;
     }
 
     .adv-footer-touch-col .adv-footer-contact-list {
-        align-items: center;
+        align-items: center !important;
         width: 100%;
     }
 
     .adv-footer-touch-item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 6px;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 6px !important;
         width: 100%;
     }
 
     .adv-footer-touch-content {
-        align-items: center;
-        text-align: center;
+        align-items: center !important;
+        text-align: center !important;
     }
 
     .adv-footer-map-col {
-        grid-column: span 1;
+        grid-column: span 2 !important;
         justify-content: center !important;
         width: 100%;
     }
