@@ -3495,7 +3495,7 @@
         height: auto;
         margin: 10px 0 0 auto;
         margin-left: auto;
-        margin-right: -16px;
+        margin-right: 0;
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
@@ -4587,7 +4587,7 @@
         height: auto;
         margin: 10px 0 0 auto;
         margin-left: auto;
-        margin-right: -16px;
+        margin-right: 0;
         padding: 0;
         display: flex;
         align-items: flex-end;
@@ -4652,7 +4652,7 @@
         max-width: 280px;
         margin-top: 8px;
         margin-left: auto;
-        margin-right: -12px;
+        margin-right: 0;
         justify-content: flex-end;
         right: 0;
         left: auto;

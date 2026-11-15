@@ -2176,7 +2176,7 @@ html, body {
         height: auto !important;
         margin: 10px 0 0 auto !important;
         margin-left: auto !important;
-        margin-right: -16px !important;
+        margin-right: 0 !important;
         padding: 0 !important;
         display: flex !important;
         align-items: flex-end !important;
@@ -2366,7 +2366,7 @@ html, body {
         max-width: 280px !important;
         margin-top: 8px !important;
         margin-left: auto !important;
-        margin-right: -12px !important;
+        margin-right: 0 !important;
         justify-content: flex-end !important;
         right: 0 !important;
         left: auto !important;
