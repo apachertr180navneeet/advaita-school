@@ -182,22 +182,8 @@ p {
         min-height: auto !important;
     }
 
-    .staff-hero-left-panel,
-    .chairman-hero-left-panel,
-    .principal-hero-left-panel,
-    .vision-hero-left-panel,
-    .contact-hero-left-panel,
-    .admission-hero-left-panel,
-    .facilities-hero-left-panel,
-    .primary-hero .admission-hero-left-panel,
-    .secondary-hero .admission-hero-left-panel,
-    .pre-primary-hero .admission-hero-left-panel {
-        order: 1 !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        padding: 26px 20px !important;
-    }
-
+    /* 1. Universal Inner Page Hero Banners: Banner Visual on TOP (Order: 1 across ALL pages) */
+    .about-hero-bg-visual,
     .staff-hero-bg-visual,
     .chairman-hero-bg-visual,
     .principal-hero-bg-visual,
@@ -206,20 +192,182 @@ p {
     .admission-hero-bg-visual,
     .adv-gal-hero-curved-visual,
     .adv-blog-hero-curved-visual,
+    .results-hero-visual,
     .primary-hero .admission-hero-bg-visual,
     .secondary-hero .admission-hero-bg-visual,
     .pre-primary-hero .admission-hero-bg-visual {
-        order: 2 !important;
+        order: 1 !important;
         position: relative !important;
         width: 100% !important;
-        height: 250px !important;
-        max-height: 280px !important;
+        height: clamp(210px, 52vw, 260px) !important;
+        max-height: 270px !important;
         opacity: 1 !important;
+        display: block !important;
+        overflow: hidden !important;
+        border-radius: 18px 18px 0 0 !important;
+        margin: 0 !important;
+    }
+
+    /* 2. Universal Inner Page Hero Content: Text Panel BELOW Banner (Order: 2 across ALL pages, Center-Aligned) */
+    .about-hero-left-panel,
+    .staff-hero-left-panel,
+    .chairman-hero-left-panel,
+    .principal-hero-left-panel,
+    .vision-hero-left-panel,
+    .contact-hero-left-panel,
+    .admission-hero-left-panel,
+    .facilities-hero-left-panel,
+    .adv-gal-container,
+    .adv-blog-container,
+    .results-hero-text,
+    .primary-hero .admission-hero-left-panel,
+    .secondary-hero .admission-hero-left-panel,
+    .pre-primary-hero .admission-hero-left-panel {
+        order: 2 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 24px 20px 22px !important;
+        background: #ffffff !important;
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        border-radius: 0 0 18px 18px !important;
+    }
+
+    /* Universal Inner Page Hero Text & Content Center Alignment */
+    .about-hero-content-inner,
+    .staff-hero-content-inner,
+    .chairman-hero-content-inner,
+    .principal-hero-content-inner,
+    .vision-hero-content-inner,
+    .contact-hero-content-inner,
+    .admission-hero-content-inner,
+    .adv-gal-hero-content,
+    .adv-blog-hero-content,
+    .results-hero-text {
+        width: 100% !important;
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    /* Universal Breadcrumbs Centered */
+    .about-breadcrumb,
+    .staff-breadcrumb,
+    .chairman-breadcrumb,
+    .principal-breadcrumb,
+    .vision-breadcrumb,
+    .contact-breadcrumb,
+    .admission-breadcrumb,
+    .adv-gal-breadcrumb,
+    .adv-blog-breadcrumb,
+    .results-breadcrumb {
+        justify-content: center !important;
+        text-align: center !important;
+        margin: 0 auto 10px !important;
+        width: 100% !important;
+    }
+
+    /* Universal Eyebrows & Badges Centered */
+    .about-eyebrow,
+    .staff-eyebrow,
+    .chairman-eyebrow,
+    .principal-eyebrow,
+    .vision-eyebrow,
+    .contact-eyebrow,
+    .admission-eyebrow,
+    .adv-gal-kicker,
+    .adv-blog-kicker,
+    .results-eyebrow {
+        text-align: center !important;
+        display: block !important;
+        margin: 0 auto 8px !important;
+        width: 100% !important;
+    }
+
+    .results-eyebrow {
         display: flex !important;
         justify-content: center !important;
-        align-items: flex-end !important;
-        overflow: hidden !important;
-        border-radius: 0 0 20px 20px !important;
+        align-items: center !important;
+    }
+
+    /* Universal Hero Titles Centered */
+    .about-hero-title,
+    .staff-hero-title,
+    .chairman-hero-title,
+    .principal-hero-title,
+    .vision-hero-title,
+    .contact-hero-title,
+    .admission-hero-title,
+    .facilities-hero-title,
+    .adv-gal-hero-title,
+    .adv-blog-hero-title,
+    .results-hero-title,
+    .acad-hero-title {
+        text-align: center !important;
+        margin: 0 auto 12px !important;
+        font-size: clamp(1.48rem, 5.5vw, 1.95rem) !important;
+        line-height: 1.22 !important;
+        width: 100% !important;
+    }
+
+    /* Universal Hero Descriptions Centered */
+    .about-hero-desc,
+    .staff-hero-desc,
+    .chairman-hero-desc,
+    .principal-hero-desc,
+    .vision-hero-desc,
+    .contact-hero-desc,
+    .admission-hero-desc,
+    .adv-gal-hero-subtitle,
+    .adv-blog-hero-subtitle,
+    .results-hero-desc,
+    .acad-hero-desc {
+        text-align: center !important;
+        margin: 0 auto 18px !important;
+        max-width: 540px !important;
+        font-size: 0.88rem !important;
+        line-height: 1.55 !important;
+        width: 100% !important;
+    }
+
+    /* Universal Hero Action Buttons Centered */
+    .about-hero-actions,
+    .staff-hero-actions,
+    .chairman-hero-actions,
+    .principal-hero-actions,
+    .vision-hero-actions,
+    .contact-hero-actions,
+    .admission-hero-actions,
+    .adv-gal-hero-actions,
+    .adv-blog-hero-actions,
+    .results-hero-actions {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+        flex-wrap: wrap !important;
+        gap: 10px !important;
+    }
+
+    /* Universal Banner Background Images Fit */
+    .about-hero-bg-img,
+    .staff-hero-bg-img,
+    .chairman-hero-bg-img,
+    .principal-hero-bg-img,
+    .vision-hero-bg-img,
+    .contact-hero-bg-img,
+    .admission-hero-bg-img,
+    .admission-hero-building-img,
+    .results-hero-campus-img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center 25% !important;
+        display: block !important;
     }
 
     .admission-hero-bg-visual .admission-hero-bg-img {
@@ -325,14 +473,91 @@ p {
     }
 
     /* Inner Page Hero Backgrounds (Mobile) */
+    .about-hero-bg-visual,
     .staff-hero-bg-visual,
     .chairman-hero-bg-visual,
     .principal-hero-bg-visual,
     .vision-hero-bg-visual,
     .contact-hero-bg-visual,
+    .admission-hero-bg-visual,
     .adv-gal-hero-curved-visual,
-    .adv-blog-hero-curved-visual {
-        height: 200px !important;
+    .adv-blog-hero-curved-visual,
+    .results-hero-visual {
+        height: clamp(200px, 52vw, 250px) !important;
+    }
+
+    /* Universal Mobile Section Headers & Card Content Center-Aligned */
+    .section-header,
+    .page-section-header,
+    .faculty-section-header,
+    .desk-header,
+    .acad-section-header,
+    .facilities-section-header,
+    .contact-section-header,
+    .results-section-header,
+    .adv-gal-header,
+    .adv-blog-header,
+    .leadership-header {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 100% !important;
+    }
+
+    .section-title,
+    .section-heading,
+    .page-title,
+    .section-eyebrow,
+    .section-desc,
+    .section-subhead,
+    .lead-text,
+    .desk-title,
+    .desk-subtitle {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* Universal Card Text Centering on Mobile */
+    .staff-card,
+    .faculty-card,
+    .facility-card-body,
+    .contact-quick-card,
+    .results-highlight-card,
+    .vision-focus-card,
+    .vision-belief-card,
+    .vision-featured-card,
+    .acad-curriculum-card,
+    .acad-stage-card {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .staff-name,
+    .staff-role,
+    .staff-subj,
+    .facility-card-title,
+    .facility-card-desc,
+    .quick-card-title,
+    .quick-card-info {
+        text-align: center !important;
+    }
+
+    /* Gallery & Blog Filter Bars Centered */
+    .adv-gal-filter-bar,
+    .adv-blog-filter-bar,
+    .gallery-filter-wrap {
+        display: flex !important;
+        justify-content: center !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 
     /* Universal Responsive Tables (Fee Structure, Disclosures, Results) */
@@ -477,6 +702,9 @@ p {
         white-space: nowrap !important;
         -webkit-overflow-scrolling: touch !important;
         scrollbar-width: none !important;
+        display: flex !important;
+        justify-content: center !important;
+        text-align: center !important;
     }
     .admission-breadcrumb::-webkit-scrollbar,
     .about-breadcrumb::-webkit-scrollbar,
@@ -503,7 +731,8 @@ p {
     .acad-cta-banner,
     .results-bottom-cta {
         flex-direction: column !important;
-        align-items: flex-start !important;
+        align-items: center !important;
+        text-align: center !important;
         padding: 24px 18px !important;
         width: 100% !important;
     }
@@ -596,14 +825,17 @@ p {
         padding-right: 12px;
     }
 
+    .about-hero-bg-visual,
     .staff-hero-bg-visual,
     .chairman-hero-bg-visual,
     .principal-hero-bg-visual,
     .vision-hero-bg-visual,
     .contact-hero-bg-visual,
+    .admission-hero-bg-visual,
     .adv-gal-hero-curved-visual,
-    .adv-blog-hero-curved-visual {
-        height: 170px !important;
+    .adv-blog-hero-curved-visual,
+    .results-hero-visual {
+        height: clamp(185px, 50vw, 220px) !important;
     }
 
     .registration-form-card {
