@@ -991,19 +991,69 @@
         white-space: nowrap;
     }
     .about-philosophy-visual-wrap {
-        padding: 0;
-        margin-top: 14px;
+        position: relative !important;
+        padding: 0 !important;
+        margin-top: 16px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        width: 100% !important;
     }
     .about-philosophy-accent-border {
-        display: none;
+        display: none !important;
+    }
+    .about-philosophy-frame {
+        width: 100% !important;
+        border-radius: 16px !important;
+        overflow: hidden !important;
     }
     .about-philosophy-img {
-        height: 260px;
+        width: 100% !important;
+        height: 250px !important;
+        object-fit: cover !important;
+        display: block !important;
     }
     .about-philosophy-floating-badge {
-        left: 10px;
-        right: 10px;
-        bottom: 10px;
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        top: auto !important;
+        margin-top: 12px !important;
+        width: 100% !important;
+        max-width: 390px !important;
+        box-sizing: border-box !important;
+        background: #083B7A !important;
+        border-radius: 14px !important;
+        padding: 10px 14px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        gap: 12px !important;
+        box-shadow: 0 4px 14px rgba(8, 59, 122, 0.15) !important;
+    }
+    .about-philosophy-badge-icon {
+        width: 34px !important;
+        height: 34px !important;
+        border-radius: 10px !important;
+        font-size: 0.9rem !important;
+        flex-shrink: 0 !important;
+    }
+    .about-philosophy-badge-text {
+        display: flex !important;
+        flex-direction: column !important;
+        text-align: left !important;
+    }
+    .about-philosophy-badge-title {
+        font-size: 0.82rem !important;
+        font-weight: 800 !important;
+        color: #ffffff !important;
+        line-height: 1.2 !important;
+    }
+    .about-philosophy-badge-sub {
+        font-size: 0.72rem !important;
+        color: #bae6fd !important;
+        font-weight: 500 !important;
     }
 }
 
