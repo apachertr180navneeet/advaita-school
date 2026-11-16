@@ -962,7 +962,7 @@
         flex-direction: column;
         gap: 8px;
         width: 100%;
-        max-width: 400px;
+        max-width: 390px;
         margin: 14px auto 18px auto;
     }
     .philosophy-pill-item {
@@ -970,8 +970,14 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        gap: 9px;
-        padding: 10px 18px;
+        gap: 7px;
+        padding: 9px 12px;
+        white-space: nowrap;
+    }
+    .pill-item-text {
+        text-align: center;
+        font-size: clamp(0.72rem, 3.2vw, 0.82rem);
+        white-space: nowrap;
     }
     .about-philosophy-visual-wrap {
         padding: 0;
