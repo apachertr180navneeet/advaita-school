@@ -5045,10 +5045,10 @@
         background: transparent;
         position: relative;
         z-index: 3;
-        text-align: center !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
     .about-hero-wave-edge,
     .staff-hero-wave-overlay,
@@ -5087,7 +5087,7 @@
         background: linear-gradient(135deg, #f0f7fe 0%, #e8f3fc 60%, #e2effa 100%) !important;
         border: 1px solid #ddecfa !important;
         flex-direction: column !important;
-        align-items: center !important;
+        align-items: flex-start !important;
     }
     .vision-hero-bg-img {
         width: 100% !important;
