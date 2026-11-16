@@ -1282,6 +1282,7 @@ p {
         width: 100% !important;
     }
 
+    /* All CTA Button Groups in 2-Column Format on Mobile (Matching About Us Banner) */
     .about-cta-actions,
     .chairman-cta-actions,
     .principal-cta-actions,
@@ -1291,15 +1292,33 @@ p {
     .admission-cta-actions,
     .fee-cta-actions,
     .acad-cta-actions,
-    .cta-buttons {
-        flex-direction: column !important;
+    .cta-buttons,
+    .principal-cta-action-buttons,
+    .apc-actions,
+    .helpline-buttons-stack,
+    .sec-helpline-actions,
+    .aieb-buttons,
+    .admission-banner .buttons,
+    .staff-join-section .buttons {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 8px !important;
         width: 100% !important;
-        gap: 10px !important;
-        margin-top: 16px !important;
+        max-width: 390px !important;
+        margin: 14px auto 0 !important;
+        position: relative !important;
+        z-index: 10 !important;
+        box-sizing: border-box !important;
     }
 
     .about-cta-actions a,
     .about-cta-actions button,
+    .chairman-cta-actions a,
+    .chairman-cta-actions button,
+    .principal-cta-actions a,
+    .principal-cta-actions button,
+    .vision-cta-actions a,
+    .vision-cta-actions button,
     .contact-cta-buttons-wrap a,
     .contact-cta-buttons-wrap button,
     .facilities-cta-actions a,
@@ -1311,10 +1330,40 @@ p {
     .acad-cta-actions a,
     .acad-cta-actions button,
     .cta-buttons a,
-    .cta-buttons button {
+    .cta-buttons button,
+    .principal-cta-action-buttons a,
+    .principal-cta-action-buttons button,
+    .apc-actions a,
+    .apc-actions button,
+    .helpline-buttons-stack a,
+    .helpline-buttons-stack button,
+    .sec-helpline-actions a,
+    .sec-helpline-actions button,
+    .aieb-buttons a,
+    .aieb-buttons button,
+    .admission-banner .btn-enrol,
+    .admission-banner .btn-visit,
+    .staff-btn-orange,
+    .staff-btn-outline {
         width: 100% !important;
+        min-width: 0 !important;
+        height: 38px !important;
+        padding: 0 8px !important;
+        font-size: clamp(10px, 2.7vw, 11.5px) !important;
+        font-weight: 700 !important;
+        border-radius: 25px !important;
+        display: inline-flex !important;
+        align-items: center !important;
         justify-content: center !important;
-        text-align: center !important;
+        white-space: nowrap !important;
+        text-decoration: none !important;
+        gap: 6px !important;
+        box-sizing: border-box !important;
+    }
+
+    .sec-helpline-actions > a:last-child:nth-child(odd),
+    .sec-helpline-actions > button:last-child:nth-child(odd) {
+        grid-column: span 2 !important;
     }
 
     /* Quick Cards (Contact Us) */
@@ -2691,17 +2740,16 @@ html, body {
     .admission-banner .buttons,
     .about-page-wrapper .admission-banner .buttons,
     .staff-join-section .buttons {
-        justify-content: center !important;
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: wrap !important;
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
         align-items: center !important;
-        gap: 9px !important;
-        margin: 0 auto !important;
+        gap: 8px !important;
+        margin: 14px auto 0 !important;
         width: 100% !important;
-        max-width: 100% !important;
+        max-width: 390px !important;
         position: relative !important;
         z-index: 10 !important;
+        box-sizing: border-box !important;
     }
 
     .admission-banner .btn-enrol,
@@ -2709,9 +2757,10 @@ html, body {
     .staff-btn-orange,
     .staff-btn-outline {
         height: 38px !important;
-        width: auto !important;
-        padding: 0 16px !important;
-        font-size: 11.5px !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        padding: 0 8px !important;
+        font-size: clamp(10px, 2.7vw, 11.5px) !important;
         font-weight: 700 !important;
         border-radius: 25px !important;
         display: inline-flex !important;
@@ -2719,7 +2768,7 @@ html, body {
         justify-content: center !important;
         white-space: nowrap !important;
         text-decoration: none !important;
-        gap: 7px !important;
+        gap: 6px !important;
         box-sizing: border-box !important;
     }
 
@@ -3020,10 +3069,11 @@ html, body {
     .admission-banner .btn-visit,
     .staff-btn-orange,
     .staff-btn-outline {
-        height: 35px !important;
-        padding: 0 13px !important;
-        font-size: 10.5px !important;
-        width: auto !important;
+        height: 36px !important;
+        padding: 0 6px !important;
+        font-size: clamp(9.5px, 2.6vw, 11px) !important;
+        width: 100% !important;
+        min-width: 0 !important;
     }
 
     .admission-banner .students,

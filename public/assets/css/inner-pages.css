@@ -3569,25 +3569,30 @@
         text-align: center;
     }
     .staff-join-section .buttons {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         align-items: center;
-        gap: 9px;
+        gap: 8px;
         width: 100%;
-        margin: 0 auto;
+        max-width: 390px;
+        margin: 14px auto 0;
+        box-sizing: border-box;
     }
     .staff-btn-orange,
     .staff-btn-outline {
-        width: auto;
+        width: 100%;
+        min-width: 0;
         height: 38px;
-        padding: 0 16px;
-        font-size: 11.5px;
+        padding: 0 8px;
+        font-size: clamp(10px, 2.7vw, 11.5px);
+        font-weight: 700;
         border-radius: 25px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        white-space: nowrap;
+        gap: 6px;
+        box-sizing: border-box;
         white-space: nowrap;
         text-decoration: none;
         gap: 7px;
@@ -4669,24 +4674,30 @@
     .admission-banner .buttons {
         position: relative;
         z-index: 10;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         align-items: center;
-        justify-content: center;
-        gap: 9px;
-        margin: 0 auto;
+        gap: 8px;
+        margin: 14px auto 0;
         width: 100%;
+        max-width: 390px;
+        box-sizing: border-box;
     }
     .admission-banner .btn-enrol,
     .admission-banner .btn-visit {
         height: 38px;
-        padding: 0 16px;
-        font-size: 11.5px;
+        width: 100%;
+        min-width: 0;
+        padding: 0 8px;
+        font-size: clamp(10px, 2.7vw, 11.5px);
+        font-weight: 700;
         border-radius: 25px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
+        white-space: nowrap;
+        gap: 6px;
+        box-sizing: border-box;
     }
     .admission-banner .students {
         position: relative;
