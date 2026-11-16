@@ -512,7 +512,7 @@ a.touch-link:hover {
     }
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
     .adv-footer-container {
         grid-template-columns: 1fr 1fr !important;
         gap: 28px 16px !important;
@@ -532,29 +532,36 @@ a.touch-link:hover {
 
     .adv-footer-col {
         grid-column: span 1 !important;
-        text-align: left !important;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start !important;
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
     }
 
     .adv-footer-col-title {
-        text-align: left !important;
-        width: 100%;
+        text-align: center !important;
+        width: 100% !important;
         font-size: 1rem !important;
         margin-bottom: 12px !important;
     }
 
     .adv-footer-links-list {
-        align-items: flex-start !important;
-        text-align: left !important;
-        width: 100%;
+        align-items: center !important;
+        text-align: center !important;
+        width: 100% !important;
         gap: 8px !important;
     }
 
+    .adv-footer-links-list li {
+        text-align: center !important;
+        width: 100% !important;
+    }
+
     .adv-footer-link {
-        text-align: left !important;
+        text-align: center !important;
         font-size: 0.8125rem !important;
+        display: inline-block !important;
+        width: 100% !important;
     }
 
     .adv-footer-touch-col {

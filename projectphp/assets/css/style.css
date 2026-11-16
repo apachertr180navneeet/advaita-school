@@ -1045,6 +1045,22 @@ p {
         margin: 0 auto !important;
     }
 
+    /* Footer Navigation Columns Center-Aligned on Mobile */
+    .adv-footer-col,
+    .adv-footer-col-title,
+    .adv-footer-links-list,
+    .adv-footer-links-list li,
+    .adv-footer-link {
+        text-align: center !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .adv-footer-link {
+        display: inline-block !important;
+        width: 100% !important;
+    }
+
     /* Gallery & Blog Filter Bars Centered */
     .adv-gal-filter-bar,
     .adv-blog-filter-bar,
