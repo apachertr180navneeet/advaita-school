@@ -3240,21 +3240,24 @@
     position: relative;
     z-index: 5;
     width: 100%;
-    max-width: 580px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 20px;
+    padding: 20px 4% 20px 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    text-align: center;
+    box-sizing: border-box;
 }
 
 .copy-center {
-    width: 100%;
+    width: 56%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
 }
 
 .staff-join-section .eyebrow {
@@ -3266,7 +3269,7 @@
     letter-spacing: 1.5px;
     text-transform: uppercase;
     font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
-    text-align: center;
+    text-align: left;
 }
 
 .staff-join-section .headline {
@@ -3276,23 +3279,23 @@
     line-height: 1.15;
     font-weight: 800;
     font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
-    text-align: center;
+    text-align: left;
 }
 
 .staff-join-section .subtext {
-    margin: 4px auto 18px;
+    margin: 4px 0 18px;
     color: #475569;
     font-size: clamp(12px, 0.95vw, 15px);
     line-height: 1.45;
-    max-width: 490px;
+    max-width: 520px;
     font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
-    text-align: center;
+    text-align: left;
 }
 
 .staff-join-section .buttons {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 12px;
     flex-wrap: wrap;
 }
@@ -3340,18 +3343,19 @@
     transform: translateY(-2px);
 }
 
-/* Students Image on Right */
+/* Students Image on Left */
 .staff-join-section .students {
     position: absolute;
     z-index: 4;
-    right: 0;
+    left: 0;
+    right: auto;
     bottom: 0;
-    width: 38%;
-    max-width: 380px;
+    width: 44%;
+    max-width: 480px;
     height: 100%;
     display: flex;
     align-items: flex-end;
-    justify-content: flex-end;
+    justify-content: flex-start;
     overflow: hidden;
     pointer-events: none;
 }
@@ -3362,7 +3366,7 @@
     width: auto;
     max-width: 100%;
     object-fit: contain;
-    object-position: right bottom;
+    object-position: left bottom;
     display: block;
 }
 
@@ -3550,77 +3554,128 @@
     }
 }
 
-/* Mobile Media Query - Compact Flow */
+/* Mobile Media Query - 2-Column Format (Image Left, Text Right) */
 @media (max-width: 767px) {
     .staff-join-section {
-        min-height: auto;
-        padding: 24px 16px 0;
+        min-height: 250px;
+        padding: 18px 12px 0 0;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
         overflow: hidden;
+        border-radius: 18px;
+        box-sizing: border-box;
     }
     .staff-join-plane-left {
         display: none;
     }
     .banner-content-center {
-        padding: 0;
-        width: 100%;
-        text-align: center;
+        order: 2;
+        position: relative;
+        z-index: 6;
+        width: 62%;
+        flex: 1 1 62%;
+        min-width: 0;
+        padding: 6px 4px 18px 8px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: left;
+        box-sizing: border-box;
+    }
+    .staff-join-section .eyebrow {
+        text-align: left;
+        font-size: clamp(8.5px, 2.5vw, 10.5px);
+        letter-spacing: 1px;
+        font-weight: 800;
+        color: #F37021;
+        margin: 0 0 3px;
+        line-height: 1.2;
+        text-transform: uppercase;
+    }
+    .staff-join-section .headline {
+        text-align: left;
+        max-width: 100%;
+        font-size: clamp(14px, 3.8vw, 18px);
+        line-height: 1.2;
+        font-weight: 800;
+        color: #102f54;
+        margin: 0 0 5px;
+        word-break: break-word;
+    }
+    .staff-join-section .subtext {
+        text-align: left;
+        max-width: 100%;
+        font-size: clamp(9.5px, 2.4vw, 11px);
+        line-height: 1.35;
+        color: #557291;
+        margin: 0 0 10px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
     .staff-join-section .buttons {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        align-items: center;
-        gap: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
         width: 100%;
-        max-width: 390px;
-        margin: 14px auto 0;
+        max-width: 185px;
+        margin: 0;
+        position: relative;
+        z-index: 10;
         box-sizing: border-box;
     }
     .staff-btn-orange,
     .staff-btn-outline {
         width: 100%;
         min-width: 0;
-        height: 38px;
-        padding: 0 8px;
-        font-size: clamp(10px, 2.7vw, 11.5px);
+        height: 33px;
+        padding: 0 10px;
+        font-size: clamp(9.5px, 2.4vw, 11px);
         font-weight: 700;
-        border-radius: 25px;
+        border-radius: 20px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
         white-space: nowrap;
-        gap: 6px;
-        box-sizing: border-box;
-        white-space: nowrap;
         text-decoration: none;
-        gap: 7px;
+        gap: 5px;
+        box-sizing: border-box;
     }
     .staff-join-section .students {
+        order: 1;
         position: relative;
-        width: 100%;
-        max-width: 320px;
+        width: 38%;
+        max-width: 155px;
+        min-width: 110px;
+        flex-shrink: 0;
         height: auto;
-        margin: 10px 0 0 auto;
-        margin-left: auto;
-        margin-right: 0;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
         display: flex;
         align-items: flex-end;
-        justify-content: flex-end;
+        justify-content: flex-start;
         bottom: 0;
-        right: 0;
-        left: auto;
+        right: auto;
+        left: 0;
+        z-index: 4;
+        pointer-events: none;
     }
     .staff-join-section .students img {
         height: auto;
-        max-height: 195px;
+        max-height: 235px;
         width: 100%;
-        max-width: 290px;
-        margin: 0 0 0 auto;
+        max-width: 150px;
+        margin: 0;
         display: block;
         object-fit: contain;
-        object-position: bottom right;
+        object-position: bottom left;
     }
 }
 
@@ -4451,13 +4506,20 @@
     min-height: 250px;
     display: flex;
     align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 0 4% 0 0;
+    box-sizing: border-box;
 }
 
 .admission-banner .copy {
-    width: 58%;
-    padding: 25px 0 22px 5.5%;
+    width: 56%;
+    margin-left: auto;
+    margin-right: 0;
+    padding: 25px 0 22px 0;
     position: relative;
     z-index: 5;
+    text-align: left;
 }
 
 .admission-banner .eyebrow {
@@ -4562,13 +4624,15 @@
 .admission-banner .students {
     position: absolute;
     z-index: 4;
-    right: 0;
+    left: 0;
+    right: auto;
     bottom: 0;
-    width: 48%;
+    width: 44%;
+    max-width: 480px;
     height: 100%;
     display: flex;
     align-items: flex-end;
-    justify-content: flex-end;
+    justify-content: flex-start;
     overflow: hidden;
     pointer-events: none;
 }
@@ -4579,7 +4643,7 @@
     width: auto;
     max-width: 100%;
     object-fit: contain;
-    object-position: right bottom;
+    object-position: left bottom;
     display: block;
 }
 
@@ -4612,120 +4676,140 @@
     }
 }
 
-/* Mobile - Compact Flow with Zero Excess Whitespace */
+/* Mobile - 2-Column Format (Image Left, Text Right) */
 @media (max-width: 767px) {
     .admission-banner {
-        min-height: auto;
-        padding: 24px 16px 0;
+        min-height: 250px;
+        padding: 18px 12px 0 0;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
         overflow: hidden;
+        border-radius: 18px;
+        box-sizing: border-box;
     }
     .admission-banner .banner-content {
+        order: 2;
+        position: relative;
+        z-index: 6;
+        width: 62%;
+        flex: 1 1 62%;
+        min-width: 0;
         min-height: auto;
         height: auto;
-        width: 100%;
+        padding: 6px 4px 18px 8px;
+        margin: 0;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: flex-start;
-        position: relative;
-        z-index: 5;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: left;
+        box-sizing: border-box;
     }
     .admission-banner .copy {
         width: 100%;
-        max-width: 520px;
+        max-width: 100%;
         padding: 0;
-        text-align: center;
+        text-align: left;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        margin: 0 auto;
+        align-items: flex-start;
+        margin: 0;
     }
     .admission-banner .eyebrow {
-        font-size: 11px;
-        letter-spacing: 1.5px;
+        font-size: clamp(8.5px, 2.5vw, 10.5px);
+        letter-spacing: 1px;
         font-weight: 800;
         color: #2681c7;
-        margin-bottom: 6px;
-        text-align: center;
+        margin: 0 0 3px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        text-align: left;
     }
     .admission-banner .eyebrow-line {
         display: none;
     }
     .admission-banner .headline {
-        font-size: clamp(20px, 5.2vw, 25px);
-        line-height: 1.22;
+        font-size: clamp(14px, 3.8vw, 18px);
+        line-height: 1.2;
         font-weight: 800;
         color: #102f54;
-        text-align: center;
+        text-align: left;
         max-width: 100%;
-        margin: 0 0 8px;
+        margin: 0 0 5px;
+        word-break: break-word;
     }
     .admission-banner .subtext {
-        font-size: clamp(12px, 3.2vw, 13.5px);
-        line-height: 1.45;
+        font-size: clamp(9.5px, 2.4vw, 11px);
+        line-height: 1.35;
         color: #557291;
-        text-align: center;
-        max-width: 440px;
-        margin: 0 auto 13px;
+        text-align: left;
+        max-width: 100%;
+        margin: 0 0 10px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
     .admission-banner .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+        width: 100%;
+        max-width: 185px;
+        margin: 0;
         position: relative;
         z-index: 10;
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        align-items: center;
-        gap: 8px;
-        margin: 14px auto 0;
-        width: 100%;
-        max-width: 390px;
         box-sizing: border-box;
     }
     .admission-banner .btn-enrol,
     .admission-banner .btn-visit {
-        height: 38px;
+        height: 33px;
         width: 100%;
         min-width: 0;
-        padding: 0 8px;
-        font-size: clamp(10px, 2.7vw, 11.5px);
+        padding: 0 10px;
+        font-size: clamp(9.5px, 2.4vw, 11px);
         font-weight: 700;
-        border-radius: 25px;
+        border-radius: 20px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
         white-space: nowrap;
-        gap: 6px;
+        text-decoration: none;
+        gap: 5px;
         box-sizing: border-box;
     }
     .admission-banner .students {
+        order: 1;
         position: relative;
-        width: 100%;
-        max-width: 320px;
+        width: 38%;
+        max-width: 155px;
+        min-width: 110px;
+        flex-shrink: 0;
         height: auto;
-        margin: 10px 0 0 auto;
-        margin-left: auto;
-        margin-right: 0;
+        max-height: 100%;
+        margin: 0;
         padding: 0;
         display: flex;
         align-items: flex-end;
-        justify-content: flex-end;
+        justify-content: flex-start;
         bottom: 0;
-        right: 0;
-        left: auto;
+        right: auto;
+        left: 0;
         z-index: 4;
         pointer-events: none;
     }
     .admission-banner .students img {
         width: 100%;
-        max-width: 290px;
+        max-width: 150px;
         height: auto;
-        max-height: 195px;
+        max-height: 235px;
         object-fit: contain;
-        object-position: bottom right;
+        object-position: bottom left;
         display: block;
-        margin: 0 0 0 auto;
+        margin: 0;
     }
     .admission-banner .dot-pattern,
     .admission-banner .shape-airplane {
@@ -4736,52 +4820,52 @@
 /* Small Mobile */
 @media (max-width: 480px) {
     .admission-banner {
-        padding: 20px 12px 0;
-        min-height: auto;
+        padding: 14px 8px 0 0;
+        min-height: 220px;
     }
     .admission-banner .banner-content {
         min-height: auto;
         height: auto;
+        padding: 4px 2px 14px 6px;
     }
     .admission-banner .eyebrow {
-        font-size: 10px;
-        margin-bottom: 5px;
+        font-size: 8.5px;
+        margin-bottom: 2px;
     }
     .admission-banner .headline {
-        font-size: 19px;
-        margin-bottom: 6px;
+        font-size: clamp(13px, 3.6vw, 15px);
+        line-height: 1.18;
+        margin-bottom: 4px;
     }
     .admission-banner .subtext {
-        font-size: 11.5px;
-        margin-bottom: 11px;
+        font-size: 9.5px;
+        margin-bottom: 8px;
+        -webkit-line-clamp: 2;
     }
     .admission-banner .buttons {
-        gap: 7px;
+        max-width: 165px;
+        gap: 5px;
     }
     .admission-banner .btn-enrol,
     .admission-banner .btn-visit {
-        height: 35px;
-        padding: 0 13px;
-        font-size: 10.5px;
-    }
-    .admission-banner .btn-visit {
-        max-width: 180px;
+        height: 29px;
+        padding: 0 8px;
+        font-size: 9px;
     }
     .admission-banner .students {
-        max-width: 280px;
-        margin-top: 8px;
-        margin-left: auto;
-        margin-right: 0;
-        justify-content: flex-end;
-        right: 0;
-        left: auto;
+        width: 36%;
+        max-width: 130px;
+        min-width: 95px;
+        margin: 0;
+        justify-content: flex-start;
+        right: auto;
+        left: 0;
     }
     .admission-banner .students img {
-        max-width: 265px;
-        max-height: 175px;
-        margin-left: auto;
-        margin-right: 0;
-        object-position: bottom right;
+        max-width: 125px;
+        max-height: 205px;
+        margin: 0;
+        object-position: bottom left;
     }
 }
 

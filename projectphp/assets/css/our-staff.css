@@ -571,21 +571,24 @@
     position: relative;
     z-index: 5;
     width: 100%;
-    max-width: 580px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 26px 20px;
+    padding: 26px 4% 26px 0;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    text-align: center;
+    box-sizing: border-box;
 }
 
 .copy-center {
-    width: 100%;
+    width: 56%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
 }
 
 .staff-join-section .eyebrow {
@@ -597,7 +600,7 @@
     letter-spacing: 1.5px;
     text-transform: uppercase;
     font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
-    text-align: center;
+    text-align: left;
 }
 
 .staff-join-section .headline {
@@ -607,23 +610,23 @@
     line-height: 1.2;
     font-weight: 800;
     font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
-    text-align: center;
+    text-align: left;
 }
 
 .staff-join-section .subtext {
-    margin: 0 auto 16px;
+    margin: 0 0 16px;
     color: #475569;
     font-size: clamp(13px, 0.95vw, 15px);
     line-height: 1.5;
-    max-width: 480px;
+    max-width: 520px;
     font-family: var(--adv-font-sans, 'Plus Jakarta Sans', sans-serif);
-    text-align: center;
+    text-align: left;
 }
 
 .staff-join-section .buttons {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 12px;
     flex-wrap: wrap;
 }
@@ -673,29 +676,30 @@
     transform: translateY(-2px);
 }
 
-/* Students Image on Right */
+/* Students Image on Left */
 .staff-join-section .students {
     position: absolute;
     z-index: 4;
-    right: 0;
+    left: 0;
+    right: auto;
     bottom: 0;
-    width: 36%;
-    max-width: 360px;
+    width: 44%;
+    max-width: 460px;
     height: 100%;
     display: flex;
     align-items: flex-end;
-    justify-content: flex-end;
+    justify-content: flex-start;
     overflow: hidden;
     pointer-events: none;
 }
 
 .staff-join-section .students img {
     height: 100%;
-    max-height: 270px;
+    max-height: 290px;
     width: auto;
     max-width: 100%;
     object-fit: contain;
-    object-position: right bottom;
+    object-position: left bottom;
     display: block;
 }
 
@@ -1220,14 +1224,17 @@
         font-size: 0.68rem;
     }
 
-    /* Join Our Team Section on Mobile */
+    /* Join Our Team Section on Mobile - 2-Column Format (Image Left, Text Right) */
     .staff-join-section {
-        min-height: auto;
-        flex-direction: column;
-        align-items: center;
-        padding: 28px 16px 0;
+        min-height: 250px;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 18px 12px 0 0;
         margin: 24px 0;
-        border-radius: 0;
+        border-radius: 18px;
+        overflow: hidden;
+        box-sizing: border-box;
     }
 
     .staff-join-plane-left {
@@ -1239,50 +1246,86 @@
     }
 
     .banner-content-center {
-        width: 100%;
-        max-width: 100%;
-        padding: 0 0 20px;
-        text-align: center;
+        order: 2;
+        position: relative;
+        z-index: 6;
+        width: 62%;
+        flex: 1 1 62%;
+        min-width: 0;
+        padding: 6px 4px 18px 8px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: left;
+        box-sizing: border-box;
+    }
+
+    .staff-join-section .eyebrow {
+        text-align: left;
+        font-size: clamp(8.5px, 2.5vw, 10.5px);
+        letter-spacing: 1px;
+        font-weight: 800;
+        color: #F37021;
+        margin: 0 0 3px;
+        line-height: 1.2;
+        text-transform: uppercase;
     }
 
     .staff-join-section .headline {
-        font-size: clamp(1.35rem, 5vw, 1.65rem);
-        line-height: 1.25;
-        margin-bottom: 8px;
+        text-align: left;
+        max-width: 100%;
+        font-size: clamp(14px, 3.8vw, 18px);
+        line-height: 1.2;
+        font-weight: 800;
+        color: #083B7A;
+        margin: 0 0 5px;
+        word-break: break-word;
     }
 
     .staff-join-section .subtext {
-        font-size: 0.82rem;
-        line-height: 1.48;
-        margin: 0 auto 16px;
-        max-width: 360px;
+        text-align: left;
+        max-width: 100%;
+        font-size: clamp(9.5px, 2.4vw, 11px);
+        line-height: 1.35;
+        color: #475569;
+        margin: 0 0 10px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 
     .staff-join-section .buttons {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
         width: 100%;
-        max-width: 100%;
-        margin: 0 auto;
-        gap: 9px;
-        justify-content: center;
-        align-items: center;
+        max-width: 185px;
+        margin: 0;
+        position: relative;
+        z-index: 10;
+        box-sizing: border-box;
     }
 
     .staff-btn-orange,
     .staff-btn-outline {
-        width: auto;
-        height: 38px;
-        padding: 0 16px;
-        font-size: 11.5px;
-        border-radius: 25px;
+        width: 100%;
+        min-width: 0;
+        height: 33px;
+        padding: 0 10px;
+        font-size: clamp(9.5px, 2.4vw, 11px);
+        font-weight: 700;
+        border-radius: 20px;
         display: inline-flex;
         align-items: center;
         justify-content: center;
         white-space: nowrap;
         text-decoration: none;
-        gap: 7px;
+        gap: 5px;
+        box-sizing: border-box;
     }
 
     .staff-btn-orange {
@@ -1299,32 +1342,35 @@
     }
 
     .staff-join-section .students {
+        order: 1;
         position: relative;
-        width: 100%;
-        max-width: 320px;
+        width: 38%;
+        max-width: 155px;
+        min-width: 110px;
+        flex-shrink: 0;
         height: auto;
-        margin: 10px 0 0 auto;
-        margin-left: auto;
-        margin-right: 0;
+        max-height: 100%;
+        margin: 0;
+        padding: 0;
         display: flex;
         align-items: flex-end;
-        justify-content: flex-end;
+        justify-content: flex-start;
         bottom: 0;
-        right: 0;
-        left: auto;
+        right: auto;
+        left: 0;
         z-index: 4;
         pointer-events: none;
     }
 
     .staff-join-section .students img {
         width: 100%;
-        max-width: 290px;
+        max-width: 150px;
         height: auto;
-        max-height: 195px;
+        max-height: 235px;
         object-fit: contain;
-        object-position: bottom right;
+        object-position: bottom left;
         display: block;
-        margin: 0 0 0 auto;
+        margin: 0;
     }
 
     /* Campus Showcase Strip on Mobile */
