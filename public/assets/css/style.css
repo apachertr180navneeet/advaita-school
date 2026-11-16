@@ -2428,12 +2428,12 @@ html, body {
     }
 
     .about-page-wrapper .philosophy-pill-item {
+        position: relative !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
         text-align: center !important;
-        gap: 7px !important;
-        padding: 9px 12px !important;
+        padding: 9px 34px !important;
         border-radius: 50px !important;
         width: 100% !important;
         box-sizing: border-box !important;
@@ -2444,6 +2444,10 @@ html, body {
     }
 
     .about-page-wrapper .pill-badge-icon {
+        position: absolute !important;
+        left: 14px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
         flex-shrink: 0 !important;
         width: 20px !important;
         height: 20px !important;
@@ -2456,13 +2460,14 @@ html, body {
     }
 
     .about-page-wrapper .pill-item-text {
+        display: block !important;
+        width: 100% !important;
         text-align: center !important;
-        font-size: clamp(0.72rem, 3.2vw, 0.82rem) !important;
+        font-size: clamp(0.70rem, 3.1vw, 0.82rem) !important;
         font-weight: 700 !important;
         line-height: 1.2 !important;
         color: #083B7A !important;
         white-space: nowrap !important;
-        flex: 0 1 auto !important;
     }
 
     .about-page-wrapper .about-philosophy-action {
