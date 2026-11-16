@@ -958,7 +958,20 @@
 
 @media (max-width: 768px) {
     .about-philosophy-pills-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        gap: 9px;
+        width: 100%;
+        max-width: 380px;
+        margin: 16px auto 18px auto;
+    }
+    .philosophy-pill-item {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: left;
+        gap: 12px;
+        padding: 11px 18px;
     }
     .about-philosophy-visual-wrap {
         padding: 0;
