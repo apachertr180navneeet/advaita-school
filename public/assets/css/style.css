@@ -2731,8 +2731,9 @@ html, body {
         border-radius: 14px !important;
         display: flex !important;
         flex-direction: column !important;
-        align-items: flex-start !important;
-        justify-content: flex-start !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
         height: 100% !important;
         box-sizing: border-box !important;
     }
@@ -2742,7 +2743,7 @@ html, body {
         width: 34px !important;
         height: 34px !important;
         font-size: 0.95rem !important;
-        margin-bottom: 7px !important;
+        margin: 0 auto 7px auto !important;
         border-radius: 50% !important;
     }
 
@@ -2752,6 +2753,7 @@ html, body {
         line-height: 1.22 !important;
         margin-bottom: 4px !important;
         font-weight: 800 !important;
+        text-align: center !important;
     }
 
     .chairman-commitment-desc,
@@ -2760,6 +2762,7 @@ html, body {
         line-height: 1.38 !important;
         color: #556987 !important;
         margin: 0 !important;
+        text-align: center !important;
     }
 }
 
@@ -2811,23 +2814,30 @@ html, body {
     .vision-focus-card {
         padding: 12px 8px 10px !important;
         border-radius: 12px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
     }
 
     .vision-focus-icon {
         width: 32px !important;
         height: 32px !important;
         font-size: 0.88rem !important;
-        margin-bottom: 6px !important;
+        margin: 0 auto 6px auto !important;
     }
 
     .vision-focus-card-title {
         font-size: 0.76rem !important;
         margin-bottom: 3px !important;
+        text-align: center !important;
     }
 
     .vision-focus-card-desc {
         font-size: 0.68rem !important;
         line-height: 1.3 !important;
+        text-align: center !important;
     }
 
     /* Chairman's Desk: 2x2 Commitment Beliefs Grid on Small Mobile */

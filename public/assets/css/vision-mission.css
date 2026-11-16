@@ -614,5 +614,21 @@
         grid-template-columns: 1fr;
         gap: 12px;
     }
+    .vision-focus-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .vision-focus-icon {
+        margin: 0 auto 8px auto;
+    }
+    .vision-focus-card-title {
+        text-align: center;
+    }
+    .vision-focus-card-desc {
+        text-align: center;
+    }
 }
 

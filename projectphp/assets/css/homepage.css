@@ -3879,7 +3879,13 @@
         text-align: center !important;
     }
 
+    .adv-feature-icon-box {
+        margin: 0 auto 10px auto !important;
+    }
+
     .adv-feature-info {
+        display: flex !important;
+        flex-direction: column !important;
         align-items: center !important;
         text-align: center !important;
     }
@@ -4024,15 +4030,21 @@
     }
 
     .adv-why-content {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
         text-align: center !important;
     }
 
     .adv-why-card-title {
         text-align: center !important;
+        width: 100% !important;
     }
 
     .adv-why-card-desc {
         text-align: center !important;
+        width: 100% !important;
     }
 
     .adv-why-arrow {
@@ -4158,8 +4170,19 @@
         width: 100% !important;
     }
 
+    .adv-visit-feat-icon {
+        margin: 0 auto 8px auto !important;
+    }
+
     .adv-visit-feat-info {
+        display: flex !important;
+        flex-direction: column !important;
         align-items: center !important;
+        text-align: center !important;
+    }
+
+    .adv-visit-feat-info .feat-title,
+    .adv-visit-feat-info .feat-sub {
         text-align: center !important;
     }
 
@@ -4169,6 +4192,21 @@
         max-width: 320px !important;
         margin: 0 auto !important;
         justify-content: center !important;
+        text-align: center !important;
+    }
+
+    .adv-visit-pod-orange .pod-text-box,
+    .adv-visit-pod-white .pod-phone-info {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .adv-visit-pod-orange .pod-title,
+    .adv-visit-pod-orange .pod-sub,
+    .adv-visit-pod-white .phone-label,
+    .adv-visit-pod-white .phone-number {
         text-align: center !important;
     }
 
@@ -4293,11 +4331,21 @@
     }
 
     .adv-testi-footer {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
         justify-content: center !important;
         text-align: center !important;
+        gap: 8px !important;
+    }
+
+    .adv-testi-avatar-box {
+        margin: 0 auto 4px auto !important;
     }
 
     .adv-testi-author-info {
+        display: flex !important;
+        flex-direction: column !important;
         align-items: center !important;
         text-align: center !important;
     }
@@ -4336,6 +4384,12 @@
         text-align: center !important;
     }
 
+    .adv-faq-eyebrow {
+        justify-content: center !important;
+        margin: 0 auto 12px auto !important;
+        text-align: center !important;
+    }
+
     .adv-faq-title {
         text-align: center !important;
     }
@@ -4362,6 +4416,7 @@
 
     .adv-faq-question {
         font-size: 0.90625rem !important;
+        text-align: center !important;
     }
 
     .adv-faq-icon {
@@ -4373,6 +4428,12 @@
     .adv-faq-answer {
         padding: 0 16px 16px 16px !important;
         font-size: 0.875rem !important;
+        text-align: center !important;
+    }
+
+    .adv-faq-answer-inner,
+    .adv-faq-answer-inner p {
+        text-align: center !important;
     }
 
     /* Common Legacy Utility Classes */

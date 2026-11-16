@@ -5329,22 +5329,29 @@
     .vision-focus-card {
         padding: 14px 12px 12px !important;
         border-radius: 14px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
     }
     .vision-focus-icon {
         width: 36px !important;
         height: 36px !important;
         font-size: 1rem !important;
-        margin-bottom: 8px !important;
+        margin: 0 auto 8px auto !important;
         border-radius: 10px !important;
     }
     .vision-focus-card-title {
         font-size: 0.86rem !important;
         line-height: 1.25 !important;
         margin-bottom: 3px !important;
+        text-align: center !important;
     }
     .vision-focus-card-desc {
         font-size: 0.72rem !important;
         line-height: 1.35 !important;
+        text-align: center !important;
     }
     .about-strip-grid {
         grid-template-columns: 1fr;
