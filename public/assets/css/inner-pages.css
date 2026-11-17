@@ -5255,13 +5255,14 @@
     .vision-hero-left-panel {
         width: 100%;
         padding: 24px 18px 28px;
-        background: transparent;
+        background: #ffffff;
         position: relative;
         z-index: 3;
         text-align: left;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
+        border-radius: 0 0 18px 18px;
     }
     .about-hero-wave-edge,
     .staff-hero-wave-overlay,
@@ -5279,13 +5280,20 @@
     .chairman-hero-bg-visual,
     .principal-hero-bg-visual,
     .vision-hero-bg-visual {
-        position: absolute !important;
-        inset: 0 !important;
+        position: relative !important;
+        inset: auto !important;
+        top: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        left: auto !important;
         width: 100% !important;
-        height: 100% !important;
-        opacity: 0.16 !important;
-        pointer-events: none !important;
+        height: clamp(210px, 52vw, 260px) !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
         z-index: 1 !important;
+        border-radius: 18px 18px 0 0 !important;
+        overflow: hidden !important;
+        display: block !important;
         background: transparent !important;
     }
     .about-hero-canvas,
@@ -5297,10 +5305,11 @@
         border-radius: 18px !important;
         position: relative !important;
         overflow: hidden !important;
-        background: linear-gradient(135deg, #f0f7fe 0%, #e8f3fc 60%, #e2effa 100%) !important;
+        background: #ffffff !important;
         border: 1px solid #ddecfa !important;
         flex-direction: column !important;
         align-items: flex-start !important;
+        display: flex !important;
     }
     .vision-hero-bg-img {
         width: 100% !important;
@@ -5428,11 +5437,12 @@
     .principal-hero-left-panel,
     .vision-hero-left-panel {
         padding: 22px 16px 24px !important;
-        background: transparent !important;
+        background: #ffffff !important;
         text-align: center !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
+        border-radius: 0 0 16px 16px !important;
     }
     .about-hero-script-tag,
     .staff-hero-script-tag,
