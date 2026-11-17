@@ -3101,6 +3101,11 @@ textarea.form-control:focus {
     display: none !important;
 }
 
+.admission-hero-desc {
+    color: #083B7A !important;
+    font-weight: 500 !important;
+}
+
 /* 5-Step Process Card Overrides */
 .step-num-pill.step-pill-orange { background: #F37021; color: #ffffff; border: none; }
 .step-num-pill.step-pill-teal   { background: #0284C7; color: #ffffff; border: none; }

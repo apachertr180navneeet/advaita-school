@@ -8150,7 +8150,8 @@
 
 .admission-hero-desc {
     font-size: clamp(0.92rem, 1.2vw, 1rem);
-    color: #475569;
+    color: #083B7A;
+    font-weight: 500;
     line-height: 1.6;
     margin: 0;
 }
