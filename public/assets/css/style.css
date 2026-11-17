@@ -233,7 +233,7 @@ p {
         box-sizing: border-box !important;
     }
 
-    /* 3. Hero Visual on TOP (Order: 1, Full Width, Covering Banner, Not Overlapping Text) */
+    /* 3. Hero Visual (Full Width, Covering Background Banner across entire Hero Card) */
     .about-hero-bg-visual,
     .staff-hero-bg-visual,
     .chairman-hero-bg-visual,
@@ -247,19 +247,19 @@ p {
     .primary-hero .admission-hero-bg-visual,
     .secondary-hero .admission-hero-bg-visual,
     .pre-primary-hero .admission-hero-bg-visual {
-        order: 1 !important;
-        position: relative !important;
-        top: auto !important;
-        right: auto !important;
-        left: auto !important;
-        bottom: auto !important;
+        position: absolute !important;
+        inset: 0 !important;
+        top: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
         width: 100% !important;
-        height: clamp(210px, 52vw, 260px) !important;
-        max-height: 270px !important;
+        height: 100% !important;
+        max-height: none !important;
         opacity: 1 !important;
-        pointer-events: auto !important;
+        pointer-events: none !important;
         z-index: 1 !important;
-        border-radius: 16px 16px 0 0 !important;
+        border-radius: 16px !important;
         margin: 0 !important;
         display: block !important;
         overflow: hidden !important;
@@ -278,7 +278,8 @@ p {
         width: 100% !important;
         height: 100% !important;
         object-fit: cover !important;
-        object-position: center 25% !important;
+        object-position: center center !important;
+        opacity: 0.25 !important;
         display: block !important;
     }
 
@@ -337,13 +338,13 @@ p {
         z-index: 3 !important;
         width: 100% !important;
         max-width: 100% !important;
-        padding: 22px 16px 28px !important;
-        background: #ffffff !important;
-        text-align: left !important;
+        padding: 24px 16px 28px !important;
+        background: transparent !important;
+        text-align: center !important;
         display: flex !important;
         flex-direction: column !important;
-        align-items: flex-start !important;
-        border-radius: 0 0 16px 16px !important;
+        align-items: center !important;
+        border-radius: 16px !important;
         box-sizing: border-box !important;
     }
 
@@ -689,7 +690,7 @@ p {
         word-break: break-word;
     }
 
-    /* Inner Page Hero Backgrounds (Mobile) */
+    /* Inner Page Hero Backgrounds (Mobile Full Cover) */
     .about-hero-bg-visual,
     .staff-hero-bg-visual,
     .chairman-hero-bg-visual,
@@ -700,7 +701,15 @@ p {
     .adv-gal-hero-curved-visual,
     .adv-blog-hero-curved-visual,
     .results-hero-visual {
-        height: clamp(200px, 52vw, 250px) !important;
+        position: absolute !important;
+        inset: 0 !important;
+        top: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-height: none !important;
     }
 
     /* =========================================================================
@@ -1425,7 +1434,15 @@ p {
     .adv-gal-hero-curved-visual,
     .adv-blog-hero-curved-visual,
     .results-hero-visual {
-        height: clamp(185px, 50vw, 220px) !important;
+        position: absolute !important;
+        inset: 0 !important;
+        top: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-height: none !important;
     }
 
     .registration-form-card {
@@ -3064,14 +3081,18 @@ html, body {
 }
 
 @media (max-width: 480px) {
-    .about-page-wrapper .about-hero-bg-visual,
-    .about-hero-section .about-hero-bg-visual {
-        height: 200px !important;
-    }
-
     .about-page-wrapper .about-hero-left-panel,
     .about-hero-section .about-hero-left-panel {
         padding: 18px 12px 20px !important;
+        background: transparent !important;
+    }
+    .about-page-wrapper .about-hero-bg-visual,
+    .about-hero-section .about-hero-bg-visual {
+        position: absolute !important;
+        inset: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        max-height: none !important;
     }
 
     .about-page-wrapper .about-hero-title {
