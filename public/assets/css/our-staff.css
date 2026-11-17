@@ -1231,12 +1231,12 @@
 
     /* Join Our Team Section on Mobile - 2-Column Format (Image Pura Left, Text Pura Right) */
     .staff-join-section {
-        min-height: 250px;
+        min-height: 195px;
         flex-direction: row;
-        align-items: flex-end;
+        align-items: center;
         justify-content: space-between;
-        padding: 18px 14px 0 0;
-        margin: 24px 0;
+        padding: 10px 12px 8px 0;
+        margin: 16px auto;
         border-radius: 18px;
         overflow: hidden;
         box-sizing: border-box;
@@ -1258,11 +1258,12 @@
         flex: 0 0 50%;
         max-width: 50%;
         min-width: 0;
-        padding: 6px 0 16px 6px;
+        padding: 2px 0 2px 6px;
         margin: 0 0 0 auto;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        align-self: center;
         justify-content: center;
         text-align: right;
         box-sizing: border-box;
@@ -1364,6 +1365,7 @@
         padding: 0;
         display: flex;
         align-items: flex-end;
+        align-self: flex-end;
         justify-content: flex-start;
         bottom: 0;
         right: auto;
@@ -1378,7 +1380,7 @@
         margin-left: -14%;
         margin-bottom: 0;
         height: auto;
-        max-height: 260px;
+        max-height: 200px;
         object-fit: contain;
         object-position: bottom left;
         display: block;

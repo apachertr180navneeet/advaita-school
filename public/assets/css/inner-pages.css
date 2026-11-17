@@ -3562,11 +3562,12 @@
 /* Mobile Media Query - 2-Column Format (Image Pura Left, Text Pura Right) */
 @media (max-width: 767px) {
     .staff-join-section {
-        min-height: 250px;
-        padding: 18px 14px 0 0;
+        min-height: 195px;
+        padding: 10px 12px 8px 0;
+        margin: 16px auto;
         display: flex;
         flex-direction: row;
-        align-items: flex-end;
+        align-items: center;
         justify-content: space-between;
         overflow: hidden;
         border-radius: 18px;
@@ -3583,11 +3584,12 @@
         flex: 0 0 50%;
         max-width: 50%;
         min-width: 0;
-        padding: 6px 0 16px 6px;
+        padding: 2px 0 2px 6px;
         margin: 0 0 0 auto;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        align-self: center;
         justify-content: center;
         text-align: right;
         box-sizing: border-box;
@@ -3670,6 +3672,7 @@
         padding: 0;
         display: flex;
         align-items: flex-end;
+        align-self: flex-end;
         justify-content: flex-start;
         bottom: 0;
         right: auto;
@@ -3683,7 +3686,7 @@
         margin-left: -14%;
         margin-bottom: 0;
         height: auto;
-        max-height: 260px;
+        max-height: 200px;
         display: block;
         object-fit: contain;
         object-position: bottom left;
@@ -4684,11 +4687,12 @@
 /* Mobile - 2-Column Format (Image Pura Left, Text Pura Right) */
 @media (max-width: 767px) {
     .admission-banner {
-        min-height: 250px;
-        padding: 18px 14px 0 0;
+        min-height: 195px;
+        padding: 10px 12px 8px 0;
+        margin: 16px auto;
         display: flex;
         flex-direction: row;
-        align-items: flex-end;
+        align-items: center;
         justify-content: space-between;
         overflow: hidden;
         border-radius: 18px;
@@ -4704,11 +4708,12 @@
         min-width: 0;
         min-height: auto;
         height: auto;
-        padding: 6px 0 16px 6px;
+        padding: 2px 0 2px 6px;
         margin: 0 0 0 auto;
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+        align-self: center;
         justify-content: center;
         text-align: right;
         box-sizing: border-box;
@@ -4804,6 +4809,7 @@
         padding: 0;
         display: flex;
         align-items: flex-end;
+        align-self: flex-end;
         justify-content: flex-start;
         bottom: 0;
         right: auto;
@@ -4817,7 +4823,7 @@
         margin-left: -14%;
         margin-bottom: 0;
         height: auto;
-        max-height: 260px;
+        max-height: 200px;
         object-fit: contain;
         object-position: bottom left;
         display: block;
@@ -4831,16 +4837,19 @@
 /* Small Mobile */
 @media (max-width: 480px) {
     .admission-banner {
-        padding: 14px 10px 0 0;
-        min-height: 220px;
+        padding: 8px 10px 6px 0;
+        min-height: 180px;
+        margin: 12px auto;
+        align-items: center;
     }
     .admission-banner .banner-content {
         min-height: auto;
         height: auto;
-        padding: 4px 0 14px 6px;
+        padding: 2px 0 2px 4px;
         margin-left: auto;
         margin-right: 0;
         align-items: flex-end;
+        align-self: center;
         text-align: right;
     }
     .admission-banner .copy {
@@ -4886,6 +4895,7 @@
         height: 100%;
         margin: 0;
         justify-content: flex-start;
+        align-self: flex-end;
         right: auto;
         left: 0;
     }
@@ -4893,7 +4903,7 @@
         width: 124%;
         max-width: none;
         margin-left: -14%;
-        max-height: 230px;
+        max-height: 185px;
         object-position: bottom left;
     }
 }
