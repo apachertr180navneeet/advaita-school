@@ -2181,22 +2181,7 @@
 }
 
 .principal-cta-building-badge {
-    align-self: center;
-    background: #ffffff;
-    padding: 4px 12px;
-    border-radius: 50px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    pointer-events: auto;
-}
-
-.principal-cta-building-badge img {
-    height: 20px;
-    width: auto;
-    object-fit: contain;
-    display: block;
+    display: none !important;
 }
 
 .principal-cta-action-buttons {

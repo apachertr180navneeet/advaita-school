@@ -288,11 +288,6 @@ require_once __DIR__.'/includes/header.php';
 
             <!-- Right Interactive Elements Overlay (Above Wave) -->
             <div class="principal-cta-right-overlay">
-                <!-- Floating School Logo Badge on Top Center of Building -->
-                <div class="principal-cta-building-badge">
-                    <img src="assets/images/logo-cropped.png" alt="Advaita School of Excellence">
-                </div>
-
                 <!-- Action Buttons Overlaid on Building -->
                 <div class="principal-cta-action-buttons">
                     <a href="index.php#admissions" class="principal-cta-btn-orange">
