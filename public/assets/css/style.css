@@ -2272,12 +2272,13 @@ html, body {
     .staff-join-section .students img {
         height: 100% !important;
         max-height: 310px !important;
-        width: auto !important;
-        max-width: 100% !important;
+        width: 110% !important;
+        max-width: none !important;
+        margin-left: -8% !important;
         object-fit: contain !important;
         object-position: bottom left !important;
         display: block !important;
-        margin: 0 auto 0 0 !important;
+        margin-right: auto !important;
     }
 
     .admission-banner .banner-content,
@@ -2292,7 +2293,7 @@ html, body {
         width: 100% !important;
         max-width: 1200px !important;
         margin: 0 auto !important;
-        padding: 0 4% 0 0 !important;
+        padding: 0 32px 0 0 !important;
         box-sizing: border-box !important;
     }
 
@@ -2304,32 +2305,35 @@ html, body {
         margin-left: auto !important;
         margin-right: 0 !important;
         padding: 25px 0 22px 0 !important;
-        text-align: left !important;
+        text-align: right !important;
         display: flex !important;
         flex-direction: column !important;
-        align-items: flex-start !important;
+        align-items: flex-end !important;
     }
 
     .admission-banner .eyebrow,
     .about-page-wrapper .admission-banner .eyebrow,
     .staff-join-section .eyebrow {
-        text-align: left !important;
+        text-align: right !important;
         margin: 0 0 5px 0 !important;
+        width: 100% !important;
     }
 
     .admission-banner .headline,
     .about-page-wrapper .admission-banner .headline,
     .staff-join-section .headline {
-        text-align: left !important;
+        text-align: right !important;
         margin: 0 0 6px 0 !important;
+        width: 100% !important;
     }
 
     .admission-banner .subtext,
     .about-page-wrapper .admission-banner .subtext,
     .staff-join-section .subtext {
-        text-align: left !important;
+        text-align: right !important;
         margin: 6px 0 16px 0 !important;
         max-width: 520px !important;
+        width: 100% !important;
     }
 
     .admission-banner .buttons,
@@ -2337,7 +2341,7 @@ html, body {
     .staff-join-section .buttons {
         display: flex !important;
         align-items: center !important;
-        justify-content: flex-start !important;
+        justify-content: flex-end !important;
         gap: 12px !important;
         flex-wrap: wrap !important;
         margin: 0 !important;
@@ -2757,12 +2761,12 @@ html, body {
         margin: 0 auto !important;
     }
 
-    /* Section 7: Admission & Repeating CTA Banners Mobile 2-Column (Image Left, Text Right) */
+    /* Section 7: Admission & Repeating CTA Banners Mobile 2-Column (Image Pura Left, Text Pura Right) */
     .admission-banner,
     .about-page-wrapper .admission-banner,
     .staff-join-section {
         min-height: 250px !important;
-        padding: 18px 12px 0 0 !important;
+        padding: 18px 14px 0 0 !important;
         display: flex !important;
         flex-direction: row !important;
         align-items: flex-end !important;
@@ -2784,23 +2788,23 @@ html, body {
         min-width: 0 !important;
         min-height: auto !important;
         height: auto !important;
-        padding: 6px 4px 18px 8px !important;
-        margin: 0 !important;
+        padding: 6px 0 18px 8px !important;
+        margin: 0 0 0 auto !important;
         display: flex !important;
         flex-direction: column !important;
-        align-items: flex-start !important;
+        align-items: flex-end !important;
         justify-content: center !important;
-        text-align: left !important;
+        text-align: right !important;
         box-sizing: border-box !important;
     }
 
     .admission-banner .copy,
     .about-page-wrapper .admission-banner .copy,
     .staff-join-section .copy-center {
-        text-align: left !important;
+        text-align: right !important;
         display: flex !important;
         flex-direction: column !important;
-        align-items: flex-start !important;
+        align-items: flex-end !important;
         justify-content: center !important;
         width: 100% !important;
         max-width: 100% !important;
@@ -2811,7 +2815,8 @@ html, body {
     .admission-banner .eyebrow,
     .about-page-wrapper .admission-banner .eyebrow,
     .staff-join-section .eyebrow {
-        text-align: left !important;
+        text-align: right !important;
+        width: 100% !important;
         font-size: clamp(8.5px, 2.5vw, 10.5px) !important;
         letter-spacing: 1px !important;
         font-weight: 800 !important;
@@ -2832,7 +2837,8 @@ html, body {
     .admission-banner .headline,
     .about-page-wrapper .admission-banner .headline,
     .staff-join-section .headline {
-        text-align: left !important;
+        text-align: right !important;
+        width: 100% !important;
         max-width: 100% !important;
         font-size: clamp(14px, 3.8vw, 18px) !important;
         line-height: 1.2 !important;
@@ -2845,7 +2851,8 @@ html, body {
     .admission-banner .subtext,
     .about-page-wrapper .admission-banner .subtext,
     .staff-join-section .subtext {
-        text-align: left !important;
+        text-align: right !important;
+        width: 100% !important;
         max-width: 100% !important;
         font-size: clamp(9.5px, 2.4vw, 11px) !important;
         line-height: 1.35 !important;
@@ -2862,10 +2869,10 @@ html, body {
     .staff-join-section .buttons {
         display: flex !important;
         flex-direction: column !important;
-        align-items: stretch !important;
+        align-items: flex-end !important;
         gap: 6px !important;
         width: 100% !important;
-        max-width: 185px !important;
+        max-width: 100% !important;
         margin: 0 !important;
         position: relative !important;
         z-index: 10 !important;
@@ -2878,6 +2885,7 @@ html, body {
     .staff-btn-outline {
         height: 33px !important;
         width: 100% !important;
+        max-width: 100% !important;
         min-width: 0 !important;
         padding: 0 10px !important;
         font-size: clamp(9.5px, 2.4vw, 11px) !important;
@@ -2911,7 +2919,7 @@ html, body {
         order: 1 !important;
         position: relative !important;
         width: 38% !important;
-        max-width: 155px !important;
+        max-width: 160px !important;
         min-width: 110px !important;
         flex-shrink: 0 !important;
         height: auto !important;
@@ -2931,14 +2939,15 @@ html, body {
     .admission-banner .students img,
     .about-page-wrapper .admission-banner .students img,
     .staff-join-section .students img {
-        width: 100% !important;
-        max-width: 150px !important;
+        width: 116% !important;
+        max-width: none !important;
+        margin-left: -13% !important;
+        margin-bottom: 0 !important;
         height: auto !important;
-        max-height: 235px !important;
+        max-height: 240px !important;
         object-fit: contain !important;
         object-position: bottom left !important;
         display: block !important;
-        margin: 0 !important;
     }
 
     .admission-banner .dot-pattern,
@@ -3158,11 +3167,11 @@ html, body {
         line-height: 1.32 !important;
     }
 
-    /* Small Mobile Admission & Repeating CTA Banners 2-Column Format */
+    /* Small Mobile Admission & Repeating CTA Banners 2-Column Format (Pura Left, Pura Right) */
     .admission-banner,
     .about-page-wrapper .admission-banner,
     .staff-join-section {
-        padding: 14px 8px 0 0 !important;
+        padding: 14px 10px 0 0 !important;
         min-height: 220px !important;
     }
 
@@ -3171,7 +3180,11 @@ html, body {
     .staff-join-section .banner-content-center {
         min-height: auto !important;
         height: auto !important;
-        padding: 4px 2px 14px 6px !important;
+        padding: 4px 0 14px 6px !important;
+        margin-left: auto !important;
+        margin-right: 0 !important;
+        align-items: flex-end !important;
+        text-align: right !important;
     }
 
     .admission-banner .headline,
@@ -3180,6 +3193,7 @@ html, body {
         font-size: clamp(13px, 3.6vw, 15px) !important;
         line-height: 1.18 !important;
         margin-bottom: 4px !important;
+        text-align: right !important;
     }
 
     .admission-banner .subtext,
@@ -3188,13 +3202,16 @@ html, body {
         font-size: 9.5px !important;
         margin-bottom: 8px !important;
         -webkit-line-clamp: 2 !important;
+        text-align: right !important;
     }
 
     .admission-banner .buttons,
     .about-page-wrapper .admission-banner .buttons,
     .staff-join-section .buttons {
-        max-width: 165px !important;
+        width: 100% !important;
+        max-width: 100% !important;
         gap: 5px !important;
+        align-items: flex-end !important;
     }
 
     .admission-banner .btn-enrol,
@@ -3204,13 +3221,15 @@ html, body {
         height: 29px !important;
         padding: 0 8px !important;
         font-size: 9px !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
 
     .admission-banner .students,
     .about-page-wrapper .admission-banner .students,
     .staff-join-section .students {
         width: 36% !important;
-        max-width: 130px !important;
+        max-width: 135px !important;
         min-width: 95px !important;
         margin: 0 !important;
         justify-content: flex-start !important;
@@ -3221,9 +3240,10 @@ html, body {
     .admission-banner .students img,
     .about-page-wrapper .admission-banner .students img,
     .staff-join-section .students img {
-        max-width: 125px !important;
-        max-height: 205px !important;
-        margin: 0 !important;
+        width: 116% !important;
+        max-width: none !important;
+        margin-left: -13% !important;
+        max-height: 210px !important;
         object-position: bottom left !important;
     }
 }
