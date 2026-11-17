@@ -289,7 +289,8 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    white-space: nowrap;
     font-size: 0.88rem;
     font-weight: 700;
     color: var(--adv-navy);
@@ -2735,7 +2736,8 @@
     display: flex;
     align-items: center;
     gap: 7px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    white-space: nowrap;
     font-size: 0.8rem;
     font-weight: 600;
     color: #334155;
@@ -2745,12 +2747,14 @@
 .chairman-hero-pillars span,
 .principal-hero-pillars span {
     display: inline-block;
+    white-space: nowrap;
 }
 
 .chairman-hero-pillars .pillar-pipe,
 .principal-hero-pillars .pillar-pipe {
-    color: #cbd5e1;
-    font-weight: 400;
+    color: #F37021;
+    font-weight: 700;
+    opacity: 0.8;
     margin: 0 1px;
     user-select: none;
 }
