@@ -2076,6 +2076,55 @@
         height: 340px;
         flex: none;
     }
+
+    .principal-message-content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .principal-message-eyebrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto 4px;
+        width: 100%;
+    }
+
+    .principal-message-title {
+        text-align: center;
+        width: 100%;
+        margin: 0 auto 8px;
+    }
+
+    .principal-salutation {
+        text-align: center;
+        width: 100%;
+        margin: 0 auto 6px;
+    }
+
+    .principal-message-content p {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .principal-quote-box {
+        text-align: center;
+        margin: 14px auto;
+    }
+
+    .principal-signature-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 14px auto 0;
+    }
 }
 
 /* ==========================================================================
@@ -2409,15 +2458,61 @@
     .principal-cta-left-panel {
         padding: 24px 16px;
         max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
     
     .principal-cta-content-inner {
         max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .principal-cta-eyebrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto 4px;
+    }
+
+    .principal-cta-title {
+        text-align: center;
+        width: 100%;
+        margin: 0 auto 6px;
+    }
+
+    .principal-cta-desc {
+        text-align: center;
+        width: 100%;
+        max-width: 580px;
+        margin: 0 auto 12px;
+    }
+
+    .principal-cta-pills-row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .principal-cta-pill-item {
+        justify-content: center;
     }
     
     .principal-cta-action-buttons {
         margin-left: 0;
         max-width: 100%;
+        justify-content: center;
     }
 }
 

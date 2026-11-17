@@ -1032,7 +1032,15 @@ p {
     }
 
     .chairman-message-eyebrow,
-    .principal-message-eyebrow,
+    .principal-message-eyebrow {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        margin: 0 auto 6px !important;
+        width: 100% !important;
+    }
+
     .chairman-message-title,
     .principal-message-title,
     .chairman-salutation,
@@ -1345,6 +1353,66 @@ p {
         text-align: center !important;
         padding: 24px 18px !important;
         width: 100% !important;
+    }
+
+    /* Principal Desk Campus Visit CTA Center-Aligned on Mobile */
+    .principal-cta-banner-section,
+    .principal-cta-left-panel {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .principal-cta-content-inner {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .principal-cta-eyebrow {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        margin: 0 auto 6px !important;
+        width: 100% !important;
+    }
+
+    .principal-cta-title {
+        text-align: center !important;
+        margin: 0 auto 8px !important;
+        width: 100% !important;
+        display: block !important;
+    }
+
+    .principal-cta-desc {
+        text-align: center !important;
+        margin: 0 auto 14px !important;
+        width: 100% !important;
+        max-width: 580px !important;
+    }
+
+    .principal-cta-pills-row {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .principal-cta-pill-item {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
     }
 
     /* All CTA Button Groups in 2-Column Format on Mobile (Matching About Us Banner) */
@@ -3186,6 +3254,16 @@ html, body {
         font-weight: 700 !important;
         opacity: 0.8 !important;
         margin: 0 1px !important;
+    }
+
+    .principal-cta-pills-row {
+        gap: 6px !important;
+        justify-content: center !important;
+    }
+
+    .principal-cta-pill-item {
+        font-size: 0.72rem !important;
+        padding: 5px 10px !important;
     }
 
     .about-page-wrapper .about-hero-desc {
