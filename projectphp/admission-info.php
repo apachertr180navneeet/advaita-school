@@ -17,9 +17,11 @@ require_once __DIR__.'/includes/header.php';
          ========================================================================= -->
     <section class="admission-hero-section">
         <div class="admission-hero-canvas">
-            <!-- Hero Students Visual -->
+            <!-- Hero Visual: School Campus Building -->
             <div class="admission-hero-bg-visual" aria-hidden="true">
-                <img src="assets/images/about-cta-students-clean.png?v=<?php echo filemtime(__DIR__.'/assets/images/about-cta-students-clean.png'); ?>" alt="Advaita Students" class="admission-hero-bg-img" width="1024" height="682">
+                <div class="admission-hero-building-layer">
+                    <img src="assets/images/about-hero-building.jpg?v=<?php echo filemtime(__DIR__.'/assets/images/about-hero-building.jpg'); ?>" alt="Advaita Campus Building" class="admission-hero-building-img" width="1024" height="731">
+                </div>
             </div>
 
             <!-- SVG Wave Overlay for Smooth Translucent Backdrop -->

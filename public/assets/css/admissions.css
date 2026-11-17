@@ -3096,22 +3096,9 @@ textarea.form-control:focus {
     opacity: 0.85;
 }
 
-.admission-hero-students-layer {
-    position: absolute;
-    right: 20px;
-    bottom: 0;
-    height: 94%;
-    z-index: 3;
-    pointer-events: none;
-    display: flex;
-    align-items: flex-end;
-}
-
-.admission-hero-students-layer img {
-    height: 100%;
-    width: auto;
-    object-fit: contain;
-    filter: drop-shadow(0 10px 24px rgba(8, 59, 122, 0.18));
+.admission-hero-students-layer,
+.admission-hero-students {
+    display: none !important;
 }
 
 /* 5-Step Process Card Overrides */

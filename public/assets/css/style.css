@@ -3447,3 +3447,9 @@ html, body {
     }
 }
 
+/* Remove student cutout overlay in admission info hero */
+.admission-hero-students-layer,
+.admission-hero-students {
+    display: none !important;
+}
+

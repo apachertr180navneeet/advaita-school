@@ -27,13 +27,10 @@
          ========================================================================= -->
     <section class="admission-hero-section">
         <div class="admission-hero-canvas">
-            <!-- Hero Composite Visual: School Campus Building + 3 Students Cutout (Crystal Clear Full HD) -->
+            <!-- Hero Visual: School Campus Building -->
             <div class="admission-hero-bg-visual" aria-hidden="true">
                 <div class="admission-hero-building-layer">
                     <img src="{{ asset($content['hero_building_image'] ?? 'assets/images/about-hero-building.jpg') }}" alt="Advaita Campus Building" class="admission-hero-building-img" width="1024" height="731">
-                </div>
-                <div class="admission-hero-students-layer">
-                    <img src="{{ asset($content['hero_students_image'] ?? 'assets/images/about-cta-students-clean.png') }}" alt="Advaita Students" width="1024" height="682">
                 </div>
             </div>
 
