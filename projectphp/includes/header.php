@@ -29,7 +29,7 @@ $pageTitle = $pageTitle ?? 'Advaita School of Excellence - Sanmati Sevabhavi San
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/footer.css?v=<?php echo filemtime(__DIR__.'/../assets/css/footer.css'); ?>">
 </head>
-<body>
+<body class="has-floating-bar">
     <!-- =========================================================================
          WEBSITE PRELOADER (Circular Swan Emblem with Progress Ring)
          ========================================================================= -->

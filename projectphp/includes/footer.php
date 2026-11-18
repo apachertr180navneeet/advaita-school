@@ -191,11 +191,14 @@
             <strong>Admissions 2026–27 Open</strong>
             <span style="white-space: nowrap;">Limited Seats &bull; Nursery to Class&nbsp;10</span>
         </div>
-        <a href="admission-info.php#quick-enquiry" class="btn-fme-action" aria-label="Quick Enquiry">
+        <button type="button" onclick="openEnquiryModal()" class="btn-fme-action" aria-label="Open Quick Enquiry">
             <i class="fa-solid fa-bolt"></i>
             <span>Quick Enquiry</span>
-        </a>
+        </button>
     </div>
+
+    <!-- Global Quick Admission Enquiry Modal -->
+    <?php include_once __DIR__.'/enquiry-modal.php'; ?>
 
     <!-- Scripts -->
     <script src="assets/js/header.js?v=<?php echo filemtime(__DIR__.'/../assets/js/header.js'); ?>"></script>

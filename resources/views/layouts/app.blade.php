@@ -43,7 +43,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/footer.css') }}?v={{ file_exists(public_path('assets/css/footer.css')) ? filemtime(public_path('assets/css/footer.css')) : '1.0' }}">
 @yield('styles')
 </head>
-<body>
+<body class="has-floating-bar">
     <!-- =========================================================================
          WEBSITE PRELOADER (Circular Swan Emblem with Progress Ring)
          ========================================================================= -->
