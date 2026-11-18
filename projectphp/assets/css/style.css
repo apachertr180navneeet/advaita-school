@@ -2578,9 +2578,11 @@ html, body {
     }
     .floating-mobile-enquiry-bar .fme-text strong {
         font-size: 11px !important;
+        white-space: nowrap !important;
     }
     .floating-mobile-enquiry-bar .fme-text span {
         font-size: 9.2px !important;
+        white-space: nowrap !important;
     }
     .floating-mobile-enquiry-bar .btn-fme-action {
         padding: 6px 10px !important;
@@ -4006,24 +4008,33 @@ html, body {
 
     .aieb-content {
         width: 100% !important;
-        text-align: left !important;
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
     }
 
     .aieb-badge {
         font-size: clamp(9.5px, 2.7vw, 11px) !important;
         letter-spacing: 0.2px !important;
-        padding: 4px 10px !important;
+        padding: 4px 12px !important;
         border-radius: 9999px !important;
-        margin-bottom: 8px !important;
+        margin: 0 auto 8px !important;
         max-width: 100% !important;
         box-sizing: border-box !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
     }
 
     .aieb-lead {
-        font-size: clamp(13px, 3.4vw, 14.5px) !important;
-        line-height: 1.55 !important;
+        font-size: clamp(12.5px, 3.2vw, 14px) !important;
+        line-height: 1.5 !important;
         color: #F1F5F9 !important;
-        margin: 0 !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+        max-width: 600px !important;
     }
 
     .aieb-buttons {
@@ -4089,12 +4100,66 @@ html, body {
    ========================================================================== */
 
 /* 1. Hero Section */
+.admission-page-wrapper .admission-hero-canvas {
+    background: linear-gradient(180deg, #F0F7FD 0%, #FFFFFF 100%) !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    min-height: clamp(380px, 28vw, 440px) !important;
+    border-radius: var(--adv-radius-xl, 22px) !important;
+    overflow: hidden !important;
+    border: 1px solid #E0EFFA !important;
+    box-shadow: 0 4px 20px rgba(8, 59, 122, 0.05) !important;
+}
+
+.admission-page-wrapper .admission-hero-bg-visual {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    opacity: 0.22 !important;
+    z-index: 1 !important;
+    pointer-events: none !important;
+    overflow: hidden !important;
+    display: block !important;
+}
+
+.admission-page-wrapper .admission-hero-building-layer {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.admission-page-wrapper .admission-hero-building-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    object-position: center !important;
+    filter: saturate(1.1) brightness(1.08) !important;
+}
+
+.admission-page-wrapper .admission-hero-wave-overlay {
+    display: none !important;
+}
+
 .admission-page-wrapper .admission-hero-left-panel {
+    position: relative !important;
+    z-index: 4 !important;
+    width: 100% !important;
+    max-width: 100% !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
     text-align: center !important;
+    padding: clamp(32px, 5vw, 56px) 24px !important;
+    margin: 0 auto !important;
 }
 
 .admission-page-wrapper .admission-hero-content-inner {
@@ -4104,7 +4169,7 @@ html, body {
     text-align: center !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    max-width: 620px !important;
+    max-width: 760px !important;
     width: 100% !important;
 }
 
@@ -4112,30 +4177,38 @@ html, body {
     display: inline-flex !important;
     justify-content: center !important;
     text-align: center !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin: 0 auto 12px !important;
 }
 
 .admission-page-wrapper .admission-eyebrow {
     text-align: center !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin: 0 auto 10px !important;
     display: block !important;
 }
 
 .admission-page-wrapper .admission-hero-title {
+    font-family: var(--adv-font-sans, "Outfit", sans-serif) !important;
+    font-size: clamp(1.85rem, 3.4vw, 2.75rem) !important;
+    font-weight: 800 !important;
+    color: #083B7A !important;
+    line-height: 1.2 !important;
     text-align: center !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    margin: 0 auto 14px !important;
+    max-width: 800px !important;
     width: 100% !important;
 }
 
 .admission-page-wrapper .admission-hero-desc {
+    font-size: clamp(0.95rem, 1.2vw, 1.05rem) !important;
+    color: #083B7A !important;
+    font-weight: 500 !important;
+    line-height: 1.65 !important;
     text-align: center !important;
     margin-left: auto !important;
     margin-right: auto !important;
-    max-width: 580px !important;
+    max-width: 680px !important;
     width: 100% !important;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8) !important;
 }
 
 /* 2. All Section Headers across the page */
@@ -4185,29 +4258,104 @@ html, body {
     max-width: 680px !important;
 }
 
+.admission-features-grid,
+.admission-page-wrapper .admission-features-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 12px !important;
+    width: 100% !important;
+}
+
 .admission-page-wrapper .admission-features-grid .adm-feature-card {
-    text-align: center !important;
+    background: #ffffff !important;
+    border: 1.5px solid #E2E8F0 !important;
+    border-radius: 14px !important;
+    padding: 16px 12px 14px !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    justify-content: center !important;
+    justify-content: flex-start !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+    box-shadow: 0 2px 8px rgba(8, 59, 122, 0.03) !important;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease !important;
+    height: 100% !important;
+}
+
+.admission-page-wrapper .adm-feature-card:hover {
+    border-color: #FED7AA !important;
+    box-shadow: 0 6px 16px rgba(243, 112, 33, 0.08) !important;
+    transform: translateY(-2px) !important;
 }
 
 .admission-page-wrapper .adm-feature-card .afc-icon {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 10px !important;
+    background: #FFF7ED !important;
+    color: #F37021 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1.05rem !important;
     margin: 0 auto 10px !important;
+    flex-shrink: 0 !important;
 }
 
 .admission-page-wrapper .adm-feature-card .afc-text {
     text-align: center !important;
     width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
 }
 
 .admission-page-wrapper .afc-title {
+    font-family: var(--adv-font-sans, "Outfit", sans-serif) !important;
+    font-size: clamp(12.5px, 3.2vw, 15px) !important;
+    font-weight: 800 !important;
+    color: #083B7A !important;
+    line-height: 1.25 !important;
+    margin: 0 0 4px !important;
     text-align: center !important;
 }
 
 .admission-page-wrapper .afc-desc {
+    font-size: clamp(10.5px, 2.7vw, 12px) !important;
+    color: #64748b !important;
+    line-height: 1.35 !important;
+    margin: 0 !important;
     text-align: center !important;
+}
+
+@media (max-width: 480px) {
+    .admission-features-grid,
+    .admission-page-wrapper .admission-features-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 8px !important;
+    }
+
+    .admission-page-wrapper .adm-feature-card {
+        padding: 12px 8px 10px !important;
+        border-radius: 12px !important;
+    }
+
+    .admission-page-wrapper .adm-feature-card .afc-icon {
+        width: 34px !important;
+        height: 34px !important;
+        font-size: 0.95rem !important;
+        margin: 0 auto 8px !important;
+    }
+
+    .admission-page-wrapper .afc-title {
+        font-size: clamp(11.5px, 3vw, 13px) !important;
+        margin-bottom: 3px !important;
+    }
+
+    .admission-page-wrapper .afc-desc {
+        font-size: clamp(9.5px, 2.5vw, 11px) !important;
+        line-height: 1.3 !important;
+    }
 }
 
 /* 4. Section 4: Why Parents Choose Advaita (Pillars & Bottom Strip) */

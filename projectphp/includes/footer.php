@@ -189,7 +189,7 @@
     <div class="floating-mobile-enquiry-bar" id="floatingMobileEnquiry" aria-label="Quick Mobile Admission Enquiry">
         <div class="fme-text">
             <strong>Admissions 2026–27 Open</strong>
-            <span>Limited Seats • Nursery to Class 10</span>
+            <span style="white-space: nowrap;">Limited Seats &bull; Nursery to Class&nbsp;10</span>
         </div>
         <a href="admission-info.php#quick-enquiry" class="btn-fme-action" aria-label="Quick Enquiry">
             <i class="fa-solid fa-bolt"></i>
