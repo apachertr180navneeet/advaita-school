@@ -2342,13 +2342,99 @@ html, body {
 
     /* Safe Bottom Clearance for Sticky Mobile Bottom Bars */
     .floating-mobile-enquiry-bar {
-        position: fixed !important;
-        bottom: 0 !important;
-        left: 0 !important;
-        right: 0 !important;
-        z-index: 9999 !important;
         display: flex !important;
-        box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.12) !important;
+        position: fixed !important;
+        bottom: calc(14px + env(safe-area-inset-bottom, 0px)) !important;
+        left: 12px !important;
+        right: 12px !important;
+        width: calc(100% - 24px) !important;
+        max-width: 440px !important;
+        margin: 0 auto !important;
+        z-index: 9999 !important;
+        background: rgba(8, 59, 122, 0.96) !important;
+        backdrop-filter: blur(12px) !important;
+        -webkit-backdrop-filter: blur(12px) !important;
+        border: 1.5px solid rgba(243, 112, 33, 0.85) !important;
+        border-radius: 9999px !important;
+        padding: 8px 10px 8px 16px !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 10px !important;
+        box-shadow: 0 10px 30px rgba(8, 59, 122, 0.35), 0 2px 10px rgba(0, 0, 0, 0.25) !important;
+        box-sizing: border-box !important;
+        transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.35s ease, visibility 0.35s !important;
+        pointer-events: auto !important;
+        visibility: visible !important;
+        transform: translateY(0) scale(1) !important;
+        opacity: 1 !important;
+    }
+
+    .floating-mobile-enquiry-bar.fme-hidden {
+        transform: translateY(140%) scale(0.92) !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        visibility: hidden !important;
+    }
+
+    .floating-mobile-enquiry-bar .fme-text {
+        display: flex !important;
+        flex-direction: column !important;
+        min-width: 0 !important;
+        flex: 1 1 auto !important;
+        text-align: left !important;
+    }
+
+    .floating-mobile-enquiry-bar .fme-text strong {
+        color: #FFFFFF !important;
+        font-size: clamp(12px, 3.4vw, 13.5px) !important;
+        font-weight: 800 !important;
+        line-height: 1.2 !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        letter-spacing: -0.2px !important;
+        margin-bottom: 2px !important;
+    }
+
+    .floating-mobile-enquiry-bar .fme-text span {
+        color: #FED7AA !important;
+        font-size: clamp(10px, 2.7vw, 11.5px) !important;
+        font-weight: 600 !important;
+        line-height: 1.2 !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        letter-spacing: -0.1px !important;
+    }
+
+    .floating-mobile-enquiry-bar .btn-fme-action {
+        background: linear-gradient(135deg, #F37021 0%, #EA580C 100%) !important;
+        color: #FFFFFF !important;
+        font-size: clamp(11.5px, 3vw, 12.5px) !important;
+        font-weight: 800 !important;
+        padding: 8px 14px !important;
+        border-radius: 9999px !important;
+        border: none !important;
+        cursor: pointer !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 6px !important;
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+        box-shadow: 0 3px 12px rgba(243, 112, 33, 0.45) !important;
+        text-decoration: none !important;
+        transition: transform 0.15s ease, box-shadow 0.15s ease !important;
+        line-height: 1.2 !important;
+    }
+
+    .floating-mobile-enquiry-bar .btn-fme-action:active {
+        transform: scale(0.96) !important;
+    }
+
+    .floating-mobile-enquiry-bar .btn-fme-action i {
+        font-size: 11px !important;
+        color: #FFFFFF !important;
     }
 
     body.has-floating-bar {
@@ -2357,18 +2443,37 @@ html, body {
 
     /* Adjust Floating WhatsApp Button to not overlap bottom sticky bar */
     .adv-floating-whatsapp-btn {
-        bottom: 76px !important;
+        bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important;
         right: 14px !important;
     }
 
     .adv-scroll-top-btn {
-        bottom: 130px !important;
+        bottom: calc(130px + env(safe-area-inset-bottom, 0px)) !important;
         right: 14px !important;
     }
 }
 
 /* 4. Extra Narrow Screens (<= 360px - e.g. Galaxy Fold, iPhone SE 1st gen) */
 @media (max-width: 360px) {
+    .floating-mobile-enquiry-bar {
+        padding: 7px 8px 7px 12px !important;
+        gap: 8px !important;
+        left: 8px !important;
+        right: 8px !important;
+        width: calc(100% - 16px) !important;
+    }
+    .floating-mobile-enquiry-bar .fme-text strong {
+        font-size: 11px !important;
+    }
+    .floating-mobile-enquiry-bar .fme-text span {
+        font-size: 9.2px !important;
+    }
+    .floating-mobile-enquiry-bar .btn-fme-action {
+        padding: 6px 10px !important;
+        font-size: 10.5px !important;
+        gap: 4px !important;
+    }
+
     .adv-container,
     .adv-container-narrow,
     .adv-container-medium {
@@ -3454,5 +3559,197 @@ html, body {
 .admission-hero-students-layer,
 .admission-hero-students {
     display: none !important;
+}
+
+/* ==========================================================================
+   Global Sticky Bottom Floating Mobile Admission Enquiry Capsule
+   ========================================================================== */
+.floating-mobile-enquiry-bar {
+    display: none !important;
+}
+
+/* ==========================================================================
+   Global Quick Admission Enquiry Modal
+   ========================================================================== */
+.adv-enquiry-modal-backdrop {
+    position: fixed !important;
+    inset: 0 !important;
+    background: rgba(8, 59, 122, 0.65) !important;
+    backdrop-filter: blur(6px) !important;
+    -webkit-backdrop-filter: blur(6px) !important;
+    z-index: 99999 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 16px !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 0.25s ease, visibility 0.25s ease !important;
+}
+
+.adv-enquiry-modal-backdrop.active {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.adv-enquiry-modal-card {
+    background: #ffffff !important;
+    border-radius: 20px !important;
+    width: 100% !important;
+    max-width: 520px !important;
+    box-shadow: 0 20px 50px rgba(8, 59, 122, 0.3) !important;
+    overflow: hidden !important;
+    transform: translateY(20px) scale(0.96) !important;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    max-height: 92vh !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.adv-enquiry-modal-backdrop.active .adv-enquiry-modal-card {
+    transform: translateY(0) scale(1) !important;
+}
+
+.aem-header {
+    background: linear-gradient(135deg, #083B7A 0%, #05244C 100%) !important;
+    color: #ffffff !important;
+    padding: 18px 24px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-shrink: 0 !important;
+}
+
+.aem-title {
+    font-family: var(--adv-font-sans, "Outfit", sans-serif) !important;
+    font-size: 1.18rem !important;
+    font-weight: 800 !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    color: #ffffff !important;
+}
+
+.aem-close-btn {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border: none !important;
+    color: #ffffff !important;
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    font-size: 0.95rem !important;
+    transition: all 0.2s ease !important;
+}
+
+.aem-close-btn:hover {
+    background: #F37021 !important;
+    color: #ffffff !important;
+}
+
+.aem-body {
+    padding: 22px 24px !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+}
+
+.adv-enquiry-modal-backdrop .input-with-icon-wrap {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.adv-enquiry-modal-backdrop .input-with-icon-wrap i {
+    position: absolute !important;
+    left: 14px !important;
+    color: #94A3B8 !important;
+    font-size: 14px !important;
+    pointer-events: none !important;
+}
+
+.adv-enquiry-modal-backdrop .input-with-icon-wrap .form-control {
+    padding-left: 40px !important;
+    height: 44px !important;
+    border-radius: 10px !important;
+    border: 1.5px solid #E2E8F0 !important;
+    font-size: 13.5px !important;
+    width: 100% !important;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.adv-enquiry-modal-backdrop .input-with-icon-wrap select.form-control {
+    cursor: pointer !important;
+}
+
+.adv-enquiry-modal-backdrop textarea.form-control {
+    border-radius: 10px !important;
+    border: 1.5px solid #E2E8F0 !important;
+    font-size: 13.5px !important;
+    padding: 10px 14px !important;
+    width: 100% !important;
+}
+
+.adv-enquiry-modal-backdrop .form-control:focus {
+    border-color: #083B7A !important;
+    box-shadow: 0 0 0 3px rgba(8, 59, 122, 0.12) !important;
+    outline: none !important;
+}
+
+.adv-enquiry-modal-backdrop .btn-apc-primary {
+    background: linear-gradient(135deg, #F37021 0%, #EA580C 100%) !important;
+    color: #FFFFFF !important;
+    font-weight: 800 !important;
+    font-size: 14px !important;
+    padding: 12px 20px !important;
+    border-radius: 9999px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    text-decoration: none !important;
+    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+    box-shadow: 0 4px 14px rgba(243, 112, 33, 0.35) !important;
+}
+
+.adv-enquiry-modal-backdrop .btn-apc-primary:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 18px rgba(243, 112, 33, 0.45) !important;
+    color: #FFFFFF !important;
+}
+
+.aem-success-box {
+    text-align: center !important;
+    padding: 16px 8px !important;
+}
+
+.asb-icon-wrap {
+    width: 60px !important;
+    height: 60px !important;
+    background: #ECFDF5 !important;
+    color: #10B981 !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 26px !important;
+    margin-bottom: 14px !important;
+}
+
+.asb-title {
+    font-size: 1.25rem !important;
+    font-weight: 800 !important;
+    color: #083B7A !important;
+    margin-bottom: 8px !important;
+}
+
+.asb-desc {
+    color: #475569 !important;
+    font-size: 13.5px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 20px !important;
 }
 

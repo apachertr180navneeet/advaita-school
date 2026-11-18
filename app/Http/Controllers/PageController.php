@@ -533,7 +533,7 @@ class PageController extends Controller
             'process_desc' => Setting::get('admission_process_desc', 'Admission is open to all children, irrespective of caste, creed or community, and decisions are communicated transparently, on merit and fit.'),
 
             // Guidelines Section
-            'guidelines_eyebrow' => Setting::get('admission_guidelines_eyebrow', '— ADMISSION INFORMATION —'),
+            'guidelines_eyebrow' => Setting::get('admission_guidelines_eyebrow', 'ADMISSION GUIDELINES'),
             'guidelines_title' => Setting::get('admission_guidelines_title', 'Guidelines for a smooth start at'),
             'guidelines_highlight' => Setting::get('admission_guidelines_highlight', 'Advaita.'),
             'guidelines_desc' => Setting::get('admission_guidelines_desc', 'We welcome applications from aspiring learners who are eager to grow in a nurturing and future-focused environment. Our admission process is fair, transparent and designed to ensure the best fit for every child.'),
@@ -551,7 +551,7 @@ class PageController extends Controller
 
             // Documents Required Section
             'docs_eyebrow' => Setting::get('admission_docs_eyebrow', '— DOCUMENTS REQUIRED —'),
-            'docs_title' => Setting::get('admission_docs_title', 'Keep these ready for a'),
+            'docs_title' => Setting::get('admission_docs_title', 'Documents Required for a'),
             'docs_highlight' => Setting::get('admission_docs_highlight', 'faster process.'),
             'docs_desc' => Setting::get('admission_docs_desc', 'Please carry self-attested photocopies of the following documents at the time of admission.'),
             'docs_image' => Setting::get('admission_docs_image', 'assets/images/admission-required-documents.jpg'),

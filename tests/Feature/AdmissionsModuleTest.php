@@ -33,16 +33,9 @@ class AdmissionsModuleTest extends TestCase
         $response->assertSee('Three Passport-size Photographs of the Student');
         $response->assertSee('Caste Certificate (If Applicable)');
         $response->assertSee('UDISE Number of the Previous / Current School');
-        $response->assertSee('Talk to an Admission Counsellor');
         $response->assertSee('Ms. Vaishnavi');
-        $response->assertSee('tel:9689898973');
-        $response->assertSee('tel:9146066216');
-        $response->assertSee('Get Directions to School');
-        $response->assertSee('https://www.google.com/maps/dir/?api=1', false);
-        $response->assertSee('destination=Advaita+School+of+Excellence', false);
-        $response->assertSee('WhatsApp Enquiry');
-        $response->assertSee('https://wa.me/919689898973?text=', false);
-        $response->assertSee('Transport Facilities');
+        $response->assertSee('9689898973');
+        $response->assertSee('WhatsApp Admissions');
         $response->assertSee('Quick Admission Enquiry');
 
         $responseFee = $this->get(route('fee-structure'));

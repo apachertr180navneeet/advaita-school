@@ -184,7 +184,7 @@
 
                 <!-- Right Column: Information & 4-Grid Cards -->
                 <div class="admission-split-content">
-                    <div class="admission-eyebrow">{{ $content['guidelines_eyebrow'] ?? 'ADMISSION INFORMATION' }}</div>
+                    <div class="admission-eyebrow">{{ $content['guidelines_eyebrow'] ?? 'ADMISSION GUIDELINES' }}</div>
                     <h2 class="admission-section-title text-start">
                         {{ $content['guidelines_title'] ?? 'Guidelines for a smooth start at' }}
                         <span class="highlight-serif">{{ $content['guidelines_highlight'] ?? 'Advaita.' }}</span>
@@ -334,7 +334,7 @@
             <div class="admission-section-header">
                 <div class="admission-eyebrow">{{ $content['docs_eyebrow'] ?? 'DOCUMENTS REQUIRED' }}</div>
                 <h2 class="admission-section-title">
-                    {{ $content['docs_title'] ?? 'Keep these ready for a' }}
+                    {{ $content['docs_title'] ?? 'Documents Required for a' }}
                     <span class="highlight-serif">{{ $content['docs_highlight'] ?? 'faster process.' }}</span>
                 </h2>
                 <p class="admission-section-desc">
@@ -858,144 +858,13 @@
         </div>
     </div>
 
-    <!-- =========================================================================
-         9. INTERACTIVE QUICK ENQUIRY MODAL POPUP
-         ========================================================================= -->
-    <div id="advEnquiryModal" class="adv-enquiry-modal-backdrop" aria-hidden="true">
-        <div class="adv-enquiry-modal-card" role="dialog" aria-modal="true" aria-labelledby="enquiryModalTitle">
-            <div class="aem-header">
-                <h3 class="aem-title" id="enquiryModalTitle">
-                    <i class="fa-solid fa-paper-plane text-orange"></i>
-                    <span>Quick Admission Enquiry</span>
-                </h3>
-                <button type="button" class="aem-close-btn" onclick="closeEnquiryModal()" aria-label="Close dialog">
-                    <i class="fa-solid fa-xmark"></i>
-                </button>
-            </div>
-            <div class="aem-body" id="enquiryModalBody">
-                <!-- Live Alert Container -->
-                <div id="modalAlertBox" style="display: none;" class="mb-14"></div>
-
-                <form action="{{ route('admission-enquiry.store') }}" method="POST" id="quickAdmissionModalForm">
-                    @csrf
-
-                    <!-- Honeypot anti-spam -->
-                    <div style="display:none !important;" aria-hidden="true">
-                        <input type="text" name="website" tabindex="-1" autocomplete="off">
-                        <input type="text" name="security_token_trap" tabindex="-1" autocomplete="off">
-                    </div>
-
-                    <input type="hidden" name="academic_year" value="{{ $academicYear ?? '2026-27' }}">
-
-                    <div class="mb-14">
-                        <label class="form-label font-bold text-navy fs-13 mb-4" for="modal_parent_name">
-                            Parent / Guardian Name <span class="text-danger">*</span>
-                        </label>
-                        <div class="input-with-icon-wrap">
-                            <i class="fa-regular fa-user"></i>
-                            <input type="text" id="modal_parent_name" name="parent_name" 
-                                   class="form-control" placeholder="e.g. Rameshwar Patil" required maxlength="255">
-                        </div>
-                    </div>
-
-                    <div class="mb-14">
-                        <label class="form-label font-bold text-navy fs-13 mb-4" for="modal_ward_name">
-                            Ward / Child Name <span class="text-danger">*</span>
-                        </label>
-                        <div class="input-with-icon-wrap">
-                            <i class="fa-solid fa-child"></i>
-                            <input type="text" id="modal_ward_name" name="ward_name" 
-                                   class="form-control" placeholder="e.g. Aarav Patil" required maxlength="255">
-                        </div>
-                    </div>
-
-                    <div class="mb-14">
-                        <label class="form-label font-bold text-navy fs-13 mb-4" for="modal_mobile_number">
-                            Mobile Number (10 Digits) <span class="text-danger">*</span>
-                        </label>
-                        <div class="input-with-icon-wrap">
-                            <i class="fa-solid fa-phone"></i>
-                            <input type="tel" id="modal_mobile_number" name="mobile_number" 
-                                   class="form-control" placeholder="e.g. 9822012345" required pattern="[6-9][0-9]{9}" maxlength="10">
-                        </div>
-                    </div>
-
-                    <div class="mb-14">
-                        <label class="form-label font-bold text-navy fs-13 mb-4" for="modal_applying_class">
-                            Target Class
-                        </label>
-                        <div class="input-with-icon-wrap">
-                            <i class="fa-solid fa-graduation-cap"></i>
-                            <select id="modal_applying_class" name="applying_class" class="form-control">
-                                <option value="">Select target class...</option>
-                                @foreach($classList ?? ['Nursery', 'LKG', 'UKG', 'Class 1', 'Class 2', 'Class 3', 'Class 4', 'Class 5', 'Class 6', 'Class 7', 'Class 8', 'Class 9', 'Class 10'] as $cls)
-                                <option value="{{ $cls }}">{{ $cls }}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="mb-20">
-                        <label class="form-label font-bold text-navy fs-13 mb-4" for="modal_notes">
-                            Specific Questions / Notes (Optional)
-                        </label>
-                        <textarea id="modal_notes" name="notes" rows="2" class="form-control" 
-                                  placeholder="e.g. Transport route, school timings, admission schedule..."></textarea>
-                    </div>
-
-                    <button type="submit" id="modalSubmitBtn" class="btn-apc-primary w-100 justify-content-center" style="border: none; cursor: pointer;">
-                        <i class="fa-solid fa-paper-plane" id="modalSubmitIcon"></i>
-                        <span id="modalSubmitText">Submit Enquiry</span>
-                    </button>
-
-                    <div class="text-center mt-12 text-muted fs-11">
-                        <i class="fa-solid fa-shield-halved text-success me-1"></i> Your contact details will be kept confidential.
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- Sticky Bottom Floating Action Bar for Mobile Parents -->
-    <div class="floating-mobile-enquiry-bar" aria-label="Quick Mobile Admission Enquiry">
-        <div class="fme-text">
-            <strong>Admissions {{ $academicYear ?? '2026–27' }} Open</strong>
-            <span>Limited Seats • Nursery to Class 10</span>
-        </div>
-        <button type="button" onclick="openEnquiryModal()" class="btn-fme-action">
-            <i class="fa-solid fa-bolt"></i>
-            <span>Quick Enquiry</span>
-        </button>
-    </div>
-
 </main>
 @endsection
 
 @section('scripts')
 <script>
 // ==========================================
-// 1. Quick Enquiry Modal Management & AJAX
-// ==========================================
-function openEnquiryModal() {
-    const modal = document.getElementById('advEnquiryModal');
-    if (modal) {
-        modal.classList.add('active');
-        modal.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden';
-    }
-}
-
-function closeEnquiryModal() {
-    const modal = document.getElementById('advEnquiryModal');
-    if (modal) {
-        modal.classList.remove('active');
-        modal.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-    }
-}
-
-// ==========================================
-// 2. Fee Structure Interactive Modal
+// 1. Fee Structure Interactive Modal
 // ==========================================
 function openFeeModal(tabName = 'primary') {
     const modal = document.getElementById('advFeeModal');
@@ -1043,103 +912,15 @@ function switchFeeTab(tabName) {
     }
 }
 
-// ==========================================
-// 3. Modal Backdrop & Escape Key Handlers
-// ==========================================
-document.getElementById('advEnquiryModal')?.addEventListener('click', function(e) {
-    if (e.target === this) closeEnquiryModal();
-});
-
+// Fee Modal Backdrop & Escape Key Handlers
 document.getElementById('advFeeModal')?.addEventListener('click', function(e) {
     if (e.target === this) closeFeeModal();
 });
 
 document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
-        closeEnquiryModal();
         closeFeeModal();
     }
-});
-
-// ==========================================
-// 5. AJAX Form Submission with Feedback
-// ==========================================
-document.getElementById('quickAdmissionModalForm')?.addEventListener('submit', function(e) {
-    e.preventDefault();
-    const form = this;
-    const submitBtn = document.getElementById('modalSubmitBtn');
-    const submitIcon = document.getElementById('modalSubmitIcon');
-    const submitText = document.getElementById('modalSubmitText');
-    const alertBox = document.getElementById('modalAlertBox');
-    const bodyBox = document.getElementById('enquiryModalBody');
-
-    // UI loading state
-    if (submitBtn) submitBtn.disabled = true;
-    if (submitIcon) submitIcon.className = 'fa-solid fa-spinner fa-spin';
-    if (submitText) submitText.innerText = 'Submitting...';
-
-    const formData = new FormData(form);
-
-    fetch(form.action, {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'X-Requested-With': 'XMLHttpRequest',
-            'Accept': 'application/json'
-        }
-    })
-    .then(response => {
-        if (!response.ok) {
-            return response.json().then(data => { throw data; });
-        }
-        return response.json();
-    })
-    .then(data => {
-        const parentName = formData.get('parent_name') || 'Parent';
-        const wardName = formData.get('ward_name') || 'Child';
-        const phone = '{{ $counsellorPhone ?? "9689898973" }}';
-        const counsellor = '{{ $counsellorName ?? "Ms. Vaishnavi" }}';
-
-        if (bodyBox) {
-            bodyBox.innerHTML = `
-                <div class="aem-success-box">
-                    <div class="asb-icon-wrap">
-                        <i class="fa-solid fa-check"></i>
-                    </div>
-                    <h4 class="asb-title">Enquiry Received!</h4>
-                    <p class="asb-desc">
-                        Thank you, <strong>${parentName}</strong>! Your admission enquiry for <strong>${wardName}</strong> has been successfully registered. Our admission coordinator (<strong>${counsellor}</strong>) will contact you shortly.
-                    </p>
-                    <div class="d-flex flex-column gap-10">
-                        <a href="https://wa.me/91${phone}?text=Hello%20${encodeURIComponent(counsellor)},%20I%20have%20submitted%20an%20admission%20enquiry%20for%20${encodeURIComponent(wardName)}." target="_blank" class="btn-apc-primary justify-content-center">
-                            <i class="fa-brands fa-whatsapp"></i>
-                            <span>Chat on WhatsApp</span>
-                        </a>
-                        <button type="button" onclick="closeEnquiryModal()" class="btn-cta-action blue-btn justify-content-center py-10">
-                            <span>Done</span>
-                        </button>
-                    </div>
-                </div>
-            `;
-        }
-    })
-    .catch(error => {
-        if (submitBtn) submitBtn.disabled = false;
-        if (submitIcon) submitIcon.className = 'fa-solid fa-paper-plane';
-        if (submitText) submitText.innerText = 'Submit Enquiry';
-
-        if (alertBox) {
-            let errorMsg = 'An error occurred while submitting. Please check your inputs and try again.';
-            if (error && error.message) {
-                errorMsg = error.message;
-            } else if (error && error.errors) {
-                errorMsg = Object.values(error.errors).flat().join('<br>');
-            }
-            alertBox.style.display = 'block';
-            alertBox.className = 'alert alert-danger p-12 rounded-12 fs-13';
-            alertBox.innerHTML = '<i class="fa-solid fa-circle-exclamation me-1"></i> ' + errorMsg;
-        }
-    });
 });
 </script>
 @endsection

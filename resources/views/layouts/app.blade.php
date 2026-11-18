@@ -127,6 +127,21 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
+    <!-- Sticky Bottom Floating Mobile Admission Enquiry Pill (Appears on Mobile across all pages) -->
+    <div class="floating-mobile-enquiry-bar" id="floatingMobileEnquiry" aria-label="Quick Mobile Admission Enquiry">
+        <div class="fme-text">
+            <strong>Admissions {{ $academicYear ?? '2026–27' }} Open</strong>
+            <span>Limited Seats • Nursery to Class 10</span>
+        </div>
+        <button type="button" onclick="openEnquiryModal()" class="btn-fme-action" aria-label="Open Quick Enquiry">
+            <i class="fa-solid fa-bolt"></i>
+            <span>Quick Enquiry</span>
+        </button>
+    </div>
+
+    <!-- Global Quick Admission Enquiry Modal -->
+    @include('partials.enquiry-modal')
+
     <!-- SweetAlert2 Core & Brand Helper -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="{{ asset('assets/js/swal-helpers.js') }}?v={{ file_exists(public_path('assets/js/swal-helpers.js')) ? filemtime(public_path('assets/js/swal-helpers.js')) : '1.0' }}"></script>
@@ -135,7 +150,7 @@
     <script src="{{ asset('assets/js/header.js') }}"></script>
     <script src="{{ asset('assets/js/slider.js') }}"></script>
     <script src="{{ asset('assets/js/homepage.js') }}"></script>
-    <script src="{{ asset('assets/js/footer.js') }}"></script>
+    <script src="{{ asset('assets/js/footer.js') }}?v={{ file_exists(public_path('assets/js/footer.js')) ? filemtime(public_path('assets/js/footer.js')) : '1.0' }}"></script>
     <script>
         setTimeout(function() {
             var flash = document.getElementById('advFlashContainer');

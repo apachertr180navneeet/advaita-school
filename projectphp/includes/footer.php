@@ -185,10 +185,22 @@
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
+    <!-- Sticky Bottom Floating Mobile Admission Enquiry Pill (Appears on Mobile across all pages) -->
+    <div class="floating-mobile-enquiry-bar" id="floatingMobileEnquiry" aria-label="Quick Mobile Admission Enquiry">
+        <div class="fme-text">
+            <strong>Admissions 2026–27 Open</strong>
+            <span>Limited Seats • Nursery to Class 10</span>
+        </div>
+        <a href="admission-info.php#quick-enquiry" class="btn-fme-action" aria-label="Quick Enquiry">
+            <i class="fa-solid fa-bolt"></i>
+            <span>Quick Enquiry</span>
+        </a>
+    </div>
+
     <!-- Scripts -->
     <script src="assets/js/header.js?v=<?php echo filemtime(__DIR__.'/../assets/js/header.js'); ?>"></script>
     <script src="assets/js/slider.js"></script>
     <script src="assets/js/homepage.js?v=<?php echo filemtime(__DIR__.'/../assets/js/homepage.js'); ?>"></script>
-    <script src="assets/js/footer.js"></script>
+    <script src="assets/js/footer.js?v=<?php echo filemtime(__DIR__.'/../assets/js/footer.js'); ?>"></script>
 </body>
 </html>
