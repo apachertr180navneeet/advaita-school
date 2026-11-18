@@ -24,6 +24,22 @@
             @csrf
             @method('PUT')
 
+            @if ($errors->any())
+                <div class="admin-alert-box alert-danger mb-20" style="background: #FEF2F2; border: 1.5px solid #F87171; border-radius: 12px; padding: 14px 18px; color: #991B1B;">
+                    <div class="d-flex align-items-center gap-10">
+                        <i class="fa-solid fa-triangle-exclamation fs-18"></i>
+                        <div>
+                            <strong>Please correct the following errors:</strong>
+                            <ul class="m-0 mt-4 ps-18 fs-13">
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            @endif
+
             <div class="form-grid-2">
                 <!-- Full Name -->
                 <div class="form-group">
@@ -110,7 +126,7 @@
                     @if($staff->photo_url)
                         <div class="d-flex align-items-center gap-16 mb-16 p-14 border rounded-12 bg-light" style="background: #F8FAFC; border: 1.5px solid #E2E8F0; border-radius: 12px; padding: 14px 16px;">
                             <div class="staff-avatar-thumb" style="width: 54px; height: 54px;">
-                                <img src="{{ $staff->photo_url }}" alt="{{ $staff->name }}" style="width: 100%; height: 100%; object-fit: cover;">
+                                <img src="{{ $staff->photo_url }}" alt="{{ $staff->name }}" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'fa-solid fa-user\'></i>';">
                             </div>
                             <div class="flex-grow-1">
                                 <div class="font-bold text-navy fs-13">Current Profile Photo</div>
@@ -122,15 +138,15 @@
                         </div>
                     @endif
 
-                    <div class="image-upload-wrapper">
-                        <input type="file" id="photo" name="photo" class="image-upload-input @error('photo') is-invalid @enderror" accept="image/*">
-                        <div class="upload-icon-circle">
+                    <div class="image-upload-wrapper" style="position: relative; overflow: hidden; cursor: pointer;">
+                        <input type="file" id="photo" name="photo" class="image-upload-input @error('photo') is-invalid @enderror" accept="image/*" style="position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; z-index: 10;">
+                        <div class="upload-icon-circle" style="pointer-events: none;">
                             <i class="fa-solid fa-cloud-arrow-up"></i>
                         </div>
-                        <h4 class="form-switch-label mb-4">
+                        <h4 class="form-switch-label mb-4" style="pointer-events: none;">
                             Click or drag new photo to replace
                         </h4>
-                        <p class="text-muted fs-12 m-0">Leave blank to keep existing photo. Supports JPG, PNG, WEBP, AVIF.</p>
+                        <p class="text-muted fs-12 m-0" style="pointer-events: none;">Leave blank to keep existing photo. Supports JPG, JPEG, PNG, WEBP, AVIF, GIF (up to 10MB).</p>
                     </div>
 
                     <!-- Live Image Preview Box -->

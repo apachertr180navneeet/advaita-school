@@ -19,6 +19,20 @@ class StaffManagementTest extends TestCase
         $this->seed();
     }
 
+    protected function tearDown(): void
+    {
+        // Clean up any test files
+        foreach (['storage/staff', 'assets/images/uploads/staff'] as $dir) {
+            $path = public_path($dir);
+            if (file_exists($path)) {
+                foreach (glob($path.'/staff_*') ?: [] as $file) {
+                    @unlink($file);
+                }
+            }
+        }
+        parent::tearDown();
+    }
+
     public function test_public_our_staff_page_displays_active_staff_members(): void
     {
         $staff = StaffMember::create([
@@ -89,6 +103,14 @@ class StaffManagementTest extends TestCase
             'badge_color' => 'green',
             'is_active' => true,
         ]);
+
+        $createdStaff = StaffMember::where('name', 'Dr. Kulkarni')->first();
+        $this->assertNotNull($createdStaff);
+        $this->assertNotNull($createdStaff->photo);
+        $this->assertTrue(
+            str_contains($createdStaff->photo_url, 'assets/images/uploads/staff/') ||
+            str_contains($createdStaff->photo_url, 'storage/staff/')
+        );
     }
 
     public function test_admin_can_update_staff_member(): void

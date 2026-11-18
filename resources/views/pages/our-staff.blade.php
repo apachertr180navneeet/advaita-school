@@ -147,7 +147,7 @@
                     <div class="staff-card-avatar-wrap">
                         <div class="staff-card-avatar-circle">
                             @if($staff->photo_url)
-                                <img src="{{ $staff->photo_url }}" alt="{{ $staff->name }} - {{ $staff->designation }}" class="staff-avatar-photo" loading="lazy">
+                                <img src="{{ $staff->photo_url }}" alt="{{ $staff->name }} - {{ $staff->designation }}" class="staff-avatar-photo" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<svg class=\'staff-avatar-svg\' viewBox=\'0 0 100 100\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\' aria-hidden=\'true\'><circle cx=\'50\' cy=\'38\' r=\'20\' fill=\'#8d99ae\'/><path d=\'M18 90C18 68 32 62 50 62C68 62 82 68 82 90\' fill=\'#8d99ae\'/></svg>';">
                             @else
                                 <svg class="staff-avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                                     <circle cx="50" cy="38" r="20" fill="#8d99ae"/>

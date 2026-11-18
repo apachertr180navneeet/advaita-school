@@ -77,12 +77,39 @@ class StaffMemberController extends Controller
             'badge_color' => ['required', 'string', 'in:orange,blue,purple,rose,green,amber,cyan,pink'],
             'order' => ['required', 'integer', 'min:0'],
             'is_active' => ['nullable', 'boolean'],
-            'photo' => ['nullable', 'image', 'mimes:jpeg,png,jpg,webp,avif', 'max:5120'],
+            'photo' => ['nullable', 'image', 'mimes:jpeg,png,jpg,webp,avif,gif', 'max:10240'],
         ]);
 
         $photoPath = null;
         if ($request->hasFile('photo')) {
-            $photoPath = $request->file('photo')->store('staff', 'public');
+            $file = $request->file('photo');
+            $ext = strtolower($file->getClientOriginalExtension() ?: 'jpg');
+            $filename = 'staff_'.time().'_'.uniqid().'.'.$ext;
+
+            // 1. Store via public disk (storage/app/public/staff)
+            $photoPath = $file->storeAs('staff', $filename, 'public');
+
+            // 2. Direct copy to public/storage/staff in case symlink is missing on shared hosting
+            try {
+                $publicStorageDir = public_path('storage/staff');
+                if (! file_exists($publicStorageDir)) {
+                    @mkdir($publicStorageDir, 0755, true);
+                }
+                @copy($file->getRealPath(), $publicStorageDir.'/'.$filename);
+            } catch (\Throwable $e) {
+                // Non-blocking
+            }
+
+            // 3. Direct copy to public/assets/images/uploads/staff as fallback
+            try {
+                $publicUploadsDir = public_path('assets/images/uploads/staff');
+                if (! file_exists($publicUploadsDir)) {
+                    @mkdir($publicUploadsDir, 0755, true);
+                }
+                @copy($file->getRealPath(), $publicUploadsDir.'/'.$filename);
+            } catch (\Throwable $e) {
+                // Non-blocking
+            }
         }
 
         StaffMember::create([
@@ -120,7 +147,7 @@ class StaffMemberController extends Controller
             'badge_color' => ['required', 'string', 'in:orange,blue,purple,rose,green,amber,cyan,pink'],
             'order' => ['required', 'integer', 'min:0'],
             'is_active' => ['nullable', 'boolean'],
-            'photo' => ['nullable', 'image', 'mimes:jpeg,png,jpg,webp,avif', 'max:5120'],
+            'photo' => ['nullable', 'image', 'mimes:jpeg,png,jpg,webp,avif,gif', 'max:10240'],
             'remove_photo' => ['nullable', 'boolean'],
         ]);
 
@@ -130,6 +157,11 @@ class StaffMemberController extends Controller
             if ($photoPath && Storage::disk('public')->exists($photoPath)) {
                 Storage::disk('public')->delete($photoPath);
             }
+            if ($photoPath) {
+                $cleanOld = ltrim($photoPath, '/');
+                @unlink(public_path('storage/'.$cleanOld));
+                @unlink(public_path('assets/images/uploads/'.$cleanOld));
+            }
             $photoPath = null;
         }
 
@@ -137,7 +169,37 @@ class StaffMemberController extends Controller
             if ($photoPath && Storage::disk('public')->exists($photoPath)) {
                 Storage::disk('public')->delete($photoPath);
             }
-            $photoPath = $request->file('photo')->store('staff', 'public');
+            if ($photoPath) {
+                $cleanOld = ltrim($photoPath, '/');
+                @unlink(public_path('storage/'.$cleanOld));
+                @unlink(public_path('assets/images/uploads/'.$cleanOld));
+            }
+
+            $file = $request->file('photo');
+            $ext = strtolower($file->getClientOriginalExtension() ?: 'jpg');
+            $filename = 'staff_'.time().'_'.uniqid().'.'.$ext;
+
+            $photoPath = $file->storeAs('staff', $filename, 'public');
+
+            try {
+                $publicStorageDir = public_path('storage/staff');
+                if (! file_exists($publicStorageDir)) {
+                    @mkdir($publicStorageDir, 0755, true);
+                }
+                @copy($file->getRealPath(), $publicStorageDir.'/'.$filename);
+            } catch (\Throwable $e) {
+                // Non-blocking
+            }
+
+            try {
+                $publicUploadsDir = public_path('assets/images/uploads/staff');
+                if (! file_exists($publicUploadsDir)) {
+                    @mkdir($publicUploadsDir, 0755, true);
+                }
+                @copy($file->getRealPath(), $publicUploadsDir.'/'.$filename);
+            } catch (\Throwable $e) {
+                // Non-blocking
+            }
         }
 
         $staff->update([
@@ -172,8 +234,13 @@ class StaffMemberController extends Controller
      */
     public function destroy(StaffMember $staff): RedirectResponse
     {
-        if ($staff->photo && Storage::disk('public')->exists($staff->photo)) {
-            Storage::disk('public')->delete($staff->photo);
+        if ($staff->photo) {
+            if (Storage::disk('public')->exists($staff->photo)) {
+                Storage::disk('public')->delete($staff->photo);
+            }
+            $cleanOld = ltrim($staff->photo, '/');
+            @unlink(public_path('storage/'.$cleanOld));
+            @unlink(public_path('assets/images/uploads/'.$cleanOld));
         }
 
         $name = $staff->name;

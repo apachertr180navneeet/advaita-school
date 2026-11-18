@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\Storage;
 
 class StaffMember extends Model
 {
@@ -101,11 +100,16 @@ class StaffMember extends Model
             return asset($this->photo);
         }
 
-        if (Storage::disk('public')->exists($this->photo)) {
-            return Storage::disk('public')->url($this->photo);
+        $cleanPath = ltrim($this->photo, '/');
+        if (str_starts_with($cleanPath, 'storage/')) {
+            $cleanPath = substr($cleanPath, 8);
         }
 
-        return asset($this->photo);
+        if (file_exists(public_path('assets/images/uploads/'.$cleanPath))) {
+            return asset('assets/images/uploads/'.$cleanPath);
+        }
+
+        return asset('storage/'.$cleanPath);
     }
 
     /**

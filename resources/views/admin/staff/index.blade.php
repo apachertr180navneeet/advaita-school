@@ -205,7 +205,7 @@
                         <td style="text-align: center;">
                             <div class="staff-avatar-thumb">
                                 @if($member->photo_url)
-                                    <img src="{{ $member->photo_url }}" alt="{{ $member->name }}" loading="lazy">
+                                    <img src="{{ $member->photo_url }}" alt="{{ $member->name }}" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'fa-solid fa-user\'></i>';">
                                 @else
                                     <i class="fa-solid fa-user"></i>
                                 @endif
@@ -291,7 +291,7 @@
                 <!-- Avatar -->
                 <div class="staff-card-avatar">
                     @if($member->photo_url)
-                        <img src="{{ $member->photo_url }}" alt="{{ $member->name }}" loading="lazy">
+                        <img src="{{ $member->photo_url }}" alt="{{ $member->name }}" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<i class=\'fa-solid fa-user\'></i>';">
                     @else
                         <i class="fa-solid fa-user"></i>
                     @endif

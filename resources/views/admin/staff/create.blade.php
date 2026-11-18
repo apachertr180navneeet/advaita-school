@@ -23,6 +23,22 @@
         <form action="{{ route('admin.staff.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
 
+            @if ($errors->any())
+                <div class="admin-alert-box alert-danger mb-20" style="background: #FEF2F2; border: 1.5px solid #F87171; border-radius: 12px; padding: 14px 18px; color: #991B1B;">
+                    <div class="d-flex align-items-center gap-10">
+                        <i class="fa-solid fa-triangle-exclamation fs-18"></i>
+                        <div>
+                            <strong>Please correct the following errors:</strong>
+                            <ul class="m-0 mt-4 ps-18 fs-13">
+                                @foreach ($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            @endif
+
             <div class="form-grid-2">
                 <!-- Full Name -->
                 <div class="form-group">
@@ -106,15 +122,15 @@
                         <span class="helper-hint">(Optional — Square 1:1 or portrait recommended, up to 5MB)</span>
                     </label>
 
-                    <div class="image-upload-wrapper">
-                        <input type="file" id="photo" name="photo" class="image-upload-input @error('photo') is-invalid @enderror" accept="image/*">
-                        <div class="upload-icon-circle">
+                    <div class="image-upload-wrapper" style="position: relative; overflow: hidden; cursor: pointer;">
+                        <input type="file" id="photo" name="photo" class="image-upload-input @error('photo') is-invalid @enderror" accept="image/*" style="position: absolute; inset: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer; z-index: 10;">
+                        <div class="upload-icon-circle" style="pointer-events: none;">
                             <i class="fa-solid fa-cloud-arrow-up"></i>
                         </div>
-                        <h4 class="form-switch-label mb-4">
+                        <h4 class="form-switch-label mb-4" style="pointer-events: none;">
                             Click or drag photo file here to upload
                         </h4>
-                        <p class="text-muted fs-12 m-0">Leave blank to use the clean silhouette avatar placeholder. Supports JPG, PNG, WEBP, AVIF.</p>
+                        <p class="text-muted fs-12 m-0" style="pointer-events: none;">Leave blank to use the clean silhouette avatar placeholder. Supports JPG, JPEG, PNG, WEBP, AVIF, GIF (up to 10MB).</p>
                     </div>
 
                     <!-- Live Image Preview Box -->
