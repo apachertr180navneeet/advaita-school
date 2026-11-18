@@ -4992,3 +4992,342 @@ textarea.form-control:focus {
         flex-shrink: 0 !important;
     }
 }
+
+/* ==========================================================================
+   Admission Info Page - Complete Center Aligned Typography Layout
+   ========================================================================== */
+
+/* 1. Hero Section */
+.admission-page-wrapper .admission-hero-left-panel {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+.admission-page-wrapper .admission-hero-content-inner {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 620px !important;
+    width: 100% !important;
+}
+
+.admission-page-wrapper .admission-breadcrumb {
+    display: inline-flex !important;
+    justify-content: center !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.admission-page-wrapper .admission-eyebrow {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+}
+
+.admission-page-wrapper .admission-hero-title {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
+}
+
+.admission-page-wrapper .admission-hero-desc {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 580px !important;
+    width: 100% !important;
+}
+
+/* 2. All Section Headers across the page */
+.admission-page-wrapper .admission-section-header {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.admission-page-wrapper .admission-section-title {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
+}
+
+.admission-page-wrapper .admission-section-desc {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 780px !important;
+    width: 100% !important;
+}
+
+/* 3. Section 3: Guidelines Split Section Content & Features */
+.admission-page-wrapper .admission-split-content {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.admission-page-wrapper .admission-split-content .admission-eyebrow {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+}
+
+.admission-page-wrapper .admission-split-desc {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 680px !important;
+}
+
+.admission-page-wrapper .admission-features-grid .adm-feature-card {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.admission-page-wrapper .adm-feature-card .afc-icon {
+    margin: 0 auto 10px !important;
+}
+
+.admission-page-wrapper .adm-feature-card .afc-text {
+    text-align: center !important;
+    width: 100% !important;
+}
+
+.admission-page-wrapper .afc-title {
+    text-align: center !important;
+}
+
+.admission-page-wrapper .afc-desc {
+    text-align: center !important;
+}
+
+/* 4. Section 4: Why Parents Choose Advaita (Pillars & Bottom Strip) */
+.admission-page-wrapper .convince-pillar-card {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.admission-page-wrapper .cpc-badge {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.admission-page-wrapper .cpc-icon-wrap {
+    margin: 0 auto 14px !important;
+}
+
+.admission-page-wrapper .cpc-title {
+    text-align: center !important;
+    width: 100% !important;
+}
+
+.admission-page-wrapper .cpc-desc {
+    text-align: center !important;
+    width: 100% !important;
+}
+
+.admission-page-wrapper .cpc-foot-tag {
+    justify-content: center !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.admission-page-wrapper .convince-cta-strip {
+    text-align: center !important;
+}
+
+.admission-page-wrapper .convince-cta-strip .ccs-left {
+    text-align: center !important;
+    width: 100% !important;
+}
+
+.admission-page-wrapper .ccs-left strong,
+.admission-page-wrapper .ccs-left span {
+    text-align: center !important;
+    display: block !important;
+}
+
+.admission-page-wrapper .convince-cta-strip .ccs-right {
+    justify-content: center !important;
+    display: flex !important;
+    width: 100% !important;
+}
+
+/* 5. Section 6: Dual Action CTA Cards */
+.admission-page-wrapper .cta-action-box {
+    text-align: center !important;
+}
+
+.admission-page-wrapper .cta-box-content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+}
+
+.admission-page-wrapper .cta-tag-pill {
+    text-align: center !important;
+    margin: 0 auto 10px !important;
+}
+
+.admission-page-wrapper .cta-box-title {
+    text-align: center !important;
+    width: 100% !important;
+    margin: 0 auto 10px !important;
+}
+
+.admission-page-wrapper .cta-box-desc {
+    text-align: center !important;
+    width: 100% !important;
+    margin: 0 auto 16px !important;
+}
+
+.admission-page-wrapper .btn-cta-action {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* 6. Section 7: Fee Cards, Pills, & Transport Notice */
+.admission-page-wrapper .fee-band-card {
+    text-align: center !important;
+}
+
+.admission-page-wrapper .fee-band-card .fbc-left {
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+.admission-page-wrapper .fbc-info {
+    text-align: center !important;
+}
+
+.admission-page-wrapper .fbc-title,
+.admission-page-wrapper .fbc-subtitle {
+    text-align: center !important;
+}
+
+.admission-page-wrapper .fee-band-card .fbc-right {
+    justify-content: center !important;
+}
+
+.admission-page-wrapper .fee-info-pill-card {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.admission-page-wrapper .fip-icon {
+    margin: 0 auto 10px !important;
+}
+
+.admission-page-wrapper .fip-text {
+    text-align: center !important;
+    width: 100% !important;
+}
+
+.admission-page-wrapper .fip-title,
+.admission-page-wrapper .fip-desc {
+    text-align: center !important;
+}
+
+.admission-page-wrapper .fee-notice-banner {
+    text-align: center !important;
+    justify-content: center !important;
+}
+
+/* 7. Section 8: Bottom Peach CTA Banner */
+.admission-page-wrapper .admission-peach-cta-box {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+}
+
+.admission-page-wrapper .apc-left {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+}
+
+.admission-page-wrapper .apc-pill {
+    margin: 0 auto 10px !important;
+    text-align: center !important;
+}
+
+.admission-page-wrapper .apc-title {
+    text-align: center !important;
+    margin: 0 auto 10px !important;
+    width: 100% !important;
+}
+
+.admission-page-wrapper .apc-desc {
+    text-align: center !important;
+    margin: 0 auto 18px !important;
+    max-width: 640px !important;
+    width: 100% !important;
+}
+
+.admission-page-wrapper .apc-actions {
+    justify-content: center !important;
+    margin: 0 auto !important;
+}
+
+/* 8. All Inline Enquiry Callout Bars */
+.admission-page-wrapper .adm-inline-enquiry-bar {
+    text-align: center !important;
+}
+
+.admission-page-wrapper .adm-inline-enquiry-bar .aieb-content {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: 100% !important;
+}
+
+.admission-page-wrapper .adm-inline-enquiry-bar .aieb-badge {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+}
+
+.admission-page-wrapper .adm-inline-enquiry-bar .aieb-lead {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 720px !important;
+    width: 100% !important;
+}
+
+.admission-page-wrapper .adm-inline-enquiry-bar .aieb-buttons {
+    justify-content: center !important;
+}

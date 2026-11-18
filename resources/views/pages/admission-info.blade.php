@@ -110,7 +110,7 @@
                 @if($actionType === 'scroll')
                 <a href="{{ $target }}" class="admission-step-card step-interactive-card" title="Click to view {{ $step['title'] }}">
                 @elseif($actionType === 'enquiry_modal')
-                <button type="button" onclick="openEnquiryModal()" class="admission-step-card step-interactive-card text-start" title="Open Quick Enquiry Form">
+                <button type="button" onclick="openEnquiryModal()" class="admission-step-card step-interactive-card" title="Open Quick Enquiry Form">
                 @elseif($actionType === 'link')
                 <a href="{{ $target }}" class="admission-step-card step-interactive-card" title="Go to {{ $step['title'] }}">
                 @else
@@ -185,7 +185,7 @@
                 <!-- Right Column: Information & 4-Grid Cards -->
                 <div class="admission-split-content">
                     <div class="admission-eyebrow">{{ $content['guidelines_eyebrow'] ?? 'ADMISSION GUIDELINES' }}</div>
-                    <h2 class="admission-section-title text-start">
+                    <h2 class="admission-section-title">
                         {{ $content['guidelines_title'] ?? 'Guidelines for a smooth start at' }}
                         <span class="highlight-serif">{{ $content['guidelines_highlight'] ?? 'Advaita.' }}</span>
                     </h2>
