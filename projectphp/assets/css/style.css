@@ -2451,6 +2451,124 @@ html, body {
         bottom: calc(130px + env(safe-area-inset-bottom, 0px)) !important;
         right: 14px !important;
     }
+
+    /* 1. Admission Inline Enquiry Badge non-wrapping text on Mobile */
+    .aieb-badge {
+        font-size: clamp(9px, 2.7vw, 11px) !important;
+        letter-spacing: 0.2px !important;
+        padding: 4px 10px !important;
+        white-space: nowrap !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
+    /* 2. Fee Structure Card: Remove negative margin so it never overlaps hero buttons */
+    .fee-main-card {
+        margin-top: 20px !important;
+    }
+
+    /* 3. Contact Quick Action Cards Centering on Mobile */
+    .contact-quick-card {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 22px 18px !important;
+        justify-content: center !important;
+    }
+
+    .contact-quick-card .quick-card-top {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    .contact-quick-card .quick-card-icon {
+        margin: 0 auto 12px !important;
+    }
+
+    .contact-quick-card .quick-card-info {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .contact-quick-card .quick-card-label {
+        text-align: center !important;
+    }
+
+    .contact-quick-card .quick-card-value {
+        text-align: center !important;
+        max-width: 100% !important;
+        word-break: break-word !important;
+    }
+
+    .contact-quick-card .quick-card-meta {
+        text-align: center !important;
+        max-width: 100% !important;
+        word-break: break-word !important;
+    }
+
+    .contact-quick-card .quick-card-btn {
+        align-self: center !important;
+        margin: 14px auto 0 !important;
+    }
+
+    /* 4. Contact Page Pre-Footer CTA: Hide overlapping student cutout and make buttons clean */
+    .contact-cta-student-cutout {
+        display: none !important;
+    }
+
+    .contact-cta-banner-box {
+        padding: 28px 20px !important;
+        text-align: center !important;
+        align-items: center !important;
+    }
+
+    .contact-cta-content-left {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .contact-cta-text-wrap {
+        text-align: center !important;
+    }
+
+    .contact-cta-phone-badge {
+        margin: 0 auto 14px !important;
+    }
+
+    .contact-cta-headline {
+        text-align: center !important;
+    }
+
+    .contact-cta-description {
+        text-align: center !important;
+        margin: 0 auto 16px !important;
+        max-width: 500px !important;
+    }
+
+    .contact-cta-buttons-wrap {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+        width: 100% !important;
+        max-width: 360px !important;
+        margin: 16px auto 0 !important;
+    }
+
+    .contact-cta-buttons-wrap .cta-action-btn {
+        width: 100% !important;
+        justify-content: center !important;
+        text-align: center !important;
+        padding: 12px 20px !important;
+    }
 }
 
 /* 4. Extra Narrow Screens (<= 360px - e.g. Galaxy Fold, iPhone SE 1st gen) */
@@ -2472,6 +2590,12 @@ html, body {
         padding: 6px 10px !important;
         font-size: 10.5px !important;
         gap: 4px !important;
+    }
+
+    .aieb-badge {
+        font-size: 9px !important;
+        padding: 3px 8px !important;
+        letter-spacing: 0 !important;
     }
 
     .adv-container,

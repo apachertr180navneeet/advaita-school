@@ -129,7 +129,7 @@ require_once __DIR__.'/includes/header.php';
                         <div class="quick-card-info">
                             <span class="quick-card-label">Email Us</span>
                             <a href="mailto:admissions.advaita@gmail.com" class="quick-card-value" style="font-size: 0.95rem;">admissions.advaita@gmail.com</a>
-                            <span class="quick-card-meta">admissions.advaita@gmail.com &bull; principal.advaita2019@gmail.com</span>
+                            <span class="quick-card-meta">Admissions &amp; General Enquiries</span>
                         </div>
                     </div>
                     <a href="mailto:admissions.advaita@gmail.com" class="quick-card-btn btn-purple" aria-label="Send an email to admissions.advaita@gmail.com">

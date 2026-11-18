@@ -6871,6 +6871,9 @@
 }
 
 @media (max-width: 840px) {
+    .contact-cta-student-cutout {
+        display: none !important;
+    }
     .contact-hero-left-panel {
         width: 100%;
         max-width: 100%;
@@ -10642,6 +10645,9 @@ textarea.reg-input-control {
 }
 
 @media (max-width: 768px) {
+    .fee-main-card {
+        margin-top: 20px !important;
+    }
     .fee-main-card-head {
         flex-direction: column;
         align-items: flex-start;

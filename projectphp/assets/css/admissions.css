@@ -4537,6 +4537,16 @@ textarea.form-control:focus {
 }
 
 @media (max-width: 768px) {
+    .aieb-badge {
+        font-size: clamp(9px, 2.7vw, 11px) !important;
+        letter-spacing: 0.2px !important;
+        padding: 4px 10px !important;
+        white-space: nowrap !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+    }
+
     .floating-mobile-enquiry-bar {
         display: flex !important;
         position: fixed !important;
