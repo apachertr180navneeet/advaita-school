@@ -1929,7 +1929,6 @@ html, body {
 .fee-classwise-wrapper,
 .disclosure-table-wrap,
 .results-table-wrap,
-.admission-steps-wrapper,
 .adv-gal-filters-scroll,
 .adv-blog-filters-scroll,
 .admission-breadcrumb,
@@ -3875,5 +3874,115 @@ html, body {
     font-size: 13.5px !important;
     line-height: 1.5 !important;
     margin-bottom: 20px !important;
+}
+
+/* ==========================================================================
+   Admission 5-Step Process Stepper - Desktop Non-Overflow Layout
+   ========================================================================== */
+@media (min-width: 992px) {
+    .admission-section-container {
+        max-width: 1200px !important;
+        padding: 0 20px !important;
+    }
+
+    .steps-swipe-pill {
+        display: none !important;
+    }
+
+    .admission-steps-wrapper {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: stretch !important;
+        justify-content: space-between !important;
+        gap: 8px !important;
+        overflow-x: visible !important;
+        overflow-y: visible !important;
+        padding: 12px 0 8px !important;
+        margin-top: 32px !important;
+        width: 100% !important;
+    }
+
+    .admission-step-card {
+        flex: 1 1 0 !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        padding: 22px 10px 16px !important;
+        border-radius: 16px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+        border: 1.5px solid #E2E8F0 !important;
+        background: #FFFFFF !important;
+        box-shadow: 0 4px 16px rgba(8, 59, 122, 0.04) !important;
+        transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease !important;
+    }
+
+    .admission-step-card:hover {
+        transform: translateY(-4px) !important;
+        border-color: #FED7AA !important;
+        box-shadow: 0 10px 24px rgba(243, 112, 33, 0.12) !important;
+    }
+
+    .admission-step-card .step-num-pill {
+        top: -11px !important;
+        font-size: 10px !important;
+        font-weight: 800 !important;
+        padding: 2px 8px !important;
+        border-radius: 9999px !important;
+    }
+
+    .admission-step-card .step-icon-box {
+        width: 44px !important;
+        height: 44px !important;
+        font-size: 1.15rem !important;
+        margin: 4px auto 10px !important;
+        border-radius: 12px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .admission-step-card .step-card-title {
+        font-family: var(--adv-font-sans, "Outfit", sans-serif) !important;
+        font-size: clamp(0.85rem, 1.05vw, 0.96rem) !important;
+        font-weight: 800 !important;
+        line-height: 1.25 !important;
+        margin: 0 0 6px !important;
+        color: #083B7A !important;
+        word-break: normal !important;
+    }
+
+    .admission-step-card .step-card-desc {
+        font-size: clamp(0.72rem, 0.82vw, 0.78rem) !important;
+        line-height: 1.4 !important;
+        color: #64748b !important;
+        margin: 0 0 10px !important;
+        flex-grow: 1 !important;
+    }
+
+    .admission-step-card .step-action-hint {
+        margin-top: auto !important;
+        padding-top: 6px !important;
+        font-size: 0.72rem !important;
+        font-weight: 700 !important;
+        white-space: nowrap !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 4px !important;
+    }
+
+    .step-arrow-divider {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        color: #CBD5E1 !important;
+        font-size: 13px !important;
+        padding: 0 !important;
+        width: 14px !important;
+        flex-shrink: 0 !important;
+    }
 }
 

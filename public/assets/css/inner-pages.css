@@ -8666,7 +8666,7 @@
 }
 
 /* Responsive Media Queries for Admission Info */
-@media (max-width: 1024px) {
+@media (max-width: 991px) {
     .admission-steps-wrapper {
         display: flex !important;
         flex-direction: row !important;
