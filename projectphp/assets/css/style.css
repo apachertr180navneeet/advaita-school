@@ -1425,12 +1425,10 @@ p {
     .vision-cta-actions,
     .contact-cta-buttons-wrap,
     .facilities-cta-actions,
-    .admission-cta-actions,
     .fee-cta-actions,
     .acad-cta-actions,
     .cta-buttons,
     .principal-cta-action-buttons,
-    .apc-actions,
     .helpline-buttons-stack,
     .sec-helpline-actions {
         display: grid !important;
@@ -1456,8 +1454,6 @@ p {
     .contact-cta-buttons-wrap button,
     .facilities-cta-actions a,
     .facilities-cta-actions button,
-    .admission-cta-actions a,
-    .admission-cta-actions button,
     .fee-cta-actions a,
     .fee-cta-actions button,
     .acad-cta-actions a,
@@ -1466,8 +1462,6 @@ p {
     .cta-buttons button,
     .principal-cta-action-buttons a,
     .principal-cta-action-buttons button,
-    .apc-actions a,
-    .apc-actions button,
     .helpline-buttons-stack a,
     .helpline-buttons-stack button,
     .sec-helpline-actions a,
@@ -1486,6 +1480,55 @@ p {
         text-decoration: none !important;
         gap: 6px !important;
         box-sizing: border-box !important;
+    }
+
+    /* Bottom Admission Peach CTA Banner Buttons: Vertical Stack on Mobile */
+    .apc-actions,
+    .admission-page-wrapper .apc-actions,
+    .admission-peach-cta-box .apc-actions,
+    .admission-cta-actions,
+    .admission-cta-box .admission-cta-actions {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        justify-content: center !important;
+        width: 100% !important;
+        max-width: 340px !important;
+        gap: 10px !important;
+        margin: 14px auto 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .apc-actions a,
+    .apc-actions button,
+    .admission-cta-actions a,
+    .admission-cta-actions button,
+    .admission-page-wrapper .btn-apc-primary,
+    .admission-page-wrapper .btn-apc-secondary,
+    .admission-page-wrapper .admission-btn-primary,
+    .admission-page-wrapper .admission-btn-visit,
+    .btn-apc-primary,
+    .btn-apc-secondary,
+    .admission-btn-primary,
+    .admission-btn-visit {
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        height: 44px !important;
+        min-height: 44px !important;
+        padding: 0 18px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        gap: 8px !important;
+        font-size: clamp(12.5px, 3.2vw, 13.5px) !important;
+        font-weight: 700 !important;
+        border-radius: 999px !important;
+        box-sizing: border-box !important;
+        white-space: nowrap !important;
+        text-decoration: none !important;
+        margin: 0 !important;
     }
 
     .sec-helpline-actions > a:last-child:nth-child(odd),
@@ -4590,6 +4633,7 @@ html, body {
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
+    padding: 36px 28px !important;
 }
 
 .admission-page-wrapper .apc-left {
@@ -4602,8 +4646,9 @@ html, body {
 }
 
 .admission-page-wrapper .apc-pill {
-    margin: 0 auto 10px !important;
+    margin: 0 auto 12px !important;
     text-align: center !important;
+    display: inline-flex !important;
 }
 
 .admission-page-wrapper .apc-title {
@@ -4614,14 +4659,108 @@ html, body {
 
 .admission-page-wrapper .apc-desc {
     text-align: center !important;
-    margin: 0 auto 18px !important;
+    margin: 0 auto 20px !important;
     max-width: 640px !important;
     width: 100% !important;
+    line-height: 1.55 !important;
 }
 
 .admission-page-wrapper .apc-actions {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
     justify-content: center !important;
+    gap: 14px !important;
     margin: 0 auto !important;
+    flex-wrap: wrap !important;
+}
+
+@media (max-width: 768px) {
+    .admission-page-wrapper .admission-peach-cta-box,
+    .admission-peach-cta-box {
+        padding: 30px 20px !important;
+        border-radius: 20px !important;
+        text-align: center !important;
+    }
+
+    .admission-page-wrapper .apc-title,
+    .admission-peach-cta-box .apc-title {
+        font-size: clamp(20px, 5.5vw, 25px) !important;
+        line-height: 1.25 !important;
+    }
+
+    .admission-page-wrapper .apc-desc,
+    .admission-peach-cta-box .apc-desc {
+        font-size: clamp(12.5px, 3.2vw, 14px) !important;
+        line-height: 1.5 !important;
+        margin-bottom: 20px !important;
+        max-width: 480px !important;
+    }
+
+    .admission-page-wrapper .apc-actions,
+    .admission-peach-cta-box .apc-actions,
+    .apc-actions {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        justify-content: center !important;
+        width: 100% !important;
+        max-width: 340px !important;
+        gap: 10px !important;
+        margin: 0 auto !important;
+    }
+
+    .admission-page-wrapper .btn-apc-primary,
+    .admission-page-wrapper .btn-apc-secondary,
+    .admission-peach-cta-box .btn-apc-primary,
+    .admission-peach-cta-box .btn-apc-secondary,
+    .btn-apc-primary,
+    .btn-apc-secondary {
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        height: 44px !important;
+        min-height: 44px !important;
+        padding: 0 16px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        gap: 8px !important;
+        font-size: clamp(12.5px, 3.2vw, 13.5px) !important;
+        font-weight: 700 !important;
+        border-radius: 999px !important;
+        box-sizing: border-box !important;
+        white-space: nowrap !important;
+        text-decoration: none !important;
+        margin: 0 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .admission-page-wrapper .admission-peach-cta-box,
+    .admission-peach-cta-box {
+        padding: 24px 16px !important;
+        border-radius: 16px !important;
+    }
+
+    .admission-page-wrapper .apc-actions,
+    .admission-peach-cta-box .apc-actions,
+    .apc-actions {
+        max-width: 100% !important;
+        gap: 8px !important;
+    }
+
+    .admission-page-wrapper .btn-apc-primary,
+    .admission-page-wrapper .btn-apc-secondary,
+    .admission-peach-cta-box .btn-apc-primary,
+    .admission-peach-cta-box .btn-apc-secondary,
+    .btn-apc-primary,
+    .btn-apc-secondary {
+        height: 42px !important;
+        min-height: 42px !important;
+        font-size: 12.5px !important;
+    }
 }
 
 /* 8. All Inline Enquiry Callout Bars */
