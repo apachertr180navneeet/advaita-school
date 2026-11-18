@@ -4571,3 +4571,81 @@ html, body {
     justify-content: center !important;
 }
 
+/* 9. Documents Required Checklist: Number stays on left, text centered */
+.admission-page-wrapper .docs-items-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 10px !important;
+    width: 100% !important;
+}
+
+.admission-page-wrapper .doc-list-row {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 10px 48px !important;
+    min-height: 48px !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+}
+
+.admission-page-wrapper .doc-list-row .doc-num-badge {
+    position: absolute !important;
+    left: 14px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 28px !important;
+    height: 28px !important;
+    border-radius: 999px !important;
+    background: #0284C7 !important;
+    color: #ffffff !important;
+    font-size: 0.75rem !important;
+    font-weight: 800 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+}
+
+.admission-page-wrapper .doc-list-row .doc-list-text {
+    width: 100% !important;
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: clamp(12.5px, 2.9vw, 14.5px) !important;
+    font-weight: 700 !important;
+    color: #083B7A !important;
+    line-height: 1.35 !important;
+    margin: 0 !important;
+}
+
+.admission-page-wrapper .doc-list-row .doc-list-text > div:first-child {
+    text-align: center !important;
+    width: 100% !important;
+}
+
+.admission-page-wrapper .doc-list-row .doc-options-subtext {
+    font-size: clamp(10.5px, 2.5vw, 12px) !important;
+    font-weight: 500 !important;
+    color: #64748B !important;
+    text-align: center !important;
+    margin-top: 3px !important;
+    width: 100% !important;
+}
+
+@media (max-width: 480px) {
+    .admission-page-wrapper .doc-list-row {
+        padding: 9px 40px !important;
+    }
+    .admission-page-wrapper .doc-list-row .doc-num-badge {
+        left: 10px !important;
+        width: 26px !important;
+        height: 26px !important;
+        font-size: 0.72rem !important;
+    }
+}
+
