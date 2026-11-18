@@ -32,8 +32,11 @@ require_once __DIR__.'/includes/header.php';
                     </clipPath>
                 </defs>
 
-                <!-- Campus Photo clipped to the organic curve -->
-                <image href="assets/images/about-hero-building.jpg" xlink:href="assets/images/about-hero-building.jpg" x="0" y="0" width="1000" height="480" preserveAspectRatio="xMidYMid slice" clip-path="url(#advBlogHeroCurveClip)"/>
+                <!-- Campus Photo clipped to the organic curve (Dynamic) -->
+                <?php
+                $blogHeroImg = $blogHeroImg ?? 'assets/images/about-hero-building.jpg';
+?>
+                <image href="<?php echo htmlspecialchars($blogHeroImg); ?>" xlink:href="<?php echo htmlspecialchars($blogHeroImg); ?>" x="0" y="0" width="1000" height="480" preserveAspectRatio="xMidYMid slice" clip-path="url(#advBlogHeroCurveClip)"/>
 
                 <!-- Royal Blue Organic Ribbon Stroke along the curved boundary -->
                 <path d="M 0 -10 C 25 130, 80 270, 220 365 C 360 450, 600 475, 1000 480" stroke="#0084FF" stroke-width="26" fill="none" stroke-linecap="round"/>

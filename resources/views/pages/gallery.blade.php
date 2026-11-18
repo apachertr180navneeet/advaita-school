@@ -24,8 +24,12 @@
                     </clipPath>
                 </defs>
 
-                <!-- Campus Photo clipped to the organic curve -->
-                <image href="{{ asset('assets/images/about-hero-building.jpg') }}" xlink:href="{{ asset('assets/images/about-hero-building.jpg') }}" x="0" y="0" width="1000" height="480" preserveAspectRatio="xMidYMid slice" clip-path="url(#advHeroCurveClip)"/>
+                <!-- Campus Photo clipped to the organic curve (Dynamic) -->
+                @php
+                    $galHeroImgRaw = $content['hero_image'] ?? \App\Models\Setting::get('gallery_hero_image', 'assets/images/about-hero-building.jpg');
+                    $galHeroImgUrl = str_starts_with($galHeroImgRaw, 'http') ? $galHeroImgRaw : asset($galHeroImgRaw);
+                @endphp
+                <image href="{{ $galHeroImgUrl }}" xlink:href="{{ $galHeroImgUrl }}" x="0" y="0" width="1000" height="480" preserveAspectRatio="xMidYMid slice" clip-path="url(#advHeroCurveClip)"/>
 
                 <!-- Royal Blue Organic Ribbon Stroke along the curved boundary -->
                 <path d="M 0 -10 C 25 130, 80 270, 220 365 C 360 450, 600 475, 1000 480" stroke="#0084FF" stroke-width="26" fill="none" stroke-linecap="round"/>

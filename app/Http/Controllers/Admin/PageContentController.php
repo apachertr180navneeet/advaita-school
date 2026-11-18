@@ -433,6 +433,26 @@ class PageContentController extends Controller
                 'disclosure_hero_image' => ['label' => 'Hero Campus Building Image', 'type' => 'image', 'default' => 'assets/images/about-hero-building.jpg'],
             ],
         ],
+        'gallery' => [
+            'name' => 'Gallery Page',
+            'url' => '/gallery',
+            'seo_key' => 'gallery',
+            'icon' => 'fa-solid fa-images',
+            'category' => 'Campus & Media',
+            'fields' => [
+                'gallery_hero_image' => ['label' => 'Gallery Hero Curved Campus Photo', 'type' => 'image', 'default' => 'assets/images/about-hero-building.jpg'],
+            ],
+        ],
+        'blog' => [
+            'name' => 'Blog & News Page',
+            'url' => '/blog',
+            'seo_key' => 'blog',
+            'icon' => 'fa-solid fa-newspaper',
+            'category' => 'Campus & Media',
+            'fields' => [
+                'blog_hero_image' => ['label' => 'Blog Hero Curved Campus Photo', 'type' => 'image', 'default' => 'assets/images/about-hero-building.jpg'],
+            ],
+        ],
     ];
 
     /**

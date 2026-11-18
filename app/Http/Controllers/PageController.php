@@ -1223,7 +1223,11 @@ class PageController extends Controller
 
         $categories = GalleryItem::CATEGORIES;
 
-        return view('pages.gallery', compact('seo', 'galleryItems', 'categories'));
+        $content = [
+            'hero_image' => Setting::get('gallery_hero_image', 'assets/images/about-hero-building.jpg'),
+        ];
+
+        return view('pages.gallery', compact('seo', 'galleryItems', 'categories', 'content'));
     }
 
     public function blog(): View
@@ -1235,7 +1239,11 @@ class PageController extends Controller
             'Advaita school blog, school news Parbhani, educational articles, student achievements'
         );
 
-        return view('pages.blog', compact('seo'));
+        $content = [
+            'hero_image' => Setting::get('blog_hero_image', 'assets/images/about-hero-building.jpg'),
+        ];
+
+        return view('pages.blog', compact('seo', 'content'));
     }
 
     public function mandatoryDisclosure(): View
