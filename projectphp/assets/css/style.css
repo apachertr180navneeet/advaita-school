@@ -7757,4 +7757,22 @@ html, body {
         text-align: center !important;
         margin: 0 !important;
     }
+
+    /* Spacing Reduction Above & Below Bottom Peach CTA Banner on Mobile */
+    .admission-fee-section-v2 .adm-inline-enquiry-bar.alt-amber,
+    .adm-inline-enquiry-bar.alt-amber {
+        margin-top: 14px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .admission-page-wrapper .admission-fee-section-v2,
+    .admission-fee-section-v2 {
+        padding-bottom: 6px !important;
+    }
+
+    .admission-page-wrapper .admission-cta-banner-section,
+    .admission-cta-banner-section {
+        padding-top: 6px !important;
+        padding-bottom: 16px !important;
+    }
 }

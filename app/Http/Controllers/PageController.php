@@ -31,6 +31,19 @@ class PageController extends Controller
     }
 
     /**
+     * Normalize the academic year string to enforce 2027–28 across the application.
+     */
+    protected function resolveAcademicYear(?string $rawYear = null): string
+    {
+        $trimmed = trim((string) ($rawYear ?: '2027–28'));
+        if ($trimmed === '' || preg_match('/^202[0-6][–\-\/](?:20)?2[0-7]$/', $trimmed)) {
+            return '2027–28';
+        }
+
+        return $trimmed;
+    }
+
+    /**
      * Get global site settings (contact numbers, emails, addresses, social links).
      *
      * @return array<string, string|null>
@@ -495,7 +508,7 @@ class PageController extends Controller
             'School admissions Parbhani, CBSE admission 2027-28, Nursery admission, Class 1 to 10 school admission, school transport Parbhani'
         );
 
-        $academicYear = Setting::get('admission_academic_year', '2027–28');
+        $academicYear = $this->resolveAcademicYear(Setting::get('admission_academic_year'));
         $counsellorName = Setting::get('admission_counsellor_name', 'Ms. Vaishnavi');
         $counsellorPhone = Setting::get('admission_counsellor_phone', '9689898973');
         $schoolPhone1 = Setting::get('admission_school_phone1', '9689898973');
@@ -547,7 +560,7 @@ class PageController extends Controller
             'feature3_title' => Setting::get('admission_feature3_title', 'Selection Process'),
             'feature3_desc' => Setting::get('admission_feature3_desc', 'Based on interaction and assessment (as applicable)'),
             'feature4_title' => Setting::get('admission_feature4_title', 'Important Dates'),
-            'feature4_desc' => str_replace(['2026-27', '2026–27', '2026–2027', '2026-2027'], $academicYear, Setting::get('admission_feature4_desc', 'Admissions open for the academic session '.$academicYear)),
+            'feature4_desc' => preg_replace('/202[0-6][–\-\/](?:20)?2[0-7]/', $academicYear, Setting::get('admission_feature4_desc', 'Admissions open for the academic session '.$academicYear)),
 
             // Documents Required Section
             'docs_eyebrow' => Setting::get('admission_docs_eyebrow', '— DOCUMENTS REQUIRED —'),
@@ -879,7 +892,7 @@ class PageController extends Controller
             'Advaita school admission guidelines, age criteria 30 June, CBSE admission rules Grade 9 10, Parbhani school admission process, required documents'
         );
 
-        $academicYear = Setting::get('admission_academic_year', '2027–28');
+        $academicYear = $this->resolveAcademicYear(Setting::get('admission_academic_year'));
         $cutoffDate = Setting::get('admission_age_cutoff', '30 June');
         $counsellorName = Setting::get('admission_counsellor_name', 'Ms. Vaishnavi');
         $counsellorPhone = Setting::get('admission_counsellor_phone', '9689898973');
@@ -1102,7 +1115,7 @@ class PageController extends Controller
      */
     public function printAdmissionGuidelines(): View
     {
-        $academicYear = Setting::get('admission_academic_year', '2027–28');
+        $academicYear = $this->resolveAcademicYear(Setting::get('admission_academic_year'));
         $cutoffDate = Setting::get('admission_age_cutoff', '30 June');
         $counsellorName = Setting::get('admission_counsellor_name', 'Ms. Vaishnavi');
         $counsellorPhone = Setting::get('admission_counsellor_phone', '9689898973');
@@ -1131,7 +1144,7 @@ class PageController extends Controller
         );
 
         $isPublished = (bool) Setting::get('fee_structure_published', false);
-        $academicYear = Setting::get('fee_academic_year', '2027–28');
+        $academicYear = $this->resolveAcademicYear(Setting::get('fee_academic_year'));
         $lastUpdated = Setting::get('fee_last_updated', date('F Y'));
         $pendingNotice = Setting::get('fee_pending_notice', 'The class-wise fee structure for Academic Session 2027–28 is currently under final review and will be published shortly upon approval by school management. For provisional fee estimates or immediate admission counseling, please contact our admissions office or submit a Quick Enquiry.');
 

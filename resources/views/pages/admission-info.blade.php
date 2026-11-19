@@ -231,7 +231,7 @@
                             </div>
                             <div class="afc-text">
                                 <h4 class="afc-title">{{ $content['feature4_title'] ?? 'Important Dates' }}</h4>
-                                <p class="afc-desc">{{ str_replace(['2026-27', '2026–27', '2026–2027', '2026-2027'], ($academicYear ?? '2027–28'), $content['feature4_desc'] ?? ('Admissions open for the academic session ' . ($academicYear ?? '2027–28'))) }}</p>
+                                <p class="afc-desc">{{ preg_replace('/202[0-6][–\-\/](?:20)?2[0-7]/', ($academicYear ?? '2027–28'), $content['feature4_desc'] ?? ('Admissions open for the academic session ' . ($academicYear ?? '2027–28'))) }}</p>
                             </div>
                         </div>
                     </div>
