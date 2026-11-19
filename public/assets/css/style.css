@@ -1681,6 +1681,49 @@ p {
         grid-column: span 2 !important;
     }
 
+    /* Secondary Helpline / Pre-Footer Tour CTA Mobile Center Alignment */
+    .secondary-helpline-card {
+        text-align: center !important;
+    }
+
+    .secondary-helpline-card .sec-helpline-content,
+    .sec-helpline-content {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .secondary-helpline-card .sec-helpline-eyebrow,
+    .sec-helpline-eyebrow {
+        align-self: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .secondary-helpline-card .sec-helpline-content h2,
+    .sec-helpline-content h2 {
+        text-align: center !important;
+        width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .secondary-helpline-card .sec-helpline-content p,
+    .sec-helpline-content p {
+        text-align: center !important;
+        width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .secondary-helpline-card .sec-contact-chips,
+    .sec-contact-chips {
+        justify-content: center !important;
+        width: 100% !important;
+    }
+
     /* Helpline Action Buttons: Vertical Stack on Mobile to Prevent Horizontal Collision */
     .helpline-buttons-stack,
     .admission-page-wrapper .helpline-buttons-stack,

@@ -7932,8 +7932,23 @@
 @media (max-width: 820px) {
     .facilities-cta-box {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        text-align: center;
         padding: 24px 22px;
+    }
+    .facilities-cta-left {
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .facilities-cta-pill {
+        align-self: center;
+    }
+    .facilities-cta-headline {
+        text-align: center;
+    }
+    .facilities-cta-desc {
+        text-align: center;
     }
     .facilities-cta-actions {
         width: 100%;
@@ -13797,6 +13812,29 @@ textarea.reg-input-control {
     .secondary-helpline-card {
         grid-template-columns: 1fr;
         gap: 28px;
+        text-align: center;
+    }
+    .secondary-helpline-card .sec-helpline-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+    }
+    .secondary-helpline-card .sec-helpline-eyebrow {
+        align-self: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .secondary-helpline-card .sec-helpline-content h2,
+    .secondary-helpline-card .sec-helpline-content p {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .secondary-helpline-card .sec-contact-chips {
+        justify-content: center;
+        width: 100%;
     }
 }
 
