@@ -263,6 +263,7 @@ class DatabaseSeeder extends Seeder
             SiteSettingSeeder::class,
             PageContentSeeder::class,
             AcademicProgrammeAndResultSeeder::class,
+            StaffMemberSeeder::class,
         ]);
     }
 }

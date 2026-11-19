@@ -146,146 +146,236 @@ require_once __DIR__.'/includes/header.php';
             </div>
 
             <div class="staff-cards-grid">
-                <!-- CARD 1: Principal -->
-                <article class="staff-card">
-                    <div class="staff-card-avatar-wrap">
-                        <div class="staff-card-avatar-circle">
-                            <img src="assets/images/principal-desk.jpg?v=<?php echo filemtime(__DIR__.'/assets/images/principal-desk.jpg'); ?>" alt="Divine Mam - Principal" class="staff-avatar-photo" loading="lazy">
-                        </div>
-                    </div>
-                    <span class="staff-role-pill role-orange">PRINCIPAL</span>
-                    <h3 class="staff-card-name">Divine Mam</h3>
-                    <div class="staff-card-qual qual-orange">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span>M.A., B.Ed.</span>
-                    </div>
-                </article>
+                <?php
+                $staffMembers = [
+                    [
+                        'name' => 'Ms. Ivy Brown',
+                        'designation' => 'Principal',
+                        'qualification' => 'M.A., M.Ed.',
+                        'pill_class' => 'role-orange',
+                        'qual_class' => 'qual-orange',
+                        'photo' => 'assets/images/staff/ivy-brown.jpeg',
+                    ],
+                    [
+                        'name' => 'Mr. Amit Thakare',
+                        'designation' => 'Accountant',
+                        'qualification' => 'B.Sc. (Agri)',
+                        'pill_class' => 'role-blue',
+                        'qual_class' => 'qual-blue',
+                        'photo' => 'assets/images/staff/amit-thakare.jpg',
+                    ],
+                    [
+                        'name' => 'Mr. Anand Rampurkar',
+                        'designation' => 'PRO & IT Admin',
+                        'qualification' => 'B.Sc. (CS)',
+                        'pill_class' => 'role-orange',
+                        'qual_class' => 'qual-orange',
+                        'photo' => 'assets/images/staff/anand-rampurkar.jpg',
+                    ],
+                    [
+                        'name' => 'Mr. Shrikant Jogdand',
+                        'designation' => 'Librarian',
+                        'qualification' => 'M.A., M.Lib.',
+                        'pill_class' => 'role-purple',
+                        'qual_class' => 'qual-purple',
+                        'photo' => 'assets/images/staff/shrikant-jogdand.jpg',
+                    ],
+                    [
+                        'name' => 'Ms. Jagruti Pingalkar',
+                        'designation' => 'Wellness Teacher',
+                        'qualification' => 'M.A., B.Ed.',
+                        'pill_class' => 'role-green',
+                        'qual_class' => 'qual-green',
+                        'photo' => 'assets/images/staff/jagruti-pingalkar.jpg',
+                    ],
+                    [
+                        'name' => 'Ms. Urmila Durugkar',
+                        'designation' => 'Wellness Teacher',
+                        'qualification' => 'M.A., B.Ed.',
+                        'pill_class' => 'role-green',
+                        'qual_class' => 'qual-green',
+                        'photo' => 'assets/images/staff/urmila-durugkar.jpg',
+                    ],
+                    [
+                        'name' => 'Mr. Deependra Singh',
+                        'designation' => 'TGT - Science',
+                        'qualification' => 'M.Sc., B.Ed.',
+                        'pill_class' => 'role-blue',
+                        'qual_class' => 'qual-blue',
+                        'photo' => 'assets/images/staff/deependra-singh.jpg',
+                    ],
+                    [
+                        'name' => 'Mr. Sumit Rodge',
+                        'designation' => 'TGT - Science',
+                        'qualification' => 'M.Sc., B.Ed.',
+                        'pill_class' => 'role-purple',
+                        'qual_class' => 'qual-purple',
+                        'photo' => 'assets/images/staff/sumit-rodge.png',
+                    ],
+                    [
+                        'name' => 'Mr. Amol Palekar',
+                        'designation' => 'TGT - Mathematics',
+                        'qualification' => 'B.Sc., B.Ed.',
+                        'pill_class' => 'role-cyan',
+                        'qual_class' => 'qual-cyan',
+                        'photo' => 'assets/images/staff/amol-palekar.jpg',
+                    ],
+                    [
+                        'name' => 'Ms. Anjali Iyer',
+                        'designation' => 'TGT - English',
+                        'qualification' => 'M.A., B.Ed.',
+                        'pill_class' => 'role-rose',
+                        'qual_class' => 'qual-rose',
+                        'photo' => 'assets/images/staff/anjali-iyer.jpg',
+                    ],
+                    [
+                        'name' => 'Mr. Bhimrao Wakale',
+                        'designation' => 'TGT - Social Science',
+                        'qualification' => 'M.A., B.Ed.',
+                        'pill_class' => 'role-amber',
+                        'qual_class' => 'qual-amber',
+                        'photo' => 'assets/images/staff/bhimrao-wakale.jpg',
+                    ],
+                    [
+                        'name' => 'Mr. Shivdas Shinde',
+                        'designation' => 'TGT - Languages',
+                        'qualification' => 'M.Phil., B.Ed.',
+                        'pill_class' => 'role-blue',
+                        'qual_class' => 'qual-blue',
+                        'photo' => 'assets/images/staff/shivdas-shinde.jpg',
+                    ],
+                    [
+                        'name' => 'Ms. Urmila Nitnaware',
+                        'designation' => 'TGT - Social Studies',
+                        'qualification' => 'M.A., B.Ed.',
+                        'pill_class' => 'role-amber',
+                        'qual_class' => 'qual-amber',
+                        'photo' => 'assets/images/staff/urmila-nitnaware.jpg',
+                    ],
+                    [
+                        'name' => 'Ms. Vaishali Maske',
+                        'designation' => 'TGT - Computer Science',
+                        'qualification' => 'M.C.M.',
+                        'pill_class' => 'role-cyan',
+                        'qual_class' => 'qual-cyan',
+                        'photo' => 'assets/images/staff/vaishali-maske.jpg',
+                    ],
+                    [
+                        'name' => 'Mr. Siddharth Nagthankar',
+                        'designation' => 'TGT - Fine Arts & Painting',
+                        'qualification' => 'M.F.A. (Painting), B.Ed.',
+                        'pill_class' => 'role-pink',
+                        'qual_class' => 'qual-pink',
+                        'photo' => 'assets/images/staff/siddharth-nagthankar.png',
+                    ],
+                    [
+                        'name' => 'Mr. Krushna Mane',
+                        'designation' => 'PRT - Mathematics & Science',
+                        'qualification' => 'M.Sc.',
+                        'pill_class' => 'role-blue',
+                        'qual_class' => 'qual-blue',
+                        'photo' => 'assets/images/staff/krushna-mane.jpg',
+                    ],
+                    [
+                        'name' => 'Ms. Pooja Gondal',
+                        'designation' => 'PRT - Primary Educator',
+                        'qualification' => 'B.A.',
+                        'pill_class' => 'role-rose',
+                        'qual_class' => 'qual-rose',
+                        'photo' => 'assets/images/staff/pooja-gondal.jpg',
+                    ],
+                    [
+                        'name' => 'Ms. Priyanka Raut',
+                        'designation' => 'PRT - Primary Educator',
+                        'qualification' => 'M.A.',
+                        'pill_class' => 'role-amber',
+                        'qual_class' => 'qual-amber',
+                        'photo' => 'assets/images/staff/priyanka-raut.jpg',
+                    ],
+                    [
+                        'name' => 'Ms. Sayali Aade',
+                        'designation' => 'PRT - Arts & Crafts',
+                        'qualification' => 'B.F.A., A.T.D., ECCE',
+                        'pill_class' => 'role-pink',
+                        'qual_class' => 'qual-pink',
+                        'photo' => 'assets/images/staff/sayali-aade.jpg',
+                    ],
+                    [
+                        'name' => 'Ms. Shally Agrawal',
+                        'designation' => 'PRT - Primary Educator',
+                        'qualification' => 'B.A., B.Ed.',
+                        'pill_class' => 'role-green',
+                        'qual_class' => 'qual-green',
+                        'photo' => 'assets/images/staff/shally-agrawal.jpg',
+                    ],
+                    [
+                        'name' => 'Mr. Suraj Jogdand',
+                        'designation' => 'PRT - Computer Instructor',
+                        'qualification' => 'B.Tech.',
+                        'pill_class' => 'role-blue',
+                        'qual_class' => 'qual-blue',
+                        'photo' => 'assets/images/staff/suraj-jogdand.jpg',
+                    ],
+                    [
+                        'name' => 'Ms. Radhika Deshmukh',
+                        'designation' => 'NTT - Pre-Primary',
+                        'qualification' => 'B.A., B.Ed.',
+                        'pill_class' => 'role-rose',
+                        'qual_class' => 'qual-rose',
+                        'photo' => 'assets/images/staff/radhika-deshmukh.jpg',
+                    ],
+                    [
+                        'name' => 'Ms. Sarita Swami',
+                        'designation' => 'NTT - Early Childhood',
+                        'qualification' => 'B.Sc., ECCE',
+                        'pill_class' => 'role-pink',
+                        'qual_class' => 'qual-pink',
+                        'photo' => 'assets/images/staff/sarita-swami.jpg',
+                    ],
+                    [
+                        'name' => 'Ms. Snehal Chavan',
+                        'designation' => 'NTT - Early Childhood',
+                        'qualification' => 'B.Sc., ECCE',
+                        'pill_class' => 'role-purple',
+                        'qual_class' => 'qual-purple',
+                        'photo' => 'assets/images/staff/snehal-chavan.png',
+                    ],
+                    [
+                        'name' => 'Ms. Vidya Kale',
+                        'designation' => 'NTT - Pre-Primary',
+                        'qualification' => 'B.Sc.',
+                        'pill_class' => 'role-rose',
+                        'qual_class' => 'qual-rose',
+                        'photo' => 'assets/images/staff/vidya-kale.jpg',
+                    ],
+                ];
 
-                <!-- CARD 2: Vice Principal -->
+foreach ($staffMembers as $staff) {
+    $photoSrc = ! empty($staff['photo']) && file_exists(__DIR__.'/'.$staff['photo'])
+        ? $staff['photo'].'?v='.filemtime(__DIR__.'/'.$staff['photo'])
+        : null;
+    ?>
                 <article class="staff-card">
                     <div class="staff-card-avatar-wrap">
                         <div class="staff-card-avatar-circle">
-                            <svg class="staff-avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <circle cx="50" cy="38" r="20" fill="#8d99ae"/>
-                                <path d="M18 90C18 68 32 62 50 62C68 62 82 68 82 90" fill="#8d99ae"/>
-                            </svg>
+                            <?php if ($photoSrc) { ?>
+                                <img src="<?php echo htmlspecialchars($photoSrc); ?>" alt="<?php echo htmlspecialchars($staff['name'].' - '.$staff['designation']); ?>" class="staff-avatar-photo" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<svg class=\'staff-avatar-svg\' viewBox=\'0 0 100 100\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\' aria-hidden=\'true\'><circle cx=\'50\' cy=\'38\' r=\'20\' fill=\'#8d99ae\'/><path d=\'M18 90C18 68 32 62 50 62C68 62 82 68 82 90\' fill=\'#8d99ae\'/></svg>';">
+                            <?php } else { ?>
+                                <svg class="staff-avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <circle cx="50" cy="38" r="20" fill="#8d99ae"/>
+                                    <path d="M18 90C18 68 32 62 50 62C68 62 82 68 82 90" fill="#8d99ae"/>
+                                </svg>
+                            <?php } ?>
                         </div>
                     </div>
-                    <span class="staff-role-pill role-blue">VICE PRINCIPAL</span>
-                    <h3 class="staff-card-name">Faculty Name 02</h3>
-                    <div class="staff-card-qual qual-blue">
+                    <span class="staff-role-pill <?php echo htmlspecialchars($staff['pill_class']); ?>"><?php echo htmlspecialchars($staff['designation']); ?></span>
+                    <h3 class="staff-card-name"><?php echo htmlspecialchars($staff['name']); ?></h3>
+                    <div class="staff-card-qual <?php echo htmlspecialchars($staff['qual_class']); ?>">
                         <i class="fa-solid fa-graduation-cap"></i>
-                        <span>M.Sc. (Mathematics), B.Ed.</span>
+                        <span><?php echo htmlspecialchars($staff['qualification']); ?></span>
                     </div>
                 </article>
-
-                <!-- CARD 3: Senior Faculty - Science -->
-                <article class="staff-card">
-                    <div class="staff-card-avatar-wrap">
-                        <div class="staff-card-avatar-circle">
-                            <svg class="staff-avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <circle cx="50" cy="38" r="20" fill="#8d99ae"/>
-                                <path d="M18 90C18 68 32 62 50 62C68 62 82 68 82 90" fill="#8d99ae"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="staff-role-pill role-purple">SENIOR FACULTY - SCIENCE</span>
-                    <h3 class="staff-card-name">Faculty Name 03</h3>
-                    <div class="staff-card-qual qual-purple">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span>M.Sc. (Physics), B.Ed.</span>
-                    </div>
-                </article>
-
-                <!-- CARD 4: Head - English Department -->
-                <article class="staff-card">
-                    <div class="staff-card-avatar-wrap">
-                        <div class="staff-card-avatar-circle">
-                            <svg class="staff-avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <circle cx="50" cy="38" r="20" fill="#8d99ae"/>
-                                <path d="M18 90C18 68 32 62 50 62C68 62 82 68 82 90" fill="#8d99ae"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="staff-role-pill role-rose">HEAD - ENGLISH DEPARTMENT</span>
-                    <h3 class="staff-card-name">Faculty Name 04</h3>
-                    <div class="staff-card-qual qual-rose">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span>M.A. (English), M.Ed.</span>
-                    </div>
-                </article>
-
-                <!-- CARD 5: Senior Faculty - Mathematics -->
-                <article class="staff-card">
-                    <div class="staff-card-avatar-wrap">
-                        <div class="staff-card-avatar-circle">
-                            <svg class="staff-avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <circle cx="50" cy="38" r="20" fill="#8d99ae"/>
-                                <path d="M18 90C18 68 32 62 50 62C68 62 82 68 82 90" fill="#8d99ae"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="staff-role-pill role-green">SENIOR FACULTY - MATHEMATICS</span>
-                    <h3 class="staff-card-name">Faculty Name 05</h3>
-                    <div class="staff-card-qual qual-green">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span>M.Sc. (Maths), B.Ed.</span>
-                    </div>
-                </article>
-
-                <!-- CARD 6: Head - Hindi Department -->
-                <article class="staff-card">
-                    <div class="staff-card-avatar-wrap">
-                        <div class="staff-card-avatar-circle">
-                            <svg class="staff-avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <circle cx="50" cy="38" r="20" fill="#8d99ae"/>
-                                <path d="M18 90C18 68 32 62 50 62C68 62 82 68 82 90" fill="#8d99ae"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="staff-role-pill role-amber">HEAD - HINDI DEPARTMENT</span>
-                    <h3 class="staff-card-name">Faculty Name 06</h3>
-                    <div class="staff-card-qual qual-amber">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span>M.A. (Hindi), B.Ed.</span>
-                    </div>
-                </article>
-
-                <!-- CARD 7: Senior Faculty - Commerce -->
-                <article class="staff-card">
-                    <div class="staff-card-avatar-wrap">
-                        <div class="staff-card-avatar-circle">
-                            <svg class="staff-avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <circle cx="50" cy="38" r="20" fill="#8d99ae"/>
-                                <path d="M18 90C18 68 32 62 50 62C68 62 82 68 82 90" fill="#8d99ae"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="staff-role-pill role-cyan">SENIOR FACULTY - COMMERCE</span>
-                    <h3 class="staff-card-name">Faculty Name 07</h3>
-                    <div class="staff-card-qual qual-cyan">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span>M.Com., B.Ed.</span>
-                    </div>
-                </article>
-
-                <!-- CARD 8: Head - Primary Wing -->
-                <article class="staff-card">
-                    <div class="staff-card-avatar-wrap">
-                        <div class="staff-card-avatar-circle">
-                            <svg class="staff-avatar-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                <circle cx="50" cy="38" r="20" fill="#8d99ae"/>
-                                <path d="M18 90C18 68 32 62 50 62C68 62 82 68 82 90" fill="#8d99ae"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="staff-role-pill role-pink">HEAD - PRIMARY WING</span>
-                    <h3 class="staff-card-name">Faculty Name 08</h3>
-                    <div class="staff-card-qual qual-pink">
-                        <i class="fa-solid fa-graduation-cap"></i>
-                        <span>M.A., D.Ed., B.Ed.</span>
-                    </div>
-                </article>
+                <?php } ?>
             </div>
         </div>
     </section>
