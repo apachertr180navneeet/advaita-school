@@ -10100,6 +10100,16 @@ textarea.reg-input-control {
     line-height: 1.45;
 }
 
+.fee-addon-sub a,
+.fee-addon-contact,
+.text-nowrap {
+    white-space: nowrap !important;
+}
+
+.fee-addon-contact {
+    display: inline-block;
+}
+
 .fee-addon-price-badge {
     font-family: var(--adv-font-sans);
     font-size: 1.15rem;

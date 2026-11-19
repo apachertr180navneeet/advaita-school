@@ -337,7 +337,7 @@ require_once __DIR__.'/includes/header.php';
                     </div>
                     <div class="fee-addon-info">
                         <div class="fee-addon-title">Transport Facility</div>
-                        <div class="fee-addon-sub">Provided via third party &bull; Head: Shakir Bhai (<a href="tel:+919923747775">+91 99237 47775</a>)</div>
+                        <div class="fee-addon-sub">Provided via third party &bull; <span class="fee-addon-contact">Head: <strong>Shakir Bhai (<a href="tel:+919923747775" class="text-orange text-nowrap">+91&nbsp;99237&nbsp;47775</a>)</strong></span></div>
                         <div class="fee-addon-amount">Route-Based</div>
                     </div>
                 </div>
