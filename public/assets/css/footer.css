@@ -14,6 +14,8 @@
     position: relative;
     overflow: hidden;
     margin-top: 0;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
     font-size: 0.875rem;
     font-family: var(--adv-font-main, 'Plus Jakarta Sans', sans-serif);
     border-top: 1px solid rgba(255, 255, 255, 0.06);
@@ -285,7 +287,8 @@ a.touch-link:hover {
 .adv-footer-bottom-strip {
     background: #03101d;
     border-top: 1px solid rgba(255, 255, 255, 0.07);
-    padding: 16px 0;
+    padding: 16px 0 calc(16px + env(safe-area-inset-bottom, 0px));
+    margin-bottom: 0 !important;
     position: relative;
     z-index: 2;
     font-size: 0.8125rem;

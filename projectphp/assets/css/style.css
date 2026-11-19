@@ -2666,19 +2666,21 @@ html, body {
         color: #FFFFFF !important;
     }
 
-    body.has-floating-bar {
-        padding-bottom: 74px !important;
+    body.has-floating-bar,
+    body {
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
     }
 
-    /* Adjust Floating WhatsApp Button to not overlap bottom sticky bar */
+    /* Adjust Floating WhatsApp Button on Mobile */
     .adv-floating-whatsapp-btn {
-        bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important;
-        right: 14px !important;
+        bottom: calc(18px + env(safe-area-inset-bottom, 0px)) !important;
+        right: 16px !important;
     }
 
     .adv-scroll-top-btn {
-        bottom: calc(130px + env(safe-area-inset-bottom, 0px)) !important;
-        right: 14px !important;
+        bottom: calc(76px + env(safe-area-inset-bottom, 0px)) !important;
+        right: 16px !important;
     }
 
     /* 1. Admission Inline Enquiry Badge non-wrapping text on Mobile */
