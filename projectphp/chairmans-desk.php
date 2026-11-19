@@ -159,10 +159,10 @@ require_once __DIR__.'/includes/header.php';
 
                         <div class="chairman-profile-card">
                             <div class="chairman-profile-photo-wrap">
-                                <img src="assets/images/chairman-real.png" alt="Shri. Vishal Vishal Wattamwar - Chairman" class="chairman-profile-photo" loading="lazy">
+                                <img src="assets/images/chairman-real.png" alt="Shri. Vishal Wattamwar - Chairman" class="chairman-profile-photo" loading="lazy">
                             </div>
                             <div class="chairman-profile-info">
-                                <h3 class="chairman-name">Shri. Vishal Vishal Wattamwar</h3>
+                                <h3 class="chairman-name">Shri. Vishal Wattamwar</h3>
                                 <div class="chairman-role">Chairman,</div>
                                 <p class="chairman-org">Sanmati Sevabhavi Sansthan, Parbhani</p>
                             </div>
