@@ -184,7 +184,7 @@
 
                 <!-- Right Column: Information & 4-Grid Cards -->
                 <div class="admission-split-content">
-                    <div class="admission-eyebrow">{{ $content['guidelines_eyebrow'] ?? 'ADMISSION GUIDELINES' }}</div>
+                    <div class="admission-eyebrow">{{ $content['guidelines_eyebrow'] ?? '— ADMISSION INFORMATION —' }}</div>
                     <h2 class="admission-section-title">
                         {{ $content['guidelines_title'] ?? 'Guidelines for a smooth start at' }}
                         <span class="highlight-serif">{{ $content['guidelines_highlight'] ?? 'Advaita.' }}</span>
