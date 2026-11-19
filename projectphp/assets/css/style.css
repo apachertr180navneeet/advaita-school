@@ -287,6 +287,18 @@ p {
         display: block !important;
     }
 
+    .adv-gal-hero-curved-visual,
+    .adv-blog-hero-curved-visual,
+    .adv-gal-hero-curved-svg,
+    .adv-blog-hero-curved-svg {
+        opacity: 0.15 !important;
+    }
+
+    .adv-gal-hero-badge,
+    .adv-blog-hero-badge {
+        display: none !important;
+    }
+
     /* 4. Hide clunky wave masks, wave overlays, and dot decor on mobile & tablet */
     .about-hero-wave-edge,
     .staff-hero-wave-overlay,
@@ -747,6 +759,16 @@ p {
         max-height: none !important;
     }
 
+    .adv-gal-hero-curved-visual,
+    .adv-blog-hero-curved-visual {
+        opacity: 0.15 !important;
+    }
+
+    .adv-gal-hero-badge,
+    .adv-blog-hero-badge {
+        display: none !important;
+    }
+
     /* =========================================================================
        UNIVERSAL HERO SECTIONS (ONLY IN MOBILE: max-width 768px)
        ========================================================================= */
@@ -849,6 +871,19 @@ p {
         margin: 0 auto 14px !important;
         color: #083B7A !important;
         font-weight: 500 !important;
+    }
+
+    .adv-gal-hero-desc,
+    .adv-blog-hero-desc {
+        text-align: center !important;
+        margin: 0 auto 12px !important;
+        color: #334155 !important;
+        font-weight: 500 !important;
+        font-size: clamp(0.82rem, 2.8vw, 0.92rem) !important;
+        line-height: 1.55 !important;
+        max-width: 580px !important;
+        position: relative !important;
+        z-index: 5 !important;
     }
 
     .about-page-wrapper .about-hero-highlights,
@@ -1845,6 +1880,16 @@ p {
         width: 100% !important;
         height: 100% !important;
         max-height: none !important;
+    }
+
+    .adv-gal-hero-curved-visual,
+    .adv-blog-hero-curved-visual {
+        opacity: 0.15 !important;
+    }
+
+    .adv-gal-hero-badge,
+    .adv-blog-hero-badge {
+        display: none !important;
     }
 
     .registration-form-card {
@@ -3731,6 +3776,16 @@ html, body {
         width: 100% !important;
         height: 100% !important;
         max-height: none !important;
+    }
+
+    .adv-gal-hero-curved-visual,
+    .adv-blog-hero-curved-visual {
+        opacity: 0.15 !important;
+    }
+
+    .adv-gal-hero-badge,
+    .adv-blog-hero-badge {
+        display: none !important;
     }
 
     .about-page-wrapper .about-hero-title {

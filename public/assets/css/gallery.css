@@ -1376,6 +1376,11 @@
         width: 100%;
         height: 280px;
         margin-top: 10px;
+        opacity: 0.15;
+    }
+
+    .adv-gal-hero-badge {
+        display: none !important;
     }
 
     .adv-gal-hero-dots-decor {
