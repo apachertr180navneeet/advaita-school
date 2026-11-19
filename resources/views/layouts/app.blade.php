@@ -130,7 +130,7 @@
     <!-- Sticky Bottom Floating Mobile Admission Enquiry Pill (Appears on Mobile across all pages) -->
     <div class="floating-mobile-enquiry-bar" id="floatingMobileEnquiry" aria-label="Quick Mobile Admission Enquiry">
         <div class="fme-text">
-            <strong>Admissions {{ $academicYear ?? '2026–27' }}</strong>
+            <strong>Admissions {{ $academicYear ?? '2027–28' }}</strong>
             <span style="white-space: nowrap;">Nursery to 10 &bull; Limited Seats</span>
         </div>
         <button type="button" onclick="openEnquiryModal()" class="btn-fme-action" aria-label="Open Quick Enquiry">

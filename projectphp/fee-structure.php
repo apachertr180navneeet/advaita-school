@@ -1,10 +1,10 @@
 <?php
 /**
  * Fee Structure Page - Advaita School of Excellence, Parbhani
- * Academic Session 2026–27 | Class-wise fee breakdown, Add-ons, Covers, Payment options & FAQs
+ * Academic Session 2027–28 | Class-wise fee breakdown, Add-ons, Covers, Payment options & FAQs
  * Semantic HTML & Consistent Design - Header and Footer Preserved
  */
-$pageTitle = 'Fee Structure 2026-27 - Advaita School of Excellence, Parbhani | Transparent Fees';
+$pageTitle = 'Fee Structure 2027-28 - Advaita School of Excellence, Parbhani | Transparent Fees';
 $activePage = 'fee-structure';
 
 require_once __DIR__.'/includes/header.php';
@@ -52,7 +52,7 @@ require_once __DIR__.'/includes/header.php';
                     </nav>
 
                     <!-- Eyebrow -->
-                    <div class="admission-eyebrow">ADMISSIONS 2026–27</div>
+                    <div class="admission-eyebrow">ADMISSIONS 2027–28</div>
 
                     <!-- Main Headline -->
                     <h1 class="admission-hero-title">
@@ -82,7 +82,7 @@ require_once __DIR__.'/includes/header.php';
                     </div>
                     <div>
                         <h2 class="fee-card-main-title">Class-wise Fee Structure</h2>
-                        <p class="fee-card-main-sub">Academic Session 2026 – 27 &nbsp;|&nbsp; Nursery to Class 10</p>
+                        <p class="fee-card-main-sub">Academic Session 2027 – 28 &nbsp;|&nbsp; Nursery to Class 10</p>
                     </div>
                 </div>
 
@@ -302,7 +302,7 @@ require_once __DIR__.'/includes/header.php';
             <!-- Table Note -->
             <div class="fee-table-note">
                 <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
-                <span><strong>Note:</strong> The above fees are for the academic session 2026–27. The fee structure is subject to change as per school policy.</span>
+                <span><strong>Note:</strong> The above fees are for the academic session 2027–28. The fee structure is subject to change as per school policy.</span>
             </div>
         </div>
 
@@ -592,7 +592,7 @@ require_once __DIR__.'/includes/header.php';
                             <i class="fa-solid fa-chevron-down fee-faq-chevron" aria-hidden="true"></i>
                         </div>
                         <div class="fee-faq-answer">
-                            Yes, the fee schedule declared at the start of the academic year 2026–27 remains constant and fixed for the entire duration of that session.
+                            Yes, the fee schedule declared at the start of the academic year 2027–28 remains constant and fixed for the entire duration of that session.
                         </div>
                     </div>
                 </div>

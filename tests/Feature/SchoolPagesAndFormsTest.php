@@ -79,7 +79,7 @@ class SchoolPagesAndFormsTest extends TestCase
             'full_name' => 'Aarav Sharma',
             'phone' => '9876543210',
             'applying_class' => 'Class 5',
-            'academic_year' => '2026-2027',
+            'academic_year' => '2027-2028',
             'father_name' => 'Ramesh Sharma',
             'mother_name' => 'Sunita Sharma',
             'city' => 'Parbhani',

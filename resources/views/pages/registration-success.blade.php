@@ -29,7 +29,7 @@
                 <div>
                     <span style="font-size: 11px; font-weight: 800; letter-spacing: 1px; color: #FDBA74; text-transform: uppercase;">Advaita School of Excellence · Parbhani</span>
                     <h3 style="color: #ffffff; margin: 4px 0 0 0; font-size: 20px; font-weight: 800;">Official Registration Acknowledgement</h3>
-                    <span style="font-size: 12px; opacity: 0.85;">CBSE Affiliation No. 1130920 · Academic Session {{ $registration->academic_year ?? '2026-27' }}</span>
+                    <span style="font-size: 12px; opacity: 0.85;">CBSE Affiliation No. 1130920 · Academic Session {{ $registration->academic_year ?? '2027-28' }}</span>
                 </div>
                 <div style="text-align: right; background: rgba(255, 255, 255, 0.12); padding: 10px 18px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.2);">
                     <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; opacity: 0.85;">Application ID</div>

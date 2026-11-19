@@ -1037,7 +1037,7 @@
 
             <div class="adv-onload-card">
                 <a href="{{ route('online-registration') }}" class="adv-onload-poster-link" title="Apply for Admission">
-                    <img src="{{ asset('assets/images/onload-admission-popup.jpg') }}" alt="Admissions Open 2026-27 - Advaita School of Excellence" class="adv-onload-poster-img" loading="eager">
+                    <img src="{{ asset('assets/images/onload-admission-popup.jpg') }}" alt="Admissions Open 2027-28 - Advaita School of Excellence" class="adv-onload-poster-img" loading="eager">
                 </a>
 
                 <div class="adv-onload-footer-actions">

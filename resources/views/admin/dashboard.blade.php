@@ -300,7 +300,7 @@
                             <div class="td-sub-muted">{{ $reg->phone }}</div>
                         </td>
                         <td>
-                            <span class="td-semi-bold">{{ $reg->academic_year ?? '2026-2027' }}</span>
+                            <span class="td-semi-bold">{{ $reg->academic_year ?? '2027-2028' }}</span>
                         </td>
                         <td>
                             <form action="{{ route('admin.registrations.status', $reg->id) }}" method="POST" class="m-0">

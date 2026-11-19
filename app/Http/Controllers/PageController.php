@@ -490,12 +490,12 @@ class PageController extends Controller
     {
         $seo = $this->getPageSeo(
             'admission_info',
-            'Admission Information (2026-27) - Advaita School of Excellence',
+            'Admission Information (2027-28) - Advaita School of Excellence',
             'Comprehensive admission guidelines, eligibility criteria, document requirements, admission process, transport facilities, uniform guidelines, and quick enquiry for Nursery to Class 10.',
-            'School admissions Parbhani, CBSE admission 2026-27, Nursery admission, Class 1 to 10 school admission, school transport Parbhani'
+            'School admissions Parbhani, CBSE admission 2027-28, Nursery admission, Class 1 to 10 school admission, school transport Parbhani'
         );
 
-        $academicYear = Setting::get('admission_academic_year', '2026–27');
+        $academicYear = Setting::get('admission_academic_year', '2027–28');
         $counsellorName = Setting::get('admission_counsellor_name', 'Ms. Vaishnavi');
         $counsellorPhone = Setting::get('admission_counsellor_phone', '9689898973');
         $schoolPhone1 = Setting::get('admission_school_phone1', '9689898973');
@@ -671,8 +671,8 @@ class PageController extends Controller
                 'wing_type' => 'preprimary',
                 'age' => '3 Years +',
                 'age_badge' => 'Minimum 3 Years',
-                'age_note' => 'Completed as on 31st Dec 2026',
-                'criterion' => 'Child must have completed 3 years of age as of 31st December 2026.',
+                'age_note' => 'Completed as on 31st Dec 2027',
+                'criterion' => 'Child must have completed 3 years of age as of 31st December 2027.',
                 'doc_req' => 'Birth Certificate Mandatory',
                 'entry' => 'Direct Admission',
             ],
@@ -682,8 +682,8 @@ class PageController extends Controller
                 'wing_type' => 'preprimary',
                 'age' => '4 Years +',
                 'age_badge' => 'Minimum 4 Years',
-                'age_note' => 'Completed as on 31st Dec 2026',
-                'criterion' => 'Child must have completed 4 years of age as of 31st December 2026.',
+                'age_note' => 'Completed as on 31st Dec 2027',
+                'criterion' => 'Child must have completed 4 years of age as of 31st December 2027.',
                 'doc_req' => 'Birth Certificate Mandatory',
                 'entry' => 'Direct Admission',
             ],
@@ -693,8 +693,8 @@ class PageController extends Controller
                 'wing_type' => 'preprimary',
                 'age' => '5 Years +',
                 'age_badge' => 'Minimum 5 Years',
-                'age_note' => 'Completed as on 31st Dec 2026',
-                'criterion' => 'Child must have completed 5 years of age as of 31st December 2026.',
+                'age_note' => 'Completed as on 31st Dec 2027',
+                'criterion' => 'Child must have completed 5 years of age as of 31st December 2027.',
                 'doc_req' => 'Foundation Readiness',
                 'entry' => 'Direct Admission',
             ],
@@ -879,7 +879,7 @@ class PageController extends Controller
             'Advaita school admission guidelines, age criteria 30 June, CBSE admission rules Grade 9 10, Parbhani school admission process, required documents'
         );
 
-        $academicYear = Setting::get('admission_academic_year', '2026–27');
+        $academicYear = Setting::get('admission_academic_year', '2027–28');
         $cutoffDate = Setting::get('admission_age_cutoff', '30 June');
         $counsellorName = Setting::get('admission_counsellor_name', 'Ms. Vaishnavi');
         $counsellorPhone = Setting::get('admission_counsellor_phone', '9689898973');
@@ -1102,7 +1102,7 @@ class PageController extends Controller
      */
     public function printAdmissionGuidelines(): View
     {
-        $academicYear = Setting::get('admission_academic_year', '2026–27');
+        $academicYear = Setting::get('admission_academic_year', '2027–28');
         $cutoffDate = Setting::get('admission_age_cutoff', '30 June');
         $counsellorName = Setting::get('admission_counsellor_name', 'Ms. Vaishnavi');
         $counsellorPhone = Setting::get('admission_counsellor_phone', '9689898973');
@@ -1125,15 +1125,15 @@ class PageController extends Controller
     {
         $seo = $this->getPageSeo(
             'fee_structure',
-            'Fee Structure (2026-27) - Advaita School of Excellence, Parbhani',
+            'Fee Structure (2027-28) - Advaita School of Excellence, Parbhani',
             'Official fee structure and installment guidelines for Pre-Primary, Primary, and Secondary classes at Advaita School of Excellence, Parbhani.',
             'Advaita school fee structure, Parbhani school fees, CBSE school tuition fees, installment plans, CBSE fee schedule'
         );
 
         $isPublished = (bool) Setting::get('fee_structure_published', false);
-        $academicYear = Setting::get('fee_academic_year', '2026–27');
+        $academicYear = Setting::get('fee_academic_year', '2027–28');
         $lastUpdated = Setting::get('fee_last_updated', date('F Y'));
-        $pendingNotice = Setting::get('fee_pending_notice', 'The class-wise fee structure for Academic Session 2026–27 is currently under final review and will be published shortly upon approval by school management. For provisional fee estimates or immediate admission counseling, please contact our admissions office or submit a Quick Enquiry.');
+        $pendingNotice = Setting::get('fee_pending_notice', 'The class-wise fee structure for Academic Session 2027–28 is currently under final review and will be published shortly upon approval by school management. For provisional fee estimates or immediate admission counseling, please contact our admissions office or submit a Quick Enquiry.');
 
         $prePrimaryFees = FeeStructure::where('wing', 'pre_primary')->orderBy('order')->get();
         $primaryFees = FeeStructure::where('wing', 'primary')->orderBy('order')->get();
@@ -1141,7 +1141,7 @@ class PageController extends Controller
         $allFees = FeeStructure::orderBy('order')->get();
 
         $content = [
-            'hero_badge' => Setting::get('fee_hero_badge', 'ADMISSIONS 2026–27'),
+            'hero_badge' => Setting::get('fee_hero_badge', 'ADMISSIONS 2027–28'),
             'hero_title' => Setting::get('fee_hero_title', 'Fees, paid in simple terms.'),
             'hero_desc' => Setting::get('fee_hero_desc', 'A clear, transparent fee structure designed to make quality education accessible for every child.'),
             'academic_year' => $academicYear,

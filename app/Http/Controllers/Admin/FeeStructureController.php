@@ -29,9 +29,9 @@ class FeeStructureController extends Controller
         $wings = FeeStructure::WINGS;
 
         $isPublished = (bool) Setting::get('fee_structure_published', false);
-        $academicYear = Setting::get('fee_academic_year', '2026–27');
+        $academicYear = Setting::get('fee_academic_year', '2027–28');
         $lastUpdated = Setting::get('fee_last_updated', date('F Y'));
-        $pendingNotice = Setting::get('fee_pending_notice', 'Fee structure for 2026-27 is currently under official review and will be published shortly upon approval by school management.');
+        $pendingNotice = Setting::get('fee_pending_notice', 'Fee structure for 2027-28 is currently under official review and will be published shortly upon approval by school management.');
 
         return view('admin.fee-structures.index', compact(
             'feeStructures',

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', "Fee Structure 2026-27 - Advaita School of Excellence, Parbhani | Transparent Fees")
+@section('title', "Fee Structure 2027-28 - Advaita School of Excellence, Parbhani | Transparent Fees")
 
 @section('content')
 <main id="main" class="main-content-wrapper fee-page-wrapper">
@@ -45,7 +45,7 @@
 
                     <!-- Eyebrow Pill -->
                     <div class="admission-eyebrow">
-                        <i class="fa-solid fa-graduation-cap me-1"></i> {{ $content['hero_badge'] ?? 'ADMISSIONS 2026–27' }}
+                        <i class="fa-solid fa-graduation-cap me-1"></i> {{ $content['hero_badge'] ?? 'ADMISSIONS 2027–28' }}
                     </div>
 
                     <!-- Main Headline -->
@@ -623,7 +623,7 @@
                             <i class="fa-solid fa-chevron-down fee-faq-chevron" aria-hidden="true"></i>
                         </div>
                         <div class="fee-faq-answer">
-                            Yes, the fee schedule declared at the start of Academic Session 2026–27 remains strictly constant and fixed for the entire duration of that session with zero mid-term escalations.
+                            Yes, the fee schedule declared at the start of Academic Session 2027–28 remains strictly constant and fixed for the entire duration of that session with zero mid-term escalations.
                         </div>
                     </div>
                 </div>
@@ -664,7 +664,7 @@
                     <i class="fa-solid fa-phone"></i>
                     <span>Call Admission Counsellor</span>
                 </a>
-                <a href="https://wa.me/919422175522?text=Hello%20Advaita%20School,%20I%20have%20a%20query%20regarding%20the%20fee%20structure%202026-27." target="_blank" rel="noopener noreferrer" class="btn-fee-wa" title="Chat on WhatsApp">
+                <a href="https://wa.me/919422175522?text=Hello%20Advaita%20School,%20I%20have%20a%20query%20regarding%20the%20fee%20structure%202027-28." target="_blank" rel="noopener noreferrer" class="btn-fee-wa" title="Chat on WhatsApp">
                     <i class="fa-brands fa-whatsapp"></i>
                     <span>Chat on WhatsApp (+91 94221 75522)</span>
                 </a>

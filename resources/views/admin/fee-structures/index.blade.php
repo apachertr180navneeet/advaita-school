@@ -207,7 +207,7 @@
                         <span>Current Academic Session</span>
                         <span class="required">*</span>
                     </label>
-                    <input type="text" id="academic_year" name="academic_year" value="{{ old('academic_year', $academicYear) }}" class="form-control" required placeholder="e.g. 2026–27">
+                    <input type="text" id="academic_year" name="academic_year" value="{{ old('academic_year', $academicYear) }}" class="form-control" required placeholder="e.g. 2027–28">
                 </div>
 
                 <div class="form-group full-width">

@@ -11,8 +11,8 @@ class RegistrationController extends Controller
     public function create()
     {
         $seo = [
-            'title' => Setting::get('seo_online_registration_title', 'Online Student Registration (2026-27) - Advaita School of Excellence'),
-            'description' => Setting::get('seo_online_registration_description', 'Apply online for student admission at Advaita School of Excellence, Parbhani. Fast, secure, and hassle-free registration form for academic year 2026-27.'),
+            'title' => Setting::get('seo_online_registration_title', 'Online Student Registration (2027-28) - Advaita School of Excellence'),
+            'description' => Setting::get('seo_online_registration_description', 'Apply online for student admission at Advaita School of Excellence, Parbhani. Fast, secure, and hassle-free registration form for academic year 2027-28.'),
             'keywords' => Setting::get('seo_online_registration_keywords', 'Online school admission form, student registration Parbhani, Advaita online admission'),
         ];
 

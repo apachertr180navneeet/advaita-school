@@ -46,7 +46,7 @@
                     </nav>
 
                     <!-- Eyebrow -->
-                    <div class="admission-eyebrow">PRE-PRIMARY TO GRADE X &middot; SESSION {{ $academicYear ?? '2026–27' }}</div>
+                    <div class="admission-eyebrow">PRE-PRIMARY TO GRADE X &middot; SESSION {{ $academicYear ?? '2027–28' }}</div>
 
                     <!-- Main Headline -->
                     <h1 class="admission-hero-title">

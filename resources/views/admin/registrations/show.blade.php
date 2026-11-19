@@ -46,7 +46,7 @@
                 </div>
                 <div class="field-item">
                     <div class="field-label">Academic Year</div>
-                    <div class="field-val">{{ $registration->academic_year ?? '2026-2027' }}</div>
+                    <div class="field-val">{{ $registration->academic_year ?? '2027-2028' }}</div>
                 </div>
             </div>
 

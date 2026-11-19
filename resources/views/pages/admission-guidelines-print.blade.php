@@ -278,7 +278,7 @@
 
         <div class="doc-title-bar">
             <div class="doc-title">Official Admission Guidelines &amp; Eligibility Protocol</div>
-            <div class="doc-subtitle">Applicable Classes: Pre-Primary (Nursery, Jr. KG, Sr. KG) to Grade X | Academic Session {{ $academicYear ?? '2026–27' }}</div>
+            <div class="doc-subtitle">Applicable Classes: Pre-Primary (Nursery, Jr. KG, Sr. KG) to Grade X | Academic Session {{ $academicYear ?? '2027–28' }}</div>
         </div>
 
         <!-- Section A: Age Criteria -->
@@ -426,7 +426,7 @@
 
         <div class="sheet-footer">
             <span>Advaita School of Excellence, Parbhani &copy; {{ date('Y') }}</span>
-            <span>Document Ref: ADV-GUIDELINES-{{ $academicYear ?? '2026-27' }}</span>
+            <span>Document Ref: ADV-GUIDELINES-{{ $academicYear ?? '2027-28' }}</span>
         </div>
     </div>
 

@@ -55,18 +55,18 @@ class AllPageSeoSeeder extends Seeder
                 'keywords' => 'Advaita board results, CBSE 10th result Parbhani, school toppers, 100% board passing record',
             ],
             'admission_info' => [
-                'title' => 'Admission Information (2026-27) - Advaita School of Excellence',
+                'title' => 'Admission Information (2027-28) - Advaita School of Excellence',
                 'description' => 'Comprehensive admission guidelines, eligibility criteria, document requirements, admission process, and campus visits for Nursery to Class 10.',
-                'keywords' => 'School admissions Parbhani, CBSE admission 2026-27, Nursery admission, Class 1 to 10 school admission',
+                'keywords' => 'School admissions Parbhani, CBSE admission 2027-28, Nursery admission, Class 1 to 10 school admission',
             ],
             'fee_structure' => [
-                'title' => 'Fee Structure (2026-27) - Advaita School of Excellence, Parbhani',
+                'title' => 'Fee Structure (2027-28) - Advaita School of Excellence, Parbhani',
                 'description' => 'Transparent and affordable fee structure for Pre-Primary, Primary, Middle, and Secondary classes at Advaita School of Excellence with flexible payment terms.',
                 'keywords' => 'Advaita school fee structure, Parbhani school fees, CBSE school tuition fees, installment plans',
             ],
             'online_registration' => [
-                'title' => 'Online Student Registration (2026-27) - Advaita School of Excellence',
-                'description' => 'Apply online for student admission at Advaita School of Excellence, Parbhani. Fast, secure, and hassle-free registration form for academic year 2026-27.',
+                'title' => 'Online Student Registration (2027-28) - Advaita School of Excellence',
+                'description' => 'Apply online for student admission at Advaita School of Excellence, Parbhani. Fast, secure, and hassle-free registration form for academic year 2027-28.',
                 'keywords' => 'Online school admission form, student registration Parbhani, Advaita online admission',
             ],
             'facilities' => [

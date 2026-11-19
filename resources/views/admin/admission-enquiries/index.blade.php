@@ -14,7 +14,7 @@
             </div>
             <div class="academic-top-title">
                 <h3>Quick Admission Enquiries</h3>
-                <p>Manage interest submissions, parent phone enquiries, and follow-up schedules for Academic Session 2026–27.</p>
+                <p>Manage interest submissions, parent phone enquiries, and follow-up schedules for Academic Session 2027–28.</p>
             </div>
         </div>
         <div class="d-flex align-items-center gap-12 flex-wrap">

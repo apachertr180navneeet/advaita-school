@@ -25,7 +25,7 @@
                     <input type="text" name="security_token_trap" tabindex="-1" autocomplete="off">
                 </div>
 
-                <input type="hidden" name="academic_year" value="{{ $academicYear ?? '2026-27' }}">
+                <input type="hidden" name="academic_year" value="{{ $academicYear ?? '2027-28' }}">
 
                 <div class="mb-14">
                     <label class="form-label font-bold text-navy fs-13 mb-4" for="modal_parent_name">

@@ -119,7 +119,7 @@ class HomeController extends Controller
         ];
 
         $campusVisit = [
-            'badge' => Setting::get('campus_visit_badge', 'ADMISSIONS 2026–27 OPEN'),
+            'badge' => Setting::get('campus_visit_badge', 'ADMISSIONS 2027–28 OPEN'),
             'title_1' => Setting::get('campus_visit_title_1', 'Come see the school'),
             'title_2' => Setting::get('campus_visit_title_2', 'yourself.'),
             'description' => Setting::get('campus_visit_description', 'Walk our campus, meet our faculty, experience our learning environment, and get all your questions answered — the best way to know if Advaita is the right home for your child.'),

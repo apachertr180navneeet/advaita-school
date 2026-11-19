@@ -149,7 +149,7 @@ class AdmissionsModuleTest extends TestCase
             'ward_name' => 'Aditya Patil',
             'mobile_number' => '9822123456',
             'applying_class' => 'Class 5',
-            'academic_year' => '2026-27',
+            'academic_year' => '2027-28',
             'notes' => 'Inquiring about bus route for Jintur Road',
         ];
 
@@ -248,7 +248,7 @@ class AdmissionsModuleTest extends TestCase
         Storage::fake('public');
 
         $data = [
-            'academic_year' => '2026-27',
+            'academic_year' => '2027-28',
             'applying_class' => 'Class 1',
             'full_name' => 'Ishaan Sharma',
             'dob' => '2020-05-15',

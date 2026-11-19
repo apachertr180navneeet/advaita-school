@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', "Admission Information (" . ($academicYear ?? '2026-27') . ") - Advaita School of Excellence, Parbhani | Process, Documents & Fees")
+@section('title', "Admission Information (" . ($academicYear ?? '2027-28') . ") - Advaita School of Excellence, Parbhani | Process, Documents & Fees")
 
 @section('styles')
 <link rel="stylesheet" href="{{ asset('assets/css/admissions.css') }}?v={{ file_exists(public_path('assets/css/admissions.css')) ? filemtime(public_path('assets/css/admissions.css')) : '1.0' }}">
@@ -150,7 +150,7 @@
             <!-- Quick Admission Enquiry Callout 1 (After 5-Step Process) -->
             <div class="adm-inline-enquiry-bar">
                 <div class="aieb-content">
-                    <span class="aieb-badge"><i class="fa-solid fa-bolt text-orange"></i> ADMISSIONS 2026–27 LIVE · NURSERY TO CLASS X</span>
+                    <span class="aieb-badge"><i class="fa-solid fa-bolt text-orange"></i> ADMISSIONS 2027–28 LIVE · NURSERY TO CLASS X</span>
                     <p class="aieb-lead"><strong>Ready to give your child an exceptional learning foundation?</strong> Limited seats per division to preserve our 1:15 student-teacher ratio. Get instant admission assistance today.</p>
                 </div>
                 <div class="aieb-buttons">
@@ -231,7 +231,7 @@
                             </div>
                             <div class="afc-text">
                                 <h4 class="afc-title">{{ $content['feature4_title'] ?? 'Important Dates' }}</h4>
-                                <p class="afc-desc">{{ $content['feature4_desc'] ?? ('Admissions open for the academic session ' . ($academicYear ?? '2026–27')) }}</p>
+                                <p class="afc-desc">{{ $content['feature4_desc'] ?? ('Admissions open for the academic session ' . ($academicYear ?? '2027–28')) }}</p>
                             </div>
                         </div>
                     </div>
@@ -314,7 +314,7 @@
             <!-- Inline Enquiry Action -->
             <div class="convince-cta-strip">
                 <div class="ccs-left">
-                    <strong>Seats for Academic Session {{ $academicYear ?? '2026–27' }} are limited to preserve our 1:15 ratio.</strong>
+                    <strong>Seats for Academic Session {{ $academicYear ?? '2027–28' }} are limited to preserve our 1:15 ratio.</strong>
                     <span>Take the first step today — submit a quick enquiry to schedule your campus visit and secure your seat.</span>
                 </div>
                 <div class="ccs-right">
@@ -596,7 +596,7 @@
                     </div>
                     <div>
                         <h3 class="aem-title" id="feeModalTitle">Fee Structure & Schedule</h3>
-                        <span class="fs-12 text-white-50">Academic Session {{ $academicYear ?? '2026–27' }}</span>
+                        <span class="fs-12 text-white-50">Academic Session {{ $academicYear ?? '2027–28' }}</span>
                     </div>
                 </div>
                 <button type="button" class="aem-close-btn" onclick="closeFeeModal()" aria-label="Close dialog">

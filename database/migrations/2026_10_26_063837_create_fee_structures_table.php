@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('fee_structures', function (Blueprint $table) {
             $table->id();
             $table->string('class_name'); // e.g. Nursery, LKG, UKG, Class 1 ... Class 10
-            $table->string('academic_year', 50)->default('2026-27');
+            $table->string('academic_year', 50)->default('2027-28');
             $table->string('wing', 30)->default('primary'); // pre_primary, primary, secondary
             $table->decimal('admission_fee', 10, 2)->nullable()->default(0);
             $table->decimal('tuition_fee', 10, 2)->nullable()->default(0);

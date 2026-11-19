@@ -20,7 +20,7 @@ class CampusVisitController extends Controller
         $imageSpecs = $this->resolveImageSpecs($imagePath);
 
         $settings = [
-            'badge' => Setting::get('campus_visit_badge', 'ADMISSIONS 2026–27 OPEN'),
+            'badge' => Setting::get('campus_visit_badge', 'ADMISSIONS 2027–28 OPEN'),
             'title_1' => Setting::get('campus_visit_title_1', 'Come see the school'),
             'title_2' => Setting::get('campus_visit_title_2', 'yourself.'),
             'description' => Setting::get('campus_visit_description', 'Walk our campus, meet our faculty, experience our learning environment, and get all your questions answered — the best way to know if Advaita is the right home for your child.'),
@@ -80,7 +80,7 @@ class CampusVisitController extends Controller
             'phone_number' => ['nullable', 'string', 'max:50'],
         ]);
 
-        Setting::set('campus_visit_badge', $validated['badge'] ?? 'ADMISSIONS 2026–27 OPEN');
+        Setting::set('campus_visit_badge', $validated['badge'] ?? 'ADMISSIONS 2027–28 OPEN');
         Setting::set('campus_visit_title_1', trim($validated['title_1']));
         Setting::set('campus_visit_title_2', ! empty($validated['title_2']) ? trim($validated['title_2']) : null);
         Setting::set('campus_visit_description', trim($validated['description']));

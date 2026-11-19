@@ -653,7 +653,7 @@ require_once __DIR__.'/includes/header.php';
                     <!-- Top Eyebrow Badge -->
                     <div class="adv-visit-pill-badge">
                         <i class="fa-solid fa-calendar-check"></i>
-                        <span>ADMISSIONS 2026–27 OPEN</span>
+                        <span>ADMISSIONS 2027–28 OPEN</span>
                     </div>
 
                     <!-- Main Heading with Plane Accent -->

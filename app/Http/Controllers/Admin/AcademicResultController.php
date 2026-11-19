@@ -36,8 +36,8 @@ class AcademicResultController extends Controller
         if (! in_array('2025-26', $academicYears, true)) {
             $academicYears[] = '2025-26';
         }
-        if (! in_array('2026-27', $academicYears, true)) {
-            array_unshift($academicYears, '2026-27');
+        if (! in_array('2027-28', $academicYears, true)) {
+            array_unshift($academicYears, '2027-28');
         }
 
         return view('admin.results.index', compact('results', 'categories', 'academicYears', 'selectedCategory', 'selectedYear'));
@@ -50,7 +50,7 @@ class AcademicResultController extends Controller
     {
         $categories = AcademicResult::CATEGORIES;
         $nextOrder = (AcademicResult::max('order') ?? 0) + 1;
-        $academicYears = ['2026-27', '2025-26', '2024-25', '2023-24', '2022-23'];
+        $academicYears = ['2027-28', '2026-27', '2025-26', '2024-25', '2023-24', '2022-23'];
 
         return view('admin.results.create', compact('categories', 'nextOrder', 'academicYears'));
     }
@@ -113,7 +113,7 @@ class AcademicResultController extends Controller
     public function edit(AcademicResult $result): View
     {
         $categories = AcademicResult::CATEGORIES;
-        $academicYears = ['2026-27', '2025-26', '2024-25', '2023-24', '2022-23'];
+        $academicYears = ['2027-28', '2026-27', '2025-26', '2024-25', '2023-24', '2022-23'];
 
         return view('admin.results.edit', compact('result', 'categories', 'academicYears'));
     }

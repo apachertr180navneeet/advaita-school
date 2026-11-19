@@ -64,7 +64,7 @@ class AdmissionEnquiryController extends Controller
         // 4. Save Enquiry
         $validated['ip_address'] = $request->ip();
         $validated['status'] = 'new';
-        $validated['academic_year'] = $validated['academic_year'] ?? '2026-27';
+        $validated['academic_year'] = $validated['academic_year'] ?? '2027-28';
 
         $enquiry = AdmissionEnquiry::create($validated);
 

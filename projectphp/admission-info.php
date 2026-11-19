@@ -161,7 +161,7 @@ require_once __DIR__.'/includes/header.php';
             <!-- Quick Admission Enquiry Callout 1 (After 5-Step Process) -->
             <div class="adm-inline-enquiry-bar">
                 <div class="aieb-content">
-                    <span class="aieb-badge"><i class="fa-solid fa-bolt text-orange"></i> ADMISSIONS 2026–27 LIVE · NURSERY TO CLASS X</span>
+                    <span class="aieb-badge"><i class="fa-solid fa-bolt text-orange"></i> ADMISSIONS 2027–28 LIVE · NURSERY TO CLASS X</span>
                     <p class="aieb-lead"><strong>Ready to give your child an exceptional learning foundation?</strong> Limited seats per division to preserve our 1:15 student-teacher ratio. Get instant admission assistance today.</p>
                 </div>
                 <div class="aieb-buttons">
@@ -298,7 +298,7 @@ require_once __DIR__.'/includes/header.php';
                 <div class="fee-note-content">
                     <strong>Note:</strong>
                     <ul class="fee-note-list">
-                        <li>The fees mentioned above are annual fees for the academic session 2026–27.</li>
+                        <li>The fees mentioned above are annual fees for the academic session 2027–28.</li>
                         <li>The fee is to be paid as per the school's policy (one-time or in installments).</li>
                         <li>Transport, uniform and other optional services are charged separately.</li>
                         <li>The school reserves the right to revise the fees as per institutional requirements.</li>

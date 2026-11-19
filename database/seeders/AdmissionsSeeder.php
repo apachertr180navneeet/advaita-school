@@ -22,7 +22,12 @@ class AdmissionsSeeder extends Seeder
 
         Setting::updateOrCreate(
             ['key' => 'fee_academic_year'],
-            ['value' => '2026–27']
+            ['value' => '2027–28']
+        );
+
+        Setting::updateOrCreate(
+            ['key' => 'admission_academic_year'],
+            ['value' => '2027–28']
         );
 
         Setting::updateOrCreate(
@@ -32,7 +37,7 @@ class AdmissionsSeeder extends Seeder
 
         Setting::updateOrCreate(
             ['key' => 'fee_pending_notice'],
-            ['value' => 'The class-wise fee structure for Academic Session 2026–27 is currently under final review and will be published shortly upon approval by school management. For provisional fee estimates or immediate admission counseling, please contact our admissions office or submit a Quick Enquiry.']
+            ['value' => 'The class-wise fee structure for Academic Session 2027–28 is currently under final review and will be published shortly upon approval by school management. For provisional fee estimates or immediate admission counseling, please contact our admissions office or submit a Quick Enquiry.']
         );
 
         Setting::updateOrCreate(
@@ -113,7 +118,7 @@ class AdmissionsSeeder extends Seeder
             FeeStructure::updateOrCreate(
                 [
                     'class_name' => $item['class_name'],
-                    'academic_year' => '2026-27',
+                    'academic_year' => '2027-28',
                 ],
                 [
                     'wing' => $item['wing'],
@@ -139,7 +144,7 @@ class AdmissionsSeeder extends Seeder
                 'ward_name' => 'Aarav Patil',
                 'mobile_number' => '9822012345',
                 'applying_class' => 'Nursery',
-                'academic_year' => '2026-27',
+                'academic_year' => '2027-28',
                 'notes' => 'Interested in Pre-Primary wing upcoming campus, inquiry for transport from Station Road.',
                 'status' => 'new',
             ],
@@ -148,7 +153,7 @@ class AdmissionsSeeder extends Seeder
                 'ward_name' => 'Isha Deshmukh',
                 'mobile_number' => '9423156789',
                 'applying_class' => 'Class 6',
-                'academic_year' => '2026-27',
+                'academic_year' => '2027-28',
                 'notes' => 'Inquiry for NEET / IIT Foundation integrated mentorship and Olympiads.',
                 'status' => 'contacted',
                 'admin_notes' => 'Called parent on 25 Oct. Invited for campus counseling session on Saturday.',
@@ -158,7 +163,7 @@ class AdmissionsSeeder extends Seeder
                 'ward_name' => 'Aditya Shinde',
                 'mobile_number' => '9890123456',
                 'applying_class' => 'Class 1',
-                'academic_year' => '2026-27',
+                'academic_year' => '2027-28',
                 'notes' => 'Seeking admission for Class 1, inquiry about Abacus and mental arithmetic curriculum.',
                 'status' => 'follow_up',
                 'admin_notes' => 'Shared brochure on WhatsApp. Scheduled document verification.',

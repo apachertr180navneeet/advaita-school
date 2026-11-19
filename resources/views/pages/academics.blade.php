@@ -624,7 +624,7 @@
         <section class="secondary-helpline-card" id="contact-admissions">
             <div class="sec-helpline-content">
                 <span class="sec-helpline-eyebrow">
-                    <i class="fa-solid fa-sparkles"></i> ADMISSIONS OPEN FOR ACADEMIC SESSION 2026–27
+                    <i class="fa-solid fa-sparkles"></i> ADMISSIONS OPEN FOR ACADEMIC SESSION 2027–28
                 </span>
                 <h2>{{ $content['cta_headline'] ?? 'Give Your Child the Advaita Advantage.' }}</h2>
                 <p>{{ $content['cta_subtext'] ?? 'A strong academic foundation today, for a brighter and bolder tomorrow.' }} Enrol now across Pre-Primary, Primary, and Secondary Wings.</p>

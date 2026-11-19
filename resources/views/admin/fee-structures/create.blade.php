@@ -60,7 +60,7 @@
                         <span class="required">*</span>
                     </label>
                     <input type="text" id="academic_year" name="academic_year" class="form-control @error('academic_year') is-invalid @enderror"
-                           value="{{ old('academic_year', '2026-27') }}" required placeholder="e.g. 2026-27">
+                           value="{{ old('academic_year', '2027-28') }}" required placeholder="e.g. 2027-28">
                     @error('academic_year')
                         <span class="form-error-msg">{{ $message }}</span>
                     @enderror

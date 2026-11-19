@@ -81,7 +81,7 @@ class PageContentSeeder extends Seeder
             'results_stat_top_percentage' => '97.8%',
 
             // Fee Structure
-            'fee_academic_year' => '2026–27',
+            'fee_academic_year' => '2027–28',
             'fee_installments_note' => 'Fees can be conveniently paid in three term-wise installments or an annual one-time payment with special benefits.',
             'fee_transparency_note' => 'No hidden charges or mandatory surprise fees. Detailed receipts are issued for all transactions.',
 

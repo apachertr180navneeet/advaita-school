@@ -18,7 +18,7 @@
 
             <form action="#" method="POST" id="quickAdmissionModalForm" onsubmit="event.preventDefault(); var p = document.getElementById('modal_parent_name').value || 'Parent'; var w = document.getElementById('modal_ward_name').value || 'Child'; document.getElementById('enquiryModalBody').innerHTML = '<div class=\'aem-success-box\'><div class=\'asb-icon-wrap\'><i class=\'fa-solid fa-check\'></i></div><h4 class=\'asb-title\'>Enquiry Received!</h4><p class=\'asb-desc\'>Thank you, <strong>' + p + '</strong>! Your admission enquiry for <strong>' + w + '</strong> has been successfully registered. Our admission counselor (<strong>Ms. Vaishnavi</strong>) will contact you shortly.</p><div class=\'d-flex flex-column gap-10\'><a href=\'https://wa.me/919689898973?text=Hello%20Ms.%20Vaishnavi,%20I%20have%20submitted%20an%20admission%20enquiry%20for%20' + encodeURIComponent(w) + '.\' target=\'_blank\' rel=\'noopener noreferrer\' class=\'btn-apc-primary justify-content-center\' style=\'width: 100%;\'><i class=\'fa-brands fa-whatsapp\'></i><span>Chat on WhatsApp</span></a><button type=\'button\' onclick=\'closeEnquiryModal()\' class=\'btn-cta-action blue-btn justify-content-center py-10\' style=\'width: 100%; border: none; cursor: pointer; border-radius: 9999px; background: #083B7A; color: #fff; font-weight: 700; padding: 10px 16px;\'><span>Done</span></button></div></div>';">
 
-                <input type="hidden" name="academic_year" value="2026-27">
+                <input type="hidden" name="academic_year" value="2027-28">
 
                 <div class="mb-14">
                     <label class="form-label font-bold text-navy fs-13 mb-4" for="modal_parent_name">

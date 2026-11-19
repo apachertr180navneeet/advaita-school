@@ -145,8 +145,8 @@ require_once __DIR__.'/includes/header.php';
                         </div>
                         <div class="quick-card-info">
                             <span class="quick-card-label">Online Register</span>
-                            <a href="index.php#admissions" class="quick-card-value">Admissions 2026–27 Open</a>
-                            <span class="quick-card-meta">Admissions 2026–27 Open</span>
+                            <a href="index.php#admissions" class="quick-card-value">Admissions 2027–28 Open</a>
+                            <span class="quick-card-meta">Admissions 2027–28 Open</span>
                         </div>
                     </div>
                     <a href="index.php#admissions" class="quick-card-btn btn-pink" aria-label="Go to online admission registration">

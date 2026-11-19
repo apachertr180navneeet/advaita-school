@@ -36,7 +36,7 @@ class AdmissionGuidelinesPdfService
         // Document Title Box
         $p1[] = '0.96 0.97 0.98 rg 36 705 523 32 re f';
         $p1[] = '0.85 0.88 0.92 RG 1 w 36 705 523 32 re s';
-        $p1[] = 'BT /F2 12 Tf 0.031 0.231 0.478 rg 48 718 Td (ADMISSION GUIDELINES & ELIGIBILITY PROTOCOL - ACADEMIC SESSION 2026-27) Tj ET';
+        $p1[] = 'BT /F2 12 Tf 0.031 0.231 0.478 rg 48 718 Td (ADMISSION GUIDELINES & ELIGIBILITY PROTOCOL - ACADEMIC SESSION 2027-28) Tj ET';
 
         // SECTION A: AGE CRITERIA
         $p1[] = 'BT /F2 11 Tf 0.953 0.439 0.129 rg 36 685 Td (SECTION A: AGE CRITERIA & PHASED IMPLEMENTATION) Tj ET';
@@ -102,7 +102,7 @@ class AdmissionGuidelinesPdfService
 
         // Footer Page 1
         $p1[] = '0.8 0.8 0.8 RG 0.5 w 36 40 m 559 40 l S';
-        $p1[] = 'BT /F1 7.5 Tf 0.5 0.5 0.5 rg 36 28 Td (Advaita School of Excellence, Parbhani | Admission Guidelines AY 2026-27) Tj ET';
+        $p1[] = 'BT /F1 7.5 Tf 0.5 0.5 0.5 rg 36 28 Td (Advaita School of Excellence, Parbhani | Admission Guidelines AY 2027-28) Tj ET';
         $p1[] = 'BT /F1 7.5 Tf 0.5 0.5 0.5 rg 480 28 Td (Page 1 of 2) Tj ET';
 
         $pages[] = implode("\n", $p1);
@@ -190,7 +190,7 @@ class AdmissionGuidelinesPdfService
 
         // Footer Page 2
         $p2[] = '0.8 0.8 0.8 RG 0.5 w 36 40 m 559 40 l S';
-        $p2[] = 'BT /F1 7.5 Tf 0.5 0.5 0.5 rg 36 28 Td (Advaita School of Excellence, Parbhani | Admission Guidelines AY 2026-27) Tj ET';
+        $p2[] = 'BT /F1 7.5 Tf 0.5 0.5 0.5 rg 36 28 Td (Advaita School of Excellence, Parbhani | Admission Guidelines AY 2027-28) Tj ET';
         $p2[] = 'BT /F1 7.5 Tf 0.5 0.5 0.5 rg 480 28 Td (Page 2 of 2) Tj ET';
 
         $pages[] = implode("\n", $p2);

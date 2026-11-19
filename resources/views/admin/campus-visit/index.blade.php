@@ -160,7 +160,7 @@
                         <label class="form-label-item">
                             <span>Top Eyebrow Badge</span>
                         </label>
-                        <input type="text" id="inputBadge" name="badge" class="form-input-item" value="{{ old('badge', $settings['badge']) }}" placeholder="e.g. ADMISSIONS 2026–27 OPEN" maxlength="150">
+                        <input type="text" id="inputBadge" name="badge" class="form-input-item" value="{{ old('badge', $settings['badge']) }}" placeholder="e.g. ADMISSIONS 2027–28 OPEN" maxlength="150">
                     </div>
 
                     <div class="form-group-item">
@@ -317,7 +317,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const previewPhoneLabel = document.getElementById('previewPhoneLabel');
     const previewPhoneNumber = document.getElementById('previewPhoneNumber');
 
-    if (inputBadge) inputBadge.addEventListener('input', () => { previewBadge.textContent = inputBadge.value || 'ADMISSIONS 2026–27 OPEN'; });
+    if (inputBadge) inputBadge.addEventListener('input', () => { previewBadge.textContent = inputBadge.value || 'ADMISSIONS 2027–28 OPEN'; });
     if (inputTitle1) inputTitle1.addEventListener('input', () => { previewTitle1.textContent = inputTitle1.value || 'Come see the school'; });
     if (inputTitle2) inputTitle2.addEventListener('input', () => { 
         let val = (inputTitle2.value || '').trim();

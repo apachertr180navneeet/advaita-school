@@ -625,7 +625,7 @@
              ========================================================================= -->
         <div class="pre-helpline-card">
             <div class="pre-helpline-left">
-                <span class="pre-helpline-eyebrow">ADMISSIONS OPEN FOR SESSION 2026–27</span>
+                <span class="pre-helpline-eyebrow">ADMISSIONS OPEN FOR SESSION 2027–28</span>
                 <h2 class="pre-helpline-title">
                     Give Your Child the <span class="highlight-orange">Best Start in Life.</span>
                 </h2>

@@ -5,7 +5,7 @@
  * 1. General Details | 2. Personal Details | 3. Contact Details | 4. Documents
  * Clean Semantic HTML - Header and Footer Preserved
  */
-$pageTitle = 'Online Registration 2026-27 - Advaita School of Excellence, Parbhani | Admission Form';
+$pageTitle = 'Online Registration 2027-28 - Advaita School of Excellence, Parbhani | Admission Form';
 $activePage = 'online-registration';
 
 require_once __DIR__.'/includes/header.php';
@@ -53,7 +53,7 @@ require_once __DIR__.'/includes/header.php';
                     </nav>
 
                     <!-- Eyebrow -->
-                    <div class="admission-eyebrow">ADMISSIONS 2026–27</div>
+                    <div class="admission-eyebrow">ADMISSIONS 2027–28</div>
 
                     <!-- Main Headline -->
                     <h1 class="admission-hero-title">
@@ -194,8 +194,8 @@ require_once __DIR__.'/includes/header.php';
                                 <div class="reg-input-wrap">
                                     <i class="fa-regular fa-calendar reg-input-icon" aria-hidden="true"></i>
                                     <select id="regYear" name="academic_year" class="reg-input-control">
-                                        <option value="2026-2027" selected>2026 – 2027</option>
-                                        <option value="2027-2028">2027 – 2028</option>
+                                        <option value="2027-2028" selected>2027 – 2028</option>
+                                        <option value="2028-2029">2028 – 2029</option>
                                     </select>
                                 </div>
                             </div>
@@ -282,6 +282,7 @@ require_once __DIR__.'/includes/header.php';
                                     <i class="fa-regular fa-calendar reg-input-icon" aria-hidden="true"></i>
                                     <select id="regYearPassed" name="year_passed" class="reg-input-control">
                                         <option value="" disabled selected>Select year</option>
+                                        <option value="2027">2027</option>
                                         <option value="2026">2026</option>
                                         <option value="2025">2025</option>
                                         <option value="2024">2024</option>

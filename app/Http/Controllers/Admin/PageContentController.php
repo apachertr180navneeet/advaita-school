@@ -259,10 +259,10 @@ class PageContentController extends Controller
             'icon' => 'fa-solid fa-indian-rupee-sign',
             'category' => 'Admissions & Information',
             'fields' => [
-                'fee_hero_badge' => ['label' => 'Hero Eyebrow Badge', 'type' => 'text', 'default' => 'ADMISSIONS 2026–27'],
+                'fee_hero_badge' => ['label' => 'Hero Eyebrow Badge', 'type' => 'text', 'default' => 'ADMISSIONS 2027–28'],
                 'fee_hero_title' => ['label' => 'Hero Main Heading', 'type' => 'text', 'default' => 'Fees, paid in simple terms.'],
                 'fee_hero_desc' => ['label' => 'Hero Description Paragraph', 'type' => 'textarea', 'default' => 'A clear, transparent fee structure designed to make quality education accessible for every child.'],
-                'fee_academic_year' => ['label' => 'Current Academic Year', 'type' => 'text', 'default' => '2026–27'],
+                'fee_academic_year' => ['label' => 'Current Academic Year', 'type' => 'text', 'default' => '2027–28'],
                 'fee_installments_note' => ['label' => 'Installments Policy Note', 'type' => 'textarea', 'default' => 'Fees can be conveniently paid in three term-wise installments or an annual one-time payment with special benefits.'],
                 'fee_transparency_note' => ['label' => 'Transparency Policy Note', 'type' => 'textarea', 'default' => 'No hidden charges or mandatory surprise fees. Detailed receipts are issued for all transactions.'],
 
@@ -278,7 +278,7 @@ class PageContentController extends Controller
             'icon' => 'fa-solid fa-circle-info',
             'category' => 'Admissions & Information',
             'fields' => [
-                'admission_academic_year' => ['label' => 'Academic Session', 'type' => 'text', 'default' => '2026–27'],
+                'admission_academic_year' => ['label' => 'Academic Session', 'type' => 'text', 'default' => '2027–28'],
                 'admission_counsellor_name' => ['label' => 'Admission Counsellor Name', 'type' => 'text', 'default' => 'Ms. Vaishnavi'],
                 'admission_counsellor_phone' => ['label' => 'Counsellor Contact Phone', 'type' => 'text', 'default' => '9689898973'],
 
@@ -313,7 +313,7 @@ class PageContentController extends Controller
                 'admission_feature3_title' => ['label' => 'Feature 3 Title', 'type' => 'text', 'default' => 'Selection Process'],
                 'admission_feature3_desc' => ['label' => 'Feature 3 Description', 'type' => 'text', 'default' => 'Based on interaction and assessment (as applicable)'],
                 'admission_feature4_title' => ['label' => 'Feature 4 Title', 'type' => 'text', 'default' => 'Important Dates'],
-                'admission_feature4_desc' => ['label' => 'Feature 4 Description', 'type' => 'text', 'default' => 'Admissions open for the academic session 2026–27'],
+                'admission_feature4_desc' => ['label' => 'Feature 4 Description', 'type' => 'text', 'default' => 'Admissions open for the academic session 2027–28'],
 
                 // Documents Section
                 'admission_docs_eyebrow' => ['label' => 'Documents Eyebrow', 'type' => 'text', 'default' => '— DOCUMENTS REQUIRED —'],
@@ -369,7 +369,7 @@ class PageContentController extends Controller
             'icon' => 'fa-solid fa-book-bookmark',
             'category' => 'Admissions & Information',
             'fields' => [
-                'admission_academic_year' => ['label' => 'Academic Session', 'type' => 'text', 'default' => '2026–27'],
+                'admission_academic_year' => ['label' => 'Academic Session', 'type' => 'text', 'default' => '2027–28'],
                 'admission_age_cutoff' => ['label' => 'Prescribed Age Cut-off Date', 'type' => 'text', 'default' => '30 June'],
                 'admission_counsellor_name' => ['label' => 'Admission Counsellor Name', 'type' => 'text', 'default' => 'Ms. Vaishnavi'],
                 'admission_counsellor_phone' => ['label' => 'Counsellor Contact Phone', 'type' => 'text', 'default' => '9689898973'],
