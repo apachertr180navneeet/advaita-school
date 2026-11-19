@@ -25,6 +25,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\RegistrationController;
+use App\Models\StaffMember;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
@@ -392,6 +393,133 @@ Route::get('/run-migrations', function () {
 
 Route::get('/migrate', fn () => redirect()->route('migrations.run'));
 Route::get('/run-migration', fn () => redirect()->route('migrations.run'));
+
+// Server route: Run StaffMemberSeeder via browser
+Route::get('/run-staff-seeder', function () {
+    $exitCode = null;
+    $artisanOutput = '';
+    $errorMessage = null;
+    $filesCopied = 0;
+
+    // Optional: Auto-copy from 'Teachers Details' if present on server and destination is missing photos
+    $teachersDetailsDir = base_path('Teachers Details');
+    $publicStaffDir = public_path('assets/images/staff');
+    if (! file_exists($publicStaffDir)) {
+        @mkdir($publicStaffDir, 0755, true);
+    }
+
+    if (is_dir($teachersDetailsDir)) {
+        $map = [
+            'Mr. Amit Thakare Accountant BSC Agri.jpg' => 'amit-thakare.jpg',
+            'Mr. Amol Palekar TGT B.sc B.Ed.jpg' => 'amol-palekar.jpg',
+            'Mr. Anand Rampurkar PRO B.sc CS.jpg' => 'anand-rampurkar.jpg',
+            'Mr. Bhimrao Wakale TGT M.A B.Ed.jpg' => 'bhimrao-wakale.jpg',
+            'Mr. Deependra Singh TGT M.sc B.Ed.jpg' => 'deependra-singh.jpg',
+            'Mr. Krushna Mane PRT M.sc.jpg' => 'krushna-mane.jpg',
+            'Mr. Shivdas Shinde TGT M.Phil B.Ed.jpg' => 'shivdas-shinde.jpg',
+            'Mr. Shrikant Jogdand M.A M.Lib.jpg' => 'shrikant-jogdand.jpg',
+            'Mr. Siddharth Nagthankar TGT M.fa Painting B.Ed.png' => 'siddharth-nagthankar.png',
+            'Mr. Sumit Rodge TGT M.sc B.Ed.png' => 'sumit-rodge.png',
+            'Ms Radhika Deshmukh NTT B.A B.Ed.jpg' => 'radhika-deshmukh.jpg',
+            'Ms. Anjali Iyer TGT M.A B.Ed.jpg' => 'anjali-iyer.jpg',
+            'Ms. Ivy Brown Principal M.A M.Ed.jpeg' => 'ivy-brown.jpeg',
+            'Ms. Jagruti Pingalkar Wealness Teacher M.A B.Ed.jpg' => 'jagruti-pingalkar.jpg',
+            'Ms. Pooja Gondal PRT BA.jpg' => 'pooja-gondal.jpg',
+            'Ms. Priyanka Raut PRT M.A.jpg' => 'priyanka-raut.jpg',
+            'Ms. Sarita Swami NTT B.sc Ecce.jpg' => 'sarita-swami.jpg',
+            'Ms. Sayali Aade PRT B.Fa ATD Ecce.jpg' => 'sayali-aade.jpg',
+            'Ms. Shally Agrawal PRT B.A B.Ed.jpg' => 'shally-agrawal.jpg',
+            'Ms. Snehal Chavan NTT B.sc Ecce.png' => 'snehal-chavan.png',
+            'Ms. Suraj Jogdand PRT B.Tech.jpg' => 'suraj-jogdand.jpg',
+            'Ms. Urmila Durugkar Wealness Teacher M.A B.Ed.jpg' => 'urmila-durugkar.jpg',
+            'Ms. Urmila Nitnaware TGT M.A B.Ed.jpg' => 'urmila-nitnaware.jpg',
+            'Ms. Vaishali Maske TGT Mcm.jpg' => 'vaishali-maske.jpg',
+            'Ms. Vidya Kale NTT B.Sc.jpg' => 'vidya-kale.jpg',
+        ];
+
+        foreach ($map as $orig => $slug) {
+            $src = $teachersDetailsDir.'/'.$orig;
+            $dest = $publicStaffDir.'/'.$slug;
+            if (file_exists($src) && ! file_exists($dest)) {
+                @copy($src, $dest);
+                $filesCopied++;
+            }
+        }
+    }
+
+    try {
+        $exitCode = Artisan::call('db:seed', [
+            '--class' => 'Database\\Seeders\\StaffMemberSeeder',
+            '--force' => true,
+        ]);
+        $artisanOutput = trim(Artisan::output());
+        @Artisan::call('view:clear');
+    } catch (Throwable $e) {
+        $errorMessage = $e->getMessage();
+    }
+
+    $staffCount = StaffMember::count();
+    $isSuccess = ($exitCode === 0 && ! $errorMessage);
+    $statusClass = $isSuccess ? 'success' : 'error';
+    $statusTitle = $isSuccess ? 'Success! Staff Members Seeded' : 'Error: Seeding Failed';
+    $statusDesc = $isSuccess
+        ? "StaffMemberSeeder executed successfully. Current total faculty in database: <strong>{$staffCount}</strong> members.".($filesCopied > 0 ? " (Also copied {$filesCopied} image assets)." : '')
+        : 'An error occurred while executing StaffMemberSeeder on the database.';
+
+    $staffPageUrl = route('our-staff');
+    $adminStaffUrl = route('admin.staff.index');
+    $retryUrl = url('/run-staff-seeder');
+
+    $logOutput = htmlspecialchars($artisanOutput ?: ($errorMessage ?: 'Seeder completed with no output.'));
+
+    return response("<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Staff Seeder Runner - Advaita School</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0A192F; color: #E2E8F0; margin: 0; padding: 40px 20px; display: flex; justify-content: center; align-items: center; min-height: 100vh; box-sizing: border-box; }
+        .card { background: #112240; border-radius: 18px; border: 1px solid #233554; padding: 36px 32px; max-width: 680px; width: 100%; box-shadow: 0 20px 50px rgba(0,0,0,0.4); }
+        .badge { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 6px 14px; border-radius: 999px; margin-bottom: 18px; }
+        .badge.success { background: rgba(16, 185, 129, 0.15); color: #34D399; border: 1px solid rgba(16, 185, 129, 0.4); }
+        .badge.error { background: rgba(239, 68, 68, 0.15); color: #F87171; border: 1px solid rgba(239, 68, 68, 0.4); }
+        h1 { margin: 0 0 10px 0; font-size: 24px; color: #FFFFFF; font-weight: 800; }
+        p { color: #94A3B8; font-size: 14.5px; line-height: 1.6; margin: 0 0 20px 0; }
+        code, pre { font-family: Consolas, 'Fira Code', monospace; }
+        .log-box { background: #0B1329; border: 1px solid #1E293B; border-radius: 12px; padding: 18px 20px; margin-bottom: 24px; max-height: 320px; overflow-y: auto; }
+        .log-title { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #64748B; margin-bottom: 10px; }
+        pre { margin: 0; color: #38BDF8; font-size: 13px; line-height: 1.5; white-space: pre-wrap; word-break: break-all; }
+        .btn-group { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 26px; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 11px 22px; border-radius: 10px; font-size: 14px; font-weight: 600; text-decoration: none; transition: all 0.2s ease; }
+        .btn-primary { background: #F37021; color: #FFFFFF; }
+        .btn-primary:hover { background: #e05e10; }
+        .btn-secondary { background: #1E293B; color: #E2E8F0; border: 1px solid #334155; }
+        .btn-secondary:hover { background: #334155; color: #FFFFFF; }
+    </style>
+</head>
+<body>
+    <div class='card'>
+        <div class='badge {$statusClass}'>● {$statusTitle}</div>
+        <h1>Staff Database Seeder</h1>
+        <p>{$statusDesc}</p>
+        <div class='log-box'>
+            <div class='log-title'>Artisan Seeder Output</div>
+            <pre>{$logOutput}</pre>
+        </div>
+        <div class='btn-group'>
+            <a href='{$staffPageUrl}' class='btn btn-primary' target='_blank'>View Our Staff Page &rarr;</a>
+            <a href='{$adminStaffUrl}' class='btn btn-secondary'>Admin Staff Panel</a>
+            <a href='{$retryUrl}' class='btn btn-secondary'>Run Again</a>
+        </div>
+    </div>
+</body>
+</html>");
+})->name('seeder.staff');
+
+Route::get('/seed-staff', fn () => redirect()->route('seeder.staff'));
+Route::get('/run-seeder/staff', fn () => redirect()->route('seeder.staff'));
+Route::get('/staff-seeder', fn () => redirect()->route('seeder.staff'));
 
 // Server fallback: Serve public storage files when symlink is missing, broken, or unsupported
 Route::get('/storage/{path}', function (string $path) {

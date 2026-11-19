@@ -201,4 +201,18 @@ class StaffManagementTest extends TestCase
         $publicResponse->assertSee('Our Passionate');
         $publicResponse->assertSee('Mentors &amp; Faculty.', false);
     }
+
+    public function test_run_staff_seeder_route_executes_successfully(): void
+    {
+        $response = $this->get(route('seeder.staff'));
+
+        $response->assertStatus(200);
+        $response->assertSee('Staff Database Seeder');
+        $response->assertSee('StaffMemberSeeder');
+        $this->assertGreaterThan(0, StaffMember::count());
+
+        $this->get('/seed-staff')->assertRedirect(route('seeder.staff'));
+        $this->get('/run-seeder/staff')->assertRedirect(route('seeder.staff'));
+        $this->get('/staff-seeder')->assertRedirect(route('seeder.staff'));
+    }
 }
