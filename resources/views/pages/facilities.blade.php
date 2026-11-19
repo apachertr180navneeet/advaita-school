@@ -573,7 +573,7 @@
                     </a>
                     <span class="sec-contact-chip">
                         <i class="fa-regular fa-clock"></i>
-                        <span>{{ \App\Models\Setting::get('site_school_hours', 'Mon – Sat: 8:00 AM – 3:00 PM') }}</span>
+                        <span>{{ str_replace([':00', ' | '], ['', ': '], \App\Models\Setting::get('site_school_hours', 'Mon – Sat: 8 AM – 3 PM')) }}</span>
                     </span>
                     <a href="{{ route('contact') }}#campus-map" class="sec-contact-chip">
                         <i class="fa-solid fa-location-dot"></i>

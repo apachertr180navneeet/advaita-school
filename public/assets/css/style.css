@@ -1741,6 +1741,7 @@ p {
     /* Secondary Helpline / Pre-Footer Tour CTA Mobile Center Alignment */
     .secondary-helpline-card {
         text-align: center !important;
+        gap: 14px !important;
     }
 
     .secondary-helpline-card .sec-helpline-content,
@@ -1773,6 +1774,7 @@ p {
         width: 100% !important;
         margin-left: auto !important;
         margin-right: auto !important;
+        margin-bottom: 14px !important;
     }
 
     .secondary-helpline-card .sec-contact-chips,
@@ -1783,7 +1785,12 @@ p {
         justify-content: center !important;
         width: 100% !important;
         max-width: 100% !important;
-        margin: 0 auto 20px !important;
+        margin: 0 auto 4px !important;
+    }
+
+    .secondary-helpline-card .sec-helpline-actions,
+    .sec-helpline-actions {
+        margin: 4px auto 0 !important;
     }
 
     .secondary-helpline-card .sec-contact-chip,

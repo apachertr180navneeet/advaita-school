@@ -13713,7 +13713,7 @@ textarea.reg-input-control {
     gap: 10px 14px;
     width: 100%;
     max-width: 560px;
-    margin: 0 0 24px;
+    margin: 0 0 12px;
 }
 
 .sec-contact-chip {
@@ -13842,7 +13842,7 @@ textarea.reg-input-control {
     }
     .secondary-helpline-card {
         grid-template-columns: 1fr;
-        gap: 28px;
+        gap: 14px !important;
         text-align: center;
     }
     .secondary-helpline-card .sec-helpline-content {
@@ -13869,7 +13869,7 @@ textarea.reg-input-control {
         gap: 8px !important;
         width: 100% !important;
         max-width: 100% !important;
-        margin: 0 auto 20px !important;
+        margin: 0 auto 4px !important;
     }
 
     .secondary-helpline-card .sec-contact-chip {
