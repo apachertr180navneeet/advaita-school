@@ -630,18 +630,22 @@
                 <p>{{ $content['cta_subtext'] ?? 'A strong academic foundation today, for a brighter and bolder tomorrow.' }} Enrol now across Pre-Primary, Primary, and Secondary Wings.</p>
 
                 <div class="sec-contact-chips">
-                    <a href="tel:+919422176733" class="sec-contact-chip">
+                    <a href="tel:{{ preg_replace('/[^0-9+]/', '', \App\Models\Setting::get('site_phone_primary', '+91 9689898973')) }}" class="sec-contact-chip">
                         <i class="fa-solid fa-phone"></i>
-                        <span>+91 94221 76733</span>
+                        <span>{{ \App\Models\Setting::get('site_phone_primary', '+91 9689898973') }}</span>
+                    </a>
+                    <a href="mailto:{{ \App\Models\Setting::get('site_email_primary', 'admissions.advaita@gmail.com') }}" class="sec-contact-chip">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>{{ \App\Models\Setting::get('site_email_primary', 'admissions.advaita@gmail.com') }}</span>
                     </a>
                     <span class="sec-contact-chip">
-                        <i class="fa-solid fa-building-columns"></i>
-                        <span>CBSE Affiliated No. 1130920</span>
+                        <i class="fa-regular fa-clock"></i>
+                        <span>{{ \App\Models\Setting::get('site_school_hours', 'Mon – Sat: 8:00 AM – 3:00 PM') }}</span>
                     </span>
-                    <span class="sec-contact-chip">
+                    <a href="{{ route('contact') }}#campus-map" class="sec-contact-chip">
                         <i class="fa-solid fa-location-dot"></i>
-                        <span>Jintur Road, Parbhani</span>
-                    </span>
+                        <span>Gangakhed Rd, Parbhani</span>
+                    </a>
                 </div>
             </div>
 

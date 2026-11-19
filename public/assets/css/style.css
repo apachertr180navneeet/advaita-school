@@ -1777,8 +1777,42 @@ p {
 
     .secondary-helpline-card .sec-contact-chips,
     .sec-contact-chips {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 8px !important;
         justify-content: center !important;
         width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto 20px !important;
+    }
+
+    .secondary-helpline-card .sec-contact-chip,
+    .sec-contact-chip {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 6px !important;
+        padding: 8px 10px !important;
+        font-size: clamp(9.5px, 2.6vw, 11.5px) !important;
+        border-radius: 50px !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+    }
+
+    .secondary-helpline-card .sec-contact-chip span,
+    .sec-contact-chip span {
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+    }
+
+    .secondary-helpline-card .sec-contact-chip i,
+    .sec-contact-chip i {
+        font-size: 0.8rem !important;
+        flex-shrink: 0 !important;
     }
 
     /* Helpline Action Buttons: Vertical Stack on Mobile to Prevent Horizontal Collision */
