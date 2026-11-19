@@ -343,8 +343,8 @@ p {
     .contact-hero-left-panel,
     .admission-hero-left-panel,
     .facilities-hero-left-panel,
-    .adv-gal-container,
-    .adv-blog-container,
+    .adv-gal-hero-section .adv-gal-container,
+    .adv-blog-hero-section .adv-blog-container,
     .results-hero-text,
     .primary-hero .admission-hero-left-panel,
     .secondary-hero .admission-hero-left-panel,
@@ -780,8 +780,8 @@ p {
     .contact-hero-left-panel,
     .admission-hero-left-panel,
     .facilities-hero-left-panel,
-    .adv-gal-container,
-    .adv-blog-container,
+    .adv-gal-hero-section .adv-gal-container,
+    .adv-blog-hero-section .adv-blog-container,
     .results-hero-text,
     .primary-hero .admission-hero-left-panel,
     .secondary-hero .admission-hero-left-panel,
@@ -6958,7 +6958,12 @@ html, body {
 
 /* 1. Category Filter Pills */
 .adv-gallery-page-wrapper .adv-gal-categories-section {
-    padding: 20px 0 24px 0 !important;
+    padding: 12px 0 4px 0 !important;
+}
+
+.adv-gallery-page-wrapper .adv-gal-categories-section .adv-gal-container {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
 }
 
 .adv-gallery-page-wrapper .adv-gal-filters-scroll {
@@ -6967,7 +6972,8 @@ html, body {
     justify-content: center !important;
     gap: 10px !important;
     flex-wrap: wrap !important;
-    padding: 8px 4px 16px 4px !important;
+    padding: 4px 4px 6px 4px !important;
+    margin-bottom: 0 !important;
 }
 
 .adv-gallery-page-wrapper .adv-gal-cat-btn {
@@ -6993,7 +6999,12 @@ html, body {
 
 /* 2. Search & Sort Toolbar */
 .adv-gallery-page-wrapper .adv-gal-toolbar-section {
-    padding: 4px 0 28px 0 !important;
+    padding: 4px 0 16px 0 !important;
+}
+
+.adv-gallery-page-wrapper .adv-gal-toolbar-section .adv-gal-container {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
 }
 
 .adv-gallery-page-wrapper .adv-gal-toolbar {
@@ -7183,12 +7194,23 @@ html, body {
 }
 
 @media (max-width: 768px) {
+    .adv-gallery-page-wrapper .adv-gal-categories-section {
+        padding: 8px 0 0 0 !important;
+    }
+
+    .adv-gallery-page-wrapper .adv-gal-categories-section .adv-gal-container {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
     .adv-gallery-page-wrapper .adv-gal-filters-scroll {
         display: flex !important;
         overflow-x: auto !important;
         flex-wrap: nowrap !important;
         justify-content: flex-start !important;
         gap: 8px !important;
+        padding: 4px 2px 4px 2px !important;
+        margin-bottom: 0 !important;
         scrollbar-width: thin !important;
         -webkit-overflow-scrolling: touch !important;
     }
@@ -7199,11 +7221,21 @@ html, body {
         padding: 10px 6px !important;
     }
 
+    .adv-gallery-page-wrapper .adv-gal-toolbar-section {
+        padding: 2px 0 14px 0 !important;
+    }
+
+    .adv-gallery-page-wrapper .adv-gal-toolbar-section .adv-gal-container {
+        padding-top: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
     .adv-gallery-page-wrapper .adv-gal-toolbar {
         flex-direction: column !important;
         align-items: center !important;
-        gap: 12px !important;
+        gap: 10px !important;
         width: 100% !important;
+        margin-top: 0 !important;
     }
 
     .adv-gallery-page-wrapper .adv-gal-search-box,
