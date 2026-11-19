@@ -5451,11 +5451,30 @@
     .about-story-grid,
     .about-philosophy-grid,
     .about-campus-grid,
-    .chairman-message-card,
-    .principal-message-grid,
     .principal-cta-banner-full {
         grid-template-columns: 1fr;
         gap: 22px;
+    }
+    .chairman-message-card,
+    .principal-message-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        grid-template-columns: 1fr !important;
+        gap: 22px !important;
+    }
+    .chairman-profile-col,
+    .principal-profile-col {
+        order: 1 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        margin: 0 auto 10px !important;
+    }
+    .chairman-message-content,
+    .principal-message-content {
+        order: 2 !important;
+        width: 100% !important;
     }
     .vision-dual-cards-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
@@ -15878,18 +15897,32 @@ textarea.reg-input-control {
 @media (max-width: 768px) {
     .chairman-message-card,
     .principal-message-grid {
+        display: flex !important;
+        flex-direction: column !important;
         grid-template-columns: 1fr !important;
         text-align: center !important;
         padding: 24px 16px !important;
         gap: 20px !important;
     }
 
+    .chairman-profile-col,
+    .principal-profile-col {
+        order: 1 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        margin: 0 auto 10px !important;
+    }
+
     .chairman-message-content,
     .principal-message-content {
+        order: 2 !important;
         text-align: center !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
+        width: 100% !important;
     }
 
     .chairman-message-eyebrow,
@@ -15949,11 +15982,12 @@ textarea.reg-input-control {
 
     .chairman-profile-col,
     .principal-profile-col {
+        order: 1 !important;
         width: 100% !important;
         max-width: 100% !important;
         display: flex !important;
         justify-content: center !important;
-        margin: 10px auto 0 !important;
+        margin: 0 auto 10px !important;
     }
 
     .chairman-profile-blue-tab,
