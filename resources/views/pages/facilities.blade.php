@@ -552,52 +552,7 @@
         </div>
 
         <!-- =========================================================================
-             6. STATS HIGHLIGHT STRIP (Ground in Verified Metrics)
-             ========================================================================= -->
-        <div class="facilities-stats-bar-unified">
-            <div class="fac-stat-box">
-                <div class="fac-stat-icon-wrap orange" aria-hidden="true">
-                    <i class="fa-solid fa-mountain-city"></i>
-                </div>
-                <div>
-                    <span class="fac-stat-num">10,000 m²</span>
-                    <span class="fac-stat-label">Campus Land Area (~2.5 Acres)</span>
-                </div>
-            </div>
-
-            <div class="fac-stat-box">
-                <div class="fac-stat-icon-wrap blue" aria-hidden="true">
-                    <i class="fa-solid fa-chalkboard-user"></i>
-                </div>
-                <div>
-                    <span class="fac-stat-num">25</span>
-                    <span class="fac-stat-label">Smart Classrooms (47.08 m² each)</span>
-                </div>
-            </div>
-
-            <div class="fac-stat-box">
-                <div class="fac-stat-icon-wrap green" aria-hidden="true">
-                    <i class="fa-solid fa-flask-vial"></i>
-                </div>
-                <div>
-                    <span class="fac-stat-num">3</span>
-                    <span class="fac-stat-label">Dedicated Labs (Science, Math &amp; Tech)</span>
-                </div>
-            </div>
-
-            <div class="fac-stat-box">
-                <div class="fac-stat-icon-wrap gold" aria-hidden="true">
-                    <i class="fa-solid fa-shield-halved"></i>
-                </div>
-                <div>
-                    <span class="fac-stat-num">100%</span>
-                    <span class="fac-stat-label">24/7 CCTV &amp; GPS Transport</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- =========================================================================
-             7. PRE-FOOTER CAMPUS TOUR CONVERSION BANNER
+             6. PRE-FOOTER CAMPUS TOUR CONVERSION BANNER
              ========================================================================= -->
         <section class="secondary-helpline-card" id="campus-tour-cta">
             <div class="sec-helpline-content">

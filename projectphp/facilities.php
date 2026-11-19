@@ -470,42 +470,7 @@ require_once __DIR__.'/includes/header.php';
 
             </div>
 
-            <!-- 3. Stats Highlight Strip -->
-            <div class="facilities-stats-bar">
-                <div class="facilities-stat-item">
-                    <i class="fa-solid fa-users facilities-stat-icon orange" aria-hidden="true"></i>
-                    <div>
-                        <span class="facilities-stat-num">15+</span>
-                        <span class="facilities-stat-label">Modern Facilities</span>
-                    </div>
-                </div>
-
-                <div class="facilities-stat-item">
-                    <i class="fa-solid fa-shield-halved facilities-stat-icon blue" aria-hidden="true"></i>
-                    <div>
-                        <span class="facilities-stat-num">100%</span>
-                        <span class="facilities-stat-label">Safe &amp; Secure Campus</span>
-                    </div>
-                </div>
-
-                <div class="facilities-stat-item">
-                    <i class="fa-solid fa-leaf facilities-stat-icon green" aria-hidden="true"></i>
-                    <div>
-                        <span class="facilities-stat-num">Green</span>
-                        <span class="facilities-stat-label">Clean &amp; Eco-Friendly</span>
-                    </div>
-                </div>
-
-                <div class="facilities-stat-item">
-                    <i class="fa-solid fa-star facilities-stat-icon gold" aria-hidden="true"></i>
-                    <div>
-                        <span class="facilities-stat-num">All-Round</span>
-                        <span class="facilities-stat-label">Holistic Development</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 4. Pre-Footer Campus Tour CTA Banner -->
+            <!-- 3. Pre-Footer Campus Tour CTA Banner -->
             <div class="facilities-cta-box">
                 <div class="facilities-cta-left">
                     <span class="facilities-cta-pill">EXPERIENCE IT YOURSELF</span>
