@@ -5565,14 +5565,16 @@ textarea.form-control:focus {
     line-height: 1.55 !important;
 }
 
-.admission-page-wrapper .apc-actions {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 14px !important;
-    margin: 0 auto !important;
-    flex-wrap: wrap !important;
+@media (min-width: 769px) {
+    .admission-page-wrapper .apc-actions {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 14px !important;
+        margin: 0 auto !important;
+        flex-wrap: wrap !important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -6881,6 +6883,86 @@ textarea.form-control:focus {
         font-weight: 700 !important;
         border-radius: 999px !important;
         box-sizing: border-box !important;
+        margin: 0 !important;
+    }
+}
+
+/* ==========================================================================
+   PROVISIONAL ENQUIRY & DUAL CTA SPACING REDUCTION & BOTTOM PEACH CTA
+   ========================================================================== */
+.admission-docs-section-v2 {
+    padding-bottom: 20px;
+}
+
+.admission-dual-cta-section {
+    padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+    /* Tighten vertical spacing between Provisional Seat Card & Dual CTA Section */
+    .admission-page-wrapper .admission-docs-section-v2,
+    .admission-docs-section-v2 {
+        padding-top: 36px !important;
+        padding-bottom: 8px !important;
+    }
+
+    .admission-docs-section-v2 .adm-inline-enquiry-bar,
+    .adm-inline-enquiry-bar.alt-purple {
+        margin-top: 18px !important;
+        margin-bottom: 0 !important;
+    }
+
+    .admission-page-wrapper .admission-dual-cta-section,
+    .admission-dual-cta-section {
+        padding-top: 10px !important;
+        padding-bottom: 28px !important;
+    }
+
+    .admission-dual-cta-section .dual-cta-grid {
+        gap: 12px !important;
+    }
+
+    /* Bottom Admission Peach CTA Banner Button Stacking Safeguard */
+    .admission-peach-cta-box {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 24px 18px !important;
+    }
+
+    .admission-peach-cta-box .apc-left {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    .admission-page-wrapper .apc-actions,
+    .admission-peach-cta-box .apc-actions,
+    .apc-actions {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        justify-content: center !important;
+        width: 100% !important;
+        max-width: 320px !important;
+        margin: 16px auto 0 !important;
+        gap: 10px !important;
+    }
+
+    .admission-page-wrapper .btn-apc-primary,
+    .admission-page-wrapper .btn-apc-secondary,
+    .admission-peach-cta-box .btn-apc-primary,
+    .admission-peach-cta-box .btn-apc-secondary,
+    .btn-apc-primary,
+    .btn-apc-secondary {
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        height: 44px !important;
+        min-height: 44px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
         margin: 0 !important;
     }
 }

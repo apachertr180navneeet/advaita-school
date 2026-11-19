@@ -547,7 +547,7 @@ class PageController extends Controller
             'feature3_title' => Setting::get('admission_feature3_title', 'Selection Process'),
             'feature3_desc' => Setting::get('admission_feature3_desc', 'Based on interaction and assessment (as applicable)'),
             'feature4_title' => Setting::get('admission_feature4_title', 'Important Dates'),
-            'feature4_desc' => Setting::get('admission_feature4_desc', 'Admissions open for the academic session '.$academicYear),
+            'feature4_desc' => str_replace(['2026-27', '2026–27', '2026–2027', '2026-2027'], $academicYear, Setting::get('admission_feature4_desc', 'Admissions open for the academic session '.$academicYear)),
 
             // Documents Required Section
             'docs_eyebrow' => Setting::get('admission_docs_eyebrow', '— DOCUMENTS REQUIRED —'),

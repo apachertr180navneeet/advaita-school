@@ -15823,3 +15823,155 @@ textarea.reg-input-control {
         font-size: 0.78rem !important;
     }
 }
+
+/* ==========================================================================
+   CHAIRMAN & PRINCIPAL DESK MOBILE STYLING SAFEGUARDS
+   ========================================================================== */
+@media (max-width: 768px) {
+    .chairman-message-card,
+    .principal-message-grid {
+        grid-template-columns: 1fr !important;
+        text-align: center !important;
+        padding: 24px 16px !important;
+        gap: 20px !important;
+    }
+
+    .chairman-message-content,
+    .principal-message-content {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .chairman-message-eyebrow,
+    .principal-message-eyebrow,
+    .chairman-message-title,
+    .principal-message-title,
+    .chairman-salutation,
+    .principal-salutation,
+    .chairman-message-content p,
+    .principal-message-content p {
+        text-align: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        width: 100% !important;
+    }
+
+    .chairman-quote-box,
+    .principal-quote-box {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 16px auto !important;
+        padding: 16px 14px !important;
+        border-left: none !important;
+        border-top: 3.5px solid #0284c7 !important;
+        border-radius: 14px !important;
+        background: #edf7ff !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        gap: 8px !important;
+    }
+
+    .chairman-quote-icon,
+    .principal-quote-icon {
+        margin: 0 auto 4px !important;
+        font-size: 1.3rem !important;
+        color: #0284c7 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .chairman-quote-text,
+    .principal-quote-text {
+        text-align: center !important;
+        font-size: clamp(0.82rem, 3.2vw, 0.9rem) !important;
+        line-height: 1.5 !important;
+        color: #1e3a5f !important;
+        font-style: italic !important;
+        font-weight: 500 !important;
+        margin: 0 !important;
+        width: 100% !important;
+    }
+
+    .chairman-profile-col,
+    .principal-profile-col {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+        margin: 10px auto 0 !important;
+    }
+
+    .chairman-profile-blue-tab,
+    .chairman-profile-dots-decor,
+    .principal-profile-blue-tab,
+    .principal-profile-dots-decor {
+        display: none !important;
+    }
+
+    .chairman-profile-card,
+    .principal-profile-card {
+        width: 100% !important;
+        max-width: 290px !important;
+        margin: 0 auto !important;
+        border-radius: 16px !important;
+        overflow: hidden !important;
+        box-shadow: 0 8px 24px rgba(8, 59, 122, 0.08) !important;
+        border: 1px solid #e2edf8 !important;
+        background: #ffffff !important;
+    }
+
+    .chairman-profile-photo-wrap {
+        width: 100% !important;
+        height: 240px !important;
+        overflow: hidden !important;
+    }
+
+    .chairman-profile-photo {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center 12% !important;
+    }
+
+    .chairman-profile-info,
+    .principal-profile-info {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 12px 14px !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .chairman-name,
+    .principal-name {
+        font-size: 0.96rem !important;
+        margin: 0 0 3px !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .chairman-role,
+    .principal-role {
+        font-size: 0.76rem !important;
+        text-align: center !important;
+        width: 100% !important;
+        margin-bottom: 2px !important;
+    }
+
+    .chairman-org,
+    .principal-org {
+        font-size: 0.72rem !important;
+        text-align: center !important;
+        width: 100% !important;
+        line-height: 1.35 !important;
+    }
+}
