@@ -16,7 +16,11 @@ class RegistrationController extends Controller
             'keywords' => Setting::get('seo_online_registration_keywords', 'Online school admission form, student registration Parbhani, Advaita online admission'),
         ];
 
-        return view('pages.online-registration', compact('seo'));
+        $contactPhone = Setting::get('admission_counsellor_phone', Setting::get('site_phone_primary', '+91 9689898973'));
+        $contactEmail = Setting::get('contact_email', 'admissions.advaita@gmail.com');
+        $schoolHours = Setting::get('site_school_hours', 'Mon – Sat | 8:00 AM – 3:00 PM');
+
+        return view('pages.online-registration', compact('seo', 'contactPhone', 'contactEmail', 'schoolHours'));
     }
 
     public function store(Request $request)

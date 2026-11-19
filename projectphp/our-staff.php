@@ -331,7 +331,7 @@ require_once __DIR__.'/includes/header.php';
                         <span>See Open Roles</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
-                    <a href="mailto:info@advaitaschool.edu.in" class="staff-btn-outline">
+                    <a href="mailto:admissions.advaita@gmail.com" class="staff-btn-outline">
                         <i class="fa-regular fa-envelope"></i>
                         <span>Send Your CV</span>
                     </a>

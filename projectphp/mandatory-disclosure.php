@@ -137,12 +137,12 @@ require_once __DIR__.'/includes/header.php';
                                     <tr>
                                         <td class="td-sr">6</td>
                                         <td class="td-info">SCHOOL EMAIL ID</td>
-                                        <td class="td-details"><a href="mailto:info@advaitaschool.edu.in" class="disclosure-inline-link">info@advaitaschool.edu.in</a></td>
+                                        <td class="td-details"><a href="mailto:admissions.advaita@gmail.com" class="disclosure-inline-link">admissions.advaita@gmail.com</a></td>
                                     </tr>
                                     <tr>
                                         <td class="td-sr">7</td>
                                         <td class="td-info">CONTACT DETAILS (LANDLINE/MOBILE)</td>
-                                        <td class="td-details"><a href="tel:+919876543210" class="disclosure-inline-link">9146066216 / +91 98765 43210</a></td>
+                                        <td class="td-details"><a href="tel:+919689898973" class="disclosure-inline-link">9689898973 / 9146066216</a></td>
                                     </tr>
                                 </tbody>
                             </table>

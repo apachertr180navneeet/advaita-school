@@ -1203,8 +1203,8 @@ require_once __DIR__.'/includes/header.php';
                     </div>
                     <div class="reg-assist-content">
                         <span class="reg-assist-label">Call Admissions</span>
-                        <a href="tel:+919876543210" class="reg-assist-val">+91 98765 43210</a>
-                        <span class="reg-assist-sub">Mon – Sat | 8:00 AM – 4:00 PM</span>
+                        <a href="tel:+919689898973" class="reg-assist-val">+91 9689898973</a>
+                        <span class="reg-assist-sub">Mon – Sat | 8:00 AM – 3:00 PM</span>
                     </div>
                 </div>
 
@@ -1215,7 +1215,7 @@ require_once __DIR__.'/includes/header.php';
                     </div>
                     <div class="reg-assist-content">
                         <span class="reg-assist-label">Email Us</span>
-                        <a href="mailto:info@advaitaschool.edu.in" class="reg-assist-val">info@advaitaschool.edu.in</a>
+                        <a href="mailto:admissions.advaita@gmail.com" class="reg-assist-val">admissions.advaita@gmail.com</a>
                         <span class="reg-assist-sub">We usually respond within 24 hours</span>
                     </div>
                 </div>
