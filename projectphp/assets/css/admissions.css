@@ -6891,35 +6891,152 @@ textarea.form-control:focus {
    PROVISIONAL ENQUIRY & DUAL CTA SPACING REDUCTION & BOTTOM PEACH CTA
    ========================================================================== */
 .admission-docs-section-v2 {
-    padding-bottom: 20px;
+    padding-bottom: 16px;
 }
 
 .admission-dual-cta-section {
-    padding-top: 20px;
+    padding-top: 16px;
+    padding-bottom: 20px;
+}
+
+.admission-fee-section-v2 {
+    padding: 24px 0 28px;
 }
 
 @media (max-width: 768px) {
     /* Tighten vertical spacing between Provisional Seat Card & Dual CTA Section */
     .admission-page-wrapper .admission-docs-section-v2,
     .admission-docs-section-v2 {
-        padding-top: 36px !important;
-        padding-bottom: 8px !important;
+        padding-top: 32px !important;
+        padding-bottom: 6px !important;
     }
 
     .admission-docs-section-v2 .adm-inline-enquiry-bar,
     .adm-inline-enquiry-bar.alt-purple {
-        margin-top: 18px !important;
+        margin-top: 16px !important;
         margin-bottom: 0 !important;
     }
 
     .admission-page-wrapper .admission-dual-cta-section,
     .admission-dual-cta-section {
-        padding-top: 10px !important;
-        padding-bottom: 28px !important;
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
     }
 
     .admission-dual-cta-section .dual-cta-grid {
-        gap: 12px !important;
+        gap: 10px !important;
+    }
+
+    /* Tighten vertical spacing above & inside Fee Structure Section */
+    .admission-page-wrapper .admission-fee-section-v2,
+    .admission-fee-section-v2 {
+        padding-top: 8px !important;
+        padding-bottom: 24px !important;
+    }
+
+    .admission-fee-section-v2 .admission-section-header,
+    .admission-page-wrapper .admission-fee-section-v2 .admission-section-header {
+        margin-bottom: 12px !important;
+    }
+
+    .admission-fee-section-v2 .admission-eyebrow {
+        margin-bottom: 3px !important;
+        font-size: 0.72rem !important;
+    }
+
+    .admission-fee-section-v2 .admission-section-title {
+        font-size: clamp(1.3rem, 4.2vw, 1.55rem) !important;
+        margin: 2px 0 4px !important;
+        line-height: 1.25 !important;
+    }
+
+    .admission-fee-section-v2 .admission-section-desc {
+        font-size: 0.82rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 0 !important;
+        max-width: 480px !important;
+    }
+
+    /* Tighten Fee Band Cards and prevent title line breaking */
+    .admission-fee-section-v2 .fee-band-cards-grid,
+    .fee-band-cards-grid {
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .admission-fee-section-v2 .fee-band-card,
+    .fee-band-card {
+        padding: 10px 14px !important;
+        border-radius: 14px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 8px !important;
+    }
+
+    .admission-fee-section-v2 .fbc-left,
+    .fee-band-card .fbc-left {
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+        text-align: left !important;
+        justify-content: flex-start !important;
+    }
+
+    .admission-fee-section-v2 .fbc-icon-circle,
+    .fbc-icon-circle {
+        width: 36px !important;
+        height: 36px !important;
+        min-width: 36px !important;
+        border-radius: 50% !important;
+        font-size: 0.95rem !important;
+        flex-shrink: 0 !important;
+    }
+
+    .admission-fee-section-v2 .fbc-info,
+    .fbc-info {
+        flex: 1 1 auto !important;
+        min-width: 0 !important;
+        text-align: left !important;
+    }
+
+    .admission-fee-section-v2 .fbc-title,
+    .fee-band-card .fbc-title {
+        font-size: clamp(13.5px, 3.6vw, 15px) !important;
+        font-weight: 800 !important;
+        white-space: nowrap !important;
+        margin: 0 0 2px !important;
+        line-height: 1.2 !important;
+        text-align: left !important;
+    }
+
+    .admission-fee-section-v2 .fbc-subtitle,
+    .fee-band-card .fbc-subtitle {
+        font-size: clamp(10.5px, 2.7vw, 11.5px) !important;
+        line-height: 1.25 !important;
+        margin: 0 !important;
+        text-align: left !important;
+        color: #64748B !important;
+    }
+
+    .admission-fee-section-v2 .fbc-right,
+    .fee-band-card .fbc-right {
+        flex-shrink: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+    }
+
+    .admission-fee-section-v2 .btn-fee-band,
+    .btn-fee-band {
+        padding: 6px 12px !important;
+        font-size: clamp(11px, 2.8vw, 12px) !important;
+        gap: 5px !important;
+        white-space: nowrap !important;
+        border-radius: 999px !important;
     }
 
     /* Bottom Admission Peach CTA Banner Button Stacking Safeguard */
