@@ -1613,6 +1613,19 @@
 .adv-gallery-page-wrapper .adv-gal-card-btn {
     align-self: center !important;
     margin: 4px auto 0 !important;
+    width: 34px !important;
+    height: 34px !important;
+    min-width: 34px !important;
+    min-height: 34px !important;
+    max-width: 34px !important;
+    max-height: 34px !important;
+    border-radius: 50% !important;
+    aspect-ratio: 1 / 1 !important;
+    flex: 0 0 34px !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
 }
 
 .adv-gallery-page-wrapper .adv-gal-empty-state {
@@ -1778,6 +1791,19 @@
 
     .adv-gallery-page-wrapper .adv-gal-card-count {
         font-size: 0.72rem !important;
+    }
+
+    .adv-gallery-page-wrapper .adv-gal-card-btn {
+        width: 32px !important;
+        height: 32px !important;
+        min-width: 32px !important;
+        min-height: 32px !important;
+        max-width: 32px !important;
+        max-height: 32px !important;
+        border-radius: 50% !important;
+        aspect-ratio: 1 / 1 !important;
+        flex: 0 0 32px !important;
+        padding: 0 !important;
     }
 
     .adv-gallery-page-wrapper .adv-gal-cta-card {
