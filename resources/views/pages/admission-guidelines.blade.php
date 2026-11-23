@@ -1482,6 +1482,1322 @@
         transform: translateY(-2px) !important;
     }
 }
+
+/* ==========================================================================
+   Admission Guidelines Page - Comprehensive Mobile & Tablet Redesign (<= 991px)
+   ========================================================================== */
+@media (max-width: 991px) {
+    /* 1. Hero Canvas & Layout */
+    .admission-page-wrapper .admission-hero-section {
+        padding: 16px 0 24px !important;
+    }
+
+    .admission-page-wrapper .admission-hero-canvas {
+        min-height: auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        border-radius: 20px !important;
+        background: linear-gradient(180deg, #EEF6FC 0%, #F5F9FE 60%, #FFFFFF 100%) !important;
+        border: 1.5px solid #dbeafe !important;
+        box-shadow: 0 6px 20px rgba(8, 59, 122, 0.05) !important;
+        position: relative !important;
+        overflow: hidden !important;
+        width: 100% !important;
+        margin: 0 auto 24px !important;
+        padding: 0 !important;
+    }
+
+    /* On mobile/tablet, hide the cutout student visual so text is 100% crisp and readable */
+    .admission-page-wrapper .admission-hero-bg-visual {
+        display: none !important;
+    }
+
+    .admission-page-wrapper .admission-hero-wave-overlay {
+        display: none !important;
+    }
+
+    /* Floating handwritten tag: hide on mobile <= 768px to prevent collision with breadcrumb */
+    .admission-page-wrapper .admission-hero-script-tag {
+        display: none !important;
+    }
+
+    .admission-page-wrapper .admission-hero-left-panel {
+        position: relative !important;
+        z-index: 3 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 28px 18px 32px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+    }
+
+    .admission-page-wrapper .admission-hero-content-inner {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+        max-width: 680px !important;
+        width: 100% !important;
+    }
+
+    .admission-page-wrapper .admission-breadcrumb {
+        display: inline-flex !important;
+        flex-wrap: wrap !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        gap: 6px !important;
+        font-size: 12px !important;
+        color: #64748b !important;
+        margin: 0 auto 10px !important;
+    }
+
+    .admission-page-wrapper .admission-eyebrow {
+        text-align: center !important;
+        margin: 0 auto 10px !important;
+        display: inline-block !important;
+        font-size: 11px !important;
+        letter-spacing: 0.05em !important;
+        padding: 4px 14px !important;
+        background: #fff7ed !important;
+        color: #ea580c !important;
+        border: 1px solid #fed7aa !important;
+        border-radius: 999px !important;
+        font-weight: 700 !important;
+    }
+
+    .admission-page-wrapper .admission-hero-title {
+        font-family: var(--adv-font-sans, "Outfit", sans-serif) !important;
+        font-size: clamp(1.65rem, 5.2vw, 2.35rem) !important;
+        font-weight: 800 !important;
+        color: #083B7A !important;
+        line-height: 1.25 !important;
+        text-align: center !important;
+        margin: 0 auto 12px !important;
+        max-width: 100% !important;
+    }
+
+    .admission-page-wrapper .admission-hero-title .highlight-serif {
+        font-family: var(--adv-font-serif, "Fraunces", Georgia, serif) !important;
+        font-style: italic !important;
+        color: #F37021 !important;
+        font-weight: 600 !important;
+    }
+
+    .admission-page-wrapper .admission-hero-desc {
+        font-size: clamp(0.92rem, 2.8vw, 1.02rem) !important;
+        color: #475569 !important;
+        line-height: 1.6 !important;
+        text-align: center !important;
+        max-width: 620px !important;
+        margin: 0 auto 18px !important;
+    }
+
+    .admission-page-wrapper .hero-action-buttons {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        width: 100% !important;
+        max-width: 340px !important;
+        margin: 16px auto 0 !important;
+    }
+
+    .admission-page-wrapper .hero-action-buttons .admission-btn-primary,
+    .admission-page-wrapper .hero-action-buttons .admission-btn-visit {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        width: 100% !important;
+        height: 44px !important;
+        border-radius: 999px !important;
+        font-size: 13.5px !important;
+        font-weight: 700 !important;
+        padding: 0 18px !important;
+        box-sizing: border-box !important;
+        text-decoration: none !important;
+    }
+
+    /* 2. Sticky Subnav Bar */
+    .admission-page-wrapper .admission-subnav-bar,
+    .admission-subnav-bar {
+        position: sticky !important;
+        top: 60px !important;
+        z-index: 99 !important;
+        background: rgba(255, 255, 255, 0.98) !important;
+        backdrop-filter: blur(12px) !important;
+        border-top: 1px solid #e2e8f0 !important;
+        border-bottom: 2px solid #e2e8f0 !important;
+        padding: 8px 0 !important;
+        box-shadow: 0 4px 15px rgba(8, 59, 122, 0.04) !important;
+    }
+
+    .admission-page-wrapper .subnav-links-wrap,
+    .subnav-links-wrap {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        overflow-x: auto !important;
+        flex-wrap: nowrap !important;
+        -webkit-overflow-scrolling: touch !important;
+        padding: 4px 14px !important;
+        scrollbar-width: none !important;
+    }
+
+    .admission-page-wrapper .subnav-links-wrap::-webkit-scrollbar,
+    .subnav-links-wrap::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    .admission-page-wrapper .subnav-link,
+    .subnav-link {
+        flex-shrink: 0 !important;
+        white-space: nowrap !important;
+        padding: 8px 14px !important;
+        font-size: 12.5px !important;
+        font-weight: 600 !important;
+        border-radius: 999px !important;
+        background: #f8fafc !important;
+        border: 1px solid #e2e8f0 !important;
+        color: #334155 !important;
+        text-decoration: none !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 6px !important;
+    }
+
+    .admission-page-wrapper .subnav-link.highlight,
+    .subnav-link.highlight {
+        background: #eff6ff !important;
+        border-color: #bfdbfe !important;
+        color: #1e40af !important;
+    }
+
+    /* 3. Section Headers */
+    .admission-page-wrapper .section-header-pill,
+    .section-header-pill {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 auto 28px !important;
+        max-width: 680px !important;
+        width: 100% !important;
+    }
+
+    .admission-page-wrapper .section-header-pill .pill-badge,
+    .section-header-pill .pill-badge {
+        font-size: 11px !important;
+        font-weight: 800 !important;
+        letter-spacing: 0.06em !important;
+        padding: 4px 14px !important;
+        border-radius: 999px !important;
+        margin: 0 auto 8px !important;
+        display: inline-flex !important;
+    }
+
+    .admission-page-wrapper .section-header-pill .pill-title,
+    .section-header-pill .pill-title {
+        font-family: var(--adv-font-sans, "Outfit", sans-serif) !important;
+        font-size: clamp(1.45rem, 4.8vw, 1.95rem) !important;
+        font-weight: 800 !important;
+        color: #083B7A !important;
+        line-height: 1.25 !important;
+        text-align: center !important;
+        margin: 0 auto 6px !important;
+        width: 100% !important;
+    }
+
+    .admission-page-wrapper .section-header-pill .pill-subtitle,
+    .section-header-pill .pill-subtitle {
+        font-size: clamp(12.5px, 2.6vw, 13.5px) !important;
+        color: #64748b !important;
+        line-height: 1.55 !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+        max-width: 580px !important;
+        width: 100% !important;
+    }
+
+    /* Section Wrapper spacing */
+    .admission-page-wrapper .admission-section-wrapper {
+        padding: 38px 0 !important;
+    }
+
+    .admission-page-wrapper .admission-quick-actions-section {
+        padding: 32px 0 38px !important;
+    }
+
+    /* 4. Quick Actions Grid */
+    .admission-page-wrapper .quick-actions-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 14px !important;
+        margin-top: 24px !important;
+    }
+
+    .admission-page-wrapper .qa-card {
+        background: #ffffff !important;
+        border: 1.5px solid #e2e8f0 !important;
+        border-radius: 16px !important;
+        padding: 20px 16px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        text-align: center !important;
+        box-shadow: 0 4px 15px rgba(8, 59, 122, 0.04) !important;
+        box-sizing: border-box !important;
+    }
+
+    .admission-page-wrapper .qa-card > div:first-child {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .admission-page-wrapper .qa-card-header {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 8px !important;
+        margin-bottom: 10px !important;
+        width: 100% !important;
+    }
+
+    .admission-page-wrapper .qa-icon-wrap {
+        width: 44px !important;
+        height: 44px !important;
+        border-radius: 12px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-size: 18px !important;
+        margin: 0 auto !important;
+    }
+
+    .admission-page-wrapper .qa-badge {
+        font-size: 11px !important;
+        font-weight: 700 !important;
+        padding: 3px 10px !important;
+        border-radius: 999px !important;
+        margin: 0 auto !important;
+    }
+
+    .admission-page-wrapper .qa-card-body {
+        text-align: center !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .admission-page-wrapper .qa-card-title {
+        font-family: var(--adv-font-sans, "Outfit", sans-serif) !important;
+        font-size: 15px !important;
+        font-weight: 800 !important;
+        color: #083B7A !important;
+        line-height: 1.35 !important;
+        text-align: center !important;
+        margin: 0 0 6px !important;
+        width: 100% !important;
+    }
+
+    .admission-page-wrapper .qa-card-desc {
+        font-size: 12.5px !important;
+        color: #64748b !important;
+        line-height: 1.5 !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+    }
+
+    .admission-page-wrapper .qa-card-meta {
+        font-size: 12px !important;
+        color: #475569 !important;
+        margin-top: 8px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        gap: 6px !important;
+    }
+
+    .admission-page-wrapper .qa-card-footer {
+        width: 100% !important;
+        margin-top: 14px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 8px !important;
+    }
+
+    .admission-page-wrapper .btn-qa-action {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        width: 100% !important;
+        height: 38px !important;
+        border-radius: 10px !important;
+        font-size: 12.5px !important;
+        font-weight: 700 !important;
+        padding: 0 12px !important;
+        box-sizing: border-box !important;
+        text-decoration: none !important;
+    }
+
+    .admission-page-wrapper .qa-dual-buttons {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 6px !important;
+    }
+
+    /* WhatsApp Banner (Full Width) */
+    .admission-page-wrapper .qa-card.qa-card-banner {
+        grid-column: 1 / -1 !important;
+        padding: 22px 18px !important;
+        border-radius: 18px !important;
+        background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%) !important;
+        border: 1.5px solid #86efac !important;
+    }
+
+    .admission-page-wrapper .qa-banner-content {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        width: 100% !important;
+        gap: 12px !important;
+        margin-bottom: 14px !important;
+    }
+
+    .admission-page-wrapper .qa-banner-text {
+        text-align: center !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .admission-page-wrapper .qa-banner-text .d-flex {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        flex-wrap: wrap !important;
+    }
+
+    .admission-page-wrapper .qa-banner-action {
+        width: 100% !important;
+        max-width: 340px !important;
+        margin: 0 auto !important;
+    }
+
+    .admission-page-wrapper .btn-qa-action.whatsapp {
+        height: 42px !important;
+        border-radius: 999px !important;
+        font-size: 13px !important;
+    }
+
+    /* 5. Section A: Cutoff Banner */
+    .admission-page-wrapper .guidelines-cutoff-banner {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        gap: 14px !important;
+        padding: 22px 18px !important;
+        border-radius: 18px !important;
+    }
+
+    .admission-page-wrapper .cutoff-icon-wrap {
+        margin: 0 auto !important;
+    }
+
+    .admission-page-wrapper .cutoff-content {
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .admission-page-wrapper .cutoff-title {
+        font-size: 16px !important;
+        font-weight: 800 !important;
+        text-align: center !important;
+        margin-bottom: 6px !important;
+    }
+
+    .admission-page-wrapper .cutoff-desc {
+        font-size: 12.5px !important;
+        line-height: 1.55 !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+        max-width: 580px !important;
+    }
+
+    .admission-page-wrapper .cutoff-badge {
+        margin: 0 auto !important;
+        width: auto !important;
+        min-width: 140px !important;
+    }
+
+    /* Age Criteria Table */
+    .admission-page-wrapper .guidelines-table-header {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        gap: 12px !important;
+        padding: 18px 16px !important;
+    }
+
+    .admission-page-wrapper .guidelines-table-title {
+        font-size: 16px !important;
+        font-weight: 800 !important;
+        text-align: center !important;
+        margin-bottom: 4px !important;
+    }
+
+    .admission-page-wrapper .guidelines-table-subtitle {
+        font-size: 12.5px !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+    }
+
+    .admission-page-wrapper .guidelines-table-header .btn-guidelines-sm {
+        width: 100% !important;
+        max-width: 240px !important;
+        justify-content: center !important;
+        margin: 0 auto !important;
+        height: 38px !important;
+        border-radius: 999px !important;
+        font-size: 12.5px !important;
+    }
+
+    .admission-page-wrapper .table-responsive {
+        width: 100% !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        margin: 0 !important;
+        border: none !important;
+    }
+
+    .admission-page-wrapper .guidelines-custom-table {
+        min-width: 600px !important;
+        width: 100% !important;
+        margin-bottom: 0 !important;
+    }
+
+    .admission-page-wrapper .guidelines-custom-table th {
+        font-size: 12px !important;
+        font-weight: 800 !important;
+        padding: 12px 14px !important;
+        white-space: nowrap !important;
+        text-align: left !important;
+    }
+
+    .admission-page-wrapper .guidelines-custom-table td {
+        font-size: 12.5px !important;
+        padding: 14px 14px !important;
+        vertical-align: top !important;
+        text-align: left !important;
+    }
+
+    .admission-page-wrapper .class-cell-badge {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        white-space: nowrap !important;
+        padding: 5px 12px !important;
+        border-radius: 999px !important;
+        font-size: 12px !important;
+        font-weight: 700 !important;
+    }
+
+    .admission-page-wrapper .age-eligibility-highlight {
+        display: flex !important;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+        text-align: left !important;
+        gap: 10px !important;
+        width: 100% !important;
+    }
+
+    .admission-page-wrapper .age-eligibility-highlight i {
+        flex-shrink: 0 !important;
+        margin-top: 3px !important;
+        font-size: 14px !important;
+    }
+
+    .admission-page-wrapper .age-eligibility-highlight strong {
+        flex: 1 1 auto !important;
+        font-size: 13px !important;
+        line-height: 1.45 !important;
+        font-weight: 700 !important;
+    }
+
+    .admission-page-wrapper .regulation-cell {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        gap: 6px !important;
+        width: 100% !important;
+    }
+
+    .admission-page-wrapper .schedule-tag {
+        font-size: 11.5px !important;
+        font-weight: 700 !important;
+        padding: 3px 10px !important;
+        border-radius: 999px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+    }
+
+    .admission-page-wrapper .notes-text {
+        font-size: 12px !important;
+        line-height: 1.45 !important;
+        color: #64748b !important;
+        text-align: left !important;
+    }
+
+    /* Phased Implementation Cards */
+    .admission-page-wrapper .phased-schedule-box {
+        padding: 24px 18px !important;
+        border-radius: 18px !important;
+    }
+
+    .admission-page-wrapper .phased-box-header {
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin-bottom: 20px !important;
+    }
+
+    .admission-page-wrapper .phased-badge {
+        font-size: 11px !important;
+        margin: 0 auto 6px !important;
+    }
+
+    .admission-page-wrapper .phased-box-title {
+        font-size: 16px !important;
+        font-weight: 800 !important;
+        text-align: center !important;
+        margin-bottom: 4px !important;
+    }
+
+    .admission-page-wrapper .phased-box-desc {
+        font-size: 12.5px !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+    }
+
+    .admission-page-wrapper .phased-cards-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 12px !important;
+    }
+
+    .admission-page-wrapper .phased-step-card {
+        padding: 16px 12px !important;
+        border-radius: 14px !important;
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .admission-page-wrapper .phase-number {
+        font-size: 11px !important;
+        font-weight: 800 !important;
+        padding: 2px 8px !important;
+        border-radius: 999px !important;
+        margin: 0 auto 6px !important;
+        display: inline-block !important;
+    }
+
+    .admission-page-wrapper .phase-grade {
+        font-size: 14.5px !important;
+        font-weight: 800 !important;
+        text-align: center !important;
+        margin-bottom: 2px !important;
+    }
+
+    .admission-page-wrapper .phase-year {
+        font-size: 12px !important;
+        font-weight: 700 !important;
+        text-align: center !important;
+        margin-bottom: 6px !important;
+    }
+
+    .admission-page-wrapper .phase-status {
+        font-size: 11px !important;
+        text-align: center !important;
+    }
+
+    .admission-page-wrapper .guidelines-disclaimer-card {
+        padding: 16px 14px !important;
+        border-radius: 14px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 8px !important;
+        margin-top: 20px !important;
+    }
+
+    .admission-page-wrapper .disclaimer-icon {
+        margin: 0 auto !important;
+        font-size: 18px !important;
+    }
+
+    .admission-page-wrapper .disclaimer-text {
+        font-size: 12px !important;
+        line-height: 1.5 !important;
+        text-align: center !important;
+    }
+
+    /* 6. Section B: Documents Required Checklist */
+    .admission-page-wrapper .docs-checklist-container {
+        padding: 20px 16px !important;
+        border-radius: 18px !important;
+    }
+
+    .admission-page-wrapper .docs-header-bar {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 14px !important;
+        padding-bottom: 16px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .admission-page-wrapper .docs-header-left {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 8px !important;
+    }
+
+    .admission-page-wrapper .docs-header-icon-wrap {
+        margin: 0 auto !important;
+    }
+
+    .admission-page-wrapper .docs-header-title {
+        font-size: 16px !important;
+        font-weight: 800 !important;
+        text-align: center !important;
+        margin-bottom: 4px !important;
+    }
+
+    .admission-page-wrapper .docs-header-sub {
+        font-size: 12.5px !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+    }
+
+    .admission-page-wrapper .docs-header-actions {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 320px !important;
+        margin: 0 auto !important;
+        gap: 8px !important;
+    }
+
+    .admission-page-wrapper .docs-header-actions .btn-guidelines-sm,
+    .admission-page-wrapper .docs-header-actions .btn-guidelines-primary {
+        width: 100% !important;
+        height: 42px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        border-radius: 999px !important;
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        text-decoration: none !important;
+    }
+
+    .admission-page-wrapper .docs-list-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    .admission-page-wrapper .doc-item-card {
+        padding: 18px 16px !important;
+        border-radius: 16px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        position: relative !important;
+        box-sizing: border-box !important;
+    }
+
+    .admission-page-wrapper .doc-item-number {
+        position: absolute !important;
+        top: 12px !important;
+        left: 14px !important;
+        width: 24px !important;
+        height: 24px !important;
+        font-size: 11px !important;
+        border-radius: 50% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .admission-page-wrapper .doc-item-icon {
+        width: 44px !important;
+        height: 44px !important;
+        border-radius: 12px !important;
+        font-size: 20px !important;
+        margin: 0 auto 10px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .admission-page-wrapper .doc-item-content {
+        width: 100% !important;
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .admission-page-wrapper .doc-item-top {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 4px !important;
+        margin-bottom: 6px !important;
+    }
+
+    .admission-page-wrapper .doc-item-title {
+        font-size: 15px !important;
+        font-weight: 800 !important;
+        color: #083B7A !important;
+        text-align: center !important;
+        margin: 0 !important;
+    }
+
+    .admission-page-wrapper .doc-item-badge {
+        font-size: 11px !important;
+        font-weight: 700 !important;
+        padding: 3px 10px !important;
+        border-radius: 999px !important;
+        margin: 2px auto 0 !important;
+    }
+
+    .admission-page-wrapper .doc-item-desc {
+        font-size: 12.5px !important;
+        color: #64748b !important;
+        line-height: 1.5 !important;
+        text-align: center !important;
+        margin: 0 !important;
+    }
+
+    .admission-page-wrapper .docs-verification-notice {
+        padding: 16px 14px !important;
+        border-radius: 14px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 6px !important;
+        margin-top: 20px !important;
+        font-size: 12.5px !important;
+        line-height: 1.5 !important;
+    }
+
+    /* 7. Section C: 5-Step Admission Procedure */
+    .admission-page-wrapper .procedure-sequence-wrapper::before {
+        display: none !important;
+    }
+
+    .admission-page-wrapper .procedure-sequence-item {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 10px !important;
+        margin-bottom: 22px !important;
+        width: 100% !important;
+    }
+
+    .admission-page-wrapper .procedure-step-badge {
+        display: inline-flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        padding: 6px 18px !important;
+        border-radius: 999px !important;
+        background: #083B7A !important;
+        color: #ffffff !important;
+        font-size: 12px !important;
+        margin: 0 auto !important;
+        width: auto !important;
+        min-width: 120px !important;
+        box-shadow: 0 4px 12px rgba(8, 59, 122, 0.2) !important;
+    }
+
+    .admission-page-wrapper .procedure-card {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        width: 100% !important;
+        padding: 22px 18px !important;
+        border-radius: 18px !important;
+        background: #ffffff !important;
+        border: 1.5px solid #e2e8f0 !important;
+        box-shadow: 0 4px 15px rgba(8, 59, 122, 0.04) !important;
+        box-sizing: border-box !important;
+    }
+
+    .admission-page-wrapper .procedure-card-icon {
+        width: 46px !important;
+        height: 46px !important;
+        border-radius: 12px !important;
+        font-size: 20px !important;
+        margin: 0 auto 12px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .admission-page-wrapper .procedure-card-body {
+        text-align: center !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
+
+    .admission-page-wrapper .procedure-card-title {
+        font-size: 16px !important;
+        font-weight: 800 !important;
+        color: #083B7A !important;
+        text-align: center !important;
+        margin-bottom: 6px !important;
+    }
+
+    .admission-page-wrapper .procedure-card-desc {
+        font-size: 12.5px !important;
+        color: #64748b !important;
+        line-height: 1.55 !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+        max-width: 580px !important;
+    }
+
+    .admission-page-wrapper .btn-step-action {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        width: 100% !important;
+        max-width: 290px !important;
+        height: 42px !important;
+        border-radius: 999px !important;
+        font-size: 12.5px !important;
+        font-weight: 700 !important;
+        margin: 12px auto 0 !important;
+        padding: 0 16px !important;
+        box-sizing: border-box !important;
+        text-decoration: none !important;
+    }
+
+    .admission-page-wrapper .procedure-cta-banner {
+        padding: 24px 18px !important;
+        border-radius: 18px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 16px !important;
+        margin-top: 28px !important;
+    }
+
+    .admission-page-wrapper .cta-banner-content {
+        text-align: center !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+
+    .admission-page-wrapper .cta-banner-eyebrow {
+        font-size: 11px !important;
+        margin-bottom: 6px !important;
+    }
+
+    .admission-page-wrapper .cta-banner-title {
+        font-size: clamp(1.25rem, 4.2vw, 1.55rem) !important;
+        text-align: center !important;
+        margin-bottom: 6px !important;
+    }
+
+    .admission-page-wrapper .cta-banner-desc {
+        font-size: 12.5px !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+        max-width: 540px !important;
+    }
+
+    .admission-page-wrapper .cta-banner-buttons {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        max-width: 320px !important;
+        margin: 0 auto !important;
+        gap: 10px !important;
+    }
+
+    .admission-page-wrapper .btn-cta-main,
+    .admission-page-wrapper .btn-cta-alt {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        height: 44px !important;
+        border-radius: 999px !important;
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        text-align: center !important;
+        text-decoration: none !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 8. Section D: Class Eligibility */
+    .admission-page-wrapper .class-eligibility-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    .admission-page-wrapper .eligibility-card {
+        padding: 22px 18px !important;
+        border-radius: 18px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+    }
+
+    .admission-page-wrapper .eligibility-card-header {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 8px !important;
+        margin-bottom: 12px !important;
+        width: 100% !important;
+    }
+
+    .admission-page-wrapper .eligibility-icon-wrap {
+        margin: 0 auto !important;
+    }
+
+    .admission-page-wrapper .eligibility-grade-badge {
+        margin: 0 auto 4px !important;
+        display: inline-flex !important;
+    }
+
+    .admission-page-wrapper .eligibility-rule-title {
+        font-size: 16px !important;
+        font-weight: 800 !important;
+        text-align: center !important;
+        margin: 0 !important;
+    }
+
+    .admission-page-wrapper .eligibility-card-body {
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .admission-page-wrapper .eligibility-detail-text {
+        font-size: 12.5px !important;
+        line-height: 1.55 !important;
+        text-align: center !important;
+        margin-bottom: 14px !important;
+    }
+
+    .admission-page-wrapper .eligibility-card-footer {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .admission-page-wrapper .cbse-warning-tag,
+    .admission-page-wrapper .cbse-ok-tag {
+        width: 100% !important;
+        justify-content: center !important;
+        text-align: center !important;
+        font-size: 12px !important;
+        padding: 8px 12px !important;
+        border-radius: 8px !important;
+        display: flex !important;
+        align-items: center !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 9. Section E: Important Instructions */
+    .admission-page-wrapper .important-instructions-card {
+        padding: 24px 16px !important;
+        border-radius: 18px !important;
+    }
+
+    .admission-page-wrapper .instructions-header {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 10px !important;
+        margin-bottom: 20px !important;
+    }
+
+    .admission-page-wrapper .instructions-title {
+        font-size: 16px !important;
+        font-weight: 800 !important;
+        text-align: center !important;
+        margin-bottom: 4px !important;
+    }
+
+    .admission-page-wrapper .instructions-subtitle {
+        font-size: 12.5px !important;
+        text-align: center !important;
+        margin: 0 auto !important;
+    }
+
+    .admission-page-wrapper .instructions-list {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+    }
+
+    .admission-page-wrapper .instruction-item {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        gap: 12px !important;
+        padding: 14px 14px !important;
+        border-radius: 14px !important;
+        box-sizing: border-box !important;
+    }
+
+    .admission-page-wrapper .instruction-icon {
+        margin: 2px 0 0 !important;
+        flex-shrink: 0 !important;
+    }
+
+    .admission-page-wrapper .instruction-text {
+        flex: 1 1 auto !important;
+        text-align: left !important;
+        font-size: 12.5px !important;
+        line-height: 1.5 !important;
+    }
+
+    .admission-page-wrapper .instructions-footer-note {
+        padding: 12px 14px !important;
+        border-radius: 12px !important;
+        font-size: 12px !important;
+        text-align: center !important;
+        margin-top: 16px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* 10. Helpline Desk */
+    .admission-page-wrapper .admission-helpline-section {
+        padding: 32px 0 44px !important;
+    }
+
+    .admission-page-wrapper .helpline-card {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        padding: 28px 18px !important;
+        border-radius: 20px !important;
+        gap: 24px !important;
+        text-align: center !important;
+    }
+
+    .admission-page-wrapper .helpline-left {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .admission-page-wrapper .helpline-eyebrow {
+        font-size: 11px !important;
+        text-align: center !important;
+        margin: 0 auto 6px !important;
+    }
+
+    .admission-page-wrapper .helpline-title {
+        font-size: clamp(1.35rem, 4.8vw, 1.7rem) !important;
+        font-weight: 800 !important;
+        text-align: center !important;
+        margin-bottom: 8px !important;
+    }
+
+    .admission-page-wrapper .helpline-desc {
+        font-size: 12.5px !important;
+        line-height: 1.55 !important;
+        text-align: center !important;
+        margin: 0 auto 18px !important;
+        max-width: 560px !important;
+    }
+
+    .admission-page-wrapper .helpline-meta-list {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        width: 100% !important;
+        max-width: 360px !important;
+        margin: 0 auto 16px !important;
+        gap: 10px !important;
+        padding: 0 !important;
+        box-sizing: border-box !important;
+    }
+
+    .admission-page-wrapper .meta-item {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        width: 100% !important;
+        gap: 10px !important;
+        font-size: 12.5px !important;
+        line-height: 1.45 !important;
+    }
+
+    .admission-page-wrapper .meta-item i {
+        width: 18px !important;
+        min-width: 18px !important;
+        flex-shrink: 0 !important;
+        margin-top: 3px !important;
+        color: #F37021 !important;
+        font-size: 13.5px !important;
+        text-align: center !important;
+    }
+
+    .admission-page-wrapper .meta-item span {
+        flex: 1 1 auto !important;
+        text-align: left !important;
+    }
+
+    .admission-page-wrapper .helpline-right {
+        width: 100% !important;
+        max-width: 340px !important;
+        margin: 0 auto !important;
+    }
+
+    .admission-page-wrapper .helpline-buttons-stack {
+        display: flex !important;
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 10px !important;
+    }
+
+    .admission-page-wrapper .btn-helpline-call,
+    .admission-page-wrapper .btn-helpline-wa,
+    .admission-page-wrapper .btn-helpline-dir,
+    .admission-page-wrapper .btn-helpline-pdf {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        min-height: 44px !important;
+        height: auto !important;
+        padding: 10px 16px !important;
+        border-radius: 999px !important;
+        font-size: 13px !important;
+        font-weight: 700 !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+        text-decoration: none !important;
+        gap: 8px !important;
+    }
+}
+
+/* Extra optimization for narrow phones (<= 480px) */
+@media (max-width: 480px) {
+    .admission-page-wrapper .quick-actions-grid {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+    }
+
+    .admission-page-wrapper .qa-card {
+        padding: 18px 14px !important;
+    }
+
+    .admission-page-wrapper .hero-action-buttons {
+        max-width: 100% !important;
+        padding: 0 4px !important;
+    }
+
+    .admission-page-wrapper .hero-action-buttons .admission-btn-primary,
+    .admission-page-wrapper .hero-action-buttons .admission-btn-visit {
+        font-size: 13px !important;
+    }
+
+    .admission-page-wrapper .guidelines-cutoff-banner {
+        padding: 18px 14px !important;
+    }
+
+    .admission-page-wrapper .phased-cards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 8px !important;
+    }
+
+    .admission-page-wrapper .phased-step-card {
+        padding: 12px 8px !important;
+    }
+
+    .admission-page-wrapper .phase-grade {
+        font-size: 13.5px !important;
+    }
+
+    .admission-page-wrapper .phase-year {
+        font-size: 11.5px !important;
+    }
+
+    .admission-page-wrapper .procedure-card {
+        padding: 18px 14px !important;
+    }
+
+    .admission-page-wrapper .helpline-card {
+        padding: 22px 14px !important;
+    }
+}
 </style>
 @endsection
 
@@ -1540,7 +2856,7 @@
                     </p>
 
                     <!-- Quick Navigation CTA Group -->
-                    <div class="d-flex align-items-center justify-content-start gap-12 flex-wrap mt-20 hero-action-buttons">
+                    <div class="d-flex align-items-center justify-content-lg-start justify-content-center gap-12 flex-wrap mt-20 hero-action-buttons">
                         <a href="{{ route('admission-guidelines.download') }}" class="admission-btn-primary" title="Download Official Admission Guidelines PDF">
                             <i class="fa-solid fa-file-pdf"></i>
                             <span>Download Guidelines PDF</span>
@@ -1823,6 +3139,9 @@
                         <i class="fa-solid fa-file-arrow-down me-1"></i>
                         <span>Download Matrix</span>
                     </a>
+                </div>
+                <div class="d-md-none text-center mb-2 px-2" style="font-size: 11.5px; color: #64748b; font-weight: 600;">
+                    <i class="fa-solid fa-arrows-left-right me-1 text-orange"></i> Swipe horizontally to view full age &amp; regulatory matrix
                 </div>
                 <div class="table-responsive">
                     <table class="table guidelines-custom-table">
