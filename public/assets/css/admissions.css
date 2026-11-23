@@ -5054,8 +5054,9 @@ textarea.form-control:focus {
 }
 
 /* ==========================================================================
-   Admission Info Page - Complete Center Aligned Typography Layout
+   Admission Info Page - Complete Center Aligned Typography Layout (<= 991px)
    ========================================================================== */
+@media (max-width: 991px) {
 
 /* 1. Hero Section */
 .admission-page-wrapper .admission-hero-canvas {
@@ -5788,6 +5789,7 @@ textarea.form-control:focus {
         height: 26px !important;
         font-size: 0.72rem !important;
     }
+}
 }
 
 /* ==========================================================================
@@ -7153,38 +7155,46 @@ textarea.form-control:focus {
     .admission-page-wrapper .admission-hero-canvas {
         min-height: 480px !important;
         display: flex !important;
-        align-items: center !important;
+        align-items: stretch !important;
         justify-content: flex-start !important;
         text-align: left !important;
         border-radius: 24px !important;
-        background: linear-gradient(135deg, #EEF6FC 0%, #FFFFFF 55%, #F0F7FD 100%) !important;
+        background: linear-gradient(135deg, #EEF6FC 0%, #F5F9FE 55%, #FFFFFF 100%) !important;
         border: 1.5px solid #dbeafe !important;
         box-shadow: 0 10px 30px rgba(8, 59, 122, 0.06) !important;
         position: relative !important;
         overflow: hidden !important;
+        width: 100% !important;
+        margin: 0 auto 30px !important;
     }
 
     .admission-page-wrapper .admission-hero-bg-visual {
         position: absolute !important;
-        right: 0 !important;
         top: 0 !important;
+        right: 0 !important;
         bottom: 0 !important;
-        width: 52% !important;
+        left: auto !important;
+        width: 50% !important;
         height: 100% !important;
-        z-index: 1 !important;
-        display: block !important;
-        opacity: 1 !important;
-        overflow: hidden !important;
+        z-index: 2 !important;
+        display: flex !important;
+        align-items: flex-end !important;
+        justify-content: flex-end !important;
+        overflow: visible !important;
         pointer-events: none !important;
+        opacity: 1 !important;
     }
 
     .admission-page-wrapper .admission-hero-bg-img {
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover !important;
-        object-position: center 25% !important;
-        mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 25%, black 100%) !important;
-        -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,0.5) 25%, black 100%) !important;
+        height: 94% !important;
+        width: auto !important;
+        max-width: 100% !important;
+        object-fit: contain !important;
+        object-position: right bottom !important;
+        display: block !important;
+        filter: drop-shadow(0 14px 28px rgba(8, 59, 122, 0.16)) !important;
+        mask-image: none !important;
+        -webkit-mask-image: none !important;
     }
 
     .admission-page-wrapper .admission-hero-wave-overlay {
@@ -7193,7 +7203,7 @@ textarea.form-control:focus {
         inset: 0 !important;
         width: 100% !important;
         height: 100% !important;
-        z-index: 2 !important;
+        z-index: 1 !important;
         pointer-events: none !important;
         opacity: 0.95 !important;
     }
@@ -7201,14 +7211,17 @@ textarea.form-control:focus {
     .admission-page-wrapper .admission-hero-wave-overlay svg {
         width: 100% !important;
         height: 100% !important;
+        display: block !important;
     }
 
     .admission-page-wrapper .admission-hero-script-tag {
-        display: block !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
         position: absolute !important;
-        top: 26px !important;
+        top: 24px !important;
         right: 40px !important;
-        z-index: 10 !important;
+        z-index: 5 !important;
         background: rgba(255, 255, 255, 0.94) !important;
         backdrop-filter: blur(10px) !important;
         border: 1px solid rgba(8, 59, 122, 0.15) !important;
@@ -7217,14 +7230,24 @@ textarea.form-control:focus {
         box-shadow: 0 8px 24px rgba(8, 59, 122, 0.12) !important;
         text-align: center !important;
         transform: rotate(3deg) !important;
+        pointer-events: none !important;
+    }
+
+    .admission-page-wrapper .admission-hero-script-tag .script-title {
+        font-family: var(--adv-font-script, 'Caveat', cursive) !important;
+        font-size: 1.65rem !important;
+        font-weight: 700 !important;
+        color: #083B7A !important;
+        line-height: 1 !important;
+        white-space: nowrap !important;
     }
 
     .admission-page-wrapper .admission-hero-left-panel {
         position: relative !important;
-        z-index: 5 !important;
-        width: 62% !important;
-        max-width: 720px !important;
-        padding: 56px 48px !important;
+        z-index: 4 !important;
+        width: 52% !important;
+        max-width: 660px !important;
+        padding: 48px 44px !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: flex-start !important;
@@ -7235,9 +7258,13 @@ textarea.form-control:focus {
 
     .admission-page-wrapper .admission-hero-content-inner {
         width: 100% !important;
-        max-width: none !important;
+        max-width: 100% !important;
         display: flex !important;
         flex-direction: column !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        margin: 0 !important;
+    }
         align-items: flex-start !important;
         text-align: left !important;
         margin: 0 !important;
