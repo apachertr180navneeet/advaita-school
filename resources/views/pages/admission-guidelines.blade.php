@@ -570,10 +570,23 @@
         justify-content: flex-start !important;
         text-align: left !important;
         display: flex !important;
-        align-items: center !important;
+        align-items: flex-start !important;
+        gap: 12px !important;
         font-size: 14.5px !important;
         font-weight: 700 !important;
         color: #0f172a !important;
+        line-height: 1.45 !important;
+    }
+    .admission-page-wrapper .age-eligibility-highlight i {
+        flex-shrink: 0 !important;
+        margin-top: 3px !important;
+        font-size: 15px !important;
+        color: #16a34a !important;
+    }
+    .admission-page-wrapper .age-eligibility-highlight strong {
+        flex: 1 1 auto !important;
+        text-align: left !important;
+        font-weight: 700 !important;
     }
     .admission-page-wrapper .regulation-cell {
         align-items: flex-start !important;
@@ -1195,6 +1208,7 @@
         align-items: center !important;
         justify-content: flex-start !important;
         text-align: left !important;
+        gap: 8px !important;
     }
     .admission-page-wrapper .cbse-ok-tag {
         font-size: 12.5px !important;
@@ -1204,6 +1218,16 @@
         align-items: center !important;
         justify-content: flex-start !important;
         text-align: left !important;
+        gap: 8px !important;
+    }
+    .admission-page-wrapper .me-1 {
+        margin-right: 6px !important;
+    }
+    .admission-page-wrapper .me-2 {
+        margin-right: 10px !important;
+    }
+    .admission-page-wrapper .me-3 {
+        margin-right: 14px !important;
     }
 
     /* 10. Section E: Important Instructions */
