@@ -11,22 +11,50 @@
     <section class="admission-hero-section">
         <div class="admission-hero-canvas">
             <!-- Hero Students Visual -->
+            @php
+                $heroImgRaw = $content['hero_image'] ?? 'assets/images/about-cta-students-clean.png';
+                $heroImgUrl = (str_starts_with($heroImgRaw, 'http://') || str_starts_with($heroImgRaw, 'https://')) ? $heroImgRaw : asset(ltrim($heroImgRaw, '/'));
+            @endphp
             <div class="admission-hero-bg-visual" aria-hidden="true">
-                <img src="{{ asset('assets/images/about-cta-students-clean.png') }}" alt="Advaita Students" class="admission-hero-bg-img" width="1024" height="682">
+                <img src="{{ $heroImgUrl }}" alt="Advaita Students" class="admission-hero-bg-img" width="1024" height="682">
             </div>
 
-            <!-- SVG Wave Overlay for Smooth Translucent Backdrop -->
+            <!-- Full Width Wave Mask Overlay with ambient blue contour -->
             <div class="admission-hero-wave-overlay" aria-hidden="true">
-                <svg viewBox="0 0 1200 440" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0H540C570 120 520 280 620 440H0V0Z" fill="#EEF6FC" fill-opacity="0.96"/>
-                    <path d="M520 0C550 140 500 280 600 440H580C480 280 530 140 500 0H520Z" fill="#F37021" fill-opacity="0.25"/>
+                <svg viewBox="0 0 1440 480" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="regWaveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#0284C7"/>
+                            <stop offset="50%" stop-color="#38BDF8"/>
+                            <stop offset="100%" stop-color="#60A5FA"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Ambient soft blue aura at far left -->
+                    <path d="M0,60 C90,60 140,160 140,260 C140,360 85,430 0,450 Z" fill="#E8F4FE" opacity="0.85"/>
+                    <!-- Outer vibrant sky-blue contour wave -->
+                    <path d="M0,0 L615,0 C680,110 720,230 685,330 C655,410 590,455 535,480 L0,480 Z" fill="url(#regWaveGrad)" opacity="0.95"/>
+                    <!-- Mid soft blue contour wave -->
+                    <path d="M0,0 L600,0 C665,110 705,230 670,330 C640,410 575,455 520,480 L0,480 Z" fill="#BAE6FD"/>
+                    <!-- Main solid white wave panel covering left side completely -->
+                    <path d="M0,0 L585,0 C650,110 690,230 655,330 C625,410 560,455 505,480 L0,480 Z" fill="#FFFFFF"/>
                 </svg>
             </div>
 
-
             <!-- Floating Handwritten Script Tag at Top Right -->
             <div class="admission-hero-script-tag" aria-hidden="true">
-                <span class="script-title">More<br>Than A School</span>
+                @php
+                    $rawScript = trim($content['hero_script_tag'] ?? "More\nThan A School");
+                    $scriptClean = preg_replace('/(?<!^)([A-Z][a-z])/', ' $1', $rawScript);
+                    if (str_contains($scriptClean, "\n")) {
+                        $scriptFormatted = nl2br(e($scriptClean));
+                    } elseif (str_contains($scriptClean, ' ')) {
+                        $parts = explode(' ', $scriptClean, 2);
+                        $scriptFormatted = e($parts[0]) . '<br>' . e($parts[1]);
+                    } else {
+                        $scriptFormatted = e($scriptClean);
+                    }
+                @endphp
+                <span class="script-title">{!! $scriptFormatted !!}</span>
                 <svg class="script-underline" viewBox="0 0 120 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4 12C38 3 84 4 116 14" stroke="#083B7A" stroke-width="3" stroke-linecap="round"/>
                 </svg>
@@ -45,16 +73,16 @@
                     </nav>
 
                     <!-- Eyebrow -->
-                    <div class="admission-eyebrow">ADMISSIONS 2027–28</div>
+                    <div class="admission-eyebrow">{{ $content['hero_badge'] ?? 'ADMISSIONS 2027–28' }}</div>
 
                     <!-- Main Headline -->
                     <h1 class="admission-hero-title">
-                        Online <span class="highlight-serif">Registration</span>
+                        {{ $content['hero_title'] ?? 'Online' }} <span class="highlight-serif">{{ $content['hero_highlight'] ?? 'Registration' }}</span>
                     </h1>
 
                     <!-- Description -->
                     <p class="admission-hero-desc">
-                        Complete the form in a few simple steps — our admissions counselor will reach out to you within a working day.
+                        {{ $content['hero_desc'] ?? 'Complete the form in a few simple steps — our admissions counselor will reach out to you within a working day.' }}
                     </p>
                 </div>
             </div>

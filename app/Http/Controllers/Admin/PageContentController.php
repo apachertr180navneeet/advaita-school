@@ -401,6 +401,22 @@ class PageContentController extends Controller
                 'guidelines_cbse_note' => ['label' => 'Grade X CBSE Transfer Note', 'type' => 'textarea', 'default' => 'Direct admission to Grade X is strictly NOT permitted except under specific exemptions prescribed by CBSE (e.g., interstate transfer of parent in government/defence service or certified relocation).'],
             ],
         ],
+        'online_registration' => [
+            'name' => 'Online Registration Form',
+            'url' => '/online-registration',
+            'seo_key' => 'online_registration',
+            'icon' => 'fa-solid fa-file-signature',
+            'category' => 'Admissions & Information',
+            'fields' => [
+                // Hero Section
+                'reg_hero_badge' => ['label' => 'Hero Eyebrow Badge', 'type' => 'text', 'default' => 'ADMISSIONS 2027–28'],
+                'reg_hero_title' => ['label' => 'Hero Main Title Prefix', 'type' => 'text', 'default' => 'Online'],
+                'reg_hero_highlight' => ['label' => 'Hero Title Highlight (Serif/Orange)', 'type' => 'text', 'default' => 'Registration'],
+                'reg_hero_desc' => ['label' => 'Hero Description Paragraph', 'type' => 'textarea', 'default' => 'Complete the form in a few simple steps — our admissions counselor will reach out to you within a working day.'],
+                'reg_hero_script_tag' => ['label' => 'Floating Script Badge Text', 'type' => 'text', 'default' => "More\nThan A School"],
+                'reg_hero_image' => ['label' => 'Hero Students Visual Photo', 'type' => 'image', 'default' => 'assets/images/about-cta-students-clean.png'],
+            ],
+        ],
         'facilities' => [
             'name' => 'Campus Facilities',
             'url' => '/facilities',

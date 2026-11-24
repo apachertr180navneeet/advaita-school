@@ -20,7 +20,16 @@ class RegistrationController extends Controller
         $contactEmail = Setting::get('contact_email', 'admissions.advaita@gmail.com');
         $schoolHours = Setting::get('site_school_hours', 'Mon – Sat | 8:00 AM – 3:00 PM');
 
-        return view('pages.online-registration', compact('seo', 'contactPhone', 'contactEmail', 'schoolHours'));
+        $content = [
+            'hero_badge' => Setting::get('reg_hero_badge', 'ADMISSIONS 2027–28'),
+            'hero_title' => Setting::get('reg_hero_title', 'Online'),
+            'hero_highlight' => Setting::get('reg_hero_highlight', 'Registration'),
+            'hero_desc' => Setting::get('reg_hero_desc', 'Complete the form in a few simple steps — our admissions counselor will reach out to you within a working day.'),
+            'hero_script_tag' => Setting::get('reg_hero_script_tag', "More\nThan A School"),
+            'hero_image' => Setting::get('reg_hero_image', 'assets/images/about-cta-students-clean.png'),
+        ];
+
+        return view('pages.online-registration', compact('seo', 'content', 'contactPhone', 'contactEmail', 'schoolHours'));
     }
 
     public function store(Request $request)
