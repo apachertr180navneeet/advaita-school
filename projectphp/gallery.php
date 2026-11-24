@@ -20,57 +20,70 @@ require_once __DIR__.'/includes/header.php';
          1. HERO SECTION: "MOMENTS THAT MATTER" & SCULPTED CAMPUS VISUAL
          ========================================================================= -->
     <section class="adv-gal-hero-section">
-
-
-        <!-- Full-Bleed Right Visual: Sculpted Campus Panorama with Royal Blue Ribbon -->
-        <div class="adv-gal-hero-curved-visual">
-            <svg class="adv-gal-hero-curved-svg" viewBox="0 0 1000 480" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <defs>
-                    <clipPath id="advHeroCurveClip">
-                        <path d="M 0 -10 C 25 130, 80 270, 220 365 C 360 450, 600 475, 1000 480 L 1000 -10 Z" />
-                    </clipPath>
-                </defs>
-
-                <!-- Campus Photo clipped to the organic curve (Dynamic) -->
+        <div class="adv-gal-hero-canvas">
+            <!-- Background Image & Sky on the Right -->
+            <div class="adv-gal-hero-bg-visual" aria-hidden="true">
                 <?php
                 $galleryHeroImg = $galleryHeroImg ?? 'assets/images/about-hero-building.jpg';
-?>
-                <image href="<?php echo htmlspecialchars($galleryHeroImg); ?>" xlink:href="<?php echo htmlspecialchars($galleryHeroImg); ?>" x="0" y="0" width="1000" height="480" preserveAspectRatio="xMidYMid slice" clip-path="url(#advHeroCurveClip)"/>
+                ?>
+                <img src="<?php echo htmlspecialchars($galleryHeroImg); ?>" alt="Advaita School of Excellence Campus" class="adv-gal-hero-bg-img" loading="eager">
 
-                <!-- Royal Blue Organic Ribbon Stroke along the curved boundary -->
-                <path d="M 0 -10 C 25 130, 80 270, 220 365 C 360 450, 600 475, 1000 480" stroke="#0084FF" stroke-width="26" fill="none" stroke-linecap="round"/>
-            </svg>
+                <!-- Floating Script Badge in Sky -->
+                <div class="adv-gal-hero-script-tag" aria-label="More Than A School">
+                    <span class="script-title">More<br>Than A School</span>
+                    <svg class="script-underline" viewBox="0 0 140 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M4 10C36 4 98 4 136 12" stroke="#F37021" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M18 14C48 9 92 8 126 15" stroke="#F37021" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
+                    </svg>
+                </div>
+            </div>
 
-            <!-- "More Than A School" Script Badge in Top-Right Sky Area -->
-            <div class="adv-gal-hero-badge" aria-label="More Than A School">
-                <span class="badge-text">More<br>Than A School</span>
-                <svg class="badge-underline" viewBox="0 0 76 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2 9.5C24 3.5 54 2 74 6" stroke="#F37021" stroke-width="2.8" stroke-linecap="round"/>
+            <!-- Full Width Wave Mask Overlay with ambient blue contour -->
+            <div class="adv-gal-hero-wave-overlay" aria-hidden="true">
+                <svg viewBox="0 0 1440 480" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="galWaveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#0284C7"/>
+                            <stop offset="50%" stop-color="#38BDF8"/>
+                            <stop offset="100%" stop-color="#60A5FA"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Ambient soft blue aura at far left -->
+                    <path d="M0,60 C90,60 140,160 140,260 C140,360 85,430 0,450 Z" fill="#E8F4FE" opacity="0.85"/>
+                    <!-- Outer vibrant sky-blue contour wave -->
+                    <path d="M0,0 L615,0 C680,110 720,230 685,330 C655,410 590,455 535,480 L0,480 Z" fill="url(#galWaveGrad)" opacity="0.95"/>
+                    <!-- Mid soft blue contour wave -->
+                    <path d="M0,0 L600,0 C665,110 705,230 670,330 C640,410 575,455 520,480 L0,480 Z" fill="#BAE6FD"/>
+                    <!-- Main solid white wave panel covering left side completely -->
+                    <path d="M0,0 L585,0 C650,110 690,230 655,330 C625,410 560,455 505,480 L0,480 Z" fill="#FFFFFF"/>
                 </svg>
             </div>
-        </div>
 
-        <div class="adv-gal-container">
-            <!-- Breadcrumbs -->
-            <nav class="adv-gal-breadcrumb" aria-label="Breadcrumb">
-                <a href="index.php">Home</a>
-                <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
-                <span class="current">Gallery</span>
-            </nav>
+            <!-- Left Dot Matrix Ambient Decor -->
+            <div class="adv-gal-hero-dots-decor" aria-hidden="true"></div>
 
-            <div class="adv-gal-hero-grid">
-                <!-- Left Content -->
-                <div class="adv-gal-hero-content">
-                    <div class="adv-gal-kicker">
-                        <span class="kicker-line">—</span> MOMENTS THAT MATTER
-                    </div>
+            <!-- Left Content Panel -->
+            <div class="adv-gal-hero-left-panel">
+                <div class="adv-gal-hero-content-inner">
+                    <!-- Breadcrumbs -->
+                    <nav class="adv-gal-breadcrumb" aria-label="Breadcrumb">
+                        <a href="index.php">Home</a>
+                        <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
+                        <span class="current">Gallery</span>
+                    </nav>
 
+                    <!-- Eyebrow -->
+                    <span class="adv-gal-eyebrow">MOMENTS THAT MATTER</span>
+
+                    <!-- Main Headline -->
                     <h1 class="adv-gal-hero-title">Gallery</h1>
 
+                    <!-- Subtitle -->
                     <h2 class="adv-gal-hero-subtitle">
                         A glimpse into our <span class="adv-gal-accent-text">vibrant journey.</span>
                     </h2>
 
+                    <!-- Description -->
                     <p class="adv-gal-hero-desc">
                         Explore moments of learning, celebration, creativity, and community life at Advaita School of Excellence.
                     </p>
