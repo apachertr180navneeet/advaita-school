@@ -103,24 +103,19 @@ html, body {
         right: 0 !important;
         bottom: 0 !important;
         left: auto !important;
-        width: 50% !important;
+        width: 58% !important;
         height: 100% !important;
-        z-index: 2 !important;
-        display: flex !important;
-        align-items: flex-end !important;
-        justify-content: flex-end !important;
-        overflow: visible !important;
-        pointer-events: none !important;
-        opacity: 1 !important;
+        z-index: 1 !important;
+        overflow: hidden !important;
+        display: block !important;
     }
     .admission-page-wrapper .admission-hero-bg-img {
-        height: 94% !important;
-        width: auto !important;
-        max-width: 100% !important;
-        object-fit: contain !important;
-        object-position: right bottom !important;
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: center 30% !important;
         display: block !important;
-        filter: drop-shadow(0 14px 28px rgba(8, 59, 122, 0.16)) !important;
+        filter: none !important;
         mask-image: none !important;
         -webkit-mask-image: none !important;
     }
@@ -130,9 +125,8 @@ html, body {
         inset: 0 !important;
         width: 100% !important;
         height: 100% !important;
-        z-index: 1 !important;
+        z-index: 2 !important;
         pointer-events: none !important;
-        opacity: 0.95 !important;
     }
     .admission-page-wrapper .admission-hero-wave-overlay svg {
         width: 100% !important;
@@ -144,33 +138,40 @@ html, body {
         flex-direction: column !important;
         align-items: center !important;
         position: absolute !important;
-        top: 24px !important;
-        right: 40px !important;
+        top: 20px !important;
+        right: clamp(20px, 3.5vw, 45px) !important;
         z-index: 5 !important;
         background: rgba(255, 255, 255, 0.94) !important;
         backdrop-filter: blur(10px) !important;
         border: 1px solid rgba(8, 59, 122, 0.15) !important;
         border-radius: 16px !important;
-        padding: 10px 18px !important;
+        padding: 8px 18px 10px !important;
         box-shadow: 0 8px 24px rgba(8, 59, 122, 0.12) !important;
         text-align: center !important;
-        transform: rotate(3deg) !important;
+        transform: rotate(2deg) !important;
         pointer-events: none !important;
     }
     .admission-page-wrapper .admission-hero-script-tag .script-title {
         font-family: var(--adv-font-script, 'Caveat', cursive) !important;
-        font-size: 1.65rem !important;
+        font-size: clamp(1.45rem, 2vw, 1.85rem) !important;
         font-weight: 700 !important;
         color: #083B7A !important;
-        line-height: 1 !important;
+        line-height: 1.05 !important;
+        letter-spacing: 0.3px !important;
+        text-align: center !important;
         white-space: nowrap !important;
+    }
+    .admission-page-wrapper .admission-hero-script-tag .script-underline {
+        width: clamp(75px, 8vw, 100px) !important;
+        height: 12px !important;
+        margin-top: 3px !important;
     }
     .admission-page-wrapper .admission-hero-left-panel {
         position: relative !important;
         z-index: 4 !important;
-        width: 52% !important;
-        max-width: 660px !important;
-        padding: 48px 44px !important;
+        width: 48% !important;
+        max-width: 550px !important;
+        padding: clamp(36px, 4.5vw, 52px) clamp(28px, 4vw, 48px) !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: flex-start !important;
@@ -3057,19 +3058,44 @@ html, body {
                 <img src="{{ $heroImgUrl }}" alt="Advaita Students" class="admission-hero-bg-img" width="1024" height="682">
             </div>
 
-            <!-- SVG Wave Overlay for Smooth Translucent Backdrop -->
+            <!-- Full Width Wave Mask Overlay with ambient blue contour -->
             <div class="admission-hero-wave-overlay" aria-hidden="true">
-                <svg viewBox="0 0 1200 440" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0H540C570 120 520 280 620 440H0V0Z" fill="#EEF6FC" fill-opacity="0.96"/>
-                    <path d="M520 0C550 140 500 280 600 440H580C480 280 530 140 500 0H520Z" fill="#F37021" fill-opacity="0.25"/>
+                <svg viewBox="0 0 1440 480" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="admWaveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#0284C7"/>
+                            <stop offset="50%" stop-color="#38BDF8"/>
+                            <stop offset="100%" stop-color="#60A5FA"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Ambient soft blue aura at far left -->
+                    <path d="M0,60 C90,60 140,160 140,260 C140,360 85,430 0,450 Z" fill="#E8F4FE" opacity="0.85"/>
+                    <!-- Outer vibrant sky-blue contour wave -->
+                    <path d="M0,0 L615,0 C680,110 720,230 685,330 C655,410 590,455 535,480 L0,480 Z" fill="url(#admWaveGrad)" opacity="0.95"/>
+                    <!-- Mid soft blue contour wave -->
+                    <path d="M0,0 L600,0 C665,110 705,230 670,330 C640,410 575,455 520,480 L0,480 Z" fill="#BAE6FD"/>
+                    <!-- Main solid white wave panel covering left side completely -->
+                    <path d="M0,0 L585,0 C650,110 690,230 655,330 C625,410 560,455 505,480 L0,480 Z" fill="#FFFFFF"/>
                 </svg>
             </div>
 
             <!-- Floating Handwritten Script Tag at Top Right -->
             <div class="admission-hero-script-tag" aria-hidden="true">
-                <span class="script-title">{!! nl2br(e($content['hero_script_tag'] ?? "Official\nGuidelines")) !!}</span>
+                @php
+                    $rawScript = trim($content['hero_script_tag'] ?? 'Official Guidelines');
+                    $scriptClean = preg_replace('/(?<!^)([A-Z][a-z])/', ' $1', $rawScript);
+                    if (str_contains($scriptClean, "\n")) {
+                        $scriptFormatted = nl2br(e($scriptClean));
+                    } elseif (str_contains($scriptClean, ' ')) {
+                        $parts = explode(' ', $scriptClean, 2);
+                        $scriptFormatted = e($parts[0]) . '<br>' . e($parts[1]);
+                    } else {
+                        $scriptFormatted = e($scriptClean);
+                    }
+                @endphp
+                <span class="script-title">{!! $scriptFormatted !!}</span>
                 <svg class="script-underline" viewBox="0 0 120 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 12C38 3 84 4 116 14" stroke="#083B7A" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M4 12C38 3 84 4 116 14" stroke="#F37021" stroke-width="3" stroke-linecap="round"/>
                 </svg>
             </div>
 
