@@ -1285,6 +1285,11 @@ class PageController extends Controller
         );
 
         $content = [
+            'hero_badge' => Setting::get('blog_hero_badge', 'ADVAITA CHRONICLES & BLOG'),
+            'hero_title' => Setting::get('blog_hero_title', 'Our'),
+            'hero_highlight' => Setting::get('blog_hero_highlight', 'Story'),
+            'hero_desc' => Setting::get('blog_hero_desc', 'Discover the latest news, achievements, events, and inspiring stories from Advaita School of Excellence.'),
+            'hero_script_tag' => Setting::get('blog_hero_script_tag', "More\nThan A School"),
             'hero_image' => Setting::get('blog_hero_image', 'assets/images/about-hero-building.jpg'),
         ];
 

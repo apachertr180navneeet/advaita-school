@@ -10,66 +10,96 @@
 <main id="main" class="main-content-wrapper adv-blog-page-wrapper">
 
     <!-- =========================================================================
-         1. HERO SECTION: "OUR STORIES" & SCULPTED CAMPUS VISUAL
+         1. HERO SECTION: "OUR STORY" & SCULPTED CAMPUS VISUAL
          ========================================================================= -->
     <section class="adv-blog-hero-section">
-        <!-- Decorative subtle pattern dots on the far left -->
-        <div class="adv-blog-hero-dots-decor" aria-hidden="true"></div>
-
-        <!-- Full-Bleed Right Visual: Sculpted Campus Panorama with Royal Blue Ribbon -->
-        <div class="adv-blog-hero-curved-visual">
-            <svg class="adv-blog-hero-curved-svg" viewBox="0 0 1000 480" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <defs>
-                    <clipPath id="advBlogHeroCurveClip">
-                        <path d="M 0 -10 C 25 130, 80 270, 220 365 C 360 450, 600 475, 1000 480 L 1000 -10 Z" />
-                    </clipPath>
-                </defs>
-
-                <!-- Campus Photo clipped to the organic curve (Dynamic) -->
+        <div class="adv-blog-hero-canvas">
+            <!-- Background Image & Sky on the Right -->
+            <div class="adv-blog-hero-bg-visual" aria-hidden="true">
                 @php
                     $blogHeroImgRaw = $content['hero_image'] ?? \App\Models\Setting::get('blog_hero_image', 'assets/images/about-hero-building.jpg');
-                    $blogHeroImgUrl = str_starts_with($blogHeroImgRaw, 'http') ? $blogHeroImgRaw : asset($blogHeroImgRaw);
+                    $blogHeroImgUrl = (str_starts_with($blogHeroImgRaw, 'http://') || str_starts_with($blogHeroImgRaw, 'https://')) ? $blogHeroImgRaw : asset(ltrim($blogHeroImgRaw, '/'));
                 @endphp
-                <image href="{{ $blogHeroImgUrl }}" xlink:href="{{ $blogHeroImgUrl }}" x="0" y="0" width="1000" height="480" preserveAspectRatio="xMidYMid slice" clip-path="url(#advBlogHeroCurveClip)"/>
+                <img src="{{ $blogHeroImgUrl }}" alt="Advaita School of Excellence Campus" class="adv-blog-hero-bg-img" loading="eager">
 
-                <!-- Royal Blue Organic Ribbon Stroke along the curved boundary -->
-                <path d="M 0 -10 C 25 130, 80 270, 220 365 C 360 450, 600 475, 1000 480" stroke="#0084FF" stroke-width="26" fill="none" stroke-linecap="round"/>
-            </svg>
+                <!-- Floating Script Badge in Sky -->
+                <div class="adv-blog-hero-script-tag" aria-label="More Than A School">
+                    @php
+                        $rawScript = trim($content['hero_script_tag'] ?? "More\nThan A School");
+                        if (str_contains($rawScript, "\n")) {
+                            $scriptFormatted = nl2br(e($rawScript));
+                        } elseif (str_contains($rawScript, ' ')) {
+                            $parts = explode(' ', $rawScript, 2);
+                            $scriptFormatted = e($parts[0]) . '<br>' . e($parts[1]);
+                        } else {
+                            $scriptClean = preg_replace('/(?<!^)([A-Z][a-z])/', ' $1', $rawScript);
+                            if (str_contains($scriptClean, ' ')) {
+                                $parts = explode(' ', $scriptClean, 2);
+                                $scriptFormatted = e($parts[0]) . '<br>' . e($parts[1]);
+                            } else {
+                                $scriptFormatted = e($scriptClean);
+                            }
+                        }
+                    @endphp
+                    <span class="script-title">{!! $scriptFormatted !!}</span>
+                    <svg class="script-underline" viewBox="0 0 140 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M4 10C36 4 98 4 136 12" stroke="#F37021" stroke-width="3.5" stroke-linecap="round"/>
+                        <path d="M18 14C48 9 92 8 126 15" stroke="#F37021" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
+                    </svg>
+                </div>
+            </div>
 
-            <!-- "More Than A School" Script Badge in Top-Right Sky Area -->
-            <div class="adv-blog-hero-badge" aria-label="More Than A School">
-                <span class="badge-text">More<br>Than A School</span>
-                <svg class="badge-underline" viewBox="0 0 76 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2 9.5C24 3.5 54 2 74 6" stroke="#F37021" stroke-width="2.8" stroke-linecap="round"/>
+            <!-- Full Width Wave Mask Overlay with ambient blue contour -->
+            <div class="adv-blog-hero-wave-overlay" aria-hidden="true">
+                <svg viewBox="0 0 1440 480" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="blogWaveGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#0284C7"/>
+                            <stop offset="50%" stop-color="#38BDF8"/>
+                            <stop offset="100%" stop-color="#60A5FA"/>
+                        </linearGradient>
+                    </defs>
+                    <!-- Ambient soft blue aura at far left -->
+                    <path d="M0,60 C90,60 140,160 140,260 C140,360 85,430 0,450 Z" fill="#E8F4FE" opacity="0.85"/>
+                    <!-- Outer vibrant sky-blue contour wave -->
+                    <path d="M0,0 L615,0 C680,110 720,230 685,330 C655,410 590,455 535,480 L0,480 Z" fill="url(#blogWaveGrad)" opacity="0.95"/>
+                    <!-- Mid soft blue contour wave -->
+                    <path d="M0,0 L600,0 C665,110 705,230 670,330 C640,410 575,455 520,480 L0,480 Z" fill="#BAE6FD"/>
+                    <!-- Main solid white wave panel covering left side completely -->
+                    <path d="M0,0 L585,0 C650,110 690,230 655,330 C625,410 560,455 505,480 L0,480 Z" fill="#FFFFFF"/>
                 </svg>
             </div>
-        </div>
 
-        <div class="adv-blog-container">
-            <!-- Breadcrumbs -->
-            <nav class="adv-blog-breadcrumb" aria-label="Breadcrumb">
-                <a href="{{ route('home') }}">Home</a>
-                <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
-                <span class="current">Blog</span>
-            </nav>
+            <!-- Left Dot Matrix Ambient Decor -->
+            <div class="adv-blog-hero-dots-decor" aria-hidden="true"></div>
 
-            <div class="adv-blog-hero-centered">
-                <!-- Eyebrow / Kicker -->
-                <div class="adv-blog-kicker">
-                    <span class="kicker-line">—</span>
-                    <span>ADVAITA CHRONICLES &amp; BLOG</span>
-                    <span class="kicker-line">—</span>
+            <!-- Left Content Panel -->
+            <div class="adv-blog-hero-left-panel">
+                <div class="adv-blog-hero-content-inner">
+                    <!-- Breadcrumbs -->
+                    <nav class="adv-blog-breadcrumb" aria-label="Breadcrumb">
+                        <a href="{{ route('home') }}">Home</a>
+                        <span class="sep"><i class="fa-solid fa-chevron-right"></i></span>
+                        <span class="current">Blog</span>
+                    </nav>
+
+                    <!-- Eyebrow / Kicker -->
+                    <div class="adv-blog-kicker">
+                        <span class="kicker-line">—</span>
+                        <span>{{ $content['hero_badge'] ?? 'ADVAITA CHRONICLES & BLOG' }}</span>
+                        <span class="kicker-line">—</span>
+                    </div>
+
+                    <!-- Main Highlighted Headline: Our Story -->
+                    <h1 class="adv-blog-hero-title">
+                        {{ $content['hero_title'] ?? 'Our' }} <span class="adv-blog-highlight highlight-serif">{{ $content['hero_highlight'] ?? 'Story' }}</span>
+                    </h1>
+
+                    <!-- Description -->
+                    <p class="adv-blog-hero-desc">
+                        {{ $content['hero_desc'] ?? 'Discover the latest news, achievements, events, and inspiring stories from Advaita School of Excellence.' }}
+                    </p>
                 </div>
-
-                <!-- Main Highlighted Headline: Our Story -->
-                <h1 class="adv-blog-hero-title">
-                    Our <span class="adv-blog-highlight highlight-serif">Story</span>
-                </h1>
-
-                <!-- Subtitle -->
-                <p class="adv-blog-hero-desc">
-                    Discover the latest news, achievements, events, and inspiring stories from Advaita School of Excellence.
-                </p>
             </div>
         </div>
     </section>

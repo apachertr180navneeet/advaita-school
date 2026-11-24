@@ -478,12 +478,18 @@ class PageContentController extends Controller
             ],
         ],
         'blog' => [
-            'name' => 'Blog & News Page',
+            'name' => 'Blog & Chronicles (Our Story)',
             'url' => '/blog',
             'seo_key' => 'blog',
             'icon' => 'fa-solid fa-newspaper',
             'category' => 'Campus & Media',
             'fields' => [
+                // Hero Section
+                'blog_hero_badge' => ['label' => 'Hero Eyebrow Badge', 'type' => 'text', 'default' => 'ADVAITA CHRONICLES & BLOG'],
+                'blog_hero_title' => ['label' => 'Hero Main Title Prefix', 'type' => 'text', 'default' => 'Our'],
+                'blog_hero_highlight' => ['label' => 'Hero Title Highlight (Serif/Orange)', 'type' => 'text', 'default' => 'Story'],
+                'blog_hero_desc' => ['label' => 'Hero Description Paragraph', 'type' => 'textarea', 'default' => 'Discover the latest news, achievements, events, and inspiring stories from Advaita School of Excellence.'],
+                'blog_hero_script_tag' => ['label' => 'Floating Script Badge Text', 'type' => 'text', 'default' => "More\nThan A School"],
                 'blog_hero_image' => ['label' => 'Blog Hero Curved Campus Photo', 'type' => 'image', 'default' => 'assets/images/about-hero-building.jpg'],
             ],
         ],
