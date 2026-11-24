@@ -6984,8 +6984,26 @@ textarea.form-control:focus {
     .admission-page-wrapper .quick-actions-grid {
         display: grid !important;
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-        gap: 14px !important;
+        gap: 16px !important;
         margin-top: 24px !important;
+    }
+
+    @media (max-width: 768px) {
+        .admission-page-wrapper .quick-actions-grid {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 16px !important;
+            margin-top: 20px !important;
+            width: 100% !important;
+        }
+
+        .admission-page-wrapper .quick-actions-grid .qa-card,
+        .admission-page-wrapper .qa-card {
+            width: 100% !important;
+            max-width: 100% !important;
+            min-width: 0 !important;
+            box-sizing: border-box !important;
+        }
     }
 
     .admission-page-wrapper .qa-card {
@@ -7109,50 +7127,137 @@ textarea.form-control:focus {
     }
 
     /* WhatsApp Banner (Full Width) */
+    .admission-page-wrapper .quick-actions-grid .qa-card.qa-card-banner,
     .admission-page-wrapper .qa-card.qa-card-banner {
         grid-column: 1 / -1 !important;
-        padding: 22px 18px !important;
+        grid-column: 1 / span 2 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        padding: 24px 20px !important;
         border-radius: 18px !important;
         background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%) !important;
         border: 1.5px solid #86efac !important;
+        overflow: hidden !important;
+        margin: 0 !important;
     }
 
     .admission-page-wrapper .qa-banner-content {
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
+        justify-content: center !important;
         text-align: center !important;
         width: 100% !important;
+        max-width: 100% !important;
         gap: 12px !important;
-        margin-bottom: 14px !important;
+        margin: 0 0 16px 0 !important;
+    }
+
+    .admission-page-wrapper .qa-banner-content .qa-icon-wrap.whatsapp {
+        width: 52px !important;
+        height: 52px !important;
+        min-width: 52px !important;
+        border-radius: 14px !important;
+        background: #22c55e !important;
+        color: #ffffff !important;
+        font-size: 26px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        margin: 0 auto !important;
+        flex-shrink: 0 !important;
     }
 
     .admission-page-wrapper .qa-banner-text {
         text-align: center !important;
         width: 100% !important;
+        max-width: 100% !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: center !important;
+        justify-content: center !important;
+        margin: 0 auto !important;
     }
 
     .admission-page-wrapper .qa-banner-text .d-flex {
         display: flex !important;
+        flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
-        gap: 8px !important;
-        flex-wrap: wrap !important;
+        gap: 6px !important;
+        width: 100% !important;
+        margin: 0 0 6px 0 !important;
+    }
+
+    .admission-page-wrapper .qa-banner-text .qa-card-title {
+        font-family: var(--adv-font-sans, "Outfit", sans-serif) !important;
+        font-size: 16.5px !important;
+        font-weight: 800 !important;
+        color: #166534 !important;
+        text-align: center !important;
+        width: 100% !important;
+        margin: 0 !important;
+        line-height: 1.35 !important;
+    }
+
+    .admission-page-wrapper .qa-banner-text .qa-badge {
+        font-size: 11px !important;
+        font-weight: 700 !important;
+        padding: 3px 10px !important;
+        border-radius: 999px !important;
+        margin: 0 auto !important;
+        display: inline-block !important;
+    }
+
+    .admission-page-wrapper .qa-banner-text .qa-card-desc {
+        font-size: 13px !important;
+        color: #475569 !important;
+        line-height: 1.55 !important;
+        text-align: center !important;
+        width: 100% !important;
+        max-width: 520px !important;
+        margin: 0 auto !important;
     }
 
     .admission-page-wrapper .qa-banner-action {
         width: 100% !important;
-        max-width: 340px !important;
+        max-width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
         margin: 0 auto !important;
+        padding: 0 4px !important;
+        box-sizing: border-box !important;
     }
 
     .admission-page-wrapper .btn-qa-action.whatsapp {
-        height: 42px !important;
+        width: 100% !important;
+        max-width: 360px !important;
+        min-width: 0 !important;
+        height: auto !important;
+        min-height: 46px !important;
+        padding: 11px 18px !important;
         border-radius: 999px !important;
+        background: #16a34a !important;
+        color: #ffffff !important;
         font-size: 13px !important;
+        font-weight: 700 !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        box-sizing: border-box !important;
+        box-shadow: 0 4px 15px rgba(22, 163, 74, 0.3) !important;
+        white-space: normal !important;
+        word-break: break-word !important;
+        margin: 0 auto !important;
     }
 
     /* 5. Section A: Cutoff Banner */
@@ -7992,12 +8097,19 @@ textarea.form-control:focus {
 /* Extra optimization for narrow phones (<= 480px) */
 @media (max-width: 480px) {
     .admission-page-wrapper .quick-actions-grid {
-        grid-template-columns: 1fr !important;
+        display: flex !important;
+        flex-direction: column !important;
         gap: 12px !important;
     }
 
     .admission-page-wrapper .qa-card {
         padding: 18px 14px !important;
+    }
+
+    .admission-page-wrapper .btn-qa-action.whatsapp {
+        max-width: 100% !important;
+        font-size: 12.5px !important;
+        padding: 10px 14px !important;
     }
 
     .admission-page-wrapper .hero-action-buttons {
