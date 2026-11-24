@@ -6,6 +6,80 @@
 
 @section('styles')
 <style>
+/* 0. Root Layout & Mobile Horizontal Overflow Protection */
+html, body {
+    overflow-x: hidden !important;
+    overflow-x: clip !important;
+    max-width: 100% !important;
+    width: 100% !important;
+}
+
+.admission-page-wrapper {
+    overflow-x: hidden !important;
+    overflow-x: clip !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.admission-page-wrapper .adv-container,
+.admission-page-wrapper .adv-container-narrow,
+.admission-page-wrapper .adv-container-medium {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.admission-subnav-bar {
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow: hidden !important;
+}
+
+.admission-page-wrapper .subnav-links-wrap {
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    box-sizing: border-box !important;
+}
+
+.admission-page-wrapper .guidelines-cutoff-banner {
+    overflow: hidden !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.admission-page-wrapper .guidelines-table-card {
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+}
+
+.admission-page-wrapper .table-responsive {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    display: block !important;
+    box-sizing: border-box !important;
+}
+
+.admission-page-wrapper .procedure-cta-banner {
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+}
+
+.admission-page-wrapper .helpline-card {
+    max-width: 100% !important;
+    width: 100% !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+}
+
 @media (min-width: 992px) {
     /* 1. Hero Canvas & Visual Elements */
     .admission-page-wrapper .admission-hero-canvas {
@@ -2042,21 +2116,21 @@
         align-items: center !important;
         justify-content: center !important;
         margin: 0 auto !important;
-        padding: 0 4px !important;
+        padding: 0 !important;
         box-sizing: border-box !important;
     }
 
     .admission-page-wrapper .btn-qa-action.whatsapp {
         width: 100% !important;
-        max-width: 360px !important;
+        max-width: 100% !important;
         min-width: 0 !important;
         height: auto !important;
         min-height: 46px !important;
-        padding: 11px 18px !important;
+        padding: 12px 16px !important;
         border-radius: 999px !important;
         background: #16a34a !important;
         color: #ffffff !important;
-        font-size: 13px !important;
+        font-size: 13.5px !important;
         font-weight: 700 !important;
         display: inline-flex !important;
         align-items: center !important;
