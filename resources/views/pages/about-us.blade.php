@@ -12,7 +12,11 @@
         <div class="about-hero-canvas">
             <!-- Background Image & Sky on the Right -->
             <div class="about-hero-bg-visual">
-                <img src="{{ asset($content['hero_image'] ?? 'assets/images/about-hero-building.jpg') }}" alt="Advaita School of Excellence Campus" class="about-hero-bg-img" loading="eager">
+                @php
+                    $heroImg = $content['hero_image'] ?? 'assets/images/about-hero-building.jpg';
+                    $heroImgUrl = (str_starts_with($heroImg, 'http://') || str_starts_with($heroImg, 'https://')) ? $heroImg : asset(ltrim($heroImg, '/'));
+                @endphp
+                <img src="{{ $heroImgUrl }}" alt="Advaita School of Excellence Campus" class="about-hero-bg-img" loading="eager">
                 <!-- Floating Script Badge in Sky -->
                 <div class="about-hero-script-tag">
                     <span class="script-title">More<br>Than A School</span>
@@ -142,7 +146,11 @@
                 <!-- Left: Student Visual with Floating Badge -->
                 <div class="about-story-visual-wrap">
                     <div class="about-story-frame">
-                        <img src="{{ asset($content['story_image'] ?? 'assets/images/about-philosophy-student.jpg') }}" alt="Student of Advaita School of Excellence" class="about-story-img" loading="lazy">
+                        @php
+                            $storyImg = $content['story_image'] ?? 'assets/images/about-philosophy-student.jpg';
+                            $storyImgUrl = (str_starts_with($storyImg, 'http://') || str_starts_with($storyImg, 'https://')) ? $storyImg : asset(ltrim($storyImg, '/'));
+                        @endphp
+                        <img src="{{ $storyImgUrl }}" alt="Student of Advaita School of Excellence" class="about-story-img" loading="lazy">
                         <!-- Floating Bottom Badge -->
                         <div class="about-story-floating-badge">
                             <div class="story-badge-trophy">
@@ -268,9 +276,17 @@
                 <!-- Left: Content & Interactive Feature Pills -->
                 <div class="about-philosophy-content">
                     <span class="about-eyebrow">— {{ $content['philosophy_eyebrow'] ?? 'PREPARING FOR A BRIGHTER TOMORROW' }} —</span>
+                    @php
+                        $phiTitle = $content['philosophy_title'] ?? 'Education for';
+                        $hasLife = str_contains(strtolower($phiTitle), 'life');
+                    @endphp
                     <h2 class="about-philosophy-title">
-                        {{ $content['philosophy_title'] ?? 'Education for' }}<br>
-                        Life, <span class="about-text-orange">{{ $content['philosophy_highlight'] ?? 'Not Just Exams.' }}</span>
+                        @if($hasLife)
+                            {!! nl2br(e($phiTitle)) !!} <span class="about-text-orange">{{ $content['philosophy_highlight'] ?? 'Not Just Exams.' }}</span>
+                        @else
+                            {{ $phiTitle }}<br>
+                            Life, <span class="about-text-orange">{{ $content['philosophy_highlight'] ?? 'Not Just Exams.' }}</span>
+                        @endif
                     </h2>
                     <p class="about-philosophy-desc">
                         {{ $content['philosophy_desc'] ?? 'We integrate CBSE academics with a focused NEET/IIT foundation and training for various competitive exams. Our student-centric approach ensures conceptual clarity, critical thinking, and real-world application — helping students achieve success in academics and beyond.' }}
@@ -316,7 +332,11 @@
                 <div class="about-philosophy-visual-wrap">
                     <div class="about-philosophy-accent-border"></div>
                     <div class="about-philosophy-frame">
-                        <img src="{{ asset($content['philosophy_image'] ?? 'assets/images/about-story-student.jpg') }}" alt="Students in classroom engaged in interactive learning at Advaita School of Excellence" class="about-philosophy-img" loading="lazy">
+                        @php
+                            $philImg = $content['philosophy_image'] ?? 'assets/images/about-story-student.jpg';
+                            $philImgUrl = (str_starts_with($philImg, 'http://') || str_starts_with($philImg, 'https://')) ? $philImg : asset(ltrim($philImg, '/'));
+                        @endphp
+                        <img src="{{ $philImgUrl }}" alt="Students in classroom engaged in interactive learning at Advaita School of Excellence" class="about-philosophy-img" loading="lazy">
                     </div>
                     <!-- Floating Classroom Badge -->
                     <div class="about-philosophy-floating-badge">
@@ -432,11 +452,15 @@
                 <div class="about-campus-visual-wrap">
                     <div class="about-campus-accent-border"></div>
                     <div class="about-campus-frame">
-                        <img src="{{ asset($content['campus_image'] ?? 'assets/images/about-campus-courtyard.jpg') }}" alt="Advaita School Modern Campus Courtyard" class="about-campus-img" loading="lazy">
+                        @php
+                            $campusImg = $content['campus_image'] ?? 'assets/images/about-campus-courtyard.jpg';
+                            $campusImgUrl = (str_starts_with($campusImg, 'http://') || str_starts_with($campusImg, 'https://')) ? $campusImg : asset(ltrim($campusImg, '/'));
+                        @endphp
+                        <img src="{{ $campusImgUrl }}" alt="Advaita School Modern Campus Courtyard" class="about-campus-img" loading="lazy">
                     </div>
                     <!-- Floating Campus Badge -->
                     <div class="about-floating-campus-card">
-                        <img src="{{ asset($content['campus_image'] ?? 'assets/images/about-campus-courtyard.jpg') }}" alt="Modern Campus" class="campus-thumb">
+                        <img src="{{ $campusImgUrl }}" alt="Modern Campus" class="campus-thumb">
                         <div class="campus-thumb-text">
                             <strong>Modern Campus</strong>
                             <span>for Holistic Growth</span>
@@ -498,8 +522,12 @@
         </div>
 
         <!-- Students Image -->
+        @php
+            $ctaImg = $content['cta_image'] ?? 'assets/images/about-cta-students-trio.png';
+            $ctaImgUrl = (str_starts_with($ctaImg, 'http://') || str_starts_with($ctaImg, 'https://')) ? $ctaImg : asset(ltrim($ctaImg, '/'));
+        @endphp
         <div class="students">
-            <img src="{{ asset($content['cta_image'] ?? 'assets/images/about-cta-students-trio.png') }}" alt="Advaita Students" loading="lazy">
+            <img src="{{ $ctaImgUrl }}" alt="Advaita Students" loading="lazy">
         </div>
     </section>
 

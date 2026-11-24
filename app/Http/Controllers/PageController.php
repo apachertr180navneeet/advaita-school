@@ -80,47 +80,52 @@ class PageController extends Controller
         );
 
         $content = [
-            // Hero Section
-            'hero_eyebrow' => Setting::get('about_hero_eyebrow', 'About Us'),
-            'hero_title' => Setting::get('about_hero_title', 'Advaita School of Excellence,'),
-            'hero_highlight' => Setting::get('about_hero_highlight', 'Parbhani'),
-            'hero_tagline' => Setting::get('about_hero_tagline', "Nurturing Excellence. Inspiring Innovation.\nShaping Futures."),
-            'hero_desc' => Setting::get('about_hero_desc', 'Established in 2016 under the visionary leadership of Mr. Vishal Vattamwar, Chairman of Sanmati Sevabhavi Sanstha, Advaita School of Excellence, Parbhani, was founded to bring quality education to every student in Parbhani.'),
+            // 1. Hero Section
+            'hero_badge' => Setting::get('about_hero_badge', 'ABOUT OUR SCHOOL'),
+            'hero_title' => Setting::get('about_hero_title', 'A Premier CBSE School with a'),
+            'hero_highlight' => Setting::get('about_hero_highlight', 'Stronger Purpose.'),
+            'hero_subtitle' => Setting::get('about_hero_subtitle', 'At Advaita School of Excellence, Parbhani, we believe education extends far beyond classrooms. We build individuals of curiosity, empathy, and resilience.'),
             'hero_image' => Setting::get('about_hero_image', 'assets/images/about-hero-building.jpg'),
 
-            // Our Vision Section
-            'vision_eyebrow' => Setting::get('about_vision_eyebrow', 'Our Vision'),
-            'vision_title' => Setting::get('about_vision_title', 'A Vision Beyond Conventional'),
-            'vision_highlight' => Setting::get('about_vision_highlight', 'Schooling.'),
-            'vision_desc' => Setting::get('about_vision_desc', 'At Advaita, education goes beyond textbooks and examinations. We aim to nurture curious minds, develop strong conceptual foundations, and prepare students for a competitive future.'),
-            'vision_btn_text' => Setting::get('about_vision_btn_text', 'Learn More'),
-            'vision_btn_url' => Setting::get('about_vision_btn_url', route('vision-mission')),
-            'vision_image' => Setting::get('about_vision_image', 'assets/images/about-vision-students.jpg'),
+            // 2. Built on Values (Story) Section
+            'story_image' => Setting::get('about_story_image', 'assets/images/about-philosophy-student.jpg'),
+            'story_eyebrow' => Setting::get('about_story_eyebrow', 'BUILT ON A STRONG FOUNDATION'),
+            'story_title' => Setting::get('about_story_title', 'Built on Values.'),
+            'story_highlight' => Setting::get('about_story_highlight', 'Academic Excellence.'),
+            'story_p1' => Setting::get('about_story_p1', 'At Advaita School of Excellence, we blend academic rigor, character development, and future-focused learning to help every child grow into a confident, compassionate, and capable individual.'),
+            'story_p2' => Setting::get('about_story_p2', "Our focus on NEET/IIT foundation and various competitive exams, along with a strong CBSE curriculum, ensures that students are well-prepared for higher education and life's opportunities."),
+            'story_badge_title' => Setting::get('about_story_badge_title', 'Best CBSE'),
+            'story_badge_sub' => Setting::get('about_story_badge_sub', 'Result Producer'),
+            'story_badge_tag' => Setting::get('about_story_badge_tag', 'Year after Year'),
+            'stat_students' => Setting::get('about_stat_students', '5000+'),
+            'stat_years' => Setting::get('about_stat_years', '25+'),
+            'stat_satisfaction' => Setting::get('about_stat_satisfaction', '95%'),
 
-            // Our Pillars Section
-            'pillars_eyebrow' => Setting::get('about_pillars_eyebrow', 'Our Pillars'),
-            'pillars_title' => Setting::get('about_pillars_title', 'Built on Values. Driven by'),
-            'pillars_highlight' => Setting::get('about_pillars_highlight', 'Excellence.'),
+            // 3. Vision, Mission & Values
+            'vision_text' => Setting::get('about_vmv_vision', 'To nurture confident, curious and responsible global citizens equipped to excel in academics and life.'),
+            'mission_text' => Setting::get('about_vmv_mission', 'To provide a safe, value-based learning environment with academic excellence, modern facilities and holistic growth opportunities.'),
 
-            // Our Journey Section
-            'journey_eyebrow' => Setting::get('about_journey_eyebrow', 'Our Journey'),
-            'journey_title' => Setting::get('about_journey_title', 'From Roots to Remarkable Achievements.'),
-            'journey_desc' => Setting::get('about_journey_desc', 'Affiliated with CBSE since 2019, Advaita School of Excellence achieved the No. 1 position in Parbhani in Class X Board Results in 2026 — a milestone of collective effort.'),
-            'journey_image' => Setting::get('about_journey_image', 'assets/images/about-journey-trophy.png'),
+            // 4. Education for Life (Philosophy) Section
+            'philosophy_image' => Setting::get('about_philosophy_image', 'assets/images/about-story-student.jpg'),
+            'philosophy_eyebrow' => Setting::get('about_philosophy_eyebrow', 'PREPARING FOR A BRIGHTER TOMORROW'),
+            'philosophy_title' => Setting::get('about_philosophy_title', 'Education for'),
+            'philosophy_highlight' => Setting::get('about_philosophy_highlight', 'Not Just Exams.'),
+            'philosophy_desc' => Setting::get('about_philosophy_desc', 'We integrate CBSE academics with a focused NEET/IIT foundation and training for various competitive exams. Our student-centric approach ensures conceptual clarity, critical thinking, and real-world application — helping students achieve success in academics and beyond.'),
+            'philosophy_badge_title' => Setting::get('about_philosophy_badge_title', 'Interactive Learning'),
+            'philosophy_badge_sub' => Setting::get('about_philosophy_badge_sub', 'Conceptual Clarity & Beyond Textbooks'),
 
-            // Academic Journey Stages Section
-            'stages_eyebrow' => Setting::get('about_stages_eyebrow', 'Our Academic Journey'),
-            'stages_title' => Setting::get('about_stages_title', 'Learning at Every Stage.'),
-            'stages_desc' => Setting::get('about_stages_desc', 'From Foundational to Secondary Stage, we provide a structured and engaging learning path for every child.'),
+            // 5. Campus Showcase Section
+            'campus_image' => Setting::get('about_campus_image', 'assets/images/about-campus-courtyard.jpg'),
+            'campus_eyebrow' => Setting::get('about_campus_eyebrow', 'A SPACE TO GROW'),
+            'campus_title' => Setting::get('about_campus_title', 'A Space to Learn,'),
+            'campus_highlight' => Setting::get('about_campus_highlight', 'Explore and Excel.'),
+            'campus_desc' => Setting::get('about_campus_desc', 'Our modern campus is designed to inspire curiosity, encourage collaboration, and provide the best learning experience. From spacious classrooms to advanced labs and vibrant activity spaces, every corner of Advaita nurtures growth and opportunity.'),
 
-            // Our Commitment Section
-            'commitment_eyebrow' => Setting::get('about_commitment_eyebrow', 'Our Commitment'),
-            'commitment_title' => Setting::get('about_commitment_title', 'Empowering Every Child for a'),
-            'commitment_highlight' => Setting::get('about_commitment_highlight', 'Brighter Tomorrow.'),
-            'commitment_desc' => Setting::get('about_commitment_desc', 'With visionary leadership and dedicated educators, we are committed to empowering students with the knowledge, values and skills to succeed in life.'),
-            'commitment_btn_text' => Setting::get('about_commitment_btn_text', 'Join Our Journey'),
-            'commitment_btn_url' => Setting::get('about_commitment_btn_url', route('online-registration')),
-            'commitment_image' => Setting::get('about_commitment_image', 'assets/images/about-commitment-students.jpg'),
+            // 6. Admission Banner Section
+            'cta_image' => Setting::get('about_cta_image', 'assets/images/about-cta-students-trio.png'),
+            'cta_eyebrow' => Setting::get('about_cta_eyebrow', 'BE A PART OF ADVAITA'),
+            'cta_headline' => Setting::get('about_cta_headline', "Together, let's build brighter tomorrows."),
+            'cta_subtext' => Setting::get('about_cta_subtext', 'Admissions are open for CBSE, NEET/IIT Foundation & Competitive Exam Programmes.'),
         ];
 
         $pillars = [

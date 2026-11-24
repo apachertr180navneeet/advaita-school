@@ -23,47 +23,52 @@ class PageContentController extends Controller
             'icon' => 'fa-solid fa-school',
             'category' => 'Leadership & Story',
             'fields' => [
-                // Hero Section
-                'about_hero_eyebrow' => ['label' => 'Hero Eyebrow Badge', 'type' => 'text', 'default' => 'About Us'],
-                'about_hero_title' => ['label' => 'Hero Main Title Prefix', 'type' => 'text', 'default' => 'Advaita School of Excellence,'],
-                'about_hero_highlight' => ['label' => 'Hero Title Highlight', 'type' => 'text', 'default' => 'Parbhani'],
-                'about_hero_tagline' => ['label' => 'Hero Tagline (Bold)', 'type' => 'textarea', 'default' => "Nurturing Excellence. Inspiring Innovation.\nShaping Futures."],
-                'about_hero_desc' => ['label' => 'Hero Description Paragraph', 'type' => 'textarea', 'default' => 'Established in 2016 under the visionary leadership of Mr. Vishal Vattamwar, Chairman of Sanmati Sevabhavi Sanstha, Advaita School of Excellence, Parbhani, was founded to bring quality education to every student in Parbhani.'],
+                // 1. Hero Section
+                'about_hero_badge' => ['label' => 'Hero Eyebrow Badge', 'type' => 'text', 'default' => 'ABOUT OUR SCHOOL'],
+                'about_hero_title' => ['label' => 'Hero Main Title Prefix', 'type' => 'text', 'default' => 'Nurturing Potential.'],
+                'about_hero_highlight' => ['label' => 'Hero Title Highlight', 'type' => 'text', 'default' => 'Building Character.'],
+                'about_hero_subtitle' => ['label' => 'Hero Description Paragraph', 'type' => 'textarea', 'default' => 'At Advaita School of Excellence, Parbhani, we believe education extends far beyond classrooms. We build individuals of curiosity, empathy, and resilience.'],
                 'about_hero_image' => ['label' => 'Hero Campus Building Image', 'type' => 'image', 'default' => 'assets/images/about-hero-building.jpg'],
 
-                // Our Vision Section
-                'about_vision_eyebrow' => ['label' => 'Vision Eyebrow', 'type' => 'text', 'default' => 'Our Vision'],
-                'about_vision_title' => ['label' => 'Vision Heading Prefix', 'type' => 'text', 'default' => 'A Vision Beyond Conventional'],
-                'about_vision_highlight' => ['label' => 'Vision Heading Highlight', 'type' => 'text', 'default' => 'Schooling.'],
-                'about_vision_desc' => ['label' => 'Vision Description', 'type' => 'textarea', 'default' => 'At Advaita, education goes beyond textbooks and examinations. We aim to nurture curious minds, develop strong conceptual foundations, and prepare students for a competitive future.'],
-                'about_vision_btn_text' => ['label' => 'Vision Button Label', 'type' => 'text', 'default' => 'Learn More'],
-                'about_vision_btn_url' => ['label' => 'Vision Button URL', 'type' => 'text', 'default' => '/vision-mission'],
-                'about_vision_image' => ['label' => 'Vision Students Image', 'type' => 'image', 'default' => 'assets/images/about-vision-students.jpg'],
+                // 2. Built on Values (Story) Section
+                'about_story_image' => ['label' => 'Built on Values Student Image', 'type' => 'image', 'default' => 'assets/images/about-philosophy-student.jpg'],
+                'about_story_eyebrow' => ['label' => 'Story Eyebrow', 'type' => 'text', 'default' => 'BUILT ON A STRONG FOUNDATION'],
+                'about_story_title' => ['label' => 'Story Heading Prefix', 'type' => 'text', 'default' => 'Built on Values.'],
+                'about_story_highlight' => ['label' => 'Story Heading Highlight', 'type' => 'text', 'default' => 'Academic Excellence.'],
+                'about_story_p1' => ['label' => 'Story Description Paragraph 1', 'type' => 'textarea', 'default' => 'At Advaita School of Excellence, we blend academic rigor, character development, and future-focused learning to help every child grow into a confident, compassionate, and capable individual.'],
+                'about_story_p2' => ['label' => 'Story Description Paragraph 2', 'type' => 'textarea', 'default' => "Our focus on NEET/IIT foundation and various competitive exams, along with a strong CBSE curriculum, ensures that students are well-prepared for higher education and life's opportunities."],
+                'about_story_badge_title' => ['label' => 'Story Badge Line 1', 'type' => 'text', 'default' => 'Best CBSE'],
+                'about_story_badge_sub' => ['label' => 'Story Badge Line 2', 'type' => 'text', 'default' => 'Result Producer'],
+                'about_story_badge_tag' => ['label' => 'Story Badge Tagline', 'type' => 'text', 'default' => 'Year after Year'],
+                'about_stat_students' => ['label' => 'Stat: Happy Students', 'type' => 'text', 'default' => '5000+'],
+                'about_stat_years' => ['label' => 'Stat: Years of Legacy', 'type' => 'text', 'default' => '25+'],
+                'about_stat_satisfaction' => ['label' => 'Stat: Parent Satisfaction', 'type' => 'text', 'default' => '95%'],
 
-                // Our Pillars Section
-                'about_pillars_eyebrow' => ['label' => 'Pillars Eyebrow', 'type' => 'text', 'default' => 'Our Pillars'],
-                'about_pillars_title' => ['label' => 'Pillars Heading Prefix', 'type' => 'text', 'default' => 'Built on Values. Driven by'],
-                'about_pillars_highlight' => ['label' => 'Pillars Heading Highlight', 'type' => 'text', 'default' => 'Excellence.'],
+                // 3. Vision & Mission Cards
+                'about_vmv_vision' => ['label' => 'Our Vision Statement', 'type' => 'textarea', 'default' => 'To nurture confident, curious and responsible global citizens equipped to excel in academics and life.'],
+                'about_vmv_mission' => ['label' => 'Our Mission Statement', 'type' => 'textarea', 'default' => 'To provide a safe, value-based learning environment with academic excellence, modern facilities and holistic growth opportunities.'],
 
-                // Our Journey Section
-                'about_journey_eyebrow' => ['label' => 'Journey Eyebrow', 'type' => 'text', 'default' => 'Our Journey'],
-                'about_journey_title' => ['label' => 'Journey Heading', 'type' => 'text', 'default' => 'From Roots to Remarkable Achievements.'],
-                'about_journey_desc' => ['label' => 'Journey Description', 'type' => 'textarea', 'default' => 'Affiliated with CBSE since 2019, Advaita School of Excellence achieved the No. 1 position in Parbhani in Class X Board Results in 2026 — a milestone of collective effort.'],
-                'about_journey_image' => ['label' => 'Journey Trophy Graphic', 'type' => 'image', 'default' => 'assets/images/about-journey-trophy.png'],
+                // 4. Education for Life (Philosophy) Section
+                'about_philosophy_image' => ['label' => 'Education for Life Classroom Image', 'type' => 'image', 'default' => 'assets/images/about-story-student.jpg'],
+                'about_philosophy_eyebrow' => ['label' => 'Philosophy Eyebrow', 'type' => 'text', 'default' => 'PREPARING FOR A BRIGHTER TOMORROW'],
+                'about_philosophy_title' => ['label' => 'Philosophy Heading Prefix', 'type' => 'text', 'default' => 'Education for'],
+                'about_philosophy_highlight' => ['label' => 'Philosophy Heading Highlight', 'type' => 'text', 'default' => 'Not Just Exams.'],
+                'about_philosophy_desc' => ['label' => 'Philosophy Description', 'type' => 'textarea', 'default' => 'We integrate CBSE academics with a focused NEET/IIT foundation and training for various competitive exams. Our student-centric approach ensures conceptual clarity, critical thinking, and real-world application — helping students achieve success in academics and beyond.'],
+                'about_philosophy_badge_title' => ['label' => 'Classroom Badge Title', 'type' => 'text', 'default' => 'Interactive Learning'],
+                'about_philosophy_badge_sub' => ['label' => 'Classroom Badge Subtitle', 'type' => 'text', 'default' => 'Conceptual Clarity & Beyond Textbooks'],
 
-                // Academic Stages Section
-                'about_stages_eyebrow' => ['label' => 'Academic Journey Eyebrow', 'type' => 'text', 'default' => 'Our Academic Journey'],
-                'about_stages_title' => ['label' => 'Academic Journey Title', 'type' => 'text', 'default' => 'Learning at Every Stage.'],
-                'about_stages_desc' => ['label' => 'Academic Journey Description', 'type' => 'textarea', 'default' => 'From Foundational to Secondary Stage, we provide a structured and engaging learning path for every child.'],
+                // 5. Campus Showcase Section
+                'about_campus_image' => ['label' => 'Campus Showcase Image', 'type' => 'image', 'default' => 'assets/images/about-campus-courtyard.jpg'],
+                'about_campus_eyebrow' => ['label' => 'Campus Eyebrow', 'type' => 'text', 'default' => 'A SPACE TO GROW'],
+                'about_campus_title' => ['label' => 'Campus Heading Prefix', 'type' => 'text', 'default' => 'A Space to Learn,'],
+                'about_campus_highlight' => ['label' => 'Campus Heading Highlight', 'type' => 'text', 'default' => 'Explore and Excel.'],
+                'about_campus_desc' => ['label' => 'Campus Description', 'type' => 'textarea', 'default' => 'Our modern campus is designed to inspire curiosity, encourage collaboration, and provide the best learning experience. From spacious classrooms to advanced labs and vibrant activity spaces, every corner of Advaita nurtures growth and opportunity.'],
 
-                // Our Commitment Section
-                'about_commitment_eyebrow' => ['label' => 'Commitment Eyebrow', 'type' => 'text', 'default' => 'Our Commitment'],
-                'about_commitment_title' => ['label' => 'Commitment Heading Prefix', 'type' => 'text', 'default' => 'Empowering Every Child for a'],
-                'about_commitment_highlight' => ['label' => 'Commitment Heading Highlight', 'type' => 'text', 'default' => 'Brighter Tomorrow.'],
-                'about_commitment_desc' => ['label' => 'Commitment Description', 'type' => 'textarea', 'default' => 'With visionary leadership and dedicated educators, we are committed to empowering students with the knowledge, values and skills to succeed in life.'],
-                'about_commitment_btn_text' => ['label' => 'Commitment Button Label', 'type' => 'text', 'default' => 'Join Our Journey'],
-                'about_commitment_btn_url' => ['label' => 'Commitment Button URL', 'type' => 'text', 'default' => '/online-registration'],
-                'about_commitment_image' => ['label' => 'Commitment Students Photo', 'type' => 'image', 'default' => 'assets/images/about-commitment-students.jpg'],
+                // 6. Admission Banner Section
+                'about_cta_image' => ['label' => 'Bottom CTA Students Trio Image', 'type' => 'image', 'default' => 'assets/images/about-cta-students-trio.png'],
+                'about_cta_eyebrow' => ['label' => 'Bottom CTA Eyebrow', 'type' => 'text', 'default' => 'BE A PART OF ADVAITA'],
+                'about_cta_headline' => ['label' => 'Bottom CTA Headline', 'type' => 'text', 'default' => "Together, let's build brighter tomorrows."],
+                'about_cta_subtext' => ['label' => 'Bottom CTA Subtext', 'type' => 'textarea', 'default' => 'Admissions are open for CBSE, NEET/IIT Foundation & Competitive Exam Programmes.'],
             ],
         ],
         'vision' => [
