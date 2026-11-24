@@ -3043,11 +3043,18 @@ html, body {
     <!-- =========================================================================
          1. HERO SECTION: Students Visual + Wave Canvas + Official Guidelines Badges
          ========================================================================= -->
+    <!-- =========================================================================
+         1. HERO SECTION: "OFFICIAL ADMISSION GUIDELINES" (Signature Canvas)
+         ========================================================================= -->
     <section class="admission-hero-section">
         <div class="admission-hero-canvas">
             <!-- Hero Students Visual -->
             <div class="admission-hero-bg-visual" aria-hidden="true">
-                <img src="{{ asset('assets/images/about-cta-students-clean.png') }}" alt="Advaita Students" class="admission-hero-bg-img" width="1024" height="682">
+                @php
+                    $heroImgRaw = $content['hero_image'] ?? 'assets/images/about-cta-students-clean.png';
+                    $heroImgUrl = str_starts_with($heroImgRaw, 'http') ? $heroImgRaw : asset($heroImgRaw);
+                @endphp
+                <img src="{{ $heroImgUrl }}" alt="Advaita Students" class="admission-hero-bg-img" width="1024" height="682">
             </div>
 
             <!-- SVG Wave Overlay for Smooth Translucent Backdrop -->
@@ -3060,7 +3067,7 @@ html, body {
 
             <!-- Floating Handwritten Script Tag at Top Right -->
             <div class="admission-hero-script-tag" aria-hidden="true">
-                <span class="script-title">Official<br>Guidelines</span>
+                <span class="script-title">{!! nl2br(e($content['hero_script_tag'] ?? "Official\nGuidelines")) !!}</span>
                 <svg class="script-underline" viewBox="0 0 120 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4 12C38 3 84 4 116 14" stroke="#083B7A" stroke-width="3" stroke-linecap="round"/>
                 </svg>
@@ -3079,31 +3086,36 @@ html, body {
                     </nav>
 
                     <!-- Eyebrow -->
-                    <div class="admission-eyebrow">PRE-PRIMARY TO GRADE X &middot; SESSION {{ $academicYear ?? '2027–28' }}</div>
+                    @php
+                        $heroBadgeRaw = $content['hero_badge'] ?? ('PRE-PRIMARY TO GRADE X · SESSION ' . ($academicYear ?? '2027–28'));
+                        $heroBadge = str_replace(['{academicYear}', '{session}', '{year}'], $academicYear ?? '2027–28', $heroBadgeRaw);
+                    @endphp
+                    <div class="admission-eyebrow">{{ $heroBadge }}</div>
 
                     <!-- Main Headline -->
                     <h1 class="admission-hero-title">
-                        Admission Guidelines &amp; <span class="highlight-serif">Eligibility Protocol.</span>
+                        {{ $content['hero_title'] ?? 'Admission Guidelines &' }}
+                        <span class="highlight-serif">{{ $content['hero_highlight'] ?? 'Eligibility Protocol.' }}</span>
                     </h1>
 
                     <!-- Description -->
                     <p class="admission-hero-desc">
-                        Official, transparent guidelines covering minimum age criteria, phased implementation schedules, required documents, 5-step admission procedure, and CBSE regulatory compliance for Advaita School of Excellence, Parbhani.
+                        {{ $content['hero_desc'] ?? 'Official, transparent guidelines covering minimum age criteria, phased implementation schedules, required documents, 5-step admission procedure, and CBSE regulatory compliance for Advaita School of Excellence, Parbhani.' }}
                     </p>
 
                     <!-- Quick Navigation CTA Group -->
                     <div class="d-flex align-items-center justify-content-lg-start justify-content-center gap-12 flex-wrap mt-20 hero-action-buttons">
-                        <a href="{{ route('admission-guidelines.download') }}" class="admission-btn-primary" title="Download Official Admission Guidelines PDF">
+                        <a href="{{ !empty($content['hero_btn1_url']) ? $content['hero_btn1_url'] : route('admission-guidelines.download') }}" class="admission-btn-primary" title="{{ $content['hero_btn1_text'] ?? 'Download Guidelines PDF' }}">
                             <i class="fa-solid fa-file-pdf"></i>
-                            <span>Download Guidelines PDF</span>
+                            <span>{{ $content['hero_btn1_text'] ?? 'Download Guidelines PDF' }}</span>
                         </a>
-                        <a href="{{ route('online-registration') }}" class="admission-btn-visit" style="background: rgba(8, 59, 122, 0.08); border-color: rgba(8, 59, 122, 0.2); color: #083B7A;">
+                        <a href="{{ !empty($content['hero_btn2_url']) ? $content['hero_btn2_url'] : route('online-registration') }}" class="admission-btn-visit" style="background: rgba(8, 59, 122, 0.08); border-color: rgba(8, 59, 122, 0.2); color: #083B7A;">
                             <i class="fa-solid fa-file-pen"></i>
-                            <span>Online Registration</span>
+                            <span>{{ $content['hero_btn2_text'] ?? 'Online Registration' }}</span>
                         </a>
-                        <a href="#documents-required" class="admission-btn-visit">
+                        <a href="{{ !empty($content['hero_btn3_url']) ? $content['hero_btn3_url'] : '#documents-required' }}" class="admission-btn-visit">
                             <i class="fa-solid fa-clipboard-check"></i>
-                            <span>Check Required Documents</span>
+                            <span>{{ $content['hero_btn3_text'] ?? 'Check Required Documents' }}</span>
                         </a>
                     </div>
                 </div>
@@ -3441,7 +3453,7 @@ html, body {
                     <i class="fa-solid fa-scale-balanced disclaimer-icon"></i>
                     <div class="disclaimer-text">
                         <strong>Official Policy &amp; Government Directive Notice:</strong>
-                        The age criteria and phased implementation schedule are subject to applicable government notifications (Government of Maharashtra School Education Department) and Advaita School of Excellence policy.
+                        {{ $content['policy_notice'] ?? 'The age criteria and phased implementation schedule are subject to applicable government notifications (Government of Maharashtra School Education Department) and Advaita School of Excellence policy.' }}
                     </div>
                 </div>
             </div>

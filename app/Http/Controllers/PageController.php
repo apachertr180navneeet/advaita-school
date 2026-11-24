@@ -910,6 +910,32 @@ class PageController extends Controller
             'https://www.google.com/maps/dir/?api=1&destination=Advaita+School+of+Excellence,+Jintur+Road,+Parbhani,+Maharashtra+431401'
         );
 
+        $content = [
+            'hero_badge' => Setting::get('guidelines_hero_badge', 'PRE-PRIMARY TO GRADE X · SESSION '.$academicYear),
+            'hero_title' => Setting::get('guidelines_hero_title', 'Admission Guidelines &'),
+            'hero_highlight' => Setting::get('guidelines_hero_highlight', 'Eligibility Protocol.'),
+            'hero_desc' => Setting::get(
+                'guidelines_hero_desc',
+                'Official, transparent guidelines covering minimum age criteria, phased implementation schedules, required documents, 5-step admission procedure, and CBSE regulatory compliance for Advaita School of Excellence, Parbhani.'
+            ),
+            'hero_script_tag' => Setting::get('guidelines_hero_script_tag', "Official\nGuidelines"),
+            'hero_image' => Setting::get('guidelines_hero_image', 'assets/images/about-cta-students-clean.png'),
+            'hero_btn1_text' => Setting::get('guidelines_hero_btn1_text', 'Download Guidelines PDF'),
+            'hero_btn1_url' => Setting::get('guidelines_hero_btn1_url', ''),
+            'hero_btn2_text' => Setting::get('guidelines_hero_btn2_text', 'Online Registration'),
+            'hero_btn2_url' => Setting::get('guidelines_hero_btn2_url', ''),
+            'hero_btn3_text' => Setting::get('guidelines_hero_btn3_text', 'Check Required Documents'),
+            'hero_btn3_url' => Setting::get('guidelines_hero_btn3_url', '#documents-required'),
+            'policy_notice' => Setting::get(
+                'guidelines_policy_notice',
+                'The age criteria and phased implementation schedule are subject to applicable government notifications (Government of Maharashtra School Education Department) and Advaita School of Excellence policy.'
+            ),
+            'cbse_note' => Setting::get(
+                'guidelines_cbse_note',
+                'Direct admission to Grade X is strictly NOT permitted except under specific exemptions prescribed by CBSE (e.g., interstate transfer of parent in government/defence service or certified relocation).'
+            ),
+        ];
+
         // Section A: Age Criteria Table
         $ageCriteria = [
             [
@@ -1092,7 +1118,8 @@ class PageController extends Controller
             'requiredDocuments',
             'procedureSteps',
             'classEligibility',
-            'importantInstructions'
+            'importantInstructions',
+            'content'
         ));
     }
 

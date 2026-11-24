@@ -369,16 +369,29 @@ class PageContentController extends Controller
             'icon' => 'fa-solid fa-book-bookmark',
             'category' => 'Admissions & Information',
             'fields' => [
+                // Hero Section
+                'guidelines_hero_badge' => ['label' => 'Hero Eyebrow Badge', 'type' => 'text', 'default' => 'PRE-PRIMARY TO GRADE X · SESSION 2027–28'],
+                'guidelines_hero_title' => ['label' => 'Hero Main Title Prefix', 'type' => 'text', 'default' => 'Admission Guidelines &'],
+                'guidelines_hero_highlight' => ['label' => 'Hero Title Highlight', 'type' => 'text', 'default' => 'Eligibility Protocol.'],
+                'guidelines_hero_desc' => ['label' => 'Hero Description Paragraph', 'type' => 'textarea', 'default' => 'Official, transparent guidelines covering minimum age criteria, phased implementation schedules, required documents, 5-step admission procedure, and CBSE regulatory compliance for Advaita School of Excellence, Parbhani.'],
+                'guidelines_hero_script_tag' => ['label' => 'Floating Script Badge Text', 'type' => 'text', 'default' => "Official\nGuidelines"],
+                'guidelines_hero_image' => ['label' => 'Hero Students Cutout Image', 'type' => 'image', 'default' => 'assets/images/about-cta-students-clean.png'],
+                'guidelines_hero_btn1_text' => ['label' => 'Hero Button 1 Label', 'type' => 'text', 'default' => 'Download Guidelines PDF'],
+                'guidelines_hero_btn1_url' => ['label' => 'Hero Button 1 URL (empty = default PDF route)', 'type' => 'text', 'default' => ''],
+                'guidelines_hero_btn2_text' => ['label' => 'Hero Button 2 Label', 'type' => 'text', 'default' => 'Online Registration'],
+                'guidelines_hero_btn2_url' => ['label' => 'Hero Button 2 URL (empty = default registration route)', 'type' => 'text', 'default' => ''],
+                'guidelines_hero_btn3_text' => ['label' => 'Hero Button 3 Label', 'type' => 'text', 'default' => 'Check Required Documents'],
+                'guidelines_hero_btn3_url' => ['label' => 'Hero Button 3 URL', 'type' => 'text', 'default' => '#documents-required'],
+
+                // General Admissions Settings
                 'admission_academic_year' => ['label' => 'Academic Session', 'type' => 'text', 'default' => '2027–28'],
                 'admission_age_cutoff' => ['label' => 'Prescribed Age Cut-off Date', 'type' => 'text', 'default' => '30 June'],
                 'admission_counsellor_name' => ['label' => 'Admission Counsellor Name', 'type' => 'text', 'default' => 'Ms. Vaishnavi'],
                 'admission_counsellor_phone' => ['label' => 'Counsellor Contact Phone', 'type' => 'text', 'default' => '9689898973'],
                 'admission_school_phone1' => ['label' => 'Official School Line 1', 'type' => 'text', 'default' => '9689898973'],
                 'admission_school_phone2' => ['label' => 'Official School Line 2', 'type' => 'text', 'default' => '9146066216'],
-                'guidelines_hero_badge' => ['label' => 'Hero Eyebrow Badge', 'type' => 'text', 'default' => 'OFFICIAL ADMISSIONS PROTOCOL'],
-                'guidelines_hero_title' => ['label' => 'Hero Main Title', 'type' => 'text', 'default' => 'Admission Guidelines &'],
-                'guidelines_hero_highlight' => ['label' => 'Hero Highlight Title', 'type' => 'text', 'default' => 'Eligibility Criteria.'],
-                'guidelines_hero_desc' => ['label' => 'Hero Description Paragraph', 'type' => 'textarea', 'default' => 'Comprehensive guidelines, age criteria, document checklists, and CBSE/Maharashtra government compliance for admissions into Pre-Primary through Grade X.'],
+
+                // Policy Notices
                 'guidelines_policy_notice' => ['label' => 'Government Policy & Phased Disclaimer', 'type' => 'textarea', 'default' => 'The age criteria and phased implementation schedule are subject to applicable government notifications (Government of Maharashtra School Education Department) and school policy.'],
                 'guidelines_cbse_note' => ['label' => 'Grade X CBSE Transfer Note', 'type' => 'textarea', 'default' => 'Direct admission to Grade X is strictly NOT permitted except under specific exemptions prescribed by CBSE (e.g., interstate transfer of parent in government/defence service or certified relocation).'],
             ],
