@@ -88,7 +88,7 @@ class PageController extends Controller
             'hero_image' => Setting::get('about_hero_image', 'assets/images/about-hero-building.jpg'),
 
             // 2. Built on Values (Story) Section
-            'story_image' => Setting::get('about_story_image', 'assets/images/about-philosophy-student.jpg'),
+            'story_image' => Setting::get('about_story_image', 'assets/images/student-girl-thumbsup.jpg'),
             'story_eyebrow' => Setting::get('about_story_eyebrow', 'BUILT ON A STRONG FOUNDATION'),
             'story_title' => Setting::get('about_story_title', 'Built on Values.'),
             'story_highlight' => Setting::get('about_story_highlight', 'Academic Excellence.'),
@@ -106,7 +106,7 @@ class PageController extends Controller
             'mission_text' => Setting::get('about_vmv_mission', 'To provide a safe, value-based learning environment with academic excellence, modern facilities and holistic growth opportunities.'),
 
             // 4. Education for Life (Philosophy) Section
-            'philosophy_image' => Setting::get('about_philosophy_image', 'assets/images/about-story-student.jpg'),
+            'philosophy_image' => Setting::get('about_philosophy_image', 'assets/images/student-science-lab.jpg'),
             'philosophy_eyebrow' => Setting::get('about_philosophy_eyebrow', 'PREPARING FOR A BRIGHTER TOMORROW'),
             'philosophy_title' => Setting::get('about_philosophy_title', 'Education for'),
             'philosophy_highlight' => Setting::get('about_philosophy_highlight', 'Not Just Exams.'),
@@ -924,7 +924,7 @@ class PageController extends Controller
                 'Official, transparent guidelines covering minimum age criteria, phased implementation schedules, required documents, 5-step admission procedure, and CBSE regulatory compliance for Advaita School of Excellence, Parbhani.'
             ),
             'hero_script_tag' => Setting::get('guidelines_hero_script_tag', "Official\nGuidelines"),
-            'hero_image' => Setting::get('guidelines_hero_image', 'assets/images/about-cta-students-clean.png'),
+            'hero_image' => Setting::get('guidelines_hero_image', 'assets/images/student-group-reading.jpg'),
             'hero_btn1_text' => Setting::get('guidelines_hero_btn1_text', 'Download Guidelines PDF'),
             'hero_btn1_url' => Setting::get('guidelines_hero_btn1_url', ''),
             'hero_btn2_text' => Setting::get('guidelines_hero_btn2_text', 'Online Registration'),

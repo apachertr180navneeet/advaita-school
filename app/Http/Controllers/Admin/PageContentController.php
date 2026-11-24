@@ -31,7 +31,7 @@ class PageContentController extends Controller
                 'about_hero_image' => ['label' => 'Hero Campus Building Image', 'type' => 'image', 'default' => 'assets/images/about-hero-building.jpg'],
 
                 // 2. Built on Values (Story) Section
-                'about_story_image' => ['label' => 'Built on Values Student Image', 'type' => 'image', 'default' => 'assets/images/about-philosophy-student.jpg'],
+                'about_story_image' => ['label' => 'Built on Values Student Image', 'type' => 'image', 'default' => 'assets/images/student-girl-thumbsup.jpg'],
                 'about_story_eyebrow' => ['label' => 'Story Eyebrow', 'type' => 'text', 'default' => 'BUILT ON A STRONG FOUNDATION'],
                 'about_story_title' => ['label' => 'Story Heading Prefix', 'type' => 'text', 'default' => 'Built on Values.'],
                 'about_story_highlight' => ['label' => 'Story Heading Highlight', 'type' => 'text', 'default' => 'Academic Excellence.'],
@@ -49,7 +49,7 @@ class PageContentController extends Controller
                 'about_vmv_mission' => ['label' => 'Our Mission Statement', 'type' => 'textarea', 'default' => 'To provide a safe, value-based learning environment with academic excellence, modern facilities and holistic growth opportunities.'],
 
                 // 4. Education for Life (Philosophy) Section
-                'about_philosophy_image' => ['label' => 'Education for Life Classroom Image', 'type' => 'image', 'default' => 'assets/images/about-story-student.jpg'],
+                'about_philosophy_image' => ['label' => 'Education for Life Classroom Image', 'type' => 'image', 'default' => 'assets/images/student-science-lab.jpg'],
                 'about_philosophy_eyebrow' => ['label' => 'Philosophy Eyebrow', 'type' => 'text', 'default' => 'PREPARING FOR A BRIGHTER TOMORROW'],
                 'about_philosophy_title' => ['label' => 'Philosophy Heading Prefix', 'type' => 'text', 'default' => 'Education for'],
                 'about_philosophy_highlight' => ['label' => 'Philosophy Heading Highlight', 'type' => 'text', 'default' => 'Not Just Exams.'],
@@ -380,7 +380,7 @@ class PageContentController extends Controller
                 'guidelines_hero_highlight' => ['label' => 'Hero Title Highlight', 'type' => 'text', 'default' => 'Eligibility Protocol.'],
                 'guidelines_hero_desc' => ['label' => 'Hero Description Paragraph', 'type' => 'textarea', 'default' => 'Official, transparent guidelines covering minimum age criteria, phased implementation schedules, required documents, 5-step admission procedure, and CBSE regulatory compliance for Advaita School of Excellence, Parbhani.'],
                 'guidelines_hero_script_tag' => ['label' => 'Floating Script Badge Text', 'type' => 'text', 'default' => "Official\nGuidelines"],
-                'guidelines_hero_image' => ['label' => 'Hero Students Cutout Image', 'type' => 'image', 'default' => 'assets/images/about-cta-students-clean.png'],
+                'guidelines_hero_image' => ['label' => 'Hero Students Cutout Image', 'type' => 'image', 'default' => 'assets/images/student-group-reading.jpg'],
                 'guidelines_hero_btn1_text' => ['label' => 'Hero Button 1 Label', 'type' => 'text', 'default' => 'Download Guidelines PDF'],
                 'guidelines_hero_btn1_url' => ['label' => 'Hero Button 1 URL (empty = default PDF route)', 'type' => 'text', 'default' => ''],
                 'guidelines_hero_btn2_text' => ['label' => 'Hero Button 2 Label', 'type' => 'text', 'default' => 'Online Registration'],

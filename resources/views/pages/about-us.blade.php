@@ -147,7 +147,7 @@
                 <div class="about-story-visual-wrap">
                     <div class="about-story-frame">
                         @php
-                            $storyImg = $content['story_image'] ?? 'assets/images/about-philosophy-student.jpg';
+                            $storyImg = $content['story_image'] ?? 'assets/images/student-girl-thumbsup.jpg';
                             $storyImgUrl = (str_starts_with($storyImg, 'http://') || str_starts_with($storyImg, 'https://')) ? $storyImg : asset(ltrim($storyImg, '/'));
                         @endphp
                         <img src="{{ $storyImgUrl }}" alt="Student of Advaita School of Excellence" class="about-story-img" loading="lazy">
@@ -333,7 +333,7 @@
                     <div class="about-philosophy-accent-border"></div>
                     <div class="about-philosophy-frame">
                         @php
-                            $philImg = $content['philosophy_image'] ?? 'assets/images/about-story-student.jpg';
+                            $philImg = $content['philosophy_image'] ?? 'assets/images/student-science-lab.jpg';
                             $philImgUrl = (str_starts_with($philImg, 'http://') || str_starts_with($philImg, 'https://')) ? $philImg : asset(ltrim($philImg, '/'));
                         @endphp
                         <img src="{{ $philImgUrl }}" alt="Students in classroom engaged in interactive learning at Advaita School of Excellence" class="about-philosophy-img" loading="lazy">

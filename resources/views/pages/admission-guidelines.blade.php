@@ -3052,7 +3052,7 @@ html, body {
             <!-- Hero Students Visual -->
             <div class="admission-hero-bg-visual" aria-hidden="true">
                 @php
-                    $heroImgRaw = $content['hero_image'] ?? 'assets/images/about-cta-students-clean.png';
+                    $heroImgRaw = $content['hero_image'] ?? 'assets/images/student-group-reading.jpg';
                     $heroImgUrl = str_starts_with($heroImgRaw, 'http') ? $heroImgRaw : asset($heroImgRaw);
                 @endphp
                 <img src="{{ $heroImgUrl }}" alt="Advaita Students" class="admission-hero-bg-img" width="1024" height="682">
