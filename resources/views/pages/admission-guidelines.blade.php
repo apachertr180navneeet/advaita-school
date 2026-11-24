@@ -313,6 +313,7 @@
         border-radius: 8px !important;
         margin: 0 !important;
         display: inline-flex !important;
+        white-space: nowrap !important;
     }
     .admission-page-wrapper .qa-card-body {
         text-align: left !important;
@@ -381,28 +382,35 @@
         align-items: center !important;
         justify-content: space-between !important;
         text-align: left !important;
-        padding: 26px 36px !important;
+        padding: 24px 32px !important;
         background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%) !important;
         border: 1.5px solid #86efac !important;
         border-radius: 20px !important;
         min-height: auto !important;
+        box-sizing: border-box !important;
     }
+    .admission-page-wrapper .qa-card.qa-card-banner > div:first-child,
+    .admission-page-wrapper .qa-card.qa-card-banner .qa-banner-content,
     .admission-page-wrapper .qa-banner-content {
+        width: auto !important;
+        max-width: none !important;
         display: flex !important;
         flex-direction: row !important;
         align-items: center !important;
+        justify-content: flex-start !important;
         text-align: left !important;
-        gap: 20px !important;
+        gap: 22px !important;
         margin: 0 !important;
-        flex: 1 !important;
+        flex: 1 1 auto !important;
     }
     .admission-page-wrapper .qa-banner-content .qa-icon-wrap.whatsapp {
-        width: 54px !important;
-        height: 54px !important;
+        width: 56px !important;
+        height: 56px !important;
+        min-width: 56px !important;
         border-radius: 16px !important;
         background: #22c55e !important;
         color: #ffffff !important;
-        font-size: 26px !important;
+        font-size: 28px !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
@@ -414,20 +422,55 @@
         display: flex !important;
         flex-direction: column !important;
         align-items: flex-start !important;
+        justify-content: center !important;
         width: auto !important;
+        flex: 1 1 auto !important;
+        margin: 0 !important;
     }
+    .admission-page-wrapper .qa-banner-title-row,
     .admission-page-wrapper .qa-banner-text .d-flex {
         display: flex !important;
+        flex-direction: row !important;
         align-items: center !important;
         justify-content: flex-start !important;
-        gap: 10px !important;
+        gap: 12px !important;
         margin-bottom: 4px !important;
+        flex-wrap: nowrap !important;
+        width: auto !important;
+    }
+    .admission-page-wrapper .qa-banner-text .qa-card-title {
+        width: auto !important;
+        max-width: none !important;
+        display: inline-block !important;
+        text-align: left !important;
+        font-size: 18px !important;
+        font-weight: 800 !important;
+        color: #166534 !important;
+        margin: 0 !important;
+        line-height: 1.35 !important;
+        white-space: nowrap !important;
+    }
+    .admission-page-wrapper .qa-banner-text .qa-badge {
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+    }
+    .admission-page-wrapper .qa-banner-text .qa-card-desc {
+        text-align: left !important;
+        width: 100% !important;
+        max-width: 680px !important;
+        font-size: 13.5px !important;
+        color: #64748b !important;
+        line-height: 1.5 !important;
+        margin: 4px 0 0 0 !important;
     }
     .admission-page-wrapper .qa-banner-action {
         width: auto !important;
         max-width: none !important;
-        margin: 0 !important;
+        margin: 0 0 0 24px !important;
         flex-shrink: 0 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
     }
     .admission-page-wrapper .btn-qa-action.whatsapp {
         background: #16a34a !important;
@@ -438,6 +481,12 @@
         font-size: 14px !important;
         font-weight: 700 !important;
         box-shadow: 0 4px 15px rgba(22, 163, 74, 0.3) !important;
+        white-space: nowrap !important;
+        width: auto !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-decoration: none !important;
     }
     .admission-page-wrapper .btn-qa-action.whatsapp:hover {
         background: #15803d !important;
@@ -1945,6 +1994,7 @@
         margin: 0 auto !important;
     }
 
+    .admission-page-wrapper .qa-banner-title-row,
     .admission-page-wrapper .qa-banner-text .d-flex {
         display: flex !important;
         flex-direction: column !important;
@@ -3194,11 +3244,11 @@
                             <i class="fa-brands fa-whatsapp"></i>
                         </div>
                         <div class="qa-banner-text">
-                            <div class="d-flex align-items-center gap-10 flex-wrap">
+                            <div class="qa-banner-title-row d-flex align-items-center gap-12">
                                 <h3 class="qa-card-title mb-0" style="color: #166534;">7. Instant WhatsApp Enquiry Support</h3>
                                 <span class="qa-badge green">Online Now</span>
                             </div>
-                            <p class="qa-card-desc mb-0 mt-4">Connect directly with our admissions desk on WhatsApp for instant guidance regarding age criteria, documents, and admission slots.</p>
+                            <p class="qa-card-desc mb-0 mt-1">Connect directly with our admissions desk on WhatsApp for instant guidance regarding age criteria, documents, and admission slots.</p>
                         </div>
                     </div>
                     <div class="qa-banner-action">
