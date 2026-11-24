@@ -504,12 +504,12 @@
     background: #ffffff;
     border: 1px solid #eef2f6;
     border-radius: 16px;
-    padding: 14px 6px;
+    padding: 12px 4px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
     cursor: pointer;
     transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
     box-shadow: 0 3px 10px rgba(15, 23, 42, 0.03);
@@ -523,8 +523,8 @@
 }
 
 .adv-gal-cat-btn .cat-icon-badge {
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -538,13 +538,14 @@
 }
 
 .adv-gal-cat-btn .cat-name {
-    font-size: 0.78rem;
+    font-size: 0.74rem;
     font-weight: 600;
     color: #334155;
     text-align: center;
-    line-height: 1.25;
+    line-height: 1.2;
     max-width: 100%;
     transition: color 0.2s ease;
+    word-break: normal;
 }
 
 /* Active Category State (matches the blue active 'All Photos' in mockup) */
@@ -570,44 +571,49 @@
     color: #0084ff;
 }
 
-.adv-gal-cat-btn[data-category="academic"] .cat-icon-badge {
+.adv-gal-cat-btn[data-category="life-at-advaita"] .cat-icon-badge {
+    background: #e0e7ff;
+    color: #4338ca;
+}
+
+.adv-gal-cat-btn[data-category="events-celebrations"] .cat-icon-badge {
+    background: #fef3c7;
+    color: #d97706;
+}
+
+.adv-gal-cat-btn[data-category="academics-science"] .cat-icon-badge {
     background: #fee2e2;
     color: #ef4444;
 }
 
-.adv-gal-cat-btn[data-category="events"] .cat-icon-badge {
-    background: #dcfce7;
-    color: #16a34a;
+.adv-gal-cat-btn[data-category="educational-tours"] .cat-icon-badge {
+    background: #ccfbf1;
+    color: #0f766e;
 }
 
-.adv-gal-cat-btn[data-category="sports"] .cat-icon-badge {
+.adv-gal-cat-btn[data-category="sports-competitions"] .cat-icon-badge {
     background: #ffedd5;
     color: #ea580c;
 }
 
-.adv-gal-cat-btn[data-category="arts"] .cat-icon-badge {
+.adv-gal-cat-btn[data-category="student-leadership"] .cat-icon-badge {
+    background: #fef9c3;
+    color: #854d0e;
+}
+
+.adv-gal-cat-btn[data-category="art-culture"] .cat-icon-badge {
     background: #f3e8ff;
     color: #9333ea;
 }
 
-.adv-gal-cat-btn[data-category="student-life"] .cat-icon-badge {
+.adv-gal-cat-btn[data-category="advaita-kids"] .cat-icon-badge {
     background: #fce7f3;
     color: #db2777;
 }
 
-.adv-gal-cat-btn[data-category="infrastructure"] .cat-icon-badge {
+.adv-gal-cat-btn[data-category="campus-facilities"] .cat-icon-badge {
     background: #e0f2fe;
     color: #0284c7;
-}
-
-.adv-gal-cat-btn[data-category="workshops"] .cat-icon-badge {
-    background: #ccfbf1;
-    color: #0d9488;
-}
-
-.adv-gal-cat-btn[data-category="outreach"] .cat-icon-badge {
-    background: #ffe4e6;
-    color: #e11d48;
 }
 
 /* ==========================================================================
@@ -1332,7 +1338,7 @@
     }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1260px) {
     .adv-gal-filters-scroll {
         display: flex;
         overflow-x: auto;
@@ -1459,13 +1465,65 @@
 }
 
 /* ==========================================================================
-   Gallery Page - Non-Hero Responsive & Center-Aligned Layout
+   Gallery Page - Non-Hero Responsive & Unified Clean Layout
    (Hero Section .adv-gal-hero-section is strictly preserved unchanged)
    ========================================================================== */
 
+/* Theme Color Badges & Action Buttons for Gallery Cards */
+.adv-gal-card-icon.gal-theme-red { background: #fee2e2 !important; color: #ef4444 !important; }
+.adv-gal-card-btn.gal-theme-red { background: #ef4444 !important; color: #ffffff !important; }
+
+.adv-gal-card-icon.gal-theme-orange { background: #ffedd5 !important; color: #f97316 !important; }
+.adv-gal-card-btn.gal-theme-orange { background: #f97316 !important; color: #ffffff !important; }
+
+.adv-gal-card-icon.gal-theme-green { background: #dcfce7 !important; color: #22c55e !important; }
+.adv-gal-card-btn.gal-theme-green { background: #22c55e !important; color: #ffffff !important; }
+
+.adv-gal-card-icon.gal-theme-purple { background: #f3e8ff !important; color: #8b5cf6 !important; }
+.adv-gal-card-btn.gal-theme-purple { background: #8b5cf6 !important; color: #ffffff !important; }
+
+.adv-gal-card-icon.gal-theme-pink { background: #fce7f3 !important; color: #ec4899 !important; }
+.adv-gal-card-btn.gal-theme-pink { background: #ec4899 !important; color: #ffffff !important; }
+
+.adv-gal-card-icon.gal-theme-sky { background: #e0f2fe !important; color: #0284c7 !important; }
+.adv-gal-card-btn.gal-theme-sky { background: #0284c7 !important; color: #ffffff !important; }
+
+.adv-gal-card-icon.gal-theme-teal { background: #ccfbf1 !important; color: #0d9488 !important; }
+.adv-gal-card-btn.gal-theme-teal { background: #0d9488 !important; color: #ffffff !important; }
+
+.adv-gal-card-icon.gal-theme-rose { background: #ffe4e6 !important; color: #e11d48 !important; }
+.adv-gal-card-btn.gal-theme-rose { background: #e11d48 !important; color: #ffffff !important; }
+
+.adv-gal-card-icon.gal-theme-amber { background: #fef3c7 !important; color: #f59e0b !important; }
+.adv-gal-card-btn.gal-theme-amber { background: #f59e0b !important; color: #ffffff !important; }
+
+.adv-gal-card-icon.gal-theme-emerald { background: #bbf7d0 !important; color: #16a34a !important; }
+.adv-gal-card-btn.gal-theme-emerald { background: #16a34a !important; color: #ffffff !important; }
+
+.adv-gal-card-icon.gal-theme-fuchsia { background: #fbcfe8 !important; color: #db2777 !important; }
+.adv-gal-card-btn.gal-theme-fuchsia { background: #db2777 !important; color: #ffffff !important; }
+
+.adv-gal-card-icon.gal-theme-cyan { background: #cffafe !important; color: #06b6d4 !important; }
+.adv-gal-card-btn.gal-theme-cyan { background: #06b6d4 !important; color: #ffffff !important; }
+
+.adv-gal-card-icon.gal-theme-orange-dark { background: #ffedd5 !important; color: #ea580c !important; }
+.adv-gal-card-btn.gal-theme-orange-dark { background: #ea580c !important; color: #ffffff !important; }
+
+.adv-gal-card-icon.gal-theme-violet { background: #ede9fe !important; color: #7c3aed !important; }
+.adv-gal-card-btn.gal-theme-violet { background: #7c3aed !important; color: #ffffff !important; }
+
+.adv-gal-card-icon.gal-theme-blue { background: #dbeafe !important; color: #2563eb !important; }
+.adv-gal-card-btn.gal-theme-blue { background: #2563eb !important; color: #ffffff !important; }
+
+.adv-gal-card-icon.gal-theme-forest { background: #dcfce7 !important; color: #15803d !important; }
+.adv-gal-card-btn.gal-theme-forest { background: #15803d !important; color: #ffffff !important; }
+
+.adv-gal-card-icon.gal-theme-indigo { background: #e0e7ff !important; color: #4338ca !important; }
+.adv-gal-card-btn.gal-theme-indigo { background: #4338ca !important; color: #ffffff !important; }
+
 /* 1. Category Filter Pills */
 .adv-gallery-page-wrapper .adv-gal-categories-section {
-    padding: 12px 0 4px 0 !important;
+    padding: 16px 0 8px 0 !important;
 }
 
 .adv-gallery-page-wrapper .adv-gal-categories-section .adv-gal-container {
@@ -1474,39 +1532,96 @@
 }
 
 .adv-gallery-page-wrapper .adv-gal-filters-scroll {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
+    display: grid !important;
+    grid-template-columns: repeat(10, minmax(0, 1fr)) !important;
     gap: 10px !important;
-    flex-wrap: wrap !important;
-    padding: 4px 4px 6px 4px !important;
-    margin-bottom: 0 !important;
+    width: 100% !important;
+    max-width: 1240px !important;
+    margin: 0 auto !important;
+    padding: 4px 0 10px 0 !important;
 }
 
 .adv-gallery-page-wrapper .adv-gal-cat-btn {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    height: 86px !important;
+    min-height: 86px !important;
+    max-height: 86px !important;
+    padding: 10px 4px !important;
+    flex: 1 1 auto !important;
     text-align: center !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
     justify-content: center !important;
-    padding: 12px 14px !important;
-    flex: 0 0 auto !important;
-    min-width: 105px !important;
+    gap: 6px !important;
+    box-sizing: border-box !important;
+    border: 1px solid #eef2f6 !important;
+    background: #ffffff !important;
+    border-radius: 16px !important;
+    cursor: pointer !important;
+    transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+    box-shadow: 0 3px 10px rgba(15, 23, 42, 0.03) !important;
+}
+
+.adv-gallery-page-wrapper .adv-gal-cat-btn:hover {
+    border-color: #0084ff !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 16px rgba(0, 132, 255, 0.12) !important;
+}
+
+.adv-gallery-page-wrapper .adv-gal-cat-btn.active {
+    background: #0084ff !important;
+    border-color: #0084ff !important;
+    color: #ffffff !important;
+    box-shadow: 0 6px 18px rgba(0, 132, 255, 0.28) !important;
 }
 
 .adv-gallery-page-wrapper .adv-gal-cat-btn .cat-icon-badge {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+    min-height: 38px !important;
+    border-radius: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 0.95rem !important;
     margin: 0 auto !important;
+    flex-shrink: 0 !important;
+    transition: transform 0.25s ease !important;
+}
+
+.adv-gallery-page-wrapper .adv-gal-cat-btn:hover .cat-icon-badge {
+    transform: scale(1.08) !important;
+}
+
+.adv-gallery-page-wrapper .adv-gal-cat-btn.active .cat-icon-badge {
+    background: #ffffff !important;
+    color: #0084ff !important;
 }
 
 .adv-gallery-page-wrapper .adv-gal-cat-btn .cat-name {
     text-align: center !important;
     width: 100% !important;
     margin: 0 auto !important;
+    font-size: 0.72rem !important;
+    line-height: 1.2 !important;
+    font-weight: 600 !important;
+    color: #334155 !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    transition: color 0.2s ease !important;
+}
+
+.adv-gallery-page-wrapper .adv-gal-cat-btn.active .cat-name {
+    color: #ffffff !important;
 }
 
 /* 2. Search & Sort Toolbar */
 .adv-gallery-page-wrapper .adv-gal-toolbar-section {
-    padding: 4px 0 16px 0 !important;
+    padding: 4px 0 20px 0 !important;
 }
 
 .adv-gallery-page-wrapper .adv-gal-toolbar-section .adv-gal-container {
@@ -1517,34 +1632,41 @@
 .adv-gallery-page-wrapper .adv-gal-toolbar {
     display: flex !important;
     align-items: center !important;
-    justify-content: center !important;
+    justify-content: space-between !important;
     gap: 16px !important;
     flex-wrap: wrap !important;
-    max-width: 800px !important;
+    max-width: 1240px !important;
     margin: 0 auto !important;
-}
-
-.adv-gallery-page-wrapper .adv-gal-search-box {
-    margin: 0 auto !important;
-    max-width: 440px !important;
     width: 100% !important;
 }
 
+.adv-gallery-page-wrapper .adv-gal-search-box {
+    margin: 0 !important;
+    max-width: 440px !important;
+    width: 100% !important;
+    position: relative !important;
+}
+
 .adv-gallery-page-wrapper .adv-gal-search-input {
-    text-align: center !important;
-    padding: 0 42px !important;
+    text-align: left !important;
+    padding: 0 40px 0 44px !important;
+    height: 46px !important;
+    border-radius: 999px !important;
 }
 
 .adv-gallery-page-wrapper .adv-gal-sort-box {
-    margin: 0 auto !important;
+    margin: 0 !important;
     display: flex !important;
     align-items: center !important;
-    justify-content: center !important;
+    position: relative !important;
 }
 
 .adv-gallery-page-wrapper .adv-gal-sort-select {
-    text-align: center !important;
-    text-align-last: center !important;
+    text-align: left !important;
+    text-align-last: left !important;
+    height: 46px !important;
+    border-radius: 999px !important;
+    padding: 0 38px 0 42px !important;
 }
 
 /* 3. Gallery Album Cards Grid */
@@ -1555,64 +1677,119 @@
 }
 
 .adv-gallery-page-wrapper .adv-gal-card {
-    text-align: center !important;
+    text-align: left !important;
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important;
+    align-items: stretch !important;
     border-radius: 18px !important;
+    overflow: hidden !important;
+    background: #ffffff !important;
+    border: 1px solid #eef2f6 !important;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.04) !important;
+    transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.28s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+}
+
+.adv-gallery-page-wrapper .adv-gal-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08) !important;
 }
 
 .adv-gallery-page-wrapper .adv-gal-card-thumb {
     width: 100% !important;
+    height: 210px !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.adv-gallery-page-wrapper .adv-gal-card-thumb img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    display: block !important;
+    transition: transform 0.35s ease !important;
+}
+
+.adv-gallery-page-wrapper .adv-gal-card:hover .adv-gal-card-thumb img {
+    transform: scale(1.05) !important;
 }
 
 .adv-gallery-page-wrapper .adv-gal-card-info {
     width: 100% !important;
-    padding: 16px 14px !important;
+    padding: 14px 16px !important;
     display: flex !important;
-    flex-direction: column !important;
+    flex-direction: row !important;
     align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-    gap: 10px !important;
+    justify-content: space-between !important;
+    text-align: left !important;
+    gap: 12px !important;
+    background: #ffffff !important;
+    box-sizing: border-box !important;
 }
 
 .adv-gallery-page-wrapper .adv-gal-card-meta {
     display: flex !important;
-    flex-direction: column !important;
+    flex-direction: row !important;
     align-items: center !important;
-    justify-content: center !important;
-    text-align: center !important;
-    width: 100% !important;
-    gap: 8px !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    width: auto !important;
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+    gap: 10px !important;
 }
 
 .adv-gallery-page-wrapper .adv-gal-card-icon {
-    margin: 0 auto !important;
+    flex: 0 0 36px !important;
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 10px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 1rem !important;
+    margin: 0 !important;
+    transition: transform 0.25s ease !important;
+}
+
+.adv-gallery-page-wrapper .adv-gal-card:hover .adv-gal-card-icon {
+    transform: scale(1.08) !important;
 }
 
 .adv-gallery-page-wrapper .adv-gal-card-text {
-    text-align: center !important;
-    width: 100% !important;
+    text-align: left !important;
+    min-width: 0 !important;
+    flex: 1 1 auto !important;
+    width: auto !important;
 }
 
 .adv-gallery-page-wrapper .adv-gal-card-title {
-    text-align: center !important;
+    text-align: left !important;
     width: 100% !important;
-    margin: 0 0 3px 0 !important;
-    white-space: normal !important;
-    line-height: 1.35 !important;
-    font-size: clamp(0.88rem, 2vw, 0.98rem) !important;
+    margin: 0 0 2px 0 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    font-size: 0.94rem !important;
+    font-weight: 700 !important;
+    color: #0f172a !important;
+    line-height: 1.25 !important;
 }
 
 .adv-gallery-page-wrapper .adv-gal-card-count {
-    text-align: center !important;
+    text-align: left !important;
     width: 100% !important;
+    font-size: 0.78rem !important;
+    font-weight: 500 !important;
+    color: #64748b !important;
+    display: block !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
 }
 
 .adv-gallery-page-wrapper .adv-gal-card-btn {
     align-self: center !important;
-    margin: 4px auto 0 !important;
+    margin: 0 !important;
     width: 34px !important;
     height: 34px !important;
     min-width: 34px !important;
@@ -1626,6 +1803,17 @@
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
+    color: #ffffff !important;
+    font-size: 0.75rem !important;
+    border: none !important;
+    cursor: pointer !important;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12) !important;
+    transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+}
+
+.adv-gallery-page-wrapper .adv-gal-card:hover .adv-gal-card-btn {
+    transform: translateX(3px) scale(1.08) !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2) !important;
 }
 
 .adv-gallery-page-wrapper .adv-gal-empty-state {
@@ -1707,7 +1895,41 @@
 }
 
 /* Gallery Responsive Media Queries */
-@media (max-width: 1100px) {
+@media (max-width: 1200px) and (min-width: 992px) {
+    .adv-gallery-page-wrapper .adv-gal-filters-scroll {
+        grid-template-columns: repeat(10, minmax(0, 1fr)) !important;
+        gap: 8px !important;
+    }
+
+    .adv-gallery-page-wrapper .adv-gal-cat-btn {
+        height: 84px !important;
+        padding: 8px 2px !important;
+    }
+
+    .adv-gallery-page-wrapper .adv-gal-cat-btn .cat-name {
+        font-size: 0.68rem !important;
+    }
+}
+
+@media (max-width: 1100px) and (min-width: 769px) {
+    .adv-gallery-page-wrapper .adv-gal-filters-scroll {
+        display: flex !important;
+        overflow-x: auto !important;
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
+        gap: 10px !important;
+        padding: 4px 4px 10px 4px !important;
+        scrollbar-width: thin !important;
+        -webkit-overflow-scrolling: touch !important;
+    }
+
+    .adv-gallery-page-wrapper .adv-gal-cat-btn {
+        flex: 0 0 110px !important;
+        width: 110px !important;
+        min-width: 110px !important;
+        max-width: 110px !important;
+    }
+
     .adv-gallery-page-wrapper .adv-gal-grid {
         grid-template-columns: repeat(3, 1fr) !important;
     }
@@ -1737,8 +1959,12 @@
 
     .adv-gallery-page-wrapper .adv-gal-cat-btn {
         flex: 0 0 100px !important;
+        width: 100px !important;
         min-width: 100px !important;
-        padding: 10px 6px !important;
+        max-width: 100px !important;
+        height: 82px !important;
+        min-height: 82px !important;
+        padding: 8px 4px !important;
     }
 
     .adv-gallery-page-wrapper .adv-gal-toolbar-section {
@@ -1755,7 +1981,7 @@
         align-items: center !important;
         gap: 10px !important;
         width: 100% !important;
-        margin-top: 0 !important;
+        margin: 0 auto !important;
     }
 
     .adv-gallery-page-wrapper .adv-gal-search-box,
@@ -1771,29 +1997,59 @@
         gap: 12px !important;
     }
 
+    .adv-gallery-page-wrapper .adv-gal-card {
+        text-align: center !important;
+        align-items: center !important;
+    }
+
     .adv-gallery-page-wrapper .adv-gal-card-thumb {
         height: 140px !important;
     }
 
     .adv-gallery-page-wrapper .adv-gal-card-info {
         padding: 12px 8px !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        gap: 8px !important;
+    }
+
+    .adv-gallery-page-wrapper .adv-gal-card-meta {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        width: 100% !important;
+        gap: 6px !important;
     }
 
     .adv-gallery-page-wrapper .adv-gal-card-icon {
         width: 32px !important;
         height: 32px !important;
         font-size: 0.9rem !important;
+        margin: 0 auto !important;
+    }
+
+    .adv-gallery-page-wrapper .adv-gal-card-text {
+        text-align: center !important;
+        width: 100% !important;
     }
 
     .adv-gallery-page-wrapper .adv-gal-card-title {
+        text-align: center !important;
         font-size: 0.82rem !important;
+        white-space: normal !important;
+        line-height: 1.3 !important;
     }
 
     .adv-gallery-page-wrapper .adv-gal-card-count {
+        text-align: center !important;
         font-size: 0.72rem !important;
     }
 
     .adv-gallery-page-wrapper .adv-gal-card-btn {
+        margin: 2px auto 0 !important;
         width: 32px !important;
         height: 32px !important;
         min-width: 32px !important;
