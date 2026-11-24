@@ -238,7 +238,132 @@ class StaffMemberSeeder extends Seeder
                 'order' => 25,
                 'is_active' => true,
             ],
+            [
+                'name' => 'Mr. Avinash Hanchate',
+                'designation' => 'Accountant',
+                'qualification' => 'B.Com.',
+                'badge_color' => 'blue',
+                'photo' => 'assets/images/staff/avinash-hanchate.jpeg',
+                'order' => 26,
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Mr. Dinesh Halge',
+                'designation' => 'TGT - Science',
+                'qualification' => 'B.Sc., B.D.S.',
+                'badge_color' => 'cyan',
+                'photo' => 'assets/images/staff/dinesh-halge.png',
+                'order' => 27,
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Mr. Rajukumar Prajapati',
+                'designation' => 'PRT - Mathematics & Science',
+                'qualification' => 'B.E., B.Ed.',
+                'badge_color' => 'blue',
+                'photo' => 'assets/images/staff/rajukumar-prajapati.jpeg',
+                'order' => 28,
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Ms. Kemelia Sarkar',
+                'designation' => 'PRT - Science',
+                'qualification' => 'M.Sc.',
+                'badge_color' => 'rose',
+                'photo' => 'assets/images/staff/kemelia-sarkar.jpeg',
+                'order' => 29,
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Ms. Priya Pande',
+                'designation' => 'Faculty - Commerce',
+                'qualification' => 'M.Com.',
+                'badge_color' => 'amber',
+                'photo' => 'assets/images/staff/priya-pande.png',
+                'order' => 30,
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Ms. Sarika Harale',
+                'designation' => 'PRT - Computer Instructor',
+                'qualification' => 'M.C.A.',
+                'badge_color' => 'cyan',
+                'photo' => 'assets/images/staff/sarika-harale.png',
+                'order' => 31,
+                'is_active' => true,
+            ],
+            [
+                'name' => 'Ms. Vandana Palkar',
+                'designation' => 'NTT - Early Childhood',
+                'qualification' => 'M.Com., ECCE',
+                'badge_color' => 'pink',
+                'photo' => 'assets/images/staff/vandana-palkar.png',
+                'order' => 32,
+                'is_active' => true,
+            ],
         ];
+
+        // Ensure photos from 'Teachers Details' are mirrored into public/assets/images/staff if available
+        $teachersDetailsDir = base_path('Teachers Details');
+        $publicStaffDir = public_path('assets/images/staff');
+        if (! file_exists($publicStaffDir)) {
+            @mkdir($publicStaffDir, 0755, true);
+        }
+
+        if (is_dir($teachersDetailsDir)) {
+            $map = [
+                'Mr. Amit Thakare Accountant BSC Agri.jpg' => 'amit-thakare.jpg',
+                'Mr. Amol Palekar TGT B.sc B.Ed.jpg' => 'amol-palekar.jpg',
+                'Mr. Anand Rampurkar PRO B.sc CS.jpg' => 'anand-rampurkar.jpg',
+                'Mr. Bhimrao Wakale TGT M.A B.Ed.jpg' => 'bhimrao-wakale.jpg',
+                'Mr. Deependra Singh TGT M.sc B.Ed.jpg' => 'deependra-singh.jpg',
+                'Mr. Krushna Mane PRT M.sc.jpg' => 'krushna-mane.jpg',
+                'Mr. Shivdas Shinde TGT M.Phil B.Ed.jpg' => 'shivdas-shinde.jpg',
+                'Mr. Shrikant Jogdand M.A M.Lib.jpg' => 'shrikant-jogdand.jpg',
+                'Mr. Shrikant Jogdand M.A M.Lib.jpg.jpeg' => 'shrikant-jogdand.jpg',
+                'Mr. Siddharth Nagthankar TGT M.fa Painting B.Ed.png' => 'siddharth-nagthankar.png',
+                'Mr. Sumit Rodge TGT M.sc B.Ed.png' => 'sumit-rodge.png',
+                'Ms Radhika Deshmukh NTT B.A B.Ed.jpg' => 'radhika-deshmukh.jpg',
+                'Ms. Anjali Iyer TGT M.A B.Ed.jpg' => 'anjali-iyer.jpg',
+                'Ms. Ivy Brown Principal M.A M.Ed.jpeg' => 'ivy-brown.jpeg',
+                'Ms. Ivy Brown Principal M.A M.Ed (1).jpeg' => 'ivy-brown.jpeg',
+                'Ms. Jagruti Pingalkar Wealness Teacher M.A B.Ed.jpg' => 'jagruti-pingalkar.jpg',
+                'Ms. Pooja Gondal PRT BA.jpg' => 'pooja-gondal.jpg',
+                'Ms. Priyanka Raut PRT M.A.jpg' => 'priyanka-raut.jpg',
+                'Ms. Sarita Swami NTT B.sc Ecce.jpg' => 'sarita-swami.jpg',
+                'Ms. Sayali Aade PRT B.Fa ATD Ecce.jpg' => 'sayali-aade.jpg',
+                'Ms. Sayali Aade PRT B.Fa ATD Ecce.jpg.jpeg' => 'sayali-aade.jpg',
+                'Ms. Shally Agrawal PRT B.A B.Ed.jpg' => 'shally-agrawal.jpg',
+                'Ms. Snehal Chavan NTT B.sc Ecce.png' => 'snehal-chavan.png',
+                'Ms. Suraj Jogdand PRT B.Tech.jpg' => 'suraj-jogdand.jpg',
+                'Ms. Urmila Durugkar Wealness Teacher M.A B.Ed.jpg' => 'urmila-durugkar.jpg',
+                'Ms. Urmila Nitnaware TGT M.A B.Ed.jpg' => 'urmila-nitnaware.jpg',
+                'Ms. Vaishali Maske TGT Mcm.jpg' => 'vaishali-maske.jpg',
+                'Ms. Vidya Kale NTT B.Sc.jpg' => 'vidya-kale.jpg',
+                'Mr. Avinash Hanchate Accountant B.Com.jpeg' => 'avinash-hanchate.jpeg',
+                'Mr. Dinesh Halge TGT B.Sc B.D.S..png' => 'dinesh-halge.png',
+                'Mr. Rajukumar Prajapati PRT B.E B.Ed.jpeg' => 'rajukumar-prajapati.jpeg',
+                'Ms. Kemelia Sarkar PRT M.Sc.jpeg' => 'kemelia-sarkar.jpeg',
+                'Ms. Priya Pande M.Com.png' => 'priya-pande.png',
+                'Ms. Sarika Harale PRT MCA.png' => 'sarika-harale.png',
+                'Ms. Vandana Palkar NTT  M.Com Ecce.png' => 'vandana-palkar.png',
+            ];
+
+            foreach ($map as $orig => $slug) {
+                $src = $teachersDetailsDir.'/'.$orig;
+                $destSlug = $publicStaffDir.'/'.$slug;
+                $destOrig = $publicStaffDir.'/'.$orig;
+
+                if (file_exists($src)) {
+                    if (! file_exists($destSlug)) {
+                        @copy($src, $destSlug);
+                    }
+                    if (! file_exists($destOrig)) {
+                        @copy($src, $destOrig);
+                    }
+                }
+            }
+        }
 
         // Clean out legacy records
         StaffMember::truncate();

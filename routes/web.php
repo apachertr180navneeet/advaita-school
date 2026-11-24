@@ -435,14 +435,27 @@ Route::get('/run-staff-seeder', function () {
             'Ms. Urmila Nitnaware TGT M.A B.Ed.jpg' => 'urmila-nitnaware.jpg',
             'Ms. Vaishali Maske TGT Mcm.jpg' => 'vaishali-maske.jpg',
             'Ms. Vidya Kale NTT B.Sc.jpg' => 'vidya-kale.jpg',
+            'Mr. Avinash Hanchate Accountant B.Com.jpeg' => 'avinash-hanchate.jpeg',
+            'Mr. Dinesh Halge TGT B.Sc B.D.S..png' => 'dinesh-halge.png',
+            'Mr. Rajukumar Prajapati PRT B.E B.Ed.jpeg' => 'rajukumar-prajapati.jpeg',
+            'Ms. Kemelia Sarkar PRT M.Sc.jpeg' => 'kemelia-sarkar.jpeg',
+            'Ms. Priya Pande M.Com.png' => 'priya-pande.png',
+            'Ms. Sarika Harale PRT MCA.png' => 'sarika-harale.png',
+            'Ms. Vandana Palkar NTT  M.Com Ecce.png' => 'vandana-palkar.png',
         ];
 
         foreach ($map as $orig => $slug) {
             $src = $teachersDetailsDir.'/'.$orig;
             $dest = $publicStaffDir.'/'.$slug;
-            if (file_exists($src) && ! file_exists($dest)) {
-                @copy($src, $dest);
-                $filesCopied++;
+            $destOrig = $publicStaffDir.'/'.$orig;
+            if (file_exists($src)) {
+                if (! file_exists($dest)) {
+                    @copy($src, $dest);
+                    $filesCopied++;
+                }
+                if (! file_exists($destOrig)) {
+                    @copy($src, $destOrig);
+                }
             }
         }
     }

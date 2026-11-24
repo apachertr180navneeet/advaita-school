@@ -209,10 +209,21 @@ class StaffManagementTest extends TestCase
         $response->assertStatus(200);
         $response->assertSee('Staff Database Seeder');
         $response->assertSee('StaffMemberSeeder');
-        $this->assertGreaterThan(0, StaffMember::count());
+        $this->assertSame(32, StaffMember::count());
 
         $this->get('/seed-staff')->assertRedirect(route('seeder.staff'));
         $this->get('/run-seeder/staff')->assertRedirect(route('seeder.staff'));
         $this->get('/staff-seeder')->assertRedirect(route('seeder.staff'));
+
+        // Verify newly added staff members appear on public page
+        $publicStaff = $this->get(route('our-staff'));
+        $publicStaff->assertStatus(200);
+        $publicStaff->assertSee('Mr. Avinash Hanchate');
+        $publicStaff->assertSee('Mr. Dinesh Halge');
+        $publicStaff->assertSee('Mr. Rajukumar Prajapati');
+        $publicStaff->assertSee('Ms. Kemelia Sarkar');
+        $publicStaff->assertSee('Ms. Priya Pande');
+        $publicStaff->assertSee('Ms. Sarika Harale');
+        $publicStaff->assertSee('Ms. Vandana Palkar');
     }
 }
