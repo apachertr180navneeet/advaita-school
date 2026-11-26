@@ -11270,7 +11270,7 @@ html, body {
     }
 }
 
-@media (min-width: 992px) {
+@media (max-width: 991px) {
     .adv-blog-page-wrapper .adv-blog-sidebar {
         display: none !important;
     }
