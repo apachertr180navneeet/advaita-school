@@ -26,7 +26,7 @@ class WelcomeSectionController extends Controller
             'image_dimensions' => $imageSpecs['dimensions'],
             'image_tag' => Setting::get('welcome_image_tag', 'Excellence in Every Child'),
 
-            'badge_title' => Setting::get('welcome_badge_title', 'Play Group'),
+            'badge_title' => Setting::get('welcome_badge_title', 'Play Group to Xth'),
             'badge_sub' => Setting::get('welcome_badge_sub', 'CBSE Affiliation No. 1130920'),
 
             'eyebrow' => Setting::get('welcome_eyebrow', 'ABOUT OUR SCHOOL'),

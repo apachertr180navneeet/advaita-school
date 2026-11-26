@@ -285,7 +285,7 @@
                                 <i class="fa-solid fa-graduation-cap"></i>
                             </div>
                             <div class="adv-trust-badge-content">
-                                <span class="adv-trust-num">{{ $welcomeSettings['badge_title'] ?? 'Play Group' }}</span>
+                                <span class="adv-trust-num">{{ $welcomeSettings['badge_title'] ?? 'Play Group to Xth' }}</span>
                                 <span class="adv-trust-sub">{{ $welcomeSettings['badge_sub'] ?? 'CBSE Affiliation No. 1130920' }}</span>
                             </div>
                         </div>

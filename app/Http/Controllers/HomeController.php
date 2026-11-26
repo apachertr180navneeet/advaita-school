@@ -60,7 +60,7 @@ class HomeController extends Controller
         $welcomeSettings = [
             'image' => Setting::get('welcome_image', 'assets/images/about-advaita-visual-clean.jpg?v=3'),
             'image_tag' => Setting::get('welcome_image_tag', 'Excellence in Every Child'),
-            'badge_title' => Setting::get('welcome_badge_title', 'Play Group'),
+            'badge_title' => Setting::get('welcome_badge_title', 'Play Group to Xth'),
             'badge_sub' => Setting::get('welcome_badge_sub', 'CBSE Affiliation No. '.Setting::get('site_affiliation_no', '1130920')),
             'eyebrow' => Setting::get('welcome_eyebrow', 'ABOUT OUR SCHOOL'),
             'heading_prefix' => Setting::get('welcome_heading_prefix', 'Welcome to'),

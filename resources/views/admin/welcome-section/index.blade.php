@@ -173,7 +173,7 @@
                             <span>Trust Badge Main Text</span>
                             <span class="text-danger">*</span>
                         </label>
-                        <input type="text" id="inputBadgeTitle" name="badge_title" class="form-input-item" value="{{ old('badge_title', $settings['badge_title']) }}" required placeholder="e.g. Play Group" maxlength="100">
+                        <input type="text" id="inputBadgeTitle" name="badge_title" class="form-input-item" value="{{ old('badge_title', $settings['badge_title']) }}" required placeholder="e.g. Play Group to Xth" maxlength="100">
                         @error('badge_title')
                             <span class="text-danger fs-11">{{ $message }}</span>
                         @enderror
@@ -378,7 +378,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     bindInputToPreview('inputImageTag', 'previewImageTag', 'Excellence in Every Child');
-    bindInputToPreview('inputBadgeTitle', 'previewBadgeTitle', 'Play Group');
+    bindInputToPreview('inputBadgeTitle', 'previewBadgeTitle', 'Play Group to Xth');
     bindInputToPreview('inputBadgeSub', 'previewBadgeSub', 'CBSE Affiliation No. 1130920');
 
     bindInputToPreview('inputEyebrow', 'previewEyebrow', 'ABOUT OUR SCHOOL');
