@@ -6,6 +6,10 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', 'Advaita School of Excellence - Sanmati Sevabhavi Sanstha')</title>
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}?v={{ file_exists(public_path('favicon.ico')) ? filemtime(public_path('favicon.ico')) : '1.0' }}">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}?v={{ file_exists(public_path('favicon.ico')) ? filemtime(public_path('favicon.ico')) : '1.0' }}">
+
     <!-- Meta Description & Keywords -->
     <meta name="description" content="@yield('meta_description', 'Advaita School of Excellence, Parbhani - CBSE Affiliated English Medium School (No. 1130920). Nurturing young minds through holistic education, modern STEAM labs, and values-based learning.')">
     <meta name="keywords" content="@yield('meta_keywords', 'Advaita School of Excellence, CBSE School Parbhani, Best School in Parbhani, CBSE Affiliated School 1130920, Robotics Lab School, English Medium School Parbhani')">
@@ -53,16 +57,16 @@
                 <div class="adv-preloader-aura"></div>
                 <div class="adv-preloader-spinner-ring"></div>
                 <div class="adv-preloader-logo-circle">
-                    <img src="{{ asset('assets/images/loader-logo.png') }}" alt="Advaita School of Excellence Loading..." class="adv-preloader-img" loading="eager">
+                    <img src="{{ asset('assets/images/loader-logo.png') }}?v={{ file_exists(public_path('assets/images/loader-logo.png')) ? filemtime(public_path('assets/images/loader-logo.png')) : '1.0' }}" alt="Advaita School of Excellence Loading..." class="adv-preloader-img" loading="eager">
                 </div>
             </div>
-            <div class="adv-preloader-brand">
+            <!-- <div class="adv-preloader-brand">
                 <span class="adv-preloader-title">ADVAITA</span>
                 <span class="adv-preloader-subtitle">SCHOOL OF EXCELLENCE</span>
             </div>
             <div class="adv-preloader-progress-track">
                 <div class="adv-preloader-progress-bar"></div>
-            </div>
+            </div> -->
         </div>
     </div>
 
