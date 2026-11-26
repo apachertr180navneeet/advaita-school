@@ -3060,13 +3060,13 @@ html, body {
     .about-page-wrapper .admission-banner .students img,
     .staff-join-section .students img {
         height: 100% !important;
-        max-height: 360px !important;
+        max-height: 100% !important;
         width: auto !important;
         max-width: 100% !important;
         margin-left: 0 !important;
         object-fit: contain !important;
         object-position: bottom left !important;
-        transform: scale(1.12) !important;
+        transform: none !important;
         transform-origin: bottom left !important;
         display: block !important;
         margin-right: auto !important;

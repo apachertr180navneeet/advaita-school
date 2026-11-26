@@ -335,11 +335,6 @@
         <div class="shape-two"></div>
         <div class="shape-three"></div>
 
-        <!-- Left Graphic: Paper Airplane Image -->
-        <div class="staff-join-plane-left" aria-hidden="true">
-            <img src="{{ asset('assets/images/staff-airplane-trail.svg') }}" alt="Paper Airplane Trail" class="staff-join-plane-img" loading="lazy">
-        </div>
-
         <!-- Center Content -->
         <div class="banner-content-center">
             <div class="copy-center">
