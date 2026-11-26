@@ -6581,7 +6581,6 @@ html, body {
     .admission-page-wrapper .quick-actions-grid .qa-card.qa-card-banner,
     .admission-page-wrapper .qa-card.qa-card-banner {
         grid-column: 1 / -1 !important;
-        grid-column: 1 / span 2 !important;
         width: 100% !important;
         max-width: 100% !important;
         min-width: 0 !important;
@@ -9286,7 +9285,6 @@ html, body {
         color: #083B7A !important;
         transform: translateY(-2px) !important;
     }
-}
 
 /* ==========================================================================
    Contact Page - Clean Split Desktop & 2x2 Mobile Responsive Layout
