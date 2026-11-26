@@ -5581,6 +5581,10 @@
         right: 12px !important;
         transform: scale(0.72) rotate(-3deg) !important;
     }
+    .about-page-wrapper .about-hero-script-tag,
+    .vision-page-wrapper .vision-hero-script-tag {
+        display: none !important;
+    }
     .about-hero-title,
     .staff-hero-title,
     .chairman-hero-title,

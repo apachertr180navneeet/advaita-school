@@ -2,6 +2,16 @@
 
 @section('title', "About Us - Advaita School of Excellence, Parbhani | Premier CBSE School")
 
+@section('styles')
+<style>
+@media (max-width: 991px) {
+    .about-page-wrapper .about-hero-script-tag {
+        display: none !important;
+    }
+}
+</style>
+@endsection
+
 @section('content')
 <main id="main" class="main-content-wrapper about-page-wrapper">
 

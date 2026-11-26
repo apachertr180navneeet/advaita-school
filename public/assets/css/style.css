@@ -334,6 +334,11 @@ p {
         display: flex !important;
     }
 
+    .about-page-wrapper .about-hero-script-tag,
+    .vision-page-wrapper .vision-hero-script-tag {
+        display: none !important;
+    }
+
     /* 6. Universal Inner Page Hero Content: Tablet Typography (Left-Aligned) */
     .about-hero-left-panel,
     .staff-hero-left-panel,
@@ -3044,11 +3049,11 @@ html, body {
     .about-page-wrapper .admission-banner .students,
     .staff-join-section .students {
         position: absolute !important;
-        left: 0 !important;
+        left: max(24px, calc((100% - 1200px) / 2)) !important;
         right: auto !important;
         bottom: 0 !important;
-        width: 44% !important;
-        max-width: 480px !important;
+        width: 48% !important;
+        max-width: 560px !important;
         height: 100% !important;
         display: flex !important;
         align-items: flex-end !important;
@@ -3062,12 +3067,14 @@ html, body {
     .about-page-wrapper .admission-banner .students img,
     .staff-join-section .students img {
         height: 100% !important;
-        max-height: 310px !important;
-        width: 110% !important;
-        max-width: none !important;
-        margin-left: -8% !important;
+        max-height: 360px !important;
+        width: auto !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
         object-fit: contain !important;
         object-position: bottom left !important;
+        transform: scale(1.12) !important;
+        transform-origin: bottom left !important;
         display: block !important;
         margin-right: auto !important;
     }
@@ -3077,7 +3084,7 @@ html, body {
     .staff-join-section .banner-content-center {
         position: relative !important;
         z-index: 5 !important;
-        min-height: 270px !important;
+        min-height: 340px !important;
         display: flex !important;
         align-items: center !important;
         justify-content: flex-end !important;
@@ -3552,17 +3559,18 @@ html, body {
         margin: 0 auto !important;
     }
 
-    /* Section 7: Admission & Repeating CTA Banners Mobile 2-Column (Image Pura Left, Text Pura Right) */
+    /* Section 7: Admission & Repeating CTA Banners Mobile 2-Column (40% Tall Image Left, 60% Text Right) */
     .admission-banner,
     .about-page-wrapper .admission-banner,
     .staff-join-section {
-        min-height: 195px !important;
-        padding: 10px 12px 8px 0 !important;
+        min-height: 225px !important;
+        padding: 14px 12px 14px 0 !important;
         margin: 16px auto !important;
         display: flex !important;
         flex-direction: row !important;
-        align-items: center !important;
+        align-items: stretch !important;
         justify-content: space-between !important;
+        gap: 6px !important;
         overflow: hidden !important;
         position: relative !important;
         border-radius: 18px !important;
@@ -3575,13 +3583,13 @@ html, body {
         order: 2 !important;
         position: relative !important;
         z-index: 6 !important;
-        width: 50% !important;
-        flex: 0 0 50% !important;
-        max-width: 50% !important;
+        width: 60% !important;
+        flex: 0 0 60% !important;
+        max-width: 60% !important;
         min-width: 0 !important;
         min-height: auto !important;
         height: auto !important;
-        padding: 2px 0 2px 6px !important;
+        padding: 4px 0 4px 6px !important;
         margin: 0 0 0 auto !important;
         display: flex !important;
         flex-direction: column !important;
@@ -3611,11 +3619,11 @@ html, body {
     .staff-join-section .eyebrow {
         text-align: right !important;
         width: 100% !important;
-        font-size: clamp(8.5px, 2.5vw, 10.5px) !important;
-        letter-spacing: 1px !important;
+        font-size: clamp(8.5px, 2.3vw, 10px) !important;
+        letter-spacing: 0.8px !important;
         font-weight: 800 !important;
         color: #2681c7 !important;
-        margin: 0 0 3px !important;
+        margin: 0 0 4px !important;
         line-height: 1.2 !important;
         text-transform: uppercase !important;
     }
@@ -3634,11 +3642,11 @@ html, body {
         text-align: right !important;
         width: 100% !important;
         max-width: 100% !important;
-        font-size: clamp(14px, 3.8vw, 18px) !important;
+        font-size: clamp(14px, 3.8vw, 17px) !important;
         line-height: 1.2 !important;
         font-weight: 800 !important;
         color: #102f54 !important;
-        margin: 0 0 5px !important;
+        margin: 0 0 6px !important;
         word-break: break-word !important;
     }
 
@@ -3648,14 +3656,13 @@ html, body {
         text-align: right !important;
         width: 100% !important;
         max-width: 100% !important;
-        font-size: clamp(9.5px, 2.4vw, 11px) !important;
-        line-height: 1.35 !important;
+        font-size: clamp(10px, 2.5vw, 11.5px) !important;
+        line-height: 1.38 !important;
         color: #557291 !important;
         margin: 0 0 10px !important;
-        display: -webkit-box !important;
-        -webkit-line-clamp: 3 !important;
-        -webkit-box-orient: vertical !important;
-        overflow: hidden !important;
+        display: block !important;
+        -webkit-line-clamp: unset !important;
+        overflow: visible !important;
     }
 
     .admission-banner .buttons,
@@ -3677,7 +3684,7 @@ html, body {
     .admission-banner .btn-visit,
     .staff-btn-orange,
     .staff-btn-outline {
-        height: 33px !important;
+        height: 34px !important;
         width: 100% !important;
         max-width: 100% !important;
         min-width: 0 !important;
@@ -3712,17 +3719,16 @@ html, body {
     .staff-join-section .students {
         order: 1 !important;
         position: relative !important;
-        width: 50% !important;
-        flex: 0 0 50% !important;
-        max-width: 50% !important;
+        width: 40% !important;
+        flex: 0 0 40% !important;
+        max-width: 40% !important;
         min-width: 0 !important;
-        height: 100% !important;
-        max-height: 100% !important;
-        margin: 0 !important;
+        height: auto !important;
+        margin: 0 0 -14px 0 !important;
         padding: 0 !important;
         display: flex !important;
         align-items: flex-end !important;
-        align-self: flex-end !important;
+        align-self: stretch !important;
         justify-content: flex-start !important;
         bottom: 0 !important;
         right: auto !important;
@@ -3734,14 +3740,16 @@ html, body {
     .admission-banner .students img,
     .about-page-wrapper .admission-banner .students img,
     .staff-join-section .students img {
-        width: 124% !important;
+        width: 125% !important;
         max-width: none !important;
-        margin-left: -14% !important;
+        margin-left: -10% !important;
         margin-bottom: 0 !important;
-        height: auto !important;
-        max-height: 200px !important;
+        height: 100% !important;
+        max-height: 260px !important;
         object-fit: contain !important;
         object-position: bottom left !important;
+        transform: scale(1.16) !important;
+        transform-origin: bottom left !important;
         display: block !important;
     }
 
@@ -4018,19 +4026,22 @@ html, body {
         line-height: 1.32 !important;
     }
 
-    /* Small Mobile Admission & Repeating CTA Banners 2-Column Format (Pura Left, Pura Right) */
+    /* Small Mobile Admission & Repeating CTA Banners 2-Column 40/60 */
     .admission-banner,
     .about-page-wrapper .admission-banner,
     .staff-join-section {
-        padding: 8px 10px 6px 0 !important;
-        min-height: 180px !important;
+        padding: 12px 10px 12px 0 !important;
+        min-height: 210px !important;
         margin: 12px auto !important;
-        align-items: center !important;
+        align-items: stretch !important;
     }
 
     .admission-banner .banner-content,
     .about-page-wrapper .admission-banner .banner-content,
     .staff-join-section .banner-content-center {
+        width: 60% !important;
+        flex: 0 0 60% !important;
+        max-width: 60% !important;
         min-height: auto !important;
         height: auto !important;
         padding: 2px 0 2px 4px !important;
@@ -4054,8 +4065,9 @@ html, body {
     .about-page-wrapper .admission-banner .subtext,
     .staff-join-section .subtext {
         font-size: 9.5px !important;
+        line-height: 1.35 !important;
         margin-bottom: 8px !important;
-        -webkit-line-clamp: 2 !important;
+        -webkit-line-clamp: unset !important;
         text-align: right !important;
     }
 
@@ -4072,26 +4084,23 @@ html, body {
     .admission-banner .btn-visit,
     .staff-btn-orange,
     .staff-btn-outline {
-        height: 29px !important;
-        padding: 0 6px !important;
-        font-size: clamp(8px, 2.3vw, 9.5px) !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        white-space: nowrap !important;
+        height: 31px !important;
+        font-size: clamp(8.5px, 2.3vw, 10px) !important;
+        padding: 0 8px !important;
         gap: 4px !important;
     }
 
     .admission-banner .students,
     .about-page-wrapper .admission-banner .students,
     .staff-join-section .students {
-        width: 50% !important;
-        flex: 0 0 50% !important;
-        max-width: 50% !important;
+        width: 40% !important;
+        flex: 0 0 40% !important;
+        max-width: 40% !important;
         min-width: 0 !important;
-        height: 100% !important;
-        margin: 0 !important;
+        height: auto !important;
+        margin: 0 0 -12px 0 !important;
         justify-content: flex-start !important;
-        align-self: flex-end !important;
+        align-self: stretch !important;
         right: auto !important;
         left: 0 !important;
     }
@@ -4099,11 +4108,14 @@ html, body {
     .admission-banner .students img,
     .about-page-wrapper .admission-banner .students img,
     .staff-join-section .students img {
-        width: 124% !important;
+        width: 125% !important;
         max-width: none !important;
-        margin-left: -14% !important;
-        max-height: 185px !important;
+        margin-left: -10% !important;
+        height: 100% !important;
+        max-height: 235px !important;
         object-position: bottom left !important;
+        transform: scale(1.18) !important;
+        transform-origin: bottom left !important;
     }
 }
 

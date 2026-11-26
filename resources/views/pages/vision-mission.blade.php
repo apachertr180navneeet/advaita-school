@@ -2,6 +2,16 @@
 
 @section('title', "Vision & Mission - Advaita School of Excellence, Parbhani")
 
+@section('styles')
+<style>
+@media (max-width: 991px) {
+    .vision-page-wrapper .vision-hero-script-tag {
+        display: none !important;
+    }
+}
+</style>
+@endsection
+
 @section('content')
 <main id="main" class="main-content-wrapper vision-page-wrapper">
 
