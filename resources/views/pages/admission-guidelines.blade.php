@@ -1781,7 +1781,7 @@ body {
    10. Counsellor Helpline Desk
    ========================================================================== */
 .admission-page-wrapper .admission-helpline-section {
-    padding: 60px 0 !important;
+    padding: 56px 0 0 !important;
     background: #f8fafc !important;
 }
 
@@ -2063,7 +2063,10 @@ body {
         flex-direction: column !important;
         align-items: center !important;
         text-align: center !important;
-        padding: 24px 20px !important;
+        padding: 24px 18px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
     }
 
     .admission-page-wrapper .qa-card.qa-card-banner > div:first-child,
@@ -2073,22 +2076,43 @@ body {
         text-align: center !important;
         gap: 12px !important;
         margin-bottom: 16px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        flex: none !important;
+        box-sizing: border-box !important;
     }
 
     .admission-page-wrapper .qa-banner-text {
         align-items: center !important;
         text-align: center !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        flex: none !important;
+        box-sizing: border-box !important;
     }
 
-    .admission-page-wrapper .qa-banner-title-row {
+    .admission-page-wrapper .qa-banner-title-row,
+    .admission-page-wrapper .qa-banner-text .d-flex {
         flex-direction: column !important;
+        flex-wrap: wrap !important;
         align-items: center !important;
-        gap: 6px !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
     }
 
     .admission-page-wrapper .qa-banner-text .qa-card-title,
     .admission-page-wrapper .qa-banner-text .qa-card-desc {
         text-align: center !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        white-space: normal !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
     }
 
     .admission-page-wrapper .qa-banner-action {
@@ -2250,8 +2274,20 @@ body {
         padding: 22px 18px !important;
     }
 
+    .admission-page-wrapper .procedure-card-icon {
+        margin: 0 auto !important;
+    }
+
     .admission-page-wrapper .procedure-card-body {
+        width: 100% !important;
         align-items: center !important;
+        text-align: center !important;
+    }
+
+    .admission-page-wrapper .procedure-card-title,
+    .admission-page-wrapper .procedure-card-desc {
+        text-align: center !important;
+        width: 100% !important;
     }
 
     .admission-page-wrapper .procedure-cta-banner {
@@ -2261,15 +2297,32 @@ body {
         padding: 26px 18px !important;
     }
 
+    .admission-page-wrapper .cta-banner-content {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .admission-page-wrapper .cta-banner-eyebrow,
+    .admission-page-wrapper .cta-banner-title,
+    .admission-page-wrapper .cta-banner-desc {
+        text-align: center !important;
+    }
+
     .admission-page-wrapper .cta-banner-buttons {
         flex-direction: column !important;
+        align-items: center !important;
         width: 100% !important;
         max-width: 320px !important;
+        margin: 0 auto !important;
     }
 
     .admission-page-wrapper .btn-cta-main,
     .admission-page-wrapper .btn-cta-alt {
         width: 100% !important;
+        justify-content: center !important;
     }
 
     /* Section D */
@@ -2277,6 +2330,52 @@ body {
         display: flex !important;
         flex-direction: column !important;
         gap: 16px !important;
+    }
+
+    .admission-page-wrapper .eligibility-card {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .admission-page-wrapper .eligibility-card-header {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        gap: 10px !important;
+        width: 100% !important;
+    }
+
+    .admission-page-wrapper .eligibility-icon-wrap {
+        margin: 0 auto !important;
+    }
+
+    .admission-page-wrapper .eligibility-grade-badge {
+        display: inline-block !important;
+        margin: 0 auto 6px !important;
+    }
+
+    .admission-page-wrapper .eligibility-rule-title,
+    .admission-page-wrapper .eligibility-card-body,
+    .admission-page-wrapper .eligibility-detail-text {
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .admission-page-wrapper .eligibility-card-footer {
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        width: 100% !important;
+    }
+
+    .admission-page-wrapper .cbse-warning-tag,
+    .admission-page-wrapper .cbse-ok-tag {
+        justify-content: center !important;
+        text-align: center !important;
+        margin: 0 auto !important;
     }
 
     /* Section E */
@@ -2290,20 +2389,47 @@ body {
         text-align: center !important;
     }
 
+    .admission-page-wrapper .instructions-header > div:first-child {
+        margin: 0 auto !important;
+    }
+
+    .admission-page-wrapper .instructions-title,
+    .admission-page-wrapper .instructions-subtitle {
+        text-align: center !important;
+    }
+
     .admission-page-wrapper .instructions-list {
         display: flex !important;
         flex-direction: column !important;
         gap: 10px !important;
     }
 
+    .admission-page-wrapper .instruction-item {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 10px !important;
+    }
+
+    .admission-page-wrapper .instruction-icon {
+        margin: 0 auto !important;
+    }
+
+    .admission-page-wrapper .instruction-text {
+        text-align: center !important;
+        width: 100% !important;
+    }
+
     .admission-page-wrapper .instructions-footer-note {
         flex-direction: column !important;
+        align-items: center !important;
         text-align: center !important;
+        gap: 6px !important;
     }
 
     /* Helpline */
     .admission-page-wrapper .admission-helpline-section {
-        padding: 36px 0 48px !important;
+        padding: 36px 0 0 !important;
     }
 
     .admission-page-wrapper .helpline-card {
@@ -2394,9 +2520,64 @@ body {
         align-items: center !important;
         justify-content: center !important;
         text-align: center !important;
+        width: 100% !important;
     }
 
-    .admission-page-wrapper .doc-item-desc {
+    .admission-page-wrapper .doc-item-title,
+    .admission-page-wrapper .doc-item-desc,
+    .admission-page-wrapper .docs-title,
+    .admission-page-wrapper .docs-subtitle,
+    .admission-page-wrapper .docs-header-title,
+    .admission-page-wrapper .docs-header-sub,
+    .admission-page-wrapper .verification-text,
+    .admission-page-wrapper .guidelines-table-title,
+    .admission-page-wrapper .guidelines-table-subtitle,
+    .admission-page-wrapper .cutoff-text,
+    .admission-page-wrapper .cutoff-title,
+    .admission-page-wrapper .cutoff-desc,
+    .admission-page-wrapper .phased-box-title,
+    .admission-page-wrapper .phased-box-desc,
+    .admission-page-wrapper .phased-title,
+    .admission-page-wrapper .phased-desc,
+    .admission-page-wrapper .disclaimer-text,
+    .admission-page-wrapper .age-table-note,
+    .admission-page-wrapper .helpline-eyebrow,
+    .admission-page-wrapper .helpline-title,
+    .admission-page-wrapper .helpline-desc {
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .admission-page-wrapper .guidelines-table-header,
+    .admission-page-wrapper .phased-box-header,
+    .admission-page-wrapper .guidelines-disclaimer-card {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .admission-page-wrapper .phased-badge,
+    .admission-page-wrapper .disclaimer-icon,
+    .admission-page-wrapper .docs-header-icon-wrap {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .admission-page-wrapper .doc-item-top {
+        flex-direction: column !important;
+        gap: 6px !important;
+    }
+
+    .admission-page-wrapper .helpline-left,
+    .admission-page-wrapper .helpline-meta-list {
+        align-items: center !important;
+        text-align: center !important;
+        width: 100% !important;
+    }
+
+    .admission-page-wrapper .helpline-meta-list .meta-item {
+        justify-content: center !important;
         text-align: center !important;
     }
 }
