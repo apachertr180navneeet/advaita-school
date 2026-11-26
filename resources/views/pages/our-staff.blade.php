@@ -7,6 +7,28 @@
 @endsection
 
 @section('content')
+@php
+    $resolveAsset = static function (string $path): string {
+        return (str_starts_with($path, 'http://') || str_starts_with($path, 'https://'))
+            ? $path
+            : asset(ltrim($path, '/'));
+    };
+
+    $heroImg = $resolveAsset($content['hero_image'] ?? 'assets/images/about-hero-building.jpg');
+    $ctaImg = $resolveAsset($content['cta_image'] ?? 'assets/images/about-cta-students-trio.png');
+    $thumb1 = $resolveAsset($content['showcase_img1'] ?? 'assets/images/staff-thumb-1.jpg');
+    $thumb2 = $resolveAsset($content['showcase_img2'] ?? 'assets/images/staff-thumb-2.jpg');
+    $thumb3 = $resolveAsset($content['showcase_img3'] ?? 'assets/images/staff-thumb-3.jpg');
+
+    $ctaBtn1Url = !empty($content['cta_btn1_url']) ? $content['cta_btn1_url'] : route('home') . '#contact';
+    $rawBtn2 = $content['cta_btn2_email'] ?? 'admissions.advaita@gmail.com';
+    $ctaBtn2Url = (str_starts_with($rawBtn2, 'http://') || str_starts_with($rawBtn2, 'https://') || str_starts_with($rawBtn2, 'mailto:'))
+        ? $rawBtn2
+        : 'mailto:' . $rawBtn2;
+
+    $showcaseBtn1Url = !empty($content['showcase_btn1_url']) ? $content['showcase_btn1_url'] : route('home') . '#admissions';
+    $showcaseBtn2Url = !empty($content['showcase_btn2_url']) ? $content['showcase_btn2_url'] : route('home') . '#campus-life';
+@endphp
 <div class="faculty-page-wrapper">
 
     <!-- =========================================================================
@@ -16,7 +38,7 @@
         <div class="staff-hero-canvas">
             <!-- Background Image & Sky on the Right -->
             <div class="staff-hero-bg-visual" aria-hidden="true">
-                <img src="{{ asset('assets/images/about-hero-building.jpg') }}" alt="Advaita School of Excellence Campus" class="staff-hero-bg-img" loading="eager">
+                <img src="{{ $heroImg }}" alt="Advaita School of Excellence Campus" class="staff-hero-bg-img" loading="eager">
                 <!-- Floating Script Badge in Sky -->
                 <div class="staff-hero-script-tag">
                     <span class="script-title">More<br>Than A School</span>
@@ -62,15 +84,15 @@
                         <span class="active">Our Faculty</span>
                     </div>
 
-                    <div class="staff-eyebrow">OUR FACULTY</div>
+                    <div class="staff-eyebrow">{{ $content['hero_eyebrow'] ?? 'OUR FACULTY' }}</div>
                     <h1 class="staff-hero-title">
-                        Meet the Educators<br>
-                        Who Inspire Every<br>
-                        <span class="text-orange">Advaita</span> Learner.
+                        {{ $content['hero_title_line1'] ?? 'Meet the Educators' }}<br>
+                        {{ $content['hero_title_line2'] ?? 'Who Inspire Every' }}<br>
+                        <span class="text-orange">{{ $content['hero_title_highlight'] ?? 'Advaita' }}</span> {{ $content['hero_title_suffix'] ?? 'Learner.' }}
                     </h1>
                     
                     <p class="staff-hero-desc">
-                        Our teachers are more than subject experts — they are mentors, role models and lifelong guides who nurture curiosity, build confidence and inspire every child to excel in academics and in life.
+                        {{ $content['hero_desc'] ?? 'Our teachers are more than subject experts — they are mentors, role models and lifelong guides who nurture curiosity, build confidence and inspire every child to excel in academics and in life.' }}
                     </p>
                 </div>
             </div>
@@ -84,8 +106,8 @@
                         <i class="fa-solid fa-users"></i>
                     </div>
                     <div class="staff-stat-info">
-                        <span class="staff-stat-num">80+</span>
-                        <span class="staff-stat-label">Total Faculty</span>
+                        <span class="staff-stat-num">{{ $content['stat1_num'] ?? '80+' }}</span>
+                        <span class="staff-stat-label">{{ $content['stat1_label'] ?? 'Total Faculty' }}</span>
                     </div>
                 </div>
 
@@ -94,8 +116,8 @@
                         <i class="fa-solid fa-book-open"></i>
                     </div>
                     <div class="staff-stat-info">
-                        <span class="staff-stat-num">12+</span>
-                        <span class="staff-stat-label">Departments</span>
+                        <span class="staff-stat-num">{{ $content['stat2_num'] ?? '12+' }}</span>
+                        <span class="staff-stat-label">{{ $content['stat2_label'] ?? 'Departments' }}</span>
                     </div>
                 </div>
 
@@ -104,8 +126,8 @@
                         <i class="fa-solid fa-award"></i>
                     </div>
                     <div class="staff-stat-info">
-                        <span class="staff-stat-num">10+</span>
-                        <span class="staff-stat-label">Avg. Years Experience</span>
+                        <span class="staff-stat-num">{{ $content['stat3_num'] ?? '10+' }}</span>
+                        <span class="staff-stat-label">{{ $content['stat3_label'] ?? 'Avg. Years Experience' }}</span>
                     </div>
                 </div>
 
@@ -114,8 +136,8 @@
                         <i class="fa-solid fa-graduation-cap"></i>
                     </div>
                     <div class="staff-stat-info">
-                        <span class="staff-stat-num">100%</span>
-                        <span class="staff-stat-label">Postgraduate Trained</span>
+                        <span class="staff-stat-num">{{ $content['stat4_num'] ?? '100%' }}</span>
+                        <span class="staff-stat-label">{{ $content['stat4_label'] ?? 'Postgraduate Trained' }}</span>
                     </div>
                 </div>
             </div>
@@ -203,19 +225,19 @@
         <!-- Center Content -->
         <div class="banner-content-center">
             <div class="copy-center">
-                <div class="eyebrow">JOIN OUR TEAM</div>
-                <h2 class="headline">Want to Teach with <span class="text-orange">Us?</span></h2>
+                <div class="eyebrow">{{ $content['cta_eyebrow'] ?? 'JOIN OUR TEAM' }}</div>
+                <h2 class="headline">{{ $content['cta_title_prefix'] ?? 'Want to Teach with' }} <span class="text-orange">{{ $content['cta_title_highlight'] ?? 'Us?' }}</span></h2>
                 <p class="subtext">
-                    We are always looking for passionate educators who believe in creating brighter futures. Explore open roles or share your CV with us.
+                    {{ $content['cta_desc'] ?? 'We are always looking for passionate educators who believe in creating brighter futures. Explore open roles or share your CV with us.' }}
                 </p>
                 <div class="buttons">
-                    <a href="{{ route('home') }}#contact" class="staff-btn-orange">
-                        <span>See Open Roles</span>
+                    <a href="{{ $ctaBtn1Url }}" class="staff-btn-orange">
+                        <span>{{ $content['cta_btn1_text'] ?? 'See Open Roles' }}</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
-                    <a href="mailto:admissions.advaita@gmail.com" class="staff-btn-outline">
+                    <a href="{{ $ctaBtn2Url }}" class="staff-btn-outline">
                         <i class="fa-regular fa-envelope"></i>
-                        <span>Send Your CV</span>
+                        <span>{{ $content['cta_btn2_text'] ?? 'Send Your CV' }}</span>
                     </a>
                 </div>
             </div>
@@ -226,7 +248,7 @@
 
         <!-- Students Image on Right -->
         <div class="students">
-            <img src="{{ asset('assets/images/about-cta-students-trio.png') }}" alt="Advaita Students" loading="lazy">
+            <img src="{{ $ctaImg }}" alt="Advaita Students" loading="lazy">
         </div>
     </section>
 
@@ -239,36 +261,36 @@
             <div class="staff-showcase-left">
                 <div class="staff-showcase-bar"></div>
                 <h3 class="staff-showcase-title">
-                    Take a closer look<br>
-                    at life at <span class="text-orange">Advaita.</span>
+                    {{ $content['showcase_title_line1'] ?? 'Take a closer look' }}<br>
+                    {{ $content['showcase_title_prefix'] ?? 'at life at' }} <span class="text-orange">{{ $content['showcase_title_highlight'] ?? 'Advaita.' }}</span>
                 </h3>
                 <p class="staff-showcase-desc">
-                    Visit our campus to meet our faculty, experience our learning environment and see how we shape brighter futures.
+                    {{ $content['showcase_desc'] ?? 'Visit our campus to meet our faculty, experience our learning environment and see how we shape brighter futures.' }}
                 </p>
             </div>
 
             <!-- Middle 3 Image Gallery -->
             <div class="staff-showcase-gallery">
                 <div class="staff-showcase-thumb">
-                    <img src="{{ asset('assets/images/staff-thumb-1.jpg') }}" alt="Advaita Campus Building" class="staff-thumb-img" loading="lazy">
+                    <img src="{{ $thumb1 }}" alt="Advaita Campus Building" class="staff-thumb-img" loading="lazy">
                 </div>
                 <div class="staff-showcase-thumb">
-                    <img src="{{ asset('assets/images/staff-thumb-2.jpg') }}" alt="Advaita Library" class="staff-thumb-img" loading="lazy">
+                    <img src="{{ $thumb2 }}" alt="Advaita Library" class="staff-thumb-img" loading="lazy">
                 </div>
                 <div class="staff-showcase-thumb">
-                    <img src="{{ asset('assets/images/staff-thumb-3.jpg') }}" alt="Advaita Classroom" class="staff-thumb-img" loading="lazy">
+                    <img src="{{ $thumb3 }}" alt="Advaita Classroom" class="staff-thumb-img" loading="lazy">
                 </div>
             </div>
 
             <!-- Right Action Buttons -->
             <div class="staff-showcase-actions">
-                <a href="{{ route('home') }}#admissions" class="staff-showcase-btn-orange">
-                    <span>Book a Campus Visit</span>
+                <a href="{{ $showcaseBtn1Url }}" class="staff-showcase-btn-orange">
+                    <span>{{ $content['showcase_btn1_text'] ?? 'Book a Campus Visit' }}</span>
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
-                <a href="{{ route('home') }}#campus-life" class="staff-showcase-btn-video">
+                <a href="{{ $showcaseBtn2Url }}" class="staff-showcase-btn-video">
                     <i class="fa-solid fa-circle-play"></i>
-                    <span>Watch Campus Video</span>
+                    <span>{{ $content['showcase_btn2_text'] ?? 'Watch Campus Video' }}</span>
                 </a>
             </div>
         </div>

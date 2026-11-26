@@ -246,6 +246,17 @@ class PageController extends Controller
             // Imagery
             'chairman_image' => Setting::get('chairman_image', 'assets/images/chairman-real.png'),
             'hero_image' => Setting::get('chairman_hero_image', 'assets/images/about-hero-building.jpg'),
+
+            // Bottom CTA Banner
+            'cta_eyebrow' => Setting::get('chairman_cta_eyebrow', 'BE A PART OF ADVAITA'),
+            'cta_headline' => Setting::get('chairman_cta_headline', 'Together, let’s build'),
+            'cta_highlight' => Setting::get('chairman_cta_highlight', 'brighter tomorrows.'),
+            'cta_subtext' => Setting::get('chairman_cta_subtext', 'Give your child the right start with strong academics, values and endless opportunities.'),
+            'cta_btn1_text' => Setting::get('chairman_cta_btn1_text', 'Book a Campus Visit'),
+            'cta_btn1_url' => Setting::get('chairman_cta_btn1_url', ''),
+            'cta_btn2_text' => Setting::get('chairman_cta_btn2_text', 'Enquire Now'),
+            'cta_btn2_url' => Setting::get('chairman_cta_btn2_url', ''),
+            'cta_image' => Setting::get('chairman_cta_image', 'assets/images/about-cta-students-trio.png'),
         ];
 
         return view('pages.chairmans-desk', compact('seo', 'content'));
@@ -303,7 +314,57 @@ class PageController extends Controller
             ),
         ];
 
-        return view('pages.our-staff', compact('seo', 'staffMembers', 'staffHeader'));
+        $content = [
+            'hero_eyebrow' => Setting::get('staff_hero_eyebrow', 'OUR FACULTY'),
+            'hero_title_line1' => Setting::get('staff_hero_title_line1', 'Meet the Educators'),
+            'hero_title_line2' => Setting::get('staff_hero_title_line2', 'Who Inspire Every'),
+            'hero_title_highlight' => Setting::get('staff_hero_title_highlight', 'Advaita'),
+            'hero_title_suffix' => Setting::get('staff_hero_title_suffix', 'Learner.'),
+            'hero_desc' => Setting::get(
+                'staff_hero_desc',
+                'Our teachers are more than subject experts — they are mentors, role models and lifelong guides who nurture curiosity, build confidence and inspire every child to excel in academics and in life.'
+            ),
+            'hero_image' => Setting::get('staff_hero_image', 'assets/images/about-hero-building.jpg'),
+
+            'stat1_num' => Setting::get('staff_stat1_num', '80+'),
+            'stat1_label' => Setting::get('staff_stat1_label', 'Total Faculty'),
+            'stat2_num' => Setting::get('staff_stat2_num', '12+'),
+            'stat2_label' => Setting::get('staff_stat2_label', 'Departments'),
+            'stat3_num' => Setting::get('staff_stat3_num', '10+'),
+            'stat3_label' => Setting::get('staff_stat3_label', 'Avg. Years Experience'),
+            'stat4_num' => Setting::get('staff_stat4_num', '100%'),
+            'stat4_label' => Setting::get('staff_stat4_label', 'Postgraduate Trained'),
+
+            'cta_eyebrow' => Setting::get('staff_cta_eyebrow', 'JOIN OUR TEAM'),
+            'cta_title_prefix' => Setting::get('staff_cta_title_prefix', 'Want to Teach with'),
+            'cta_title_highlight' => Setting::get('staff_cta_title_highlight', 'Us?'),
+            'cta_desc' => Setting::get(
+                'staff_cta_desc',
+                'We are always looking for passionate educators who believe in creating brighter futures. Explore open roles or share your CV with us.'
+            ),
+            'cta_btn1_text' => Setting::get('staff_cta_btn1_text', 'See Open Roles'),
+            'cta_btn1_url' => Setting::get('staff_cta_btn1_url', ''),
+            'cta_btn2_text' => Setting::get('staff_cta_btn2_text', 'Send Your CV'),
+            'cta_btn2_email' => Setting::get('staff_cta_btn2_email', 'admissions.advaita@gmail.com'),
+            'cta_image' => Setting::get('staff_cta_image', 'assets/images/about-cta-students-trio.png'),
+
+            'showcase_title_line1' => Setting::get('staff_showcase_title_line1', 'Take a closer look'),
+            'showcase_title_prefix' => Setting::get('staff_showcase_title_prefix', 'at life at'),
+            'showcase_title_highlight' => Setting::get('staff_showcase_title_highlight', 'Advaita.'),
+            'showcase_desc' => Setting::get(
+                'staff_showcase_desc',
+                'Visit our campus to meet our faculty, experience our learning environment and see how we shape brighter futures.'
+            ),
+            'showcase_img1' => Setting::get('staff_showcase_img1', 'assets/images/staff-thumb-1.jpg'),
+            'showcase_img2' => Setting::get('staff_showcase_img2', 'assets/images/staff-thumb-2.jpg'),
+            'showcase_img3' => Setting::get('staff_showcase_img3', 'assets/images/staff-thumb-3.jpg'),
+            'showcase_btn1_text' => Setting::get('staff_showcase_btn1_text', 'Book a Campus Visit'),
+            'showcase_btn1_url' => Setting::get('staff_showcase_btn1_url', ''),
+            'showcase_btn2_text' => Setting::get('staff_showcase_btn2_text', 'Watch Campus Video'),
+            'showcase_btn2_url' => Setting::get('staff_showcase_btn2_url', ''),
+        ];
+
+        return view('pages.our-staff', compact('seo', 'staffMembers', 'staffHeader', 'content'));
     }
 
     public function academics(): View

@@ -236,43 +236,23 @@
         <div class="shape-two"></div>
         <div class="shape-three"></div>
 
-        <!-- Left Graphic: Paper Airplane SVG -->
-        <div class="staff-join-plane-left" aria-hidden="true">
-            <svg class="staff-join-plane-img" viewBox="0 0 360 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <!-- Dotted Loop Flight Path -->
-                <path d="M 15 205 C 70 150, 110 98, 165 98 C 215 98, 235 145, 205 165 C 175 180, 178 125, 255 58" 
-                      stroke="#0284C7" 
-                      stroke-width="2.4" 
-                      stroke-dasharray="6 6" 
-                      stroke-linecap="round" 
-                      opacity="0.85" />
-                <!-- Classic Straight Paper Airplane -->
-                <g transform="translate(255, 58) rotate(-38)">
-                    <polygon points="46,0 0,-18 16,0" fill="#E0F2FE" stroke="#0284C7" stroke-width="1.8" stroke-linejoin="round"/>
-                    <polygon points="46,0 16,0 0,18" fill="#38BDF8" stroke="#0284C7" stroke-width="1.8" stroke-linejoin="round"/>
-                    <polygon points="16,0 0,18 6,6" fill="#0284C7" stroke="#0284C7" stroke-width="1.2" stroke-linejoin="round"/>
-                    <line x1="46" y1="0" x2="16" y2="0" stroke="#0284C7" stroke-width="1.8" stroke-linecap="round"/>
-                </g>
-            </svg>
-        </div>
-
         <!-- Center Content -->
         <div class="banner-content-center">
             <div class="copy-center">
-                <div class="eyebrow">BE A PART OF ADVAITA</div>
+                <div class="eyebrow">{{ $content['cta_eyebrow'] ?? 'BE A PART OF ADVAITA' }}</div>
                 <h2 class="headline">
-                    Together, let’s build <span class="text-orange">brighter tomorrows.</span>
+                    {{ $content['cta_headline'] ?? 'Together, let’s build' }} <span class="text-orange">{{ $content['cta_highlight'] ?? 'brighter tomorrows.' }}</span>
                 </h2>
                 <p class="subtext">
-                    Give your child the right start with strong academics, values and endless opportunities.
+                    {{ $content['cta_subtext'] ?? 'Give your child the right start with strong academics, values and endless opportunities.' }}
                 </p>
                 <div class="buttons">
-                    <a href="{{ route('home') }}#admissions" class="staff-btn-orange">
-                        <span>Book a Campus Visit</span>
+                    <a href="{{ !empty($content['cta_btn1_url']) ? $content['cta_btn1_url'] : (route('home') . '#admissions') }}" class="staff-btn-orange">
+                        <span>{{ $content['cta_btn1_text'] ?? 'Book a Campus Visit' }}</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
-                    <a href="{{ route('home') }}#contact" class="staff-btn-outline">
-                        <span>Enquire Now</span>
+                    <a href="{{ !empty($content['cta_btn2_url']) ? $content['cta_btn2_url'] : (route('home') . '#contact') }}" class="staff-btn-outline">
+                        <span>{{ $content['cta_btn2_text'] ?? 'Enquire Now' }}</span>
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
@@ -282,9 +262,13 @@
         <!-- Dots Pattern on Right before students -->
         <div class="dot-pattern"></div>
 
-        <!-- Students Image on Right -->
+        <!-- Students Image -->
+        @php
+            $ctaImgRaw = $content['cta_image'] ?? 'assets/images/about-cta-students-trio.png';
+            $ctaImgUrl = (str_starts_with($ctaImgRaw, 'http://') || str_starts_with($ctaImgRaw, 'https://')) ? $ctaImgRaw : asset(ltrim($ctaImgRaw, '/'));
+        @endphp
         <div class="students">
-            <img src="{{ asset('assets/images/about-cta-students-trio.png') }}" alt="Advaita Students" loading="lazy">
+            <img src="{{ $ctaImgUrl }}" alt="Advaita Students" loading="lazy">
         </div>
     </section>
 

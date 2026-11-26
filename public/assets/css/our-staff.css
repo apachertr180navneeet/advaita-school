@@ -908,12 +908,7 @@
     }
 
     .staff-hero-script-tag {
-        position: absolute !important;
-        top: 16px !important;
-        right: 20px !important;
-        transform: scale(0.85) rotate(-3deg) !important;
-        transform-origin: right top !important;
-        z-index: 2 !important;
+        display: none !important;
     }
 
     .staff-hero-left-panel {

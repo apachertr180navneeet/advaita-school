@@ -117,6 +117,17 @@ class PageContentController extends Controller
                 // Imagery
                 'chairman_image' => ['label' => 'Chairman Portrait Photo', 'type' => 'image', 'default' => 'assets/images/chairman-real.png'],
                 'chairman_hero_image' => ['label' => 'Hero Campus Background Image', 'type' => 'image', 'default' => 'assets/images/about-hero-building.jpg'],
+
+                // Bottom CTA Banner
+                'chairman_cta_eyebrow' => ['label' => 'CTA Banner Eyebrow', 'type' => 'text', 'default' => 'BE A PART OF ADVAITA'],
+                'chairman_cta_headline' => ['label' => 'CTA Banner Heading Prefix', 'type' => 'text', 'default' => 'Together, let’s build'],
+                'chairman_cta_highlight' => ['label' => 'CTA Banner Heading Highlight (Orange)', 'type' => 'text', 'default' => 'brighter tomorrows.'],
+                'chairman_cta_subtext' => ['label' => 'CTA Banner Description', 'type' => 'textarea', 'default' => 'Give your child the right start with strong academics, values and endless opportunities.'],
+                'chairman_cta_btn1_text' => ['label' => 'CTA Button 1 Text', 'type' => 'text', 'default' => 'Book a Campus Visit'],
+                'chairman_cta_btn1_url' => ['label' => 'CTA Button 1 URL (Optional)', 'type' => 'text', 'default' => ''],
+                'chairman_cta_btn2_text' => ['label' => 'CTA Button 2 Text', 'type' => 'text', 'default' => 'Enquire Now'],
+                'chairman_cta_btn2_url' => ['label' => 'CTA Button 2 URL (Optional)', 'type' => 'text', 'default' => ''],
+                'chairman_cta_image' => ['label' => 'CTA Banner Students Image', 'type' => 'image', 'default' => 'assets/images/about-cta-students-trio.png'],
             ],
         ],
         'principal' => [
@@ -139,6 +150,62 @@ class PageContentController extends Controller
                 // Imagery
                 'principal_image' => ['label' => 'Principal Portrait Photo', 'type' => 'image', 'default' => 'assets/images/principal-desk.jpg'],
                 'principal_hero_image' => ['label' => 'Hero Campus Background Image', 'type' => 'image', 'default' => 'assets/images/about-hero-building.jpg'],
+            ],
+        ],
+        'our_staff' => [
+            'name' => 'Our Faculty & Staff',
+            'url' => '/our-staff',
+            'seo_key' => 'our_staff',
+            'icon' => 'fa-solid fa-chalkboard-user',
+            'category' => 'Leadership & Story',
+            'fields' => [
+                'staff_hero_eyebrow' => ['label' => 'Hero Eyebrow Badge', 'type' => 'text', 'default' => 'OUR FACULTY'],
+                'staff_hero_title_line1' => ['label' => 'Hero Heading Line 1', 'type' => 'text', 'default' => 'Meet the Educators'],
+                'staff_hero_title_line2' => ['label' => 'Hero Heading Line 2', 'type' => 'text', 'default' => 'Who Inspire Every'],
+                'staff_hero_title_highlight' => ['label' => 'Hero Highlight Word', 'type' => 'text', 'default' => 'Advaita'],
+                'staff_hero_title_suffix' => ['label' => 'Hero Heading Suffix', 'type' => 'text', 'default' => 'Learner.'],
+                'staff_hero_desc' => ['label' => 'Hero Description', 'type' => 'textarea', 'default' => 'Our teachers are more than subject experts — they are mentors, role models and lifelong guides who nurture curiosity, build confidence and inspire every child to excel in academics and in life.'],
+                'staff_hero_image' => ['label' => 'Hero Campus Background Image', 'type' => 'image', 'default' => 'assets/images/about-hero-building.jpg'],
+
+                // Stats Strip
+                'staff_stat1_num' => ['label' => 'Stat 1 Number', 'type' => 'text', 'default' => '80+'],
+                'staff_stat1_label' => ['label' => 'Stat 1 Label', 'type' => 'text', 'default' => 'Total Faculty'],
+                'staff_stat2_num' => ['label' => 'Stat 2 Number', 'type' => 'text', 'default' => '12+'],
+                'staff_stat2_label' => ['label' => 'Stat 2 Label', 'type' => 'text', 'default' => 'Departments'],
+                'staff_stat3_num' => ['label' => 'Stat 3 Number', 'type' => 'text', 'default' => '10+'],
+                'staff_stat3_label' => ['label' => 'Stat 3 Label', 'type' => 'text', 'default' => 'Avg. Years Experience'],
+                'staff_stat4_num' => ['label' => 'Stat 4 Number', 'type' => 'text', 'default' => '100%'],
+                'staff_stat4_label' => ['label' => 'Stat 4 Label', 'type' => 'text', 'default' => 'Postgraduate Trained'],
+
+                // Educators Section Header
+                'staff_section_eyebrow' => ['label' => 'Educators Section Eyebrow', 'type' => 'text', 'default' => 'OUR EDUCATORS'],
+                'staff_section_title_prefix' => ['label' => 'Educators Heading Prefix', 'type' => 'text', 'default' => 'The Teachers Behind Every'],
+                'staff_section_title_highlight' => ['label' => 'Educators Heading Highlight', 'type' => 'text', 'default' => 'Advaita Learner.'],
+                'staff_section_description' => ['label' => 'Educators Section Description', 'type' => 'textarea', 'default' => 'Each one is here because they love what they teach — and because they care deeply about how every child grows. Our faculty bring expertise, experience and a genuine passion for guiding students towards academic and personal excellence.'],
+
+                // Join Our Team CTA Banner
+                'staff_cta_eyebrow' => ['label' => 'CTA Eyebrow', 'type' => 'text', 'default' => 'JOIN OUR TEAM'],
+                'staff_cta_title_prefix' => ['label' => 'CTA Heading Prefix', 'type' => 'text', 'default' => 'Want to Teach with'],
+                'staff_cta_title_highlight' => ['label' => 'CTA Heading Highlight', 'type' => 'text', 'default' => 'Us?'],
+                'staff_cta_desc' => ['label' => 'CTA Description', 'type' => 'textarea', 'default' => 'We are always looking for passionate educators who believe in creating brighter futures. Explore open roles or share your CV with us.'],
+                'staff_cta_btn1_text' => ['label' => 'CTA Primary Button Text', 'type' => 'text', 'default' => 'See Open Roles'],
+                'staff_cta_btn1_url' => ['label' => 'CTA Primary Button URL (Optional)', 'type' => 'text', 'default' => ''],
+                'staff_cta_btn2_text' => ['label' => 'CTA Secondary Button Text', 'type' => 'text', 'default' => 'Send Your CV'],
+                'staff_cta_btn2_email' => ['label' => 'CTA Secondary Button Email / URL', 'type' => 'text', 'default' => 'admissions.advaita@gmail.com'],
+                'staff_cta_image' => ['label' => 'CTA Students Image', 'type' => 'image', 'default' => 'assets/images/about-cta-students-trio.png'],
+
+                // Campus Showcase Strip
+                'staff_showcase_title_line1' => ['label' => 'Showcase Heading Line 1', 'type' => 'text', 'default' => 'Take a closer look'],
+                'staff_showcase_title_prefix' => ['label' => 'Showcase Heading Line 2 Prefix', 'type' => 'text', 'default' => 'at life at'],
+                'staff_showcase_title_highlight' => ['label' => 'Showcase Heading Highlight', 'type' => 'text', 'default' => 'Advaita.'],
+                'staff_showcase_desc' => ['label' => 'Showcase Description', 'type' => 'textarea', 'default' => 'Visit our campus to meet our faculty, experience our learning environment and see how we shape brighter futures.'],
+                'staff_showcase_img1' => ['label' => 'Showcase Thumbnail 1', 'type' => 'image', 'default' => 'assets/images/staff-thumb-1.jpg'],
+                'staff_showcase_img2' => ['label' => 'Showcase Thumbnail 2', 'type' => 'image', 'default' => 'assets/images/staff-thumb-2.jpg'],
+                'staff_showcase_img3' => ['label' => 'Showcase Thumbnail 3', 'type' => 'image', 'default' => 'assets/images/staff-thumb-3.jpg'],
+                'staff_showcase_btn1_text' => ['label' => 'Showcase Button 1 Text', 'type' => 'text', 'default' => 'Book a Campus Visit'],
+                'staff_showcase_btn1_url' => ['label' => 'Showcase Button 1 URL (Optional)', 'type' => 'text', 'default' => ''],
+                'staff_showcase_btn2_text' => ['label' => 'Showcase Button 2 Text', 'type' => 'text', 'default' => 'Watch Campus Video'],
+                'staff_showcase_btn2_url' => ['label' => 'Showcase Button 2 URL (Optional)', 'type' => 'text', 'default' => ''],
             ],
         ],
         'academics' => [
