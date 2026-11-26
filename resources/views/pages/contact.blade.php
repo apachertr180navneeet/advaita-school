@@ -12,11 +12,32 @@
         <div class="contact-hero-canvas">
             <!-- Background Image & Sky on the Right -->
             <div class="contact-hero-bg-visual" aria-hidden="true">
-                <img src="{{ asset('assets/images/about-hero-building.jpg') }}" alt="Advaita School of Excellence Campus" class="contact-hero-bg-img" loading="eager">
+                @php
+                    $contactHeroImgRaw = $content['hero_image'] ?? \App\Models\Setting::get('contact_hero_image', 'assets/images/about-hero-building.jpg');
+                    $contactHeroImgUrl = (str_starts_with($contactHeroImgRaw, 'http://') || str_starts_with($contactHeroImgRaw, 'https://')) ? $contactHeroImgRaw : asset(ltrim($contactHeroImgRaw, '/'));
+                @endphp
+                <img src="{{ $contactHeroImgUrl }}" alt="Advaita School of Excellence Campus" class="contact-hero-bg-img" loading="eager">
                 
                 <!-- Floating Script Badge in Sky -->
                 <div class="contact-hero-script-tag">
-                    <span class="script-title">More<br>Than A School</span>
+                    @php
+                        $rawScript = trim($content['hero_script_tag'] ?? "More\nThan A School");
+                        if (str_contains($rawScript, "\n")) {
+                            $scriptFormatted = nl2br(e($rawScript));
+                        } elseif (str_contains($rawScript, ' ')) {
+                            $parts = explode(' ', $rawScript, 2);
+                            $scriptFormatted = e($parts[0]) . '<br>' . e($parts[1]);
+                        } else {
+                            $scriptClean = preg_replace('/(?<!^)([A-Z][a-z])/', ' $1', $rawScript);
+                            if (str_contains($scriptClean, ' ')) {
+                                $parts = explode(' ', $scriptClean, 2);
+                                $scriptFormatted = e($parts[0]) . '<br>' . e($parts[1]);
+                            } else {
+                                $scriptFormatted = e($scriptClean);
+                            }
+                        }
+                    @endphp
+                    <span class="script-title">{!! $scriptFormatted !!}</span>
                     <svg class="script-underline" viewBox="0 0 140 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                         <path d="M4 10C36 4 98 4 136 12" stroke="#F37021" stroke-width="3.5" stroke-linecap="round"/>
                         <path d="M18 14C48 9 92 8 126 15" stroke="#F37021" stroke-width="2.5" stroke-linecap="round" opacity="0.75"/>
@@ -58,15 +79,15 @@
                         <span class="active">Contact Us</span>
                     </nav>
 
-                    <div class="contact-eyebrow">GET IN TOUCH</div>
+                    <div class="contact-eyebrow">{{ $content['hero_badge'] ?? 'GET IN TOUCH' }}</div>
 
                     <h1 class="contact-hero-title">
-                        We'd love to<br>
-                        <span class="contact-highlight-serif">hear from you.</span>
+                        {{ $content['hero_title'] ?? "We'd love to" }}<br>
+                        <span class="contact-highlight-serif">{{ $content['hero_highlight'] ?? 'hear from you.' }}</span>
                     </h1>
 
                     <p class="contact-hero-desc">
-                        Admissions, academics, or just a friendly hello — our team is always here to help.
+                        {{ $content['hero_desc'] ?? 'Admissions, academics, or just a friendly hello — our team is always here to help.' }}
                     </p>
                 </div>
             </div>
@@ -79,6 +100,12 @@
             <div class="contact-quick-cards-grid">
                 
                 <!-- Quick Card 1: Call Us -->
+                @php
+                    $callPhone = $site['phone_primary'] ?? '+91 9689898973';
+                    $callPhoneHref = preg_replace('/[^0-9+]/', '', $callPhone);
+                    $waNumber = preg_replace('/[^0-9]/', '', $site['whatsapp_number'] ?? '919689898973');
+                    $admEmail = $site['email_admissions'] ?? 'admissions.advaita@gmail.com';
+                @endphp
                 <div class="contact-quick-card">
                     <div class="quick-card-top">
                         <div class="quick-card-icon icon-orange" aria-hidden="true">
@@ -86,11 +113,11 @@
                         </div>
                         <div class="quick-card-info">
                             <span class="quick-card-label">Call Us</span>
-                            <a href="tel:+919689898973" class="quick-card-value">+91 9689898973</a>
-                            <span class="quick-card-meta">Mon – Sat | 8:00 AM – 3:00 PM</span>
+                            <a href="tel:{{ $callPhoneHref }}" class="quick-card-value">{{ $callPhone }}</a>
+                            <span class="quick-card-meta">{{ $site['school_hours'] ?? 'Mon – Sat | 8:00 AM – 3:00 PM' }}</span>
                         </div>
                     </div>
-                    <a href="tel:+919689898973" class="quick-card-btn btn-orange" aria-label="Call admissions at +91 9689898973">
+                    <a href="tel:{{ $callPhoneHref }}" class="quick-card-btn btn-orange" aria-label="Call admissions at {{ $callPhone }}">
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
@@ -103,11 +130,11 @@
                         </div>
                         <div class="quick-card-info">
                             <span class="quick-card-label">WhatsApp</span>
-                            <a href="https://wa.me/919689898973" target="_blank" rel="noopener noreferrer" class="quick-card-value">Chat with us</a>
+                            <a href="https://wa.me/{{ $waNumber }}" target="_blank" rel="noopener noreferrer" class="quick-card-value">Chat with us</a>
                             <span class="quick-card-meta">Reply within minutes</span>
                         </div>
                     </div>
-                    <a href="https://wa.me/919689898973" target="_blank" rel="noopener noreferrer" class="quick-card-btn btn-green" aria-label="Chat with school admissions on WhatsApp">
+                    <a href="https://wa.me/{{ $waNumber }}" target="_blank" rel="noopener noreferrer" class="quick-card-btn btn-green" aria-label="Chat with school admissions on WhatsApp">
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>
@@ -120,11 +147,11 @@
                         </div>
                         <div class="quick-card-info">
                             <span class="quick-card-label">Email Us</span>
-                            <a href="mailto:admissions.advaita@gmail.com" class="quick-card-value" style="font-size: 0.95rem;">admissions.advaita@gmail.com</a>
+                            <a href="mailto:{{ $admEmail }}" class="quick-card-value" style="font-size: 0.95rem;">{{ $admEmail }}</a>
                             <span class="quick-card-meta">Admissions &amp; General Enquiries</span>
                         </div>
                     </div>
-                    <a href="mailto:admissions.advaita@gmail.com" class="quick-card-btn btn-purple" aria-label="Send an email to admissions.advaita@gmail.com">
+                    <a href="mailto:{{ $admEmail }}" class="quick-card-btn btn-purple" aria-label="Send an email to {{ $admEmail }}">
                         <i class="fa-solid fa-arrow-right"></i>
                     </a>
                 </div>

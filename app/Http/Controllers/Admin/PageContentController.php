@@ -493,6 +493,22 @@ class PageContentController extends Controller
                 'blog_hero_image' => ['label' => 'Blog Hero Curved Campus Photo', 'type' => 'image', 'default' => 'assets/images/about-hero-building.jpg'],
             ],
         ],
+        'contact' => [
+            'name' => 'Contact Us',
+            'url' => '/contact',
+            'seo_key' => 'contact',
+            'icon' => 'fa-solid fa-envelope-open-text',
+            'category' => 'Campus & Media',
+            'fields' => [
+                // Hero Section
+                'contact_hero_badge' => ['label' => 'Hero Eyebrow Badge', 'type' => 'text', 'default' => 'GET IN TOUCH'],
+                'contact_hero_title' => ['label' => 'Hero Main Title Prefix', 'type' => 'text', 'default' => "We'd love to"],
+                'contact_hero_highlight' => ['label' => 'Hero Title Highlight (Serif/Orange)', 'type' => 'text', 'default' => 'hear from you.'],
+                'contact_hero_desc' => ['label' => 'Hero Description Paragraph', 'type' => 'textarea', 'default' => 'Admissions, academics, or just a friendly hello — our team is always here to help.'],
+                'contact_hero_script_tag' => ['label' => 'Floating Script Badge Text', 'type' => 'text', 'default' => "More\nThan A School"],
+                'contact_hero_image' => ['label' => 'Contact Hero Curved Campus Photo', 'type' => 'image', 'default' => 'assets/images/about-hero-building.jpg'],
+            ],
+        ],
     ];
 
     /**

@@ -31,7 +31,16 @@ class ContactController extends Controller
             'google_map_link' => Setting::get('site_google_map_link', 'https://www.google.com/maps/search/?api=1&query=394,+Madhav+Nagar,+Gangakhed+Rd,+Brahmangaon,+Parbhani'),
         ];
 
-        return view('pages.contact', compact('seo', 'site'));
+        $content = [
+            'hero_badge' => Setting::get('contact_hero_badge', 'GET IN TOUCH'),
+            'hero_title' => Setting::get('contact_hero_title', "We'd love to"),
+            'hero_highlight' => Setting::get('contact_hero_highlight', 'hear from you.'),
+            'hero_desc' => Setting::get('contact_hero_desc', 'Admissions, academics, or just a friendly hello — our team is always here to help.'),
+            'hero_script_tag' => Setting::get('contact_hero_script_tag', "More\nThan A School"),
+            'hero_image' => Setting::get('contact_hero_image', 'assets/images/about-hero-building.jpg'),
+        ];
+
+        return view('pages.contact', compact('seo', 'site', 'content'));
     }
 
     public function store(Request $request)
