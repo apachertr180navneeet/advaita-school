@@ -7669,7 +7669,7 @@ html, body {
         right: 0 !important;
         bottom: 0 !important;
         left: auto !important;
-        width: 62% !important;
+        width: 53% !important;
         height: 100% !important;
         z-index: 1 !important;
         display: flex !important;
@@ -7684,7 +7684,7 @@ html, body {
         width: 100% !important;
         height: 100% !important;
         object-fit: cover !important;
-        object-position: right 30% !important;
+        object-position: center 25% !important;
     }
 
     .admission-page-wrapper .admission-hero-bg-img {
