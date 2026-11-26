@@ -182,21 +182,20 @@
          ========================================================================= -->
     <section class="contact-main-section">
         <div class="contact-main-container">
-            <!-- Centered Section Header -->
-            <div class="contact-main-header">
-                <span class="contact-sub-eyebrow">VISIT · CALL · WRITE</span>
-                <h2 class="contact-section-heading">
-                    A few ways to <span class="contact-highlight-serif">reach us.</span>
-                </h2>
-                <p class="contact-section-subtext">
-                    The Director's door is always open. Walk in, write to, or call — whichever feels easier.
-                </p>
-            </div>
-
             <div class="contact-columns-grid">
 
                 <!-- Left Column: Office details -->
                 <div class="contact-info-col">
+                    <div class="contact-main-header">
+                        <span class="contact-sub-eyebrow">VISIT · CALL · WRITE</span>
+                        <h2 class="contact-section-heading">
+                            A few ways to <span class="contact-highlight-serif">reach us.</span>
+                        </h2>
+                        <p class="contact-section-subtext">
+                            The Director's door is always open. Walk in, write to, or call — whichever feels easier.
+                        </p>
+                    </div>
+
                     <!-- Contact Details Cards List -->
                     <div class="contact-channels-list">
 
