@@ -65,7 +65,7 @@
                     </h1>
 
                     <p class="principal-hero-desc">
-                        At Advaita School of Excellence, we are committed to providing a nurturing and inspiring environment where every child is encouraged to learn, grow, and succeed.
+                        {{ $content['hero_desc'] ?? 'At Advaita School of Excellence, we are committed to providing a nurturing and inspiring environment where every child is encouraged to learn, grow, and succeed.' }}
                     </p>
                 </div>
             </div>
@@ -135,43 +135,45 @@
 
                 <!-- Right Column: Principal's Message Content -->
                 <div class="principal-message-content">
-                    <span class="principal-message-eyebrow">PRINCIPAL'S MESSAGE</span>
+                    <span class="principal-message-eyebrow">{{ $content['message_eyebrow'] ?? "PRINCIPAL'S MESSAGE" }}</span>
                     <h2 class="principal-message-title">
-                        A Few Words from <span class="text-orange">Our Principal</span>
+                        {{ $content['message_title_prefix'] ?? 'A Few Words from' }} <span class="text-orange">{{ $content['message_title_highlight'] ?? 'Our Principal' }}</span>
                     </h2>
 
                     <div class="principal-salutation">
-                        Dear Students, Parents and Well-wishers,
+                        {{ $content['salutation'] ?? 'Dear Students, Parents and Well-wishers,' }}
                     </div>
 
-                    <p>
-                        At <strong>Advaita School of Excellence</strong>, we are committed to providing a nurturing and inspiring environment where every child is encouraged to learn, grow, and succeed. Our aim is to create a strong academic foundation with a focus on overall personality development.
-                    </p>
+                    @if(!empty($content['principal_message_p1']))
+                    <p>{!! nl2br(e($content['principal_message_p1'])) !!}</p>
+                    @endif
 
-                    <p>
-                        Education, in today's world, is not limited to textbooks. It is about <strong>building character</strong>, developing critical thinking, and preparing students to face real-life challenges with <strong>confidence</strong>. Along with CBSE academics, we provide integrated NEET/IIT foundation and preparation for various competitive exams, ensuring that students are well-prepared for the future.
-                    </p>
+                    @if(!empty($content['principal_message_p2']))
+                    <p>{!! nl2br(e($content['principal_message_p2'])) !!}</p>
+                    @endif
 
                     <!-- Quote Box -->
+                    @if(!empty($content['principal_quote']))
                     <div class="principal-quote-box">
                         <div class="principal-quote-icon" aria-hidden="true"><i class="fa-solid fa-quote-left"></i></div>
                         <p class="principal-quote-text">
-                            {{ $content['principal_quote'] ?? 'With the support of dedicated teachers, modern teaching methodologies and a student-centric approach, we strive to make learning meaningful and enjoyable.' }}
+                            {{ $content['principal_quote'] }}
                         </p>
                     </div>
+                    @endif
 
-                    <p>
-                        We believe in encouraging curiosity, creativity, and participation in academics, sports, arts and co-curricular activities. Our goal is to guide every student towards excellence and help them realize their true potential.
-                    </p>
+                    @if(!empty($content['principal_message_p3']))
+                    <p>{!! nl2br(e($content['principal_message_p3'])) !!}</p>
+                    @endif
 
-                    <p>
-                        I extend my best wishes to all our students and parents for a successful and enriching journey with us.
-                    </p>
+                    @if(!empty($content['principal_message_p4']))
+                    <p>{!! nl2br(e($content['principal_message_p4'])) !!}</p>
+                    @endif
 
                     <!-- Signature Block -->
                     <div class="principal-signature-block">
-                        <div class="principal-signature-name">— Divine Mam</div>
-                        <div class="principal-signature-role">Principal, Advaita School of Excellence, Parbhani</div>
+                        <div class="principal-signature-name">— {{ $content['principal_name'] ?? 'Mrs. Sunita S. Deshmukh' }}</div>
+                        <div class="principal-signature-role">{{ $content['principal_designation'] ?? 'Principal, Advaita School of Excellence, Parbhani' }}</div>
                     </div>
                 </div>
 
