@@ -2176,8 +2176,8 @@
     pointer-events: none;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 10px 24px 14px 36px;
+    justify-content: flex-end;
+    padding: 14px 24px 18px 36px;
 }
 
 .principal-cta-building-badge {
