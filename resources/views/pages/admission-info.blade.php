@@ -37,7 +37,7 @@
             <!-- SVG Wave Overlay for Smooth Translucent Backdrop -->
             <div class="admission-hero-wave-overlay" aria-hidden="true">
                 <svg viewBox="0 0 1200 440" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0H540C570 120 520 280 620 440H0V0Z" fill="#EEF6FC" fill-opacity="0.96"/>
+                    <path d="M0 0H540C570 120 520 280 620 440H0V0Z" fill="#EEF6FC" fill-opacity="1"/>
                     <path d="M520 0C550 140 500 280 600 440H580C480 280 530 140 500 0H520Z" fill="#F37021" fill-opacity="0.25"/>
                 </svg>
             </div>

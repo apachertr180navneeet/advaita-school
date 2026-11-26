@@ -8452,7 +8452,7 @@ textarea.form-control:focus {
         right: 0 !important;
         bottom: 0 !important;
         left: auto !important;
-        width: 60% !important;
+        width: 62% !important;
         height: 100% !important;
         z-index: 1 !important;
         display: flex !important;
@@ -8461,6 +8461,13 @@ textarea.form-control:focus {
         overflow: hidden !important;
         pointer-events: none !important;
         opacity: 1 !important;
+    }
+
+    .admission-page-wrapper .admission-hero-building-img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        object-position: right 30% !important;
     }
 
     .admission-page-wrapper .admission-hero-bg-img {
