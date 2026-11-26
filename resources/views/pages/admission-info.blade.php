@@ -922,5 +922,115 @@ document.addEventListener('keydown', function(e) {
         closeFeeModal();
     }
 });
+
+// ==========================================
+// 2. Admission Steps Mobile Auto-Slider
+// ==========================================
+(function() {
+    const wrapper = document.querySelector('.admission-steps-wrapper');
+    if (!wrapper) {
+        return;
+    }
+
+    const cards = Array.from(wrapper.querySelectorAll('.admission-step-card'));
+    if (cards.length < 2) {
+        return;
+    }
+
+    let currentIndex = 0;
+    let timerId = null;
+    let resumeTimeoutId = null;
+    const INTERVAL_MS = 3000;
+
+    function isMobileSliderActive() {
+        return window.innerWidth < 992 && wrapper.scrollWidth > wrapper.clientWidth + 4;
+    }
+
+    function syncCurrentIndexFromScroll() {
+        const wrapperRect = wrapper.getBoundingClientRect();
+        let closestIdx = 0;
+        let minDiff = Infinity;
+
+        cards.forEach((card, idx) => {
+            const diff = Math.abs(card.getBoundingClientRect().left - wrapperRect.left);
+            if (diff < minDiff) {
+                minDiff = diff;
+                closestIdx = idx;
+            }
+        });
+
+        currentIndex = closestIdx;
+    }
+
+    function advanceSlide() {
+        if (!isMobileSliderActive() || document.hidden) {
+            return;
+        }
+
+        const maxScroll = wrapper.scrollWidth - wrapper.clientWidth;
+        if (wrapper.scrollLeft >= maxScroll - 8) {
+            currentIndex = 0;
+            wrapper.scrollTo({ left: 0, behavior: 'smooth' });
+            return;
+        }
+
+        currentIndex = (currentIndex + 1) % cards.length;
+        const targetCard = cards[currentIndex];
+        const targetLeft = Math.min(targetCard.offsetLeft - wrapper.offsetLeft, maxScroll);
+        wrapper.scrollTo({ left: Math.max(0, targetLeft), behavior: 'smooth' });
+    }
+
+    function startAutoSlide() {
+        stopAutoSlide();
+        if (!isMobileSliderActive()) {
+            return;
+        }
+        timerId = setInterval(advanceSlide, INTERVAL_MS);
+    }
+
+    function stopAutoSlide() {
+        if (timerId) {
+            clearInterval(timerId);
+            timerId = null;
+        }
+        if (resumeTimeoutId) {
+            clearTimeout(resumeTimeoutId);
+            resumeTimeoutId = null;
+        }
+    }
+
+    function pauseAndResumeLater() {
+        stopAutoSlide();
+        resumeTimeoutId = setTimeout(function() {
+            syncCurrentIndexFromScroll();
+            startAutoSlide();
+        }, 4000);
+    }
+
+    wrapper.addEventListener('touchstart', stopAutoSlide, { passive: true });
+    wrapper.addEventListener('touchend', pauseAndResumeLater, { passive: true });
+    wrapper.addEventListener('pointerdown', stopAutoSlide, { passive: true });
+    wrapper.addEventListener('pointerup', pauseAndResumeLater, { passive: true });
+    wrapper.addEventListener('mouseenter', stopAutoSlide);
+    wrapper.addEventListener('mouseleave', startAutoSlide);
+
+    window.addEventListener('resize', function() {
+        if (isMobileSliderActive()) {
+            startAutoSlide();
+        } else {
+            stopAutoSlide();
+        }
+    });
+
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            stopAutoSlide();
+        } else {
+            startAutoSlide();
+        }
+    });
+
+    startAutoSlide();
+})();
 </script>
 @endsection
