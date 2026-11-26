@@ -1465,10 +1465,10 @@
     box-shadow: 0 20px 60px rgba(8, 59, 122, 0.09);
     border: 1px solid #E8EEF5;
     display: grid;
-    grid-template-columns: 1.15fr 0.85fr;
+    grid-template-columns: 1.05fr 0.95fr;
     overflow: hidden;
     position: relative;
-    min-height: 480px;
+    min-height: 460px;
 }
 
 /* Left Accent Gradient Bar */
@@ -1650,15 +1650,20 @@
 .adv-visit-visual-side {
     position: relative;
     overflow: hidden;
-    min-height: 480px;
-    background: #e2e8f0;
+    min-height: 460px;
+    padding: 16px 20px 16px 8px;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .adv-visit-campus-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center 20%;
+    object-fit: contain;
+    object-position: center center;
+    border-radius: 20px;
     display: block;
     transition: transform 0.5s ease;
 }
@@ -1667,16 +1672,9 @@
     transform: scale(1.02);
 }
 
-/* Curved Arch Divider */
+/* Curved Arch Divider - hidden so left edge of image is never cut */
 .adv-visit-curve-mask {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: -1px;
-    width: 75px;
-    height: 100%;
-    z-index: 2;
-    pointer-events: none;
+    display: none;
 }
 
 .adv-visit-curve-mask svg {
@@ -1689,8 +1687,9 @@
 .adv-visit-action-pods {
     position: absolute;
     bottom: 28px;
-    left: 28px;
-    width: calc(100% - 56px);
+    left: 24px;
+    right: 28px;
+    width: auto;
     max-width: 370px;
     display: flex;
     flex-direction: column;
@@ -3525,9 +3524,11 @@
     .adv-visit-campus-img {
         order: -2 !important;
         width: 100% !important;
-        height: 280px !important;
-        object-fit: cover !important;
-        object-position: center 20% !important;
+        height: auto !important;
+        max-height: 360px !important;
+        object-fit: contain !important;
+        object-position: center center !important;
+        background: #eaf3fb !important;
         display: block !important;
     }
 
@@ -3738,6 +3739,15 @@
         background: #fbfdff !important;
     }
 
+    .parshv-stat-card:nth-child(5) .parshv-stat-icon-wrap {
+        margin: 0 !important;
+    }
+
+    .parshv-stat-card:nth-child(5) .parshv-stat-info {
+        width: auto !important;
+        flex: 0 1 auto !important;
+    }
+
     .parshv-stat-icon-wrap {
         width: 38px !important;
         height: 38px !important;
@@ -3787,8 +3797,16 @@
 
     /* Section 3: Welcome */
     .adv-welcome-grid {
-        grid-template-columns: 1fr !important;
-        gap: 32px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 12px !important;
+    }
+
+    .adv-welcome-visual-col {
+        order: 4 !important;
+        width: 100% !important;
     }
 
     .adv-welcome-frame-wrap {
@@ -3834,17 +3852,16 @@
     }
 
     .adv-welcome-content-col {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
+        display: contents !important;
     }
 
     .adv-welcome-pill-badge {
-        margin: 0 auto 12px auto !important;
+        order: 1 !important;
+        margin: 0 auto 8px auto !important;
     }
 
     .adv-welcome-heading {
+        order: 2 !important;
         text-align: center !important;
         width: 100% !important;
     }
@@ -3862,10 +3879,12 @@
     }
 
     .adv-heading-underline-bar {
-        margin: 10px auto 16px auto !important;
+        order: 3 !important;
+        margin: 8px auto 14px auto !important;
     }
 
     .adv-welcome-quote-card {
+        order: 5 !important;
         padding: 14px 16px !important;
         margin: 0 auto 16px auto !important;
         text-align: center !important;
@@ -3884,11 +3903,13 @@
     }
 
     .adv-welcome-desc {
+        order: 6 !important;
         text-align: center !important;
         margin: 0 auto 20px auto !important;
     }
 
     .adv-welcome-features-grid {
+        order: 7 !important;
         grid-template-columns: 1fr !important;
         gap: 12px !important;
         width: 100% !important;
@@ -4101,6 +4122,9 @@
     .adv-visit-card {
         display: flex !important;
         flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        padding: 24px 16px 26px 16px !important;
         border-radius: 20px !important;
         overflow: hidden !important;
     }
@@ -4115,33 +4139,34 @@
     }
 
     .adv-visit-campus-img {
-        order: -2 !important;
+        order: 3 !important;
         width: 100% !important;
-        min-height: 220px !important;
-        height: 230px !important;
-        max-height: 260px !important;
-        object-fit: cover !important;
-        object-position: center 20% !important;
+        min-height: 0 !important;
+        height: auto !important;
+        max-height: 280px !important;
+        object-fit: contain !important;
+        object-position: center center !important;
+        background: #eaf3fb !important;
+        border-radius: 16px !important;
+        margin: 0 auto 18px auto !important;
         display: block !important;
     }
 
     .adv-visit-content-side {
-        order: -1 !important;
-        padding: 26px 18px 18px 18px !important;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        text-align: center !important;
+        display: contents !important;
     }
 
     .adv-visit-pill-badge {
+        order: 1 !important;
         margin: 0 auto 12px auto !important;
     }
 
     .adv-visit-heading-wrap {
+        order: 2 !important;
         text-align: center !important;
         justify-content: center !important;
         width: 100% !important;
+        margin-bottom: 16px !important;
     }
 
     .adv-visit-heading {
@@ -4155,6 +4180,7 @@
     }
 
     .adv-visit-desc-row {
+        order: 4 !important;
         flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
@@ -4175,15 +4201,16 @@
     }
 
     .adv-visit-separator {
+        order: 5 !important;
         margin: 16px auto !important;
     }
 
     .adv-visit-action-pods {
-        order: 0 !important;
+        order: 7 !important;
         position: static !important;
         width: 100% !important;
         max-width: 100% !important;
-        padding: 0 16px 26px 16px !important;
+        padding: 0 !important;
         box-shadow: none !important;
         display: flex !important;
         flex-direction: column !important;
@@ -4192,11 +4219,13 @@
     }
 
     .adv-visit-features-row {
+        order: 6 !important;
         flex-direction: column !important;
         align-items: center !important;
         justify-content: center !important;
         gap: 12px !important;
         width: 100% !important;
+        margin-bottom: 18px !important;
     }
 
     .adv-visit-feat-item {
@@ -4558,6 +4587,15 @@
         gap: 10px !important;
     }
 
+    .parshv-stat-card:nth-child(5) .parshv-stat-icon-wrap {
+        margin: 0 !important;
+    }
+
+    .parshv-stat-card:nth-child(5) .parshv-stat-info {
+        width: auto !important;
+        flex: 0 1 auto !important;
+    }
+
     .parshv-stat-icon-wrap {
         width: 36px !important;
         height: 36px !important;
@@ -4623,6 +4661,15 @@
         align-items: center !important;
         padding: 10px 10px !important;
         gap: 8px !important;
+    }
+
+    .parshv-stat-card:nth-child(5) .parshv-stat-icon-wrap {
+        margin: 0 !important;
+    }
+
+    .parshv-stat-card:nth-child(5) .parshv-stat-info {
+        width: auto !important;
+        flex: 0 1 auto !important;
     }
 
     .parshv-stat-icon-wrap {
