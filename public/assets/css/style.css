@@ -9603,7 +9603,7 @@ html, body {
     letter-spacing: 2px !important;
     color: #F37021 !important;
     text-transform: uppercase !important;
-    text-align: left !important;
+    text-align: center !important;
     margin: 0 0 10px 0 !important;
     display: block !important;
     width: 100% !important;
@@ -9615,7 +9615,7 @@ html, body {
     color: #083B7A !important;
     line-height: 1.2 !important;
     letter-spacing: -0.3px !important;
-    text-align: left !important;
+    text-align: center !important;
     width: 100% !important;
     margin: 0 0 12px 0 !important;
 }
@@ -9624,8 +9624,8 @@ html, body {
     font-size: 0.98rem !important;
     line-height: 1.6 !important;
     color: #475569 !important;
-    text-align: left !important;
-    margin: 0 0 28px 0 !important;
+    text-align: center !important;
+    margin: 0 auto 28px !important;
     max-width: 480px !important;
     width: 100% !important;
 }
@@ -9778,10 +9778,11 @@ html, body {
 }
 
 .contact-page-wrapper .contact-form-badge {
-    margin: 0 0 12px 0 !important;
-    display: inline-flex !important;
+    margin: 0 auto 12px auto !important;
+    display: flex !important;
+    width: fit-content !important;
     align-items: center !important;
-    justify-content: flex-start !important;
+    justify-content: center !important;
     font-size: 0.78rem !important;
     font-weight: 800 !important;
     letter-spacing: 1.5px !important;
@@ -9791,7 +9792,7 @@ html, body {
 }
 
 .contact-page-wrapper .contact-form-heading {
-    text-align: left !important;
+    text-align: center !important;
     width: 100% !important;
     margin: 0 0 8px 0 !important;
     font-size: clamp(1.8rem, 2.4vw, 2.2rem) !important;
@@ -9800,8 +9801,8 @@ html, body {
 }
 
 .contact-page-wrapper .contact-form-subheading {
-    text-align: left !important;
-    margin: 0 0 24px 0 !important;
+    text-align: center !important;
+    margin: 0 auto 24px auto !important;
     max-width: 520px !important;
     width: 100% !important;
     font-size: 0.92rem !important;
@@ -9826,17 +9827,31 @@ html, body {
 .contact-page-wrapper .form-select-control,
 .contact-page-wrapper .form-textarea-control {
     text-align: left !important;
-    padding: 0 16px !important;
-    font-size: 0.92rem !important;
+    padding: 12px 16px !important;
+    font-size: 0.94rem !important;
+    line-height: 1.45 !important;
     border-radius: 12px !important;
-    border: 1px solid #e2e8f0 !important;
+    border: 1.5px solid #dce4ee !important;
     background: #f8fafc !important;
     color: #0f172a !important;
     transition: all 0.2s ease !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.contact-page-wrapper .form-input-control,
+.contact-page-wrapper .form-select-control {
+    min-height: 46px !important;
+    height: auto !important;
+}
+
+.contact-page-wrapper .form-select-control {
+    padding-right: 40px !important;
 }
 
 .contact-page-wrapper .form-textarea-control {
     padding: 14px 16px !important;
+    min-height: 120px !important;
 }
 
 .contact-page-wrapper .form-input-control:focus,
