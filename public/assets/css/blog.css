@@ -1801,3 +1801,13 @@
         font-size: 0.82rem !important;
     }
 }
+
+@media (min-width: 992px) {
+    .adv-blog-page-wrapper .adv-blog-sidebar {
+        display: none !important;
+    }
+
+    .adv-blog-page-wrapper .adv-blog-main-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
