@@ -38,6 +38,14 @@ class ContactController extends Controller
             'hero_desc' => Setting::get('contact_hero_desc', 'Admissions, academics, or just a friendly hello — our team is always here to help.'),
             'hero_script_tag' => Setting::get('contact_hero_script_tag', "More\nThan A School"),
             'hero_image' => Setting::get('contact_hero_image', 'assets/images/about-hero-building.jpg'),
+
+            'cta_eyebrow' => Setting::get('contact_cta_eyebrow', 'STILL HAVE QUESTIONS?'),
+            'cta_title_prefix' => Setting::get('contact_cta_title_prefix', 'Need more'),
+            'cta_title_highlight' => Setting::get('contact_cta_title_highlight', 'information?'),
+            'cta_desc' => Setting::get('contact_cta_desc', 'Our admissions team is happy to help you with any queries regarding admissions, fee structure, or campus visit.'),
+            'cta_btn1_text' => Setting::get('contact_cta_btn1_text', 'Call the Admissions Team'),
+            'cta_btn2_text' => Setting::get('contact_cta_btn2_text', 'Chat on WhatsApp'),
+            'cta_image' => Setting::get('contact_cta_image', 'assets/images/contact-student-pointing-transparent.png'),
         ];
 
         return view('pages.contact', compact('seo', 'site', 'content'));

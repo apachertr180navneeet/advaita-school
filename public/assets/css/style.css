@@ -10069,13 +10069,48 @@ html, body {
     }
 
     .contact-page-wrapper .contact-columns-grid {
+        display: flex !important;
+        flex-direction: column !important;
         grid-template-columns: 1fr !important;
-        gap: 36px !important;
+        gap: 24px !important;
+    }
+
+    .contact-page-wrapper .contact-info-col {
+        display: contents !important;
+    }
+
+    .contact-page-wrapper .contact-sub-eyebrow {
+        order: 1 !important;
+        margin-bottom: -14px !important;
+    }
+
+    .contact-page-wrapper .contact-section-heading {
+        order: 2 !important;
+        margin-bottom: -14px !important;
+    }
+
+    .contact-page-wrapper .contact-section-subtext {
+        order: 3 !important;
+        margin-bottom: 4px !important;
+    }
+
+    .contact-page-wrapper .contact-form-col {
+        order: 4 !important;
+        width: 100% !important;
+        max-width: 560px !important;
+        margin: 0 auto !important;
     }
 
     .contact-page-wrapper .contact-channels-list {
+        order: 5 !important;
         grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
         gap: 12px !important;
+        width: 100% !important;
+    }
+
+    .contact-page-wrapper .contact-socials-block {
+        order: 6 !important;
+        width: 100% !important;
     }
 
     .contact-page-wrapper .contact-hero-left-panel {

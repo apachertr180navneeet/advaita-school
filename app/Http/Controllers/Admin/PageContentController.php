@@ -694,6 +694,15 @@ class PageContentController extends Controller
                 'contact_hero_desc' => ['label' => 'Hero Description Paragraph', 'type' => 'textarea', 'default' => 'Admissions, academics, or just a friendly hello — our team is always here to help.'],
                 'contact_hero_script_tag' => ['label' => 'Floating Script Badge Text', 'type' => 'text', 'default' => "More\nThan A School"],
                 'contact_hero_image' => ['label' => 'Contact Hero Curved Campus Photo', 'type' => 'image', 'default' => 'assets/images/about-hero-building.jpg'],
+
+                // Bottom Orange CTA Banner
+                'contact_cta_eyebrow' => ['label' => 'Bottom CTA Eyebrow', 'type' => 'text', 'default' => 'STILL HAVE QUESTIONS?'],
+                'contact_cta_title_prefix' => ['label' => 'Bottom CTA Heading Prefix', 'type' => 'text', 'default' => 'Need more'],
+                'contact_cta_title_highlight' => ['label' => 'Bottom CTA Heading Highlight', 'type' => 'text', 'default' => 'information?'],
+                'contact_cta_desc' => ['label' => 'Bottom CTA Description', 'type' => 'textarea', 'default' => 'Our admissions team is happy to help you with any queries regarding admissions, fee structure, or campus visit.'],
+                'contact_cta_btn1_text' => ['label' => 'Bottom CTA Button 1 Text', 'type' => 'text', 'default' => 'Call the Admissions Team'],
+                'contact_cta_btn2_text' => ['label' => 'Bottom CTA Button 2 Text', 'type' => 'text', 'default' => 'Chat on WhatsApp'],
+                'contact_cta_image' => ['label' => 'Bottom CTA Student Cutout Image', 'type' => 'image', 'default' => 'assets/images/contact-student-pointing-transparent.png'],
             ],
         ],
     ];

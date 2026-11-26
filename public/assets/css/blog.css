@@ -306,15 +306,15 @@
    1. HERO SECTION (Unified Rounded Card Canvas matching Gallery & Guidelines)
    ========================================================================== */
 .adv-blog-hero-section {
-    padding: 24px 20px 0 20px;
-    background: transparent;
+    padding: 6px 6px 0;
+    background: #ffffff;
     position: relative;
     z-index: 10;
 }
 
 .adv-blog-hero-canvas {
     position: relative;
-    min-height: clamp(380px, 30vw, 440px);
+    min-height: clamp(380px, 30vw, 470px);
     display: flex;
     align-items: stretch;
     background: #f0f7fd;
@@ -335,7 +335,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    width: 60%;
+    width: 53%;
     z-index: 1;
     overflow: hidden;
 }
@@ -344,7 +344,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 30%;
+    object-position: center 25%;
     display: block;
 }
 

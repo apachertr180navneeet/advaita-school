@@ -252,25 +252,6 @@
                         </div>
 
                     </div>
-
-                    <!-- Social Channels Strip -->
-                    <div class="contact-socials-block">
-                        <span class="contact-socials-label">FIND US ELSEWHERE</span>
-                        <div class="contact-social-buttons">
-                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="contact-social-btn fb" aria-label="Advaita on Facebook" title="Facebook">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="contact-social-btn insta" aria-label="Advaita on Instagram" title="Instagram">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="contact-social-btn yt" aria-label="Advaita on YouTube" title="YouTube">
-                                <i class="fa-brands fa-youtube"></i>
-                            </a>
-                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-social-btn li" aria-label="Advaita on LinkedIn" title="LinkedIn">
-                                <i class="fa-brands fa-linkedin-in"></i>
-                            </a>
-                        </div>
-                    </div>
                 </div>
 
                 <!-- Right Column: Interactive Send a Message Form -->
@@ -469,32 +450,40 @@
                     </div>
 
                     <div class="contact-cta-text-wrap">
-                        <span class="contact-cta-eyebrow">STILL HAVE QUESTIONS?</span>
+                        <span class="contact-cta-eyebrow">{{ $content['cta_eyebrow'] ?? 'STILL HAVE QUESTIONS?' }}</span>
                         <h2 class="contact-cta-headline">
-                            Need more <span class="cta-highlight-serif">information?</span>
+                            {{ $content['cta_title_prefix'] ?? 'Need more' }} <span class="cta-highlight-serif">{{ $content['cta_title_highlight'] ?? 'information?' }}</span>
                         </h2>
                         <p class="contact-cta-description">
-                            Our admissions team is happy to help you with any queries regarding admissions, fee structure, or campus visit.
+                            {{ $content['cta_desc'] ?? 'Our admissions team is happy to help you with any queries regarding admissions, fee structure, or campus visit.' }}
                         </p>
                     </div>
                 </div>
 
                 <!-- Center Action Buttons -->
+                @php
+                    $ctaCallNumber = preg_replace('/[^0-9+]/', '', $site['phone_primary'] ?? '+919689898973');
+                    $ctaWaNumber = preg_replace('/[^0-9]/', '', $site['whatsapp_number'] ?? '919689898973');
+                    $ctaImgRaw = $content['cta_image'] ?? 'assets/images/contact-student-pointing-transparent.png';
+                    $ctaImgUrl = (str_starts_with($ctaImgRaw, 'http://') || str_starts_with($ctaImgRaw, 'https://'))
+                        ? $ctaImgRaw
+                        : asset(ltrim($ctaImgRaw, '/'));
+                @endphp
                 <div class="contact-cta-buttons-wrap">
-                    <a href="tel:+919689898973" class="cta-action-btn cta-btn-call">
+                    <a href="tel:{{ $ctaCallNumber }}" class="cta-action-btn cta-btn-call">
                         <i class="fa-solid fa-phone"></i>
-                        <span>Call the Admissions Team</span>
+                        <span>{{ $content['cta_btn1_text'] ?? 'Call the Admissions Team' }}</span>
                     </a>
 
-                    <a href="https://wa.me/919689898973" target="_blank" rel="noopener noreferrer" class="cta-action-btn cta-btn-whatsapp">
+                    <a href="https://wa.me/{{ $ctaWaNumber }}" target="_blank" rel="noopener noreferrer" class="cta-action-btn cta-btn-whatsapp">
                         <i class="fa-brands fa-whatsapp"></i>
-                        <span>Chat on WhatsApp</span>
+                        <span>{{ $content['cta_btn2_text'] ?? 'Chat on WhatsApp' }}</span>
                     </a>
                 </div>
 
                 <!-- Right Student Pointing Visual Cutout -->
                 <div class="contact-cta-student-cutout" aria-hidden="true">
-                    <img src="{{ asset('assets/images/contact-student-pointing-transparent.png') }}" alt="Advaita Student Guide" class="contact-cta-student-photo" loading="lazy">
+                    <img src="{{ $ctaImgUrl }}" alt="Advaita Student Guide" class="contact-cta-student-photo" loading="lazy">
                 </div>
 
             </div>
