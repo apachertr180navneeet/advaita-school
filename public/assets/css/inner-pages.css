@@ -15951,10 +15951,16 @@ textarea.reg-input-control {
         gap: 12px !important;
     }
 
+    .contact-page-wrapper .contact-main-container {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
     .contact-page-wrapper .contact-main-header {
+        order: 2 !important;
         text-align: center !important;
         max-width: 680px !important;
-        margin: 0 auto 32px !important;
+        margin: 28px auto 16px !important;
     }
 
     .contact-page-wrapper .contact-main-header .contact-sub-eyebrow,
@@ -15966,10 +15972,7 @@ textarea.reg-input-control {
     }
 
     .contact-page-wrapper .contact-columns-grid {
-        display: flex !important;
-        flex-direction: column !important;
-        grid-template-columns: 1fr !important;
-        gap: 28px !important;
+        display: contents !important;
     }
 
     .contact-page-wrapper .contact-form-col {
@@ -15980,7 +15983,7 @@ textarea.reg-input-control {
     }
 
     .contact-page-wrapper .contact-info-col {
-        order: 2 !important;
+        order: 3 !important;
         width: 100% !important;
     }
 

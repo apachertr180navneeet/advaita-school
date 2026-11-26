@@ -10083,10 +10083,17 @@ html, body {
         gap: 12px !important;
     }
 
+    .contact-page-wrapper .contact-main-container {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
     .contact-page-wrapper .contact-main-header {
+        order: 2 !important;
         text-align: center !important;
         max-width: 680px !important;
-        margin: 0 auto 32px !important;
+        margin: 28px auto 16px !important;
+        width: 100% !important;
     }
 
     .contact-page-wrapper .contact-main-header .contact-sub-eyebrow,
@@ -10097,26 +10104,8 @@ html, body {
         margin-right: auto !important;
     }
 
-    .contact-page-wrapper .contact-main-header {
-    text-align: center !important;
-    max-width: 680px !important;
-    margin: 0 auto 36px !important;
-    width: 100% !important;
-}
-
-.contact-page-wrapper .contact-main-header .contact-sub-eyebrow,
-.contact-page-wrapper .contact-main-header .contact-section-heading,
-.contact-page-wrapper .contact-main-header .contact-section-subtext {
-    text-align: center !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-.contact-page-wrapper .contact-columns-grid {
-        display: flex !important;
-        flex-direction: column !important;
-        grid-template-columns: 1fr !important;
-        gap: 28px !important;
+    .contact-page-wrapper .contact-columns-grid {
+        display: contents !important;
     }
 
     .contact-page-wrapper .contact-form-col {
@@ -10127,7 +10116,7 @@ html, body {
     }
 
     .contact-page-wrapper .contact-info-col {
-        order: 2 !important;
+        order: 3 !important;
         width: 100% !important;
     }
 
